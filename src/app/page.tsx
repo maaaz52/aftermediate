@@ -63,7 +63,7 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="grid-bg relative overflow-hidden">
-          <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-20 pt-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:pt-20">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-16 lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-20">
             <div className="animate-rise">
               <div className="inline-flex items-center gap-2 border-2 border-ink bg-surface px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
                 <span className="h-2 w-2 bg-emerald" />
@@ -114,7 +114,7 @@ export default function Home() {
 
         {/* REALITY CHECK */}
         <section id="reality" className="border-y-2 border-ink bg-surface-2">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
             <h2 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
               The reality nobody tells you:
               <span className="text-danger"> the plan decides, not the marks.</span>
@@ -132,8 +132,8 @@ export default function Home() {
         </section>
 
         {/* MOMENTUM / FOMO */}
-        <section id="momentum" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <div className="grid gap-12 lg:grid-cols-2">
+        <section id="momentum" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div>
               <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
                 The clock is <span className="text-danger">already running.</span>
@@ -203,7 +203,7 @@ export default function Home() {
           </div>
 
           {/* full width: these three need real room for their charts */}
-          <div className="mt-12 grid gap-5 sm:grid-cols-3">
+          <div className="mt-8 grid gap-5 sm:grid-cols-3">
             <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
               <p className="font-mono text-[11px] uppercase tracking-widest text-danger">Pre-Med · the odds</p>
               <div className="mt-4"><PixelSeats /></div>
@@ -231,7 +231,7 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="how" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="how" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
           <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. No confusion.</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s, i) => (
@@ -251,7 +251,7 @@ export default function Home() {
 
         {/* FEATURES */}
         <section id="features" className="border-y-2 border-ink bg-surface-2">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
             <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Everything after the result.</h2>
             <p className="mt-3 max-w-lg text-muted">
               Four things every student actually needs — in one place, in plain words.
@@ -276,7 +276,7 @@ export default function Home() {
         </section>
 
         {/* STREAM EXPLORER */}
-        <section id="explore" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <section id="explore" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
           <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr]">
             <div>
               <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
@@ -316,7 +316,7 @@ export default function Home() {
 
         {/* FINAL CTA */}
         <section className="border-t-2 border-ink bg-accent">
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-20 text-center sm:px-6">
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 sm:py-20">
             <Illustration name="compass" scale={4} />
             <h2 className="max-w-2xl text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               Your marksheet isn&apos;t the end. It&apos;s the start.
