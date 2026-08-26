@@ -17,7 +17,9 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isPublic = pathname === "/" || pathname === "/coming-soon";
 
-  if (!isPublic) {
+  // Only gate the public demo (production). In dev, keep every page
+  // accessible so changes can be previewed locally.
+  if (!isPublic && process.env.NODE_ENV === "production") {
     const url = request.nextUrl.clone();
     url.pathname = "/coming-soon";
     return NextResponse.redirect(url);
