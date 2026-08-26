@@ -28,7 +28,7 @@ export function RealityCard({
             <p className="font-mono text-[10px] uppercase tracking-widest text-faint">the number</p>
             <span className="font-mono text-[10px] uppercase tracking-widest text-accent">tap → reality</span>
           </div>
-          <p className="mt-3 font-mono text-3xl font-bold leading-none text-accent">{value}</p>
+          <p className="mt-3 font-mono text-2xl font-bold leading-none text-accent">{value}</p>
           <p className="mt-2 text-sm font-medium text-ink">{label}</p>
           <div className="mt-3"><SourceTag stat={item.stat} /></div>
         </div>

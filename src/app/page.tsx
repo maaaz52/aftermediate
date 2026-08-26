@@ -69,7 +69,7 @@ export default function Home() {
                 <span className="h-2 w-2 bg-emerald" />
                 For Pakistani FSc · ICS · I.Com · A-Level
               </div>
-              <h1 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                <h1 className="mt-6 font-display text-3xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                 Finished FSc.
                 <br />
                 <span className="text-accent">Not sure what&apos;s next?</span>
@@ -114,15 +114,15 @@ export default function Home() {
 
         {/* REALITY CHECK */}
         <section id="reality" className="border-y-2 border-ink bg-surface-2">
-          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
-            <h2 className="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
+            <h2 className="max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
               The reality nobody tells you:
               <span className="text-danger"> the plan decides, not the marks.</span>
             </h2>
             <p className="mt-3 max-w-lg text-muted">
               One hard truth for every stream — medical, engineering, IT. Tap a card to flip it.
             </p>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 sm:mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               <RealityCard item={mdcat} value={mdcat.stat.value} label="Medical · candidates vs seats" />
               <RealityCard item={nust} value={nust.stat.value} label="Engineering · NUST formula" />
               <RealityCard item={it} value={it.stat.value} label="IT · fastest-growing export" />
@@ -132,10 +132,10 @@ export default function Home() {
         </section>
 
         {/* MOMENTUM / FOMO */}
-        <section id="momentum" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
+        <section id="momentum" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div>
-              <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+              <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
                 The clock is <span className="text-danger">already running.</span>
               </h2>
               <p className="mt-4 max-w-md text-muted">
@@ -173,28 +173,28 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
                 <p className="text-[11px] uppercase tracking-widest text-faint">Youth unemployment</p>
-                <p className="mt-2 font-mono text-3xl font-bold text-danger">
+                <p className="mt-2 font-mono text-2xl font-bold text-danger">
                   <CountUp value={12.6} decimals={1} suffix="%" />
                 </p>
                 <p className="mt-auto pt-2 font-mono text-[10px] text-danger">a degree alone isn&apos;t a plan</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
                 <p className="text-[11px] uppercase tracking-widest text-faint">HEC scholarships</p>
-                <p className="mt-2 font-mono text-3xl font-bold text-emerald">
+                <p className="mt-2 font-mono text-2xl font-bold text-emerald">
                   <CountUp value={4000} suffix="+" />
                 </p>
                 <p className="mt-auto pt-2 font-mono text-[10px] text-faint">most students never apply</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
                 <p className="text-[11px] uppercase tracking-widest text-faint">Avg monthly income</p>
-                <p className="mt-2 font-mono text-3xl font-bold text-ink">
+                <p className="mt-2 font-mono text-2xl font-bold text-ink">
                   <CountUp prefix="Rs " value={39042} />
                 </p>
                 <p className="mt-auto pt-2 font-mono text-[10px] text-faint">field choice changes it</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
                 <p className="text-[11px] uppercase tracking-widest text-faint">MDCAT candidates</p>
-                <p className="mt-2 font-mono text-3xl font-bold text-ink">
+                <p className="mt-2 font-mono text-2xl font-bold text-ink">
                   <CountUp value={180} suffix="k" />
                 </p>
                 <p className="mt-auto pt-2 font-mono text-[10px] text-faint">you&apos;re competing with them</p>
@@ -231,9 +231,9 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="how" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
-          <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. No confusion.</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <section id="how" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. No confusion.</h2>
+          <div className="mt-6 sm:mt-10 grid gap-6 md:grid-cols-3">
             {steps.map((s, i) => (
               <PixelCard key={s.title} className="p-6" shadow="accent">
                 <div className="flex items-center justify-between">
@@ -251,12 +251,12 @@ export default function Home() {
 
         {/* FEATURES */}
         <section id="features" className="border-y-2 border-ink bg-surface-2">
-          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
-            <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Everything after the result.</h2>
+          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
+            <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Everything after the result.</h2>
             <p className="mt-3 max-w-lg text-muted">
               Four things every student actually needs — in one place, in plain words.
             </p>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            <div className="mt-6 sm:mt-10 grid gap-6 sm:grid-cols-2">
               {features.map((f) => (
                 <Link key={f.title} href={f.href} className="group">
                   <PixelCard className="h-full p-6 transition-all hover:-translate-y-1">
@@ -276,13 +276,13 @@ export default function Home() {
         </section>
 
         {/* STREAM EXPLORER */}
-        <section id="explore" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-20">
+        <section id="explore" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
           <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.1fr]">
             <div>
               <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
                 <span className="h-2 w-2 bg-accent" /> try it now
               </span>
-              <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+              <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">
                 Pick your stream. See what opens up.
               </h2>
               <p className="mt-3 max-w-md text-muted">
@@ -298,7 +298,7 @@ export default function Home() {
         <section id="sources" className="border-t-2 border-ink bg-surface-2">
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-20 sm:px-6 md:flex-row md:items-center">
             <div>
-              <h2 className="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Every number is sourced.</h2>
+              <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Every number is sourced.</h2>
               <p className="mt-3 max-w-md text-muted">
                 No made-up stats. Every claim links to the official source, so you — and your
                 parents — can verify it.
@@ -318,7 +318,7 @@ export default function Home() {
         <section className="border-t-2 border-ink bg-accent">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 sm:py-20">
             <Illustration name="compass" scale={4} />
-            <h2 className="max-w-2xl text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+            <h2 className="max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               Your marksheet isn&apos;t the end. It&apos;s the start.
             </h2>
             <Link
