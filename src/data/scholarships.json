@@ -1,0 +1,98 @@
+[
+  {
+    "id": "fulbright",
+    "name": "Fulbright Foreign Student Program",
+    "funder": "US Government (USEFP)",
+    "country": "United States",
+    "level": "Master's / PhD",
+    "coverage": "Full — tuition, stipend, airfare, health insurance",
+    "eligibility": ["Pakistani citizen", "Strong academic record", "GRE required"],
+    "englishTest": "TOEFL iBT (per cycle)",
+    "deadline": "Usually Feb–May",
+    "source_url": "https://www.usefp.org/"
+  },
+  {
+    "id": "chevening",
+    "name": "Chevening Scholarship",
+    "funder": "UK Government (FCDO)",
+    "country": "United Kingdom",
+    "level": "1-year Master's",
+    "coverage": "Full — tuition, living stipend, travel, visa",
+    "eligibility": ["Pakistani citizen", "Bachelor's degree", "Min 2 years work experience"],
+    "englishTest": "IELTS UKVI 6.5",
+    "deadline": "Aug–Nov",
+    "source_url": "https://www.chevening.org/"
+  },
+  {
+    "id": "daad",
+    "name": "DAAD Scholarship",
+    "funder": "German Government",
+    "country": "Germany",
+    "level": "Master's / PhD",
+    "coverage": "Full — tuition, €934–1,200/month stipend, travel, insurance",
+    "eligibility": ["Pakistani citizen", "Strong academic record", "Relevant degree"],
+    "englishTest": "IELTS 6.0–6.5",
+    "deadline": "Sep–Dec",
+    "source_url": "https://www.daad.de/"
+  },
+  {
+    "id": "commonwealth",
+    "name": "Commonwealth Scholarship",
+    "funder": "Commonwealth Scholarship Commission",
+    "country": "United Kingdom",
+    "level": "Master's / PhD",
+    "coverage": "Full — tuition, stipend, airfare",
+    "eligibility": ["Pakistani citizen", "Strong academic record"],
+    "englishTest": "IELTS 6.5",
+    "deadline": "Varies",
+    "source_url": "https://cscuk.fcdo.gov.uk/"
+  },
+  {
+    "id": "erasmus",
+    "name": "Erasmus Mundus Joint Masters",
+    "funder": "European Union",
+    "country": "Europe (multi-country)",
+    "level": "Master's",
+    "coverage": "Full — tuition, stipend, travel",
+    "eligibility": ["Pakistani citizen", "Bachelor's degree"],
+    "englishTest": "IELTS 6.5 (typical)",
+    "deadline": "Varies (Oct–Jan)",
+    "source_url": "https://www.eacea.ec.europa.eu/"
+  },
+  {
+    "id": "stipendium",
+    "name": "Stipendium Hungaricum",
+    "funder": "Hungarian Government",
+    "country": "Hungary",
+    "level": "Bachelor's / Master's / PhD",
+    "coverage": "Full — tuition, stipend, housing",
+    "eligibility": ["Pakistani citizen", "Via HEC nomination"],
+    "englishTest": "IELTS (per program)",
+    "deadline": "Jan (via HEC)",
+    "source_url": "https://stipendiumhungaricum.hu/"
+  },
+  {
+    "id": "turkiye",
+    "name": "Türkiye Bursları",
+    "funder": "Turkish Government",
+    "country": "Turkey",
+    "level": "Bachelor's / Master's / PhD",
+    "coverage": "Full — tuition, stipend, housing, flights",
+    "eligibility": ["Pakistani citizen", "Age limits per level"],
+    "englishTest": "Not always required",
+    "deadline": "Jan–Feb",
+    "source_url": "https://www.turkiyeburslari.gov.tr/"
+  },
+  {
+    "id": "hec",
+    "name": "HEC Overseas Scholarships",
+    "funder": "Government of Pakistan (HEC)",
+    "country": "UK / USA / China / Europe / Australia",
+    "level": "MS / PhD",
+    "coverage": "Full — tuition + stipend",
+    "eligibility": ["Pakistani citizen", "HAT/USAT test", "Priority fields (IT, CS, AI, Data Science)"],
+    "englishTest": "IELTS/TOEFL by destination",
+    "deadline": "Typically Q1 (Jan)",
+    "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/"
+  }
+]

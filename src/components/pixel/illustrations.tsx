@@ -1,0 +1,132 @@
+"use client";
+
+import { PixelArt } from "./pixel-art";
+
+const sprites: Record<string, string[]> = {
+  compass: [
+    ".....KK.....",
+    "....KBBK....",
+    "...KBBBBK...",
+    "..KBBBBBBK..",
+    ".KBBBBBBBBK.",
+    "KBBBBCCBBBBK",
+    ".KBBBBBBBBK.",
+    "..KBBBBBBK..",
+    "...KBBBBK...",
+    "....KBBK....",
+    ".....KK.....",
+    "............",
+  ],
+  document: [
+    "KKKKKKKKKKKK",
+    "KBBBBBBBBBBK",
+    "KWWWWWWWWWWK",
+    "KWWWWWWWWWWK",
+    "KSSSSSSSSSSK",
+    "KWWWWWWWWWWK",
+    "KSSSSSSSSSSK",
+    "KWWWWWWWWWWK",
+    "KSSSSSSSSSSK",
+    "KWWWWWWWWWWK",
+    "KKKKKKKKKKKK",
+    "............",
+  ],
+  grad: [
+    ".KKKKKKKKKK.",
+    ".KBBBBBBBBK.",
+    ".KBBBBBBBBK.",
+    "..KBBBBBBK..",
+    "..KBBBBBBK..",
+    ".KBBBBBBBBK.",
+    "KBBBBBBBBBBK",
+    ".KKKKKKKKKK.",
+    ".....KK.....",
+    ".....KK.....",
+    ".....YY.....",
+    "............",
+  ],
+  rocket: [
+    ".....KK.....",
+    "....KWWK....",
+    "...KWWWWK...",
+    "...KWWWWK...",
+    "...KBBBBK...",
+    "..KBBBBBBK..",
+    "..KBBBBBBK..",
+    ".KBBBBBBBBK.",
+    ".KBBBBBBBBK.",
+    "..KBB..BBK..",
+    "...KK..KK...",
+    "....YY.YY...",
+  ],
+  wallet: [
+    ".KKKKKKKKKK.",
+    ".KBBBBBBBBK.",
+    ".KBBBBBBBBK.",
+    ".KBYYYYYYBK.",
+    ".KBYYYYYYBK.",
+    ".KBBBBBBBBK.",
+    ".KBBBBBBBBK.",
+    ".KBBBBBBBBK.",
+    ".KKKKKKKKKK.",
+    "............",
+    "............",
+    "............",
+  ],
+  family: [
+    "..KK....KK..",
+    "..KWK..KWK..",
+    "..KWK..KWK..",
+    "..KKK..KKK..",
+    "..KBBK.KBBK.",
+    "..KBBK.KBBK.",
+    "..KBBK.KBBK.",
+    "..KBBK.KBBK.",
+    "...KK...KK..",
+    "............",
+    "............",
+    "............",
+  ],
+  chart: [
+    "..........KK",
+    "..........KK",
+    "....KK....KK",
+    "....KK....KK",
+    "....KG....KK",
+    ".KK.KG....KK",
+    ".KG.KG....KK",
+    ".KG.KG....KK",
+    "KGGGGGGGGGGG",
+    "............",
+    "............",
+    "............",
+  ],
+  magnifier: [
+    ".KKKKKK.....",
+    "KWWWWWWK....",
+    "KWWWWWWK....",
+    ".KKKKKKK....",
+    ".....KK.....",
+    ".....KK.....",
+    ".....K......",
+    "............",
+    "............",
+    "............",
+    "............",
+    "............",
+  ],
+};
+
+export type IllustrationName = keyof typeof sprites;
+
+export function Illustration({
+  name,
+  scale = 3,
+  className,
+}: {
+  name: IllustrationName;
+  scale?: number;
+  className?: string;
+}) {
+  return <PixelArt grid={sprites[name]} scale={scale} className={className} />;
+}

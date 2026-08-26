@@ -1,0 +1,22 @@
+{
+  "overallUnemployment": [
+    { "year": "2020-21", "value": 6.3 },
+    { "year": "2024-25", "value": 7.1 }
+  ],
+  "youthUnemployment": [
+    { "year": "2020-21", "value": 11.1 },
+    { "year": "2024-25", "value": 12.6 }
+  ],
+  "avgIncome": [
+    { "year": "2020-21", "value": 24028 },
+    { "year": "2024-25", "value": 39042 }
+  ],
+  "provincialUnemployment": [
+    { "province": "KPK", "value": 9.6 },
+    { "province": "Punjab", "value": 7.3 },
+    { "province": "Balochistan", "value": 5.5 },
+    { "province": "Sindh", "value": 5.3 }
+  ],
+  "source": "Pakistan Bureau of Statistics, Labour Force Survey 2024-25",
+  "source_url": "https://www.pbs.gov.pk/labour-force-statistics/"
+}

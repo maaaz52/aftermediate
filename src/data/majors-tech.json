@@ -1,0 +1,242 @@
+[
+  {
+    "id": "cs",
+    "name": "Computer Science",
+    "field": "Technology",
+    "emoji": "💻",
+    "tagline": "The highest-leverage degree in Pakistan right now.",
+    "streams": ["pre-engineering", "ics"],
+    "demand": "high",
+    "salaryRange": { "low": 100000, "high": 600000, "currency": "PKR/mo", "note": "Local + remote/freelance; USD roles pay far more" },
+    "whyNow": { "value": "$4.6B IT exports, 19,000+ companies", "year": "2025-26", "source": "P@SHA / SBP", "source_url": "https://www.samenacouncil.org/" },
+    "description": "The most direct path into Pakistan's fastest-growing export sector. Degree + portfolio can land work before graduation.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Python or JS", "cert": "CS50" }, { "name": "Problem solving" }] },
+      { "stage": "Build", "skills": [{ "name": "DSA" }, { "name": "Git + 1 framework" }] },
+      { "stage": "Ship", "skills": [{ "name": "Portfolio projects" }, { "name": "Internship / freelance" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "Your code breaks in production.",
+        "scenario": "It's 4 PM and a feature you shipped is down.",
+        "options": [
+          { "label": "Reproduce, debug, fix, test", "result": "You ship a fix in an hour. Debugging is 60% of the job.", "insight": "Frustration tolerance beats raw intelligence in CS." },
+          { "label": "Ask AI to rewrite it", "result": "It helps, but you still must understand why it failed.", "insight": "AI is a tool, not a substitute for understanding." }
+        ]
+      }
+    ],
+    "courses": ["cs50", "cs50ai", "freecodecamp", "meta-frontend"],
+    "universities": ["nust", "fast", "uet", "comsats"],
+    "realityCheck": "The entry test (NET/NU) — not FSc marks — decides NUST/FAST admission."
+  },
+  {
+    "id": "ai",
+    "name": "Artificial Intelligence",
+    "field": "Technology",
+    "emoji": "🤖",
+    "tagline": "The field rewriting every other field.",
+    "streams": ["pre-engineering", "ics"],
+    "demand": "high",
+    "salaryRange": { "low": 120000, "high": 800000, "currency": "PKR/mo", "note": "ML engineers command top pay; remote USD roles higher" },
+    "whyNow": { "value": "AI named a priority export area by P@SHA", "year": "2026", "source": "P@SHA", "source_url": "https://www.samenacouncil.org/" },
+    "description": "Build systems that learn. Pakistan's export firms are explicitly expanding into AI, robotics and automation.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Python", "cert": "CS50 AI" }, { "name": "Linear algebra & stats" }] },
+      { "stage": "Core", "skills": [{ "name": "ML fundamentals" }, { "name": "Deep learning" }] },
+      { "stage": "Ship", "skills": [{ "name": "Deploy models" }, { "name": "Kaggle / portfolio" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "Your model's accuracy is stuck at 78%.",
+        "scenario": "The client wants 90%. Deadline is Friday.",
+        "options": [
+          { "label": "Investigate the data quality first", "result": "You find mislabeled rows. Fixing data jumps you to 91%.", "insight": "80% of ML is data, not algorithms." },
+          { "label": "Try fancier architectures", "result": "Marginal gains, lost time. The real issue was data.", "insight": "Data beats model complexity." }
+        ]
+      }
+    ],
+    "courses": ["cs50ai", "cs50", "google-data"],
+    "universities": ["nust", "fast"],
+    "realityCheck": "AI degrees are new; what matters is your portfolio and math foundation."
+  },
+  {
+    "id": "cybersecurity",
+    "name": "Cybersecurity",
+    "field": "Technology",
+    "emoji": "🛡️",
+    "tagline": "Defenders of the digital frontier.",
+    "streams": ["pre-engineering", "ics"],
+    "demand": "high",
+    "salaryRange": { "low": 100000, "high": 500000, "currency": "PKR/mo", "note": "SOC, pentesting and global remote roles" },
+    "whyNow": { "value": "National Cybersecurity Policy drives demand", "year": "2021+", "source": "MoITT", "source_url": "https://moitt.gov.pk/" },
+    "description": "Protect systems and networks. Driven by Pakistan's National Cybersecurity Policy and global cyber talent shortage.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Networking", "cert": "CCNA" }, { "name": "Linux" }] },
+      { "stage": "Core", "skills": [{ "name": "Security fundamentals", "cert": "Security+" }, { "name": "Ethical hacking" }] },
+      { "stage": "Ship", "skills": [{ "name": "CTF competitions" }, { "name": "SOC analyst role" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "An alert fires at 2 AM.",
+        "scenario": "Suspicious login attempts on a client system.",
+        "options": [
+          { "label": "Triage, contain, document", "result": "You contain it before damage. Clean incident report.", "insight": "Calm under pressure is the core skill." },
+          { "label": "Ignore until morning", "result": "The breach escalates overnight. Bad outcome.", "insight": "Incident response is time-critical." }
+        ]
+      }
+    ],
+    "courses": ["ccna", "comptia-sec"],
+    "universities": ["fast", "comsats"],
+    "realityCheck": "Certifications (Security+, CEH) matter as much as the degree here."
+  },
+  {
+    "id": "data-science",
+    "name": "Data Science",
+    "field": "Technology",
+    "emoji": "📊",
+    "tagline": "Turning data into decisions.",
+    "streams": ["pre-engineering", "ics", "icom"],
+    "demand": "high",
+    "salaryRange": { "low": 100000, "high": 500000, "currency": "PKR/mo", "note": "Analytics, BI and ML roles across industries" },
+    "whyNow": { "value": "Every industry now hires analysts", "year": "2026", "source": "Industry trend", "source_url": "https://grow.google/certificates/" },
+    "description": "Analyze data to drive business decisions. Applies to tech, finance, healthcare and more — a versatile, portable skill.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Excel + SQL" }, { "name": "Python/Pandas" }] },
+      { "stage": "Core", "skills": [{ "name": "Statistics" }, { "name": "Visualization" }] },
+      { "stage": "Ship", "skills": [{ "name": "Portfolio dashboards" }, { "name": "Analytics internship" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "Execs need a decision by noon.",
+        "scenario": "Messy data, no clear answer.",
+        "options": [
+          { "label": "Clean, analyze, visualize the key insight", "result": "You deliver one clear chart that drives the decision.", "insight": "Clarity is the product, not complexity." },
+          { "label": "Show every possible metric", "result": "They drown in charts and decide nothing.", "insight": "Less is more in analytics." }
+        ]
+      }
+    ],
+    "courses": ["google-data", "cs50"],
+    "universities": ["fast", "nust"],
+    "realityCheck": "The Google Data Analytics cert can get you started in months, before any degree."
+  },
+  {
+    "id": "electrical",
+    "name": "Electrical Engineering",
+    "field": "Engineering",
+    "emoji": "⚡",
+    "tagline": "The backbone of every industry.",
+    "streams": ["pre-engineering"],
+    "demand": "medium",
+    "salaryRange": { "low": 80000, "high": 350000, "currency": "PKR/mo", "note": "Power, telecom and electronics sectors" },
+    "whyNow": { "value": "Power & telecom remain core employers", "year": "2026", "source": "Sector trend", "source_url": "https://www.hec.gov.pk/" },
+    "description": "Classic engineering with stable demand in power, telecom and electronics — and a bridge into embedded systems and IoT.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Circuit theory" }, { "name": "Math & physics" }] },
+      { "stage": "Core", "skills": [{ "name": "Electronics" }, { "name": "Embedded systems" }] },
+      { "stage": "Career", "skills": [{ "name": "Power sector / telecom" }, { "name": "IoT & robotics" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "A circuit board keeps failing.",
+        "scenario": "You must find why before production.",
+        "options": [
+          { "label": "Systematically isolate each component", "result": "You find a thermal issue and redesign it.", "insight": "Methodical debugging is universal." },
+          { "label": "Replace the whole board", "result": "It works this time but fails at scale later.", "insight": "Root cause matters more than quick fixes." }
+        ]
+      }
+    ],
+    "courses": ["ccna"],
+    "universities": ["nust", "uet"],
+    "realityCheck": "ECAT (UET) and NET (NUST) are the gatekeepers — prep is everything."
+  },
+  {
+    "id": "fintech",
+    "name": "FinTech",
+    "field": "Finance + Tech",
+    "emoji": "💸",
+    "tagline": "The fastest-growing finance lane.",
+    "streams": ["ics", "icom", "pre-engineering"],
+    "demand": "high",
+    "salaryRange": { "low": 90000, "high": 450000, "currency": "PKR/mo", "note": "Easypaisa/JazzCash-style platforms, banks, startups" },
+    "whyNow": { "value": "SBP digital-payments push + mobile wallets", "year": "2026", "source": "SBP", "source_url": "https://www.sbp.org.pk/" },
+    "description": "Finance meets technology: mobile wallets, digital payments, lending. One of Pakistan's hottest, most-funded startup spaces.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Finance basics" }, { "name": "Basic coding / SQL" }] },
+      { "stage": "Core", "skills": [{ "name": "Payments & digital banking" }, { "name": "Product analytics" }] },
+      { "stage": "Career", "skills": [{ "name": "Fintech product role" }, { "name": "Startup / bank" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "A wallet feature launches to 1M users.",
+        "scenario": "Transaction failures spike on day one.",
+        "options": [
+          { "label": "Trace the failure path end-to-end", "result": "You find a rate-limit bug and fix it fast.", "insight": "Fintech = uptime and trust." },
+          { "label": "Wait for user reports", "result": "The backlog grows and trust erodes.", "insight": "In fintech, silence is a bug." }
+        ]
+      }
+    ],
+    "courses": ["google-data", "cs50"],
+    "universities": ["fast"],
+    "realityCheck": "You don't need a CS degree to break into fintech — product and analytics roles are wide open."
+  },
+  {
+    "id": "accounting",
+    "name": "Accounting & Finance",
+    "field": "Business",
+    "emoji": "🧾",
+    "tagline": "The recession-proof business core.",
+    "streams": ["icom"],
+    "demand": "medium",
+    "salaryRange": { "low": 60000, "high": 350000, "currency": "PKR/mo", "note": "CA/ACCA path pays more over time" },
+    "whyNow": { "value": "Every business needs finance professionals", "year": "2026", "source": "Sector trend", "source_url": "https://www.icap.org.pk/" },
+    "description": "The foundation of every organization. ACCA/CA is a globally portable qualification with strong local demand.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Financial accounting" }] },
+      { "stage": "Core", "skills": [{ "name": "ACCA/CA Part 1" }, { "name": "Excel + ERP" }] },
+      { "stage": "Career", "skills": [{ "name": "Audit / advisory" }, { "name": "Corporate finance" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "The books don't balance.",
+        "scenario": "A client's records are off by a large amount.",
+        "options": [
+          { "label": "Trace each transaction methodically", "result": "You find the error and reconcile it.", "insight": "Detail orientation is the whole job." },
+          { "label": "Estimate and move on", "result": "The error compounds and audit fails.", "insight": "Precision is non-negotiable." }
+        ]
+      }
+    ],
+    "courses": [],
+    "universities": [],
+    "realityCheck": "ACCA/CA is often a smarter ROI than a generic BBA for I.Com students."
+  },
+  {
+    "id": "bba",
+    "name": "Business Administration",
+    "field": "Business",
+    "emoji": "📈",
+    "tagline": "Learn to build, lead and sell.",
+    "streams": ["icom", "ics"],
+    "demand": "medium",
+    "salaryRange": { "low": 70000, "high": 400000, "currency": "PKR/mo", "note": "Marketing, sales, HR, operations" },
+    "whyNow": { "value": "Startup ecosystem needs operators", "year": "2026", "source": "Sector trend", "source_url": "https://www.lums.edu.pk/" },
+    "description": "Broad business education with paths into marketing, sales, HR and operations — or entrepreneurship.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Marketing & management" }] },
+      { "stage": "Core", "skills": [{ "name": "Analytics" }, { "name": "Communication" }] },
+      { "stage": "Career", "skills": [{ "name": "Internships" }, { "name": "Specialization" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "Your product launch flopped.",
+        "scenario": "Low signups in week one.",
+        "options": [
+          { "label": "Interview users and iterate", "result": "You find the real objection and pivot the message.", "insight": "Business is a feedback loop." },
+          { "label": "Double the ad spend", "result": "More spend, same result. Money can't fix a wrong message.", "insight": "Understand before you scale." }
+        ]
+      }
+    ],
+    "courses": ["google-ux", "google-data"],
+    "universities": [],
+    "realityCheck": "A BBA's value is your internships and network, not the lectures."
+  }
+]

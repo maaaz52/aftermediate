@@ -1,0 +1,21 @@
+{
+  "itExports": [
+    { "year": "FY24", "value": 3.2 },
+    { "year": "FY25", "value": 3.8 },
+    { "year": "FY26", "value": 4.6 }
+  ],
+  "growth": "18% YoY (FY25)",
+  "rank": "3rd largest foreign-exchange earner",
+  "servicesShare": "45% of total services exports",
+  "companies": "19,000+ registered ICT companies",
+  "target": "$15B by 2030",
+  "fields": [
+    { "name": "Artificial Intelligence", "demand": "high", "note": "Named a priority growth area by P@SHA" },
+    { "name": "Cybersecurity", "demand": "high", "note": "National Cybersecurity Policy 2021 drives demand" },
+    { "name": "FinTech", "demand": "high", "note": "Fast-growing, backed by SBP digital payments push" },
+    { "name": "Data Science", "demand": "high", "note": "Core to AI/analytics export work" },
+    { "name": "Cloud & DevOps", "demand": "medium", "note": "Steady demand from export-focused firms" }
+  ],
+  "source": "P@SHA / State Bank of Pakistan",
+  "source_url": "https://www.samenacouncil.org/"
+}

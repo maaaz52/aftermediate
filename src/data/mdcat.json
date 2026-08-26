@@ -1,0 +1,29 @@
+{
+  "candidates": { "value": "~180,000", "year": "2024", "source": "PMDC / UHS", "source_url": "https://pmdc.pk/" },
+  "mbbsSeats": { "value": "~11,000", "year": "2024", "source": "PMDC College Statistics", "source_url": "https://premeth.com/stats/mdcat" },
+  "bdsSeats": { "value": "~1,200", "year": "2024", "source": "PMDC College Statistics", "source_url": "https://premeth.com/stats/mdcat" },
+  "conversion": { "value": "1 in 15", "year": "2024", "source": "PMDC / Premeth", "source_url": "https://premeth.com/stats/mdcat" },
+  "subjectSplit": [
+    { "subject": "Biology", "mcqs": 81, "weight": 45 },
+    { "subject": "Chemistry", "mcqs": 45, "weight": 25 },
+    { "subject": "Physics", "mcqs": 36, "weight": 20 },
+    { "subject": "English", "mcqs": 9, "weight": 5 },
+    { "subject": "Logical Reasoning", "mcqs": 9, "weight": 5 }
+  ],
+  "totalMcqs": 180,
+  "passingMarks": { "mbbs": 55, "bds": 50, "year": "2025", "source": "PMDC" },
+  "topClosingMerits": [
+    { "college": "Federal Medical College (SZABMU)", "city": "Islamabad", "merit": 96.8, "year": "2024" },
+    { "college": "King Edward Medical University", "city": "Lahore", "merit": 94.9, "year": "2025" },
+    { "college": "Army Medical College", "city": "Rawalpindi", "merit": 94.8, "year": "2024" },
+    { "college": "Allama Iqbal Medical College", "city": "Lahore", "merit": 94.5, "year": "2025" }
+  ],
+  "provincialSeats": [
+    { "province": "Punjab", "seats": 3800 },
+    { "province": "Sindh", "seats": 2400 },
+    { "province": "KPK", "seats": 1600 },
+    { "province": "Balochistan", "seats": 600 },
+    { "province": "Federal", "seats": 400 }
+  ],
+  "privateFeeCap": { "value": "PKR 1.8M / year", "year": "2024", "source": "PMDC fee notification", "source_url": "https://pmdc.pk/" }
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "google-data",
+    "name": "Google Data Analytics Certificate",
+    "provider": "Google / Coursera",
+    "field": "Data Science",
+    "level": "Beginner",
+    "duration": "3–6 months",
+    "cost": "Free (audit) / $39/mo",
+    "url": "https://grow.google/certificates/"
+  },
+  {
+    "id": "google-ux",
+    "name": "Google UX Design Certificate",
+    "provider": "Google / Coursera",
+    "field": "Design",
+    "level": "Beginner",
+    "duration": "3–6 months",
+    "cost": "Free (audit) / $39/mo",
+    "url": "https://grow.google/certificates/"
+  },
+  {
+    "id": "google-it",
+    "name": "Google IT Support Certificate",
+    "provider": "Google / Coursera",
+    "field": "IT & Support",
+    "level": "Beginner",
+    "duration": "3–6 months",
+    "cost": "Free (audit) / $39/mo",
+    "url": "https://grow.google/certificates/"
+  },
+  {
+    "id": "cs50",
+    "name": "CS50x — Intro to Computer Science",
+    "provider": "Harvard / edX",
+    "field": "Computer Science",
+    "level": "Beginner",
+    "duration": "12 weeks",
+    "cost": "Free",
+    "url": "https://cs50.harvard.edu/x/"
+  },
+  {
+    "id": "cs50ai",
+    "name": "CS50 AI — Intro to Artificial Intelligence",
+    "provider": "Harvard / edX",
+    "field": "AI",
+    "level": "Intermediate",
+    "duration": "7 weeks",
+    "cost": "Free",
+    "url": "https://cs50.harvard.edu/ai/"
+  },
+  {
+    "id": "aws-cloud",
+    "name": "AWS Cloud Practitioner",
+    "provider": "AWS",
+    "field": "Cloud",
+    "level": "Beginner",
+    "duration": "6–8 weeks",
+    "cost": "$100 exam",
+    "url": "https://aws.amazon.com/certification/"
+  },
+  {
+    "id": "ccna",
+    "name": "CCNA — Networking",
+    "provider": "Cisco",
+    "field": "Networking / Cybersecurity",
+    "level": "Intermediate",
+    "duration": "3–4 months",
+    "cost": "$300 exam",
+    "url": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/associate/ccna/index.html"
+  },
+  {
+    "id": "comptia-sec",
+    "name": "CompTIA Security+",
+    "provider": "CompTIA",
+    "field": "Cybersecurity",
+    "level": "Beginner",
+    "duration": "2–3 months",
+    "cost": "$392 exam",
+    "url": "https://www.comptia.org/certifications/security"
+  },
+  {
+    "id": "meta-frontend",
+    "name": "Meta Front-End Developer Certificate",
+    "provider": "Meta / Coursera",
+    "field": "Web Development",
+    "level": "Beginner",
+    "duration": "6 months",
+    "cost": "Free (audit) / $49/mo",
+    "url": "https://www.coursera.org/professional-certificates/meta-front-end-developer"
+  },
+  {
+    "id": "freecodecamp",
+    "name": "Responsive Web Design + JS",
+    "provider": "freeCodeCamp",
+    "field": "Web Development",
+    "level": "Beginner",
+    "duration": "Self-paced",
+    "cost": "Free",
+    "url": "https://www.freecodecamp.org/"
+  }
+]

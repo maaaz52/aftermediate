@@ -1,0 +1,192 @@
+[
+  {
+    "id": "nust",
+    "name": "National University of Sciences & Technology",
+    "short": "NUST",
+    "city": "Islamabad",
+    "type": "public",
+    "category": "engineering",
+    "streams": ["pre-engineering", "ics"],
+    "programs": [
+      { "name": "BS Computer Science (SEECS)", "closingMerit": 80, "year": "2024" },
+      { "name": "BE Electrical", "closingMerit": 77, "year": "2024" },
+      { "name": "BE Mechanical (SMME)", "closingMerit": 74, "year": "2024" },
+      { "name": "BE Civil (SCEE)", "closingMerit": 72, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "NUST adds weights to 160, then converts to percentage. NET is the single biggest lever.",
+      "components": [
+        { "component": "NET (entry test)", "weight": 75, "label": "out of 200" },
+        { "component": "FSc Part-I", "weight": 15, "label": "percentage" },
+        { "component": "Matric", "weight": 10, "label": "percentage" }
+      ],
+      "eligibility": ["Min 60% SSC (or IBCC equivalence)", "Min 60% HSSC", "Math required for engineering/computing"]
+    },
+    "entryTest": "NET (NUST Entry Test)",
+    "source_url": "https://nust.edu.pk/admissions/undergraduates/merit-criteria-for-admission-on-net-basis/"
+  },
+  {
+    "id": "fast",
+    "name": "FAST — National University of Computer & Emerging Sciences",
+    "short": "FAST-NUCES",
+    "city": "Islamabad / Lahore / Karachi",
+    "type": "private",
+    "category": "computing",
+    "streams": ["pre-engineering", "ics"],
+    "programs": [
+      { "name": "BS Computer Science (Islamabad)", "closingMerit": 75, "year": "2024" },
+      { "name": "BS CS (Lahore)", "closingMerit": 73, "year": "2024" },
+      { "name": "BS Software Engineering", "closingMerit": 72, "year": "2024" },
+      { "name": "BE Electrical", "closingMerit": 68, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "Computing programs weigh the entry test at 50%; engineering uses a different split.",
+      "components": [
+        { "component": "Entry test (NU/NTS-NAT/SAT)", "weight": 50, "label": "computing" },
+        { "component": "HSSC / FSc", "weight": 40, "label": "percentage" },
+        { "component": "SSC / Matric", "weight": 10, "label": "percentage" }
+      ],
+      "eligibility": ["Min 60% SSC", "Min 60% HSSC", "Math + Physics + Chem/CS for engineering"]
+    },
+    "entryTest": "FAST-NUCES entry test (or NTS NAT / SAT)",
+    "source_url": "https://www.nu.edu.pk/admissions"
+  },
+  {
+    "id": "uet",
+    "name": "University of Engineering & Technology",
+    "short": "UET Lahore",
+    "city": "Lahore",
+    "type": "public",
+    "category": "engineering",
+    "streams": ["pre-engineering", "ics"],
+    "programs": [
+      { "name": "BS Computer Science", "closingMerit": 82, "year": "2024" },
+      { "name": "BE Electrical", "closingMerit": 80, "year": "2024" },
+      { "name": "BE Mechanical", "closingMerit": 79, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "UET merit combines ECAT with academic marks; exact split is published each cycle.",
+      "components": [
+        { "component": "ECAT (entry test)", "weight": 30, "label": "indicative" },
+        { "component": "FSc / HSSC", "weight": 70, "label": "indicative" }
+      ],
+      "eligibility": ["Min 60% FSc", "Pre-Engineering or ICS with Math/Physics"]
+    },
+    "entryTest": "ECAT (UET)",
+    "source_url": "https://admission.uet.edu.pk/"
+  },
+  {
+    "id": "comsats",
+    "name": "COMSATS University",
+    "short": "COMSATS",
+    "city": "Islamabad",
+    "type": "public",
+    "category": "computing",
+    "streams": ["pre-engineering", "ics"],
+    "programs": [
+      { "name": "BS Computer Science", "closingMerit": 80, "year": "2024" },
+      { "name": "BS Software Engineering", "closingMerit": 78, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "COMSATS uses NTS-NAT or its own test combined with academic marks.",
+      "components": [
+        { "component": "NTS-NAT / entry test", "weight": 40, "label": "indicative" },
+        { "component": "FSc / HSSC", "weight": 60, "label": "indicative" }
+      ],
+      "eligibility": ["Min 60% FSc", "Math required for computing"]
+    },
+    "entryTest": "NTS-NAT / COMSATS test",
+    "source_url": "https://www.comsats.edu.pk/"
+  },
+  {
+    "id": "kemc",
+    "name": "King Edward Medical University",
+    "short": "KEMU",
+    "city": "Lahore",
+    "type": "public",
+    "category": "medical",
+    "streams": ["pre-medical"],
+    "programs": [
+      { "name": "MBBS", "closingMerit": 94.9, "year": "2025" }
+    ],
+    "formulas": {
+      "note": "Standard PMDC aggregate: MDCAT dominates at 50%.",
+      "components": [
+        { "component": "MDCAT", "weight": 50, "label": "percentage" },
+        { "component": "FSc / HSSC", "weight": 40, "label": "percentage" },
+        { "component": "Matric", "weight": 10, "label": "percentage" }
+      ],
+      "eligibility": ["Min 60% FSc (Pre-Medical)", "MDCAT pass (55% min)"]
+    },
+    "entryTest": "MDCAT (UHS)",
+    "source_url": "https://premeth.com/stats/mdcat"
+  },
+  {
+    "id": "aimc",
+    "name": "Allama Iqbal Medical College",
+    "short": "AIMC",
+    "city": "Lahore",
+    "type": "public",
+    "category": "medical",
+    "streams": ["pre-medical"],
+    "programs": [
+      { "name": "MBBS", "closingMerit": 94.5, "year": "2025" }
+    ],
+    "formulas": {
+      "note": "Standard PMDC aggregate.",
+      "components": [
+        { "component": "MDCAT", "weight": 50, "label": "percentage" },
+        { "component": "FSc / HSSC", "weight": 40, "label": "percentage" },
+        { "component": "Matric", "weight": 10, "label": "percentage" }
+      ],
+      "eligibility": ["Min 60% FSc (Pre-Medical)", "MDCAT pass"]
+    },
+    "entryTest": "MDCAT (UHS)",
+    "source_url": "https://premeth.com/stats/mdcat"
+  },
+  {
+    "id": "dow",
+    "name": "Dow University of Health Sciences",
+    "short": "DUHS",
+    "city": "Karachi",
+    "type": "public",
+    "category": "medical",
+    "streams": ["pre-medical"],
+    "programs": [
+      { "name": "MBBS", "closingMerit": 91, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "Sindh uses its own MDCAT (DUHS).",
+      "components": [
+        { "component": "MDCAT", "weight": 50, "label": "percentage" },
+        { "component": "FSc / HSSC", "weight": 40, "label": "percentage" },
+        { "component": "Matric", "weight": 10, "label": "percentage" }
+      ],
+      "eligibility": ["Min 60% FSc (Pre-Medical)", "Sindh MDCAT pass"]
+    },
+    "entryTest": "MDCAT (Sindh/DUHS)",
+    "source_url": "https://www.duhs.edu.pk/"
+  },
+  {
+    "id": "aku",
+    "name": "Aga Khan University",
+    "short": "AKU",
+    "city": "Karachi",
+    "type": "private",
+    "category": "medical",
+    "streams": ["pre-medical"],
+    "programs": [
+      { "name": "MBBS", "closingMerit": null, "year": "2024" }
+    ],
+    "formulas": {
+      "note": "AKU uses its own internal test and holistic review; fee ~PKR 2.6M/yr (cap-exempt).",
+      "components": [
+        { "component": "AKU internal test", "weight": 60, "label": "indicative" },
+        { "component": "FSc + interview", "weight": 40, "label": "indicative" }
+      ],
+      "eligibility": ["Strong FSc (Pre-Medical)", "AKU entrance test"]
+    },
+    "entryTest": "AKU internal test",
+    "source_url": "https://www.aku.edu/"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mdcat-ratio",
+    "myth": "Clearing MDCAT means I'll get into MBBS.",
+    "fact": "Passing MDCAT only makes you eligible. Roughly 1 in 15 candidates actually secures an MBBS seat.",
+    "stat": {
+      "value": "~180,000 candidates vs ~11,000 MBBS seats",
+      "year": "2024",
+      "source": "PMDC College Statistics",
+      "source_url": "https://pmdc.pk/"
+    },
+    "urdu": "MDCAT پاس کرنا صرف اہلیت ہے، داخلہ نہیں۔ تقریباً ہر 15 میں سے 1 امیدوار کو MBBS سیٹ ملتی ہے۔"
+  },
+  {
+    "id": "premed-planb",
+    "myth": "If I don't get MBBS, my pre-medical FSc was wasted.",
+    "fact": "Pre-medical students have 8+ high-demand Plan B fields — from Pharm-D and DPT to health-tech and bioinformatics — that most never hear about.",
+    "stat": {
+      "value": "800+ MBBS seats sat vacant in private colleges",
+      "year": "2025-26",
+      "source": "PMDC / national media",
+      "source_url": "https://www.medicalnews.pk/"
+    },
+    "urdu": "MBBS نہ ملنا ناکامی نہیں — Pharm-D، DPT، ہیلتھ ٹیک اور بائیو انفارمیٹکس جیسے درجنوں مضبوط راستے موجود ہیں۔"
+  },
+  {
+    "id": "youth-unemployment",
+    "myth": "Any degree guarantees a job in Pakistan.",
+    "fact": "Youth unemployment (15-24) rose from 11.1% to 12.6% — the fastest-growing jobless group in the country.",
+    "stat": {
+      "value": "12.6% youth unemployment",
+      "year": "2024-25",
+      "source": "Pakistan Bureau of Statistics, Labour Force Survey",
+      "source_url": "https://www.pbs.gov.pk/labour-force-statistics/"
+    },
+    "urdu": "ہر ڈگری نوکری کی ضمانت نہیں۔ نوجوانوں کی بے روزگاری 12.6 فیصد تک بڑھ چکی ہے۔"
+  },
+  {
+    "id": "it-exports",
+    "myth": "Tech has no future in Pakistan.",
+    "fact": "IT is Pakistan's fastest-growing export — $4.6 billion in FY26 — and the government targets $15 billion by 2030.",
+    "stat": {
+      "value": "$4.6B IT exports, 19,000+ ICT companies",
+      "year": "2025-26",
+      "source": "P@SHA / State Bank of Pakistan",
+      "source_url": "https://www.samenacouncil.org/"
+    },
+    "urdu": "ٹیکنالوجی پاکستان کی تیزی سے بڑھتی ہوئی برآمد ہے — 2025-26 میں 4.6 ارب ڈالر۔"
+  },
+  {
+    "id": "nust-aggregate",
+    "myth": "My FSc marks decide my NUST merit.",
+    "fact": "NUST gives the entry test (NET) 75% weight. Your FSc counts only 15%. The NET — not your board marks — is the real battleground.",
+    "stat": {
+      "value": "75% NET + 15% FSc + 10% Matric",
+      "year": "2025",
+      "source": "NUST Undergraduate Admissions",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/merit-criteria-for-admission-on-net-basis/"
+    },
+    "urdu": "NUST میں داخلہ ٹیسٹ (NET) کا وزن 75 فیصد ہے، FSc صرف 15 فیصد۔"
+  },
+  {
+    "id": "abroad",
+    "myth": "Studying abroad is only for the rich.",
+    "fact": "Pakistan runs one of South Asia's largest government scholarship programs — HEC has funded 4,000+ foreign scholarships at 25 top universities.",
+    "stat": {
+      "value": "4,000+ HEC foreign scholarships",
+      "year": "2024",
+      "source": "Higher Education Commission",
+      "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/"
+    },
+    "urdu": "بیرونِ ملک پڑھائی صرف امیروں کے لیے نہیں — HEC نے 4000 سے زائد غیر ملکی اسکالرشپس دی ہیں۔"
+  },
+  {
+    "id": "income",
+    "myth": "All fields pay the same in Pakistan.",
+    "fact": "Average monthly income is Rs 39,042 — but a skilled tech worker earns multiples of that, which is why field choice is a financial decision.",
+    "stat": {
+      "value": "Rs 39,042 avg monthly income",
+      "year": "2024-25",
+      "source": "Pakistan Bureau of Statistics, LFS",
+      "source_url": "https://www.pbs.gov.pk/labour-force-statistics/"
+    },
+    "urdu": "پاکستان میں اوسط ماہانہ آمدنی 39,042 روپے ہے — شعبے کا انتخاب آپ کی آمدنی بدل دیتا ہے۔"
+  },
+  {
+    "id": "neet",
+    "myth": "Everyone figures it out after college.",
+    "fact": "A large share of Pakistani youth are NEET — not in education, employment or training. The gap is decided in the year after FSc, not during it.",
+    "stat": {
+      "value": "Youth NEET rate (SDG 8.6.1)",
+      "year": "2024-25",
+      "source": "Pakistan Bureau of Statistics",
+      "source_url": "https://www.pbs.gov.pk/labour-force-statistics/"
+    },
+    "urdu": "بہت سے نوجوان نہ تعلیم میں ہیں نہ نوکری میں — FSc کے بعد کا سال سب سے اہم فیصلہ ہے۔"
+  },
+  {
+    "id": "certifications",
+    "myth": "I need a 4-year degree before I can start earning.",
+    "fact": "Industry certifications (Google, Cisco, AWS) can get you freelancing income within 3-6 months — before any degree completes.",
+    "stat": {
+      "value": "3-6 months to first freelance income via certs",
+      "year": "2026",
+      "source": "Coursera / Google Career Certificates",
+      "source_url": "https://grow.google/certificates/"
+    },
+    "urdu": "ڈگری سے پہلے سرٹیفیکیشن سے 3-6 ماہ میں فری لانس آمدنی شروع ہو سکتی ہے۔"
+  },
+  {
+    "id": "merit-reality",
+    "myth": "If I score 85% in FSc, I'll get into a top public medical college.",
+    "fact": "Top public medical colleges close at 91-96% aggregate. 85% FSc barely makes you competitive for mid-tier seats.",
+    "stat": {
+      "value": "KEMU closes at ~94.9% aggregate",
+      "year": "2025",
+      "source": "UHS merit lists",
+      "source_url": "https://premeth.com/stats/mdcat"
+    },
+    "urdu": "بہترین سرکاری میڈیکل کالج 91-96 فیصد پر بند ہوتے ہیں — 85 فیصد کافی نہیں۔"
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "medicine",
+    "name": "Medicine (MBBS)",
+    "field": "Healthcare",
+    "emoji": "🩺",
+    "tagline": "The hardest door to open in Pakistan.",
+    "streams": ["pre-medical"],
+    "demand": "medium",
+    "salaryRange": { "low": 80000, "high": 500000, "currency": "PKR/mo", "note": "Indicative; varies by specialty, city and sector" },
+    "whyNow": { "value": "1 in 15 candidates gets a seat", "year": "2024", "source": "PMDC", "source_url": "https://premeth.com/stats/mdcat" },
+    "description": "5 years + house job. Prestige is real, but so is the 12+ year path to specialization and rising competition for FCPS/USMLE/PLAB.",
+    "skillTree": [
+      { "stage": "Foundation (FSc year)", "skills": [{ "name": "Biology mastery", "cert": "MDCAT 81 MCQs" }, { "name": "MDCAT prep" }] },
+      { "stage": "MBBS (years 1-5)", "skills": [{ "name": "Clinical rotations" }, { "name": "Research & electives" }] },
+      { "stage": "Post-MBBS", "skills": [{ "name": "FCPS Part 1", "cert": "CPSP" }, { "name": "USMLE/PLAB pathway" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "You're a house officer at 7 AM.",
+        "scenario": "A patient's vitals drop during rounds. What's your move?",
+        "options": [
+          { "label": "Call the registrar immediately", "result": "Correct. Medicine is knowing when to escalate — you'll do this hundreds of times.", "insight": "Decision-making under pressure, not just memorizing books." },
+          { "label": "Manage it alone to prove yourself", "result": "This is how errors happen. You learn hierarchy exists for patient safety.", "insight": "Ego is dangerous in clinical work." },
+          { "label": "Document everything first", "result": "Good instinct, but emergencies beat paperwork. You'll balance both daily.", "insight": "You'll spend ~40% of time on documentation." }
+        ]
+      }
+    ],
+    "courses": ["cs50"],
+    "universities": ["kemc", "aimc", "dow", "aku"],
+    "realityCheck": "Top public colleges close at 91–96% aggregate. Below 90% FSc? Plan a parallel path."
+  },
+  {
+    "id": "pharmacy",
+    "name": "Pharmacy (Pharm-D)",
+    "field": "Healthcare",
+    "emoji": "💊",
+    "tagline": "The strongest pre-med Plan B.",
+    "streams": ["pre-medical"],
+    "demand": "high",
+    "salaryRange": { "low": 60000, "high": 250000, "currency": "PKR/mo", "note": "Community, hospital, industry and regulatory tracks" },
+    "whyNow": { "value": "5-year clinical doctorate in a steady pharma sector", "year": "2026", "source": "Pakistan pharma sector", "source_url": "https://www.pharmacycouncil.org.pk/" },
+    "description": "A clinical doctorate opening community, hospital, industrial and regulatory careers — with pharma among Pakistan's steadiest employers.",
+    "skillTree": [
+      { "stage": "Year 1-2", "skills": [{ "name": "Pharmacology basics" }, { "name": "Pharmaceutics" }] },
+      { "stage": "Year 3-4", "skills": [{ "name": "Clinical pharmacy" }, { "name": "Industrial pharmacy" }] },
+      { "stage": "Year 5 + career", "skills": [{ "name": "Hospital residency" }, { "name": "Regulatory (DRAP)" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "You're a hospital pharmacist.",
+        "scenario": "A doctor prescribes two drugs with a known interaction.",
+        "options": [
+          { "label": "Flag it and suggest an alternative", "result": "Exactly your job — you just prevented a serious reaction.", "insight": "Pharmacists are the safety net between prescription and patient." },
+          { "label": "Dispense as written", "result": "The patient reacts badly and it traces back to you.", "insight": "Clinical knowledge is a real responsibility." }
+        ]
+      }
+    ],
+    "courses": ["cs50"],
+    "universities": [],
+    "realityCheck": "Pharm-D is a 5-year doctorate, not a backup diploma — it rivals MBBS in scope."
+  },
+  {
+    "id": "physiotherapy",
+    "name": "Physiotherapy (DPT)",
+    "field": "Healthcare",
+    "emoji": "🦴",
+    "tagline": "Rehab is a booming, under-served field.",
+    "streams": ["pre-medical"],
+    "demand": "high",
+    "salaryRange": { "low": 50000, "high": 200000, "currency": "PKR/mo", "note": "Clinical, sports, neuro and home-health tracks" },
+    "whyNow": { "value": "Sports & neuro rehab demand rising", "year": "2026", "source": "Healthcare sector trend", "source_url": "https://www.pmc.gov.pk/" },
+    "description": "A 5-year clinical doctorate focused on movement. Demand is rising in sports medicine, neuro-rehab and geriatric care — with real global mobility.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Anatomy & physiology" }] },
+      { "stage": "Clinical years", "skills": [{ "name": "Manual therapy" }, { "name": "Exercise prescription" }] },
+      { "stage": "Specialization", "skills": [{ "name": "Sports rehab" }, { "name": "Neuro rehab", "cert": "optional intl. cert" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "A post-surgery knee patient walks in.",
+        "scenario": "They're frustrated and want to skip rehab.",
+        "options": [
+          { "label": "Show the long-term cost of skipping", "result": "They commit. Six weeks later they walk normally.", "insight": "Half your job is motivation and education." },
+          { "label": "Just give exercises and move on", "result": "They drop out and lose range of motion.", "insight": "Adherence is the real challenge." }
+        ]
+      }
+    ],
+    "courses": [],
+    "universities": [],
+    "realityCheck": "DPT needs an entry test in most provinces but with far more seats than MBBS."
+  },
+  {
+    "id": "biotech",
+    "name": "Biotechnology & Bioinformatics",
+    "field": "Life Sciences",
+    "emoji": "🧬",
+    "tagline": "Biology + code = the next decade.",
+    "streams": ["pre-medical", "pre-engineering"],
+    "demand": "high",
+    "salaryRange": { "low": 60000, "high": 300000, "currency": "PKR/mo", "note": "Research, pharma, health-tech and remote global roles" },
+    "whyNow": { "value": "Bioinformatics skills are in global shortage", "year": "2026", "source": "Global life-sciences hiring", "source_url": "https://www.who.int/" },
+    "description": "Where biology meets computation. Pre-med students who add coding unlock biotech, genomics and health-tech careers — many fully remote and global.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Biology + basic Python" }] },
+      { "stage": "Core", "skills": [{ "name": "Genomics & sequencing" }, { "name": "Data analysis" }] },
+      { "stage": "Career", "skills": [{ "name": "Health-tech product roles" }, { "name": "Research / grad school abroad" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "You're analyzing genome data.",
+        "scenario": "A dataset has 1 million rows and a tight deadline.",
+        "options": [
+          { "label": "Write a script to automate it", "result": "You finish in hours, not weeks. This is why bioinformaticians get paid.", "insight": "Coding multiplies what a biologist can do 100x." },
+          { "label": "Manually go through the data", "result": "Impossible at this scale. You learn automation is not optional.", "insight": "Scale forces you to think in code." }
+        ]
+      }
+    ],
+    "courses": ["cs50", "google-data"],
+    "universities": [],
+    "realityCheck": "Pre-med students who learn Python are rare — that scarcity is your advantage."
+  },
+  {
+    "id": "dentistry",
+    "name": "Dentistry (BDS)",
+    "field": "Healthcare",
+    "emoji": "🦷",
+    "tagline": "Clinical prestige with better work-life balance.",
+    "streams": ["pre-medical"],
+    "demand": "medium",
+    "salaryRange": { "low": 70000, "high": 400000, "currency": "PKR/mo", "note": "Private practice potential is high" },
+    "whyNow": { "value": "~1,200 BDS seats but less competition than MBBS", "year": "2024", "source": "PMDC", "source_url": "https://premeth.com/stats/mdcat" },
+    "description": "4 years + house job. Similar prestige to MBBS with a faster path to independent private practice and steadier hours.",
+    "skillTree": [
+      { "stage": "BDS year 1-2", "skills": [{ "name": "Oral anatomy" }, { "name": "Pre-clinical skills" }] },
+      { "stage": "Clinical years", "skills": [{ "name": "Restorative dentistry" }, { "name": "Surgery & prosthetics" }] },
+      { "stage": "Career", "skills": [{ "name": "Private practice" }, { "name": "Specialization (FCPS)" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "A patient arrives with severe tooth pain.",
+        "scenario": "They're terrified of treatment.",
+        "options": [
+          { "label": "Reassure and explain each step", "result": "They relax, you complete the procedure smoothly.", "insight": "Chair-side manner is half the skill." },
+          { "label": "Proceed quickly to save time", "result": "They tense up and the appointment goes sideways.", "insight": "Trust is built before the drill." }
+        ]
+      }
+    ],
+    "courses": [],
+    "universities": [],
+    "realityCheck": "BDS closing merits run 4–6 points below MBBS — a realistic medical-adjacent target."
+  },
+  {
+    "id": "health-tech",
+    "name": "Health Technology",
+    "field": "HealthTech",
+    "emoji": "📱",
+    "tagline": "Fixing healthcare with software.",
+    "streams": ["pre-medical", "pre-engineering", "ics"],
+    "demand": "high",
+    "salaryRange": { "low": 80000, "high": 400000, "currency": "PKR/mo", "note": "Product, PM and founder roles in health startups" },
+    "whyNow": { "value": "Digital health is a fast-growing global market", "year": "2026", "source": "Global digital-health trend", "source_url": "https://www.who.int/initiatives/global-strategy-on-digital-health-2020-2025" },
+    "description": "Combine clinical empathy with product/tech skills to build or run digital health products — telemedicine, health apps, hospital systems.",
+    "skillTree": [
+      { "stage": "Foundation", "skills": [{ "name": "Healthcare domain knowledge" }, { "name": "Basic product thinking" }] },
+      { "stage": "Build", "skills": [{ "name": "Product management" }, { "name": "Data & analytics" }] },
+      { "stage": "Career", "skills": [{ "name": "Health startup roles" }, { "name": "Global health-tech (remote)" }] }
+    ],
+    "dayInLife": [
+      {
+        "title": "You're building a telemedicine app.",
+        "scenario": "A rural clinic needs a feature you didn't plan for.",
+        "options": [
+          { "label": "Talk to the doctors first", "result": "You discover the real need and build the right thing.", "insight": "Domain empathy is your edge over pure engineers." },
+          { "label": "Ship what was planned", "result": "The feature misses the mark and adoption stalls.", "insight": "In health, talking to users is non-negotiable." }
+        ]
+      }
+    ],
+    "courses": ["cs50", "google-ux"],
+    "universities": [],
+    "realityCheck": "Rare hybrid profile — few people understand both medicine and product."
+  }
+]
