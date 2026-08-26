@@ -41,6 +41,7 @@ export default function OnboardPage() {
     // Entry-test totals are implied by the test, never asked.
     if (id === "quiz.entryTest") {
       next = setAnswer(next, "marks.entryTestTotal", entryTestTotalFor(value as string));
+      next = setAnswer(next, "marks.entryTestObtained", undefined);
     }
     update(next);
   }
