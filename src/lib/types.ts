@@ -109,3 +109,26 @@ export interface AbroadDestination {
   postStudyWork: string;
   keyPoint: string;
 }
+
+export interface QuizAnswers {
+  // merit
+  board?: string;
+  examYear?: number;
+  entryTest?: "net" | "mdcat" | "ecat" | "none";
+  // money & location
+  city?: string;
+  province?: string;
+  budgetMonthly?: number; // PKR per month
+  canRelocate?: "yes" | "in-province" | "no";
+  needsScholarship?: "must" | "helpful" | "no";
+  // aspirations & pressure
+  dreamField?: string;
+  parentsExpect?: "doctor" | "engineer" | "civil-service" | "business" | "my-choice" | "unsure";
+  decisionMaker?: "me" | "parents" | "together";
+  parentsFirmness?: number; // 1-5
+  // readiness
+  certifications?: number;
+  projects?: number;
+  english?: number; // 1-5
+  consistency?: number; // 1-5
+}

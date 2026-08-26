@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import type { Marks, Stream } from "@/lib/types";
+import type { Marks, QuizAnswers, Stream } from "@/lib/types";
 
 export interface StudentProfile {
   name: string;
@@ -10,6 +10,9 @@ export interface StudentProfile {
   interests: string[];
   city: string;
   budget: string;
+  quiz: QuizAnswers;
+  quizStep: number;
+  quizCompletedAt: string | null;
 }
 
 const defaultProfile: StudentProfile = {
@@ -24,13 +27,17 @@ const defaultProfile: StudentProfile = {
   interests: [],
   city: "",
   budget: "",
+  quiz: {},
+  quizStep: 0,
+  quizCompletedAt: null,
 };
 
 interface Store {
   profile: StudentProfile;
   update: (patch: Partial<StudentProfile>) => void;
   reset: () => void;
-  onboarded: boolean;
+  hydrated: boolean;
+  hydrate: (remote: Partial<StudentProfile>) => void;
 }
 
 const Ctx = React.createContext<Store | null>(null);
@@ -63,14 +70,22 @@ export function StudentProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  const [hydrated, setHydrated] = React.useState(false);
+
+  const hydrate = React.useCallback((remote: Partial<StudentProfile>) => {
+    setProfile((prev) => {
+      const next = { ...prev, ...remote };
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("aftermediate:profile", JSON.stringify(next));
+      }
+      return next;
+    });
+    setHydrated(true);
+  }, []);
+
   const value = React.useMemo<Store>(
-    () => ({
-      profile,
-      update,
-      reset,
-      onboarded: !!profile.stream && profile.marks.fscTotal > 0,
-    }),
-    [profile, update, reset]
+    () => ({ profile, update, reset, hydrated, hydrate }),
+    [profile, update, reset, hydrated, hydrate]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
