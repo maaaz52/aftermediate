@@ -1,6 +1,5 @@
 import { SiteHeader } from "@/components/site-header";
 import { Chatbot } from "@/components/chatbot";
-import { ProfileSync } from "@/components/profile-sync";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -8,7 +7,6 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <Chatbot />
-      <ProfileSync />
     </div>
   );
 }

@@ -11,6 +11,7 @@ import "@fontsource/space-mono/700.css";
 import "./globals.css";
 import { StudentProvider } from "@/lib/store";
 import { AuthProvider } from "@/lib/auth";
+import { ProfileSync } from "@/components/profile-sync";
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +35,10 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col bg-background text-ink antialiased">
         <AuthProvider>
-          <StudentProvider>{children}</StudentProvider>
+          <StudentProvider>
+            {children}
+            <ProfileSync />
+          </StudentProvider>
         </AuthProvider>
       </body>
     </html>
