@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SourceTag } from "@/components/stat";
-import { getMajor, getCourses, getUniversitiesForStream, data } from "@/lib/data";
+import { getMajor, getCourses, data } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export default function MajorPage({ params }: { params: Promise<{ id: string }> }) {

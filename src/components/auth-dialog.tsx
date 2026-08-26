@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { X, Loader2, Mail, LogIn } from "lucide-react";
+import { X, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";

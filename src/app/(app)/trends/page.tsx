@@ -34,7 +34,7 @@ export default function TrendsPage() {
       </div>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">What the world is actually doing.</h1>
       <p className="mt-2 max-w-xl text-muted">
-        The data your textbooks don't update fast enough to show you.
+        The data your textbooks don&apos;t update fast enough to show you.
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">

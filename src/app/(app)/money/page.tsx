@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Wallet, Plane, Award, ExternalLink, ArrowRight } from "lucide-react";
+import { Wallet, Plane, Award, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { SourceTag } from "@/components/stat";
 import { data } from "@/lib/data";
 import { useStudent } from "@/lib/store";
@@ -77,7 +76,7 @@ export default function MoneyPage() {
               <h2 className="text-lg font-bold text-ink sm:text-xl">HEC funded 4,000+ scholarships</h2>
             </div>
             <p className="mt-2 text-sm text-muted">
-              Pakistan runs one of South Asia's largest government scholarship programs. Apply — the
+              Pakistan runs one of South Asia&apos;s largest government scholarship programs. Apply — the
               competition is smaller than you think.
             </p>
           </Card>

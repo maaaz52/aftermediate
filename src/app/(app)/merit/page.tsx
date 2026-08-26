@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Target, AlertTriangle, GitBranch, ArrowRight } from "lucide-react";
+import { GitBranch, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -59,7 +59,7 @@ export default function MeritPage() {
       </div>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Know your number.</h1>
       <p className="mt-2 max-w-xl text-muted">
-        The exact aggregate formulas — not the "guesses" from coaching academies. Adjust any number
+        The exact aggregate formulas — not the &quot;guesses&quot; from coaching academies. Adjust any number
         and watch your merit move.
       </p>
 
@@ -120,7 +120,7 @@ export default function MeritPage() {
               <div>
                 <h3 className="text-lg font-bold text-ink sm:text-xl">{percentile.band}</h3>
                 <p className="mt-1 text-sm text-muted">
-                  You're ahead of ~{percentile.percentile}% of the {data.mdcat.candidates.value} MDCAT
+                  You&apos;re ahead of ~{percentile.percentile}% of the {data.mdcat.candidates.value} MDCAT
                   candidates. But only {data.mdcat.mbbsSeats.value} MBBS seats exist.
                 </p>
                 <div className="mt-3"><SourceTag stat={data.mdcat.conversion} /></div>

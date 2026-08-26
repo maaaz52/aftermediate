@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { SourceTag } from "@/components/stat";
 import { SavePlanButton } from "@/components/save-plan-button";
 import { useStudent } from "@/lib/store";
-import { data, getMajorsByStream, getRealityCheck } from "@/lib/data";
+import { getMajorsByStream, getRealityCheck } from "@/lib/data";
 import { nustAggregate, fastAggregate, mdcatAggregate, pct } from "@/lib/aggregates";
 import type { Stream } from "@/lib/types";
 
@@ -45,7 +45,7 @@ export default function DashboardPage() {
             {fscPct > 0 && <Badge variant="emerald" className="font-mono">{fscPct.toFixed(1)}%</Badge>}
           </div>
           <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
-            Salam{profile.name ? `, ${profile.name}` : ""}. Here's your map.
+            Salam{profile.name ? `, ${profile.name}` : ""}. Here&apos;s your map.
           </h1>
         </div>
         <div className="flex items-center gap-3">

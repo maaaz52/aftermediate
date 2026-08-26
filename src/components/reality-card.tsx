@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { SourceTag } from "@/components/stat";
-import { cn } from "@/lib/utils";
 import type { RealityCheck } from "@/lib/types";
 
 export function RealityCard({

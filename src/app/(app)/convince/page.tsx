@@ -101,7 +101,7 @@ export default function ConvincePage() {
       </div>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Show this to your parents.</h1>
       <p className="mt-2 max-w-xl text-muted">
-        A bilingual, data-backed report that turns "beta, doctor bano" into an informed conversation.
+        A bilingual, data-backed report that turns &quot;beta, doctor bano&quot; into an informed conversation.
       </p>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.3fr_1fr]">
@@ -144,9 +144,9 @@ export default function ConvincePage() {
             <div className="mt-6 rounded-xl border border-line bg-surface-2/50 p-4">
               <p className="text-sm font-medium text-ink">The takeaway for parents</p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Your child's marks are one input — not a verdict. The fastest-growing jobs in Pakistan are
+                Your child&apos;s marks are one input — not a verdict. The fastest-growing jobs in Pakistan are
                 in technology, and with a clear plan, a non-medical or non-traditional path can out-earn a
-                conventional one. Let's choose with data, not fear.
+                conventional one. Let&apos;s choose with data, not fear.
               </p>
               <p className="mt-3 text-sm text-ink" dir="rtl">
                 آپ کے بچے کے نمبر صرف ایک معیار ہیں، فیصلہ نہیں۔ پاکستان میں سب سے تیزی سے بڑھتی ہوئی نوکریاں
