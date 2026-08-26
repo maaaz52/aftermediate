@@ -58,6 +58,29 @@ function isAnswered(v: unknown): boolean {
   return true;
 }
 
+function isAnsweredFor(q: Question, v: unknown): boolean {
+  if (!isAnswered(v)) return false;
+
+  if (q.kind === "number" || q.kind === "scale") {
+    // Required numerics must clear their minimum. This is what stops the
+    // store's seeded marks defaults (0) from counting as a real answer.
+    return (v as number) >= (q.min ?? 1);
+  }
+
+  if (q.kind === "single" || q.kind === "stream") {
+    const opts = q.options ?? [];
+    return opts.length === 0 || opts.some((o) => o.value === v);
+  }
+
+  if (q.kind === "multi") {
+    const opts = q.options ?? [];
+    const sel = v as string[];
+    return opts.length === 0 || sel.every((s) => opts.some((o) => o.value === s));
+  }
+
+  return true;
+}
+
 /* ---------- option sets ---------- */
 
 const ENTRY_TESTS: { value: string; label: string; sub: string; streams: string[] }[] = [
@@ -110,9 +133,9 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     subtitle: "Scan it or type it. We only need the totals.",
     questions: [
       { id: "marks", kind: "marksheet", label: "Scan your marksheet" },
-      { id: "marks.matricObtained", kind: "number", label: "Matric obtained", required: true, min: 0 },
+      { id: "marks.matricObtained", kind: "number", label: "Matric obtained", required: true, min: 1 },
       { id: "marks.matricTotal", kind: "number", label: "Matric total", required: true, min: 1 },
-      { id: "marks.fscObtained", kind: "number", label: "FSc obtained", required: true, min: 0 },
+      { id: "marks.fscObtained", kind: "number", label: "FSc obtained", required: true, min: 1 },
       { id: "marks.fscTotal", kind: "number", label: "FSc total", required: true, min: 1 },
       {
         id: "marks.fscPart1Obtained", kind: "number", label: "FSc Part-1 obtained", min: 0,
@@ -241,7 +264,7 @@ export function visibleQuestions(s: QuizSection, p: StudentProfile): Question[] 
 export function isSectionComplete(s: QuizSection, p: StudentProfile): boolean {
   return visibleQuestions(s, p)
     .filter((q) => q.required)
-    .every((q) => isAnswered(getAnswer(p, q.id)));
+    .every((q) => isAnsweredFor(q, getAnswer(p, q.id)));
 }
 
 export function isQuizComplete(p: StudentProfile): boolean {

@@ -9,6 +9,7 @@ import {
   setAnswer,
   visibleQuestions,
 } from "@/lib/quiz";
+import type { QuizSection } from "@/lib/quiz";
 import type { StudentProfile } from "@/lib/store";
 
 function blank(): StudentProfile {
@@ -135,10 +136,66 @@ describe("completeness", () => {
     expect(isQuizComplete(q)).toBe(false);
   });
 
-  it("ignores hidden questions when judging completeness", () => {
-    // entryTest "none" hides the score, so its absence must not block completion
-    const p = { ...filled(), quiz: { ...filled().quiz, entryTest: "none" as const }, marks: { ...filled().marks, entryTestObtained: undefined } };
-    expect(isQuizComplete(p)).toBe(true);
+});
+
+describe("showIf interacts with required", () => {
+  const synthetic: QuizSection = {
+    id: "synthetic",
+    title: "t",
+    subtitle: "s",
+    questions: [
+      { id: "quiz.city", kind: "text", label: "always", required: true },
+      {
+        id: "quiz.dreamField", kind: "text", label: "conditional", required: true,
+        showIf: (p) => p.quiz.entryTest === "net",
+      },
+    ],
+  };
+
+  it("ignores a required question while it is hidden", () => {
+    const p = { ...blank(), quiz: { city: "Lahore", entryTest: "none" as const } };
+    expect(visibleQuestions(synthetic, p).map((q) => q.id)).not.toContain("quiz.dreamField");
+    expect(isSectionComplete(synthetic, p)).toBe(true);
+  });
+
+  it("enforces the same question once it becomes visible", () => {
+    const p = { ...blank(), quiz: { city: "Lahore", entryTest: "net" as const } };
+    expect(visibleQuestions(synthetic, p).map((q) => q.id)).toContain("quiz.dreamField");
+    expect(isSectionComplete(synthetic, p)).toBe(false);
+    const answered = { ...p, quiz: { ...p.quiz, dreamField: "Robotics" } };
+    expect(isSectionComplete(synthetic, answered)).toBe(true);
+  });
+});
+
+describe("seeded marks defaults are not real answers", () => {
+  it("treats a brand-new profile's marks section as incomplete", () => {
+    const marks = QUIZ_SECTIONS.find((s) => s.id === "marks")!;
+    expect(isSectionComplete(marks, blank())).toBe(false);
+  });
+
+  it("does not admit a student who skipped the marksheet screen", () => {
+    const skipped = {
+      ...blank(),
+      stream: "pre-engineering" as const,
+      interests: ["Technology & Coding"],
+      quiz: {
+        entryTest: "none" as const, city: "Lahore", budgetMonthly: 50000,
+        parentsExpect: "engineer" as const, decisionMaker: "together" as const,
+        english: 4, consistency: 3,
+      },
+    };
+    expect(isQuizComplete(skipped)).toBe(false);
+    expect(firstIncompleteSection(skipped)).toBe(1); // the marks section
+  });
+});
+
+describe("stale answers are rejected once options change", () => {
+  it("drops an entry test that the student's stream no longer offers", () => {
+    const merit = QUIZ_SECTIONS.find((s) => s.id === "merit")!;
+    const med = { ...blank(), stream: "pre-medical" as const, quiz: { entryTest: "mdcat" as const } };
+    expect(isSectionComplete(merit, med)).toBe(true);
+    const switched = { ...med, stream: "pre-engineering" as const };
+    expect(isSectionComplete(merit, switched)).toBe(false);
   });
 });
 
