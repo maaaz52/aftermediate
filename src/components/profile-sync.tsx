@@ -13,6 +13,13 @@ export function ProfileSync() {
   const { profile, hydrate, hydrated } = useStudent();
   const pushed = React.useRef<string | null>(null);
   const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const liveProfile = React.useRef(profile);
+  React.useEffect(() => {
+    // Updated on every render (no deps array), not just inside other effects,
+    // so the hydrate effect below can detect edits that happened while its
+    // fetch was in flight.
+    liveProfile.current = profile;
+  });
 
   // 1. Hydrate once per user.
   React.useEffect(() => {
@@ -55,6 +62,16 @@ export function ProfileSync() {
         const localStamp =
           typeof window !== "undefined" ? window.localStorage.getItem(LOCAL_STAMP) : null;
 
+        const startProfile = profile; // the closure value, captured when the effect scheduled
+
+        if (liveProfile.current !== startProfile) {
+          // The user edited locally while this fetch was in flight — trust the
+          // newer local state instead of overwriting it with a stale remote read.
+          // The debounced push effect will carry the fresher local state up next.
+          hydrate({});
+          return;
+        }
+
         const choice = chooseProfile(profile, localStamp, remote, data?.updated_at ?? null);
         hydrate(choice.use === "remote" ? choice.profile : {});
       });
@@ -76,7 +93,6 @@ export function ProfileSync() {
 
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => {
-      pushed.current = payload;
       const now = new Date().toISOString();
       const supabase = createClient();
 
@@ -100,9 +116,13 @@ export function ProfileSync() {
           updated_at: now,
         })
         .then(({ error }) => {
-          if (error) console.warn("profile sync failed", error.message);
-          else if (typeof window !== "undefined") {
-            window.localStorage.setItem(LOCAL_STAMP, now);
+          if (error) {
+            console.warn("profile sync failed", error.message);
+          } else {
+            pushed.current = payload;
+            if (typeof window !== "undefined") {
+              window.localStorage.setItem(LOCAL_STAMP, now);
+            }
           }
         });
     }, 800);
