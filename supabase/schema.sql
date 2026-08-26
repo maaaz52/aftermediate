@@ -13,6 +13,8 @@ create table if not exists public.profiles (
   interests text[] default '{}',
   city text,
   budget text,
+  quiz jsonb default '{}'::jsonb,
+  quiz_completed_at timestamptz,
   created_at timestamptz default now(),
   updated_at timestamptz default now()
 );

@@ -41,10 +41,10 @@ export default function ConvincePage() {
   const { profile } = useStudent();
   const fscPct = pct(profile.marks.fscObtained, profile.marks.fscTotal);
 
-  const [certifications, setCertifications] = React.useState(0);
-  const [projects, setProjects] = React.useState(0);
-  const [english, setEnglish] = React.useState(3);
-  const [consistency, setConsistency] = React.useState(3);
+  const [certifications, setCertifications] = React.useState(profile.quiz.certifications ?? 0);
+  const [projects, setProjects] = React.useState(profile.quiz.projects ?? 0);
+  const [english, setEnglish] = React.useState(profile.quiz.english ?? 3);
+  const [consistency, setConsistency] = React.useState(profile.quiz.consistency ?? 3);
   const worth = worthScore({ fscPct, certifications, projects, english, consistency });
 
   const [mode, setMode] = React.useState<"essay" | "cv">("essay");

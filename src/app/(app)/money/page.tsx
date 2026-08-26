@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SourceTag } from "@/components/stat";
 import { data } from "@/lib/data";
+import { useStudent } from "@/lib/store";
 
 function affordability(budget: number): { tier: string; desc: string; tone: "emerald" | "saffron" | "danger" }[] {
   if (!budget) return [];
@@ -23,7 +24,8 @@ function affordability(budget: number): { tier: string; desc: string; tone: "eme
 }
 
 export default function MoneyPage() {
-  const [budget, setBudget] = React.useState(0);
+  const { profile } = useStudent();
+  const [budget, setBudget] = React.useState(profile.quiz.budgetMonthly ?? 0);
   const aff = affordability(budget);
 
   return (
