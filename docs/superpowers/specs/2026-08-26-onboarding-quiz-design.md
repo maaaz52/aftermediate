@@ -42,6 +42,7 @@ Separately, persistence is one-way. `useStudent` is localStorage-first and `Prof
 | Content | Merit + Money & location + Aspirations & pressure + Readiness & skills | Each maps to a page already waiting on the data. |
 | Gating | **Required once, resumable** | Guarantees downstream pages have real data instead of zeros. |
 | Storage | **Single `quiz jsonb` column** | Smallest migration; new questions need no further migration. |
+| Budget | **`budgetMonthly` number, not a band** | `/money`'s `affordability()` already takes a monthly PKR figure with thresholds at 20k/60k/150k; an enum would need an invented lossy conversion. Revised during planning. |
 | Testing | **Add vitest, TDD the pure logic** | Completeness rules gate site access — a wrong rule locks users out or lets them through with zeros. |
 
 ## 5. Migration — ALREADY APPLIED
@@ -72,7 +73,7 @@ export interface QuizAnswers {
   // money & location
   city?: string;
   province?: string;
-  budgetBand?: "under-50k" | "50-150k" | "150-400k" | "400k-plus" | "unsure";
+  budgetMonthly?: number; // PKR per month
   canRelocate?: "yes" | "in-province" | "no";
   needsScholarship?: "must" | "helpful" | "no";
   // aspirations & pressure
@@ -92,12 +93,12 @@ export interface QuizAnswers {
 
 ```ts
 quiz: QuizAnswers;
-quizStep: number;               // resume point, index into visible sections
+quizStep: number;               // resume point; localStorage only, NOT synced to Supabase
 quizCompletedAt: string | null; // ISO; null = incomplete
 ```
 
 `city` and `budget` already exist as top-level `StudentProfile` fields and as `profiles` columns.
-To avoid two homes for one value, **`city` and `budgetBand` are written to `quiz` AND mirrored to the
+To avoid two homes for one value, **`city` and `budgetMonthly` are written to `quiz` AND mirrored to the
 existing top-level `city` / `budget` columns** by `ProfileSync`, so existing consumers keep working.
 `quiz` is the source of truth; the columns are a denormalised mirror.
 
@@ -140,7 +141,7 @@ export function firstIncompleteSection(p: StudentProfile): number;
 | 0 | `stream` | What did you do in FSc? | stream | yes |
 | 1 | `marks` | Your marksheet | OCR upload, matric obtained/total, FSc obtained/total, FSc Part-1 obtained/total | matric + FSc totals |
 | 2 | `merit` | Your entry test | board, examYear, entryTest, entryTestObtained/Total | entryTest |
-| 3 | `money` | What can you afford? | city, province, budgetBand, canRelocate, needsScholarship | city, budgetBand |
+| 3 | `money` | What can you afford? | city, province, budgetMonthly, canRelocate, needsScholarship | city, budgetMonthly |
 | 4 | `pressure` | Who's deciding? | dreamField, parentsExpect, decisionMaker, parentsFirmness | parentsExpect, decisionMaker |
 | 5 | `readiness` | Where are you now? | certifications, projects, english, consistency | english, consistency |
 | 6 | `interests` | What pulls you? | interests (multi) | at least 1 |
@@ -166,6 +167,9 @@ export function firstIncompleteSection(p: StudentProfile): number;
 The store exposes `hydrated: boolean`. Nothing may gate on `quizCompletedAt` before `hydrated` is true —
 otherwise a completed user is bounced into the quiz during the async load.
 
+**`quizStep` is not synced.** Cross-device resume derives from `firstIncompleteSection`, which cannot go
+stale; same-browser resume uses the localStorage value. This avoids a third column for a hint value.
+
 Conflict rule is last-write-wins on `updated_at`. Acceptable: a single student on their own devices.
 
 ## 9. Gating
@@ -190,7 +194,7 @@ Minimal seeding only.
 
 - **`/merit`** — no code change needed; it already reads `marks.entryTestObtained/Total`. It starts
   producing correct numbers once the quiz supplies them. This is the headline bug fix.
-- **`/money`** — read `profile.quiz.city` and `profile.quiz.budgetBand`.
+- **`/money`** — read `profile.quiz.city` and `profile.quiz.budgetMonthly`.
 - **`/convince`** — seed the four `useState` initialisers from `profile.quiz` instead of `0,0,3,3`.
   Sliders stay adjustable; changes write back to `quiz` so they persist.
 - **`/dashboard`** — unchanged.
