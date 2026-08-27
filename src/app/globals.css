@@ -93,6 +93,13 @@ body {
   border: 2px solid var(--color-ink);
 }
 
+.card-glass {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 3px rgba(25, 31, 44, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
 .dither {
   background-image: radial-gradient(var(--color-ink) 1px, transparent 1px);
   background-size: 8px 8px;

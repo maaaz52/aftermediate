@@ -35,7 +35,7 @@ export function ProfileSync() {
 
     supabase
       .from("profiles")
-      .select("name, stream, marks, interests, city, budget, quiz, quiz_completed_at, updated_at")
+      .select("name, avatar, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, updated_at")
       .eq("id", user.id)
       .maybeSingle()
       .then(({ data, error }) => {
@@ -49,9 +49,13 @@ export function ProfileSync() {
         const remote: Partial<StudentProfile> | null = data
           ? {
               name: data.name ?? "",
+              avatar: data.avatar ?? "",
+              bio: data.bio ?? "",
               stream: data.stream ?? null,
               marks: data.marks ?? undefined,
               interests: data.interests ?? [],
+              skills: data.skills ?? [],
+              education: data.education ?? [],
               city: data.city ?? "",
               budget: data.budget ?? "",
               quiz: data.quiz ?? {},
@@ -101,9 +105,13 @@ export function ProfileSync() {
         .upsert({
           id: user.id,
           name: profile.name || user.user_metadata?.full_name || null,
+          avatar: profile.avatar || null,
+          bio: profile.bio || null,
           stream: profile.stream,
           marks: profile.marks,
           interests: profile.interests,
+          skills: profile.skills,
+          education: profile.education,
           // quiz is the source of truth; these two columns are a mirror
           // so existing consumers keep working.
           city: profile.quiz.city ?? profile.city ?? null,

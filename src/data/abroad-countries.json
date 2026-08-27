@@ -1,0 +1,885 @@
+{
+  "dataYear": 2026,
+  "countries": [
+    {
+      "id": "germany",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "intro": "Germany's public universities charge no tuition (only a small semester fee), making it one of the most affordable Western destinations for Pakistani students. It is known for engineering, applied sciences, and strong post-graduation job options, with an estimated 5,000-10,000 Pakistani students enrolled.",
+      "region": "europe",
+      "capital": "Berlin",
+      "language": "German",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "National D Student Visa",
+        "feePkr": 24300,
+        "processingTime": "4-8 weeks",
+        "keyPoints": [
+          "Blocked account of approx. EUR 11,904 for one year of living costs (2025/26 level)",
+          "Health insurance valid in Germany is mandatory",
+          "University admission letter (Zulassungsbescheid) required",
+          "Visa interview at the German Embassy Islamabad",
+          "Students may work 140 full days or 280 half days per year"
+        ]
+      },
+      "intakes": ["October (Winter)", "April (Summer)"],
+      "tuition": {
+        "ug": { "min": 0, "max": 0 },
+        "masters": { "min": 0, "max": 6480000 },
+        "phd": { "min": 0, "max": 0 }
+      },
+      "living": {
+        "bigCity": { "rent": 165000, "food": 65000, "transport": 16000, "utilities": 32000, "misc": 45000 },
+        "smallCity": { "rent": 110000, "food": 55000, "transport": 13000, "utilities": 26000, "misc": 32000 }
+      },
+      "oneTime": { "applicationFee": 24300, "visaFee": 24300, "insurance": 486000, "flight": 180000 },
+      "postStudyWork": "18-month job-seeker residence permit after graduation",
+      "postStudyWorkMonths": 18,
+      "pathway": [
+        { "title": "Shortlist programs", "detail": "Find English-taught programs on the DAAD database and shortlist 3-5 options." },
+        { "title": "Apply via uni-assist", "detail": "Many public universities accept applications through uni-assist; check each program's deadline." },
+        { "title": "Receive the offer", "detail": "Get the admission letter (Zulassungsbescheid) from the university." },
+        { "title": "Open a blocked account", "detail": "Deposit the required living-cost amount into a blocked account and get the confirmation." },
+        { "title": "Apply for the visa", "detail": "Book an appointment at the German Embassy, submit documents, and pay the visa fee." },
+        { "title": "Travel & enroll", "detail": "Fly to Germany, register your address, and enroll at the university." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University admission letter",
+        "Blocked account confirmation",
+        "Academic transcripts and degrees",
+        "Language certificate (IELTS/TOEFL or German)",
+        "Health insurance proof"
+      ],
+      "requiredTests": ["ielts", "testdaf"],
+      "topFields": ["Mechanical Engineering", "Computer Science", "Automotive Engineering"],
+      "pros": [
+        "Tuition-free public universities",
+        "Strong job market after graduation",
+        "18-month job-seeking visa",
+        "Part-time work rights (140 full days per year)"
+      ],
+      "cons": [
+        "Blocked-account requirement of approx. EUR 11,904 up front",
+        "German language needed for many jobs and daily life",
+        "Private universities charge EUR 8,000-20,000 per year"
+      ],
+      "sources": [
+        { "label": "Make it in Germany (official portal)", "url": "https://www.make-it-in-germany.com" },
+        { "label": "German Embassy Islamabad", "url": "https://pakistan.diplo.de" }
+      ]
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "flag": "🇦🇹",
+      "intro": "Austria's public universities charge non-EU students only about EUR 726.72 per semester plus a small student union fee, among the lowest in Western Europe. It is strong in music and the arts, environmental engineering, and hospitality, with a growing but still modest Pakistani student community (several hundred).",
+      "region": "europe",
+      "capital": "Vienna",
+      "language": "German",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "Residence Permit - Student (Visa D entry)",
+        "feePkr": 70600,
+        "processingTime": "4-8 weeks",
+        "keyPoints": [
+          "Application fee of approx. EUR 218 from January 2026 (OeAD)",
+          "Proof of funds of approx. EUR 722.58 per month (under 24)",
+          "Health insurance and accommodation proof required",
+          "Biometrics and documents submitted via the Austrian Embassy Islamabad",
+          "Students may work up to 20 hours per week"
+        ]
+      },
+      "intakes": ["October (Winter)", "March (Summer, limited)"],
+      "tuition": {
+        "ug": { "min": 486000, "max": 4860000 },
+        "masters": { "min": 486000, "max": 6480000 },
+        "phd": { "min": 0, "max": 486000 }
+      },
+      "living": {
+        "bigCity": { "rent": 160000, "food": 65000, "transport": 12000, "utilities": 29000, "misc": 42000 },
+        "smallCity": { "rent": 110000, "food": 55000, "transport": 10000, "utilities": 23000, "misc": 32000 }
+      },
+      "oneTime": { "applicationFee": 0, "visaFee": 70600, "insurance": 253000, "flight": 200000 },
+      "postStudyWork": "12-month Red-White-Red Card job-seeker route for graduates",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        { "title": "Choose a program", "detail": "Pick an English or German-taught program at a public university or FH." },
+        { "title": "Apply & get admission", "detail": "Submit documents directly to the university and receive your admission letter." },
+        { "title": "Prepare funds & insurance", "detail": "Arrange proof of funds (approx. EUR 722.58/month) and valid health insurance." },
+        { "title": "Apply for residence permit", "detail": "Lodge the Residence Permit - Student application at the Austrian Embassy Islamabad." },
+        { "title": "Collect Visa D & travel", "detail": "After approval, collect the Visa D, fly to Austria, and register with authorities." },
+        { "title": "Enroll & work part-time", "detail": "Enroll at the university and take up permitted part-time work (up to 20 hours/week)." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University admission letter",
+        "Proof of financial means (bank statements)",
+        "Accommodation confirmation",
+        "Health insurance certificate",
+        "Academic transcripts and certificates",
+        "Birth certificate (if under 18)"
+      ],
+      "requiredTests": ["ielts", "osd"],
+      "topFields": ["Music & Performing Arts", "Tourism & Hospitality", "Environmental Engineering"],
+      "pros": [
+        "Very low public-university fees (approx. EUR 726.72 per semester)",
+        "No blocked account required (bank statements accepted)",
+        "12-month job-seeker route after graduation",
+        "High living standards in Vienna, consistently top-ranked for quality of life"
+      ],
+      "cons": [
+        "German is needed for most undergraduate programs and jobs",
+        "Rental housing in Vienna is competitive and rising"
+      ],
+      "sources": [
+        { "label": "Austrian Embassy Islamabad (BMEIA)", "url": "https://www.bmeia.gv.at/en/austrian-embassy-islamabad" },
+        { "label": "OeAD (Austrian agency for education)", "url": "https://oead.at/en" }
+      ]
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "flag": "🇮🇹",
+      "intro": "Italian public universities charge income-based fees that are low by Western standards (roughly EUR 900-4,000 per year; private universities up to approx. EUR 15,000 per year), with strong programs in design, architecture, and engineering. Around 1,000-2,000 Pakistani students study in Italy, and tuition waivers and regional scholarships (DSU) are widely available.",
+      "region": "europe",
+      "capital": "Rome",
+      "language": "Italian",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "National D Study Visa",
+        "feePkr": 16200,
+        "processingTime": "4-12 weeks (up to 90 days)",
+        "keyPoints": [
+          "Visa fee of EUR 50 for national study visas (D); general long-stay visas cost EUR 116 (approx.)",
+          "Pre-enrollment through the Universitaly portal is mandatory",
+          "Proof of funds of approx. EUR 7,000 per year",
+          "Health insurance or SSN registration required",
+          "Students may work up to 20 hours per week"
+        ]
+      },
+      "intakes": ["October (Main)", "February (Limited)"],
+      "tuition": {
+        "ug": { "min": 291600, "max": 4860000 },
+        "masters": { "min": 291600, "max": 4860000 },
+        "phd": { "min": 0, "max": 486000 }
+      },
+      "living": {
+        "bigCity": { "rent": 162000, "food": 68000, "transport": 13000, "utilities": 26000, "misc": 45000 },
+        "smallCity": { "rent": 97000, "food": 58000, "transport": 10000, "utilities": 23000, "misc": 32000 }
+      },
+      "oneTime": { "applicationFee": 10000, "visaFee": 16200, "insurance": 160000, "flight": 200000 },
+      "postStudyWork": "12-month 'awaiting employment' permit after graduation (job-offer conversion common)",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        { "title": "Pre-enroll on Universitaly", "detail": "Complete the mandatory pre-enrollment on the Universitaly portal for your chosen program." },
+        { "title": "University admission", "detail": "Sit entrance tests if required (e.g. IMAT for medicine) and receive your admission letter." },
+        { "title": "Prepare finances", "detail": "Arrange bank statements showing approx. EUR 7,000 for the first year plus insurance." },
+        { "title": "Apply at the embassy", "detail": "Book a visa appointment at the Italian Embassy in Islamabad and submit the dossier." },
+        { "title": "Travel & register", "detail": "Fly to Italy and apply for the residence permit (permesso di soggiorno) within 8 days." },
+        { "title": "Enroll & claim benefits", "detail": "Enroll at the university and apply for regional DSU scholarships and housing." }
+      ],
+      "documents": [
+        "Valid passport",
+        "Universitaly pre-enrollment summary",
+        "University admission letter",
+        "Bank statements (approx. EUR 7,000)",
+        "Health insurance proof",
+        "Academic transcripts and degrees",
+        "Accommodation evidence"
+      ],
+      "requiredTests": ["ielts", "cils"],
+      "topFields": ["Design & Fashion", "Architecture", "Automotive & Mechanical Engineering"],
+      "pros": [
+        "Income-based public university fees (approx. EUR 900-4,000 per year)",
+        "Regional DSU scholarships cover fees, meals, and housing",
+        "World-class design, architecture, and engineering schools",
+        "Part-time work up to 20 hours per week"
+      ],
+      "cons": [
+        "Visa processing can stretch up to 90 days in peak season",
+        "Italian is needed for most undergraduate courses"
+      ],
+      "sources": [
+        { "label": "Study in Italy (official portal)", "url": "https://studyinitaly.esteri.it" },
+        { "label": "Italian Embassy Islamabad", "url": "https://ambislamabad.esteri.it" }
+      ]
+    },
+    {
+      "id": "south-korea",
+      "name": "South Korea",
+      "flag": "🇰🇷",
+      "intro": "South Korea combines technology-heavy universities with scholarships for international students, including the full GKS (Global Korea Scholarship) program. Around 2,000-3,000 Pakistani students study there, drawn by strong CS, semiconductor, and engineering programs and comparatively moderate tuition at national universities.",
+      "region": "asia",
+      "capital": "Seoul",
+      "language": "Korean",
+      "currency": { "code": "KRW", "name": "South Korean Won", "symbol": "₩", "toPkr": 0.2, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "D-2 Student Visa",
+        "feePkr": 18100,
+        "processingTime": "2-4 weeks",
+        "keyPoints": [
+          "Visa fee approx. USD 60-70 (single entry; varies by embassy)",
+          "Certificate of Admission (CoA) from the university required",
+          "Proof of funds of approx. USD 10,000-20,000 (varies by region)",
+          "Health check and insurance recommended",
+          "Students may work up to 25-30 hours per week after arrival registration"
+        ]
+      },
+      "intakes": ["March (Spring)", "September (Fall)"],
+      "tuition": {
+        "ug": { "min": 800000, "max": 2400000 },
+        "masters": { "min": 1000000, "max": 3000000 },
+        "phd": { "min": 1000000, "max": 3000000 }
+      },
+      "living": {
+        "bigCity": { "rent": 90000, "food": 80000, "transport": 12000, "utilities": 24000, "misc": 30000 },
+        "smallCity": { "rent": 60000, "food": 64000, "transport": 8000, "utilities": 18000, "misc": 22000 }
+      },
+      "oneTime": { "applicationFee": 20000, "visaFee": 18100, "insurance": 240000, "flight": 280000 },
+      "postStudyWork": "D-10 job-seeker visa for 6 months after graduation (extendable)",
+      "postStudyWorkMonths": 6,
+      "pathway": [
+        { "title": "Choose a university", "detail": "Shortlist programs at national universities (SNU, KAIST) or private universities." },
+        { "title": "Apply with TOPIK/English scores", "detail": "Submit transcripts with TOPIK (Korean) or IELTS/TOEFL scores before the deadline." },
+        { "title": "Receive Certificate of Admission", "detail": "Pay the tuition deposit and receive the CoA needed for the visa." },
+        { "title": "Apply for D-2 visa", "detail": "File the D-2 visa at the Korean Embassy with CoA and financial proof." },
+        { "title": "Enter & register", "detail": "Fly to Korea, obtain the Alien Registration Card within 90 days, and enroll." }
+      ],
+      "documents": [
+        "Valid passport",
+        "Certificate of Admission (CoA)",
+        "Visa application form and photo",
+        "Financial proof (bank statement)",
+        "Academic transcripts and degrees",
+        "Language test results (TOPIK/IELTS/TOEFL)",
+        "TB test where requested"
+      ],
+      "requiredTests": ["ielts", "topik"],
+      "topFields": ["Computer Science & AI", "Semiconductor Engineering", "Business & Media"],
+      "pros": [
+        "GKS scholarship covers full tuition, flights, and a monthly stipend",
+        "Leading semiconductor, AI, and engineering industry links",
+        "Moderate national-university fees (approx. KRW 4-8 million per year)",
+        "Part-time work rights up to 25-30 hours per week"
+      ],
+      "cons": [
+        "Korean language (TOPIK) required for most programs and jobs",
+        "Proof-of-funds requirements are high in Seoul"
+      ],
+      "sources": [
+        { "label": "Study in Korea (official, NIIED)", "url": "https://www.studyinkorea.go.kr" },
+        { "label": "Hi Korea (immigration e-service)", "url": "https://www.hikorea.go.kr" }
+      ]
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "flag": "🇹🇷",
+      "intro": "Turkey is a popular budget destination for Pakistani students, with public university tuition typically under USD 1,500 per year and a large Pakistani student community. The government's Türkiye Bursları scholarship fully funds around 4,000-5,000 international students annually, with strong medicine, engineering, and business programs.",
+      "region": "asia",
+      "capital": "Ankara",
+      "language": "Turkish",
+      "currency": { "code": "TRY", "name": "Turkish Lira", "symbol": "₺", "toPkr": 5.77, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "Student Visa (Education)",
+        "feePkr": 38000,
+        "processingTime": "3-8 weeks",
+        "keyPoints": [
+          "Visa fee approx. USD 100-150 for Pakistani applicants (varies)",
+          "University acceptance letter is mandatory",
+          "Proof of funds of approx. USD 500-600 per month",
+          "Biometrics at the Turkish Embassy Islamabad via Anatolia Travel",
+          "Student residence permit must be obtained within 30 days of arrival"
+        ]
+      },
+      "intakes": ["September (Fall)", "February (Spring)"],
+      "tuition": {
+        "ug": { "min": 83400, "max": 2224000 },
+        "masters": { "min": 139000, "max": 2224000 },
+        "phd": { "min": 139000, "max": 1668000 }
+      },
+      "living": {
+        "bigCity": { "rent": 69200, "food": 34600, "transport": 8700, "utilities": 14400, "misc": 17300 },
+        "smallCity": { "rent": 46200, "food": 28900, "transport": 5800, "utilities": 11500, "misc": 14400 }
+      },
+      "oneTime": { "applicationFee": 10000, "visaFee": 38000, "insurance": 52000, "flight": 130000 },
+      "postStudyWork": "Graduates may extend a short-term residence permit for up to 12 months to seek employment",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        { "title": "Apply to universities", "detail": "Apply directly to public universities or via Türkiye Bursları for full scholarships." },
+        { "title": "Sit TR-YÖS / SAT if required", "detail": "Take the Turkish foreign student exam (TR-YÖS) or an accepted equivalent." },
+        { "title": "Receive acceptance", "detail": "Get the acceptance letter from the university for the visa file." },
+        { "title": "Apply for student visa", "detail": "Submit the visa application at the Turkish Embassy Islamabad with financial proof." },
+        { "title": "Arrive & get residence permit", "detail": "Apply for the student residence permit within 30 days of arrival." },
+        { "title": "Enroll & start classes", "detail": "Complete university enrollment and register for courses." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University acceptance letter",
+        "Bank statements (approx. USD 500-600 per month)",
+        "Academic transcripts and certificates",
+        "Language test result (IELTS/TOEFL/TÖMER)",
+        "Visa application form and photos"
+      ],
+      "requiredTests": ["ielts", "tr-yos"],
+      "topFields": ["Medicine", "Civil & Mechanical Engineering", "Business Administration"],
+      "pros": [
+        "Low public-university tuition (approx. USD 300-8,000 per year depending on program)",
+        "Türkiye Bursları fully funds thousands of students each year",
+        "Affordable living costs compared with Western Europe",
+        "Growing Pakistani student community and direct flights"
+      ],
+      "cons": [
+        "High inflation makes local-currency budgeting volatile",
+        "Turkish language is needed for many programs and most jobs"
+      ],
+      "sources": [
+        { "label": "Study in Türkiye (official)", "url": "https://www.studyinturkiye.gov.tr" },
+        { "label": "Turkish Embassy Islamabad", "url": "https://islamabad-emb.mfa.gov.tr" }
+      ]
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "flag": "🇨🇳",
+      "intro": "China hosts the largest number of Pakistani students abroad, an estimated 30,000-40,000, thanks to generous CSC government scholarships and low tuition at public universities. MBBS, civil engineering, and computer science are the most common choices, with tuition typically RMB 15,000-45,000 per year for self-funded students.",
+      "region": "asia",
+      "capital": "Beijing",
+      "language": "Chinese (Mandarin)",
+      "currency": { "code": "CNY", "name": "Chinese Yuan", "symbol": "¥", "toPkr": 41.3, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "X1 Long-term Student Visa",
+        "feePkr": 13200,
+        "processingTime": "4-5 working days",
+        "keyPoints": [
+          "Consular visa fee is waived for Pakistani citizens; visa center service fee approx. PKR 13,200",
+          "JW202 form (issued with CSC scholarship/admission) required",
+          "Physical examination report for stays over 6 months",
+          "Convert X1 visa to a residence permit within 30 days of arrival",
+          "Students on X1 visas generally cannot take paid work"
+        ]
+      },
+      "intakes": ["September (Autumn)", "March (Spring)"],
+      "tuition": {
+        "ug": { "min": 619500, "max": 1858500 },
+        "masters": { "min": 743400, "max": 2065000 },
+        "phd": { "min": 826000, "max": 2271500 }
+      },
+      "living": {
+        "bigCity": { "rent": 124000, "food": 62000, "transport": 12400, "utilities": 12400, "misc": 41300 },
+        "smallCity": { "rent": 62000, "food": 49600, "transport": 8300, "utilities": 10300, "misc": 33000 }
+      },
+      "oneTime": { "applicationFee": 28000, "visaFee": 13200, "insurance": 33000, "flight": 180000 },
+      "postStudyWork": "No general job-seeker visa; some major cities offer up to 12-month entrepreneurship permits",
+      "postStudyWorkMonths": 0,
+      "pathway": [
+        { "title": "Choose CSC or self-funded", "detail": "Apply for CSC scholarships via HEC/embassy or self-fund through universities directly." },
+        { "title": "Get JW202 and admission", "detail": "Receive the JW202 form and admission notice from the university." },
+        { "title": "Do the medical check", "detail": "Complete the physical examination at a designated hospital." },
+        { "title": "Apply for X1 visa", "detail": "Submit the visa file at the Chinese Visa Application Service Center." },
+        { "title": "Travel & convert", "detail": "Fly to China and convert the X1 visa to a residence permit within 30 days." },
+        { "title": "Register & enroll", "detail": "Register at the university and arrange accommodation and insurance." }
+      ],
+      "documents": [
+        "Valid passport",
+        "JW202 form",
+        "University admission notice",
+        "Physical examination record",
+        "Academic transcripts and degrees",
+        "Police character certificate where requested",
+        "Visa application form and photo"
+      ],
+      "requiredTests": ["hsk", "ielts"],
+      "topFields": ["Civil & Electrical Engineering", "Medicine (MBBS)", "Computer Science"],
+      "pros": [
+        "CSC scholarships cover tuition, housing, stipend, and insurance",
+        "Low tuition and living costs outside first-tier cities",
+        "Zero consular visa fee for Pakistani citizens",
+        "Large Pakistani student network and HEC recognition of many programs"
+      ],
+      "cons": [
+        "Language barrier: Chinese-taught programs need HSK 4-5",
+        "Paid work is generally not permitted on X1 visas"
+      ],
+      "sources": [
+        { "label": "Campus China (CSC official)", "url": "https://www.campuschina.org" },
+        { "label": "Chinese Embassy in Pakistan", "url": "https://pk.china-embassy.gov.cn" }
+      ]
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "flag": "🇮🇩",
+      "intro": "Indonesia is an emerging budget destination where international undergraduate programs typically cost USD 2,000-6,000 per year at top public universities like UI, UGM, and ITB. The Pakistani student presence is small (a few hundred), with marine science, tourism, and tropical agriculture among the distinctive strengths.",
+      "region": "asia",
+      "capital": "Jakarta",
+      "language": "Indonesian (Bahasa Indonesia)",
+      "currency": { "code": "IDR", "name": "Indonesian Rupiah", "symbol": "Rp", "toPkr": 0.0156, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "Student Visa (VITAS E30B/E30C)",
+        "feePkr": 44800,
+        "processingTime": "2-4 weeks",
+        "keyPoints": [
+          "Visa approval (telex) fee of approx. IDR 200,000 plus USD 150 VITAS fee",
+          "University sponsorship letter required",
+          "Proof of funds of approx. USD 1,500-2,000",
+          "Convert VITAS to a KITAS stay permit within 30 days of arrival",
+          "Part-time work is restricted; internships need permission"
+        ]
+      },
+      "intakes": ["August (Odd Semester)", "February (Even Semester)"],
+      "tuition": {
+        "ug": { "min": 468000, "max": 1404000 },
+        "masters": { "min": 624000, "max": 1560000 },
+        "phd": { "min": 624000, "max": 1716000 }
+      },
+      "living": {
+        "bigCity": { "rent": 78000, "food": 31200, "transport": 7800, "utilities": 12500, "misc": 15600 },
+        "smallCity": { "rent": 23400, "food": 23400, "transport": 4700, "utilities": 7800, "misc": 10900 }
+      },
+      "oneTime": { "applicationFee": 8000, "visaFee": 44800, "insurance": 78000, "flight": 260000 },
+      "postStudyWork": "No defined job-seeker period; working after graduation requires a sponsored work permit (KITAS)",
+      "postStudyWorkMonths": 0,
+      "pathway": [
+        { "title": "Apply to the university", "detail": "Submit your application directly to the university's international office." },
+        { "title": "Receive acceptance & sponsorship", "detail": "Get the acceptance letter and university sponsorship for the visa." },
+        { "title": "Get visa approval (telex)", "detail": "The university files for visa approval with immigration and pays the telex fee." },
+        { "title": "Apply at the embassy", "detail": "Collect the visa approval and apply at the Indonesian Embassy in Islamabad." },
+        { "title": "Arrive & convert to KITAS", "detail": "Convert the VITAS to a KITAS stay permit within 30 days of arrival." }
+      ],
+      "documents": [
+        "Valid passport (18+ months validity)",
+        "University acceptance letter",
+        "Visa approval letter from immigration",
+        "Financial proof (bank statements)",
+        "Academic transcripts and certificates",
+        "Health certificate where requested",
+        "BIPA or English language certificate"
+      ],
+      "requiredTests": ["ielts", "bipa"],
+      "topFields": ["Marine & Environmental Science", "Tourism & Hospitality", "Tropical Agriculture"],
+      "pros": [
+        "Very low living costs outside Jakarta",
+        "Affordable tuition at top public universities",
+        "Kemitraan Negara Berkembang (KNB) full scholarships available",
+        "English-taught international programs at major universities"
+      ],
+      "cons": [
+        "Weak post-study work options for foreign graduates",
+        "Indonesian language (BIPA) needed for most daily and academic life"
+      ],
+      "sources": [
+        { "label": "Ministry of Foreign Affairs (Kemlu)", "url": "https://kemlu.go.id" },
+        { "label": "Directorate General of Immigration", "url": "https://www.imigrasi.go.id" }
+      ]
+    },
+    {
+      "id": "usa",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "intro": "The United States hosts an estimated 5,000-10,000 Pakistani students and offers the broadest range of universities and funding, though tuition is the highest of these destinations at USD 22,000-60,000 per year. Fulbright and university assistantships are the main funding routes, and STEM graduates can work up to 36 months through OPT.",
+      "region": "north-america",
+      "capital": "Washington, D.C.",
+      "language": "English",
+      "currency": { "code": "USD", "name": "US Dollar", "symbol": "$", "toPkr": 278, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "F-1 Student Visa (+ SEVIS I-901)",
+        "feePkr": 148730,
+        "processingTime": "2-6 weeks (varies; administrative processing possible)",
+        "keyPoints": [
+          "Visa fee USD 185 plus SEVIS I-901 fee USD 350 (total approx. USD 535)",
+          "Form I-20 from the university required",
+          "Visa interview at the US Embassy Islamabad",
+          "Proof of funds for the first year of study",
+          "On-campus work up to 20 hours per week; CPT/OPT for practical training"
+        ]
+      },
+      "intakes": ["Fall (August)", "Spring (January)"],
+      "tuition": {
+        "ug": { "min": 6116000, "max": 16680000 },
+        "masters": { "min": 6950000, "max": 16680000 },
+        "phd": { "min": 6950000, "max": 15290000 }
+      },
+      "living": {
+        "bigCity": { "rent": 334000, "food": 111000, "transport": 28000, "utilities": 42000, "misc": 69500 },
+        "smallCity": { "rent": 194600, "food": 83400, "transport": 19500, "utilities": 33400, "misc": 55600 }
+      },
+      "oneTime": { "applicationFee": 21000, "visaFee": 148730, "insurance": 556000, "flight": 300000 },
+      "postStudyWork": "OPT work authorization for 12 months, extendable to 36 months for STEM graduates",
+      "postStudyWorkMonths": 36,
+      "pathway": [
+        { "title": "Shortlist & test", "detail": "Shortlist universities and take SAT/ACT (undergrad) or GRE/GMAT (graduate) plus IELTS/TOEFL." },
+        { "title": "Apply & fund", "detail": "Apply by deadlines and line up funding: assistantships, Fulbright, or family sponsorship." },
+        { "title": "Get Form I-20", "detail": "Accept the offer and receive the I-20 certificate of eligibility." },
+        { "title": "Pay SEVIS & DS-160", "detail": "Pay the SEVIS I-901 fee and complete the DS-160 visa form." },
+        { "title": "Visa interview", "detail": "Attend the interview at the US Embassy with I-20 and financial documents." },
+        { "title": "Travel & report", "detail": "Enter the US up to 30 days before the program start date and report to the DSO." }
+      ],
+      "documents": [
+        "Valid passport",
+        "Form I-20 (signed)",
+        "SEVIS I-901 fee receipt",
+        "DS-160 confirmation page",
+        "Financial documents (bank statements, sponsor letter)",
+        "Academic transcripts and test scores",
+        "Ties-to-home evidence for the interview"
+      ],
+      "requiredTests": ["ielts", "toefl", "sat", "act", "gre", "gmat"],
+      "topFields": ["Computer Science", "Business & Finance", "Engineering", "Data Science & AI"],
+      "pros": [
+        "STEM OPT allows up to 36 months of post-study work",
+        "Largest research funding and top-ranked universities",
+        "Fulbright (USEFP) funds 80-90 Pakistani students per year",
+        "Assistantships can waive tuition and pay a stipend"
+      ],
+      "cons": [
+        "Highest tuition and living costs of these destinations",
+        "Visa interview outcomes can be uncertain"
+      ],
+      "sources": [
+        { "label": "US State Dept - F-1 Student Visa", "url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" },
+        { "label": "EducationUSA (official)", "url": "https://educationusa.state.gov" }
+      ]
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "intro": "The UK is one of the top destinations for Pakistani students, with an estimated 15,000-20,000 enrolled, drawn by one-year master's programs and globally recognized degrees. Tuition for international students runs GBP 14,000-38,000 per year, but the 2-year Graduate Route lets most graduates work after study.",
+      "region": "europe",
+      "capital": "London",
+      "language": "English",
+      "currency": { "code": "GBP", "name": "Pound Sterling", "symbol": "£", "toPkr": 378, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "Student visa (formerly Tier 4)",
+        "feePkr": 210900,
+        "processingTime": "3 weeks (standard, from outside the UK)",
+        "keyPoints": [
+          "Application fee GBP 558 (from April 2026) plus Immigration Health Surcharge GBP 776 per year",
+          "CAS (Confirmation of Acceptance for Studies) required",
+          "Proof of funds: approx. GBP 1,150-1,500 per month depending on city",
+          "TB test certificate required for Pakistani applicants",
+          "Work up to 20 hours per week during term time"
+        ]
+      },
+      "intakes": ["September (Autumn)", "January (Spring)"],
+      "tuition": {
+        "ug": { "min": 5292000, "max": 14364000 },
+        "masters": { "min": 5670000, "max": 13230000 },
+        "phd": { "min": 6804000, "max": 13230000 }
+      },
+      "living": {
+        "bigCity": { "rent": 416000, "food": 94500, "transport": 56700, "utilities": 56700, "misc": 75600 },
+        "smallCity": { "rent": 226800, "food": 75600, "transport": 30200, "utilities": 45400, "misc": 56700 }
+      },
+      "oneTime": { "applicationFee": 10800, "visaFee": 210900, "insurance": 293300, "flight": 190000 },
+      "postStudyWork": "Graduate Route: 2 years for bachelor's/master's graduates (3 for PhDs; 18 months if applying from Jan 2027)",
+      "postStudyWorkMonths": 24,
+      "pathway": [
+        { "title": "Choose course & apply", "detail": "Apply via UCAS (undergrad) or directly to universities (postgrad) and get an offer." },
+        { "title": "Meet conditions", "detail": "Submit IELTS/PTE scores, transcripts, and pay the tuition deposit." },
+        { "title": "Receive CAS", "detail": "Get your Confirmation of Acceptance for Studies (CAS) from the university." },
+        { "title": "Pay fees & IHS", "detail": "Pay the visa fee (GBP 558) and the Immigration Health Surcharge online." },
+        { "title": "Biometrics & decision", "detail": "Book biometrics at a visa application centre; decisions usually take 3 weeks." },
+        { "title": "Travel & collect BRP/eVisa", "detail": "Fly to the UK and access your eVisa record before starting the course." }
+      ],
+      "documents": [
+        "Valid passport",
+        "CAS statement",
+        "Bank statements (28-day rule)",
+        "TB test certificate",
+        "Academic transcripts and degrees",
+        "English language certificate (IELTS/PTE)",
+        "ATAS certificate (for some STEM/research courses)"
+      ],
+      "requiredTests": ["ielts", "pte", "toefl"],
+      "topFields": ["Business & Finance", "Law", "Engineering", "Medicine"],
+      "pros": [
+        "One-year master's programs reduce total cost",
+        "2-year Graduate Route after study (24 months)",
+        "Chevening and Commonwealth scholarships fully fund many Pakistanis",
+        "Globally recognized degrees and strong alumni networks"
+      ],
+      "cons": [
+        "High tuition plus IHS surcharge (GBP 776 per year)",
+        "London living costs are among the highest in Europe"
+      ],
+      "sources": [
+        { "label": "GOV.UK - Student visa", "url": "https://www.gov.uk/student-visa" },
+        { "label": "UKCISA (official student advice)", "url": "https://www.ukcisa.org.uk" }
+      ]
+    },
+    {
+      "id": "ireland",
+      "name": "Ireland",
+      "flag": "🇮🇪",
+      "intro": "Ireland attracts Pakistani students with English-medium education and a tech hub hosting European headquarters of major IT companies, with around 2,000-3,000 Pakistani students enrolled. Bachelor's tuition runs roughly EUR 10,000-25,000 per year (master's up to approx. EUR 30,000), and graduates can stay 24 months on the Stamp 1G program.",
+      "region": "europe",
+      "capital": "Dublin",
+      "language": "English",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "Long Stay (D) Study Visa",
+        "feePkr": 19440,
+        "processingTime": "about 8 weeks",
+        "keyPoints": [
+          "Visa fee EUR 60 (single entry) or EUR 100 (multiple entry)",
+          "Proof of EUR 10,000 for the first year plus tuition payment evidence",
+          "From June 2025: at least EUR 6,000 of tuition must be paid in advance",
+          "Private health insurance required",
+          "Work up to 20 hours per week during term time"
+        ]
+      },
+      "intakes": ["September (Autumn)", "January (Spring)"],
+      "tuition": {
+        "ug": { "min": 3240000, "max": 8100000 },
+        "masters": { "min": 3240000, "max": 9720000 },
+        "phd": { "min": 3240000, "max": 8100000 }
+      },
+      "living": {
+        "bigCity": { "rent": 324000, "food": 81000, "transport": 38900, "utilities": 48600, "misc": 58300 },
+        "smallCity": { "rent": 210600, "food": 71300, "transport": 25900, "utilities": 42100, "misc": 48600 }
+      },
+      "oneTime": { "applicationFee": 0, "visaFee": 19440, "insurance": 210600, "flight": 190000 },
+      "postStudyWork": "Stamp 1G Graduate Programme: 12 months, extendable by 12 more (24 months total; 36 for PhDs)",
+      "postStudyWorkMonths": 24,
+      "pathway": [
+        { "title": "Apply to institutions", "detail": "Apply directly to universities or institutes of technology for your chosen course." },
+        { "title": "Receive offer & pay deposit", "detail": "Accept the offer and pay the deposit (at least EUR 6,000 toward tuition)." },
+        { "title": "Prepare finances", "detail": "Show EUR 10,000 in accessible funds for the first year plus insurance." },
+        { "title": "Apply for D visa online", "detail": "Submit the visa application through the AVATS portal and send documents to the embassy." },
+        { "title": "Arrive & register", "detail": "Fly to Ireland and register with immigration to get the Stamp 2 permission." },
+        { "title": "Enroll & then Stamp 1G", "detail": "Complete studies, then apply for the Stamp 1G Graduate Programme." }
+      ],
+      "documents": [
+        "Valid passport",
+        "Letter of acceptance from the institution",
+        "Proof of tuition payment (min EUR 6,000)",
+        "Bank statements showing EUR 10,000",
+        "Private health insurance certificate",
+        "Academic transcripts and certificates",
+        "English language certificate (IELTS/PTE/DET)"
+      ],
+      "requiredTests": ["ielts", "pte", "duolingo"],
+      "topFields": ["Computer Science & IT", "Pharmaceuticals & Biotech", "Business & Finance"],
+      "pros": [
+        "24-month post-study work on the Stamp 1G program",
+        "European headquarters of Google, Meta, Apple, and Microsoft",
+        "English-medium education with strong pharmaceutical and IT industries",
+        "Government of Ireland scholarships for international students"
+      ],
+      "cons": [
+        "Dublin rents are among the highest in Europe",
+        "Up-front funding proof (EUR 10,000 + tuition) is required"
+      ],
+      "sources": [
+        { "label": "Irish Immigration Service", "url": "https://www.irishimmigration.ie" },
+        { "label": "Education in Ireland (official)", "url": "https://www.educationinireland.com" }
+      ]
+    },
+    {
+      "id": "lithuania",
+      "name": "Lithuania",
+      "flag": "🇱🇹",
+      "intro": "Lithuania is one of Europe's cheapest study destinations, with public university tuition of roughly EUR 2,000-8,000 per year and living costs among the lowest in the EU. The Pakistani student community is small but growing, concentrated in IT, engineering, and life sciences programs at Vilnius and Kaunas universities.",
+      "region": "europe",
+      "capital": "Vilnius",
+      "language": "Lithuanian",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "National D Visa (then Temporary Residence Permit)",
+        "feePkr": 45360,
+        "processingTime": "2-4 weeks",
+        "keyPoints": [
+          "National D visa fee EUR 140 (official state fee)",
+          "Proof of funds of at least EUR 221 per month",
+          "Apply through the MIGRIS system with university mediation",
+          "Temporary Residence Permit issued after arrival in Lithuania",
+          "Work up to 20 hours per week during studies"
+        ]
+      },
+      "intakes": ["September (Autumn)", "February (Spring, limited)"],
+      "tuition": {
+        "ug": { "min": 648000, "max": 2592000 },
+        "masters": { "min": 810000, "max": 3240000 },
+        "phd": { "min": 0, "max": 2592000 }
+      },
+      "living": {
+        "bigCity": { "rent": 113400, "food": 64800, "transport": 9700, "utilities": 32400, "misc": 38900 },
+        "smallCity": { "rent": 64800, "food": 51800, "transport": 6500, "utilities": 25900, "misc": 32400 }
+      },
+      "oneTime": { "applicationFee": 10000, "visaFee": 45360, "insurance": 97200, "flight": 210000 },
+      "postStudyWork": "12-month temporary residence permit to seek employment after graduation",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        { "title": "Apply to universities", "detail": "Apply directly to universities (Vilnius University, KTU, VGTU) for English-taught programs." },
+        { "title": "Get mediation & MIGRIS", "detail": "The university files your file in the MIGRIS system and acts as mediator." },
+        { "title": "Receive acceptance", "detail": "Get your acceptance letter and pay the tuition deposit." },
+        { "title": "Apply for national D visa", "detail": "Submit the D visa application at the Lithuanian Embassy with financial proof." },
+        { "title": "Arrive & get TRP", "detail": "Enter Lithuania and apply for the Temporary Residence Permit at the Migration Department." },
+        { "title": "Enroll & work", "detail": "Enroll at the university and take up permitted part-time work." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University acceptance letter",
+        "Proof of sufficient funds (min EUR 221/month)",
+        "Health insurance policy",
+        "Academic transcripts and certificates",
+        "Accommodation evidence",
+        "English language certificate (IELTS/TOEFL)"
+      ],
+      "requiredTests": ["ielts", "toefl"],
+      "topFields": ["Information Technology", "Life Sciences", "Engineering"],
+      "pros": [
+        "Very low tuition (approx. EUR 2,000-8,000 per year)",
+        "Among the cheapest living costs in the EU",
+        "12-month post-study job-search permit",
+        "Fast-growing IT sector and easy Schengen travel"
+      ],
+      "cons": [
+        "Smaller international community than Western Europe",
+        "Lithuanian useful for jobs outside IT"
+      ],
+      "sources": [
+        { "label": "Study in Lithuania (official)", "url": "https://studyin.lt" },
+        { "label": "Migration Department (MIGRIS)", "url": "https://migracija.lrv.lt" }
+      ]
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "flag": "🇳🇱",
+      "intro": "The Netherlands offers the largest range of English-taught programs in continental Europe, with strong engineering, water management, and business schools and around 1,000-2,000 Pakistani students. Non-EU tuition runs roughly EUR 8,000-20,000 per year for bachelor's programs (master's up to approx. EUR 25,000), but the 12-month orientation year gives graduates time to find work.",
+      "region": "europe",
+      "capital": "Amsterdam",
+      "language": "Dutch",
+      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "MVV entry visa + VVR residence permit (TEV via university)",
+        "feePkr": 82300,
+        "processingTime": "2-4 weeks (IND up to 60 days)",
+        "keyPoints": [
+          "Application fee approx. EUR 254 for the student residence permit",
+          "University applies on your behalf through the TEV procedure",
+          "Proof of funds of approx. EUR 1,200 per month (IND norm)",
+          "TB test required for Pakistani applicants",
+          "Work up to 16 hours per week (or full-time in summer)"
+        ]
+      },
+      "intakes": ["September", "February"],
+      "tuition": {
+        "ug": { "min": 2592000, "max": 6480000 },
+        "masters": { "min": 3240000, "max": 8100000 },
+        "phd": { "min": 0, "max": 4860000 }
+      },
+      "living": {
+        "bigCity": { "rent": 259200, "food": 81000, "transport": 25900, "utilities": 48600, "misc": 55100 },
+        "smallCity": { "rent": 162000, "food": 71300, "transport": 19400, "utilities": 42100, "misc": 45400 }
+      },
+      "oneTime": { "applicationFee": 0, "visaFee": 82300, "insurance": 194400, "flight": 200000 },
+      "postStudyWork": "Orientation year permit: 12 months to find work after graduation",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        { "title": "Apply via Studielink", "detail": "Register on Studielink and apply to your chosen programs before the deadline." },
+        { "title": "Receive offer & pay deposit", "detail": "Accept the offer and pay any tuition deposit the university requires." },
+        { "title": "University files TEV", "detail": "The university starts the combined MVV and residence permit (TEV) application with IND." },
+        { "title": "Pay the fee & biometrics", "detail": "Pay the approx. EUR 254 application fee and give biometrics at the embassy." },
+        { "title": "Collect MVV & travel", "detail": "Collect the MVV sticker, fly to the Netherlands, and collect your residence card." },
+        { "title": "Register & insure", "detail": "Register with the municipality, arrange health insurance, and start classes." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University admission letter",
+        "Proof of funds (approx. EUR 1,200 per month)",
+        "TB test certificate",
+        "Antecedents certificate (signed declaration)",
+        "Academic transcripts and degrees",
+        "English language certificate (IELTS/TOEFL)"
+      ],
+      "requiredTests": ["ielts", "toefl", "nt2"],
+      "topFields": ["Water & Environmental Engineering", "Agriculture & Food Tech", "Business & Economics"],
+      "pros": [
+        "Most English-taught programs in continental Europe",
+        "12-month orientation year for job seeking",
+        "Orange Tulip and Holland scholarships for Pakistani students",
+        "Strong internship culture with multinational employers"
+      ],
+      "cons": [
+        "Housing shortage, especially in Amsterdam",
+        "High non-EU tuition (approx. EUR 8,000-20,000 for bachelor's, up to EUR 25,000 for master's)"
+      ],
+      "sources": [
+        { "label": "Study in NL (official, Nuffic)", "url": "https://www.studyinnl.org" },
+        { "label": "IND (immigration authority)", "url": "https://ind.nl" }
+      ]
+    },
+    {
+      "id": "hungary",
+      "name": "Hungary",
+      "flag": "🇭🇺",
+      "intro": "Hungary is a budget European option where the Stipendium Hungaricum program gives Pakistani students fully funded bachelor's, master's, and PhD places, while self-funded tuition runs roughly EUR 2,500-8,000 per year for bachelor's programs (master's up to approx. EUR 10,000), and medicine and dentistry cost considerably more (approx. EUR 15,000-22,000 per year). Medicine, engineering, and agriculture are the strongest fields, with a small but visible Pakistani community of around 1,000-2,000.",
+      "region": "europe",
+      "capital": "Budapest",
+      "language": "Hungarian",
+      "currency": { "code": "HUF", "name": "Hungarian Forint", "symbol": "Ft", "toPkr": 0.895, "rateAsOf": "2026-08" },
+      "visa": {
+        "type": "D Visa + Residence Permit for Study Purposes",
+        "feePkr": 54345,
+        "processingTime": "30-60 days",
+        "keyPoints": [
+          "Long-stay D visa fee approx. EUR 60 plus residence permit fee HUF 39,000 (approx. PKR 54,345 total)",
+          "Proof of funds of approx. EUR 500-600 per month",
+          "Apply via the Enter Hungary platform after arrival",
+          "Health insurance required (Stipendium covers it)",
+          "Work up to 30 hours per week during studies"
+        ]
+      },
+      "intakes": ["September (Autumn)", "February (Spring)"],
+      "tuition": {
+        "ug": { "min": 810000, "max": 2592000 },
+        "masters": { "min": 810000, "max": 3240000 },
+        "phd": { "min": 810000, "max": 2916000 }
+      },
+      "living": {
+        "bigCity": { "rent": 113400, "food": 58300, "transport": 8100, "utilities": 32400, "misc": 35600 },
+        "smallCity": { "rent": 71300, "food": 48600, "transport": 6500, "utilities": 25900, "misc": 29200 }
+      },
+      "oneTime": { "applicationFee": 32400, "visaFee": 54345, "insurance": 64800, "flight": 210000 },
+      "postStudyWork": "9-month 'study-to-work' job-seeker residence permit for fresh graduates",
+      "postStudyWorkMonths": 9,
+      "pathway": [
+        { "title": "Apply or get Stipendium", "detail": "Apply directly to universities or via the Stipendium Hungaricum call through HEC." },
+        { "title": "Receive acceptance", "detail": "Get your acceptance letter from the Hungarian university." },
+        { "title": "Apply for D visa", "detail": "Submit the long-stay visa application at the Hungarian Embassy with financial proof." },
+        { "title": "Arrive & file residence permit", "detail": "After arrival, apply for the residence permit on the Enter Hungary platform." },
+        { "title": "Enroll & register", "detail": "Complete enrollment and register your address with the authorities." }
+      ],
+      "documents": [
+        "Valid passport",
+        "University acceptance letter",
+        "Proof of funds (approx. EUR 500-600 per month)",
+        "Health insurance certificate",
+        "Academic transcripts and certificates",
+        "English language certificate (IELTS/TOEFL)",
+        "Accommodation evidence"
+      ],
+      "requiredTests": ["ielts", "toefl"],
+      "topFields": ["Medicine & Dentistry", "Engineering", "Agriculture", "Music & Arts"],
+      "pros": [
+        "Stipendium Hungaricum fully funds tuition, stipend, and housing",
+        "Low living costs in Budapest and university cities",
+        "9-month job-seeker permit after graduation",
+        "Strong medicine and dentistry programs with EU recognition"
+      ],
+      "cons": [
+        "Forint volatility makes long-term budgeting tricky",
+        "Hungarian is needed for most jobs outside multinationals"
+      ],
+      "sources": [
+        { "label": "Study in Hungary (official)", "url": "https://studyinhungary.hu" },
+        { "label": "Enter Hungary (immigration platform)", "url": "https://enterhungary.gov.hu" }
+      ]
+    }
+  ]
+}

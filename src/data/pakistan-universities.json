@@ -1,0 +1,761 @@
+{
+  "dataYear": 2026,
+  "universities": [
+    {
+      "id": "nust",
+      "name": "National University of Sciences & Technology",
+      "short": "NUST",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "QS World #384 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/national-university-sciences-technology-nust-islamabad"
+      },
+      "entryTest": "NET (NUST Entry Test)",
+      "intro": "Established in 1991 by merging existing engineering colleges, NUST is Pakistan's highest-ranked engineering and technology university, with its main campus in Islamabad and constituent colleges in Rawalpindi, Risalpur and Karachi. It is best known for computing (SEECS) and engineering schools (SMME, SCEE, SNS).",
+      "admissionSteps": [
+        {
+          "title": "Register for NET",
+          "detail": "Create an account on the NUST admissions portal and book a NET series slot."
+        },
+        {
+          "title": "Take the NET",
+          "detail": "Sit the computer-based NET covering Maths, Physics, Chemistry, English and Intelligence."
+        },
+        {
+          "title": "Apply online",
+          "detail": "Submit the online application with HSSC marks and NET score before the deadline."
+        },
+        {
+          "title": "Merit list & selection",
+          "detail": "Admission is granted on the aggregate: NET 75% + FSc 15% + Matric 10%."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the first-semester fee to secure the offered seat."
+        }
+      ],
+      "fees": {
+        "summary": "2026-27: tuition PKR 216,750/semester for engineering & computing; PKR 302,950/semester for architecture & business",
+        "programFees": [
+          {
+            "program": "BS Engineering / Computing",
+            "perYear": 433500,
+            "note": "Two semesters at PKR 216,750 each (2026-27 tuition)"
+          }
+        ],
+        "sourceUrl": "https://nust.edu.pk/admissions/fee-structure/"
+      },
+      "bestFields": [
+        {
+          "field": "Engineering",
+          "why": "SMME and SCEE are Pakistan's most sought-after engineering schools."
+        },
+        {
+          "field": "Computing",
+          "why": "SEECS BS CS has the highest closing merit in the country."
+        },
+        {
+          "field": "Data Science & AI",
+          "why": "Strong research labs and industry placement in AI/data roles."
+        }
+      ],
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/",
+        "https://nust.edu.pk/admissions/fee-structure/",
+        "https://ugadmissions.nust.edu.pk/"
+      ]
+    },
+    {
+      "id": "fast",
+      "name": "National University of Computer & Emerging Sciences",
+      "short": "FAST-NUCES",
+      "city": "Islamabad",
+      "type": "private",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "QS WUR by Subject #651-700 (2026)",
+        "sourceUrl": "https://www.topuniversities.com/universities/national-university-computer-emerging-sciences"
+      },
+      "entryTest": "NU admission test (computer-based, held at FAST campuses)",
+      "intro": "Founded in 1980 as the Foundation for Advancement of Science and Technology, FAST-NUCES opened its first campus in Karachi in 1985 and is headquartered in Islamabad. It is Pakistan's best-known computer science university, with campuses in six cities.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Fill the online admission application form and note the assigned reference number."
+        },
+        {
+          "title": "Pay fee & print admit card",
+          "detail": "Deposit the application and admission test fee, then print the admit card."
+        },
+        {
+          "title": "Take the NU admission test",
+          "detail": "Sit the computer-based test (English, analytical skills, basic and advanced maths)."
+        },
+        {
+          "title": "Merit list",
+          "detail": "Selected candidates are informed via SMS and email after the merit is compiled."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the admission fee, security deposit and first-semester tuition to confirm the seat."
+        }
+      ],
+      "fees": {
+        "summary": "2026-27: tuition PKR 12,000 per credit hour for BS programs; one-time admission fee PKR 30,000",
+        "programFees": [
+          {
+            "program": "BS Computer Science",
+            "perYear": 396000,
+            "note": "Full-year load of about 33 credit hours at PKR 12,000 each (2026-27)"
+          }
+        ],
+        "sourceUrl": "https://www.nu.edu.pk/Admissions/FeeStructure"
+      },
+      "bestFields": [
+        {
+          "field": "Computer Science",
+          "why": "Its BS CS is among the most competitive computing degrees in Pakistan."
+        },
+        {
+          "field": "Software Engineering",
+          "why": "Graduates dominate hiring pipelines of Pakistani software companies."
+        },
+        {
+          "field": "Artificial Intelligence",
+          "why": "Early adopter of AI and data science specialisations at undergrad level."
+        }
+      ],
+      "sourceUrls": [
+        "https://www.nu.edu.pk/Admissions/HowToApply",
+        "https://www.nu.edu.pk/Admissions/FeeStructure"
+      ]
+    },
+    {
+      "id": "lums",
+      "name": "Lahore University of Management Sciences",
+      "short": "LUMS",
+      "city": "Lahore",
+      "type": "private",
+      "streams": ["pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "QS World #=608 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/lahore-university-management-sciences-lums"
+      },
+      "entryTest": "LCAT (LUMS Common Admission Test) or SAT",
+      "intro": "Chartered in 1984, LUMS admitted its first students in 1986 and is Pakistan's leading private university in Lahore. It is known for its business school (SDSB), its science school (SBASSE) and one of the largest need-based financial aid programmes in the country.",
+      "admissionSteps": [
+        {
+          "title": "Online application",
+          "detail": "Complete and submit the undergraduate online application before the deadline."
+        },
+        {
+          "title": "Upload documents",
+          "detail": "Upload supporting documents and pay the application processing fee."
+        },
+        {
+          "title": "LCAT or SAT",
+          "detail": "Appear in the LUMS Common Admission Test or submit a valid SAT score."
+        },
+        {
+          "title": "Admission decision",
+          "detail": "Offers are made on academic record, test scores and the overall profile."
+        },
+        {
+          "title": "Financial aid application",
+          "detail": "Submit the financial aid application alongside the admission application if needed."
+        },
+        {
+          "title": "Accept offer & pay fee",
+          "detail": "Accept the offer and pay fees per the annual fee bill to confirm enrollment."
+        }
+      ],
+      "fees": {
+        "summary": "FY 2026-27: PKR 45,800 per credit hour; year-1 tuition for 33 credit hours ≈ PKR 1.51M (≈ PKR 1.87M all-in with one-time charges)",
+        "programFees": [
+          {
+            "program": "BS (all schools)",
+            "perYear": 1511400,
+            "note": "Year-1 tuition for 33 credit hours (2026-27), excluding one-time charges"
+          }
+        ],
+        "sourceUrl": "https://lums.edu.pk/programmes/bsc-honours-management-science"
+      },
+      "bestFields": [
+        {
+          "field": "Business & Management",
+          "why": "SDSB is Pakistan's most recognised business school for careers in finance and consulting."
+        },
+        {
+          "field": "Computer Science",
+          "why": "SBASSE produces strong graduates for international grad schools and tech firms."
+        },
+        {
+          "field": "Economics",
+          "why": "Its economics faculty is among the strongest in South Asia."
+        }
+      ],
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/undergraduate-programmes",
+        "https://lums.edu.pk/programmes/bsc-honours-management-science"
+      ]
+    },
+    {
+      "id": "giki",
+      "name": "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology",
+      "short": "GIKI",
+      "city": "Topi, Swabi",
+      "type": "private",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "Not in QS WUR; QS Asia #260 (2026)",
+        "sourceUrl": "https://giki.edu.pk/tempo-rank/"
+      },
+      "entryTest": "GIKI admission test (computer-based)",
+      "intro": "Established in 1993 in Topi, Swabi (Khyber Pakhtunkhwa) with backing from the Ghulam Ishaq Khan Foundation, GIK Institute is a fully residential engineering institute. It is known for mechanical engineering and strictly merit-based admissions.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Submit the online undergraduate application before the announced deadline."
+        },
+        {
+          "title": "Take the admission test",
+          "detail": "Appear in the computer-based GIKI admission test at your chosen centre."
+        },
+        {
+          "title": "Selection & merit",
+          "detail": "Offers are issued on merit calculated from the test and academic record."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Deposit the semester fee covering tuition and hostel accommodation."
+        },
+        {
+          "title": "Boarding & orientation",
+          "detail": "All freshmen reside on campus; hostel accommodation is covered for everyone."
+        }
+      ],
+      "fees": {
+        "summary": "About PKR 400,000 per semester including tuition and accommodation (2025-26 rates); see official fee page",
+        "sourceUrl": "https://giki.edu.pk/admissions/admissions-undergraduates/ugrad-fees-and-expenses/"
+      },
+      "bestFields": [
+        {
+          "field": "Mechanical Engineering",
+          "why": "Its flagship faculty, consistently among Pakistan's top choices for mechanical engineers."
+        },
+        {
+          "field": "Electrical Engineering",
+          "why": "Well-established faculty with strong research and industry reputation."
+        },
+        {
+          "field": "Computer Science",
+          "why": "Residential CS programme with a strong alumni network in tech."
+        }
+      ],
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/",
+        "https://giki.edu.pk/admissions/admissions-undergraduates/ugrad-fees-and-expenses/"
+      ]
+    },
+    {
+      "id": "iba",
+      "name": "Institute of Business Administration",
+      "short": "IBA",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Not in QS WUR; QS Subject #251-300 (2026)",
+        "sourceUrl": "https://www.topuniversities.com/universities/institute-business-administration-iba"
+      },
+      "entryTest": "IBA admission test (in-house aptitude test)",
+      "intro": "Established in 1955 with technical assistance from the Wharton School, IBA Karachi is Pakistan's oldest business school. It is known for its BBA programme as well as growing economics and computer science departments.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Fill the online admission application and pay the processing fee."
+        },
+        {
+          "title": "Take the IBA admission test",
+          "detail": "Sit the in-house aptitude test for the chosen undergraduate programme."
+        },
+        {
+          "title": "Interview (if required)",
+          "detail": "Shortlisted candidates may be called for an interview as part of evaluation."
+        },
+        {
+          "title": "Merit list",
+          "detail": "Selection is announced through merit lists after test and interview scores are combined."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the first-semester fee and one-time admission charges to confirm admission."
+        }
+      ],
+      "fees": {
+        "summary": "2026-27: PKR 31,500 per credit hour for all BS programs; one-time admission charges PKR 125,000",
+        "programFees": [
+          {
+            "program": "BBA / BS programs",
+            "perYear": 1039500,
+            "note": "Full-year load of about 33 credit hours at PKR 31,500 each (2026-27)"
+          }
+        ],
+        "sourceUrl": "https://www.iba.edu.pk/fee-structure.php"
+      },
+      "bestFields": [
+        {
+          "field": "Business Administration",
+          "why": "The BBA is Pakistan's oldest and most prestigious business degree."
+        },
+        {
+          "field": "Economics",
+          "why": "Strong research faculty and graduate placement in policy and finance."
+        },
+        {
+          "field": "Computer Science",
+          "why": "Rapidly growing BS CS with high closing merit in Karachi."
+        }
+      ],
+      "sourceUrls": [
+        "https://www.iba.edu.pk/admissions.php",
+        "https://www.iba.edu.pk/fee-structure.php"
+      ]
+    },
+    {
+      "id": "comsats",
+      "name": "COMSATS University Islamabad",
+      "short": "COMSATS",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "QS World #=639 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/comsats-university-islamabad"
+      },
+      "entryTest": "NTS NAT or COMSATS on-campus entry test",
+      "intro": "Established in 1998 under the Commission on Science and Technology for Sustainable Development in the South, COMSATS has grown into a multi-campus public university with its main campus in Islamabad and six others. It is known for computing and engineering programmes.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Submit the online application on the COMSATS admissions portal before the deadline."
+        },
+        {
+          "title": "Entry test",
+          "detail": "Appear in the NTS NAT or the COMSATS on-campus entry test."
+        },
+        {
+          "title": "Merit lists",
+          "detail": "Merit lists are announced on the portal after test results are compiled."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the semester fee and one-time admission fee to secure the seat."
+        },
+        {
+          "title": "Orientation & classes",
+          "detail": "Attend orientation and begin classes at the start of the semester."
+        }
+      ],
+      "fees": {
+        "summary": "Fall 2025: PKR 139,000/semester tuition for BS CS and PKR 144,500/semester for engineering, plus PKR 7,000 registration",
+        "programFees": [
+          {
+            "program": "BS Computer Science",
+            "perYear": 292000,
+            "note": "Two semesters of PKR 146,000 incl. registration (Fall 2025 rates)"
+          },
+          {
+            "program": "BS Engineering",
+            "perYear": 303000,
+            "note": "Two semesters of PKR 151,500 incl. registration (Fall 2025 rates)"
+          }
+        ],
+        "sourceUrl": "https://islamabad.comsats.edu.pk/fee-structure.aspx"
+      },
+      "bestFields": [
+        {
+          "field": "Computer Science",
+          "why": "Large CS intake with strong faculty and placement across IT firms."
+        },
+        {
+          "field": "Engineering",
+          "why": "Electrical and telecom engineering with PEC-accredited programmes."
+        },
+        {
+          "field": "Physics & Mathematics",
+          "why": "Productive research groups and HEC-recognised PhD output in basic sciences."
+        }
+      ],
+      "sourceUrls": [
+        "https://islamabad.comsats.edu.pk/comsats-admissions.aspx",
+        "https://islamabad.comsats.edu.pk/fee-structure.aspx"
+      ]
+    },
+    {
+      "id": "uet",
+      "name": "University of Engineering and Technology Lahore",
+      "short": "UET Lahore",
+      "city": "Lahore",
+      "type": "public",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "QS World #791-800 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/university-engineering-technology-uet-lahore"
+      },
+      "entryTest": "ECAT (Engineering College Admission Test, conducted by UET)",
+      "intro": "Tracing its origins to the Mughalpura Technical College of 1921, UET Lahore is Pakistan's oldest engineering university. It is known for electrical and mechanical engineering and conducts the ECAT used across Punjab engineering institutions.",
+      "admissionSteps": [
+        {
+          "title": "Register for ECAT",
+          "detail": "Register and book a slot for the ECAT entry test cycle."
+        },
+        {
+          "title": "Take the ECAT",
+          "detail": "Sit the combined entry test covering maths, physics, chemistry and English."
+        },
+        {
+          "title": "Apply online",
+          "detail": "Submit the undergraduate application with ECAT result and HSSC marks."
+        },
+        {
+          "title": "Merit lists",
+          "detail": "Merit lists are announced using the FSc and ECAT aggregate."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay admission and semester dues by the announced deadline."
+        }
+      ],
+      "fees": {
+        "summary": "Fall 2026 schedule: subsidized tuition about PKR 56,000/semester and partially subsidized about PKR 85,000/semester",
+        "sourceUrl": "https://admission.uet.edu.pk/news/44"
+      },
+      "bestFields": [
+        {
+          "field": "Electrical Engineering",
+          "why": "Its oldest and most reputed department, with a century-long legacy."
+        },
+        {
+          "field": "Mechanical Engineering",
+          "why": "Mechanical department ranks 201-250 in QS subject rankings (2026)."
+        },
+        {
+          "field": "Civil Engineering",
+          "why": "One of the country's oldest civil faculties with strong industry ties."
+        }
+      ],
+      "sourceUrls": [
+        "https://admission.uet.edu.pk/",
+        "https://admission.uet.edu.pk/news/44"
+      ]
+    },
+    {
+      "id": "ned",
+      "name": "NED University of Engineering & Technology",
+      "short": "NED",
+      "city": "Karachi",
+      "type": "public",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "Not in QS WUR; QS Subject #151-175 (2026)",
+        "sourceUrl": "https://www.topuniversities.com/universities/ned-university-engineering-technology"
+      },
+      "entryTest": "NED pre-admission entry test",
+      "intro": "NED University traces its origins to the Prince of Wales Engineering College of 1921 and was renamed in 1977 after Nader Edulji Dinshaw. Based in Karachi, it is one of Pakistan's largest engineering universities, known for civil, mechanical and electronics engineering.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Submit the online undergraduate application on the NED admissions portal."
+        },
+        {
+          "title": "Pre-admission entry test",
+          "detail": "Appear in the NED pre-admission entry test held in phases."
+        },
+        {
+          "title": "Provisional call lists",
+          "detail": "Admission offers are made through provisional call lists by category and board."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the admission and semester fees within the announced deadline."
+        },
+        {
+          "title": "Hostel accommodation",
+          "detail": "Apply for online hostel allocation after admission is confirmed."
+        }
+      ],
+      "fees": {
+        "summary": "Public-sector fees: annual tuition around PKR 37,000-59,000 depending on programme (2026); see official fee structure",
+        "sourceUrl": "https://www.neduet.edu.pk/admission"
+      },
+      "bestFields": [
+        {
+          "field": "Civil Engineering",
+          "why": "Flagship faculty supplying Karachi's construction and infrastructure sector."
+        },
+        {
+          "field": "Electronics Engineering",
+          "why": "One of Pakistan's strongest electronics departments, a Karachi legacy."
+        },
+        {
+          "field": "Mechanical Engineering",
+          "why": "Old-established faculty with strong placement in industry."
+        }
+      ],
+      "sourceUrls": [
+        "https://www.neduet.edu.pk/admission",
+        "https://www.neduet.edu.pk/prospectus"
+      ]
+    },
+    {
+      "id": "qau",
+      "name": "Quaid-i-Azam University",
+      "short": "QAU",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom"],
+      "ranking": {
+        "label": "QS World #=381 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/quaid-i-azam-university"
+      },
+      "entryTest": "QAU aptitude test",
+      "intro": "Established in 1967 in Islamabad, Quaid-i-Azam University is Pakistan's highest-ranked university in the QS World University Rankings. It is a research-focused public university known for physics, mathematics and the natural sciences.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Apply through the QAU online system and deposit the PKR 2,860 processing fee."
+        },
+        {
+          "title": "Upload documents",
+          "detail": "Upload the payment receipt and required scanned documents with the form."
+        },
+        {
+          "title": "Aptitude test",
+          "detail": "Appear in the QAU aptitude test relevant to the applied discipline."
+        },
+        {
+          "title": "Merit list",
+          "detail": "Admission is granted on merit lists compiled from academics and test scores."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the first-semester fee to confirm the offered seat."
+        }
+      ],
+      "fees": {
+        "summary": "Fall 2026: regular BS first-semester total about PKR 100,600; per-semester fee PKR 68,490 regular / PKR 142,140 self-finance",
+        "programFees": [
+          {
+            "program": "BS (regular category)",
+            "perYear": 136980,
+            "note": "Two semesters at PKR 68,490 each (Fall 2026 rates)"
+          }
+        ],
+        "sourceUrl": "https://qau.edu.pk/bachelor-fee-structure/"
+      },
+      "bestFields": [
+        {
+          "field": "Physics",
+          "why": "Pakistan's top physics research output and international collaborations."
+        },
+        {
+          "field": "Mathematics",
+          "why": "Strong pure and applied mathematics faculty with high citations."
+        },
+        {
+          "field": "Biological Sciences",
+          "why": "Well-regarded biochemistry and biotechnology departments."
+        },
+        {
+          "field": "Social Sciences",
+          "why": "Leading international relations and defence studies programmes."
+        }
+      ],
+      "sourceUrls": [
+        "https://qau.edu.pk/undergraduate-programme-qau/",
+        "https://qau.edu.pk/bachelor-fee-structure/"
+      ]
+    },
+    {
+      "id": "pieas",
+      "name": "Pakistan Institute of Engineering and Applied Sciences",
+      "short": "PIEAS",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-engineering", "ics"],
+      "ranking": {
+        "label": "QS World #560 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/pakistan-institute-engineering-applied-sciences-pieas"
+      },
+      "entryTest": "PIEAS admission test",
+      "intro": "PIEAS began in 1967 as the Reactor School of the Pakistan Atomic Energy Commission and became a university in 2000. Based in Islamabad, it is known for nuclear engineering and physics and for placing graduates with PAEC and strategic organisations.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Submit the online application through the PIEAS admissions portal."
+        },
+        {
+          "title": "PIEAS admission test",
+          "detail": "Appear in the computer-based PIEAS admission test for BS programmes."
+        },
+        {
+          "title": "Merit list",
+          "detail": "Offers are issued on merit based on the test and academic record."
+        },
+        {
+          "title": "Fee submission",
+          "detail": "Pay the first-semester fee and one-time charges to confirm admission."
+        },
+        {
+          "title": "Course registration",
+          "detail": "Register courses during the first week of the semester."
+        }
+      ],
+      "fees": {
+        "summary": "Highly subsidized public-sector fees; tuition around PKR 2,500 per credit hour (2025); see official fee structure",
+        "sourceUrl": "https://admissions.pieas.edu.pk/Academic_Rules/fee_structure.html"
+      },
+      "bestFields": [
+        {
+          "field": "Nuclear Engineering",
+          "why": "Pakistan's only dedicated nuclear engineering programmes, linked to PAEC."
+        },
+        {
+          "field": "Physics",
+          "why": "Research-focused physics faculty tied to national nuclear programmes."
+        },
+        {
+          "field": "Electrical Engineering",
+          "why": "Strong undergraduate engineering with placement in strategic organizations."
+        }
+      ],
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/",
+        "https://admissions.pieas.edu.pk/Academic_Rules/fee_structure.html"
+      ]
+    },
+    {
+      "id": "pu",
+      "name": "University of the Punjab",
+      "short": "PU",
+      "city": "Lahore",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "QS World #=588 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/university-punjab"
+      },
+      "entryTest": "PU admission test (department-based)",
+      "intro": "Established in 1882 in Lahore, the University of the Punjab is Pakistan's oldest and largest university. It offers undergraduate programmes across sciences, arts, commerce, law and engineering through dozens of departments.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Fill the online admission form on the PU admissions portal and upload documents."
+        },
+        {
+          "title": "PU admission test",
+          "detail": "Appearing in a relevant PU admission test is mandatory for BS first-semester programmes."
+        },
+        {
+          "title": "Merit list",
+          "detail": "Departmental merit lists are displayed after tests are scored."
+        },
+        {
+          "title": "Fee challan",
+          "detail": "Generate the fee challan and deposit it via HBL, UBL or 1Bill service."
+        },
+        {
+          "title": "Generate application & enroll",
+          "detail": "Upload the paid challan evidence to generate the final application, then attend classes."
+        }
+      ],
+      "fees": {
+        "summary": "Regular BS programmes are heavily subsidized; self-supporting programmes cost more - check the official fee schedule",
+        "sourceUrl": "https://pu.edu.pk/fee"
+      },
+      "bestFields": [
+        {
+          "field": "Law",
+          "why": "Punjab University Law College is the oldest law school in Pakistan."
+        },
+        {
+          "field": "Commerce & Business",
+          "why": "Hailey College of Commerce is Pakistan's oldest commerce institution."
+        },
+        {
+          "field": "Natural Sciences",
+          "why": "The widest range of science departments among Pakistani universities."
+        },
+        {
+          "field": "Arts & Humanities",
+          "why": "Strong history, languages and social sciences faculties."
+        }
+      ],
+      "sourceUrls": [
+        "https://admissions.pu.edu.pk/",
+        "https://pu.edu.pk/fee"
+      ]
+    },
+    {
+      "id": "aku",
+      "name": "Aga Khan University",
+      "short": "AKU",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "QS World #951-1000 (2027)",
+        "sourceUrl": "https://www.topuniversities.com/universities/aga-khan-university"
+      },
+      "entryTest": "AKU Undergraduate Admission Test",
+      "intro": "Chartered in 1983 in Karachi, Aga Khan University is Pakistan's first private, not-for-profit university. It is best known for its medical college and school of nursing, both among the finest in the country.",
+      "admissionSteps": [
+        {
+          "title": "Apply online",
+          "detail": "Submit the online application through the AKU admissions portal."
+        },
+        {
+          "title": "AKU admission test",
+          "detail": "All BScN applicants sit the AKU Undergraduate Admission Test."
+        },
+        {
+          "title": "Interview",
+          "detail": "Shortlisted candidates are invited for an interview."
+        },
+        {
+          "title": "Offer",
+          "detail": "Admission is merit-based and needs-blind, announced after evaluation."
+        },
+        {
+          "title": "Financial assistance & fee",
+          "detail": "Apply for financial assistance if needed, then pay fees to enroll."
+        }
+      ],
+      "fees": {
+        "summary": "Private-sector fees with needs-blind admission and financial assistance - see the official fee structure",
+        "sourceUrl": "https://www.aku.edu/admissions/fees-and-funding/Pages/home.aspx"
+      },
+      "bestFields": [
+        {
+          "field": "Medicine",
+          "why": "Its medical college ranks among the top medical schools in the region."
+        },
+        {
+          "field": "Nursing",
+          "why": "School of Nursing and Midwifery sets the national standard for nursing education."
+        },
+        {
+          "field": "Health Sciences",
+          "why": "Integrated teaching with its teaching hospital and strong research output."
+        }
+      ],
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/bscn/Pages/home.aspx",
+        "https://www.aku.edu/admissions/fees-and-funding/Pages/home.aspx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "dataYear": 2026,
+  "scholarships": [
+    {
+      "id": "ehsaas-ug",
+      "name": "Ehsaas Undergraduate Scholarship",
+      "category": "need-based",
+      "funder": "HEC + BISP (Government of Pakistan)",
+      "level": "Undergraduate",
+      "coverage": "Tuition fee + Rs 4,000 monthly stipend",
+      "eligibility": [
+        "Newly admitted students at HEC-recognized public sector universities",
+        "Family need criteria verified via BISP/NADRA poverty data",
+        "Admission secured on merit; not availing any other scholarship"
+      ],
+      "deadline": "Cycle-based (announced by HEC each year)",
+      "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/Ehsaas/Pages/default.aspx",
+      "note": "The largest need-based undergraduate program in Pakistan"
+    },
+    {
+      "id": "hec-need-based",
+      "name": "HEC Need-Based Scholarship Program",
+      "category": "need-based",
+      "funder": "Higher Education Commission (HEC)",
+      "level": "Undergraduate",
+      "coverage": "University tuition fee + Rs 6,000 monthly stipend",
+      "eligibility": [
+        "Enrolled in an undergraduate (4-5 year) program at an HEC-selected public university",
+        "Financial need assessed by the university's Institutional Scholarship Award Committee",
+        "Students admitted on self-finance basis are not eligible"
+      ],
+      "deadline": "Cycle-based (apply via university Financial Aid Office)",
+      "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/default.aspx"
+    },
+    {
+      "id": "scottish",
+      "name": "Scotland Pakistan Scholarships for Young Women and Girls",
+      "category": "hec",
+      "funder": "Scottish Government (British Council Pakistan)",
+      "level": "Undergraduate (also Master's)",
+      "coverage": "Tuition fees for bachelor's degree courses at HEC-recognized universities",
+      "eligibility": [
+        "Female citizens of Pakistan",
+        "Applying for a four-year bachelor's degree at an HEC-recognized university",
+        "Financial need and academic merit assessed by British Council"
+      ],
+      "deadline": "Annually (applications open each cycle)",
+      "sourceUrl": "https://www.britishcouncil.pk/scotland-pakistan-scholarships-young-women-and-girls",
+      "note": "Funded by the Scottish Government for women from disadvantaged backgrounds"
+    },
+    {
+      "id": "crhs-balochistan",
+      "name": "Coastal Region Higher Education Scholarship Program",
+      "category": "hec",
+      "funder": "Higher Education Commission (HEC)",
+      "level": "Undergraduate",
+      "coverage": "Tuition and hostel up to Rs 240,000/year, Rs 15,000/month living allowance and Rs 30,000/year book allowance",
+      "eligibility": [
+        "Domicile of Gwadar, Lasbela/Hub, Kech (Turbat) or Awaran districts",
+        "At least 50% marks in both matriculation and intermediate from these districts",
+        "Maximum age of 22 years at the application closing date",
+        "Not already availing any HEC/Government scholarship"
+      ],
+      "deadline": "Cycle-based (advertised by HEC)",
+      "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/CRHES/Pages/FAQs.aspx",
+      "note": "Active HEC scheme for Balochistan's coastal districts; replaces the discontinued HEC Merit Scholarship"
+    },
+    {
+      "id": "baitulmal",
+      "name": "Pakistan Bait-ul-Mal Individual Financial Assistance (Education)",
+      "category": "need-based",
+      "funder": "Pakistan Bait-ul-Mal (Government of Pakistan)",
+      "level": "Undergraduate",
+      "coverage": "University fees including boarding up to Rs 150,000 per year paid to institution",
+      "eligibility": [
+        "Regular merit-based student in a public-sector educational institution",
+        "Family monthly income below Rs 74,000",
+        "Self-finance, private institute students and government employees' children are ineligible"
+      ],
+      "deadline": "Rolling (first-come, first-served)",
+      "sourceUrl": "https://www.pbm.gov.pk/Project-Scholarships.html"
+    },
+    {
+      "id": "alkhidmat",
+      "name": "Alkhidmat Academic Scholarship",
+      "category": "need-based",
+      "funder": "Al-Khidmat Foundation Pakistan",
+      "level": "Undergraduate",
+      "coverage": "Monthly stipend of Rs 9,000 to Rs 11,500 depending on program (up to Rs 138,000/year)",
+      "eligibility": [
+        "Students enrolled in colleges, universities, medical or engineering institutions",
+        "Demonstrated financial hardship with supporting documents",
+        "Selection through online application and need assessment"
+      ],
+      "deadline": "Cycle-based (via online application portal)",
+      "sourceUrl": "https://scholarships.alkhidmat.org/"
+    },
+    {
+      "id": "shahid-afridi",
+      "name": "Shahid Afridi Foundation Education Scholarships",
+      "category": "need-based",
+      "funder": "Shahid Afridi Foundation (SAF)",
+      "level": "Undergraduate",
+      "coverage": "Tuition fee support for students from underprivileged backgrounds (amount varies by program cycle)",
+      "eligibility": [
+        "Pakistani students from underprivileged communities",
+        "Demonstrated financial need with supporting documents",
+        "Apply through the SAF scholarship form when a cycle is announced"
+      ],
+      "deadline": "Cycle-based (announced on SAF official channels)",
+      "sourceUrl": "https://shahidafridifoundation.org/",
+      "note": "safoundation.org is defunct; the official domain is shahidafridifoundation.org"
+    },
+    {
+      "id": "honhaar",
+      "name": "Chief Minister Honhaar Scholarship Program",
+      "category": "merit-based",
+      "funder": "Government of Punjab (Punjab Higher Education Commission)",
+      "level": "Undergraduate",
+      "coverage": "100% tuition fees",
+      "eligibility": [
+        "Domicile of Punjab (current cycle also open to AJK students)",
+        "Family monthly income below Rs 300,000",
+        "FSc marks: at least 70% for sciences or 65% for arts; 80% for medical and dental colleges",
+        "Enrolled in selected disciplines at public universities or colleges"
+      ],
+      "deadline": "Cycle-based (announced by PHEC)",
+      "sourceUrl": "https://punjab.gov.pk/node/6433",
+      "note": "50,000 scholarships across 70 disciplines; Punjab's largest merit-based undergraduate scheme"
+    },
+    {
+      "id": "hbl-foundation",
+      "name": "HBL Foundation Scholarship Scheme",
+      "category": "need-based",
+      "funder": "HBL Foundation (Habib Bank)",
+      "level": "Undergraduate",
+      "coverage": "Semester stipend of Rs 8,000 to Rs 16,000 by discipline (Arts, Sciences, Engineering)",
+      "eligibility": [
+        "Undergraduate students at partner universities such as MUST, Mirpur AJK",
+        "Financially challenged and low-income students",
+        "Advertised around January-February each year at participating universities"
+      ],
+      "deadline": "Annually (January-February cycle)",
+      "sourceUrl": "https://must.edu.pk/scholarships/",
+      "note": "HBL Foundation allocated Rs 177 million in Q1 2026 including scholarships"
+    },
+    {
+      "id": "dalda-foundation",
+      "name": "Dalda Foundation Trust Scholarships",
+      "category": "merit-based",
+      "funder": "Dalda Foundation Trust",
+      "level": "Undergraduate",
+      "coverage": "Tuition fees + monthly stipend of Rs 10,000 to Rs 20,000",
+      "eligibility": [
+        "At least 80% marks in matriculation",
+        "Admission secured in a government institution",
+        "Family monthly income and residential property within defined parameters",
+        "Selection on merit through written test and interview"
+      ],
+      "deadline": "Annually (applications around October)",
+      "sourceUrl": "https://daldafoundation.pk/process-to-apply"
+    },
+    {
+      "id": "nop",
+      "name": "LUMS National Outreach Programme",
+      "category": "university-specific",
+      "funder": "LUMS (Lahore University of Management Sciences)",
+      "level": "Undergraduate",
+      "coverage": "Fully-funded undergraduate scholarship (tuition, boarding and living costs)",
+      "eligibility": [
+        "At least 80% marks in Matric or equivalent O-Levels",
+        "Demonstrated financial need",
+        "Selection through the NOP Summer Coaching Session and LUMS admission test"
+      ],
+      "deadline": "Annually (SCS applications due around March)",
+      "sourceUrl": "https://nop.lums.edu.pk/"
+    },
+    {
+      "id": "iba-fa",
+      "name": "IBA Karachi Need-Based Financial Assistance",
+      "category": "university-specific",
+      "funder": "IBA Karachi (Zakat and donor funds)",
+      "level": "Undergraduate",
+      "coverage": "Bridge financing covering 25%-90% of tuition fee (up to 100% via donor scholarships)",
+      "eligibility": [
+        "Full-time students in morning programs facing financial constraints",
+        "Minimum CGPA of 2.5 to maintain assistance",
+        "Income tax returns required for all earning family members"
+      ],
+      "deadline": "Cycle-based (apply at admission or start of each academic year)",
+      "sourceUrl": "https://www.iba.edu.pk/financialassistance/needbased.php"
+    },
+    {
+      "id": "giki-fa",
+      "name": "GIKI Scholarships & Financial Assistance",
+      "category": "university-specific",
+      "funder": "GIK Institute of Engineering Sciences and Technology",
+      "level": "Undergraduate",
+      "coverage": "Need-based and merit-based scholarships plus interest-free aid and loans",
+      "eligibility": [
+        "Undergraduate (BS) students admitted to GIKI",
+        "Financial assistance form submitted with the admission application",
+        "Merit scholarships tied to admission merit positions"
+      ],
+      "deadline": "Cycle-based (with undergraduate admissions)",
+      "sourceUrl": "https://giki.edu.pk/admissions/admissions-undergraduates/scholarships-fa/",
+      "note": "Over Rs 200 million in scholarships and aid for undergraduate students"
+    },
+    {
+      "id": "nust-need",
+      "name": "NUST Need-Based Financial Aid",
+      "category": "university-specific",
+      "funder": "NUST (National University of Sciences and Technology)",
+      "level": "Undergraduate",
+      "coverage": "Need-based financial aid on tuition plus linkage to external scholarships",
+      "eligibility": [
+        "Enrolled NUST undergraduate student",
+        "Financial need assessed via the NUST Need-Based Financial Aid Application Form (NFAAF)",
+        "Must apply for external scholarships such as Scottish, BEEF, CMEEF, SEEF and PEEF"
+      ],
+      "deadline": "Cycle-based (with NUST admissions)",
+      "sourceUrl": "https://nust.edu.pk/admissions/scholarships/need-based-financial-aid/"
+    },
+    {
+      "id": "fast-scholarships",
+      "name": "FAST-NUCES Scholarships & Financial Assistance",
+      "category": "university-specific",
+      "funder": "FAST-NUCES (National University of Computer and Emerging Sciences)",
+      "level": "Undergraduate",
+      "coverage": "Full tuition merit scholarships, interest-free study loans and external sponsorships",
+      "eligibility": [
+        "Top 3 position holders of each examination board at admission",
+        "Continuation of merit scholarship requires semester GPA of 3.0 or higher",
+        "Need-based students may apply for interest-free study loans and external sponsorships"
+      ],
+      "deadline": "Cycle-based (with admissions; renewals each semester)",
+      "sourceUrl": "https://nu.edu.pk/Admissions/Scholarship"
+    },
+    {
+      "id": "comsats-scholarships",
+      "name": "COMSATS Merit Scholarship for Admission Toppers",
+      "category": "university-specific",
+      "funder": "COMSATS University Islamabad",
+      "level": "Undergraduate",
+      "coverage": "Full tuition fee waiver for the entire degree program",
+      "eligibility": [
+        "Top candidate in the admission merit list of each undergraduate program per campus",
+        "Maintain minimum CGPA of 2.5 each semester",
+        "Award is campus and program specific and non-transferable"
+      ],
+      "deadline": "Automatic (awarded at admission; renewed each semester)",
+      "sourceUrl": "https://lahore.comsats.edu.pk/Scholarships/merit-scholarship.aspx"
+    },
+    {
+      "id": "aku-fa",
+      "name": "AKU Financial Assistance Programme",
+      "category": "university-specific",
+      "funder": "Aga Khan University",
+      "level": "Undergraduate",
+      "coverage": "Needs-based grant-in-aid combined with an interest-free student loan",
+      "eligibility": [
+        "Students admitted to AKU programmes unable to pay tuition and other fees",
+        "Assistance based on demonstrated need assessed by the university",
+        "Loan repayable after graduation with 5% annual administrative charge"
+      ],
+      "deadline": "Cycle-based (deadline in the admission offer package)",
+      "sourceUrl": "https://www.aku.edu/admissions/fees-and-funding/Pages/financial-assistance-pk.aspx",
+      "note": "Almost 50% of the AKU student body receives financial assistance"
+    },
+    {
+      "id": "pu-need",
+      "name": "University of the Punjab Scholarships",
+      "category": "university-specific",
+      "funder": "University of the Punjab",
+      "level": "Undergraduate",
+      "coverage": "Merit, merit-cum-need and need-based scholarships plus PEEF and donor funds",
+      "eligibility": [
+        "Enrolled PU students in affiliated departments and colleges",
+        "Need-based aid for financially constrained students",
+        "Merit scholarships per department-wise and category-wise lists"
+      ],
+      "deadline": "Cycle-based (per scholarship announcement)",
+      "sourceUrl": "https://pu.edu.pk/scholar"
+    },
+    {
+      "id": "peef",
+      "name": "Punjab Educational Endowment Fund (PEEF)",
+      "category": "provincial",
+      "funder": "Government of Punjab",
+      "level": "Intermediate to Master's",
+      "coverage": "Tuition and stipend support across intermediate, graduation and master's levels",
+      "eligibility": [
+        "Punjab domicile (also serves AJK, GB, ICT and other provinces via special quotas)",
+        "At least 60% marks or minimum CGPA 2.5 for master's level scholarships",
+        "Admission secured in an HEC-recognized institution"
+      ],
+      "deadline": "Annually (special quota cycles advertised each year)",
+      "sourceUrl": "https://peef.punjab.gov.pk/",
+      "note": "More than 380,000 scholarships awarded since 2009"
+    },
+    {
+      "id": "sindh-endowment",
+      "name": "Sindh Educational Endowment Fund (SEEF)",
+      "category": "provincial",
+      "funder": "College Education Department, Government of Sindh",
+      "level": "Undergraduate",
+      "coverage": "Financial assistance for tuition at public and private universities",
+      "eligibility": [
+        "Domicile of Sindh; students from low-income groups",
+        "Pursuing graduate or post-graduate studies in IT, engineering, medicine or business administration",
+        "Selection through online application, interview and fund trust approval"
+      ],
+      "deadline": "Annually (applications typically close in July)",
+      "sourceUrl": "https://seef.sindh.gov.pk/"
+    },
+    {
+      "id": "kpk-endowment",
+      "name": "Chief Minister Education Endowment Fund (CMEEF)",
+      "category": "provincial",
+      "funder": "Government of Khyber Pakhtunkhwa (Higher Education Department)",
+      "level": "Undergraduate",
+      "coverage": "Fully funded: tuition, admission and hostel fees + Rs 5,000 monthly stipend",
+      "eligibility": [
+        "Domicile of Khyber Pakhtunkhwa",
+        "Meet admission merit criteria at approved institutions such as UET, NUST, GIKI, AKU and IBA",
+        "Family monthly income must not exceed Rs 100,000",
+        "Not a recipient of any other scholarship for the degree program"
+      ],
+      "deadline": "Cycle-based (advertised by institutions)",
+      "sourceUrl": "https://hed.gkp.pk/content/chief-minister-educational-endowment-fund-cmeef",
+      "note": "272 undergraduate inland scholarships in selected leading institutions"
+    },
+    {
+      "id": "beef",
+      "name": "Balochistan Education Endowment Fund (BEEF)",
+      "category": "provincial",
+      "funder": "Government of Balochistan",
+      "level": "Matric to PhD",
+      "coverage": "Merit-based and need-oriented scholarships from matric to PhD levels",
+      "eligibility": [
+        "Domicile of Balochistan; talented and financially disadvantaged students",
+        "Student data verified through education boards and institutions",
+        "Out-of-province scholarships scheme for study outside Balochistan"
+      ],
+      "deadline": "Cycle-based (advertised on the BEEF portal)",
+      "sourceUrl": "https://beef.org.pk/"
+    },
+    {
+      "id": "ajk-education",
+      "name": "AJK State Talent Scholarships & AJK-PEEF Scholarships",
+      "category": "provincial",
+      "funder": "Government of Azad Jammu & Kashmir (Higher Education Department) and PEEF",
+      "level": "Intermediate to Master's",
+      "coverage": "Annual merit scholarships for AJK students from intermediate to master's level",
+      "eligibility": [
+        "Domicile of Azad Jammu & Kashmir",
+        "Awarded on merit (state talent scholarships for 1,258 students each year)",
+        "Need and merit criteria per AJK-PEEF rules"
+      ],
+      "deadline": "Cycle-based (announced by AJK Higher Education Department)",
+      "sourceUrl": "https://hed.ajk.gov.pk/initiative/"
+    },
+    {
+      "id": "gb-endowment",
+      "name": "Gilgit-Baltistan Educational Endowment Fund (GBEEF)",
+      "category": "provincial",
+      "funder": "Government of Gilgit-Baltistan (Directorate of Education Colleges GB)",
+      "level": "Undergraduate",
+      "coverage": "Tuition fee, hostel fee, monthly stipend, books and travelling allowance",
+      "eligibility": [
+        "Domicile of Gilgit-Baltistan",
+        "Enrolled students apply through the GB scholarships online portal",
+        "Awards announced per cycle by the Directorate of Education Colleges GB"
+      ],
+      "deadline": "Cycle-based (via online scholarship portal)",
+      "sourceUrl": "https://www.doecgb.gov.pk/scholarships/apply-online"
+    }
+  ]
+}

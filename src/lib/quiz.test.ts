@@ -15,9 +15,13 @@ import type { StudentProfile } from "@/lib/store";
 function blank(): StudentProfile {
   return {
     name: "",
+    avatar: "",
+    bio: "",
     stream: null,
     marks: { matricObtained: 0, matricTotal: 1100, fscObtained: 0, fscTotal: 1100 },
     interests: [],
+    skills: [],
+    education: [],
     city: "",
     budget: "",
     quiz: {},

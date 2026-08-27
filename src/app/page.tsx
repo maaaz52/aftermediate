@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, ExternalLink } from "lucide-react";
+import { ContactForm } from "@/components/landing/contact-form";
 import { Brand } from "@/components/brand";
 import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
@@ -21,9 +22,9 @@ const jobs = rc.find((r) => r.id === "youth-unemployment")!;
 const it = rc.find((r) => r.id === "it-exports")!;
 
 const steps = [
-  { icon: "document" as const, title: "Upload your marksheet", desc: "Scan it or type it. We read your marks and stream automatically." },
-  { icon: "magnifier" as const, title: "Get your merit and Plan B", desc: "Real aggregate math for NUST, FAST, UET and MDCAT — plus realistic alternatives." },
-  { icon: "family" as const, title: "Convince your parents", desc: "A bilingual report with the data to turn \"doctor bano\" into a real conversation." },
+  { icon: "compass" as const, title: "Sign up", desc: "Create your account in 30 seconds. No credit card, no waiting — just get in.", bgClass: "bg-emerald" },
+  { icon: "magnifier" as const, title: "Get the picture", desc: "Discover what's actually available — your real merit, the right universities, careers that pay, and scholarships you qualify for.", bgClass: "bg-accent" },
+  { icon: "rocket" as const, title: "Act on it", desc: "Your personalised roadmap is ready. Execute it — with data, not guesswork.", bgClass: "bg-amber" },
 ];
 
 const features = [
@@ -47,6 +48,7 @@ export default function Home() {
             <Link href="#features" className="hover:text-ink">Features</Link>
             <Link href="#reality" className="hover:text-ink">Reality</Link>
             <Link href="#sources" className="hover:text-ink">Sources</Link>
+            <Link href="#contact" className="hover:text-ink">Contact</Link>
           </nav>
           <div className="flex items-center gap-3">
             <Link href="/login" className="hidden text-sm font-medium text-ink hover:text-accent sm:block">Sign in</Link>
@@ -232,19 +234,29 @@ export default function Home() {
 
         {/* HOW IT WORKS */}
         <section id="how" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. No confusion.</h2>
-          <div className="mt-6 sm:mt-10 grid gap-6 md:grid-cols-3">
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. Zero confusion.</h2>
+          <p className="mt-3 max-w-lg text-muted">
+            From sign-up to action — here&apos;s how it works.
+          </p>
+          <div className="mt-10 flex flex-col items-stretch gap-6 md:flex-row md:items-center md:gap-0">
             {steps.map((s, i) => (
-              <PixelCard key={s.title} className="p-6" shadow="accent">
-                <div className="flex items-center justify-between">
-                  <div className="border-2 border-ink bg-accent p-2.5">
+              <div key={s.title} className="contents">
+                <div className="relative flex-1 overflow-hidden border-2 border-ink bg-surface p-6 shadow-[4px_4px_0_0_var(--color-ink)]">
+                  <span className="absolute -right-4 -top-8 font-display text-[100px] leading-none text-line">
+                    0{i + 1}
+                  </span>
+                  <div className={`relative grid h-14 w-14 place-items-center border-2 border-ink ${s.bgClass}`}>
                     <Illustration name={s.icon} scale={2} />
                   </div>
-                  <span className="font-display text-4xl text-line">0{i + 1}</span>
+                  <h3 className="relative mt-5 text-xl font-bold text-ink">{s.title}</h3>
+                  <p className="relative mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
-              </PixelCard>
+                {i < steps.length - 1 && (
+                  <div className="hidden shrink-0 items-center justify-center px-4 md:flex">
+                    <ArrowRight className="h-6 w-6 text-faint" />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </section>
@@ -305,11 +317,53 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              {["PMDC", "HEC", "PBS", "P@SHA", "SBP"].map((s) => (
-                <span key={s} className="border-2 border-ink bg-surface px-4 py-2 font-mono text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)]">
-                  {s}
-                </span>
+              {[
+                { name: "PMDC", url: "https://pmdc.pk/" },
+                { name: "HEC", url: "https://www.hec.gov.pk/" },
+                { name: "PBS", url: "https://www.pbs.gov.pk/" },
+                { name: "P@SHA", url: "https://pasha.org.pk/" },
+                { name: "SBP", url: "https://www.sbp.org.pk/" },
+              ].map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 border-2 border-ink bg-surface px-4 py-2 font-mono text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-colors hover:bg-accent hover:text-white hover:shadow-none"
+                >
+                  {s.name} <ExternalLink className="h-3 w-3" />
+                </a>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CONTACT */}
+        <section id="contact" className="border-t-2 border-ink bg-surface">
+          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+            <div className="grid items-start gap-10 lg:grid-cols-2">
+              <div>
+                <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Get in touch.</h2>
+                <p className="mt-3 max-w-md text-muted">
+                  Questions? Feedback? Want to collaborate? Drop us a message — we read every one.
+                </p>
+                <div className="mt-8 space-y-4">
+                  <a
+                    href="mailto:hello@aftermediate.com"
+                    className="flex items-center gap-3 text-ink transition-colors hover:text-accent"
+                  >
+                    <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-accent shadow-[2px_2px_0_0_var(--color-ink)]">
+                      <Mail className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-mono text-xs text-faint uppercase">Email us</p>
+                      <p className="text-sm font-semibold">hello@aftermediate.com</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <ContactForm />
             </div>
           </div>
         </section>

@@ -4,6 +4,7 @@ import type {
   Major,
   RealityCheck,
   Scholarship,
+  Stream,
   University,
 } from "./types";
 
@@ -50,3 +51,11 @@ export function getRealityCheck(id: string): RealityCheck | undefined {
 export function getCourses(ids: string[]): Course[] {
   return data.courses.filter((c) => ids.includes(c.id));
 }
+
+export const STREAM_LABEL: Record<Stream, string> = {
+  "pre-medical": "FSc Pre-Medical",
+  "pre-engineering": "FSc Pre-Engineering",
+  ics: "ICS",
+  icom: "I.Com",
+  alevel: "A-Levels",
+};

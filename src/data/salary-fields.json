@@ -1,0 +1,239 @@
+{
+  "dataYear": 2026,
+  "disclaimer": "Salary ranges are estimates compiled from public salary-report sources and job postings. They are not official statistics. Actual pay varies by city, employer, and skill level.",
+  "fields": [
+    {
+      "id": "software-engineering",
+      "name": "Software Engineering",
+      "emoji": "💻",
+      "streams": ["pre-engineering", "ics"],
+      "salaries": { "entry": [50, 120], "mid": [120, 250], "senior": [250, 500] },
+      "demand": "high",
+      "growth": 25,
+      "stability": "medium",
+      "notes": "Remote and freelance work raises the ceiling beyond local pay scales",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Software_Engineer/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-software-engineer-salary-SRCH_IL.0,8_IN192_KO9,26.htm"
+      ]
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science",
+      "emoji": "📊",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "salaries": { "entry": [60, 130], "mid": [130, 260], "senior": [260, 550] },
+      "demand": "high",
+      "growth": 30,
+      "stability": "medium",
+      "notes": "Fewer local openings than software — most roles sit in banks, telcos, and remote teams",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Data_Scientist/Salary",
+        "https://www.glassdoor.com/Salaries/lahore-data-scientist-salary-SRCH_IL.0,6_IC3206630_KO7,21.htm"
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "emoji": "🩺",
+      "streams": ["pre-medical", "alevel"],
+      "salaries": { "entry": [40, 100], "mid": [100, 250], "senior": [250, 600] },
+      "demand": "high",
+      "growth": 10,
+      "stability": "high",
+      "notes": "House-job stipends are far lower; top consultants in private practice earn much more",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Physician_%2F_Doctor%2C_General_Practice/Salary",
+        "https://www.glassdoor.com/Salaries/faisal%C4%81b%C4%81d-pakistan-doctor-salary-SRCH_IL.0,19_IM1626_KO20,26.htm"
+      ]
+    },
+    {
+      "id": "dentistry",
+      "name": "Dentistry",
+      "emoji": "🦷",
+      "streams": ["pre-medical", "alevel"],
+      "salaries": { "entry": [50, 120], "mid": [120, 250], "senior": [250, 500] },
+      "demand": "high",
+      "growth": 12,
+      "stability": "high",
+      "notes": "Govt posts start near PKR 100k; private clinics pay more as your patient base grows",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Dentist/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-dentist-salary-SRCH_IL.0,8_IN192_KO9,16.htm"
+      ]
+    },
+    {
+      "id": "civil-engineering",
+      "name": "Civil Engineering",
+      "emoji": "🏗️",
+      "streams": ["pre-engineering", "ics"],
+      "salaries": { "entry": [40, 80], "mid": [80, 150], "senior": [150, 350] },
+      "demand": "high",
+      "growth": 15,
+      "stability": "medium",
+      "notes": "Salaries swing with project cycles — Gulf roles pay several times local rates",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Civil_Engineer/Salary",
+        "https://www.glassdoor.com/Salaries/lahore-pakistan-senior-civil-engineer-salary-SRCH_IL.0,15_IM1625_KO16,37.htm"
+      ]
+    },
+    {
+      "id": "electrical-engineering",
+      "name": "Electrical Engineering",
+      "emoji": "⚡",
+      "streams": ["pre-engineering", "ics"],
+      "salaries": { "entry": [40, 80], "mid": [80, 160], "senior": [160, 350] },
+      "demand": "medium",
+      "growth": 12,
+      "stability": "medium",
+      "notes": "Power-sector and solar jobs dominate hiring",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Electrical_Engineer/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-electrical-engineer-salary-SRCH_IL.0,8_IN192_KO9,28.htm"
+      ]
+    },
+    {
+      "id": "mechanical-engineering",
+      "name": "Mechanical Engineering",
+      "emoji": "⚙️",
+      "streams": ["pre-engineering", "ics"],
+      "salaries": { "entry": [40, 80], "mid": [80, 160], "senior": [160, 350] },
+      "demand": "medium",
+      "growth": 10,
+      "stability": "medium",
+      "notes": "Manufacturing and HVAC maintenance roles are the steady core of hiring",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Mechanical_Engineer/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-mechanical-engineer-salary-SRCH_IL.0,8_IN192_KO9,28.htm"
+      ]
+    },
+    {
+      "id": "accounting-finance",
+      "name": "Accounting & Finance",
+      "emoji": "📈",
+      "streams": ["icom", "alevel", "pre-engineering"],
+      "salaries": { "entry": [30, 60], "mid": [60, 150], "senior": [150, 400] },
+      "demand": "high",
+      "growth": 15,
+      "stability": "high",
+      "notes": "CA qualification roughly doubles pay versus a plain B.Com",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Accountant/Salary",
+        "https://www.payscale.com/research/PK/Job=Chartered_Accountant/Salary"
+      ]
+    },
+    {
+      "id": "business-marketing",
+      "name": "Business & Marketing",
+      "emoji": "📣",
+      "streams": ["icom", "alevel", "pre-engineering"],
+      "salaries": { "entry": [35, 70], "mid": [70, 150], "senior": [150, 300] },
+      "demand": "high",
+      "growth": 18,
+      "stability": "medium",
+      "notes": "Digital marketing and e-commerce roles pay above traditional FMCG starts",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Marketing_Manager/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-marketing-manager-salary-SRCH_IL.0,8_IN192_KO9,26.htm"
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "emoji": "⚖️",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "salaries": { "entry": [30, 80], "mid": [80, 200], "senior": [200, 500] },
+      "demand": "medium",
+      "growth": 10,
+      "stability": "medium",
+      "notes": "First years pay little; earnings jump once you build a case record or join a corporate firm",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Corporate_Lawyer/Salary",
+        "https://www.glassdoor.com/Salaries/pakistan-lawyer-salary-SRCH_IL.0,8_IN192_KO9,15.htm"
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "emoji": "🏛️",
+      "streams": ["pre-engineering", "alevel", "ics"],
+      "salaries": { "entry": [35, 70], "mid": [70, 150], "senior": [150, 350] },
+      "demand": "medium",
+      "growth": 10,
+      "stability": "medium",
+      "notes": "Small studios pay low; established firms and your own practice lift the ceiling",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Architect_(but_not_Landscape_or_Naval)/Salary",
+        "https://www.glassdoor.com/Salaries/karachi-pakistan-architecture-salary-SRCH_IL.0,16_IM1122_KO17,29.htm"
+      ]
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "emoji": "📚",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "salaries": { "entry": [35, 60], "mid": [60, 100], "senior": [100, 200] },
+      "demand": "medium",
+      "growth": 5,
+      "stability": "high",
+      "notes": "Govt jobs dominate entry level; private schools pay less but hire faster",
+      "sources": [
+        "https://www.payscale.com/research/PK/Job=Primary_School_Teacher/Salary",
+        "https://cabinet.gov.pk/SiteImage/Downloads/basic-pay-scales-civil-servant.pdf"
+      ]
+    }
+  ],
+  "careerPaths": [
+    {
+      "id": "freelancing",
+      "name": "Freelancing",
+      "emoji": "💻",
+      "pros": [
+        "Earn in USD at international rates from anywhere in Pakistan",
+        "No degree gate — portfolio and skill win the work",
+        "Full control of hours and workload"
+      ],
+      "cons": [
+        "Income swings month to month — no fixed salary",
+        "No pension, medical insurance, or job security",
+        "You handle your own taxes and client disputes"
+      ],
+      "incomeRange": "USD 200 – 5,000+/month (varies wildly by skill)",
+      "bestFor": "Self-disciplined students in tech, design, and writing — pairs well with university."
+    },
+    {
+      "id": "government",
+      "name": "Government",
+      "emoji": "🏛️",
+      "pros": [
+        "Permanent posts with pension and guaranteed yearly increments",
+        "Medical, housing, and utility allowances on top of basic pay",
+        "Respect, job security, and fixed working hours"
+      ],
+      "cons": [
+        "Promotions move slowly — seniority beats merit",
+        "Basic pay starts modest at lower BPS grades",
+        "Seats are few — thousands compete for one post"
+      ],
+      "incomeRange": "PKR 35,000 – 600,000+/month (BPS 9–22, allowances included)",
+      "bestFor": "Students who want lifelong stability and a respected post, and can commit to the exam grind."
+    },
+    {
+      "id": "private",
+      "name": "Private",
+      "emoji": "🏢",
+      "pros": [
+        "Merit and results get you promoted fast",
+        "Skilled people can out-earn govt officers within a few years",
+        "Exposure to modern tools, training, and networks"
+      ],
+      "cons": [
+        "Little job security — layoffs come with every downturn",
+        "Long hours and constant pressure to perform",
+        "Benefits like pensions and medical cover vary wildly"
+      ],
+      "incomeRange": "PKR 30,000 – 600,000+/month depending on field, city, and employer",
+      "bestFor": "Growth-focused students who can sell their skills and don't mind switching jobs for better pay."
+    }
+  ]
+}

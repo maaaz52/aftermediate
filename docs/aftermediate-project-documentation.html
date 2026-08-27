@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aftermediate — Product &amp; Technical Design Document</title>
+<style>
+  @page {
+    size: A4;
+    margin: 22mm 18mm 20mm 18mm;
+    @bottom-center {
+      content: "aftermediate — PDD · Confidential";
+      font-family: "DejaVu Sans", sans-serif;
+      font-size: 8pt;
+      color: #8a93a6;
+    }
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: "DejaVu Sans", sans-serif;
+      font-size: 8pt;
+      color: #8a93a6;
+    }
+  }
+  @page cover {
+    margin: 0;
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+  @page toc {
+    @bottom-center { content: none; }
+    @bottom-right { content: none; }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.55;
+    color: #191f2c;
+    margin: 0;
+    padding: 0;
+  }
+  h1, h2, h3, h4 { font-family: "DejaVu Sans", sans-serif; color: #191f2c; margin: 0; }
+  p { margin: 0 0 8pt 0; }
+  ul, ol { margin: 0 0 8pt 0; padding-left: 16pt; }
+  li { margin-bottom: 3pt; }
+  a { color: #2f55d4; text-decoration: none; }
+  code, pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8pt; }
+  code { background: #f0eeea; border-radius: 3px; padding: 0 3px; }
+  pre { background: #f0eeea; border: 1px solid #d7d2c4; border-radius: 6px; padding: 8pt; overflow-wrap: break-word; white-space: pre-wrap; margin: 0 0 8pt 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 12pt 0; font-size: 8.5pt; }
+  th { background: #2f55d4; color: #fff; text-align: left; padding: 5pt 7pt; }
+  td { border: 1px solid #d7d2c4; padding: 5pt 7pt; vertical-align: top; }
+  tr:nth-child(even) td { background: #faf9f6; }
+  .pagebreak { page-break-before: always; }
+  .cover {
+    page: cover;
+    width: 100%;
+    height: 297mm;
+    background: #191f2c;
+    color: #f4f2eb;
+    display: block;
+    padding: 30mm 24mm;
+    position: relative;
+  }
+  .cover .kicker { font-size: 9pt; letter-spacing: 3px; text-transform: uppercase; color: #4a6cf0; margin-bottom: 12pt; }
+  .cover h1 { font-size: 34pt; line-height: 1.1; color: #ffffff; font-weight: 700; margin-bottom: 10pt; }
+  .cover .subtitle { font-size: 13pt; color: #8a93a6; line-height: 1.5; max-width: 150mm; margin-bottom: 30pt; }
+  .cover .meta { border-top: 1px solid #2a3140; padding-top: 14pt; font-size: 9pt; color: #8a93a6; }
+  .cover .meta div { margin-bottom: 4pt; }
+  .cover .meta b { color: #f4f2eb; display: inline-block; width: 42mm; }
+  .doc-title { font-size: 22pt; font-weight: 700; margin-bottom: 4pt; }
+  .doc-sub { font-size: 10pt; color: #566073; margin-bottom: 14pt; }
+  h2 { font-size: 15pt; margin: 0 0 8pt 0; padding-bottom: 5pt; border-bottom: 2px solid #2f55d4; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 14pt 0 5pt 0; page-break-after: avoid; }
+  h4 { font-size: 10pt; margin: 10pt 0 4pt 0; color: #2f55d4; page-break-after: avoid; }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li { margin-bottom: 6pt; font-size: 10pt; }
+  .toc-list li.l1 { font-weight: 700; margin-top: 10pt; }
+  .toc-list li.l2 { padding-left: 16pt; font-weight: 400; color: #566073; }
+  .toc-list .num { display: inline-block; width: 30px; color: #2f55d4; font-weight: 700; }
+  .callout { border-left: 4px solid #2f55d4; background: #f0f2fb; padding: 8pt 10pt; margin: 0 0 10pt 0; border-radius: 0 6px 6px 0; font-size: 9pt; }
+  .callout.warn { border-left-color: #d99a2b; background: #fdf6e9; }
+  .callout.danger { border-left-color: #d63d3d; background: #fdefef; }
+  .grid2 { display: flex; gap: 10pt; }
+  .grid2 > div { flex: 1; }
+  .box { border: 1px solid #d7d2c4; border-radius: 8px; padding: 10pt; margin-bottom: 10pt; }
+  .box h4 { margin-top: 0; }
+  .small { font-size: 8.5pt; color: #566073; }
+  .pill { display: inline-block; background: #2f55d4; color: #fff; border-radius: 20px; padding: 1pt 8pt; font-size: 8pt; font-weight: 700; }
+  .pill.green { background: #1c9e62; }
+  .pill.amber { background: #d99a2b; }
+  .pill.gray { background: #566073; }
+  .keep { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="cover">
+  <div class="kicker">Product &amp; Technical Design Document</div>
+  <h1>aftermediate<br><span style="color:#4a6cf0">your post-FSc compass</span></h1>
+  <div class="subtitle">
+    AI-driven, hyper-localised career counselling and university entry-roadmap platform for
+    Pakistani FSc, ICS, I.Com and A-Level students.
+  </div>
+  <div class="meta">
+    <div><b>Document type</b> Product &amp; Technical Design Document (PDD)</div>
+    <div><b>Version</b> 1.0</div>
+    <div><b>Status</b> Implementation baseline — approved for build</div>
+    <div><b>Prepared by</b> Product &amp; Engineering</div>
+    <div><b>Repository</b> github.com/maaaz52/aftermediate</div>
+    <div><b>Date</b> 26 August 2026</div>
+    <div><b>Classification</b> Confidential — internal</div>
+  </div>
+</div>
+
+<!-- ============ DOCUMENT CONTROL ============ -->
+<div class="pagebreak"></div>
+<h2 class="doc-title">Document Control</h2>
+<div class="doc-sub">Revision history, ownership and review plan for this document.</div>
+
+<h3>1. Revision History</h3>
+<table>
+  <tr><th>Version</th><th>Date</th><th>Author</th><th>Change Summary</th></tr>
+  <tr><td>0.1</td><td>22 Aug 2026</td><td>Engineering</td><td>Initial skeleton — problem space, goals, stack proposal.</td></tr>
+  <tr><td>0.2</td><td>25 Aug 2026</td><td>Engineering</td><td>Data model, aggregate-formula spec, landing page design.</td></tr>
+  <tr><td>0.3</td><td>26 Aug 2026</td><td>Engineering</td><td>Onboarding-quiz design spec and implementation plan merged.</td></tr>
+  <tr><td>1.0</td><td>26 Aug 2026</td><td>Product &amp; Engineering</td><td>Baseline — full product + technical reference. Approved to build.</td></tr>
+</table>
+
+<h3>2. Document Purpose</h3>
+<p>This document is the single source of truth for the <b>aftermediate</b> product during its build phase.
+It combines a <b>Product Requirements Document</b> (what we are building and why) with a
+<b>Technical Design Document</b> (how it is built). Engineers, designers, stakeholders and the
+AI-assistants contributing to the codebase should read this before writing code, and should keep it
+in sync as the product evolves.</p>
+
+<h3>3. Review &amp; Approval</h3>
+<table>
+  <tr><th>Role</th><th>Name / Team</th><th>Sign-off</th></tr>
+  <tr><td>Product Owner</td><td>aftermediate product team</td><td>Approved v1.0</td></tr>
+  <tr><td>Engineering Lead</td><td>Engineering</td><td>Approved v1.0</td></tr>
+  <tr><td>Design</td><td>Design (see Design System)</td><td>Approved v1.0</td></tr>
+</table>
+
+<h3>4. Related Documents</h3>
+<ul>
+  <li><span class="small">Spec</span> — <code>docs/superpowers/specs/2026-08-26-onboarding-quiz-design.md</code></li>
+  <li><span class="small">Plan</span> — <code>docs/superpowers/plans/2026-08-26-onboarding-quiz.md</code></li>
+  <li><span class="small">Schema</span> — <code>supabase/schema.sql</code></li>
+</ul>
+
+<div class="callout"><b>How to use this document.</b> New engineers and AI assistants must read §5–§8 before
+writing code, §10–§12 before touching data or APIs, and §14 before changing UI. When a feature changes,
+update the relevant section in the same commit.</div>
+
+<!-- ============ TOC ============ -->
+<div class="pagebreak"></div>
+<h2>Table of Contents</h2>
+<ol class="toc-list">
+  <li class="l1"><span class="num">1</span> Executive Summary</li>
+  <li class="l1"><span class="num">2</span> Problem &amp; Opportunity</li>
+  <li class="l2"><span class="num"></span>2.1 The post-FSc decision crisis</li>
+  <li class="l2"><span class="num"></span>2.2 The information gap</li>
+  <li class="l1"><span class="num">3</span> Product Vision &amp; Goals</li>
+  <li class="l1"><span class="num">4</span> Target Users &amp; Personas</li>
+  <li class="l1"><span class="num">5</span> Scope</li>
+  <li class="l2"><span class="num"></span>5.1 In scope (v1)</li>
+  <li class="l2"><span class="num"></span>5.2 Out of scope (v1)</li>
+  <li class="l1"><span class="num">6</span> Functional Requirements</li>
+  <li class="l2"><span class="num"></span>6.1 Public landing &amp; auth</li>
+  <li class="l2"><span class="num"></span>6.2 Onboarding quiz (7 sections)</li>
+  <li class="l2"><span class="num"></span>6.3 Dashboard</li>
+  <li class="l2"><span class="num"></span>6.4 Profile</li>
+  <li class="l2"><span class="num"></span>6.5 Merit engine</li>
+  <li class="l2"><span class="num"></span>6.6 Career explorer</li>
+  <li class="l2"><span class="num"></span>6.7 Trends</li>
+  <li class="l2"><span class="num"></span>6.8 Money &amp; scholarships</li>
+  <li class="l2"><span class="num"></span>6.9 Convince (parent report)</li>
+  <li class="l2"><span class="num"></span>6.10 Ustaad — study assistant</li>
+  <li class="l2"><span class="num"></span>6.11 Rahbar — site assistant</li>
+  <li class="l1"><span class="num">7</span> Non-Functional Requirements</li>
+  <li class="l1"><span class="num">8</span> Success Metrics</li>
+  <li class="l1"><span class="num">9</span> Tech Stack</li>
+  <li class="l1"><span class="num">10</span> System Architecture</li>
+  <li class="l1"><span class="num">11</span> Data Model</li>
+  <li class="l1"><span class="num">12</span> API Specification</li>
+  <li class="l1"><span class="num">13</span> AI &amp; Prompt Design</li>
+  <li class="l1"><span class="num">14</span> Design System &amp; UI/UX</li>
+  <li class="l1"><span class="num">15</span> Aggregate Mathematics</li>
+  <li class="l1"><span class="num">16</span> Security &amp; Privacy</li>
+  <li class="l1"><span class="num">17</span> Deployment &amp; Environments</li>
+  <li class="l1"><span class="num">18</span> Testing Strategy</li>
+  <li class="l1"><span class="num">19</span> Roadmap &amp; Future Work</li>
+  <li class="l1"><span class="num">20</span> Risks &amp; Mitigations</li>
+</ol>
+
+<!-- ============ 1 EXEC SUMMARY ============ -->
+<div class="pagebreak"></div>
+<h2>1. Executive Summary</h2>
+<p><b>aftermediate</b> is a purpose-built, AI-assisted career-counseling platform for Pakistani
+intermediate-level students. Every year, hundreds of thousands of FSc, ICS, I.Com and A-Level students
+finish school with almost no reliable, individualised guidance about what to do next. Decisions are made
+on rumour, coaching-academy marketing, and parental pressure — with life-long financial consequences.</p>
+<p>The product closes that gap with a single, honest, data-backed path:</p>
+<ol>
+  <li><b>Collect</b> the student's real position — stream, marks, entry-test plans, budget, parental pressure, skills — via a short, resumable 7-section onboarding quiz.</li>
+  <li><b>Compute</b> real merit numbers using the actual university aggregate formulas (NUST, FAST, PMDC/MDCAT, UET), so the student sees their true standing instead of an academy's marketing number.</li>
+  <li><b>Counsel</b> with an AI guide (Rahbar) and an AI study tutor (Ustaad), both grounded in Pakistani data, plus real labour-market trends and affordability analysis.</li>
+  <li><b>Convince</b> the people who actually control the decision — parents — with a bilingual, printable, data-backed report.</li>
+</ol>
+<p>The v1 product is a fully functional web application: public landing page, Supabase authentication,
+a complete onboarding quiz with OCR marksheet scanning, eight authenticated feature pages, three
+server-side AI API routes, a production <i>coming-soon</i> gate, and a 28-case automated test suite.
+It is deployed on Vercel and versioned on GitHub.</p>
+
+<div class="callout"><b>Headline metric for v1.</b> A student who completes the quiz learns their real
+NUST / medical aggregate instead of a score computed from a zero (see §15 — this was the platform's
+original data bug). This single fix changes the merit page from misleading to honest.</div>
+
+<!-- ============ 2 PROBLEM ============ -->
+<div class="pagebreak"></div>
+<h2>2. Problem &amp; Opportunity</h2>
+
+<h3>2.1 The post-FSc decision crisis</h3>
+<p>Pakistan's intermediate (FSc) cohort is among the largest in the world. The numbers that frame the
+decision are stark:</p>
+<table>
+  <tr><th>Statistic</th><th>Value</th><th>Implication</th></tr>
+  <tr><td>MDCAT candidates vs MBBS seats</td><td>~180,000 candidates vs ~11,000 seats</td><td>Roughly 1 in 15 pre-medical students gets a seat — most need a real Plan B.</td></tr>
+  <tr><td>Youth (15–24) unemployment</td><td>~12.6% (PBS LFS 2024–25)</td><td>A wrong degree choice has an immediate, measurable cost.</td></tr>
+  <tr><td>IT exports</td><td>US$4.6B (FY26), targeting US$15B by 2030</td><td>Technology is the fastest-growing escape route for non-medical students.</td></tr>
+  <tr><td>NUST merit weight of entry test</td><td>75% NET</td><td>Entry-test strategy matters more than marksheet — almost nobody is told this.</td></tr>
+</table>
+
+<h3>2.2 The information gap</h3>
+<p>Students have access to plenty of <i>information</i> (merit lists, academy pamphlets, forums) but almost
+no <i>counseling</i>. The gap has four concrete causes, all of which v1 addresses directly:</p>
+<ol>
+  <li><b>Aggregates are never computed honestly.</b> Coaching academies quote inflated "closing merits". The real formulas (NUST 75/15/10, FAST 50/40/10, PMDC 50/40/10) are public but never applied to an individual's own marks. §15 documents the exact formulas.</li>
+  <li><b>Money is never treated as a merit factor.</b> Affordability, scholarships, and relocation ability change which institutions are realistic — but they're never collected, so never factored in.</li>
+  <li><b>Parental pressure is ignored by every tool.</b> The person making the final decision is usually the parent, and parents are persuaded by data, not by the student's enthusiasm. No existing tool produces a parent-facing argument.</li>
+  <li><b>No one collects the student's own data.</b> Before aftermediate, the platform's own pages read profile fields that nothing ever populated — the merit page computed aggregates from a default score of zero, and the "convince" page reset its inputs on every page load.</li>
+</ol>
+
+<div class="callout warn"><b>Market fit signal.</b> The product is deliberately hyper-local: it speaks
+Urdu where it matters, uses Pakistani boards, cities, PKR budgets, and real university entry tests.
+Generic international career sites cannot provide this density of local relevance.</div>
+
+<!-- ============ 3 VISION ============ -->
+<div class="pagebreak"></div>
+<h2>3. Product Vision &amp; Goals</h2>
+
+<h3>3.1 Vision</h3>
+<p>Every student in Pakistan who finishes intermediate school should be able to make their next
+decision with the same quality of data a paid career counselor would give them — for free, on their phone.</p>
+
+<h3>3.2 Strategic Goals (v1)</h3>
+<table>
+  <tr><th>#</th><th>Goal</th><th>How it shows up in the product</th></tr>
+  <tr><td>G1</td><td>Collect the student's real position once, and reuse it everywhere</td><td>Single onboarding quiz feeds merit, money, convince, profile, career pages.</td></tr>
+  <tr><td>G2</td><td>Make merit honest</td><td>Real aggregate formulas applied to real marks; entry-test scores collected and used (never defaulted to zero).</td></tr>
+  <tr><td>G3</td><td>Give students a voice with their parents</td><td>Bilingual, printable parent report built from the student's real data.</td></tr>
+  <tr><td>G4</td><td>Guide, don't lecture</td><td>Two AI assistants with distinct, hard-scoped roles (site guidance vs study tutoring).</td></tr>
+  <tr><td>G5</td><td>Resume, don't restart</td><td>Quiz progress survives tab-close and device switch (localStorage + Supabase).</td></tr>
+</table>
+
+<h3>3.3 Guiding Principles</h3>
+<ul>
+  <li><b>Honesty over optimism.</b> A hard truth ("your aggregate puts you in the top 25%") beats a flattering lie. Data is sourced and citable.</li>
+  <li><b>Local by default.</b> Urdu where natural, PKR budgets, Pakistani boards and institutions, realistic scholarship info.</li>
+  <li><b>One source of truth.</b> The quiz is the canonical home of student data; everything else reads it. Avoid duplicate state.</li>
+  <li><b>Data-driven UX.</b> Questions and recommendations are data, not hardcoded JSX, so content changes are edits not surgery.</li>
+</ul>
+
+<!-- ============ 4 PERSONAS ============ -->
+<div class="pagebreak"></div>
+<h2>4. Target Users &amp; Personas</h2>
+
+<div class="grid2">
+  <div class="box keep">
+    <h4>Persona A — "Ayesha" · Pre-Medical, 17</h4>
+    <p><span class="small"><b>Context:</b> Lahore, FSc Pre-Medical, scored ~93% FSc. Parents assume she will "do MBBS". No realistic idea of the 1-in-15 odds.</span></p>
+    <p><span class="small"><b>Needs:</b> to know her real medical aggregate, her realistic alternatives, and a way to show her parents the data.</span></p>
+    <p><span class="small"><b>Path through product:</b> onboard → merit (MDCAT aggregate + percentile) → trends / career for Plan B fields → convince (parent report).</span></p>
+  </div>
+  <div class="box keep">
+    <h4>Persona B — "Bilal" · Pre-Engineering, 18</h4>
+    <p><span class="small"><b>Context:</b> Karachi, FSc Pre-Engineering. Considering NUST / FAST. Zero coaching budget. Hears "everything is possible" from everyone.</span></p>
+    <p><span class="small"><b>Needs:</b> exact NET/FAST aggregate, entry-test strategy, affordable institution options, scholarship help.</span></p>
+    <p><span class="small"><b>Path:</b> onboard → merit (NUST + FAST) → money (budget tiers) → Ustaad (NET prep).</span></p>
+  </div>
+</div>
+<div class="grid2">
+  <div class="box keep">
+    <h4>Persona C — "Zara" · ICS, 17</h4>
+    <p><span class="small"><b>Context:</b> Islamabad, ICS. Parents expect "something in government". Zara likes coding but hasn't told them.</span></p>
+    <p><span class="small"><b>Needs:</b> a credible tech career path, salary/trend data, and a gentle way to raise it at home.</span></p>
+    <p><span class="small"><b>Path:</b> onboard → trends (IT exports) → career (tech majors) → convince.</span></p>
+  </div>
+  <div class="box keep">
+    <h4>Persona D — "Hamza" · I.Com / A-Level, 18</h4>
+    <p><span class="small"><b>Context:</b> Multan, considering business abroad. Needs a Plan A and a Plan B, cost-aware.</span></p>
+    <p><span class="small"><b>Needs:</b> affordability analysis, abroad options, scholarship eligibility.</span></p>
+    <p><span class="small"><b>Path:</b> onboard → money (scholarships, budget) → trends (abroad) → Ustaad.</span></p>
+  </div>
+</div>
+
+<div class="callout"><b>Non-target users (v1).</b> University graduates, working professionals, and students
+in the early years of FSc are out of scope; the platform is optimised for the final-year decision window.</div>
+
+<!-- ============ 5 SCOPE ============ -->
+<div class="pagebreak"></div>
+<h2>5. Scope</h2>
+
+<h3>5.1 In Scope (v1)</h3>
+<table>
+  <tr><th>Area</th><th>Delivered</th></tr>
+  <tr><td>Public site</td><td>Landing page with stats, features, how-it-works, reality checks and sources; production <code>/coming-soon</code> gate for non-landing routes.</td></tr>
+  <tr><td>Identity</td><td>Supabase email/password + Google OAuth; session persistence; role-light (no admin roles in v1).</td></tr>
+  <tr><td>Onboarding</td><td>7-section resumable quiz, OCR marksheet scanning, conditional questions, progress bar, completion gating of the app.</td></tr>
+  <tr><td>Core pages</td><td>Dashboard, Profile (editable), Merit engine, Career explorer, Trends, Money &amp; scholarships, Convince (parent report), Study (Ustaad).</td></tr>
+  <tr><td>AI assistants</td><td>Rahbar (site guide, slide-in drawer) and Ustaad (study tutor, full page).</td></tr>
+  <tr><td>Data</td><td>Static JSON knowledge base (universities, majors, scholarships, courses, reality checks, jobs, industry, abroad).</td></tr>
+  <tr><td>Testing</td><td>Vitest unit suite for pure logic (quiz completeness, aggregates, profile merge).</td></tr>
+</table>
+
+<h3>5.2 Out of Scope (v1)</h3>
+<ul>
+  <li>Payment / paid tiers; marketing analytics dashboards.</li>
+  <li>Admin/content-management UI (data edits happen in the JSON files / Supabase console).</li>
+  <li>Question-level history or versioning of quiz answers.</li>
+  <li>Mobile native apps (responsive web only).</li>
+  <li>Real-time chat with human counselors.</li>
+  <li>Automated OCR batching / bulk marksheet upload.</li>
+</ul>
+
+<!-- ============ 6 FUNCTIONAL REQS ============ -->
+<div class="pagebreak"></div>
+<h2>6. Functional Requirements</h2>
+<p>Each section lists the page's purpose, key user stories, and acceptance criteria. Reference
+implementations live in <code>src/app</code>; the canonical data model is §11.</p>
+
+<h3>6.1 Public Landing &amp; Auth</h3>
+<div class="box keep">
+  <h4>Landing page — <code>/</code></h4>
+  <ul>
+    <li>Hero with the product promise and a CTA into the onboarding flow.</li>
+    <li>Sections: <code>#explore</code>, <code>#features</code>, <code>#how</code>, <code>#momentum</code> (marquee), <code>#reality</code> (reality-check cards), <code>#sources</code>.</li>
+    <li>Public in all environments.</li>
+  </ul>
+</div>
+<div class="box keep">
+  <h4>Login — <code>/login</code> and auth dialog</h4>
+  <ul>
+    <li>Email/password sign-in and sign-up (with optional name/stream metadata).</li>
+    <li>Google OAuth with redirect back to <code>/dashboard</code>.</li>
+    <li>After successful auth, redirect to <code>/dashboard</code>; the app layout gate bounces to <code>/onboard</code> if the quiz is incomplete.</li>
+    <li>Server-side API routes are exempt from the auth gate; they validate themselves.</li>
+  </ul>
+</div>
+
+<h3>6.2 Onboarding Quiz — <code>/onboard</code></h3>
+<p>The quiz is a 7-section, data-driven flow. Sections and required answers:</p>
+<table>
+  <tr><th>#</th><th>Section</th><th>Questions</th><th>Required</th></tr>
+  <tr><td>0</td><td>Stream</td><td>stream (pre-medical / pre-engineering / ICS / I.Com / A-Levels)</td><td>stream</td></tr>
+  <tr><td>1</td><td>Marksheet</td><td>OCR upload; matric &amp; FSc obtained/total; FSc Part-1 (only if NET)</td><td>matric + FSc totals</td></tr>
+  <tr><td>2</td><td>Entry test</td><td>board, exam year, entry test (NET/MDCAT/ECAT/none), score</td><td>entry test</td></tr>
+  <tr><td>3</td><td>Money</td><td>city, province, monthly budget (PKR), relocation, scholarship need</td><td>city, budget</td></tr>
+  <tr><td>4</td><td>Pressure</td><td>dream field, parents' expectation, decision maker, parents' firmness (1–5)</td><td>parents' expectation, decision maker</td></tr>
+  <tr><td>5</td><td>Readiness</td><td>certifications, projects, English (1–5), consistency (1–5)</td><td>English, consistency</td></tr>
+  <tr><td>6</td><td>Interests</td><td>multi-select interests</td><td>at least 1</td></tr>
+</table>
+<ul>
+  <li><b>Questions are data</b> (<code>src/lib/quiz.ts</code>): id is a dotted path (<code>quiz.city</code>, <code>marks.fscObtained</code>) so one setter writes anywhere without special-casing.</li>
+  <li><b>Conditional logic:</b> entry-test scores hidden when <code>entryTest = "none"</code>; MDCAT only for pre-medical; ECAT only for pre-engineering; Part-1 shown only for NET.</li>
+  <li><b>Resume:</b> progress saved per section advance to localStorage; <code>firstIncompleteSection()</code> is the cross-device fallback; stale saved indices can never skip an unfinished section.</li>
+  <li><b>Gating:</b> <code>(app)/layout.tsx</code> redirects signed-in users with an incomplete quiz to <code>/onboard</code> — this covers direct URL navigation, not just the login path. Hydration must complete before gating to avoid bouncing completed users.</li>
+</ul>
+
+<h3>6.3 Dashboard — <code>/dashboard</code></h3>
+<ul>
+  <li>Greeting ("Salam, [name]."), stream badge, FSc percentage badge.</li>
+  <li>Reality-check card for the user's stream.</li>
+  <li>Aggregate cards (NUST / FAST / MDCAT depending on stream) with links to the merit page.</li>
+  <li>"Fields that fit your stream" (up to 6 majors) with salary ranges and demand badges.</li>
+  <li>Shortcut cards to Merit / Career / Money / Convince.</li>
+  <li>"Talk to Rahbar" CTA (opens the slide-in drawer) and links to profile editing.</li>
+</ul>
+
+<h3>6.4 Profile — <code>/profile</code></h3>
+<ul>
+  <li>Hero: avatar upload (client-side, 2 MB image limit, data-URL stored), name and bio inline-editing, email, quiz-completion badge.</li>
+  <li>Stat strip: FSc %, skills count, interests count.</li>
+  <li>Editable sections: <b>Academics</b> (stream, board, year, entry test, marks), <b>Education</b> (add/remove rows: degree, institution, year, grade), <b>Skills</b> (40 toggleable chips), <b>Interests</b> (toggleable chips), <b>Money &amp; location</b>, <b>Decisions &amp; pressure</b>.</li>
+  <li>Every section uses a consistent Edit → inline form → Save/Cancel pattern.</li>
+  <li>"Edit quiz →" links back to <code>/onboard</code>.</li>
+</ul>
+
+<h3>6.5 Merit Engine — <code>/merit</code></h3>
+<ul>
+  <li>Computes and explains NUST, FAST (computing and engineering splits), and PMDC/MDCAT aggregates.</li>
+  <li>Interactive: any number can be adjusted and the aggregate recomputes live.</li>
+  <li>Shows the exact weight breakdown per university (see §15).</li>
+  <li>MDCAT percentile + "band" label (e.g. "Top 10%").</li>
+  <li>Data source links for every figure.</li>
+</ul>
+
+<h3>6.6 Career Explorer — <code>/career</code> and <code>/career/[id]</code></h3>
+<ul>
+  <li>List of majors filtered to the student's stream, with demand badges and salary ranges.</li>
+  <li>Detail page per major: description, why-now stat, skill tree, day-in-the-life simulator (scenario + choices + results), courses, universities.</li>
+  <li>Static data-backed; no AI required at view time.</li>
+</ul>
+
+<h3>6.7 Trends — <code>/trends</code></h3>
+<ul>
+  <li>Labour-market and industry data: jobs, industry exports, abroad destinations.</li>
+  <li>Charts (Recharts) and citable sources.</li>
+</ul>
+
+<h3>6.8 Money &amp; Scholarships — <code>/money</code></h3>
+<ul>
+  <li>Reads the quiz's monthly budget (<code>quiz.budgetMonthly</code>) and computes affordability tiers at PKR 20k / 60k / 150k thresholds.</li>
+  <li>Scholarship directory (HEC, Fulbright, etc.) with eligibility and deadlines.</li>
+</ul>
+
+<h3>6.9 Convince (Parent Report) — <code>/convince</code></h3>
+<ul>
+  <li>A bilingual (English/Urdu) printable report for parents.</li>
+  <li>Seeded from the student's real profile data (replaces the old hardcoded <code>0,0,3,3</code> state).</li>
+  <li>Includes reality-check stats, a career-data chart, and a parent-facing takeaway in Urdu.</li>
+  <li>Print/PDF export via the browser.</li>
+</ul>
+
+<h3>6.10 Ustaad — Study Assistant — <code>/study</code></h3>
+<ul>
+  <li>Full-page AI tutor chat for FSc / MDCAT / NET / ECAT study help.</li>
+  <li>Persona-scoped prompt (see §13); explicitly <b>not</b> a general assistant.</li>
+  <li>Suggestion chips ("Make me a 2-week MDCAT revision plan", …), streaming responses, localStorage history.</li>
+</ul>
+
+<h3>6.11 Rahbar — Site Assistant (drawer)</h3>
+<ul>
+  <li>Slide-in drawer from the right edge on any app page; opened from the sidebar "Talk to Rahbar" button or the dashboard CTA.</li>
+  <li>Persona-scoped to <b>site guidance</b> — how to use pages, what features do, where data lives. Redirects study questions to Ustaad.</li>
+  <li>Backdrop + close, streaming responses, localStorage history, suggestion chips.</li>
+</ul>
+
+<!-- ============ 7 NFRs ============ -->
+<div class="pagebreak"></div>
+<h2>7. Non-Functional Requirements</h2>
+<table>
+  <tr><th>Category</th><th>Requirement</th><th>How it's met</th></tr>
+  <tr><td>Performance</td><td>Pages feel instant; landing is static/prerendered.</td><td>Next.js App Router; static generation for all content pages; client-side data only where needed.</td></tr>
+  <tr><td>Reliability</td><td>No lock-out: users must never be trapped in the quiz.</td><td>Completeness rules are unit-tested; hydration is awaited before gating.</td></tr>
+  <tr><td>Persistence</td><td>Progress survives tab close and device switch.</td><td>localStorage cache + debounced Supabase upsert; last-write-wins on <code>updated_at</code>.</td></tr>
+  <tr><td>Security</td><td>Users access only their own data.</td><td>Supabase RLS on every table; service-role key server-side only.</td></tr>
+  <tr><td>Accessibility</td><td>Keyboard-navigable inputs, focus rings, aria-labels on icon buttons.</td><td>Design-system focus states; labelled controls.</td></tr>
+  <tr><td>Responsive</td><td>Usable from phone to desktop.</td><td>Mobile-first Tailwind; sidebar collapses to a top bar on small screens.</td></tr>
+  <tr><td>Budget</td><td>API cost kept low.</td><td>Streaming responses; lightweight <code>gemini-flash</code> model; client-side history.</td></tr>
+  <tr><td>Observability</td><td>Failures are visible.</td><td>Console-warned sync failures; structured chat error responses.</td></tr>
+</table>
+
+<!-- ============ 8 METRICS ============ -->
+<div class="pagebreak"></div>
+<h2>8. Success Metrics</h2>
+<table>
+  <tr><th>Metric</th><th>v1 Target</th><th>Why it matters</th></tr>
+  <tr><td>Quiz completion rate</td><td>≥ 50% of users who start finish</td><td>Downstream pages depend on quiz data.</td></tr>
+  <tr><td>Aggregate accuracy</td><td>100% of users see a non-zero, formula-correct aggregate when data present</td><td>Correctness is the product's core promise (§15).</td></tr>
+  <tr><td>Resume success</td><td>Returning users resume at the right section</td><td>Validates the resume/`firstIncompleteSection` design.</td></tr>
+  <tr><td>Ustaad / Rahbar engagement</td><td>≥ 1 message sent per session on average</td><td>AI assistants are the retention layer.</td></tr>
+  <tr><td>Parent report generated</td><td>≥ 20% of completed users</td><td>The convincing of parents is the real conversion moment.</td></tr>
+</table>
+
+<!-- ============ 9 TECH STACK ============ -->
+<div class="pagebreak"></div>
+<h2>9. Tech Stack</h2>
+<table>
+  <tr><th>Layer</th><th>Technology</th><th>Version</th><th>Role</th></tr>
+  <tr><td>Framework</td><td>Next.js (App Router, Turbopack)</td><td>16.3.2</td><td>SSR/SSG, routing, middleware, API routes.</td></tr>
+  <tr><td>Language</td><td>TypeScript</td><td>^5</td><td>Typed application code.</td></tr>
+  <tr><td>UI</td><td>React + Tailwind CSS v4</td><td>19.2.8 / ^4</td><td>Component UI and design tokens.</td></tr>
+  <tr><td>Components</td><td>shadcn/ui + lucide-react + CVA</td><td>—</td><td>Design-system primitives and icons.</td></tr>
+  <tr><td>Backend / DB</td><td>Supabase (Postgres + Auth + Storage)</td><td>^2.112.3</td><td>Profiles, saved plans, chat sessions, auth, object storage.</td></tr>
+  <tr><td>AI</td><td>Vercel AI SDK + Google Gemini</td><td>^7.0.77 / @ai-sdk/google</td><td>Streaming chat, OCR, structured generation.</td></tr>
+  <tr><td>Charts</td><td>Recharts</td><td>^3.10.1</td><td>Trend and parent-report charts.</td></tr>
+  <tr><td>Tests</td><td>Vitest</td><td>^4.1.11</td><td>Unit tests for pure logic.</td></tr>
+  <tr><td>Deploy</td><td>Vercel + GitHub</td><td>—</td><td>CI/deploy; git host.</td></tr>
+  <tr><td>Fonts</td><td>@fontsource (Silkscreen, Plus Jakarta Sans, Space Mono)</td><td>^5.3.0</td><td>Self-hosted display/sans/mono.</td></tr>
+</table>
+
+<div class="callout"><b>Note on AI model.</b> The default model is <code>gemini-flash-latest</code>,
+overridable via <code>GOOGLE_MODEL</code>. Flash is chosen for cost and speed at FSc-grade question depth.</div>
+
+<!-- ============ 10 ARCHITECTURE ============ -->
+<div class="pagebreak"></div>
+<h2>10. System Architecture</h2>
+
+<h3>10.1 High-Level View</h3>
+<pre>
+┌─────────────────────────── Browser ───────────────────────────┐
+│  Next.js 16 App Router (Turbopack)                             │
+│                                                                │
+│  Public      /  /coming-soon  /login        (prerendered)      │
+│  Onboard     /onboard                         (gate)           │
+│  App (auth)  /dashboard /profile /study /merit /career         │
+│              /career/[id] /trends /money /convince              │
+│                                                                │
+│  Middleware  src/proxy.ts — production-only /coming-soon gate  │
+│  Client ctx  AuthProvider · StudentProvider · ProfileSync       │
+│  Assistants  RahbarDrawer · Ustaad page · Chatbot (legacy)      │
+└──────────────┬───────────────────────────┬─────────────────────┘
+               │ HTTPS                     │
+┌──────────────▼───────────┐   ┌───────────▼──────────────────────┐
+│ Supabase                 │   │ Next.js API Routes                │
+│  Auth (email/Google)     │   │  /api/chat   — streamed personas  │
+│  Postgres (profiles,     │   │  /api/ocr    — marksheet parsing  │
+│   saved_plans, chats)    │   │  /api/demand — labour insights     │
+│  Storage (marksheets)    │   └───────────┬──────────────────────┘
+└──────────────┬───────────┘               │
+               │                           ▼
+               │                  ┌─────────────────────┐
+               │                  │ Google Gemini        │
+               └──────────────────► (gemini-flash-latest)│
+                                  └─────────────────────┘
+</pre>
+
+<h3>10.2 Client-Side State &amp; Sync</h3>
+<p>Student data lives in a single React context (<code>src/lib/store.tsx</code>) backed by localStorage.
+A global <code>ProfileSync</code> controller (mounted in the root layout) owns the two-way sync:</p>
+<ol>
+  <li><b>Hydrate (remote → local):</b> on sign-in, fetch the user's <code>profiles</code> row once. If the remote <code>updated_at</code> is newer than the local stamp, replace the store from remote; otherwise keep local.</li>
+  <li><b>Push (local → remote):</b> debounced ~800 ms upsert on every profile change (avoids the write storm of per-keystroke writes).</li>
+  <li><b>Conflict rule:</b> last-write-wins on <code>updated_at</code>. A single student on their own devices — acceptable.</li>
+  <li><b><code>quizStep</code> is intentionally not synced</b>; cross-device resume uses the computed <code>firstIncompleteSection</code>.</li>
+</ol>
+
+<h3>10.3 Middleware / Routing Gate</h3>
+<p><code>src/proxy.ts</code> runs on every request. In <b>production</b>, any path that is not
+<code>/</code> or <code>/coming-soon</code> is redirected to <code>/coming-soon</code> — this gates the
+public demo. In <b>development</b>, all pages are accessible so changes can be previewed. API routes are
+excluded from the matcher.</p>
+
+<div class="callout warn"><b>Operational caveat.</b> Because the production gate sends the public demo to
+<code>/coming-soon</code>, the full app flow is only reachable in dev (or by relaxing the gate). A
+Vercel preview-deployment toggle is on the roadmap (§19).</div>
+
+<h3>10.4 Folder Map</h3>
+<pre>
+src/
+  app/
+    layout.tsx            Root layout — providers + ProfileSync
+    page.tsx              Landing
+    proxy.ts              (Next middleware) coming-soon gate
+    (app)/                Authenticated area (layout gate + sidebar + top nav)
+      layout.tsx          Quiz-completion gate
+      dashboard/ profile/ study/ merit/ career/ trends/ money/ convince/
+      career/[id]/        Major detail
+    login/ onboard/ coming-soon/
+    api/chat/ api/ocr/ api/demand/
+  components/             Sidebar, TopNav, RahbarDrawer, ProfileSync,
+                          quiz/* (question renderers), ui/* (shadcn)
+  lib/                    store.tsx, quiz.ts, aggregates.ts, ai.ts,
+                          data.ts, merge-profile.ts, auth.tsx, types.ts
+  data/                   Static JSON knowledge base
+</pre>
+
+<!-- ============ 11 DATA MODEL ============ -->
+<div class="pagebreak"></div>
+<h2>11. Data Model</h2>
+
+<h3>11.1 <code>profiles</code> (one row per authenticated user)</h3>
+<table>
+  <tr><th>Column</th><th>Type</th><th>Notes</th></tr>
+  <tr><td>id</td><td>uuid (PK, FK → auth.users)</td><td>Cascade delete.</td></tr>
+  <tr><td>name</td><td>text</td><td>Defaulted from sign-up metadata.</td></tr>
+  <tr><td>avatar</td><td>text</td><td>Data URL (client-side upload).</td></tr>
+  <tr><td>bio</td><td>text</td><td>Short personal bio.</td></tr>
+  <tr><td>stream</td><td>text (check constraint)</td><td>pre-medical · pre-engineering · ics · icom · alevel.</td></tr>
+  <tr><td>board</td><td>text</td><td>Mirrors quiz board.</td></tr>
+  <tr><td>marks</td><td>jsonb</td><td>Matric/FSc/Part-1/entry-test marks (§11.3).</td></tr>
+  <tr><td>interests</td><td>text[]</td><td>Multi-select interests.</td></tr>
+  <tr><td>skills</td><td>text[]</td><td>Profile skill chips.</td></tr>
+  <tr><td>education</td><td>jsonb</td><td>Array of education entries.</td></tr>
+  <tr><td>city / budget</td><td>text</td><td>Denormalised mirrors of quiz.city / budgetMonthly.</td></tr>
+  <tr><td>quiz</td><td>jsonb</td><td>Canonical quiz answers (§11.2).</td></tr>
+  <tr><td>quiz_completed_at</td><td>timestamptz</td><td>Null until the quiz is complete.</td></tr>
+  <tr><td>created_at / updated_at</td><td>timestamptz</td><td>LWW conflict key.</td></tr>
+</table>
+
+<h3>11.2 <code>QuizAnswers</code> (jsonb, canonical)</h3>
+<pre>{
+  board?: string; examYear?: number;
+  entryTest?: "net" | "mdcat" | "ecat" | "none";
+  city?: string; province?: string;
+  budgetMonthly?: number;            // PKR/month
+  canRelocate?: "yes"|"in-province"|"no";
+  needsScholarship?: "must"|"helpful"|"no";
+  dreamField?: string;
+  parentsExpect?: "doctor"|"engineer"|"civil-service"|"business"|"my-choice"|"unsure";
+  decisionMaker?: "me"|"parents"|"together";
+  parentsFirmness?: number;          // 1-5
+  certifications?: number; projects?: number;
+  english?: number; consistency?: number;   // 1-5
+}</pre>
+
+<h3>11.3 <code>Marks</code></h3>
+<pre>matricObtained / matricTotal
+fscObtained / fscTotal
+fscPart1Obtained? / fscPart1Total?     // used by NUST formula
+entryTestObtained? / entryTestTotal?   // feeds all aggregates</pre>
+
+<h3>11.4 Other tables</h3>
+<table>
+  <tr><th>Table</th><th>Purpose</th><th>Columns</th></tr>
+  <tr><td>saved_plans</td><td>User-saved roadmaps.</td><td>id, user_id, type, payload (jsonb), created_at</td></tr>
+  <tr><td>chat_sessions</td><td>Optional persisted AI chats.</td><td>id, user_id, persona, messages (jsonb), created_at, updated_at</td></tr>
+</table>
+
+<h3>11.5 Row-Level Security</h3>
+<p>All tables enable RLS. Policies restrict to the owner via <code>auth.uid() = id</code> (profiles) or
+<code>auth.uid() = user_id</code> (plans, chats). A <code>handle_new_user</code> trigger auto-creates the
+profile row on sign-up. Storage bucket <code>marksheets</code> is private with owner-scoped policies.</p>
+
+<!-- ============ 12 API ============ -->
+<div class="pagebreak"></div>
+<h2>12. API Specification</h2>
+
+<h3>12.1 <code>POST /api/chat</code></h3>
+<p>Streams an AI response. Body: <code>{ persona, messages: {role, content}[] }</code>.
+Personas: <code>rahbar</code> (site guide), <code>study</code> (Ustaad), <code>essay</code>, <code>cv</code>.
+Response is a text-stream (<code>text/plain</code> chunks). Runtime: Node, <code>maxDuration=60</code>.</p>
+
+<h3>12.2 <code>POST /api/ocr</code></h3>
+<p>Parses a Pakistani FSc marksheet image (data URL) into structured marks JSON via the vision model.
+Strict output contract: <code>{ board, stream, matricObtained, matricTotal, fscObtained, fscTotal,
+fscPart1Obtained, fscPart1Total, subjects[], confidence }</code>. Invalid/absent values are <code>null</code>,
+never guessed. Urdu digits are normalised to English.</p>
+
+<h3>12.3 <code>POST /api/demand</code></h3>
+<p>Given <code>{ stream, interests, countries }</code>, returns per-country labour-market insight lines
+via structured generation. Validates the stream against the allowed enum before calling the model.</p>
+
+<div class="callout"><b>Error convention.</b> All API routes return <code>400</code> for invalid input and
+<code>500</code> for generation failures, with a JSON <code>{ error }</code> body. Chat returns a
+streamed fallback string on failure rather than aborting.</div>
+
+<!-- ============ 13 AI DESIGN ============ -->
+<div class="pagebreak"></div>
+<h2>13. AI &amp; Prompt Design</h2>
+<p>All prompts live in <code>src/lib/ai.ts</code> so they are reviewable and versionable. There are four
+scoped personas, deliberately separated so each model call has one job.</p>
+<table>
+  <tr><th>Persona</th><th>Role</th><th>Key constraints</th></tr>
+  <tr><td>rahbar</td><td>Site guide (drawer)</td><td>Explains pages/features; redirects study questions to Ustaad; concise; ends with one next step.</td></tr>
+  <tr><td>study / "Ustaad"</td><td>FSc study tutor</td><td>Concepts, exam strategy, MDCAT/NET/ECAT prep; MDCAT weight split (Biology 45%, Chemistry 25%, Physics 20%, English 5%, LR 5%); never medical/legal advice.</td></tr>
+  <tr><td>essay</td><td>College/scholarship essay coach</td><td>Authentic, cliché-free personal statements; no fabricated achievements; 400–600 words + "why this works".</td></tr>
+  <tr><td>cv</td><td>CV/resume writer</td><td>ATS-friendly structure, action verbs, measurable results, tailoring tips.</td></tr>
+</table>
+
+<h3>13.1 Grounding &amp; source discipline</h3>
+<ul>
+  <li>Rahbar cites sources for stats (e.g. PBS LFS 2024–25 youth unemployment 12.6%).</li>
+  <li>Study help sticks to verifiable exam structure facts.</li>
+  <li>Structured generation (<code>generateStructured</code>) wraps model output in a JSON parse-and-extract step; OCR and demand routes use it.</li>
+  <li>Streaming (<code>streamText</code>) is used for chat so first tokens arrive quickly.</li>
+</ul>
+
+<!-- ============ 14 DESIGN SYSTEM ============ -->
+<div class="pagebreak"></div>
+<h2>14. Design System &amp; UI/UX</h2>
+
+<h3>14.1 Visual identity</h3>
+<p>An editorial-meets-terminal aesthetic: warm paper background, ink text, a blue "saffron" accent
+(despite its name), pixel/offset shadows, monospace data readouts, and a grid backdrop. The brand font is
+Silkscreen (display) with Plus Jakarta Sans (body) and Space Mono (data).</p>
+
+<h3>14.2 Color tokens</h3>
+<table>
+  <tr><th>Token</th><th>Hex</th><th>Use</th></tr>
+  <tr><td>background</td><td>#f4f2eb</td><td>App canvas</td></tr>
+  <tr><td>surface / surface-2</td><td>#ffffff / #ebe7db</td><td>Cards / raised fills</td></tr>
+  <tr><td>line</td><td>#d7d2c4</td><td>Borders</td></tr>
+  <tr><td>ink</td><td>#191f2c</td><td>Primary text</td></tr>
+  <tr><td>muted / faint</td><td>#566073 / #8a93a6</td><td>Secondary / tertiary text</td></tr>
+  <tr><td>accent / saffron</td><td>#2f55d4</td><td>Primary action &amp; brand accent</td></tr>
+  <tr><td>emerald</td><td>#1c9e62</td><td>Positive / success</td></tr>
+  <tr><td>danger</td><td>#d63d3d</td><td>Errors / warnings</td></tr>
+  <tr><td>amber / info / violet</td><td>#d99a2b / #1790b0 / #7a5bd4</td><td>Semantic accents</td></tr>
+</table>
+
+<h3>14.3 Layout</h3>
+<ul>
+  <li><b>Authenticated area:</b> fixed left sidebar (288px) with nav links + a "Talk to Rahbar" button; sticky top bar with brand and sign-out; content offset by the sidebar width. Sidebar is persistent and full-height.</li>
+  <li><b>Rahbar drawer:</b> fixed right panel (400px) that slides in over a dimmed backdrop.</li>
+  <li><b>Mobile:</b> responsive stacking; the sidebar collapses so content uses the full width.</li>
+</ul>
+
+<h3>14.4 Component conventions</h3>
+<ul>
+  <li>shadcn/ui primitives (Card, Button, Input, Badge) customised with the design tokens.</li>
+  <li>Pixel accents: <code>.pixel-shadow</code>, <code>.pixel-border</code>, <code>.grid-bg</code>, <code>.dither</code>.</li>
+  <li>Icons from lucide-react; every icon-only button has an <code>aria-label</code>.</li>
+  <li>Question/quiz UI is data-driven: <code>QuestionKind</code> ∈ single · multi · number · text · scale · stream · marksheet, rendered by <code>question-field.tsx</code>.</li>
+</ul>
+
+<!-- ============ 15 AGGREGATE MATH ============ -->
+<div class="pagebreak"></div>
+<h2>15. Aggregate Mathematics</h2>
+<p>These formulas are the product's backbone. They are implemented in <code>src/lib/aggregates.ts</code>,
+unit-tested, and used by the dashboard, merit page, and profile. <code>pct = obtained / total × 100</code>.</p>
+
+<h3>15.1 NUST</h3>
+<p><code>aggregate = NET% × 0.75 + FSc Part-I% × 0.15 + Matric% × 0.10</code></p>
+<p class="small">NET total defaults to 200. Part-I is used when present, else full FSc.</p>
+
+<h3>15.2 FAST</h3>
+<p><b>Computing:</b> <code>test% × 0.50 + HSSC% × 0.40 + SSC% × 0.10</code><br>
+<b>Engineering:</b> <code>test% × 0.33 + HSSC% × 0.50 + SSC% × 0.17</code></p>
+<p class="small">Entry-test total defaults to 100 for FAST.</p>
+
+<h3>15.3 PMDC (Medical)</h3>
+<p><code>aggregate = MDCAT% × 0.50 + HSSC% × 0.40 + SSC% × 0.10</code><br>
+MDCAT total defaults to 200. Top public colleges close at ~91–96%.</p>
+
+<h3>15.4 Worth Score</h3>
+<p>A readiness score used on readiness/career surfaces:
+<code>FSc% × .35 + certs×25 (cap 100) × .25 + projects×25 × .20 + english×20 × .10 + consistency×20 × .10</code>,
+rounded to a band: Emerging · Building momentum · High potential.</p>
+
+<h3>15.5 Overall Standing</h3>
+<p>Pre-test ballpark: <code>FSc% × 0.6 + Matric% × 0.4</code>, mapped to percentile bands (top 1% … top 80%).</p>
+
+<div class="callout danger"><b>Why this section exists.</b> v1's merit page originally computed every
+aggregate with an entry-test score of zero — NUST merit was wrong for every user. The onboarding quiz now
+collects the score, the formulas default totals only, and the tests pin the corrected math (§18).</div>
+
+<!-- ============ 16 SECURITY ============ -->
+<div class="pagebreak"></div>
+<h2>16. Security &amp; Privacy</h2>
+<ul>
+  <li><b>Secrets:</b> keys live in <code>.env.local</code> (git-ignored); <code>.env.example</code> documents names only. The Supabase <code>service_role</code> key is never used client-side. Never commit real keys.</li>
+  <li><b>RLS:</b> every table has owner-scoped policies; new columns are covered by existing policies.</li>
+  <li><b>Input validation:</b> API routes validate required fields and enums (e.g. stream) before hitting the model.</li>
+  <li><b>File uploads:</b> client-side images are constrained (type <code>image/*</code>, ≤ 2 MB) and stored as data URLs; marksheet uploads go to a private, owner-scoped storage bucket.</li>
+  <li><b>Prompt injection hygiene:</b> persona prompts are fixed server-side; user text is treated as message content, not system instructions.</li>
+  <li><b>Privacy:</b> no analytics SDKs in v1; chat history is localStorage/client-side; no third-party tracking.</li>
+</ul>
+
+<!-- ============ 17 DEPLOYMENT ============ -->
+<div class="pagebreak"></div>
+<h2>17. Deployment &amp; Environments</h2>
+
+<h3>17.1 Environments</h3>
+<table>
+  <tr><th>Env</th><th>Purpose</th><th>Gate behavior</th></tr>
+  <tr><td>Local dev</td><td>Daily build &amp; preview</td><td>All routes accessible (no coming-soon redirect).</td></tr>
+  <tr><td>Vercel preview</td><td>PR review</td><td>Follows production gate unless relaxed.</td></tr>
+  <tr><td>Production</td><td>Public demo</td><td>Non-public routes → <code>/coming-soon</code>.</td></tr>
+</table>
+
+<h3>17.2 Required environment variables</h3>
+<pre>NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY
+SUPABASE_SERVICE_ROLE_KEY
+GOOGLE_GENERATIVE_AI_API_KEY     # optional override: GOOGLE_MODEL
+</pre>
+
+<h3>17.3 Release process</h3>
+<ol>
+  <li>Feature branches off <code>main</code>; changes reviewed and linted (<code>npm run lint</code>), tested (<code>npm test</code>), and built (<code>npm run build</code>).</li>
+  <li>Merged to <code>main</code> via fast-forward; pushed to GitHub.</li>
+  <li>Vercel auto-deploys from <code>main</code> with the env vars above.</li>
+  <li>Run database migrations in Supabase SQL editor before deploy when the schema changed.</li>
+</ol>
+
+<!-- ============ 18 TESTING ============ -->
+<div class="pagebreak"></div>
+<h2>18. Testing Strategy</h2>
+<p><b>Unit tests (Vitest)</b> cover the pure logic that, if wrong, locks users out or shows wrong numbers:</p>
+<table>
+  <tr><th>Suite</th><th>Covers</th><th>Count</th></tr>
+  <tr><td>quiz.test.ts</td><td>isQuizComplete, visibleQuestions (conditional logic), firstIncompleteSection, entry-test totals, answered-value validation (rejects seeded zero marks).</td><td>20</td></tr>
+  <tr><td>aggregates.test.ts</td><td>NUST/FAST/MDCAT with real and missing entry-test scores (pins the zero-score fix).</td><td>4</td></tr>
+  <tr><td>merge-profile.test.ts</td><td>Last-write-wins profile merge, remote/local edge cases.</td><td>4</td></tr>
+  <tr><td>recommend.test.ts</td><td>Recommendation logic over streams/interests.</td><td>—</td></tr>
+</table>
+<p><b>Run:</b> <code>npm test</code> (vitest run). <b>Quality gates:</b> <code>npm run lint</code> (0 errors),
+<code>npm run build</code> (all routes compile). Manual QA covers the quiz walk-through, resume-after-reload,
+gate redirect-and-release, and print/PDF of the parent report.</p>
+
+<!-- ============ 19 ROADMAP ============ -->
+<div class="pagebreak"></div>
+<h2>19. Roadmap &amp; Future Work</h2>
+<table>
+  <tr><th>Phase</th><th>Items</th><th>Priority</th></tr>
+  <tr><td>v1.1</td><td>Vercel preview flag to open the app on preview deploys; relaxation of the production gate behind a token.</td><td>High</td></tr>
+  <tr><td>v1.2</td><td>Admin/content UI for the JSON knowledge base; analytics (quiz drop-off funnels).</td><td>Medium</td></tr>
+  <tr><td>v1.3</td><td>Persisted chat sessions server-side (table exists); cross-device chat history.</td><td>Medium</td></tr>
+  <tr><td>v2.0</td><td>Human counselor handoff; verified-answer question bank for MDCAT/NET; parental notification.</td><td>Low</td></tr>
+</table>
+
+<!-- ============ 20 RISKS ============ -->
+<div class="pagebreak"></div>
+<h2>20. Risks &amp; Mitigations</h2>
+<table>
+  <tr><th>Risk</th><th>Impact</th><th>Mitigation</th></tr>
+  <tr><td>Quiz drop-off (7 sections is long)</td><td>Users never reach the app.</td><td>Resumability, progress bar, resume point; make sections 3–5 optional later if needed.</td></tr>
+  <tr><td>Lock-out from a buggy completeness rule</td><td>Users trapped in the quiz.</td><td>Completeness logic is unit-tested; hydration awaited before gating.</td></tr>
+  <tr><td>Hydration flash bouncing completed users</td><td>Completed users re-sent to quiz.</td><td>Gate waits on <code>hydrated</code>; tested merge logic.</td></tr>
+  <tr><td>Existing users have <code>quiz_completed_at = null</code></td><td>They are pushed through the quiz once.</td><td>Accepted; their stream/marks/interests prefill sections 0, 1, 6.</td></tr>
+  <tr><td>AI cost/latency</td><td>Expense and slow responses.</td><td>Flash model, streaming, client-side history.</td></tr>
+  <tr><td>Stale aggregate data</td><td>Wrong merit numbers.</td><td>Static JSON is versioned and sourced; formulas unit-tested.</td></tr>
+  <tr><td>Production gate hides the app</td><td>Demo visitors see only landing.</td><td>By design for v1; preview flag on roadmap.</td></tr>
+</table>
+
+<hr style="border:none;border-top:2px solid #2f55d4;margin:16pt 0">
+<p class="small" style="text-align:center;color:#8a93a6">
+  aftermediate — Product &amp; Technical Design Document · Version 1.0 · Confidential<br>
+  End of document
+</p>
+
+</body>
+</html>

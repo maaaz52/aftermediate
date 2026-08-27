@@ -1,0 +1,27 @@
+{
+  "pre-engineering": [
+    { "country": "Germany", "flag": "🇩🇪", "score": 94, "reason": "EU Blue Card pathway and a chronic engineer shortage make hiring fast and visa-friendly.", "focus": "Mechanical / Electrical" },
+    { "country": "Canada", "flag": "🇨🇦", "score": 88, "reason": "Express Entry tech draws plus a 3-year post-study work permit for engineering grads.", "focus": "Software / Civil" },
+    { "country": "UAE", "flag": "🇦🇪", "score": 76, "reason": "Tax-free income with a construction and infrastructure boom, close to home.", "focus": "Civil / Electrical" }
+  ],
+  "pre-medical": [
+    { "country": "Germany", "flag": "🇩🇪", "score": 90, "reason": "Formal physician-recognition pathway with an ageing population that needs doctors.", "focus": "General Medicine" },
+    { "country": "United Kingdom", "flag": "🇬🇧", "score": 85, "reason": "NHS has a long-standing doctor shortage and a structured PLAB registration route.", "focus": "General Practice" },
+    { "country": "Australia", "flag": "🇦🇺", "score": 82, "reason": "AHPRA pathway with regional demand and 2-4 years of post-study work rights.", "focus": "GP / Anaesthesia" }
+  ],
+  "ics": [
+    { "country": "Germany", "flag": "🇩🇪", "score": 92, "reason": "IT specialist visa with 130k+ open tech roles; English-friendly for developers.", "focus": "Software Development" },
+    { "country": "Canada", "flag": "🇨🇦", "score": 90, "reason": "Express Entry tech draws and a 3-year PGWP for CS and IT graduates.", "focus": "Software / Data" },
+    { "country": "United States", "flag": "🇺🇸", "score": 84, "reason": "STEM OPT extends work permission to 3 years for computing graduates.", "focus": "Software / Data" }
+  ],
+  "icom": [
+    { "country": "UAE", "flag": "🇦🇪", "score": 88, "reason": "A finance and accounting hub with tax-free salaries and strong ACCA demand.", "focus": "Accounting / Finance" },
+    { "country": "United Kingdom", "flag": "🇬🇧", "score": 80, "reason": "Graduate Route gives 2 years to find work after a UK business degree.", "focus": "Finance / Management" },
+    { "country": "Australia", "flag": "🇦🇺", "score": 78, "reason": "2-4 year post-study work with steady demand for accounting professionals.", "focus": "Accounting" }
+  ],
+  "alevel": [
+    { "country": "United Kingdom", "flag": "🇬🇧", "score": 89, "reason": "A-Levels map directly to UK university entry, plus the 2-year Graduate Route.", "focus": "Any — degree-led" },
+    { "country": "Canada", "flag": "🇨🇦", "score": 87, "reason": "PGWP after any accredited degree, with Express Entry as a clear PR path.", "focus": "Any — degree-led" },
+    { "country": "Australia", "flag": "🇦🇺", "score": 85, "reason": "2-4 year post-study work rights with strong university partnerships.", "focus": "Any — degree-led" }
+  ]
+}

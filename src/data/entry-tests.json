@@ -1,0 +1,459 @@
+{
+  "dataYear": 2026,
+  "tests": [
+    {
+      "id": "mdcat",
+      "name": "MDCAT — Medical & Dental College Admission Test",
+      "short": "MDCAT",
+      "streams": ["pre-medical", "alevel"],
+      "conductingBody": "Pakistan Medical & Dental Council (PM&DC)",
+      "acceptedBy": [
+        "All public and private medical and dental colleges in Pakistan",
+        "Provincial admitting universities that administer MDCAT on behalf of PM&DC"
+      ],
+      "fee": "Announced per cycle (PKR 9,000 local centres in the 2025 cycle)",
+      "frequency": "Once a year (2026 test: 20 September, rescheduled from 16 August)",
+      "validity": "3 years per the MDCAT-2024 public notice; PM&DC may revise per cycle",
+      "pattern": [
+        { "section": "Biology", "questions": 81, "marks": 81, "time": "3 hours (180 minutes, whole paper)" },
+        { "section": "Chemistry", "questions": 45, "marks": 45 },
+        { "section": "Physics", "questions": 36, "marks": 36 },
+        { "section": "English", "questions": 9, "marks": 9 },
+        { "section": "Logical Reasoning", "questions": 9, "marks": 9 }
+      ],
+      "syllabus": [
+        { "subject": "Biology", "topics": ["Cell structure and biological molecules", "Inheritance, genes and evolution", "Human physiology: circulation, respiration, digestion, homeostasis", "Coordination, reproduction, immunity and biotechnology"] },
+        { "subject": "Chemistry", "topics": ["Fundamentals: stoichiometry, atomic structure, bonding", "Physical chemistry: gases, equilibrium, kinetics, thermochemistry", "Organic chemistry: hydrocarbons, alcohols, aldehydes, carboxylic acids", "Electrochemistry and industrial chemistry"] },
+        { "subject": "Physics", "topics": ["Force, motion, work and energy", "Waves, sound and fluid dynamics", "Electrostatics, current electricity and electromagnetism", "Modern physics: electronics, atomic spectra, nuclear physics"] },
+        { "subject": "English", "topics": ["Reading comprehension and context clues", "Vocabulary, synonyms and antonyms", "Grammar: tenses, prepositions, agreement, punctuation", "Writing skills: proofreading and sentence structure"] },
+        { "subject": "Logical Reasoning", "topics": ["Critical thinking and argument evaluation", "Letter and symbol series", "Logical deductions and problems", "Course of action and cause-effect analysis"] }
+      ],
+      "howToApply": [
+        "Register online on the PM&DC MDCAT portal (mdcat.pmdc.pk) with your CNIC/B-Form",
+        "Fill the application form and select your preferred test city and centre",
+        "Upload your photograph and required documents as per the instructions",
+        "Pay the registration fee and download your admit card before the test date"
+      ],
+      "sourceUrls": [
+        "https://pmdc.pk/",
+        "https://pmdc.pk/Publication/Syllabus",
+        "https://mdcat.pmdc.pk"
+      ],
+      "note": "180 paper-based MCQs in English, 3 hours, no negative marking. Passing: 55% for MBBS, 50% for BDS. Figures per the final PM&DC curriculum (May 2025) applicable to MDCAT 2026."
+    },
+    {
+      "id": "ecat",
+      "name": "ECAT — Engineering College Admission Test",
+      "short": "ECAT",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "conductingBody": "University of Engineering & Technology (UET) Lahore on behalf of Punjab engineering universities",
+      "acceptedBy": [
+        "UET Lahore and its campuses (Faisalabad, KSK, Narowal, Rachna)",
+        "Public-sector engineering universities of Punjab (e.g., UET Taxila, MNS-UET Multan)"
+      ],
+      "fee": "PKR 3,000 (Fall 2026 registration, per the official ECAT portal)",
+      "frequency": "Once a year (June test window; Phase I and Phase II registration)",
+      "validity": "Valid for the admission cycle in which it is taken (e.g., Fall 2026 session)",
+      "pattern": [
+        { "section": "English", "questions": 10, "marks": 40, "time": "100 minutes (whole paper)" },
+        { "section": "Mathematics", "questions": 30, "marks": 120 },
+        { "section": "Physics", "questions": 30, "marks": 120 },
+        { "section": "Chemistry", "questions": 30, "marks": 120 }
+      ],
+      "syllabus": [
+        { "subject": "Mathematics", "topics": ["Algebra and quadratic equations", "Trigonometry and sequences", "Calculus: limits, differentiation and integration", "Analytic geometry and conic sections"] },
+        { "subject": "Physics", "topics": ["Mechanics: motion, force, work and energy", "Waves, oscillations and optics", "Electricity and magnetism", "Modern physics and electronics"] },
+        { "subject": "Chemistry", "topics": ["Physical chemistry: atomic structure, equilibrium, kinetics", "Inorganic chemistry: s- and p-block elements", "Organic chemistry: hydrocarbons and functional groups"] },
+        { "subject": "English", "topics": ["Vocabulary and word usage", "Grammar and sentence completion", "Comprehension"] }
+      ],
+      "howToApply": [
+        "Generate and pay the challan/token on the official ECAT portal (ecat.uet.edu.pk)",
+        "Fill the online application form and choose your subject combination",
+        "Print your admit card on the announced date from the portal",
+        "Appear in the test with your admit card and an original photo ID"
+      ],
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/",
+        "https://ecat.uet.edu.pk/General/Ecat",
+        "https://admission.uet.edu.pk/"
+      ],
+      "note": "10 English questions plus 90 questions split equally (30 each) across three chosen subjects (e.g., Mathematics/Physics/Chemistry). 4 marks per correct answer, no negative marking. Verified from the official ECAT page."
+    },
+    {
+      "id": "net",
+      "name": "NET — NUST Entry Test",
+      "short": "NET",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "conductingBody": "National University of Sciences & Technology (NUST)",
+      "acceptedBy": [
+        "NUST main campus (H-12 Islamabad) for engineering, computing and BS programmes",
+        "NUST constituent colleges and campuses (PNEC, MCS, CAE, EME, Risalpur, Karachi)"
+      ],
+      "fee": "PKR 5,000 application processing fee (Pakistani nationals; PKR 10,000 for foreign nationals)",
+      "frequency": "Multiple series per year (3–4 computer-based CBNET series)",
+      "validity": "Valid for the admission year in which the series is taken",
+      "pattern": [
+        { "section": "Mathematics", "questions": 80, "marks": 80, "time": "3 hours (180 minutes, whole paper)" },
+        { "section": "Physics", "questions": 60, "marks": 60 },
+        { "section": "Chemistry", "questions": 30, "marks": 30 },
+        { "section": "English", "questions": 20, "marks": 20 },
+        { "section": "Intelligence", "questions": 10, "marks": 10 }
+      ],
+      "syllabus": [
+        { "subject": "Mathematics", "topics": ["Algebra, sequences and series", "Trigonometry and analytic geometry", "Calculus: differentiation and integration", "Probability, permutations and combinations"] },
+        { "subject": "Physics", "topics": ["Mechanics and motion", "Waves, sound and optics", "Electricity and magnetism", "Modern physics and nuclear physics"] },
+        { "subject": "Chemistry", "topics": ["Atomic structure and bonding", "Chemical equilibrium and kinetics", "Organic chemistry fundamentals"] },
+        { "subject": "English", "topics": ["Vocabulary and synonyms", "Grammar and sentence completion", "Comprehension"] },
+        { "subject": "Intelligence", "topics": ["IQ and logical reasoning", "Pattern recognition and series"] }
+      ],
+      "howToApply": [
+        "Register on the NUST undergraduate admissions portal (ugadmissions.nust.edu.pk)",
+        "Select your NET series, test centre and desired programmes",
+        "Pay the application processing fee and confirm your registration",
+        "Download your admit card and appear in the computer-based test",
+        "Check your NET score and apply for programmes within the same admission year"
+      ],
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/",
+        "https://ugadmissions.nust.edu.pk/",
+        "https://nust.edu.pk/admissions/undergraduates/ug-admission-application-processing-fee/"
+      ],
+      "note": "Engineering series pattern: 200 MCQs, 3 hours, no negative marking. Other series (Computer Science, Business Studies, Natural Sciences) swap subject sections accordingly."
+    },
+    {
+      "id": "fungat",
+      "name": "FAST-NUCES Admission Test (NU Test / FUNGAT)",
+      "short": "FUNGAT",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "conductingBody": "FAST National University of Computer & Emerging Sciences (FAST-NUCES)",
+      "acceptedBy": [
+        "FAST-NUCES campuses: Islamabad, Lahore, Karachi, Peshawar, Chiniot-Faisalabad, Multan"
+      ],
+      "fee": "Announced per cycle (approx. PKR 2,000–2,500 per test; per-campus charges apply)",
+      "frequency": "Two test rounds per admission cycle (typically July and August)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "Advanced Mathematics", "time": "Approx. 2 hours (whole paper)" },
+        { "section": "Analytical Skills & IQ" },
+        { "section": "Basic Mathematics" },
+        { "section": "English" }
+      ],
+      "syllabus": [
+        { "subject": "Advanced Mathematics", "topics": ["Calculus: limits, differentiation and integration", "Algebra, functions and equations", "Trigonometry and analytic geometry", "Sequences, series and vectors"] },
+        { "subject": "Basic Mathematics", "topics": ["Arithmetic and percentages", "Ratios, proportions and word problems", "Basic algebra and equations"] },
+        { "subject": "Analytical Skills & IQ", "topics": ["Logical and analytical reasoning", "Pattern and series recognition", "Quantitative problem solving"] },
+        { "subject": "English", "topics": ["Vocabulary and word usage", "Grammar and sentence correction", "Reading comprehension"] }
+      ],
+      "howToApply": [
+        "Register on the FAST admissions portal (admissions.nu.edu.pk) with your email",
+        "Fill the online application and select campuses and programmes",
+        "Pay the application processing fee per the campus instructions",
+        "Download your admit card and appear in the computer-based test"
+      ],
+      "sourceUrls": [
+        "https://www.nu.edu.pk/Admissions/TestPattern",
+        "https://admissions.nu.edu.pk/"
+      ],
+      "note": "Weights are percentages per the official FAST test pattern (BS CS/Engineering): Advanced Math 50%, Analytical Skills & IQ 20%, Basic Math 20%, English 10%. Negative marking applies; calculators are not allowed. Exact question counts are not published."
+    },
+    {
+      "id": "lcat",
+      "name": "LCAT — LUMS Common Admission Test (with SAT/ACT alternative)",
+      "short": "LCAT",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "Lahore University of Management Sciences (LUMS)",
+      "acceptedBy": [
+        "Suleman Dawood School of Business (BSc Accounting & Finance, Management Science)",
+        "Syed Babar Ali School of Science & Engineering (all BS programmes)",
+        "Mushtaq Ahmad Gurmani School of Humanities & Social Sciences",
+        "Shaikh Ahmad Hassan School of Law (BA-LLB, together with the HEC LAT)"
+      ],
+      "fee": "PKR 6,500 LCAT registration fee plus PKR 11,500 application processing fee (local applicants)",
+      "frequency": "Once a year (February, with the undergraduate admission cycle)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "English (Verbal Reasoning)", "time": "Approx. 3 hours (whole paper)" },
+        { "section": "Mathematics (Quantitative Reasoning)" }
+      ],
+      "syllabus": [
+        { "subject": "English", "topics": ["Reading comprehension", "Vocabulary and word usage", "Grammar and sentence correction"] },
+        { "subject": "Mathematics", "topics": ["Arithmetic and number operations", "Algebra and equations", "Geometry and data interpretation", "Word problems and quantitative comparison"] }
+      ],
+      "howToApply": [
+        "Create an account on the LUMS online admission portal",
+        "Submit the undergraduate application and select LCAT as your test option",
+        "Pay the application processing and LCAT registration fee via the voucher",
+        "Download your admit card and appear in the paper-based test",
+        "Check your application status and admission decision online"
+      ],
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions",
+        "https://admission.lums.edu.pk/checklist-admissions"
+      ],
+      "note": "MCQ-based paper assessing verbal and quantitative skills; SAT or ACT scores may be submitted instead. Exact section question counts are not published officially."
+    },
+    {
+      "id": "iba",
+      "name": "IBA Aptitude Test (Undergraduate Admission Test)",
+      "short": "IBA",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "Institute of Business Administration (IBA), Karachi",
+      "acceptedBy": [
+        "IBA Karachi BBA and BS Business Analytics",
+        "IBA Karachi BS (Accounting & Finance), BS Economics, BS Social Sciences",
+        "IBA Karachi BS (Computer Science), BS Mathematics, BS Economics & Mathematics",
+        "IBA Karachi BS (Economics & Data Science)"
+      ],
+      "fee": "Announced per cycle (paid via bank challan after submitting the online form)",
+      "frequency": "Twice a year (Round 1 and Round 2 test dates per admission cycle)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "English Composition" },
+        { "section": "Mathematics" }
+      ],
+      "syllabus": [
+        { "subject": "English Composition", "topics": ["Reading comprehension", "Vocabulary, synonyms and antonyms", "Grammar and sentence correction"] },
+        { "subject": "Mathematics", "topics": ["Arithmetic and percentages", "Algebra and equations", "Geometry and mensuration", "Word problems and data sufficiency"] }
+      ],
+      "howToApply": [
+        "Fill the online application form on the IBA admissions portal (onlineadmission.iba.edu.pk)",
+        "Print the bank challan and deposit the admission processing fee",
+        "Receive your admit card by email and SMS on the announced dates",
+        "Appear in the aptitude test at your selected test city",
+        "Qualify for group discussion and interview if you pass the test"
+      ],
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/",
+        "https://admissions.iba.edu.pk/AdmissionProcedure.php"
+      ],
+      "note": "Two components per the official criteria: Mathematics (MCQs) and English Composition (MCQs) at SAT-I difficulty level. Top SAT scorers may qualify for test exemption under IBA's published policy."
+    },
+    {
+      "id": "giki",
+      "name": "GIKI Undergraduate Admission Test",
+      "short": "GIKI",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "conductingBody": "Ghulam Ishaq Khan Institute of Engineering Sciences & Technology (GIKI)",
+      "acceptedBy": [
+        "GIKI BS Engineering programmes (Mechanical, Electrical, Chemical, Materials and related)",
+        "GIKI BS Computing programmes: Computer Science, AI, Cyber Security, Software Engineering, Data Science",
+        "GIKI BS Management Sciences"
+      ],
+      "fee": "PKR 3,500 for a single test; PKR 5,000 for both tests (+PKR 1,000 if applying for financial assistance)",
+      "frequency": "Once a year (July test window; 6–10 July 2026)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "Mathematics" },
+        { "section": "Physics" },
+        { "section": "English" }
+      ],
+      "syllabus": [
+        { "subject": "Mathematics", "topics": ["Algebra, equations and functions", "Trigonometry and analytic geometry", "Calculus: differentiation and integration", "Sequences, series and probability"] },
+        { "subject": "Physics", "topics": ["Mechanics and rotational motion", "Waves, sound and optics", "Electricity and magnetism", "Modern physics"] },
+        { "subject": "English", "topics": ["Reading comprehension", "Vocabulary and word usage", "Grammar and sentence correction"] }
+      ],
+      "howToApply": [
+        "Register on the GIKI admissions portal (admissions.giki.edu.pk) and fill the form",
+        "Pay the processing fee via challan, 1Bill or HBL online banking",
+        "Email the proof of payment with your admit card number to ug.payment@giki.edu.pk",
+        "Appear in the online admission test on your scheduled date"
+      ],
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/",
+        "https://giki.edu.pk/admissions/admissions-undergraduates/undergraduate-admission-test-syllabus/",
+        "https://giki.edu.pk/payment/"
+      ],
+      "note": "Intermediate-level MCQs in Mathematics, Physics and English; separate Engineering/Computing and Management Sciences papers. Exact question counts are not published on the official page."
+    },
+    {
+      "id": "comsats",
+      "name": "COMSATS University Islamabad Admission Test (NTS NAT based)",
+      "short": "COMSATS",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "COMSATS University Islamabad (CUI) via NTS NAT and CUI on-campus tests",
+      "acceptedBy": [
+        "COMSATS University Islamabad campuses: Islamabad, Abbottabad, Lahore, Sahiwal, Wah, Attock, Vehari"
+      ],
+      "fee": "Announced per cycle (NTS NAT fee approx. PKR 1,510 in the 2025 cycle plus university processing fee)",
+      "frequency": "Multiple test dates per admission cycle (NTS NAT series plus CUI on-campus tests)",
+      "validity": "NAT result valid for 1 year (per NTS)",
+      "pattern": [
+        { "section": "English", "questions": 20, "marks": 20, "time": "120 minutes (whole paper)" },
+        { "section": "Analytical Reasoning", "questions": 20, "marks": 20 },
+        { "section": "Quantitative", "questions": 20, "marks": 20 },
+        { "section": "Subject (Physics, Chemistry, Mathematics for NAT-IE)", "questions": 30, "marks": 30 }
+      ],
+      "syllabus": [
+        { "subject": "English", "topics": ["Sentence completion and analogy", "Synonyms and antonyms", "Comprehension"] },
+        { "subject": "Analytical Reasoning", "topics": ["Scenario-based reasoning", "Statement-based reasoning"] },
+        { "subject": "Quantitative", "topics": ["Arithmetic", "Algebra", "Geometry"] },
+        { "subject": "Subject (NAT-IE)", "topics": ["Physics: mechanics, electricity and modern physics", "Chemistry: physical, inorganic and organic", "Mathematics: algebra, trigonometry and calculus"] }
+      ],
+      "howToApply": [
+        "Apply online through the CUI admission system (admissions.comsats.edu.pk)",
+        "Register for the required NTS NAT type or the CUI on-campus entry test",
+        "Pay the test and application processing fees as instructed",
+        "Check your merit position after NAT scores and academic marks are combined"
+      ],
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/",
+        "https://islamabad.comsats.edu.pk/comsats-admissions.aspx"
+      ],
+      "note": "CUI uses NTS NAT (e.g., NAT-IE for Pre-Engineering, NAT-ICS for ICS) and also conducts its own on-campus entry tests. NAT pattern: 90 MCQs, 120 minutes, per the official NTS paper pattern."
+    },
+    {
+      "id": "nts-nat",
+      "name": "NTS NAT — National Aptitude Test",
+      "short": "NTS NAT",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "National Testing Service (NTS) Pakistan",
+      "acceptedBy": [
+        "NTS-associated universities and degree-awarding institutes across Pakistan",
+        "COMSATS University Islamabad and other universities requiring NAT scores"
+      ],
+      "fee": "Announced per series (approx. PKR 1,510 in the 2025 cycle)",
+      "frequency": "Multiple series per year (NAT-IX series ran in 2026)",
+      "validity": "1 year (per NTS)",
+      "pattern": [
+        { "section": "English", "questions": 20, "marks": 20, "time": "120 minutes (whole paper)" },
+        { "section": "Analytical", "questions": 20, "marks": 20 },
+        { "section": "Quantitative", "questions": 20, "marks": 20 },
+        { "section": "Subject (varies by NAT type)", "questions": 30, "marks": 30 }
+      ],
+      "syllabus": [
+        { "subject": "English", "topics": ["Sentence completion and analogy", "Synonyms and antonyms", "Comprehension"] },
+        { "subject": "Analytical", "topics": ["Scenario-based reasoning", "Statement-based reasoning"] },
+        { "subject": "Quantitative", "topics": ["Arithmetic", "Algebra", "Geometry"] },
+        { "subject": "Subject Section", "topics": ["NAT-IE: Physics, Chemistry, Mathematics", "NAT-IM: Physics, Chemistry, Biology", "NAT-ICS: Physics, Computer Science, Mathematics", "NAT-ICOM: Accounting, Commerce, Economics"] }
+      ],
+      "howToApply": [
+        "Register on the NTS online registration portal (nts.org.pk) for the open NAT series",
+        "Download the bank deposit slip and pay the test fee at a partner bank",
+        "Receive your roll number slip and appear in the test",
+        "Share your NAT result card with universities while applying for admission"
+      ],
+      "sourceUrls": [
+        "https://www.nts.org.pk/new/NAT.php",
+        "https://www.nts.org.pk/new/nat-paper-pattern.php",
+        "https://www.nts.org.pk/products/ntsnat/nat-test.php"
+      ],
+      "note": "Category One (12-year education): 90 MCQs, 120 minutes — English 20, Analytical 20, Quantitative 20, Subject 30. The subject section and NAT type depend on the candidate's group (IE, IM, ICS, ICOM, IA, IGS). Verified from the official NTS paper pattern."
+    },
+    {
+      "id": "pieas",
+      "name": "PIEAS Admission Test (BS Programs)",
+      "short": "PIEAS",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "conductingBody": "Pakistan Institute of Engineering and Applied Sciences (PIEAS)",
+      "acceptedBy": [
+        "PIEAS BS engineering programmes (Electrical, Mechanical, Chemical and related)",
+        "PIEAS BS science programmes (Physics, Mathematics and related)"
+      ],
+      "fee": "Announced per cycle (approx. PKR 3,500 in the 2026 cycle)",
+      "frequency": "Once a year (after the BS application deadline in the admission cycle)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "Mathematics", "time": "3 hours (whole paper)" },
+        { "section": "Physics" },
+        { "section": "Chemistry" },
+        { "section": "English" }
+      ],
+      "syllabus": [
+        { "subject": "Mathematics", "topics": ["Algebra and functions", "Trigonometry and analytic geometry", "Calculus: differentiation and integration"] },
+        { "subject": "Physics", "topics": ["Mechanics and rotational motion", "Waves and optics", "Electricity and magnetism", "Modern physics"] },
+        { "subject": "Chemistry", "topics": ["Physical chemistry", "Inorganic chemistry", "Organic chemistry"] },
+        { "subject": "English", "topics": ["Reading comprehension", "Vocabulary and grammar"] }
+      ],
+      "howToApply": [
+        "Apply online through the PIEAS admissions portal (red.pieas.edu.pk)",
+        "Fill the application form and select your preferred BS programme",
+        "Pay the processing fee via the prescribed bank challan",
+        "Download your admit card and appear in the written test"
+      ],
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html",
+        "https://www.pieas.edu.pk/"
+      ],
+      "note": "Per the official test pattern PDF: 100 MCQs, 3 hours, no negative marking, with stream-wise section splits. Exact per-section counts vary by programme and are published in the official pattern document."
+    },
+    {
+      "id": "aku",
+      "name": "AKU Admission Test (Aga Khan University)",
+      "short": "AKU",
+      "streams": ["pre-medical", "alevel"],
+      "conductingBody": "Aga Khan University (AKU), Karachi",
+      "acceptedBy": [
+        "Aga Khan University Medical College (5-year MBBS, Karachi)",
+        "Aga Khan University School of Nursing and Midwifery (BScN)"
+      ],
+      "fee": "Announced per cycle (PKR 7,000 application processing fee in the 2025 cycle)",
+      "frequency": "Once a year (2026–27 applications closed 13 May 2026)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "Science Achievement (Biology, Chemistry, Physics)" },
+        { "section": "Science & Mathematical Reasoning" }
+      ],
+      "syllabus": [
+        { "subject": "Biology", "topics": ["Cell biology and genetics", "Human physiology and anatomy"] },
+        { "subject": "Chemistry", "topics": ["Physical chemistry", "Organic and inorganic chemistry"] },
+        { "subject": "Physics", "topics": ["Mechanics", "Electricity and magnetism", "Modern physics"] },
+        { "subject": "Reasoning", "topics": ["Science reasoning", "Mathematical reasoning"] }
+      ],
+      "howToApply": [
+        "Complete the online application on the AKU admissions portal",
+        "Pay the application processing fee via HBL or debit/credit card",
+        "Submit your academic records and required documents",
+        "Appear in the AKU admission test on the announced date",
+        "Attend an interview if shortlisted based on test performance"
+      ],
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ],
+      "note": "The official admission booklet describes a Science Achievement section (Biology, Chemistry, Physics) plus Science & Mathematical Reasoning. Passing the PM&DC MDCAT is also mandatory for MBBS applicants."
+    },
+    {
+      "id": "lat",
+      "name": "LAT — Law Admission Test",
+      "short": "LAT",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "Higher Education Commission (HEC) via the Education Testing Council (ETC)",
+      "acceptedBy": [
+        "All HEC-recognized universities and law colleges offering the 5-year LLB across Pakistan",
+        "LUMS Shaikh Ahmad Hassan School of Law (BA-LLB, together with LCAT/SAT/ACT)"
+      ],
+      "fee": "Announced per intake (approx. PKR 1,800 in the 2025 cycle)",
+      "frequency": "Multiple intakes per year (2026 tests: 21 June and 6 September)",
+      "validity": "2 years (per HEC)",
+      "pattern": [
+        { "section": "English", "questions": 20, "marks": 20 },
+        { "section": "General Knowledge", "questions": 20, "marks": 20 },
+        { "section": "Islamic Studies", "questions": 10, "marks": 10 },
+        { "section": "Pakistan Studies", "questions": 10, "marks": 10 },
+        { "section": "Urdu", "questions": 10, "marks": 10 },
+        { "section": "Mathematics", "questions": 5, "marks": 5 },
+        { "section": "Essay Writing", "marks": 15 },
+        { "section": "Personal Statement", "marks": 10 }
+      ],
+      "syllabus": [
+        { "subject": "English", "topics": ["Vocabulary and grammar", "Reading comprehension"] },
+        { "subject": "General Knowledge", "topics": ["Current affairs and Pakistan affairs", "Everyday science"] },
+        { "subject": "Islamic Studies", "topics": ["Basic Islamic concepts", "Seerah and Islamic history"] },
+        { "subject": "Pakistan Studies", "topics": ["Pakistan movement and history", "Constitution and governance"] },
+        { "subject": "Urdu", "topics": ["Urdu vocabulary", "Urdu comprehension"] },
+        { "subject": "Mathematics", "topics": ["Basic arithmetic", "Percentages and ratios"] }
+      ],
+      "howToApply": [
+        "Create an account on the HEC ETC portal (etc.hec.gov.pk) with CNIC/B-Form and email",
+        "Complete your personal and academic profile and upload a photograph",
+        "Select Law Admission Test (LAT) and choose your test centre",
+        "Pay the fee via the 1Link 1Bill consumer ID (mobile banking, ATM or EasyPaisa)",
+        "Download your roll number slip about a week before the test"
+      ],
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ],
+      "note": "100-mark paper: 75 MCQs plus essay (15 marks) and personal statement (10 marks); passing mark is 50. Pattern per the HEC LAT notification; HEC states the LAT result is valid for two years."
+    }
+  ]
+}

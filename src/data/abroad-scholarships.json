@@ -1,0 +1,1300 @@
+{
+  "dataYear": 2026,
+  "scholarships": [
+    {
+      "id": "hec-foreign-scholarships",
+      "name": "HEC Overseas Scholarships for MS/MPhil & PhD",
+      "funder": "Higher Education Commission (HEC), Pakistan",
+      "category": "hec",
+      "countries": ["multiple"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Pakistan's long-running overseas scholarship scheme for MS/MPhil and PhD study abroad; awards have historically covered tuition and a monthly living stipend, with the exact package set by each cycle's advertisement",
+      "eligibility": [
+        "Pakistani or AJK nationals holding the academic credentials required for the advertised level",
+        "Sixteen years of education for the MS/MPhil stream or eighteen years for the PhD stream from an HEC-recognised institution",
+        "Must satisfy the merit, field, and age criteria announced in each cycle's advertisement"
+      ],
+      "deadline": "Batches are advertised periodically on HEC's website and portal; check scholarship.hec.gov.pk for the current cycle's closing date (approx.)",
+      "howToApply": [
+        "Watch hec.gov.pk and HEC's scholarship portal for the next overseas scholarship advertisement",
+        "Register and submit the application through HEC's online portal (scholarship.hec.gov.pk) within the advertised window"
+      ],
+      "sourceUrls": [
+        "https://www.hec.gov.pk/site/scholarships",
+        "https://www.hec.gov.pk/english/scholarshipsgrants/OSSP/Pages/default.aspx"
+      ]
+    },
+    {
+      "id": "commonwealth-masters",
+      "name": "Commonwealth Master's Scholarships (via HEC)",
+      "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan as nominating agency",
+      "category": "hec",
+      "countries": ["uk"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full tuition at a UK university, a monthly living stipend, return airfare from Pakistan, and other allowances for a one-year taught master's degree",
+      "eligibility": [
+        "Pakistani citizens nominated through HEC Pakistan, the designated nominating agency, which has around 26 master's nominations per cycle",
+        "A bachelor's degree equivalent to a UK upper second-class honours (2:1) result",
+        "Genuine financial need, meaning the candidate cannot afford UK study without the scholarship"
+      ],
+      "deadline": "Applications typically open in early September and close in mid-to-late October, after HEC's earlier nomination window (approx.)",
+      "howToApply": [
+        "Apply for HEC nomination through HEC's online scholarship portal (scholarship.hec.gov.pk) when the Commonwealth advertisement appears",
+        "Shortlisted candidates then complete the Commonwealth Scholarship Commission's online application before the CSC deadline"
+      ],
+      "sourceUrls": [
+        "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+        "https://www.hec.gov.pk/site/cwgs"
+      ]
+    },
+    {
+      "id": "commonwealth-phd",
+      "name": "Commonwealth PhD Scholarships (via HEC)",
+      "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan as nominating agency",
+      "category": "hec",
+      "countries": ["uk"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "Full tuition at a UK university, a monthly stipend for the doctoral period, return airfare from Pakistan, and research-related allowances",
+      "eligibility": [
+        "Pakistani citizens nominated by HEC Pakistan, which handles around 30 General PhD nominations per cycle",
+        "Qualifications sufficient for doctoral study, typically an upper second-class honours degree or a master's",
+        "A research proposal with strong development relevance for Pakistan"
+      ],
+      "deadline": "Applications typically open in early September and close in mid-to-late October for the following year (approx.)",
+      "howToApply": [
+        "Apply for HEC nomination through HEC's online scholarship portal (scholarship.hec.gov.pk) when the advertisement appears",
+        "Shortlisted candidates then complete the Commonwealth Scholarship Commission's online application before the CSC deadline"
+      ],
+      "sourceUrls": [
+        "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
+        "https://www.hec.gov.pk/site/cwgs"
+      ]
+    },
+    {
+      "id": "stipendium-hungaricum",
+      "name": "Stipendium Hungaricum Scholarship Programme",
+      "funder": "Government of Hungary (Tempus Public Foundation), with HEC Pakistan as sending partner",
+      "category": "hec",
+      "countries": ["hungary"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Tuition exemption, a dormitory place or housing contribution, a monthly stipend, and medical insurance for bachelor's, master's, or doctoral study in Hungary",
+      "eligibility": [
+        "Pakistani citizens applying through HEC Pakistan, the designated sending partner for the programme",
+        "Applications must be submitted on both the Stipendium Hungaricum portal and HEC's portal by the deadline",
+        "Must meet the admission requirements of the chosen Hungarian higher education institutions"
+      ],
+      "deadline": "The 2026/27 round closed on 15 January 2026 at 16:00 PST; expect a similar mid-January deadline each year (approx.)",
+      "howToApply": [
+        "Submit the application on the Stipendium Hungaricum portal (stipendiumhungaricum.hu), listing the chosen Hungarian programmes",
+        "Register and apply in parallel on HEC's scholarship portal (scholarship.hec.gov.pk) so HEC can nominate you"
+      ],
+      "sourceUrls": [
+        "https://stipendiumhungaricum.hu/",
+        "https://www.hec.gov.pk/site/arl"
+      ]
+    },
+    {
+      "id": "hec-cgsp",
+      "name": "Chinese Government Scholarship Program via HEC (CGSP)",
+      "funder": "China Scholarship Council, with HEC Pakistan as nominating agency",
+      "category": "hec",
+      "countries": ["china"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition, on-campus accommodation, a monthly living stipend, and comprehensive medical insurance at Chinese universities, with roughly 35 bachelor's, 25 master's, and 15 PhD seats for Pakistani nominees per cycle",
+      "eligibility": [
+        "Pakistani or AJK nationals applying through HEC's nomination channel for Type-A Chinese Government Scholarship places",
+        "Completed higher secondary education (HSSC or equivalent) for bachelor's, sixteen years of education for master's, and an MS/MPhil for PhD, with PhD candidates typically under 40",
+        "Must meet the age and academic requirements published in HEC's annual CGSP advertisement"
+      ],
+      "deadline": "The 2026-27 HEC application window closed in early January 2026; expect a similar turn-of-the-year deadline in future cycles (approx.)",
+      "howToApply": [
+        "Apply through HEC's online scholarship portal (scholarship.hec.gov.pk) before HEC's deadline",
+        "Nominated candidates then complete the China Scholarship Council application on campuschina.org with HEC's agency number"
+      ],
+      "sourceUrls": [
+        "https://www.hec.gov.pk/site/CGSP"
+      ]
+    },
+    {
+      "id": "commonwealth-split-site",
+      "name": "Commonwealth Split-site Scholarships (via HEC)",
+      "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan nomination",
+      "category": "hec",
+      "countries": ["uk"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "Twelve months of fully funded research at a UK university while remaining registered for a PhD in Pakistan, including a monthly stipend, return airfare, and study-related allowances",
+      "eligibility": [
+        "Pakistani PhD students registered at an HEC-recognised university in Pakistan",
+        "A twelve-month research plan supported by supervisors at both the home and UK institutions",
+        "Pakistani applicants are typically routed through HEC Pakistan, the country's Commonwealth nominating agency"
+      ],
+      "deadline": "The call runs once a year through the CSC's online system; check cscuk.fcdo.gov.uk for current opening and closing dates (approx.)",
+      "howToApply": [
+        "Apply for HEC nomination through HEC's scholarship portal when the split-site call is announced",
+        "Complete the Commonwealth Scholarship Commission's online application with the UK supervisor's supporting documents"
+      ],
+      "sourceUrls": [
+        "https://cscuk.fcdo.gov.uk/apply-now-for-commonwealth-split-site-scholarships/"
+      ]
+    },
+    {
+      "id": "us-pakistan-knowledge-corridor",
+      "name": "US-Pakistan Knowledge Corridor PhD Scholarships",
+      "funder": "Higher Education Commission (HEC), Pakistan",
+      "category": "hec",
+      "countries": ["usa"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "Funding of up to about USD 19,200 per year for up to five years of PhD study at top QS-ranked US universities, broadly the top 300",
+      "eligibility": [
+        "Pakistani nationals with eighteen years of education (MS/MPhil or equivalent) in the programme's priority subject areas",
+        "Must secure admission to a PhD programme at an approved top QS-ranked US university",
+        "Scholars commit to returning to serve Pakistani universities after completing the doctorate"
+      ],
+      "deadline": "Applications for 2027 admissions close around 30 October 2026 (Spring/Summer 2027 intake) and 30 March 2027 (Fall 2027 intake) (approx.)",
+      "howToApply": [
+        "Log in to HEC's e-portal, open 'Scholarships and Grants', and submit the US-PAK Knowledge Corridor application form",
+        "Complete HEC's screening, including the HAT aptitude test, and secure PhD admission at an approved US university"
+      ],
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/scholarshipsgrants/us-pakcorridor/pages/default.aspx"
+      ]
+    },
+    {
+      "id": "irsip",
+      "name": "International Research Support Initiative Program (IRSIP)",
+      "funder": "Higher Education Commission (HEC), Pakistan",
+      "category": "hec",
+      "countries": ["multiple"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "A six-month fully funded research fellowship at a foreign university, covering the Pakistani PhD scholar's living and visit costs during the placement",
+      "eligibility": [
+        "Full-time PhD students enrolled at an HEC-recognised university in Pakistan",
+        "A six-month research placement at a foreign university relevant to the scholar's thesis",
+        "Nomination and approval by the scholar's home university and supervisor"
+      ],
+      "deadline": "Batches open periodically through the year; watch HEC's scholarship portal for the next call (approx.)",
+      "howToApply": [
+        "Apply online through HEC's scholarship portal (scholarship.hec.gov.pk) when a batch is open",
+        "Secure an acceptance letter from a foreign university supervisor before the application deadline"
+      ],
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/scholarshipsgrants/IRSIP/Pages/default.aspx"
+      ]
+    },
+    {
+      "id": "asea-uninet-pakistan",
+      "name": "ASEA-UNINET PhD Scholarships for Pakistan",
+      "funder": "HEC Pakistan and Austria's OeAD through the ASEA-UNINET network",
+      "category": "hec",
+      "countries": ["austria"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "An HEC-financed doctoral scholarship administered by Austria's OeAD, funding up to 36 months of PhD study in Austria with the possibility of a fourth-year extension",
+      "eligibility": [
+        "Pakistani citizens who have completed a master's degree",
+        "Admission or an invitation from an ASEA-UNINET member university in Austria",
+        "Candidates pass HEC's pre-selection stage before ASEA-UNINET's academic review"
+      ],
+      "deadline": "One closing date per year, typically in spring; check asea-uninet.org and HEC announcements for the exact date (approx.)",
+      "howToApply": [
+        "Prepare the ASEA-UNINET scholarship application with supporting documents from the Austrian host university",
+        "Complete HEC Pakistan's parallel application and pass its pre-selection process"
+      ],
+      "sourceUrls": [
+        "https://asea-uninet.org/scholarships-grants/pakistan-scholarships/"
+      ]
+    },
+    {
+      "id": "fulbright-pakistan",
+      "name": "Fulbright Degree Program for Pakistan",
+      "funder": "U.S. Department of State, administered by the United States Educational Foundation in Pakistan (USEFP)",
+      "category": "host-government",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition and fees, textbooks, airfare, a monthly living stipend, and health insurance for master's or PhD study at US universities",
+      "eligibility": [
+        "Pakistani citizens with sixteen years of education for a master's and eighteen years for a PhD",
+        "GRE general test scores are required, with a stated minimum of 145 in each section",
+        "All fields are eligible except clinical medicine, and PhD grantees sign a bond to return and serve in Pakistan"
+      ],
+      "deadline": "The application window typically closes around 1 April each year for the following year's intake (approx.)",
+      "howToApply": [
+        "Create an account and complete the online application at usefp.org",
+        "Take the GRE general test and submit transcripts, references, and a study objective online before the deadline"
+      ],
+      "sourceUrls": [
+        "https://usefp.org/scholarships/fulbright-degree.cfm"
+      ]
+    },
+    {
+      "id": "humphrey-fellowship-pakistan",
+      "name": "Hubert H. Humphrey Fellowship Program (Pakistan)",
+      "funder": "U.S. Department of State, administered by the United States Educational Foundation in Pakistan (USEFP)",
+      "category": "host-government",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Ten to twelve months of non-degree graduate-level study and professional development in the US, covering tuition and fees, airfare, textbooks, a monthly stipend, and health insurance",
+      "eligibility": [
+        "Pakistani citizens with sixteen years of education, such as a four-year bachelor's degree",
+        "Eight to eighteen years of progressively responsible professional work experience",
+        "A guarantee of re-employment in Pakistan and demonstrated leadership qualities"
+      ],
+      "deadline": "The application window typically closes around mid-to-late May each year for the following year's fellowship (approx.)",
+      "howToApply": [
+        "Complete the online application at usefp.org during the open window",
+        "Submit employer documents, references, and English proficiency evidence with the application"
+      ],
+      "sourceUrls": [
+        "https://www.usefp.org/scholarships/humphrey.cfm"
+      ]
+    },
+    {
+      "id": "chevening",
+      "name": "Chevening Scholarships",
+      "funder": "UK Foreign, Commonwealth & Development Office",
+      "category": "host-government",
+      "countries": ["uk"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full tuition for a one-year taught master's at any UK university, a monthly living allowance, return flights to the UK, and arrival and departure allowances",
+      "eligibility": [
+        "Pakistani citizens with an undergraduate degree and at least two years (2,800 hours) of work experience",
+        "Apply to three different eligible UK master's courses and hold at least one unconditional offer by mid-July",
+        "Commitment to return to Pakistan for two years after the scholarship ends"
+      ],
+      "deadline": "Applications typically open in August and close in early November each year (approx.)",
+      "howToApply": [
+        "Create an account and apply online at chevening.org, selecting three UK master's courses",
+        "Submit two references and secure an unconditional offer by the July deadline"
+      ],
+      "sourceUrls": [
+        "https://www.chevening.org/scholarships/"
+      ]
+    },
+    {
+      "id": "erasmus-mundus-joint-masters",
+      "name": "Erasmus Mundus Joint Masters Scholarships",
+      "funder": "European Commission (Erasmus+ programme)",
+      "category": "host-government",
+      "countries": ["multiple"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full participation costs (tuition), travel and installation allowances, and a monthly living allowance for a joint master's studied at universities in at least three different countries",
+      "eligibility": [
+        "Open to students of any nationality, including Pakistanis, who hold a first-cycle (bachelor's) degree",
+        "Apply directly to the Erasmus Mundus consortium running the chosen joint master's programme",
+        "Only a limited number of scholarship seats are available per programme, awarded on academic merit"
+      ],
+      "deadline": "Consortium applications typically open in October and close between December and February for the following academic year (approx.)",
+      "howToApply": [
+        "Browse the Erasmus Mundus catalogue on the Erasmus+ website and shortlist joint master's programmes",
+        "Apply directly to each consortium following its own application instructions"
+      ],
+      "sourceUrls": [
+        "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters"
+      ]
+    },
+    {
+      "id": "daad-epos",
+      "name": "DAAD EPOS Development-Related Postgraduate Courses",
+      "funder": "German Academic Exchange Service (DAAD), funded by Germany's Federal Ministry for Economic Cooperation and Development",
+      "category": "host-government",
+      "countries": ["germany"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "A monthly scholarship of about EUR 992 for master's and EUR 1,300 to 1,400 for doctoral candidates, plus travel, health insurance, and study allowances for development-related courses in Germany",
+      "eligibility": [
+        "Graduates from eligible developing countries, including Pakistan, with at least two years of relevant professional experience",
+        "A bachelor's degree (usually four years) for master's courses and a master's degree for doctoral courses",
+        "Admission or pre-admission contact with the chosen EPOS course before applying"
+      ],
+      "deadline": "Deadlines vary by course; many EPOS courses accept applications between August and October each year (approx.)",
+      "howToApply": [
+        "Choose a development-related postgraduate course from the DAAD EPOS course list",
+        "Apply via the DAAD application portal or the course coordinator as instructed for that course"
+      ],
+      "sourceUrls": [
+        "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
+      ]
+    },
+    {
+      "id": "austria-oead-grant",
+      "name": "Ernst Mach Grant (worldwide)",
+      "funder": "OeAD, funded by the Austrian Federal Ministry of Education, Science and Research",
+      "category": "host-government",
+      "countries": ["austria"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "A monthly grant of about EUR 1,300 for one to nine months of research in Austria, plus accident and health insurance and a travel subsidy of up to EUR 1,200 depending on the applicant's country",
+      "eligibility": [
+        "Researchers of any nationality except Austria, including Pakistanis, no older than 35 at the application deadline",
+        "An invitation or supervision agreement from an Austrian host institution",
+        "First-time recipients only; previous Ernst Mach Grant holders cannot apply again"
+      ],
+      "deadline": "Applications typically run from September to 1 December each year for the following year (approx.)",
+      "howToApply": [
+        "Secure an invitation or supervision confirmation from an Austrian host institution",
+        "Apply online through the OeAD grants portal (grants.at) within the application window"
+      ],
+      "sourceUrls": [
+        "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant"
+      ]
+    },
+    {
+      "id": "italy-maeci-grant",
+      "name": "Italian Government Scholarships (MAECI)",
+      "funder": "Italian Ministry of Foreign Affairs and International Cooperation (MAECI)",
+      "category": "host-government",
+      "countries": ["italy"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "A monthly grant of EUR 900 for six to nine months, exemption from university tuition and enrolment fees at Italian state institutions, and health insurance cover while in Italy",
+      "eligibility": [
+        "Foreign students from eligible countries, including Pakistan, who meet the entry requirements for the chosen Italian programme",
+        "Applications are submitted exclusively through the Study in Italy portal within the call window",
+        "Italian or English language proficiency as required by the chosen degree programme"
+      ],
+      "deadline": "Applications typically open in late winter and close in late March; the 2026-27 call closed at 2:00 PM CET on 26 March 2026 (approx.)",
+      "howToApply": [
+        "Register on the Study in Italy portal (studyin.it) and complete the online application during the call",
+        "Submit the required documents, including legalised qualifications and language certificates, per the call's instructions"
+      ],
+      "sourceUrls": [
+        "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/"
+      ]
+    },
+    {
+      "id": "gks-korea",
+      "name": "Global Korea Scholarship (Graduate)",
+      "funder": "Government of the Republic of Korea (NIIED, Ministry of Education)",
+      "category": "host-government",
+      "countries": ["south-korea"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Round-trip airfare, full tuition, a monthly allowance, settlement and Korean language training support, and medical insurance for master's or PhD study in Korea",
+      "eligibility": [
+        "Pakistani citizens with a cumulative GPA of at least 80% (or equivalent) in the most recent degree",
+        "Under 40 years of age for graduate programme applicants",
+        "Embassy track applicants from Pakistan compete for a small quota (eight seats in the 2026 cycle), with the university track as an alternative route"
+      ],
+      "deadline": "Embassy track applications typically run a short February window (12 to 25 February in the 2026 cycle); university track deadlines are set by each Korean university (approx.)",
+      "howToApply": [
+        "Apply online through the Study in Korea portal (studyinkorea.go.kr), choosing the embassy or university track",
+        "Embassy track applicants submit documents to the Korean Embassy in Islamabad; university track applicants apply directly to the chosen university"
+      ],
+      "sourceUrls": [
+        "https://www.studyinkorea.go.kr/",
+        "https://www.mofa.go.kr/rw-en/brd/m_9983/view.do?seq=758868"
+      ]
+    },
+    {
+      "id": "gks-undergraduate",
+      "name": "Global Korea Scholarship (Undergraduate)",
+      "funder": "Government of the Republic of Korea (NIIED, Ministry of Education)",
+      "category": "host-government",
+      "countries": ["south-korea"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "Round-trip airfare, full tuition, a monthly allowance, settlement support, a year of Korean language training, and medical insurance for an undergraduate degree in Korea",
+      "eligibility": [
+        "Pakistani citizens who have completed secondary school with strong academic results",
+        "Under 25 years of age at the time of application",
+        "Pakistan's embassy track quota is small (two general seats plus one regional track seat in the 2026 cycle)"
+      ],
+      "deadline": "Applications typically run in the second half of September (15 to 30 September in the 2026 cycle) (approx.)",
+      "howToApply": [
+        "Apply online through the Study in Korea portal (studyinkorea.go.kr) during the window, as the GKS-U is online-only",
+        "Prepare the required documents as specified in the annual GKS-U guidelines"
+      ],
+      "sourceUrls": [
+        "https://www.studyinkorea.go.kr/",
+        "https://www.mofa.go.kr/kh-en/brd/m_25856/view.do?seq=66"
+      ]
+    },
+    {
+      "id": "csc-chinese-govt",
+      "name": "Chinese Government Scholarship (CSC)",
+      "funder": "China Scholarship Council, Ministry of Education of China",
+      "category": "host-government",
+      "countries": ["china"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition, on-campus accommodation or a housing subsidy, a monthly living stipend of roughly RMB 2,500 to 3,500 depending on study level, and comprehensive medical insurance",
+      "eligibility": [
+        "Pakistani citizens who are non-Chinese nationals in good health",
+        "Educational requirements per level: high school certificate for bachelor's, bachelor's for master's, and MS/MPhil for PhD",
+        "Apply through the Chinese embassy in Pakistan (Type A) or directly to a Chinese university (Type B)"
+      ],
+      "deadline": "Application windows typically run from December to April for the September intake, depending on the track chosen (approx.)",
+      "howToApply": [
+        "Create an account on the CSC portal (campuschina.org) and choose Type A (embassy) or Type B (university) application",
+        "Submit the printed application and documents to the Chinese embassy in Islamabad or to the chosen Chinese university"
+      ],
+      "sourceUrls": [
+        "https://www.campuschina.org"
+      ]
+    },
+    {
+      "id": "turkiye-burslari",
+      "name": "Türkiye Bursları (Türkiye Scholarships)",
+      "funder": "Government of Türkiye (Presidency for Turks Abroad and Related Communities)",
+      "category": "host-government",
+      "countries": ["turkey"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition, a monthly stipend, accommodation, health insurance, a one-year Turkish language course, and round-trip airfare for degree study in Türkiye",
+      "eligibility": [
+        "Pakistani citizens (foreign nationals generally) with the prior degree required for the chosen level",
+        "Age limits as of 1 January of the application year: under 21 for bachelor's, under 30 for master's, and under 35 for PhD",
+        "Minimum academic achievement of about 70% for bachelor's and 75% for graduate programmes"
+      ],
+      "deadline": "Applications typically open in January and close in February for the following academic year (approx.)",
+      "howToApply": [
+        "Create an account and apply online at turkiyeburslari.gov.tr, selecting up to twelve programme preferences",
+        "Shortlisted candidates attend an interview at the Turkish Embassy in Islamabad"
+      ],
+      "sourceUrls": [
+        "https://www.turkiyeburslari.gov.tr/"
+      ]
+    },
+    {
+      "id": "knb-indonesia",
+      "name": "KNB Developing Countries Partnership Scholarship",
+      "funder": "Ministry of Higher Education, Science, and Technology of the Republic of Indonesia",
+      "category": "host-government",
+      "countries": ["indonesia"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition, a monthly living allowance (about IDR 1,750,000 for bachelor's and IDR 2,550,000 for master's and PhD), settlement and book or research allowances, health insurance, round-trip airfare, and Indonesian language preparatory study",
+      "eligibility": [
+        "Pakistani citizens (developing-country nationals) with the prior degree required for the chosen level",
+        "Age limits of 21 for bachelor's, 35 for master's, and 40 for PhD applicants",
+        "Study at one of the participating Indonesian universities with the required language preparatory training"
+      ],
+      "deadline": "Applications typically open in early February and close at the end of March (approx.)",
+      "howToApply": [
+        "Register and apply online through the KNB scholarship portal (knb.kemdiktisaintek.go.id)",
+        "Complete the document verification and interview stages after submission"
+      ],
+      "sourceUrls": [
+        "https://knb.kemdiktisaintek.go.id/"
+      ]
+    },
+    {
+      "id": "government-of-ireland",
+      "name": "Government of Ireland Postgraduate Scholarship Programme",
+      "funder": "Research Ireland, funded by the Government of Ireland",
+      "category": "host-government",
+      "countries": ["ireland"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "A stipend of about EUR 22,000 per year, tuition fee contributions of up to EUR 5,750, and EUR 3,250 in direct research expenses for a research master's or doctorate at an eligible Irish institution",
+      "eligibility": [
+        "Open to candidates of any nationality, including Pakistanis, holding a first-class or upper second-class honours primary degree",
+        "A developed research proposal and a supervisor at an eligible Irish higher education institution",
+        "Applications are made jointly by the candidate and supervisor before the autumn deadline"
+      ],
+      "deadline": "The applicant deadline typically falls in October for awards starting the following year (approx.)",
+      "howToApply": [
+        "Develop a research proposal with a supervisor at an eligible Irish institution",
+        "Submit the joint application through Research Ireland's online system before the call deadline"
+      ],
+      "sourceUrls": [
+        "https://research.ie/funding/goipg/"
+      ]
+    },
+    {
+      "id": "nl-scholarship",
+      "name": "NL Scholarship for Non-EEA Students",
+      "funder": "Dutch Ministry of Education, Culture and Science with participating Dutch universities",
+      "category": "host-government",
+      "countries": ["netherlands"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A one-time award of EUR 5,000 towards the first year of a bachelor's or master's at a participating Dutch institution; it is not a full tuition award",
+      "eligibility": [
+        "Pakistani citizens (non-EEA nationals) applying for a full-time bachelor's or master's at a participating Dutch institution",
+        "No previous study at a Dutch higher education institution",
+        "Must meet the entry requirements of the chosen programme and the institution's selection criteria"
+      ],
+      "deadline": "The 2026-27 round opened in November 2025; participating institutions set their own deadlines, typically around 1 February (approx.)",
+      "howToApply": [
+        "Choose a participating Dutch institution and a full-time programme",
+        "Apply for the NL Scholarship directly with the institution, following its posted instructions and deadline"
+      ],
+      "sourceUrls": [
+        "https://www.studyinnl.org/finances/nl-scholarship"
+      ]
+    },
+    {
+      "id": "daad-helmut-schmidt",
+      "name": "DAAD Helmut Schmidt Programme (Public Policy and Good Governance)",
+      "funder": "German Academic Exchange Service (DAAD) with the German Federal Foreign Office",
+      "category": "host-government",
+      "countries": ["germany"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full funding for a master's in public policy and good governance at one of eight participating German universities, including a monthly stipend, travel allowance, and insurance",
+      "eligibility": [
+        "Graduates from the programme's eligible countries, which include Pakistan",
+        "A bachelor's degree in a relevant discipline with above-average results",
+        "A commitment to public service and governance in the home country after graduation"
+      ],
+      "deadline": "Applications typically run from summer into early autumn for the following year's intake (approx.)",
+      "howToApply": [
+        "Choose up to two of the eight participating master's programmes",
+        "Apply online through the DAAD application portal with transcripts, references, and proof of English proficiency"
+      ],
+      "sourceUrls": [
+        "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/helmut-schmidt-programme/"
+      ]
+    },
+    {
+      "id": "goi-ies",
+      "name": "Government of Ireland International Education Scholarships",
+      "funder": "Government of Ireland, administered by the Higher Education Authority (HEA)",
+      "category": "host-government",
+      "countries": ["ireland"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A EUR 10,000 stipend for one study year plus a full tuition fee waiver for that year, for high-calibre non-EU students at Irish higher education institutions",
+      "eligibility": [
+        "Non-EU/EEA candidates, including Pakistanis, who hold or are eligible for an offer from an Irish institution",
+        "Applying for a full-time programme of one year or more at a participating institution",
+        "An excellent academic record alongside extracurricular or community engagement"
+      ],
+      "deadline": "The annual call typically closes in late March for the following academic year (approx.)",
+      "howToApply": [
+        "Secure an offer or eligibility confirmation from a participating Irish institution",
+        "Submit the online GOI-IES application with references and transcripts through the HEA portal"
+      ],
+      "sourceUrls": [
+        "https://hea.ie/policy/internationalisation/goi-ies/"
+      ]
+    },
+    {
+      "id": "kaist-international",
+      "name": "KAIST International Student Scholarship",
+      "funder": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "category": "university-specific",
+      "countries": ["south-korea"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "Full tuition for the undergraduate programme plus a monthly living allowance of KRW 350,000, continued subject to KAIST's academic standards",
+      "eligibility": [
+        "International applicants, including Pakistanis, applying through KAIST's international undergraduate admissions",
+        "Completion of, or enrollment in the final year of, high school in a recognised system",
+        "Strong academic preparation, particularly for KAIST's science and technology programmes"
+      ],
+      "deadline": "KAIST runs annual international undergraduate admission rounds; check the admissions calendar on admission.kaist.ac.kr (approx.)",
+      "howToApply": [
+        "Apply through KAIST's online international admissions system (admission.kaist.ac.kr)",
+        "Submit transcripts, teacher recommendations, a study plan, and English proficiency evidence"
+      ],
+      "sourceUrls": [
+        "https://admission.kaist.ac.kr/intl-undergraduate/"
+      ]
+    },
+    {
+      "id": "rhodes-pakistan",
+      "name": "Rhodes Scholarship (Pakistan Constituency)",
+      "funder": "Rhodes Trust",
+      "category": "university-specific",
+      "countries": ["uk"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "All Oxford University course fees plus an annual living stipend of around GBP 19,000 (2025-26 rate) for two or more years of full-time postgraduate study at Oxford",
+      "eligibility": [
+        "Pakistani citizens who are domiciled in Pakistan or have received a substantial part of their formal education in Pakistan, applying through the dedicated Pakistan constituency",
+        "Meet the constituency's age requirements, broadly between 19 and 25 on 1 October of entry, as published by the Rhodes Trust",
+        "Hold an undergraduate degree with outstanding academic results before taking up the scholarship"
+      ],
+      "deadline": "The Pakistan constituency application window typically runs from June to early August for the following year's intake (approx.)",
+      "howToApply": [
+        "Apply online through the Rhodes House application portal under the Pakistan constituency",
+        "Submit academic transcripts, a personal statement, references, and English proficiency evidence, and attend the constituency's interview process"
+      ],
+      "sourceUrls": [
+        "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/pakistan/"
+      ]
+    },
+    {
+      "id": "gates-cambridge",
+      "name": "Gates Cambridge Scholarship",
+      "funder": "Gates Cambridge Trust, funded by the Bill & Melinda Gates Foundation",
+      "category": "university-specific",
+      "countries": ["uk"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full University Composition Fee, a maintenance allowance of GBP 22,050 for twelve months (2025-26 rate, pro rata for shorter courses), one economy return airfare per year, and inbound visa and immigration health surcharge costs",
+      "eligibility": [
+        "Citizens of any country outside the United Kingdom, including Pakistan, applying for a full-time postgraduate degree at the University of Cambridge",
+        "Outstanding intellectual ability and academic achievement in the chosen field",
+        "Demonstrated leadership potential and a commitment to improving the lives of others, the core Gates Cambridge selection criteria"
+      ],
+      "deadline": "Applications open in September for the following academic year, with deadlines in December or January depending on the chosen course (approx.)",
+      "howToApply": [
+        "Apply for admission to a full-time postgraduate course at Cambridge through the university's applicant portal",
+        "Complete the Gates Cambridge section of the admission application, including references that address the scholarship's selection criteria"
+      ],
+      "sourceUrls": [
+        "https://www.gatescambridge.org/programme/the-scholarship/"
+      ]
+    },
+    {
+      "id": "clarendon-fund",
+      "name": "Clarendon Fund Scholarships",
+      "funder": "University of Oxford (Clarendon Fund)",
+      "category": "university-specific",
+      "countries": ["uk"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full course fees and college fees plus a generous annual living-expenses grant for the whole duration of the course, with around 140 new scholars each year",
+      "eligibility": [
+        "Applicants of any nationality, including Pakistanis, who apply for an eligible graduate course at Oxford by the course deadline",
+        "Selection is based solely on academic merit and potential, assessed from the course application",
+        "No separate scholarship application exists; all timely course applicants are automatically considered"
+      ],
+      "deadline": "Candidates must submit their Oxford graduate course application by the standard December or January course deadlines to be considered (approx.)",
+      "howToApply": [
+        "Apply for an eligible full-time graduate course at Oxford through the university's online application system",
+        "Ensure the application, including references, is complete by the course deadline for automatic Clarendon consideration"
+      ],
+      "sourceUrls": [
+        "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon"
+      ]
+    },
+    {
+      "id": "schwarzman-scholars",
+      "name": "Schwarzman Scholars Programme",
+      "funder": "Schwarzman Scholars, hosted at Tsinghua University in Beijing",
+      "category": "university-specific",
+      "countries": ["china"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Tuition and fees, room and board, a personal stipend, health insurance, study trips, and travel to and from Beijing for the one-year master's in Global Affairs",
+      "eligibility": [
+        "Applicants aged 18 to 28 at enrolment from any country, including Pakistan",
+        "An undergraduate degree completed by August of enrolment, with academic excellence, leadership ability, and civic engagement",
+        "English proficiency and a demonstrated interest in China and global affairs"
+      ],
+      "deadline": "The global application round typically closes in mid-to-late September for the following year's cohort (approx.)",
+      "howToApply": [
+        "Complete the online Schwarzman Scholars application with essays, transcripts, and recommendation letters",
+        "Shortlisted candidates advance to video and in-person finalist interviews before final selection"
+      ],
+      "sourceUrls": [
+        "https://www.schwarzmanscholars.org/admissions/"
+      ]
+    },
+    {
+      "id": "snu-gsfs",
+      "name": "SNU Graduate Scholarship for Excellent Foreign Students (GSFS)",
+      "funder": "Seoul National University",
+      "category": "university-specific",
+      "countries": ["south-korea"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full tuition exemption for up to four semesters plus a monthly living allowance of at least KRW 500,000, with eligibility varying by country and college each semester",
+      "eligibility": [
+        "International applicants, including Pakistanis, whose combination of country and SNU college is on the GSFS eligibility list for the admission semester",
+        "Applicants to Seoul National University graduate programmes with excellent academic records",
+        "Selection is conducted by the individual SNU colleges and schools after the admission application"
+      ],
+      "deadline": "Applications run with SNU's regular graduate admission rounds; check the semester's GSFS announcement and scholarship finder (approx.)",
+      "howToApply": [
+        "Apply for SNU graduate admission online and tick the Application for Scholarship box during the application",
+        "Check your country and college eligibility in SNU's scholarship finder before applying"
+      ],
+      "sourceUrls": [
+        "https://en.snu.ac.kr/admission/graduate/scholarships/before_application"
+      ]
+    },
+    {
+      "id": "tu-delft-van-effen",
+      "name": "Justus & Louise van Effen Excellence Scholarships",
+      "funder": "Delft University of Technology (TU Delft)",
+      "category": "university-specific",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full tuition fees per year plus a financial contribution towards living expenses for a two-year TU Delft MSc programme, with two scholarships awarded per faculty",
+      "eligibility": [
+        "Non-EU/EEA students, including Pakistanis, applying for a TU Delft MSc programme, ranked roughly in the top 10% of their graduating class",
+        "A complete MSc application including two reference letters and proof of English proficiency",
+        "Selection is per faculty, with each faculty awarding two scholarships"
+      ],
+      "deadline": "The scholarship form must be submitted with the MSc application by 1 December, with results announced around the end of March (approx.)",
+      "howToApply": [
+        "Submit the TU Delft MSc application online with transcripts and English test scores",
+        "Complete the scholarship application form and upload two reference letters alongside the MSc application before the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships"
+      ]
+    },
+    {
+      "id": "polimi-merit",
+      "name": "Politecnico di Milano Merit-Based Scholarships",
+      "funder": "Politecnico di Milano",
+      "category": "university-specific",
+      "countries": ["italy"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A full tuition-fee waiver for the whole programme, with recipients paying only an administrative fee of about EUR 170; Gold-tier awards additionally provide EUR 8,000 gross per year towards living costs",
+      "eligibility": [
+        "Non-EU international applicants, including Pakistanis, admitted to a Laurea Magistrale (master's) programme at Politecnico di Milano",
+        "Application through the annual merit-based scholarship call published for the September intake",
+        "Selection is based on academic merit as assessed during the admission evaluation"
+      ],
+      "deadline": "Scholarship calls are published annually with deadlines aligned to Politecnico di Milano's admission rounds; check the current call on the university's scholarships page (approx.)",
+      "howToApply": [
+        "Apply for admission to a Laurea Magistrale programme through Politecnico di Milano's online portal",
+        "Follow the annual scholarship call instructions and submit the scholarship request within the stated deadline"
+      ],
+      "sourceUrls": [
+        "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships"
+      ]
+    },
+    {
+      "id": "unibo-action-2",
+      "name": "University of Bologna Study Grants (Unibo Action 2)",
+      "funder": "University of Bologna",
+      "category": "university-specific",
+      "countries": ["italy"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A study grant of EUR 11,000 gross per year paid in instalments for first, single, or second cycle degree programmes; a separate Unibo Action 1 waiver exempts winners from tuition fees",
+      "eligibility": [
+        "International applicants, including Pakistanis, admitted or applying to a degree programme at the University of Bologna",
+        "Applicants must be under 30 years of age at the deadline",
+        "Awards are made by ranking based on academic merit and other criteria set in the annual call"
+      ],
+      "deadline": "Calls are published each year, typically with application deadlines between late March and April for the following academic year (approx.)",
+      "howToApply": [
+        "Submit the application through the University of Bologna's online portal after applying for admission",
+        "Upload the required documents, including transcripts and any financial documentation requested in the call"
+      ],
+      "sourceUrls": [
+        "https://www.unibo.it/en/study/study-grants-and-subsidies"
+      ]
+    },
+    {
+      "id": "koc-international",
+      "name": "Koç University International Student Scholarships",
+      "funder": "Koç University",
+      "category": "university-specific",
+      "countries": ["turkey"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Undergraduate merit awards ranging from 25% to 100% of tuition, while admitted graduate students typically receive a full tuition waiver and many programmes add a monthly stipend",
+      "eligibility": [
+        "International applicants, including Pakistanis, applying to Koç University's undergraduate or graduate programmes",
+        "Undergraduate candidates submit SAT, ACT, or IB results, with scholarships awarded by admission merit ranking",
+        "Graduate applicants are evaluated for tuition waivers and stipends as part of the admission decision"
+      ],
+      "deadline": "Applications follow Koç University's admission calendar, with international undergraduate rounds typically closing in summer (approx.)",
+      "howToApply": [
+        "Apply online through Koç University's international admission portal for the chosen programme",
+        "Submit SAT/ACT/IB or graduate test results, transcripts, and English proficiency evidence; scholarship evaluation is automatic with admission"
+      ],
+      "sourceUrls": [
+        "https://international.ku.edu.tr/scholarships/overview/"
+      ]
+    },
+    {
+      "id": "sabanci-graduate",
+      "name": "Sabancı University Graduate Scholarships",
+      "funder": "Sabancı University",
+      "category": "university-specific",
+      "countries": ["turkey"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "A 100% tuition exemption for admitted graduate students; Full Scholarship holders also receive a monthly stipend (around TRY 43,500 for master's and TRY 67,500 for doctoral students in 2026-27), free dormitory accommodation, and private health insurance",
+      "eligibility": [
+        "International applicants, including Pakistanis, admitted to Sabancı University's master's or PhD programmes",
+        "All admitted graduate students receive the tuition exemption, while full scholarships with stipends are awarded by admission merit ranking",
+        "Evaluation is performed automatically with the graduate admission application"
+      ],
+      "deadline": "Graduate applications are reviewed in periodic admission rounds; check Sabancı University's graduate admissions calendar for each programme (approx.)",
+      "howToApply": [
+        "Apply to a Sabancı University graduate programme online with transcripts, references, and English proficiency evidence",
+        "No separate scholarship form is required, as awards are evaluated during the admission process"
+      ],
+      "sourceUrls": [
+        "https://www.sabanciuniv.edu/en/graduate-scholarships"
+      ]
+    },
+    {
+      "id": "tcd-global-excellence",
+      "name": "Trinity College Dublin Global Excellence Scholarship",
+      "funder": "Trinity College Dublin",
+      "category": "university-specific",
+      "countries": ["ireland"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A one-time reduction of EUR 2,000 to EUR 5,000 towards the tuition fees of a full-time postgraduate taught programme, with the amount varying by applicant region",
+      "eligibility": [
+        "Non-EU applicants, including Pakistanis, holding an offer for an eligible full-time postgraduate taught programme at Trinity",
+        "Several course areas, including business, engineering, natural sciences, computer science, and statistics, are excluded; check the eligible course list on the scholarship page",
+        "Only a limited number of awards are made each year, with selection based on academic excellence"
+      ],
+      "deadline": "Regional application deadlines apply, typically falling between April and July for September entry; check the current dates on the scholarship page (approx.)",
+      "howToApply": [
+        "Apply for and receive an offer for an eligible full-time postgraduate taught programme at Trinity",
+        "Submit the Global Excellence Scholarship application through Trinity's applicant system before the regional deadline"
+      ],
+      "sourceUrls": [
+        "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"
+      ]
+    },
+    {
+      "id": "ucd-global-excellence",
+      "name": "UCD Global Excellence Scholarship",
+      "funder": "University College Dublin",
+      "category": "university-specific",
+      "countries": ["ireland"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A limited number of 100% and 50% tuition fee reductions for high-achieving non-EU applicants to full-time undergraduate and graduate taught programmes",
+      "eligibility": [
+        "Non-EU applicants, including Pakistanis, applying for full-time undergraduate or graduate taught programmes at UCD",
+        "An excellent academic record, with awards made by UCD's selection panels for each programme area",
+        "The scholarship applies to tuition fees only, and the number of awards is limited"
+      ],
+      "deadline": "Applications typically follow UCD's offer rounds, with deadlines in spring or early summer for September entry (approx.)",
+      "howToApply": [
+        "Apply for admission to a full-time UCD programme and receive an offer",
+        "Follow the scholarship application instructions published for your programme on UCD's website"
+      ],
+      "sourceUrls": [
+        "https://www.ucd.ie/global/study-at-ucd/scholarshipsfinances/scholarships/globalexcellencescholarships/"
+      ]
+    },
+    {
+      "id": "imperial-presidents-phd",
+      "name": "President's PhD Scholarships at Imperial College London",
+      "funder": "Imperial College London",
+      "category": "university-specific",
+      "countries": ["uk"],
+      "level": "phd",
+      "coverage": "full",
+      "coverageDetail": "Full tuition fees for up to 3.5 years of doctoral study, a stipend of GBP 26,500 per year (2026-27 rate), and GBP 2,000 per year for consumables in the early years",
+      "eligibility": [
+        "Applicants of any nationality, including Pakistanis, applying for a full-time PhD at Imperial College London",
+        "A first-class UK degree or international equivalent, or an outstanding master's-level qualification",
+        "Candidates must hold or be applying for a PhD place at Imperial by the scholarship deadline"
+      ],
+      "deadline": "Scholarship applications have set deadlines across the admissions cycle, typically from late autumn onwards; check Imperial's scholarship page (approx.)",
+      "howToApply": [
+        "Apply for admission to a full-time PhD programme at Imperial through the online admissions system",
+        "Indicate during the PhD application that you wish to be considered for the President's PhD Scholarships and submit by the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/scholarships/presidents-phd-scholarships/"
+      ]
+    },
+    {
+      "id": "bocconi-merit-award",
+      "name": "Bocconi Graduate Merit Awards",
+      "funder": "Bocconi University",
+      "category": "university-specific",
+      "countries": ["italy"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A 100% waiver on Bocconi's ordinary academic tuition and fees for the entire legal duration of the MSc programme, awarded with first-year admission and renewed subject to merit requirements",
+      "eligibility": [
+        "First-year graduate applicants to Bocconi MSc programmes for the 2026-27 academic year, including international applicants from Pakistan",
+        "Selection is based on the admission application dossier; a separate scholarship application is not required",
+        "Automatic renewal requires meeting enrolment deadlines and earning at least 50 credits by the start of the second year"
+      ],
+      "deadline": "Awards are allocated with the admission rounds, with most given in the earliest relevant rounds; check Bocconi's admission round deadlines (approx.)",
+      "howToApply": [
+        "Apply for admission to a Bocconi MSc programme through the online application portal",
+        "Complete the online scholarship acceptance procedure by the enrolment deadline if an award is communicated with the admission result"
+      ],
+      "sourceUrls": [
+        "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/funding/bocconi-graduate-merit-awards-ay-2026-27"
+      ]
+    },
+    {
+      "id": "vilnius-tuition-waiver",
+      "name": "Vilnius University Tuition Fee Waiver for Master's Students",
+      "funder": "Vilnius University",
+      "category": "university-specific",
+      "countries": ["lithuania"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A full tuition fee waiver awarded to the five most motivated non-EU/EEA applicants to English- or Russian-taught master's programmes; living costs are not covered",
+      "eligibility": [
+        "Non-EU/EEA applicants, including Pakistanis, applying for full-time English- or Russian-taught master's studies at Vilnius University",
+        "Motivation demonstrated through the admission interview, as only five waivers are awarded per year",
+        "Applicants apply through Vilnius University's central admission system (apply.vu.lt)"
+      ],
+      "deadline": "Applications typically close around 1 April for the September intake, with motivation interviews held in May (approx.)",
+      "howToApply": [
+        "Apply for a master's programme through apply.vu.lt and tick the tuition fee waiver option in the application",
+        "Attend the motivation interview if shortlisted for the waiver"
+      ],
+      "sourceUrls": [
+        "https://www.vu.lt/en/students/services-for-students/finance/tuition-fee-waiver-for-full-time-master-degree-studies"
+      ]
+    },
+    {
+      "id": "postech-ta-ra",
+      "name": "POSTECH Teaching and Research Assistant Scholarships",
+      "funder": "Pohang University of Science and Technology (POSTECH)",
+      "category": "university-specific",
+      "countries": ["south-korea"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Monthly support combining a tuition waiver and a living allowance, totalling around KRW 1,850,000 per month for master's students and KRW 2,200,000 per month for PhD students in 2026, with amounts varying by department and advisor",
+      "eligibility": [
+        "International graduate applicants, including Pakistanis, admitted to POSTECH's master's or PhD programmes",
+        "Appointment as a teaching or research assistant under a professor's research programme",
+        "Satisfactory academic progress and performance of assistantship duties to maintain the award"
+      ],
+      "deadline": "POSTECH runs graduate admission rounds for spring and autumn intakes; check the admissions calendar on the POSTECH website (approx.)",
+      "howToApply": [
+        "Apply for POSTECH graduate admission through the online application system",
+        "Discuss assistantship funding with the admitting department and advisor, as awards are administered at department level"
+      ],
+      "sourceUrls": [
+        "https://adm-g.postech.ac.kr/ENG/graduate-info/support-policy/"
+      ]
+    },
+    {
+      "id": "great-scholarships",
+      "name": "GREAT Scholarships for Pakistan",
+      "funder": "British Council and the GREAT Britain Campaign with participating UK universities",
+      "category": "merit-based",
+      "countries": ["uk"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A minimum of GBP 10,000 towards the tuition fees of a one-year taught master's programme at a participating UK university",
+      "eligibility": [
+        "Pakistani passport holders applying for a one-year taught master's at a participating UK university, including universities with dedicated GREAT Scholarships for Pakistan",
+        "An offer from a participating university and satisfaction of its entry requirements",
+        "Motivation and academic merit as assessed by the participating university"
+      ],
+      "deadline": "Each participating university sets its own deadline, typically in spring for September entry; check the university's scholarship page (approx.)",
+      "howToApply": [
+        "Choose a participating university from the British Council's GREAT Scholarships list, including the Pakistan-specific slots",
+        "Apply directly to the university for admission and follow its scholarship application instructions"
+      ],
+      "sourceUrls": [
+        "https://study-uk.britishcouncil.org/scholarship-funding/great-scholarships",
+        "https://www.britishcouncil.pk/study-uk/scholarships-funding/great-scholarships-pakistan"
+      ]
+    },
+    {
+      "id": "amsterdam-merit",
+      "name": "Amsterdam Merit Scholarship (AMS)",
+      "funder": "University of Amsterdam",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A scholarship towards tuition fees for outstanding non-EU/EEA students, with the amount and selection criteria set by each faculty or graduate school",
+      "eligibility": [
+        "Students who hold a non-EU/EEA passport, including Pakistanis, and have applied for a degree programme at the University of Amsterdam",
+        "Outstanding academic results in previous education",
+        "Applications are submitted to the Admissions Offices of the Graduate Schools, with deadlines differing per faculty"
+      ],
+      "deadline": "Deadlines differ per faculty or graduate school; check the relevant faculty's scholarship page for the current academic year (approx.)",
+      "howToApply": [
+        "Apply for admission to an eligible University of Amsterdam degree programme first",
+        "Submit the Amsterdam Merit Scholarship application to the relevant graduate school's admissions office by its deadline"
+      ],
+      "sourceUrls": [
+        "https://www.uva.nl/en/education/fees-and-funding/masters-scholarships-and-loans/amsterdam-merit-scholarship/amsterdam-merit-scholarship.html"
+      ]
+    },
+    {
+      "id": "twente-uts",
+      "name": "University of Twente Scholarship (UTS)",
+      "funder": "University of Twente",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "Between EUR 3,000 and EUR 22,000 for one year of a master's programme, with renewal for a second year possible if the scholar averages a 7 out of 10 and completes half of the yearly credits",
+      "eligibility": [
+        "Students from a defined list of eligible countries, which includes Pakistan, applying for a qualifying master's at the University of Twente",
+        "Ranking in roughly the best 5-10% of the graduating class, with English results such as IELTS 6.5 or TOEFL iBT 90",
+        "Not eligible for a Dutch study grant; EU/EEA students and pre-Master and ITC faculty programmes are excluded"
+      ],
+      "deadline": "The application form typically opens in mid-October and closes on 1 April for the following September intake, with results announced in early May (approx.)",
+      "howToApply": [
+        "Apply for provisional or full admission to a Twente master's programme and receive a student number",
+        "Complete the University of Twente Scholarship application form in the student portal before the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/"
+      ]
+    },
+    {
+      "id": "radboud-scholarship",
+      "name": "Radboud Scholarship Programme",
+      "funder": "Radboud University",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "Reduction of the institutional tuition fee to the Dutch statutory fee level (roughly EUR 2,700 instead of around EUR 18,000) plus coverage of visa, residence permit, and health and liability insurance; living costs are not covered",
+      "eligibility": [
+        "Non-EU/EEA students, including Pakistanis, holding a conditional or unconditional admission offer for an eligible English-taught master's at Radboud University",
+        "Strong academic performance making the candidate one of the top applicants for the programme",
+        "Compliance with all Dutch visa requirements for study"
+      ],
+      "deadline": "Applications typically close around 31 January for the September intake (approx.)",
+      "howToApply": [
+        "Apply for admission to an eligible Radboud master's via the university's online application system (OSIRIS)",
+        "Indicate interest in the scholarship in the application and submit two reference letters and a CV"
+      ],
+      "sourceUrls": [
+        "https://www.ru.nl/en/education/scholarships/radboud-scholarship-programme"
+      ]
+    },
+    {
+      "id": "maastricht-nl-high-potential",
+      "name": "Maastricht University NL-High Potential Scholarship",
+      "funder": "Maastricht University with the Dutch Ministry of Education, Culture and Science",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "full",
+      "coverageDetail": "Full tuition, a living allowance of EUR 1,550 per month for 13 or 25 months, health and liability insurance, visa expenses, and pre-arrival support to Maastricht; airfare is not included",
+      "eligibility": [
+        "Non-EU/EEA nationals, including Pakistanis, applying for a full-time one- or two-year master's at Maastricht University",
+        "Age 35 or younger on 1 September of the intake year and a GPA of at least 7.5 out of 10 (about 75% or a 3.0 out of 4.0)",
+        "No previous degree-seeking study in the Netherlands and not already holding another scholarship for the programme"
+      ],
+      "deadline": "The application window typically runs from October to 1 February for the next academic year, with the master's application completed by early December (approx.)",
+      "howToApply": [
+        "Register for the master's programme in Studielink and complete the faculty application to receive a student ID",
+        "Submit the scholarship application in the university portal with a CV, motivation letter, proof of GPA, and references"
+      ],
+      "sourceUrls": [
+        "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/maastricht-university-nl-high"
+      ]
+    },
+    {
+      "id": "vu-fellowship-vufp",
+      "name": "VU Fellowship Programme (VUFP)",
+      "funder": "Vrije Universiteit Amsterdam",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "A merit-based tuition fee waiver for an eligible master's programme; the fellowship does not include a living allowance and can be combined with the NL Scholarship, which contributes towards living costs",
+      "eligibility": [
+        "Students from non-EU/EEA countries who pay the higher institutional tuition fee, including Pakistanis",
+        "Applicants holding an offer for an eligible English-taught master's programme at VU Amsterdam",
+        "Excellent academic results in previous education"
+      ],
+      "deadline": "Applications typically close around 1 February for the September intake (approx.)",
+      "howToApply": [
+        "Apply for admission to an eligible VU Amsterdam master's programme",
+        "Complete the VUFP scholarship application in the university's portal with the required documents by the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.vu.nl/en/education/more-about/incoming-master-scholarships"
+      ]
+    },
+    {
+      "id": "leiden-lexs",
+      "name": "Leiden Excellence Scholarship (LExS)",
+      "funder": "Leiden University",
+      "category": "merit-based",
+      "countries": ["netherlands"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "Tuition awards of EUR 10,000, EUR 15,000, or the full institutional fee minus the statutory fee, depending on the faculty and award tier; living costs are not covered",
+      "eligibility": [
+        "Students holding non-EU/EEA passports, including Pakistanis, who are not eligible for Dutch study finance",
+        "Admission to a full-time master's programme at Leiden University",
+        "Excellent academic record; the scholarship can only be combined with certain other awards"
+      ],
+      "deadline": "For September intake, applications typically close around 1 February; for February intake, around 1 October (approx.)",
+      "howToApply": [
+        "Apply for admission to a Leiden master's programme through the university's online application portal",
+        "Indicate interest in the LExS and complete the scholarship application steps in the portal by the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs"
+      ]
+    },
+    {
+      "id": "tsinghua-tuition-scholarship",
+      "name": "Tsinghua University Tuition Scholarships for International Graduate Students",
+      "funder": "Tsinghua University",
+      "category": "merit-based",
+      "countries": ["china"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Full or partial tuition-fee coverage for prospective full-time international graduate students, for example through the Tsinghua University Tuition Scholarship and the Beijing Government Scholarship",
+      "eligibility": [
+        "Prospective full-time international graduate students at Tsinghua University, including applicants from Pakistan",
+        "Applicants to master's or doctoral programmes who request a tuition scholarship as part of the admission application",
+        "Awards run for one academic year at a time and must be reapplied for annually on a competitive basis"
+      ],
+      "deadline": "Scholarship requests follow Tsinghua's graduate admission timeline, which has annual rounds; check the admissions calendar for current deadlines (approx.)",
+      "howToApply": [
+        "Apply for admission to a Tsinghua graduate programme through the online admission system for international students",
+        "Request a tuition scholarship during the admission process and reapply each year for continued support"
+      ],
+      "sourceUrls": [
+        "https://yz.tsinghua.edu.cn/en/info/1026/1047.htm"
+      ]
+    },
+    {
+      "id": "reach-oxford",
+      "name": "Reach Oxford Scholarship",
+      "funder": "University of Oxford",
+      "category": "need-based",
+      "countries": ["uk"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "University course fees, college fees, a living-costs grant, and one return airfare each year for the duration of an undergraduate degree",
+      "eligibility": [
+        "Nationals of eligible low-income countries, which include Pakistan, who have received an offer for an undergraduate course at Oxford",
+        "Applicants must be unable to secure funding for undergraduate study by other means",
+        "The scheme considers academic merit and financial need together, with only around two or three awards made each year"
+      ],
+      "deadline": "Eligible offer-holders are considered through Oxford's undergraduate scholarship process; check the Reach Oxford page for the current application deadline (approx.)",
+      "howToApply": [
+        "Apply for an undergraduate course at Oxford through UCAS by the mid-October deadline",
+        "Complete Oxford's scholarship application process for offer-holders to be considered for the Reach Oxford Scholarship"
+      ],
+      "sourceUrls": [
+        "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"
+      ]
+    },
+    {
+      "id": "ucl-global-masters",
+      "name": "UCL Global Masters Scholarship",
+      "funder": "University College London",
+      "category": "need-based",
+      "countries": ["uk"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "GBP 15,000 towards a full-time master's degree, applied first to fees with any remainder towards maintenance; the amount may be split across two-year programmes",
+      "eligibility": [
+        "Applicants eligible to pay the overseas fee rate, including Pakistanis, from a lower income background",
+        "An admission application for a full-time master's at UCL for the current intake; distance-learning programmes are not eligible",
+        "Shortlisted candidates must provide evidence of their financial circumstances"
+      ],
+      "deadline": "The scholarship deadline typically falls in early May, with shortlisting in mid-May and results by late June (approx.)",
+      "howToApply": [
+        "Submit the admission application for a full-time UCL master's programme",
+        "Complete the UCL Global Masters Scholarship online application and provide financial evidence if shortlisted"
+      ],
+      "sourceUrls": [
+        "https://www.ucl.ac.uk/scholarships/ucl-global-masters-scholarship"
+      ]
+    },
+    {
+      "id": "nottingham-developing-solutions",
+      "name": "Developing Solutions Scholarships (University of Nottingham)",
+      "funder": "University of Nottingham",
+      "category": "need-based",
+      "countries": ["uk"],
+      "level": "masters",
+      "coverage": "partial",
+      "coverageDetail": "50% or 100% of the tuition fee for a full-time master's programme, depending on the award level granted",
+      "eligibility": [
+        "Applicants domiciled in Africa, India, or selected Commonwealth countries including Pakistan, classed as overseas students for fee purposes",
+        "An offer for a full-time master's starting in September in the Faculty of Engineering, Medicine and Health Sciences, Science, or Social Sciences",
+        "The scholarship is deducted from the tuition fee and cannot usually be combined with other university scholarships"
+      ],
+      "deadline": "Applications typically close in spring, with outcomes announced by the end of May for September entry (approx.)",
+      "howToApply": [
+        "Apply for and receive an offer for an eligible full-time master's programme at the University of Nottingham",
+        "Submit the Developing Solutions scholarship application through the university's online scholarship system by the deadline"
+      ],
+      "sourceUrls": [
+        "https://www.nottingham.ac.uk/pgstudy/funding/developing-solutions-masters-scholarship"
+      ]
+    },
+    {
+      "id": "eric-bleumink",
+      "name": "Eric Bleumink Fund Scholarships",
+      "funder": "University of Groningen (Eric Bleumink Fund)",
+      "category": "need-based",
+      "countries": ["netherlands"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Tuition fees, international travel, subsistence, books, and health insurance for talented students from developing countries taking a master's or PhD programme at the University of Groningen",
+      "eligibility": [
+        "Students from developing countries, including Pakistan, admitted to a University of Groningen master's or PhD programme",
+        "Candidates are nominated by the admissions office or faculty; direct applications are not accepted",
+        "Master's applicants must have submitted a complete programme application before 1 December"
+      ],
+      "deadline": "Master's applications should be complete by around 1 December for September intake, with nominations reviewed thereafter (approx.)",
+      "howToApply": [
+        "Apply for admission to a Groningen master's or PhD programme by the required date",
+        "Suitable candidates are informed by the Admissions Office if they are being nominated for the fund; no direct application exists"
+      ],
+      "sourceUrls": [
+        "https://www.rug.nl/education/scholarships/eric-bleumink-fellowship?lang=en"
+      ]
+    },
+    {
+      "id": "charles-wallace-pakistan",
+      "name": "Charles Wallace Visiting Fellowship Programme (Pakistan)",
+      "funder": "Charles Wallace Pakistan Trust, administered by the British Council",
+      "category": "need-based",
+      "countries": ["uk"],
+      "level": "phd",
+      "coverage": "partial",
+      "coverageDetail": "A monthly stipend of GBP 1,600 plus a grant of GBP 1,250 towards travel and visa costs for a short research or professional visit to a UK institution",
+      "eligibility": [
+        "Pakistani nationals currently residing in Pakistan, typically aged between 30 and 55",
+        "A written invitation or acceptance from a UK host institution for the planned visit",
+        "Mid-career academics, researchers, or professionals with a clear plan for how the visit advances their work in Pakistan"
+      ],
+      "deadline": "The programme runs periodically, often every other year; check the British Council Pakistan website for the current call (approx.)",
+      "howToApply": [
+        "Secure a written invitation from a UK host institution for the proposed visit",
+        "Submit the application through the British Council Pakistan's portal when the call is open, with a CV, visit plan, and host invitation"
+      ],
+      "sourceUrls": [
+        "https://www.britishcouncil.pk/study-uk/scholarships-funding/charles-wallace-visiting-fellowship-programme"
+      ]
+    },
+    {
+      "id": "harvard-financial-aid",
+      "name": "Harvard College Financial Aid for International Students",
+      "funder": "Harvard University (Harvard College)",
+      "category": "need-based",
+      "countries": ["usa"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "Need-based grant aid meeting 100% of demonstrated financial need; families earning under USD 100,000 typically pay nothing, and aid comes from scholarship grants plus campus employment rather than required loans",
+      "eligibility": [
+        "International applicants, including Pakistanis, admitted to Harvard College's undergraduate programme; admissions are need-blind and aid matches what US students receive",
+        "Demonstrated financial need assessed from family financial documents",
+        "No merit scholarships exist at Harvard College; aid is awarded solely on the basis of need"
+      ],
+      "deadline": "Financial aid forms accompany the admission application, with deadlines in early November for early action and early January for regular admission (approx.)",
+      "howToApply": [
+        "Apply for admission to Harvard College through the Common Application or Coalition Application",
+        "Submit the required financial aid forms, including the CSS Profile and family income documentation, by the published deadlines"
+      ],
+      "sourceUrls": [
+        "https://college.harvard.edu/financial-aid/how-aid-works"
+      ]
+    }
+  ]
+}

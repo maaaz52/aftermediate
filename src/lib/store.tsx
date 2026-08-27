@@ -3,11 +3,23 @@
 import * as React from "react";
 import type { Marks, QuizAnswers, Stream } from "@/lib/types";
 
+export interface EducationEntry {
+  id: string;
+  degree: string;
+  institution: string;
+  year: string;
+  grade: string;
+}
+
 export interface StudentProfile {
   name: string;
+  avatar: string;
+  bio: string;
   stream: Stream | null;
   marks: Marks;
   interests: string[];
+  skills: string[];
+  education: EducationEntry[];
   city: string;
   budget: string;
   quiz: QuizAnswers;
@@ -17,6 +29,8 @@ export interface StudentProfile {
 
 const defaultProfile: StudentProfile = {
   name: "",
+  avatar: "",
+  bio: "",
   stream: null,
   marks: {
     matricObtained: 0,
@@ -25,6 +39,8 @@ const defaultProfile: StudentProfile = {
     fscTotal: 1100,
   },
   interests: [],
+  skills: [],
+  education: [],
   city: "",
   budget: "",
   quiz: {},

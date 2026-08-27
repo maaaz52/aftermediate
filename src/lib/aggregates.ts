@@ -136,3 +136,27 @@ export function worthScore(input: {
     ],
   };
 }
+
+export interface Standing {
+  value: number; // 0-100 weighted score
+  percentile: number; // approximate national percentile rank
+  label: string; // "top 12%" style band
+}
+
+/**
+ * Coarse "overall standing": FSc 60% + Matric 40%, marks only.
+ * Entry test intentionally ignored — this is the pre-test ballpark.
+ */
+export function overallStanding(m: Marks): Standing {
+  const fscPct = pct(m.fscObtained, m.fscTotal);
+  const matPct = pct(m.matricObtained, m.matricTotal);
+  const value = fscPct * 0.6 + matPct * 0.4;
+
+  if (value >= 95) return { value, percentile: 99, label: "top 1%" };
+  if (value >= 90) return { value, percentile: 95, label: "top 5%" };
+  if (value >= 85) return { value, percentile: 90, label: "top 10%" };
+  if (value >= 80) return { value, percentile: 80, label: "top 20%" };
+  if (value >= 70) return { value, percentile: 60, label: "top 40%" };
+  if (value >= 60) return { value, percentile: 40, label: "top 60%" };
+  return { value, percentile: 20, label: "top 80%" };
+}
