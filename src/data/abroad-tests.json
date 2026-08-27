@@ -1,0 +1,585 @@
+{
+  "dataYear": 2026,
+  "tests": [
+    {
+      "id": "ielts",
+      "name": "IELTS Academic",
+      "short": "IELTS",
+      "kind": "english",
+      "countries": ["uk", "usa", "canada", "australia", "germany", "netherlands", "ireland", "new-zealand", "uae", "saudi-arabia", "japan", "south-korea", "france", "italy", "spain", "turkey", "china", "malaysia", "qatar", "kuwait", "bahrain", "oman", "poland", "czech-republic"],
+      "pattern": [
+        { "section": "Listening", "content": "4 recordings, 40 questions", "duration": "30 min" },
+        { "section": "Reading", "content": "3 passages, 40 questions", "duration": "60 min" },
+        { "section": "Writing", "content": "Task 1 (graph) + Task 2 (essay)", "duration": "60 min" },
+        { "section": "Speaking", "content": "Face-to-face interview, 3 parts", "duration": "11–14 min" }
+      ],
+      "feePkr": 59000,
+      "feeNote": "Varies by centre; PKR 59,000 typical in Pakistan in 2026",
+      "frequency": "Multiple times per month at British Council / IDP centres",
+      "validity": "2 years",
+      "competitiveScore": "7.0+ for top universities; 6.5 minimum for most programmes",
+      "prep": {
+        "tips": [
+          "Practice with official Cambridge IELTS books (14–19)",
+          "Record yourself speaking and compare to band-7 samples",
+          "Read BBC News and The Guardian daily for reading speed",
+          "Write timed essays and get feedback from teachers"
+        ],
+        "resources": [
+          { "label": "British Council IELTS Prep", "url": "https://www.britishcouncil.org/exam/ielts/prepare" },
+          { "label": "IELTS.org Official Practice", "url": "https://www.ielts.org/about-ielts/how-to-prepare" }
+        ]
+      },
+      "sourceUrls": ["https://www.ielts.org/", "https://www.britishcouncil.org/exam/ielts"]
+    },
+    {
+      "id": "toefl",
+      "name": "TOEFL iBT",
+      "short": "TOEFL",
+      "kind": "english",
+      "countries": ["usa", "canada", "uk", "australia", "germany", "japan", "south-korea", "france", "italy", "netherlands", "ireland", "new-zealand", "china", "malaysia", "turkey", "poland", "czech-republic"],
+      "pattern": [
+        { "section": "Reading", "content": "3–4 passages, 30–40 questions", "duration": "54–72 min" },
+        { "section": "Listening", "content": "3–4 lectures + 2–3 conversations", "duration": "41–57 min" },
+        { "section": "Speaking", "content": "4 tasks (integrated reading/listening/speaking)", "duration": "17 min" },
+        { "section": "Writing", "content": "1 integrated task + 1 independent essay", "duration": "50 min" }
+      ],
+      "feePkr": 62000,
+      "feeNote": "Approximately PKR 62,000 in Pakistan in 2026",
+      "frequency": "Monthly at ETS-authorized test centres",
+      "validity": "2 years",
+      "competitiveScore": "100+ out of 120 for top universities",
+      "prep": {
+        "tips": [
+          "Use official ETS TOEFL practice tests",
+          "Focus on note-taking for listening and speaking tasks",
+          "Practice integrated writing with 20-minute timed sessions",
+          "Build academic vocabulary with word lists"
+        ],
+        "resources": [
+          { "label": "ETS TOEFL Prep", "url": "https://www.ets.org/toefl/test-takers/prepare.html" },
+          { "label": "TOEFL Go App", "url": "https://www.ets.org/toefl/test-takers/prepare/toefl-go.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.ets.org/toefl"]
+    },
+    {
+      "id": "pte",
+      "name": "PTE Academic",
+      "short": "PTE",
+      "kind": "english",
+      "countries": ["uk", "australia", "new-zealand", "canada", "usa", "germany", "ireland"],
+      "pattern": [
+        { "section": "Speaking & Writing", "content": "Read aloud, repeat sentence, essay, summarize", "duration": "54–67 min" },
+        { "section": "Reading", "content": "Fill in blanks, reorder paragraphs, multiple choice", "duration": "29–30 min" },
+        { "section": "Listening", "content": "Summarize spoken text, fill in blanks, highlight correct summary", "duration": "30–43 min" }
+      ],
+      "feePkr": 48000,
+      "feeNote": "Approximately PKR 48,000 in Pakistan in 2026",
+      "frequency": "Multiple times per month at Pearson VUE centres",
+      "validity": "2 years",
+      "competitiveScore": "65+ for most universities; 79+ for competitive programmes",
+      "prep": {
+        "tips": [
+          "Use the official PTE practice app for scoring practice",
+          "Focus on fluency and pronunciation for speaking tasks",
+          "Practice timed essay writing (20 minutes, 200–300 words)",
+          "Review academic vocabulary and collocations"
+        ],
+        "resources": [
+          { "label": "PTE Official Practice", "url": "https://www.pearsonpte.com/preparation" },
+          { "label": "PTE Study App", "url": "https://www.pearsonpte.com/test-takers/prepare" }
+        ]
+      },
+      "sourceUrls": ["https://www.pearsonpte.com/"]
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo English Test",
+      "short": "Duolingo",
+      "kind": "english",
+      "countries": ["usa", "canada", "uk", "australia", "germany", "ireland", "netherlands", "japan", "south-korea", "france", "italy", "spain", "turkey", "china", "malaysia", "poland"],
+      "pattern": [
+        { "section": "Adaptive Test", "content": "Reading, writing, listening, speaking questions", "duration": "45 min" },
+        { "section": "Video Interview", "content": "Record spoken responses to open-ended prompts", "duration": "5 min" },
+        { "section": "Writing Sample", "content": "Write about a given topic", "duration": "5 min" }
+      ],
+      "feePkr": 22000,
+      "feeNote": "Approximately PKR 22,000; taken online from home",
+      "frequency": "Available 24/7, taken online from home",
+      "validity": "2 years",
+      "competitiveScore": "110+ out of 160 for competitive programmes",
+      "prep": {
+        "tips": [
+          "Take the free practice test on the Duolingo website",
+          "Improve quick reading and listening comprehension",
+          "Practice speaking clearly into a microphone",
+          "Write structured paragraphs with clear topic sentences"
+        ],
+        "resources": [
+          { "label": "Duolingo Test Prep", "url": "https://englishtest.duolingo.com/preparation" },
+          { "label": "Duolingo Test Guide", "url": "https://englishtest.duolingo.com/guide" }
+        ]
+      },
+      "sourceUrls": ["https://englishtest.duolingo.com/"]
+    },
+    {
+      "id": "sat",
+      "name": "SAT",
+      "short": "SAT",
+      "kind": "aptitude",
+      "countries": ["usa", "canada", "uk", "australia", "germany", "netherlands", "japan", "south-korea", "singapore", "ireland", "new-zealand", "china", "malaysia", "turkey", "poland", "czech-republic", "france", "italy", "spain"],
+      "pattern": [
+        { "section": "Evidence-Based Reading & Writing", "content": "52 reading questions + 44 writing questions", "duration": "64 min" },
+        { "section": "Math", "content": "58 questions (calculator + no-calculator)", "duration": "80 min" }
+      ],
+      "feePkr": 50000,
+      "feeNote": "Approximately PKR 50,000 for international test-takers",
+      "frequency": "Administered 5–7 times per year at international centres",
+      "validity": "5 years",
+      "competitiveScore": "1400+ out of 1600 for top universities",
+      "prep": {
+        "tips": [
+          "Use Khan Academy's free official SAT practice",
+          "Take full-length timed practice tests weekly",
+          "Review math formulas and grammar rules thoroughly",
+          "Read challenging non-fiction texts regularly"
+        ],
+        "resources": [
+          { "label": "Khan Academy SAT Prep", "url": "https://www.khanacademy.org/SAT" },
+          { "label": "College Board SAT Practice", "url": "https://satsuite.collegeboard.org/sat/preparation" }
+        ]
+      },
+      "sourceUrls": ["https://satsuite.collegeboard.org/"]
+    },
+    {
+      "id": "act",
+      "name": "ACT",
+      "short": "ACT",
+      "kind": "aptitude",
+      "countries": ["usa", "canada", "uk", "japan", "south-korea", "singapore", "china"],
+      "pattern": [
+        { "section": "English", "content": "75 grammar and rhetoric questions", "duration": "45 min" },
+        { "section": "Math", "content": "60 questions (calculator allowed)", "duration": "60 min" },
+        { "section": "Reading", "content": "4 passages, 40 questions", "duration": "35 min" },
+        { "section": "Science", "content": "6 passages, 40 questions", "duration": "35 min" }
+      ],
+      "feePkr": 48000,
+      "feeNote": "Approximately PKR 48,000 for international test-takers",
+      "frequency": "7 times per year at international centres",
+      "validity": "5 years",
+      "competitiveScore": "30+ out of 36 for competitive universities",
+      "prep": {
+        "tips": [
+          "Use The Official ACT Prep Guide",
+          "Practice science passages — focus on data interpretation",
+          "Time yourself strictly on reading sections",
+          "Review algebra and geometry fundamentals"
+        ],
+        "resources": [
+          { "label": "ACT Official Prep", "url": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html" },
+          { "label": "ACT Academy", "url": "https://www.act.org/content/act/en/products-and-services/act-academy.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.act.org/"]
+    },
+    {
+      "id": "gre",
+      "name": "GRE General Test",
+      "short": "GRE",
+      "kind": "graduate",
+      "countries": ["usa", "canada", "uk", "germany", "australia", "netherlands", "japan", "south-korea", "france", "italy", "ireland", "new-zealand", "china", "turkey", "poland"],
+      "pattern": [
+        { "section": "Analytical Writing", "content": "1 Issue task + 1 Argument task", "duration": "60 min" },
+        { "section": "Verbal Reasoning", "content": "2 sections, 27 questions each", "duration": "41 min per section" },
+        { "section": "Quantitative Reasoning", "content": "2 sections, 27 questions each", "duration": "47 min per section" }
+      ],
+      "feePkr": 65000,
+      "feeNote": "Approximately PKR 65,000 for international test-takers",
+      "frequency": "Available year-round at Prometric and other test centres",
+      "validity": "5 years",
+      "competitiveScore": "320+ out of 340 for top graduate programmes",
+      "prep": {
+        "tips": [
+          "Use the official ETS GRE Prep Guide",
+          "Focus on vocabulary building with flashcards",
+          "Practice data interpretation in quantitative section",
+          "Write timed analytical essays and get peer feedback"
+        ],
+        "resources": [
+          { "label": "ETS GRE Prep", "url": "https://www.ets.org/gre/test-takers/prepare.html" },
+          { "label": "PowerPrep Online", "url": "https://www.ets.org/gre/test-takers/prepare/powerprep-online.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.ets.org/gre"]
+    },
+    {
+      "id": "gmat",
+      "name": "GMAT Focus Edition",
+      "short": "GMAT",
+      "kind": "graduate",
+      "countries": ["usa", "uk", "canada", "australia", "germany", "netherlands", "singapore", "japan", "south-korea", "france", "italy", "ireland", "china", "uae"],
+      "pattern": [
+        { "section": "Quantitative Reasoning", "content": "21 problem-solving questions", "duration": "45 min" },
+        { "section": "Verbal Reasoning", "content": "23 reading comprehension + critical reasoning questions", "duration": "45 min" },
+        { "section": "Data Insights", "content": "20 data interpretation questions", "duration": "45 min" }
+      ],
+      "feePkr": 68000,
+      "feeNote": "Approximately PKR 68,000 for international test-takers",
+      "frequency": "Available year-round at Pearson VUE centres",
+      "validity": "5 years",
+      "competitiveScore": "700+ out of 805 for top MBA programmes",
+      "prep": {
+        "tips": [
+          "Use the official GMAT Official Guide books",
+          "Practice with GMAT Official Practice Exams",
+          "Focus on data interpretation for the new Data Insights section",
+          "Review grammar rules for sentence correction"
+        ],
+        "resources": [
+          { "label": "GMAT Official Prep", "url": "https://www.mba.com/exams/gmat/prepare" },
+          { "label": "GMAT Club Practice", "url": "https://gmatclub.com/" }
+        ]
+      },
+      "sourceUrls": ["https://www.mba.com/exams/gmat"]
+    },
+    {
+      "id": "testdaf",
+      "name": "TestDaF",
+      "short": "TestDaF",
+      "kind": "language",
+      "countries": ["germany", "austria", "switzerland"],
+      "pattern": [
+        { "section": "Lesen (Reading)", "content": "3 reading tasks with comprehension questions", "duration": "65 min" },
+        { "section": "Hören (Listening)", "content": "3 listening tasks with note-taking", "duration": "40 min" },
+        { "section": "Schreiben (Writing)", "content": "1 academic writing task", "duration": "60 min" },
+        { "section": "Sprechen (Speaking)", "content": "3 oral tasks recorded at a computer", "duration": "30 min" }
+      ],
+      "feePkr": 35000,
+      "feeNote": "Approximately PKR 35,000; administered at Goethe-Institut Pakistan",
+      "frequency": "6 times per year (March, May, June, July, October, November)",
+      "validity": "Indefinite for university admission purposes",
+      "competitiveScore": "TDN 4 or TDN 5 in all sections for competitive programmes",
+      "prep": {
+        "tips": [
+          "Take TestDaF practice tests from the official website",
+          "Focus on academic German vocabulary and formal writing",
+          "Practice speaking with recorded prompts",
+          "Attend Goethe-Institut preparatory courses"
+        ],
+        "resources": [
+          { "label": "TestDaF Official Prep", "url": "https://www.testdaf.de/en/preparation/" },
+          { "label": "Goethe-Institut Courses", "url": "https://www.goethe.de/en/spr/kur.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.testdaf.de/"]
+    },
+    {
+      "id": "goethe",
+      "name": "Goethe-Zertifikat",
+      "short": "Goethe",
+      "kind": "language",
+      "countries": ["germany", "austria", "switzerland"],
+      "pattern": [
+        { "section": "Lesen (Reading)", "content": "Multiple choice and matching tasks", "duration": "65 min" },
+        { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
+        { "section": "Schreiben (Writing)", "content": "2 writing tasks", "duration": "75 min" },
+        { "section": "Sprechen (Speaking)", "content": "2 speaking tasks in pairs", "duration": "15 min" }
+      ],
+      "feePkr": 30000,
+      "feeNote": "Approximately PKR 30,000; administered at Goethe-Institut Karachi and Lahore",
+      "frequency": "Multiple times per month at Goethe-Institut centres",
+      "validity": "Indefinite",
+      "competitiveScore": "B2 or C1 level required for most German university programmes",
+      "prep": {
+        "tips": [
+          "Use Goethe-Institut's official exam preparation materials",
+          "Practice with Modellsatz practice tests",
+          "Focus on formal writing and academic German",
+          "Attend Goethe-Institut language courses"
+        ],
+        "resources": [
+          { "label": "Goethe Exam Prep", "url": "https://www.goethe.de/en/spr/prf.html" },
+          { "label": "Goethe Practice Tests", "url": "https://www.goethe.de/en/spr/prf/modellsatz.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.goethe.de/en/spr/prf.html"]
+    },
+    {
+      "id": "osd",
+      "name": "ÖSD Zertifik",
+      "short": "ÖSD",
+      "kind": "language",
+      "countries": ["austria", "germany", "switzerland", "liechtenstein"],
+      "pattern": [
+        { "section": "Lesen (Reading)", "content": "Multiple choice and open tasks", "duration": "60 min" },
+        { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
+        { "section": "Schreiben (Writing)", "content": "2 writing tasks", "duration": "60 min" },
+        { "section": "Sprechen (Speaking)", "content": "2 speaking tasks", "duration": "15 min" }
+      ],
+      "feePkr": 28000,
+      "feeNote": "Approximately PKR 28,000; administered through ÖSD partner institutions",
+      "frequency": "Multiple times per year at ÖSD examination centres",
+      "validity": "Indefinite",
+      "competitiveScore": "B2 or C1 level required for Austrian and Swiss universities",
+      "prep": {
+        "tips": [
+          "Use official ÖSD practice materials",
+          "Focus on Austrian and Swiss German vocabulary",
+          "Practice formal and informal writing tasks",
+          "Review grammar structures at B2–C1 level"
+        ],
+        "resources": [
+          { "label": "ÖSD Official Prep", "url": "https://www.osd.at/en/preparation.html" },
+          { "label": "ÖSD Practice Tests", "url": "https://www.osd.at/en/uebungspruefungen.html" }
+        ]
+      },
+      "sourceUrls": ["https://www.osd.at/"]
+    },
+    {
+      "id": "cils",
+      "name": "CILS (Certificato di Italiano come Lingua Straniera)",
+      "short": "CILS",
+      "kind": "language",
+      "countries": ["italy"],
+      "pattern": [
+        { "section": "Listening", "content": "Comprehension of audio texts", "duration": "varies by level" },
+        { "section": "Reading", "content": "Comprehension of written texts", "duration": "varies by level" },
+        { "section": "Grammar Analysis", "content": "Grammar and vocabulary tasks", "duration": "varies by level" },
+        { "section": "Writing", "content": "Written production tasks", "duration": "varies by level" },
+        { "section": "Speaking", "content": "Oral production tasks", "duration": "varies by level" }
+      ],
+      "feePkr": 25000,
+      "feeNote": "Approximately PKR 25,000; administered at University for Foreigners, Siena",
+      "frequency": "Twice per year (June and December) at authorized centres worldwide",
+      "validity": "Indefinite",
+      "competitiveScore": "B2 or C1 level for Italian university admission",
+      "prep": {
+        "tips": [
+          "Use the official CILS preparation materials",
+          "Focus on Italian academic vocabulary",
+          "Practice listening to Italian lectures and podcasts",
+          "Write formal essays in Italian"
+        ],
+        "resources": [
+          { "label": "CILS Official Prep", "url": "https://cils.unisi.it/en/exams/preparation" },
+          { "label": "Italian Language Learning", "url": "https://www.italianope.com/" }
+        ]
+      },
+      "sourceUrls": ["https://cils.unisi.it/"]
+    },
+    {
+      "id": "celi",
+      "name": "CELI (Certificato di Conoscenza della Lingua Italiana)",
+      "short": "CELI",
+      "kind": "language",
+      "countries": ["italy"],
+      "pattern": [
+        { "section": "Listening", "content": "Comprehension of audio texts", "duration": "30 min" },
+        { "section": "Reading", "content": "Comprehension of written texts", "duration": "varies by level" },
+        { "section": "Writing", "content": "Written production tasks", "duration": "varies by level" },
+        { "section": "Speaking", "content": "Oral production tasks", "duration": "varies by level" }
+      ],
+      "feePkr": 24000,
+      "feeNote": "Approximately PKR 24,000; administered at University for Foreigners, Perugia",
+      "frequency": "Twice per year (June and December) at authorized centres",
+      "validity": "Indefinite",
+      "competitiveScore": "B2 or C1 level for Italian university admission",
+      "prep": {
+        "tips": [
+          "Use official CELI practice materials from Perugia",
+          "Focus on Italian grammar at intermediate-advanced level",
+          "Practice Italian conversation with native speakers",
+          "Read Italian newspapers and academic journals"
+        ],
+        "resources": [
+          { "label": "CELI Official Prep", "url": "https://www.cefalunipa.org/en/celi-exam" },
+          { "label": "Italian Language Resources", "url": "https://www.italia.it/en/living-italian/language" }
+        ]
+      },
+      "sourceUrls": ["https://www.unistrapg.it/cecli"]
+    },
+    {
+      "id": "topik",
+      "name": "TOPIK (Test of Proficiency in Korean)",
+      "short": "TOPIK",
+      "kind": "language",
+      "countries": ["south-korea"],
+      "pattern": [
+        { "section": "Reading", "content": "Multiple choice questions on Korean grammar and vocabulary", "duration": "70 min" },
+        { "section": "Writing", "content": "Essay writing (TOPIK II only)", "duration": "60 min" },
+        { "section": "Listening", "content": "Comprehension of spoken Korean", "duration": "40 min" }
+      ],
+      "feePkr": 15000,
+      "feeNote": "Approximately PKR 15,000; administered at Korean Cultural Centres",
+      "frequency": "4 times per year (January, May, July, November)",
+      "validity": "Indefinite",
+      "competitiveScore": "Level 4 or above for Korean university admission",
+      "prep": {
+        "tips": [
+          "Use official TOPIK preparation books",
+          "Practice Korean reading comprehension daily",
+          "Watch Korean news and dramas with subtitles",
+          "Write practice essays on TOPIK past topics"
+        ],
+        "resources": [
+          { "label": "TOPIK Official Prep", "url": "https://www.topik.go.kr/uide/board/view.do" },
+          { "label": "TOPIK Study Guide", "url": "https://www.topikguide.com/" }
+        ]
+      },
+      "sourceUrls": ["https://www.topik.go.kr/"]
+    },
+    {
+      "id": "hsk",
+      "name": "HSK (Hanyu Shuiping Kaoshi)",
+      "short": "HSK",
+      "kind": "language",
+      "countries": ["china"],
+      "pattern": [
+        { "section": "Listening", "content": "Multiple choice listening comprehension", "duration": "varies by level" },
+        { "section": "Reading", "content": "Multiple choice reading comprehension", "duration": "varies by level" },
+        { "section": "Writing", "content": "Character writing (HSK 3+)", "duration": "varies by level" }
+      ],
+      "feePkr": 12000,
+      "feeNote": "Approximately PKR 12,000; administered at Confucius Institutes",
+      "frequency": "Multiple times per year at authorized test centres",
+      "validity": "2 years",
+      "competitiveScore": "Level 4 or above for Chinese university admission",
+      "prep": {
+        "tips": [
+          "Use official HSK practice books (Levels 1–6)",
+          "Practice Chinese character writing with flashcards",
+          "Listen to Chinese podcasts for listening practice",
+          "Take full-length HSK practice tests"
+        ],
+        "resources": [
+          { "label": "HSK Official Prep", "url": "https://www.chinesetest.cn/god465n97.html" },
+          { "label": "HSK Online Practice", "url": "https://www.hsk.academy/" }
+        ]
+      },
+      "sourceUrls": ["https://www.chinesetest.cn/"]
+    },
+    {
+      "id": "tr-yos",
+      "name": "TR-YÖS (Yabancı Uyruklu Öğrenci Sınavı)",
+      "short": "TR-YÖS",
+      "kind": "language",
+      "countries": ["turkey"],
+      "pattern": [
+        { "section": "Basic Learning Skills", "content": "Logic, mathematics, and abstract reasoning", "duration": "90 min" },
+        { "section": "Science", "content": "Physics, chemistry, biology questions", "duration": "varies by version" }
+      ],
+      "feePkr": 20000,
+      "feeNote": "Approximately PKR 20,000; administered at Turkish universities",
+      "frequency": "Multiple times per year at designated universities",
+      "validity": "Varies; typically 1 year",
+      "competitiveScore": "Score varies by university; 80+ for competitive programmes",
+      "prep": {
+        "tips": [
+          "Use official YÖS preparation materials",
+          "Focus on mathematical reasoning and logic",
+          "Practice with past YÖS exams",
+          "Review Turkish university admission requirements"
+        ],
+        "resources": [
+          { "label": "YÖS Official Info", "url": "https://www.yos.gov.tr/" },
+          { "label": "YÖS Practice Tests", "url": "https://www.yosmerkezi.com/" }
+        ]
+      },
+      "sourceUrls": ["https://www.yos.gov.tr/"]
+    },
+    {
+      "id": "tolc",
+      "name": "TOLC (Test OnLine CISIA)",
+      "short": "TOLC",
+      "kind": "aptitude",
+      "countries": ["italy"],
+      "pattern": [
+        { "section": "Logic", "content": "Verbal and numerical reasoning", "duration": "30 min" },
+        { "section": "Mathematics", "content": "Basic math and algebra", "duration": "30 min" },
+        { "section": "Reading Comprehension", "content": "English or Italian reading passages", "duration": "30 min" },
+        { "section": "Scientific Knowledge", "content": "Physics, chemistry, biology (some TOLC)", "duration": "30 min" }
+      ],
+      "feePkr": 18000,
+      "feeNote": "Approximately PKR 18,000; taken online from home",
+      "frequency": "Available multiple times per month online",
+      "validity": "1 year",
+      "competitiveScore": "Score varies by programme; 20+ for competitive courses",
+      "prep": {
+        "tips": [
+          "Use the CISIA official TOLC practice platform",
+          "Focus on logical reasoning and data interpretation",
+          "Review Italian academic vocabulary",
+          "Practice timed sections to build speed"
+        ],
+        "resources": [
+          { "label": "CISIA TOLC Prep", "url": "https://www.cisia.it/online-tests/home" },
+          { "label": "TOLC Practice", "url": "https://www.cisia.it/online-tests/TOLC" }
+        ]
+      },
+      "sourceUrls": ["https://www.cisia.it/"]
+    },
+    {
+      "id": "nt2",
+      "name": "NT2 (Nederlands als Tweede Taal)",
+      "short": "NT2",
+      "kind": "language",
+      "countries": ["netherlands", "belgium"],
+      "pattern": [
+        { "section": "Lezen (Reading)", "content": "Multiple choice and open questions", "duration": "varies by level" },
+        { "section": "Luisteren (Listening)", "content": "Audio comprehension questions", "duration": "varies by level" },
+        { "section": "Spreken (Speaking)", "content": "Oral tasks", "duration": "varies by level" },
+        { "section": "Schrijven (Writing)", "content": "Written production tasks", "duration": "varies by level" }
+      ],
+      "feePkr": 22000,
+      "feeNote": "Approximately PKR 22,000; administered at DUO examination centres",
+      "frequency": "Multiple times per year at authorized centres",
+      "validity": "Indefinite",
+      "competitiveScore": "B2 level (NT2-II) for Dutch university admission",
+      "prep": {
+        "tips": [
+          "Use official NT2 preparation books (Nt2 Stap 1 and Stap 2)",
+          "Practice Dutch reading comprehension daily",
+          "Watch Dutch news (NOS Journaal) with subtitles",
+          "Take NT2 practice exams"
+        ],
+        "resources": [
+          { "label": "NT2 Official Prep", "url": "https://www.nederlands-taalunitie.nl/nt2" },
+          { "label": "DUO NT2 Info", "url": "https://www.duo.nl/particulier/nt2/" }
+        ]
+      },
+      "sourceUrls": ["https://www.inburgering.nl/nt2-examen/"]
+    },
+    {
+      "id": "bipa",
+      "name": "BIPA (Bahasa Indonesia bagi Penutur Asing)",
+      "short": "BIPA",
+      "kind": "language",
+      "countries": ["indonesia"],
+      "pattern": [
+        { "section": "Mendengarkan (Listening)", "content": "Audio comprehension questions", "duration": "30 min" },
+        { "section": "Membaca (Reading)", "content": "Reading comprehension tasks", "duration": "60 min" },
+        { "section": "Menulis (Writing)", "content": "Written production tasks", "duration": "60 min" },
+        { "section": "Berbicara (Speaking)", "content": "Oral production tasks", "duration": "15–20 min" }
+      ],
+      "feePkr": 10000,
+      "feeNote": "Approximately PKR 10,000; administered at Indonesian universities and cultural centres",
+      "frequency": "Multiple times per year at authorized centres",
+      "validity": "2 years",
+      "competitiveScore": "Level B2 for Indonesian university admission",
+      "prep": {
+        "tips": [
+          "Use official BIPA preparation materials",
+          "Practice Indonesian daily conversation",
+          "Watch Indonesian TV shows and films",
+          "Write formal essays in Indonesian"
+        ],
+        "resources": [
+          { "label": "BIPA Official Info", "url": "https://bahasa.kemdikbud.go.id/bipa/" },
+          { "label": "Indonesian Language Learning", "url": "https://www.indonesianonline.com/" }
+        ]
+      },
+      "sourceUrls": ["https://kemdikbud.go.id/"]
+    }
+  ]
+}
