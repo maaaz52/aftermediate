@@ -40,7 +40,7 @@ export function StreamExplorer() {
         {majors.map((m) => (
           <Link
             key={m.id}
-            href={`/career/${m.id}`}
+            href="/login?mode=signup"
             className="group border-2 border-ink bg-surface p-4 transition-all hover:-translate-y-0.5 hover:bg-surface-2"
           >
             <div className="flex items-start justify-between">

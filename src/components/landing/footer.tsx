@@ -5,21 +5,21 @@ const cols = [
   {
     title: "Product",
     links: [
-      { label: "Start now", href: "/onboard" },
-      { label: "Merit engine", href: "/merit" },
-      { label: "Career fields", href: "/career" },
-      { label: "Money & abroad", href: "/money" },
-      { label: "Parent report", href: "/convince" },
+      { label: "Start now", href: "/login?mode=signup" },
+      { label: "Merit engine", href: "/login?mode=signup" },
+      { label: "Career fields", href: "/login?mode=signup" },
+      { label: "Money & abroad", href: "/login?mode=signup" },
+      { label: "Parent report", href: "/login?mode=signup" },
     ],
   },
   {
     title: "Resources",
     links: [
       { label: "Reality check", href: "/#reality" },
-      { label: "Webinars", href: "/webinars" },
-      { label: "World trends", href: "/trends" },
-      { label: "Scholarships", href: "/money" },
-      { label: "Short courses", href: "/career" },
+      { label: "Webinars", href: "/login?mode=signup" },
+      { label: "World trends", href: "/login?mode=signup" },
+      { label: "Scholarships", href: "/login?mode=signup" },
+      { label: "Short courses", href: "/login?mode=signup" },
     ],
   },
   {

@@ -28,10 +28,10 @@ const steps = [
 ];
 
 const features = [
-  { icon: "chart" as const, title: "Know your number", desc: "Aggregate engines for NUST, FAST, UET and MDCAT. No coaching-academy guesses.", href: "/merit" },
-  { icon: "rocket" as const, title: "Find your Plan B", desc: "Pharm-D, DPT, CS, AI and more — with real salaries, demand and entry routes.", href: "/career" },
-  { icon: "wallet" as const, title: "Plan the money", desc: "A budget agent, scholarships and study-abroad routes with real costs.", href: "/money" },
-  { icon: "family" as const, title: "Convince your parents", desc: "A printable, bilingual report that makes the case with data, not arguments.", href: "/convince" },
+  { icon: "chart" as const, title: "Know your number", desc: "Aggregate engines for NUST, FAST, UET and MDCAT. No coaching-academy guesses.", href: "/login?mode=signup" },
+  { icon: "rocket" as const, title: "Find your Plan B", desc: "Pharm-D, DPT, CS, AI and more — with real salaries, demand and entry routes.", href: "/login?mode=signup" },
+  { icon: "wallet" as const, title: "Plan the money", desc: "A budget agent, scholarships and study-abroad routes with real costs.", href: "/login?mode=signup" },
+  { icon: "family" as const, title: "Convince your parents", desc: "A printable, bilingual report that makes the case with data, not arguments.", href: "/login?mode=signup" },
 ];
 
 const ctaLink =
