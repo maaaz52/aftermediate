@@ -21,6 +21,22 @@ const INSTITUTES = [
     targetLabel: "CS closes ~75%",
   },
   {
+    id: "lums",
+    label: "LUMS",
+    note: "Test 50 · FSc 30 · Matric 20",
+    weights: [50, 30, 20] as const,
+    target: 85,
+    targetLabel: "SSE closes ~85%",
+  },
+  {
+    id: "giki",
+    label: "GIKI",
+    note: "Test 50 · FSc 40 · Matric 10",
+    weights: [50, 40, 10] as const,
+    target: 80,
+    targetLabel: "CS closes ~80%",
+  },
+  {
     id: "medical",
     label: "Medical",
     note: "MDCAT 50 · FSc 40 · Matric 10",
