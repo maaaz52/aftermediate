@@ -72,7 +72,6 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/#reality", label: "Reality Check", icon: Eye },
       { href: "/webinars", label: "Webinars", icon: Video },
-      { href: "/trends", label: "World Trends", icon: TrendingUp },
     ],
   },
   {
