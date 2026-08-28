@@ -1,0 +1,4145 @@
+{
+  "testId": "act",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for the ACT (ACT, Inc.). English: production of writing, knowledge of language, conventions of standard English. Math: pre-algebra through trigonometry. Reading: key ideas, craft/structure, integration. Science: data representation, research summaries, conflicting viewpoints. Writing section (optional essay) is not auto-graded. Not affiliated with ACT, Inc.",
+    "sources": [
+      "https://act.org",
+      "https://act.org/content/act/en/products-and-services/the-act.html"
+    ]
+  },
+  "durationMinutes": 175,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 215,
+    "note": "No negative marking. ACT reports 1-36 composite score; your raw percentage here is a practice estimate."
+  },
+  "benchmarks": [
+    {
+      "label": "33+ (top US universities) (2026)",
+      "percent": 90
+    },
+    {
+      "label": "28-32 (competitive US universities) (2026)",
+      "percent": 80
+    },
+    {
+      "label": "21-25 (many US universities minimum) (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 75
+    },
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "questionCount": 60
+    },
+    {
+      "id": "reading",
+      "name": "Reading",
+      "questionCount": 40
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "questionCount": 40
+    }
+  ],
+  "questions": [
+    {
+      "id": "act-english-001",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "When I arrived at the theater, the play had already began. Which change is needed?",
+      "options": [
+        "Change 'began' to 'begun'",
+        "Change 'had' to 'has'",
+        "Change 'arrived' to 'arrive'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The past perfect tense requires the past participle 'begun' (had + begun), not the simple past 'began.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-002",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The professor, along with her research assistants, are presenting at the conference. Which change, if any, is needed?",
+      "options": [
+        "Change 'are' to 'is'",
+        "Change 'along with her research assistants,' to 'and her research assistants'",
+        "Change 'presenting' to 'presented'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The subject is 'professor,' which is singular. The phrase 'along with her research assistants' is parenthetical and does not make the subject plural, so the verb should be 'is.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-003",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The student council voted to approve the new policy; the principal, however, had yet to sign it. Which punctuation mark could replace the semicolon without changing the meaning?",
+      "options": [
+        "A comma",
+        "A period",
+        "A colon",
+        "A dash"
+      ],
+      "correct": 1,
+      "explanation": "A period can replace a semicolon to separate two independent clauses into separate sentences. 'The student council voted to approve the new policy. The principal, however, had yet to sign it.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-004",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "Neither the teacher nor the students was aware of the schedule change. Which change is needed?",
+      "options": [
+        "Change 'was' to 'were'",
+        "Change 'Neither' to 'Either'",
+        "Change 'nor' to 'or'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "With 'neither...nor,' the verb agrees with the noun closest to it. 'Students' is plural, so the verb should be 'were.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-005",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The committee's decision was controversial; however, most members stood by it. Which punctuation would also work in place of the semicolon?",
+      "options": [
+        "A comma alone",
+        "A period, making two sentences",
+        "A colon",
+        "An ellipsis"
+      ],
+      "correct": 1,
+      "explanation": "A period can replace the semicolon to separate the two independent clauses into distinct sentences without changing meaning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-006",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "Walking through the park, the flowers were beautiful. Which revision improves the sentence?",
+      "options": [
+        "Walking through the park, I found the flowers beautiful",
+        "Walking through the park, there were beautiful flowers",
+        "While walking through the park, the flowers were beautiful",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The original has a dangling participle — 'flowers' cannot 'walk.' Adding 'I' corrects the modifier so that the person doing the walking is identified.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-007",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The chef prepared three dishes: pasta, risotto, and grilled fish. Which of the following uses the colon correctly?",
+      "options": [
+        "The chef prepared: pasta, risotto, and grilled fish",
+        "The chef prepared these dishes: pasta, risotto, and grilled fish",
+        "The chef prepared pasta: risotto and grilled fish",
+        "The chef prepared: pasta risotto and grilled fish"
+      ],
+      "correct": 1,
+      "explanation": "A colon must follow an independent clause. 'The chef prepared these dishes' is a complete sentence; the colon then introduces the list. 'The chef prepared' alone is not an independent clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-008",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "Each of the players have their own locker. Which change is needed?",
+      "options": [
+        "Change 'have' to 'has'",
+        "Change 'their' to 'his or her'",
+        "Change 'Each' to 'All'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Each' is singular, so the verb should be 'has.' While 'their' with 'each' is debated, the primary error here is subject-verb agreement. Changing 'have' to 'has' fixes the agreement error.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-009",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The novel, which was published in 1925, it remains a classic of American literature. Which revision is needed?",
+      "options": [
+        "Delete 'it'",
+        "Change 'remains' to 'remained'",
+        "Remove the commas around 'which was published in 1925'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The sentence has a double subject: 'The novel' and 'it.' Deleting 'it' corrects the error, leaving 'The novel, which was published in 1925, remains a classic.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-010",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The data suggests that the new policy is effective. Which change, if any, is needed?",
+      "options": [
+        "Change 'suggests' to 'suggest'",
+        "Change 'is' to 'are'",
+        "Change 'data' to 'datum'",
+        "No change needed"
+      ],
+      "correct": 3,
+      "explanation": "In modern usage, 'data' can take a singular verb, and 'suggests' is correct here. While 'datum' is the Latin singular, 'data' as a mass noun with a singular verb is widely accepted.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-011",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The speaker was really informative, and the audience learned a lot. Which word best replaces 'really' for a more formal tone?",
+      "options": [
+        "very",
+        "extremely",
+        "highly",
+        "Leave as is"
+      ],
+      "correct": 2,
+      "explanation": "'Highly informative' is the most formal and appropriate choice for a professional or academic context. 'Very' and 'extremely' are less formal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-012",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The researchers looked at the effects of the drug over a six-month period. Which word most effectively replaces 'looked at'?",
+      "options": [
+        "studied",
+        "saw",
+        "observed",
+        "watched"
+      ],
+      "correct": 0,
+      "explanation": "'Studied' is the most precise and formal academic term for systematic research. 'Observed' is also plausible but 'studied' better conveys the research context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-013",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The company's profits went up significantly after the new product launch. Which word most effectively replaces 'went up'?",
+      "options": [
+        "increased",
+        "rose",
+        "grew",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "All three options — increased, rose, and grew — are more formal and precise replacements for the colloquial 'went up' in a business context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-014",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The architect's design was both creative and functional; it made good use of the available space. Which revision best maintains the formal tone while improving concision?",
+      "options": [
+        "The architect's design was creative, functional, and space-efficient",
+        "The architect's design was creative and functional; it made good use of the available space",
+        "The architect's design was creative and functional, and it made good use of the space",
+        "The architect made a design that was creative and functional and used space well"
+      ],
+      "correct": 0,
+      "explanation": "Option A is the most concise, preserving all key ideas in a single, parallel structure without sacrificing formality.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-015",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The governor's remarks were not only incendiary but also they misrepresented the facts. Which revision is most concise?",
+      "options": [
+        "incendiary but also misrepresented the facts",
+        "incendiary and misrepresented the facts",
+        "not only incendiary but also factually misrepresenting",
+        "Leave as is"
+      ],
+      "correct": 0,
+      "explanation": "Option A maintains the 'not only...but also' parallelism by removing the redundant 'they,' making the sentence more concise.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-016",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "Passage: 'The author argues that urbanization leads to increased economic opportunity. However, the author fails to consider that rural areas also contribute significantly to national GDP.' The writer wants to add a sentence acknowledging the opposing viewpoint more fairly. Which addition best achieves this?",
+      "options": [
+        "Urbanization does have its drawbacks, of course",
+        "While urbanization certainly boosts certain sectors, rural economies remain vital contributors to national GDP",
+        "Some people think rural areas are not important, but they are wrong",
+        "The author clearly does not understand economics"
+      ],
+      "correct": 1,
+      "explanation": "Option B fairly acknowledges the value of urbanization ('boosts certain sectors') while presenting the counterargument about rural areas in a balanced, respectful tone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-017",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "The passage describes a scientific breakthrough. Which sentence best maintains the formal, academic tone?",
+      "options": [
+        "This discovery is a game-changer for the field of genetics",
+        "This discovery represents a significant advancement in the field of genetics",
+        "This discovery is huge and will change everything we know about genetics",
+        "This discovery is a big deal for geneticists everywhere"
+      ],
+      "correct": 1,
+      "explanation": "Option B uses formal academic language ('represents a significant advancement') appropriate for a scientific passage, avoiding colloquialisms like 'game-changer' or 'big deal.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-018",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "Had I known about the traffic, I would of left earlier. Which change is needed?",
+      "options": [
+        "Change 'would of' to 'would have'",
+        "Change 'Had I known' to 'If I had known'",
+        "Change 'left' to 'leave'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Would of' is a common misspelling of the contracted form 'would've' — the correct phrase is 'would have left.' The 'Had I known' construction is grammatically correct as an inverted conditional.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-019",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "easy",
+      "stem": "The writer is considering adding the following sentence: 'In fact, the first subway system opened in London in 1863.' Where would this sentence best fit in a paragraph about the history of public transportation?",
+      "options": [
+        "After the topic sentence introducing early transit systems",
+        "At the very end of the paragraph",
+        "In the middle of a discussion of modern trains",
+        "As the first sentence of a new paragraph about tourism"
+      ],
+      "correct": 0,
+      "explanation": "The sentence provides a specific historical example that supports a general claim about early transit systems, so it belongs right after the topic sentence that introduces that idea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-020",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "easy",
+      "stem": "Which sentence would be the most effective topic sentence for a paragraph about the benefits of bilingual education?",
+      "options": [
+        "Bilingual education programs have been shown to improve cognitive flexibility and academic performance",
+        "Some schools offer bilingual programs",
+        "Learning a language takes time and effort",
+        "There are many subjects taught in schools today"
+      ],
+      "correct": 0,
+      "explanation": "Option A clearly states the main idea (benefits of bilingual education) and gives specific examples, making it an effective topic sentence. The others are too vague or off-topic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-021",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "Passage: 'Solar energy offers a clean alternative to fossil fuels. [1] The cost of solar panels has dropped by over 80% in the last decade. [2] Many homeowners are now installing solar systems. [3] Government tax credits have also made solar more affordable. [4]' The writer wants to add: 'As a result, solar installations have tripled since 2015.' After which numbered sentence should this sentence be placed?",
+      "options": [
+        "After sentence 1",
+        "After sentence 2",
+        "After sentence 3",
+        "After sentence 4"
+      ],
+      "correct": 2,
+      "explanation": "'As a result' refers to both the cost drop and the tax credits. Sentence 3 (government tax credits) is the third supporting point, after which the conclusion about tripled installations logically follows.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-022",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "The writer has included the following sentences in a paragraph: 'The experiment yielded unexpected results. The team had hypothesized a linear relationship. The data showed an exponential trend.' Which revision best improves the logical flow?",
+      "options": [
+        "The team had hypothesized a linear relationship, but the experiment yielded unexpected results: the data showed an exponential trend",
+        "The experiment yielded unexpected results. The team had hypothesized a linear relationship. The data showed an exponential trend",
+        "The data showed an exponential trend. The experiment yielded unexpected results. The team had hypothesized a linear relationship",
+        "The team had hypothesized a linear relationship. The experiment yielded unexpected results. The data showed an exponential trend"
+      ],
+      "correct": 0,
+      "explanation": "Option A combines the ideas into a single coherent sentence that follows a logical sequence: hypothesis, unexpected outcome, specific result.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-023",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The passage describes three distinct approaches to urban planning. The writer realizes that the second approach is discussed in two separate paragraphs and should be consolidated. Which revision strategy is most appropriate?",
+      "options": [
+        "Combine the two paragraphs about the second approach into one, removing redundant transitions",
+        "Add a third paragraph to further develop the second approach",
+        "Remove one of the paragraphs entirely",
+        "Move one paragraph about the second approach to the end of the essay"
+      ],
+      "correct": 0,
+      "explanation": "Consolidating the two paragraphs into one eliminates redundancy and improves organization. Each distinct approach should be discussed in its own unified section.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-024",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The writer wants to conclude an essay about renewable energy with a sentence that looks toward the future. Which sentence best achieves this purpose?",
+      "options": [
+        "As technology continues to improve, renewable energy will likely become even more accessible and affordable worldwide",
+        "Renewable energy is good for the environment",
+        "Solar panels are becoming more efficient every year",
+        "In conclusion, this essay has discussed renewable energy"
+      ],
+      "correct": 0,
+      "explanation": "Option A looks forward ('will likely become') and provides a forward-looking perspective on the topic, making it an effective concluding sentence for an essay about the future of renewable energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-025",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The musicians, who had practiced for months, was ready for the concert. Which change is needed?",
+      "options": [
+        "Change 'was' to 'were'",
+        "Change 'who had practiced' to 'that practiced'",
+        "Remove the commas around 'who had practiced for months'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The subject is 'musicians,' which is plural, so the verb should be 'were ready,' not 'was ready.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-026",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The cake that she baked was delicious, it won first prize at the fair. Which change corrects the comma splice?",
+      "options": [
+        "Change the comma to a period: 'delicious. It won'",
+        "Delete 'that she baked'",
+        "Change 'it' to 'which'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The original sentence incorrectly joins two independent clauses with a comma. Replacing the comma with a period creates two correct sentences.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-027",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "Between you and I, this plan is unlikely to succeed. Which change is needed?",
+      "options": [
+        "Change 'I' to 'me'",
+        "Change 'Between' to 'Among'",
+        "Change 'is' to 'are'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The preposition 'between' requires the objective case 'me,' not the subjective 'I.' The correct phrase is 'between you and me.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-028",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The painting was beautiful; its colors vibrant and its composition striking. Which punctuation mark, if any, should replace the semicolon?",
+      "options": [
+        "A comma",
+        "A colon",
+        "A period",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The second part ('its colors vibrant and its composition striking') is not an independent clause; it is an absolute phrase. A comma correctly connects it to the main clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-029",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The company hired more employees, expanded its operations, and they opened a new office. Which revision improves parallel structure?",
+      "options": [
+        "hired more employees, expanded its operations, and opened a new office",
+        "hired more employees, expanded its operations, and they opened a new office",
+        "hired more employees, they expanded operations, and opened a new office",
+        "hiring more employees, expanding its operations, and opened a new office"
+      ],
+      "correct": 0,
+      "explanation": "The original shifts from past-tense verbs ('hired,' 'expanded') to 'they opened.' Option A maintains parallel structure with three past-tense verbs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-030",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The report concluded that the policy, although well-intentioned, had unintended consequences. Which of the following punctuation marks could replace the commas around 'although well-intentioned'?",
+      "options": [
+        "Dashes",
+        "Semicolons",
+        "Parentheses",
+        "Both A and C"
+      ],
+      "correct": 3,
+      "explanation": "Both dashes and parentheses can set off the interruptive phrase 'although well-intentioned.' Dashes emphasize the interruption; parentheses de-emphasize it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-031",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "The professor asked the students to bring their textbooks, notebooks, and to arrive on time. Which revision fixes the faulty parallelism?",
+      "options": [
+        "to bring their textbooks, notebooks, and to arrive on time",
+        "to bring their textbooks, notebooks, and arrive on time",
+        "to bring their textbooks and notebooks and to arrive on time",
+        "to bring their textbooks, notebooks, and punctuality"
+      ],
+      "correct": 1,
+      "explanation": "The original lists two nouns ('textbooks, notebooks') but shifts to an infinitive ('to arrive'). Deleting 'to' before 'arrive' maintains the parallel structure of the infinitive phrase 'to bring...and arrive.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-032",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "Whom did you say left the package at the door? Which change, if any, is needed?",
+      "options": [
+        "Change 'Whom' to 'Who'",
+        "Change 'left' to 'leave'",
+        "Change 'Whom' to 'Whomever'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Who' is the subject of 'left the package.' 'Whom' is the objective case, but the question asks about the person who performed the action (subject of the verb 'left').",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-033",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The passage describes a conservation effort. The writer wants to convey that the effort was highly successful. Which word best fits the sentence: 'The reintroduction program was ___ in restoring the wolf population.'",
+      "options": [
+        "effective",
+        "okay",
+        "nice",
+        "decent"
+      ],
+      "correct": 0,
+      "explanation": "'Effective' is the most precise and formal word to describe a successful conservation program. 'Okay,' 'nice,' and 'decent' are too informal and vague for an academic passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-034",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The historian's account was interesting, but it was also biased. Which word most effectively replaces 'biased' in an academic essay?",
+      "options": [
+        "unbalanced",
+        "subjective",
+        "partisan",
+        "skewed"
+      ],
+      "correct": 1,
+      "explanation": "'Subjective' is the most neutral and academically appropriate term, acknowledging the historian's personal perspective without the pejorative connotation of 'biased.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-035",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The essay discusses a controversial policy. The writer wants to introduce an opposing viewpoint without appearing dismissive. Which transition best achieves this?",
+      "options": [
+        "Critics of the policy, however, raise valid concerns about its implementation",
+        "The opposing view is completely wrong",
+        "Some people disagree for no good reason",
+        "On the other hand, the opposition has no evidence"
+      ],
+      "correct": 0,
+      "explanation": "Option A respectfully acknowledges the opposing viewpoint ('raise valid concerns') without dismissive language, maintaining a balanced academic tone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-036",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The passage uses informal language inconsistent with its academic purpose. Which revision best maintains formal tone? Original: 'The experiment showed that the drug did a great job of reducing symptoms.'",
+      "options": [
+        "The experiment showed that the drug was effective in reducing symptoms",
+        "The experiment showed that the drug did a great job",
+        "The experiment showed the drug did a great job reducing symptoms",
+        "The experiment showed that the drug was awesome at reducing symptoms"
+      ],
+      "correct": 0,
+      "explanation": "'Was effective in reducing symptoms' is appropriately formal and precise for academic writing, replacing the colloquial 'did a great job.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-037",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "In a passage about economic policy, the writer uses the phrase 'a boatload of money.' Which revision maintains the formal context most appropriately?",
+      "options": [
+        "substantial financial resources",
+        "a ton of money",
+        "lots of cash",
+        "a boatload of funding"
+      ],
+      "correct": 0,
+      "explanation": "'Substantial financial resources' is appropriately formal and precise. The other options retain colloquial or informal phrasing inappropriate for an economic policy analysis.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-038",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "The writer wants to describe a landmark court decision with appropriate gravity. Which sentence best achieves this tone?",
+      "options": [
+        "The Supreme Court's ruling fundamentally reshaped the legal landscape of privacy rights in the digital age",
+        "The Supreme Court made a really important decision about privacy",
+        "The Supreme Court decided something big about privacy and the internet",
+        "The Supreme Court's ruling was a huge deal for privacy"
+      ],
+      "correct": 0,
+      "explanation": "Option A uses formal, weighty language ('fundamentally reshaped the legal landscape') appropriate for describing a landmark court decision, avoiding informal expressions like 'really important,' 'big,' or 'huge deal.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-039",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "easy",
+      "stem": "The writer is drafting an essay about the benefits of urban gardens. Which sentence should come FIRST in the introductory paragraph?",
+      "options": [
+        "Urban gardens offer numerous benefits to city residents and the environment",
+        "Community gardens can grow tomatoes and peppers",
+        "Cities are becoming more populated every year",
+        "Gardening requires regular watering and sunlight"
+      ],
+      "correct": 0,
+      "explanation": "Option A is a strong introductory sentence that presents the main topic and thesis. The other sentences are too specific or tangential to effectively introduce the essay.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-040",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "The writer is considering deleting the phrase 'in my personal opinion' from the sentence: 'In my personal opinion, the policy should be revised.' Should the phrase be deleted?",
+      "options": [
+        "Yes, because it is redundant and adds no substantive meaning",
+        "No, because it emphasizes the writer's perspective",
+        "Yes, because the sentence is too long",
+        "No, because it makes the sentence more formal"
+      ],
+      "correct": 0,
+      "explanation": "'In my personal opinion' is redundant — 'opinion' is by definition personal. Deleting it makes the sentence more concise without losing meaning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-041",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "The writer has two paragraphs: one about the causes of climate change and one about its effects. The writer realizes that the second paragraph also discusses some causes. What is the best revision strategy?",
+      "options": [
+        "Move all discussion of causes to the first paragraph and keep effects in the second",
+        "Combine both paragraphs into one",
+        "Swap the order of the paragraphs",
+        "Add a third paragraph about solutions"
+      ],
+      "correct": 0,
+      "explanation": "The paragraphs should be organized by topic: all causes in one paragraph and all effects in the other. This improves clarity and logical flow.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-042",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The writer has written an essay arguing that school uniforms improve student behavior. The counterargument about individual expression is mentioned only briefly in the conclusion. Where should this counterargument be more fully addressed?",
+      "options": [
+        "In a dedicated paragraph before the conclusion",
+        "In the introduction",
+        "In the first body paragraph",
+        "It should not be addressed at all"
+      ],
+      "correct": 0,
+      "explanation": "A strong argument addresses counterarguments in a dedicated section before the conclusion, acknowledging opposing views and then refuting them, which strengthens the writer's own position.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-043",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The essay discusses three benefits of meditation: reduced stress, improved focus, and better sleep. The paragraph about improved focus also discusses a study on workplace productivity. Should this study be moved?",
+      "options": [
+        "Yes, it should be moved because the effect on workplace productivity is a separate benefit that deserves its own paragraph",
+        "No, it stays because it supports the improved focus claim",
+        "Yes, it should be deleted entirely",
+        "No, it should stay because the essay needs more evidence"
+      ],
+      "correct": 0,
+      "explanation": "Workplace productivity is a distinct benefit separate from improved focus and warrants its own discussion. Grouping all three benefits cleanly improves organizational clarity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-044",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The collection of rare stamps were kept in a secure vault. Which change is needed?",
+      "options": [
+        "Change 'were' to 'was'",
+        "Change 'collection' to 'collections'",
+        "Change 'kept' to 'keeping'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The subject is 'collection,' which is singular, so the verb should be 'was kept,' not 'were kept.' The phrase 'of rare stamps' does not change the subject's number.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-045",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "Its important to arrive early for the orientation session. Which change is needed?",
+      "options": [
+        "Change 'Its' to 'It's'",
+        "Change 'Its' to 'Its''",
+        "Change 'orientation' to 'Orientation'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'It's' with an apostrophe is the contraction for 'it is.' 'Its' without an apostrophe is the possessive form. Here, 'it is important' is needed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-046",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "The students could of completed the assignment earlier if they had started sooner. Which change is needed?",
+      "options": [
+        "Change 'could of' to 'could have'",
+        "Change 'had started' to 'started'",
+        "Change 'earlier' to 'more early'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Could of' is an incorrect spelling of the contraction 'could've,' which stands for 'could have.' The correct form is 'could have completed.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-047",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The artist's work, which combines elements of surrealism and pop art, are displayed in the gallery. Which change is needed?",
+      "options": [
+        "Change 'are' to 'is'",
+        "Remove the commas around 'which combines elements of surrealism and pop art'",
+        "Change 'artist's' to 'artists'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The subject is 'work,' which is singular, so the verb should be 'is displayed.' The clause 'which combines...' is parenthetical and does not change the subject.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-048",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The committee members each has a different opinion on the matter. Which change is needed?",
+      "options": [
+        "Change 'has' to 'have'",
+        "Change 'each' to 'every'",
+        "Change 'matter' to 'matters'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "When 'each' follows a plural subject ('committee members'), the verb should be plural. 'The committee members each have' is correct because the subject is 'members.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-049",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The speaker whom we invited canceled at the last minute. Which change, if any, would improve the sentence?",
+      "options": [
+        "Change 'whom' to 'who'",
+        "Change 'whom' to 'which'",
+        "Change 'canceled' to 'cancelled'",
+        "No change needed"
+      ],
+      "correct": 3,
+      "explanation": "'Whom' is correct here because it is the object of 'invited' (we invited whom). Both 'canceled' and 'cancelled' are acceptable spellings. The sentence is correct as written.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-050",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "The supervisor asked that everyone completes their report by Friday. Which change is needed?",
+      "options": [
+        "Change 'completes' to 'complete'",
+        "Change 'their' to 'his or her'",
+        "Change 'asked' to 'requested'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "After verbs of request or demand (asked, insisted, recommended), the subjunctive mood is used: 'that everyone complete' not 'completes.' The subjunctive uses the base form of the verb.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-051",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "The phenomena of light refracting through water droplets create rainbows. Which change, if any, is needed?",
+      "options": [
+        "Change 'create' to 'creates'",
+        "Change 'phenomena' to 'phenomenon'",
+        "Change 'refracting' to 'refracted'",
+        "No change needed"
+      ],
+      "correct": 1,
+      "explanation": "'Phenomena' is plural. Here the singular 'phenomenon' is needed because the verb 'create' would need to agree with a plural subject. 'The phenomenon of light...creates rainbows' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-052",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "In a passage about nutrition, the writer wants to explain that a certain diet is not sustainable over time. Which word best fits: 'This diet is not ___ for long-term health.'",
+      "options": [
+        "durable",
+        "sustainable",
+        "maintainable",
+        "suitable"
+      ],
+      "correct": 1,
+      "explanation": "'Sustainable' is the most precise term for describing whether a diet can be maintained over time for health purposes. 'Durable' typically refers to physical objects, not practices.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-053",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The documentary provided a lot of information about marine ecosystems. Which revision is most concise?",
+      "options": [
+        "The documentary provided extensive information about marine ecosystems",
+        "The documentary provided a lot about marine ecosystems",
+        "The documentary had a lot of information about marine ecosystems",
+        "There was a lot of information in the documentary about marine ecosystems"
+      ],
+      "correct": 0,
+      "explanation": "Option A is concise and formal, replacing the vague 'a lot of information' with the more precise 'extensive information' in a clean sentence structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-054",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The passage uses the phrase 'the fact that the experiment failed' repeatedly. Which revision is most concise?",
+      "options": [
+        "the experiment's failure",
+        "the fact of the experiment failing",
+        "the failure of the experiment that happened",
+        "the experiment that failed"
+      ],
+      "correct": 0,
+      "explanation": "'The experiment's failure' is the most concise possessive construction, eliminating the wordy 'the fact that' phrase while preserving all necessary meaning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-055",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The writer wants to convey that a sculpture is visually striking. Which sentence uses the most vivid and appropriate language?",
+      "options": [
+        "The sculpture's angular forms and polished surface created dramatic interplays of light and shadow",
+        "The sculpture looked really cool",
+        "The sculpture was nice to look at",
+        "The sculpture had a good appearance"
+      ],
+      "correct": 0,
+      "explanation": "Option A uses specific, vivid language ('angular forms,' 'polished surface,' 'dramatic interplays of light and shadow') to describe the sculpture's visual impact, far more effective than vague descriptors.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-056",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "In a passage about immigration policy, the writer uses the word 'illegal' to describe undocumented workers. Which replacement is most neutral and accurate?",
+      "options": [
+        "undocumented",
+        "criminal",
+        "unauthorized",
+        "foreign"
+      ],
+      "correct": 2,
+      "explanation": "'Unauthorized' is the most neutral and accurate legal term describing the employment or residence status, avoiding the loaded connotations of 'illegal' while remaining precise.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-057",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "The writer needs to transition between a paragraph about historical context and a new paragraph about modern implications. Which transition sentence is most effective?",
+      "options": [
+        "While these historical patterns are well documented, their relevance to contemporary policy debates is increasingly evident",
+        "Now let's talk about today",
+        "History is important, but so is the present",
+        "As we have seen, the past is different from the present"
+      ],
+      "correct": 0,
+      "explanation": "Option A effectively bridges historical context and modern relevance with a sophisticated transition that acknowledges both the established evidence and its current significance.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-058",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "easy",
+      "stem": "The writer wants to add a sentence that provides an example of successful community gardening programs. Which sentence would best serve this purpose?",
+      "options": [
+        "For instance, the Southside Community Garden in Chicago has produced over 2,000 pounds of vegetables annually since 2015",
+        "Community gardens are a great idea",
+        "Many cities have community gardens",
+        "Gardening is a popular hobby"
+      ],
+      "correct": 0,
+      "explanation": "Option A provides a specific, concrete example with measurable data, which effectively supports the claim about successful community gardening programs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-059",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "easy",
+      "stem": "The writer has written a paragraph about the history of the internet. Which sentence would be LEAST relevant to include?",
+      "options": [
+        "The internet was originally developed as a military communication network",
+        "The first email was sent in 1971",
+        "Pizza is a popular food delivered through online ordering systems",
+        "Tim Berners-Lee invented the World Wide Web in 1989"
+      ],
+      "correct": 2,
+      "explanation": "While pizza delivery uses the internet, the history of pizza delivery is not relevant to a paragraph about the history and development of the internet itself.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-060",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "The writer has three paragraphs: one about the causes of deforestation, one about its effects on biodiversity, and one about solutions. The writer realizes the effects paragraph also discusses causes. What should the writer do?",
+      "options": [
+        "Move cause-related content from the effects paragraph to the causes paragraph",
+        "Delete the cause-related content from the effects paragraph",
+        "Create a fourth paragraph for mixed content",
+        "Keep the content in both paragraphs for emphasis"
+      ],
+      "correct": 0,
+      "explanation": "Each paragraph should have one clear focus. Moving cause-related discussion to the causes paragraph maintains clear organization and prevents repetition.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-061",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "medium",
+      "stem": "The writer needs to add a concluding sentence to a paragraph about renewable energy adoption rates. Which sentence best summarizes the paragraph's main point?",
+      "options": [
+        "These trends indicate that renewable energy is becoming a mainstream component of global energy production",
+        "Solar panels need sunlight to work",
+        "Fossil fuels are running out eventually",
+        "The cost of electricity varies by region"
+      ],
+      "correct": 0,
+      "explanation": "Option A effectively summarizes the paragraph by synthesizing the trends (adoption rates) into a broader conclusion about the mainstreaming of renewable energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-062",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The essay argues that technology in classrooms improves learning outcomes. The first body paragraph discusses interactive whiteboards. The second discusses online assessment tools. Which topic would be best for the third body paragraph?",
+      "options": [
+        "Personalized learning software that adapts to individual student progress",
+        "A history of educational technology from the 1980s",
+        "The cost of school supplies",
+        "The benefits of traditional textbooks"
+      ],
+      "correct": 0,
+      "explanation": "Personalized learning software is another technology tool that improves learning outcomes, maintaining the essay's focus and logical progression through different types of educational technology.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-063",
+      "section": "english",
+      "topic": "Production of writing — topic development, organization",
+      "difficulty": "hard",
+      "stem": "The writer's essay about animal conservation currently discusses habitat loss in paragraph 2, poaching in paragraph 3, and reintroduction programs in paragraph 4. The writer wants to add a paragraph about climate change. Where should it be placed?",
+      "options": [
+        "Before paragraph 2, as a new threat to conservation",
+        "After paragraph 4, as an additional threat",
+        "Between paragraphs 2 and 3, as it is a distinct threat",
+        "It should replace paragraph 4"
+      ],
+      "correct": 0,
+      "explanation": "Climate change is a broad threat that frames other specific threats (habitat loss, poaching), so it should come first as an overarching context before the more specific threats are discussed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-064",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "After the long flight, the passengers was tired and hungry. Which change is needed?",
+      "options": [
+        "Change 'was' to 'were'",
+        "Change 'flight' to 'flights'",
+        "Change 'tired' to 'tire'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "The subject 'passengers' is plural, so the verb should be 'were tired,' not 'was tired.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-065",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "Their are several reasons why the proposal was rejected. Which change is needed?",
+      "options": [
+        "Change 'Their' to 'There'",
+        "Change 'Their' to 'They're'",
+        "Change 'was' to 'were'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'There are' (existential 'there') is needed here. 'Their' is the possessive form ('their car'). 'They're' is the contraction for 'they are.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-066",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "easy",
+      "stem": "She runs faster then anyone else on the team. Which change is needed?",
+      "options": [
+        "Change 'then' to 'than'",
+        "Change 'runs' to 'run'",
+        "Change 'faster' to 'more fast'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Than' is used for comparisons ('faster than'), while 'then' refers to time ('first this, then that').",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-067",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "The data indicate that the new curriculum has improved test scores across all grade levels. Which revision, if any, is needed for subject-verb agreement?",
+      "options": [
+        "Change 'indicate' to 'indicates'",
+        "Change 'has' to 'have'",
+        "Change 'has improved' to 'improved'",
+        "No change needed"
+      ],
+      "correct": 3,
+      "explanation": "'Data' as a plural noun correctly takes the plural verb 'indicate,' and 'curriculum' (singular) correctly takes 'has improved.' The sentence is correct as written.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-068",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "medium",
+      "stem": "Not only did the storm damage the roof, but it also broke several windows. If the writer removes 'did,' which additional change is necessary?",
+      "options": [
+        "Change 'damage' to 'damaged'",
+        "Change 'damage' to 'damaging'",
+        "Change 'broke' to 'break'",
+        "No additional change needed"
+      ],
+      "correct": 0,
+      "explanation": "Without 'did' (which forms the emphatic past tense), the sentence reverts to simple past: 'the storm damaged the roof.' The verb 'damage' must become 'damaged.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-069",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "The judge determined that the defendant, who the prosecution had called as a hostile witness, was not credible. Which change is needed?",
+      "options": [
+        "Change 'who' to 'whom'",
+        "Change 'who had called' to 'called'",
+        "Change 'was not' to 'were not'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "'Whom' is the objective case, required here because 'the prosecution had called whom' — 'whom' is the object of 'had called.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-070",
+      "section": "english",
+      "topic": "Conventions of standard English — grammar and punctuation",
+      "difficulty": "hard",
+      "stem": "Either the CEO or the board members is going to make the final decision. Which change is needed?",
+      "options": [
+        "Change 'is' to 'are'",
+        "Change 'is going' to 'go'",
+        "Change 'members' to 'member'",
+        "No change needed"
+      ],
+      "correct": 0,
+      "explanation": "With 'either...or,' the verb agrees with the noun closest to it. 'Board members' is plural, so the verb should be 'are going.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-071",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The author's argument is based on the idea that economic growth always benefits everyone equally. Which word most accurately describes this assumption?",
+      "options": [
+        "flawed",
+        "questionable",
+        "incorrect",
+        "debatable"
+      ],
+      "correct": 1,
+      "explanation": "'Questionable' is the most appropriate academic term for an assumption that may not be valid, without being as definitive as 'incorrect' or as judgmental as 'flawed.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-072",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "easy",
+      "stem": "The passage describes a technological innovation. The writer wants to say the innovation is truly new. Which word choice is most precise?",
+      "options": [
+        "groundbreaking",
+        "nice",
+        "interesting",
+        "different"
+      ],
+      "correct": 0,
+      "explanation": "'Groundbreaking' specifically conveys that the innovation is genuinely new and significant in its field, more precise than the vague alternatives.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-073",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The writer wants to describe a controversial policy decision without revealing personal bias. Which phrasing is most objective?",
+      "options": [
+        "The policy was enacted despite significant opposition from community stakeholders",
+        "The policy was unfortunately enacted over sensible objections",
+        "The terrible policy was pushed through against all reason",
+        "The policy was enacted, but many people thought it was a bad idea"
+      ],
+      "correct": 0,
+      "explanation": "Option A presents facts neutrally: the policy was enacted, opposition existed from stakeholders. The others use loaded language ('terrible,' 'sensible objections,' 'unfortunately').",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-074",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "medium",
+      "stem": "The writer uses the phrase 'due to the fact that' repeatedly. Which replacement is most concise?",
+      "options": [
+        "because",
+        "since",
+        "as",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "'Because,' 'since,' and 'as' are all concise alternatives to the wordy 'due to the fact that.' All three are grammatically correct replacements.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-english-075",
+      "section": "english",
+      "topic": "Knowledge of language — word choice, style, tone",
+      "difficulty": "hard",
+      "stem": "The passage's tone is intended to be neutral and informative. Which sentence is LEAST consistent with this tone?",
+      "options": [
+        "It is truly tragic that so little has been done to address this crisis",
+        "The response to the crisis has been limited in scope and effectiveness",
+        "Available data suggest that current measures are insufficient",
+        "Further research is needed to determine the most effective interventions"
+      ],
+      "correct": 0,
+      "explanation": "Option A uses emotionally charged language ('truly tragic') that violates the neutral, informative tone. The other options maintain objectivity with measured, factual language.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-001",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "If 3x + 7 = 22, what is the value of x?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "15"
+      ],
+      "correct": 1,
+      "explanation": "3x + 7 = 22 → 3x = 15 → x = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-002",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "Simplify: 4(2x - 3) + 5x",
+      "options": [
+        "8x - 12 + 5x",
+        "13x - 12",
+        "13x + 12",
+        "8x - 7"
+      ],
+      "correct": 1,
+      "explanation": "4(2x - 3) = 8x - 12, then 8x - 12 + 5x = 13x - 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-003",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "What is 15% of 200?",
+      "options": [
+        "15",
+        "20",
+        "30",
+        "300"
+      ],
+      "correct": 2,
+      "explanation": "15% = 0.15, so 0.15 × 200 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-004",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "If x + y = 10 and x - y = 4, what is the value of x?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "Adding the equations: (x + y) + (x - y) = 10 + 4 → 2x = 14 → x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-005",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "Evaluate: 2³ + 3²",
+      "options": [
+        "13",
+        "15",
+        "17",
+        "25"
+      ],
+      "correct": 2,
+      "explanation": "2³ = 8, 3² = 9, and 8 + 9 = 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-006",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "If 5(x - 2) = 3x + 4, what is the value of x?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correct": 2,
+      "explanation": "5x - 10 = 3x + 4 → 2x = 14 → x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-007",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "A shirt originally costs $40 and is on sale for 25% off. What is the sale price?",
+      "options": [
+        "$10",
+        "$15",
+        "$25",
+        "$30"
+      ],
+      "correct": 3,
+      "explanation": "25% of $40 = $10 discount. $40 - $10 = $30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-008",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "Solve for x: 2x/3 = 8",
+      "options": [
+        "4",
+        "6",
+        "10",
+        "12"
+      ],
+      "correct": 3,
+      "explanation": "2x/3 = 8 → 2x = 24 → x = 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-009",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "What is the average (arithmetic mean) of 12, 15, 18, and 23?",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "68"
+      ],
+      "correct": 2,
+      "explanation": "Sum = 12 + 15 + 18 + 23 = 68. Mean = 68/4 = 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-010",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "If |x| = 7, what are the possible values of x?",
+      "options": [
+        "7 only",
+        "-7 only",
+        "7 and -7",
+        "0 and 7"
+      ],
+      "correct": 2,
+      "explanation": "The absolute value of x equals 7 means x = 7 or x = -7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-011",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "If a = 3 and b = -2, what is the value of a² - 2ab + b²?",
+      "options": [
+        "1",
+        "13",
+        "25",
+        "17"
+      ],
+      "correct": 2,
+      "explanation": "a² - 2ab + b² = (a - b)² = (3 - (-2))² = 5² = 25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-012",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "Solve the system: 2x + y = 7 and x - y = 2",
+      "options": [
+        "x = 3, y = 1",
+        "x = 3, y = -1",
+        "x = 2, y = 3",
+        "x = 5, y = -3"
+      ],
+      "correct": 0,
+      "explanation": "Adding: (2x + y) + (x - y) = 7 + 2 → 3x = 9 → x = 3. Then 3 - y = 2 → y = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-013",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "A rectangle has length 5x and width 3x. If its perimeter is 64, what is the value of x?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "Perimeter = 2(5x + 3x) = 2(8x) = 16x. 16x = 64 → x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-014",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "Simplify: (x²y³) / (xy⁵)",
+      "options": [
+        "x/y²",
+        "x²/y²",
+        "xy²",
+        "x/y³"
+      ],
+      "correct": 0,
+      "explanation": "(x²y³)/(xy⁵) = x^(2-1) × y^(3-5) = x¹ × y^(-2) = x/y².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-015",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "If 3x - 5 ≥ 10, what is the solution set for x?",
+      "options": [
+        "x ≥ 5",
+        "x ≥ 15",
+        "x ≤ 5",
+        "x ≤ 15"
+      ],
+      "correct": 0,
+      "explanation": "3x - 5 ≥ 10 → 3x ≥ 15 → x ≥ 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-016",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "What is the slope of the line that passes through the points (2, 5) and (6, 13)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "Slope = (13 - 5)/(6 - 2) = 8/4 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-017",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "If f(x) = 2x² - 3x + 1, what is f(-2)?",
+      "options": [
+        "3",
+        "11",
+        "15",
+        "-9"
+      ],
+      "correct": 2,
+      "explanation": "f(-2) = 2(4) - 3(-2) + 1 = 8 + 6 + 1 = 15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-018",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "hard",
+      "stem": "If 2^(x+1) = 32, what is the value of x?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "15"
+      ],
+      "correct": 0,
+      "explanation": "32 = 2⁵, so 2^(x+1) = 2⁵ → x + 1 = 5 → x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-019",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "hard",
+      "stem": "The sum of two numbers is 28, and their difference is 12. What is the larger number?",
+      "options": [
+        "8",
+        "10",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "explanation": "Let x = larger, y = smaller. x + y = 28, x - y = 12. Adding: 2x = 40 → x = 20. So the larger is 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-020",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "hard",
+      "stem": "If a ≠ 0 and (a² - 9)/ (a - 3) = 10, what is the value of a?",
+      "options": [
+        "3",
+        "7",
+        "10",
+        "13"
+      ],
+      "correct": 1,
+      "explanation": "(a² - 9)/(a - 3) = (a - 3)(a + 3)/(a - 3) = a + 3 = 10 → a = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-021",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "What is the y-intercept of the line y = 3x - 5?",
+      "options": [
+        "3",
+        "-5",
+        "5",
+        "-3"
+      ],
+      "correct": 1,
+      "explanation": "In the slope-intercept form y = mx + b, b is the y-intercept. Here b = -5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-022",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "Factor: x² + 5x + 6",
+      "options": [
+        "(x + 2)(x + 3)",
+        "(x + 1)(x + 5)",
+        "(x + 2)(x - 3)",
+        "(x - 2)(x - 3)"
+      ],
+      "correct": 0,
+      "explanation": "Two numbers that multiply to 6 and add to 5 are 2 and 3. So x² + 5x + 6 = (x + 2)(x + 3).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-023",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "What is the equation of a line with slope 2 passing through (0, 1)?",
+      "options": [
+        "y = 2x + 1",
+        "y = x + 2",
+        "y = 2x - 1",
+        "y = x + 1"
+      ],
+      "correct": 0,
+      "explanation": "Using y = mx + b: m = 2, and (0, 1) gives b = 1. So y = 2x + 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-024",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "Solve for x: x² = 49",
+      "options": [
+        "7 only",
+        "-7 only",
+        "7 and -7",
+        "0 and 7"
+      ],
+      "correct": 2,
+      "explanation": "If x² = 49, then x = 7 or x = -7, since both 7² and (-7)² equal 49.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-025",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "What is the distance between points (1, 2) and (4, 6) in the coordinate plane?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Distance = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-026",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "If (x + 2)(x - 5) = 0, what are the solutions for x?",
+      "options": [
+        "2 and -5",
+        "-2 and 5",
+        "2 and 5",
+        "-2 and -5"
+      ],
+      "correct": 1,
+      "explanation": "For a product to be zero, either x + 2 = 0 → x = -2, or x - 5 = 0 → x = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-027",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "What is the vertex of the parabola y = (x - 3)² + 4?",
+      "options": [
+        "(3, 4)",
+        "(-3, 4)",
+        "(3, -4)",
+        "(-3, -4)"
+      ],
+      "correct": 0,
+      "explanation": "In vertex form y = (x - h)² + k, the vertex is (h, k). Here h = 3 and k = 4, so vertex = (3, 4).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-028",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "Simplify: √50 - √18",
+      "options": [
+        "√32",
+        "2√2",
+        "4√2",
+        "3√2"
+      ],
+      "correct": 1,
+      "explanation": "√50 = √(25×2) = 5√2. √18 = √(9×2) = 3√2. So 5√2 - 3√2 = 2√2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-029",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "What is the slope of a line perpendicular to y = 3x + 2?",
+      "options": [
+        "-3",
+        "3",
+        "-1/3",
+        "1/3"
+      ],
+      "correct": 2,
+      "explanation": "The slope of the given line is 3. Perpendicular slopes are negative reciprocals: -1/3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-030",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "Solve for x: x² + 6x + 8 = 0",
+      "options": [
+        "x = -2 and x = -4",
+        "x = 2 and x = 4",
+        "x = -2 and x = 4",
+        "x = 2 and x = -4"
+      ],
+      "correct": 0,
+      "explanation": "x² + 6x + 8 = (x + 2)(x + 4) = 0, so x = -2 or x = -4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-031",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "What is the value of log₂ 32?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "16"
+      ],
+      "correct": 2,
+      "explanation": "log₂ 32 asks: 2 raised to what power equals 32? 2⁵ = 32, so log₂ 32 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-032",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "The system of equations y = x² and y = 2x + 3 has how many real solutions?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct": 2,
+      "explanation": "x² = 2x + 3 → x² - 2x - 3 = 0 → (x - 3)(x + 1) = 0 → x = 3, x = -1. Two real solutions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-033",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "What is the range of the function f(x) = -x² + 4?",
+      "options": [
+        "All real numbers",
+        "y ≤ 4",
+        "y ≥ 4",
+        "y ≥ 0"
+      ],
+      "correct": 1,
+      "explanation": "f(x) = -(x²) + 4. Since x² ≥ 0 for all x, -x² ≤ 0, so f(x) ≤ 4. The vertex is at (0, 4), and the parabola opens downward.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-034",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "If (3 - i)(2 + i) is simplified to a + bi, what is the value of b?",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "correct": 0,
+      "explanation": "(3 - i)(2 + i) = 6 + 3i - 2i - i² = 6 + i - (-1) = 6 + i + 1 = 7 + i. So b = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-035",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "For what value of k does the equation 3x² + kx + 12 = 0 have exactly one real solution?",
+      "options": [
+        "k = ±6",
+        "k = ±12",
+        "k = ±24",
+        "k = 0"
+      ],
+      "correct": 1,
+      "explanation": "For exactly one real solution, discriminant = 0: k² - 4(3)(12) = 0 → k² - 144 = 0 → k² = 144 → k = ±12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-036",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "hard",
+      "stem": "What is the equation of a circle with center (2, -3) and radius 5?",
+      "options": [
+        "(x - 2)² + (y + 3)² = 25",
+        "(x + 2)² + (y - 3)² = 25",
+        "(x - 2)² + (y + 3)² = 5",
+        "(x + 2)² + (y - 3)² = 5"
+      ],
+      "correct": 0,
+      "explanation": "The standard form is (x - h)² + (y - k)² = r², where (h, k) is the center. Here h = 2, k = -3, r = 5, r² = 25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-037",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "A triangle has angles measuring 50° and 70°. What is the measure of the third angle?",
+      "options": [
+        "50°",
+        "60°",
+        "70°",
+        "120°"
+      ],
+      "correct": 1,
+      "explanation": "The sum of angles in a triangle is 180°. 180 - 50 - 70 = 60°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-038",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "What is the area of a rectangle with length 12 cm and width 5 cm?",
+      "options": [
+        "17 cm²",
+        "30 cm²",
+        "60 cm²",
+        "120 cm²"
+      ],
+      "correct": 2,
+      "explanation": "Area = length × width = 12 × 5 = 60 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-039",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "In a right triangle, the legs are 3 and 4. What is the length of the hypotenuse?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "25"
+      ],
+      "correct": 0,
+      "explanation": "By the Pythagorean theorem: c² = 3² + 4² = 9 + 16 = 25, so c = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-040",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "What is the circumference of a circle with radius 7? (Use π = 3.14)",
+      "options": [
+        "21.98",
+        "43.96",
+        "49.00",
+        "153.86"
+      ],
+      "correct": 1,
+      "explanation": "Circumference = 2πr = 2 × 3.14 × 7 = 43.96.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-041",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "A circle has a diameter of 10 inches. What is its area? (Use π = 3.14)",
+      "options": [
+        "31.4 in²",
+        "78.5 in²",
+        "100 in²",
+        "314 in²"
+      ],
+      "correct": 1,
+      "explanation": "Radius = diameter/2 = 5. Area = πr² = 3.14 × 25 = 78.5 in².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-042",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "Two angles are supplementary. One angle is 3 times the other. What is the measure of the larger angle?",
+      "options": [
+        "45°",
+        "60°",
+        "120°",
+        "135°"
+      ],
+      "correct": 3,
+      "explanation": "Let x = smaller angle. Then 3x = larger. x + 3x = 180 → 4x = 180 → x = 45. Larger = 3(45) = 135°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-043",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "What is the volume of a rectangular prism with dimensions 4, 5, and 6?",
+      "options": [
+        "15",
+        "74",
+        "120",
+        "148"
+      ],
+      "correct": 2,
+      "explanation": "Volume = l × w × h = 4 × 5 × 6 = 120.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-044",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "In a right triangle, if sin θ = 3/5, what is cos θ?",
+      "options": [
+        "3/5",
+        "4/5",
+        "5/4",
+        "5/3"
+      ],
+      "correct": 1,
+      "explanation": "sin θ = opposite/hypotenuse = 3/5. Using the Pythagorean triple 3-4-5, adjacent = 4. So cos θ = adjacent/hypotenuse = 4/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-045",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "A regular hexagon has a perimeter of 36. What is the length of one side?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "A regular hexagon has 6 equal sides. Side length = perimeter/6 = 36/6 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-046",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "What is the surface area of a cube with edge length 3?",
+      "options": [
+        "18",
+        "27",
+        "36",
+        "54"
+      ],
+      "correct": 3,
+      "explanation": "A cube has 6 faces, each with area 3² = 9. Surface area = 6 × 9 = 54.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-047",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "medium",
+      "stem": "If tan θ = 1, and θ is between 0° and 90°, what is the value of θ?",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correct": 1,
+      "explanation": "tan 45° = 1, and 45° is between 0° and 90°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-048",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "hard",
+      "stem": "A cylinder has a radius of 3 and a height of 10. What is its volume? (Use π = 3.14)",
+      "options": [
+        "94.2",
+        "188.4",
+        "282.6",
+        "565.2"
+      ],
+      "correct": 2,
+      "explanation": "Volume of a cylinder = πr²h = 3.14 × 9 × 10 = 282.6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-049",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "hard",
+      "stem": "In triangle ABC, side a = 8, side b = 6, and angle C = 60°. What is the length of side c?",
+      "options": [
+        "2√13",
+        "10",
+        "√52",
+        "14"
+      ],
+      "correct": 0,
+      "explanation": "Using the Law of Cosines: c² = a² + b² - 2ab cos C = 64 + 36 - 2(8)(6)(0.5) = 100 - 48 = 52. So c = √52 = 2√13.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-050",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "hard",
+      "stem": "What is sin(π/3)?",
+      "options": [
+        "0",
+        "1/2",
+        "√2/2",
+        "√3/2"
+      ],
+      "correct": 3,
+      "explanation": "π/3 = 60°, and sin 60° = √3/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-051",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "If a = 4 and b = -3, what is the value of 2a - 3b?",
+      "options": [
+        "-1",
+        "5",
+        "8",
+        "17"
+      ],
+      "correct": 3,
+      "explanation": "2(4) - 3(-3) = 8 + 9 = 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-052",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "easy",
+      "stem": "There are 24 students in a class. If 3/8 of them are girls, how many girls are there?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "15"
+      ],
+      "correct": 2,
+      "explanation": "(3/8) × 24 = 72/8 = 9 girls.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-053",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "If 4x + 3 = 2x + 11, what is the value of x?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "4x - 2x = 11 - 3 → 2x = 8 → x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-054",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "medium",
+      "stem": "A car travels at a constant speed of 55 miles per hour. How far will it travel in 2.5 hours?",
+      "options": [
+        "110 miles",
+        "127.5 miles",
+        "137.5 miles",
+        "165 miles"
+      ],
+      "correct": 2,
+      "explanation": "Distance = speed × time = 55 × 2.5 = 137.5 miles.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-055",
+      "section": "math",
+      "topic": "Pre-algebra and elementary algebra",
+      "difficulty": "hard",
+      "stem": "If 3(2x - 4) = 5 - 2(x + 1), what is the value of x?",
+      "options": [
+        "1.5",
+        "2.5",
+        "15/8",
+        "15/4"
+      ],
+      "correct": 2,
+      "explanation": "6x - 12 = 5 - 2x - 2 → 6x - 12 = 3 - 2x → 8x = 15 → x = 15/8 = 1.875.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-056",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "What is the value of √144?",
+      "options": [
+        "11",
+        "12",
+        "14",
+        "72"
+      ],
+      "correct": 1,
+      "explanation": "√144 = 12 because 12² = 144.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-057",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "easy",
+      "stem": "What is the midpoint of the segment connecting (0, 0) and (6, 8)?",
+      "options": [
+        "(3, 4)",
+        "(2, 4)",
+        "(3, 8)",
+        "(6, 8)"
+      ],
+      "correct": 0,
+      "explanation": "Midpoint = ((0+6)/2, (0+8)/2) = (3, 4).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-058",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "What is the domain of f(x) = 1/(x - 4)?",
+      "options": [
+        "All real numbers",
+        "x ≠ 4",
+        "x > 4",
+        "x < 4"
+      ],
+      "correct": 1,
+      "explanation": "The denominator cannot be zero, so x - 4 ≠ 0 → x ≠ 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-059",
+      "section": "math",
+      "topic": "Plane geometry and trigonometry",
+      "difficulty": "easy",
+      "stem": "A square has a side length of 9. What is its perimeter?",
+      "options": [
+        "18",
+        "27",
+        "36",
+        "81"
+      ],
+      "correct": 2,
+      "explanation": "Perimeter of a square = 4 × side = 4 × 9 = 36.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-math-060",
+      "section": "math",
+      "topic": "Intermediate algebra and coordinate geometry",
+      "difficulty": "medium",
+      "stem": "If x varies inversely with y, and x = 6 when y = 4, what is x when y = 8?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "Inverse variation: xy = k. So k = 6 × 4 = 24. When y = 8: x = 24/8 = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-001",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'Dr. Elena Vásquez has spent two decades studying how mangrove forests protect coastal communities from storm surges. Her research in the Gulf of Fonseca shows that areas with intact mangrove buffers experienced 60% less property damage during Hurricane Mitch than those where mangroves had been cleared.' According to the passage, what is the main finding of Dr. Vásquez's research?",
+      "options": [
+        "Mangrove forests provide significant protection against storm damage",
+        "Hurricane Mitch was the most destructive hurricane in history",
+        "The Gulf of Fonseca has the largest mangrove forests in the world",
+        "Dr. Vásquez has studied mangroves for her entire career"
+      ],
+      "correct": 0,
+      "explanation": "The passage states that areas with mangroves experienced 60% less property damage, directly supporting the finding that mangroves provide significant storm protection. The other options are not supported or are secondary details.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-002",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The Industrial Revolution transformed not only manufacturing but also social structures. As factories drew workers from rural areas, cities grew rapidly. By 1850, for the first time in history, more people in Britain lived in urban areas than in rural ones.' According to the passage, what significant demographic shift occurred by 1850 in Britain?",
+      "options": [
+        "More people worked in factories than on farms",
+        "The urban population exceeded the rural population for the first time",
+        "The total population of Britain doubled",
+        "Most factory workers returned to rural areas"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that by 1850, more people in Britain lived in urban areas than in rural ones for the first time in history.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-003",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'Sea otters, once hunted to near extinction for their fur, are now recognized as a keystone species. By preying on sea urchins, otters prevent the urchins from overgrazing kelp forests, which provide habitat for countless marine species. Where otters have been reintroduced, kelp forest ecosystems have shown remarkable recovery.' What role do sea otters play in their ecosystem according to the passage?",
+      "options": [
+        "They compete with sea urchins for food",
+        "They help maintain kelp forests by controlling urchin populations",
+        "They are the primary predators of fish in kelp forests",
+        "They damage kelp forests by feeding on them"
+      ],
+      "correct": 1,
+      "explanation": "The passage explains that otters prevent urchins from overgrazing kelp forests, supporting kelp forest recovery. This is the keystone role described.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-004",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The Rosetta Stone, discovered in 1799, proved to be the key to deciphering Egyptian hieroglyphs. The stone bears a decree inscribed in three scripts: hieroglyphic, demotic, and ancient Greek. Because scholars could read Greek, they could finally unlock the meaning of the hieroglyphic script.' What made the Rosetta Stone so valuable to scholars?",
+      "options": [
+        "It was the oldest Egyptian artifact ever found",
+        "It contained the same text in multiple scripts, one of which scholars could read",
+        "It was made of a rare and precious material",
+        "It was discovered by a famous archaeologist"
+      ],
+      "correct": 1,
+      "explanation": "The passage explains that the stone contained the same decree in three scripts, and because scholars could read Greek, they could use it to decipher the hieroglyphs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-005",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The Amazon rainforest produces approximately 20% of the world's oxygen. Often called the 'lungs of the Earth,' this vast ecosystem spans nine countries and is home to an estimated 10% of the world's known biodiversity. However, deforestation has reduced the forest's area by nearly 20% since the 1970s.' Which of the following best describes the main idea of the passage?",
+      "options": [
+        "The Amazon rainforest is ecologically vital but threatened by deforestation",
+        "The Amazon produces most of the world's oxygen",
+        "Nine countries share the Amazon rainforest",
+        "Biodiversity in the Amazon has been completely documented"
+      ],
+      "correct": 0,
+      "explanation": "The passage emphasizes both the Amazon's ecological importance (oxygen production, biodiversity) and the threat it faces (deforestation). Option A captures this dual focus.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-006",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'Dr. Aisha Patel's study on microplastics in urban water systems yielded surprising results. She hypothesized that treatment facilities would remove most microplastics, but her data showed that 78% of particles smaller than 100 microns passed through standard filtration systems. 'We assumed the technology was adequate,' she noted, 'but our findings suggest otherwise.' Based on the passage, why were the results of Dr. Patel's study surprising?",
+      "options": [
+        "Microplastics were found in higher concentrations than expected",
+        "Standard filtration systems failed to remove most small microplastic particles",
+        "Urban water systems contained no microplastics at all",
+        "Treatment facilities removed all particles larger than 100 microns"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that Dr. Patel assumed treatment facilities would remove most microplastics, but 78% of particles smaller than 100 microns passed through, which surprised her. The surprise was that filtration was inadequate.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-007",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'The Harlem Renaissance of the 1920s and 1930s was a cultural explosion centered in New York City's Harlem neighborhood. Writers like Langston Hughes and Zora Neale Hurston, musicians like Duke Ellington and Louis Armstrong, and visual artists like Aaron Douglas created works that celebrated African American culture and challenged racial stereotypes.' Which of the following is true based on the passage?",
+      "options": [
+        "The Harlem Renaissance was limited to literary works",
+        "Duke Ellington was primarily a visual artist",
+        "The Harlem Renaissance involved multiple art forms including literature, music, and visual art",
+        "The movement ended in the 1920s"
+      ],
+      "correct": 2,
+      "explanation": "The passage mentions writers, musicians, AND visual artists, confirming that the Harlem Renaissance involved multiple art forms. The other options contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-008",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'Caffeine is the world's most widely consumed psychoactive substance. It works primarily by blocking adenosine receptors in the brain, which prevents the onset of drowsiness. While moderate consumption — up to 400 mg per day — is considered safe for most adults, excessive intake can lead to anxiety, insomnia, and heart palpitations.' What does the passage identify as the primary mechanism of caffeine?",
+      "options": [
+        "Increasing the production of adrenaline",
+        "Blocking adenosine receptors to prevent drowsiness",
+        "Stimulating the production of melatonin",
+        "Increasing blood flow to the brain"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that caffeine 'works primarily by blocking adenosine receptors in the brain, which prevents the onset of drowsiness.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-009",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'The author describes visiting her grandmother's house for the last time before it was sold. She walks through each room, noting the worn floorboards where generations of children had played, the kitchen counter scarred from decades of meal preparation, and the garden where her grandmother had taught her to identify herbs. Though the house was empty, it felt full of life.' What does the author primarily convey through this description?",
+      "options": [
+        "The house was in poor condition and needed repairs",
+        "The house held deep emotional significance through accumulated family history",
+        "The author was relieved to be selling the house",
+        "The grandmother was an excellent gardener"
+      ],
+      "correct": 1,
+      "explanation": "The author's focus on 'worn floorboards where generations of children had played' and other details emphasizes the house's emotional significance and accumulated family memories, not its physical condition.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-010",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "hard",
+      "stem": "Passage: 'The researchers conducted a longitudinal study tracking 500 children from age 5 to age 18, measuring their reading habits and academic performance annually. They found that children who read for pleasure at least 20 minutes daily scored significantly higher on standardized tests than those who read less than 5 minutes daily — even after controlling for socioeconomic status and parental education.' What conclusion is best supported by the study described?",
+      "options": [
+        "Reading for pleasure causes higher academic performance regardless of background factors",
+        "Children from higher socioeconomic backgrounds read more",
+        "Standardized tests are biased against infrequent readers",
+        "The study only tracked reading habits for one year"
+      ],
+      "correct": 0,
+      "explanation": "The study found a correlation between daily reading for pleasure and higher test scores, and importantly, this held true even after controlling for socioeconomic status and parental education, suggesting the effect is independent of background.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-011",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "hard",
+      "stem": "Passage: 'Historians have long debated the factors that contributed to the fall of the Roman Empire. While some emphasize military decline and barbarian invasions, others point to economic instability and political corruption. A newer interpretation argues that environmental factors, including climate change and soil depletion, played a more significant role than previously acknowledged.' According to the passage, what characterizes the newer interpretation of the Roman Empire's fall?",
+      "options": [
+        "It focuses exclusively on military factors",
+        "It dismisses the role of barbarian invasions entirely",
+        "It highlights environmental factors as more significant than previously recognized",
+        "It argues that the empire never actually fell"
+      ],
+      "correct": 2,
+      "explanation": "The passage states that a newer interpretation argues environmental factors 'played a more significant role than previously acknowledged.' It does not say these are the only factors or that other views are invalid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-012",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "easy",
+      "stem": "Passage: 'The candidate's speech was a masterclass in political rhetoric, weaving together personal anecdotes, statistical evidence, and emotional appeals with remarkable skill.' The author's tone toward the candidate's speech is best described as:",
+      "options": [
+        "Critical",
+        "Admiring",
+        "Neutral",
+        "Dismissive"
+      ],
+      "correct": 1,
+      "explanation": "Words like 'masterclass,' 'remarkable skill,' and the positive description of the speech's components indicate an admiring or appreciative tone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-013",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "easy",
+      "stem": "Passage: 'Despite decades of research and billions of dollars invested, a cure for the common cold remains frustratingly elusive. Hundreds of viral strains and their remarkable ability to mutate continue to thwart our best scientific efforts.' Which phrase best conveys the authors' attitude toward the scientific efforts described?",
+      "options": [
+        "Frustrated but not surprised",
+        "Dismissive and skeptical",
+        "Hopeful and optimistic",
+        "Indifferent and unconcerned"
+      ],
+      "correct": 0,
+      "explanation": "The words 'frustratingly elusive' and 'thwart our best scientific efforts' convey frustration, while 'despite decades of research' suggests the authors recognize the difficulty and are not surprised by the lack of a cure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-014",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "easy",
+      "stem": "Passage: 'The senator's proposal would allocate 5 billion dollars to infrastructure projects across the state. Supporters argue it will create jobs and stimulate the economy. Opponents counter that the spending will increase the state's debt burden.' What is the primary purpose of this passage?",
+      "options": [
+        "To argue in favor of the proposal",
+        "To objectively present a proposal and both sides of the debate",
+        "To criticize the senator for proposing the plan",
+        "To explain why infrastructure projects are important"
+      ],
+      "correct": 1,
+      "explanation": "The passage neutrally presents the proposal and gives both supporters' and opponents' perspectives without taking a side. This objective presentation is the primary purpose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-015",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "medium",
+      "stem": "Passage: 'The old lighthouse stood on the cliff, its beacon long extinguished. The keeper's quarters were boarded up, and the iron railing was rusted and broken. But if you stood on the rocks below at sunset, you could still imagine the light cutting through the fog, guiding ships safely home.' The imagery in this passage primarily evokes a sense of:",
+      "options": [
+        "Present decay contrasted with past purpose",
+        "Danger and imminent collapse",
+        "Modernization and progress",
+        "Joyful nostalgia"
+      ],
+      "correct": 0,
+      "explanation": "The passage describes the lighthouse's current state (beacon extinguished, boarded up, rusted) but also invites the reader to imagine its past function (guiding ships), creating a contrast between decay and purpose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-016",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "medium",
+      "stem": "Passage: 'Some historians argue that the Cold War was essentially a clash of ideologies between communism and capitalism. Others contend it was fundamentally about geopolitical power and spheres of influence, with ideology serving as a convenient justification.' The passage suggests that the two groups of historians disagree primarily about which of the following?",
+      "components": {
+        "details": "Appropriate response identifies the point of disagreement between the two historical interpretations"
+      },
+      "options": [
+        "Whether the Cold War was important",
+        "What the central driver of the Cold War was",
+        "Whether communism or capitalism was more effective",
+        "Which country won the Cold War"
+      ],
+      "correct": 1,
+      "explanation": "The disagreement is about what primarily drove the Cold War: one side says ideology, the other says geopolitical power with ideology as justification. They disagree on the central driver.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-017",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "medium",
+      "stem": "Passage: 'The word 'nice' has undergone remarkable semantic change over its history. When it first entered English from French in the 13th century, it meant 'foolish' or 'ignorant.' By the 16th century, it had shifted to mean 'precise' or 'careful.' Only in the 18th century did it acquire its modern meaning of 'pleasant' or 'agreeable.' The author's primary purpose in this passage is to:",
+      "options": [
+        "Argue that 'nice' is an overused word",
+        "Discuss the etymology and semantic evolution of a single word",
+        "Criticize people who misuse the word 'nice'",
+        "Compare English and French vocabulary"
+      ],
+      "correct": 1,
+      "explanation": "The passage traces the word 'nice' through three distinct meanings across centuries, making this a discussion of etymology and semantic change.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-018",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "hard",
+      "stem": "Passage: 'The author's argument proceeds in three stages: first, establishing the historical context of the housing crisis; second, analyzing current policy failures; and third, proposing a framework for reform. The transition between the second and third sections is particularly effective, as the author uses the documented failures as a natural springboard for the proposed solutions.' The passage suggests that the effectiveness of the transition between sections two and three lies in its:",
+      "options": [
+        "Use of historical examples",
+        "Logical connection between problems and solutions",
+        "Emotional appeal to readers",
+        "Introduction of new evidence"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that the author uses 'documented failures as a natural springboard for the proposed solutions,' indicating a logical problem-to-solution connection that makes the transition effective.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-019",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "hard",
+      "stem": "Passage: 'The study's methodology has drawn criticism from several quarters. Its sample size was small — only 30 participants — and the researchers did not include a control group. Furthermore, the data collection relied on self-reporting, which is known to introduce bias. Nonetheless, the study's findings have been widely cited in policy discussions.' The author's attitude toward the study's influence on policy is best described as:",
+      "options": [
+        "Approving",
+        "Critical of the methodology but noting its influence",
+        "Enthusiastic about the findings",
+        "Dismissive of all research in this field"
+      ],
+      "correct": 1,
+      "explanation": "The author highlights methodological flaws (small sample, no control group, self-reporting bias) but then notes the study's influence anyway, indicating a critical view of its methodology while acknowledging its impact.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-020",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "easy",
+      "stem": "Passage 1: 'Solar panels convert sunlight directly into electricity through photovoltaic cells. Their efficiency has improved from about 6% in the 1950s to over 22% in modern commercial panels.' Passage 2: 'Wind turbines generate electricity by using the kinetic energy of wind to spin a generator. Modern offshore turbines can generate up to 15 megawatts each.' Based on both passages, which statement is true?",
+      "options": [
+        "Both solar panels and wind turbines generate electricity from renewable sources",
+        "Solar panels are more efficient than wind turbines",
+        "Wind turbines do not use renewable energy",
+        "Solar panels were invented after wind turbines"
+      ],
+      "correct": 0,
+      "explanation": "Both passages describe technologies that generate electricity from renewable sources (sunlight and wind). The passages do not provide a direct comparison of efficiency or invention dates.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-021",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "easy",
+      "stem": "Passage: 'An 1872 study by Louis Agassiz suggested that glacial striations in Scotland were evidence of an ancient ice age. This was initially met with skepticism, as many scientists believed the markings were caused by the biblical Great Flood. However, subsequent geological research confirmed Agassiz's theory, and the concept of ice ages is now firmly established.' Which of the following best describes the progression of scientific understanding described in the passage?",
+      "options": [
+        "A rejected idea that was later confirmed by additional evidence",
+        "A theory that was immediately accepted",
+        "A hypothesis that remains controversial today",
+        "An idea that was proven wrong by later research"
+      ],
+      "correct": 0,
+      "explanation": "Agassiz's theory was initially met with skepticism but was later confirmed by subsequent research, showing a progression from rejection to acceptance based on accumulating evidence.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-022",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "medium",
+      "stem": "Passage: 'The Bessemer process, invented in 1856, revolutionized steel production by making it faster and cheaper. This innovation enabled the construction of skyscrapers, longer bridges, and more durable railways.' If the Bessemer process had not been invented, which of the following would most likely have been delayed based on the passage?",
+      "options": [
+        "The development of concrete",
+        "The widespread construction of skyscrapers and steel bridges",
+        "The invention of the automobile",
+        "The discovery of iron ore deposits"
+      ],
+      "correct": 1,
+      "explanation": "The passage directly links the Bessemer process to enabling skyscrapers, longer bridges, and durable railways. Without it, these would likely have been delayed due to the lack of affordable steel.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-023",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "medium",
+      "stem": "Passage: 'Jane Austen's novels, though written in the early 19th century, continue to resonate with modern readers. Her sharp observations about social hierarchy, marriage, and economic dependence transcend their historical setting.' The author would most likely agree with which statement?",
+      "options": [
+        "Austen's work is only of historical interest",
+        "The themes in Austen's novels remain relevant today",
+        "Modern readers struggle to understand Austen's writing",
+        "Austen primarily wrote about politics"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that Austen's novels 'continue to resonate with modern readers' and that her observations 'transcend their historical setting,' supporting the idea that her themes remain relevant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-024",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "medium",
+      "stem": "Passage: 'The discovery of penicillin in 1928 by Alexander Fleming was one of the most important medical breakthroughs of the 20th century. Before antibiotics, even minor infections could be fatal. However, the overuse of antibiotics has led to the emergence of drug-resistant bacteria, which the World Health Organization has identified as one of the greatest threats to global health.' The passage suggests that the initial benefits of penicillin have been complicated by:",
+      "options": [
+        "The discovery of vaccines",
+        "The decline in pharmaceutical research",
+        "The development of antibiotic resistance due to overuse",
+        "The high cost of modern antibiotics"
+      ],
+      "correct": 2,
+      "explanation": "The passage establishes antibiotics' life-saving importance and then notes that overuse has led to drug-resistant bacteria, which is the complication. The WHO threat designation underscores the severity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-025",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "hard",
+      "stem": "Passage: 'The author argues that the decline in honeybee populations is primarily caused by pesticide use, particularly neonicotinoids. A supporting paragraph cites studies showing that neonicotinoid exposure impairs bees' foraging ability and navigation.' The author would most likely interpret a study finding that parasitic mites also harm bee populations as:",
+      "options": [
+        "Evidence that pesticides are not the only threat",
+        "Proof that the author's argument about pesticides is wrong",
+        "An unrelated finding that does not affect the argument about pesticides",
+        "A more important factor than pesticide use"
+      ],
+      "correct": 0,
+      "explanation": "The author argues that pesticides are the PRIMARY cause, not the only cause. Evidence of mite harm would be consistent with the view that multiple factors are at play, while the author still considers pesticides the primary cause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-026",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "hard",
+      "stem": "Passage: 'The Svalbard Global Seed Vault in Norway stores over one million seed samples from around the world. Its purpose is to preserve crop diversity in case of global catastrophe. The vault is built deep inside a mountain on an island, where permafrost and thick rock provide natural refrigeration even if power systems fail.' Based on the passage, which design feature of the vault is most important for ensuring long-term preservation without relying on human intervention?",
+      "options": [
+        "Its location on an island",
+        "Natural refrigeration from permafrost and rock insulation",
+        "The capacity to store one million samples",
+        "Its construction in the 21st century"
+      ],
+      "correct": 1,
+      "explanation": "The passage emphasizes that the vault's permafrost and rock insulation provide natural refrigeration that functions even if power systems fail, making this the key design feature for non-human-dependent preservation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-027",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The Great Barrier Reef is the world's largest coral reef system, stretching over 2,300 kilometers along the coast of Australia. It is home to more than 1,500 species of fish, 400 types of coral, and numerous other marine species. The reef generates billions of dollars in tourism revenue annually.' According to the passage, what is true about the Great Barrier Reef?",
+      "options": [
+        "It is the longest coral reef system in the world",
+        "It is located in the Atlantic Ocean",
+        "It contains exactly 1,500 species of fish",
+        "It is primarily valued for its oil reserves"
+      ],
+      "correct": 0,
+      "explanation": "The passage explicitly states it is the 'world's largest coral reef system' stretching over 2,300 km. The other options contradict or misrepresent information in the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-028",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The term 'Renaissance' means 'rebirth' in French. The Renaissance period, spanning roughly the 14th to the 17th century, was characterized by a revival of interest in classical art, literature, and learning. It began in Italy before spreading throughout Europe.' According to the passage, the Renaissance period:",
+      "options": [
+        "Began in Italy",
+        "Was limited to France",
+        "Rejected classical learning",
+        "Lasted only a few decades"
+      ],
+      "correct": 0,
+      "explanation": "The passage states that the Renaissance 'began in Italy before spreading throughout Europe.' The other options contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-029",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'In 1969, the Apollo 11 mission successfully landed humans on the Moon for the first time. Astronauts Neil Armstrong and Buzz Aldrin spent about two hours walking on the lunar surface, collecting rock samples and deploying scientific instruments. Michael Collins remained in orbit around the Moon piloting the command module.' Which statement is supported by the passage?",
+      "options": [
+        "All three astronauts walked on the Moon",
+        "Armstrong and Aldrin conducted scientific tasks on the lunar surface",
+        "The Apollo 11 mission lasted exactly two hours",
+        "Collins collected rock samples on the Moon"
+      ],
+      "correct": 1,
+      "explanation": "The passage states Armstrong and Aldrin collected samples and deployed instruments (scientific tasks). Collins remained in orbit and did not walk on the Moon. The two hours refers to the moonwalk, not the entire mission.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-030",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "easy",
+      "stem": "Passage: 'The author begins the novel not with action, but with a detailed description of the landscape — the rolling hills, the winding river, the ancient oaks that have stood for centuries. This deliberate pacing establishes the rural setting as a character in its own right.' The passage suggests that the author's descriptive opening serves to:",
+      "options": [
+        "Introduce the main conflict immediately",
+        "Establish the setting as an important element of the story",
+        "Provide background information about the characters",
+        "Create suspense about future events"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that the description establishes 'the rural setting as a character in its own right,' meaning the setting itself is important to the story.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-031",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "medium",
+      "stem": "Passage: 'The passage is structured as a series of contrasts: light versus dark, noise versus silence, chaos versus order. Each pairing reinforces the central tension between the protagonist's inner turmoil and the external composure she must maintain.' The structure of the passage primarily serves to:",
+      "options": [
+        "Confuse the reader with contradictions",
+        "Emphasize a central conflict through opposing imagery",
+        "Describe the physical setting in detail",
+        "Introduce multiple characters and their motivations"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that the contrasts 'reinforce the central tension' between the protagonist's inner and outer states, showing how structure serves to emphasize the central conflict.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-032",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "easy",
+      "stem": "Passage 1: 'Mars is often called the Red Planet due to its reddish appearance caused by iron oxide (rust) on its surface.' Passage 2: 'Mars has a thin atmosphere composed primarily of carbon dioxide, with surface temperatures averaging -60°C.' Based on both passages, which of the following is a similarity between the descriptions?",
+      "options": [
+        "Both mention the chemical composition of Mars",
+        "Both describe the temperature on Mars",
+        "Both relate to physical properties of Mars",
+        "Both discuss the possibility of life on Mars"
+      ],
+      "correct": 2,
+      "explanation": "Passage 1 describes Mars's appearance (a physical property), and Passage 2 describes its atmosphere and temperature (also physical properties). Both relate to Mars's physical characteristics.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-033",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "medium",
+      "stem": "Passage: 'The introduction of non-native species can disrupt local ecosystems. For example, the brown tree snake, accidentally introduced to Guam after World War II, has caused the extinction of most of the island's native bird species.' What additional information would best support the claim in this passage?",
+      "options": [
+        "A list of native bird species that survived on Guam",
+        "Data showing that bird populations declined after the snake's introduction",
+        "A description of the snake's natural predators",
+        "The number of snakes currently on Guam"
+      ],
+      "correct": 1,
+      "explanation": "Data showing bird population decline after the snake's introduction would provide direct causal evidence supporting the claim that the snake caused bird extinctions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-034",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "hard",
+      "stem": "Passage: 'Economist Thomas Malthus argued in 1798 that population growth would always outpace food production, leading to inevitable famine. However, Malthus did not anticipate the agricultural innovations of the 20th century, such as synthetic fertilizers and high-yield crop varieties, which dramatically increased food production.' The passage suggests that Malthus's theory failed primarily because:",
+      "options": [
+        "He underestimated human population growth",
+        "He could not foresee technological advances in agriculture",
+        "He ignored the role of government policy",
+        "His mathematical calculations were incorrect"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that Malthus 'did not anticipate the agricultural innovations of the 20th century,' which is presented as the reason his prediction of inevitable famine did not come to pass.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-035",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "easy",
+      "stem": "Passage: 'The circulatory system consists of the heart, blood vessels, and blood. Its primary function is to transport oxygen, nutrients, hormones, and waste products throughout the body. The heart pumps blood through approximately 60,000 miles of blood vessels.' According to the passage, what is the primary function of the circulatory system?",
+      "options": [
+        "To regulate body temperature",
+        "To transport substances throughout the body",
+        "To digest food",
+        "To produce hormones"
+      ],
+      "correct": 1,
+      "explanation": "The passage states the primary function is 'to transport oxygen, nutrients, hormones, and waste products throughout the body.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-036",
+      "section": "reading",
+      "topic": "Key ideas and details",
+      "difficulty": "medium",
+      "stem": "Passage: 'Verbal irony occurs when a speaker says something but means the opposite. For example, looking out at a torrential downpour and saying 'What lovely weather we're having' is verbal irony. Dramatic irony, by contrast, occurs when the audience knows something that the characters in a story do not.' Based on the passage, what distinguishes verbal irony from dramatic irony?",
+      "options": [
+        "Verbal irony involves a contradiction between what is said and what is meant, while dramatic irony involves a gap in knowledge between the audience and characters",
+        "Verbal irony is used in comedies only",
+        "Dramatic irony is always obvious to the audience",
+        "There is no meaningful difference between the two types"
+      ],
+      "correct": 0,
+      "explanation": "The passage defines verbal irony as saying the opposite of what you mean, and dramatic irony as the audience knowing something the characters don't. These are distinct phenomena.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-037",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "easy",
+      "stem": "Passage: 'In the sentence 'The thunder roared angrily through the valley,' which literary device is used to describe the thunder?'",
+      "options": [
+        "Simile",
+        "Personification",
+        "Alliteration",
+        "Hyperbole"
+      ],
+      "correct": 1,
+      "explanation": "Personification gives human qualities to non-human things. 'Roared angrily' attributes human emotion (anger) and action (roaring) to thunder, which is a natural phenomenon.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-038",
+      "section": "reading",
+      "topic": "Craft and structure",
+      "difficulty": "medium",
+      "stem": "Passage: 'The author concludes that the proposed legislation would have both positive and negative effects. On one hand, it would reduce carbon emissions by 15%. On the other hand, it would cost the average household an estimated $200 per year.' The author's conclusion is best described as:",
+      "options": [
+        "One-sided advocacy for the legislation",
+        "A balanced assessment weighing costs against benefits",
+        "A firm rejection of the legislation",
+        "An emotional appeal to readers"
+      ],
+      "correct": 1,
+      "explanation": "The author presents both a benefit (reduced emissions) and a cost ($200 per year), indicating a balanced assessment rather than a one-sided position.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-039",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "hard",
+      "stem": "Passage: 'The author argues that standardized testing in schools creates perverse incentives for teachers to 'teach to the test,' narrowing the curriculum and prioritizing rote memorization over critical thinking. The author supports this claim with data showing that schools with high-stakes testing devote significantly less time to arts and social studies.' A defender of standardized testing would most likely respond by:",
+      "options": [
+        "Agreeing that narrowing the curriculum is acceptable",
+        "Arguing that standardized tests provide accountability and ensure basic competency",
+        "Denying that teaching to the test occurs",
+        "Suggesting eliminating all forms of student assessment"
+      ],
+      "correct": 1,
+      "explanation": "A testing defender would likely emphasize the benefits of accountability and ensuring all students meet basic standards, countering the author's focus on negative consequences.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-reading-040",
+      "section": "reading",
+      "topic": "Integration of knowledge and ideas",
+      "difficulty": "hard",
+      "stem": "Passage: 'Recent archaeological discoveries in Siberia have pushed back the date of human habitation in the Arctic by thousands of years. Stone tools and animal bones found at the site suggest that humans were hunting woolly mammoths in the region as early as 45,000 years ago — 10,000 years earlier than previously thought.' The significance of this discovery lies primarily in:",
+      "options": [
+        "Confirming that woolly mammoths were already present in Siberia",
+        "Demonstrating that humans adapted to Arctic conditions much earlier than believed",
+        "Proving that stone tools were used for hunting",
+        "Establishing that Siberia was the first location of human settlement"
+      ],
+      "correct": 1,
+      "explanation": "The passage frames the discovery primarily around pushing back the timeline of human Arctic habitation by 10,000 years, which is the main significance emphasized.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-001",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "Table: Temperature readings (°C) at different depths in a lake:\nDepth (m): 0 | 5 | 10 | 20 | 30\nTemperature (°C): 22 | 18 | 12 | 8 | 6\nBased on the table, what is the general relationship between depth and temperature in this lake?",
+      "options": [
+        "Temperature increases as depth increases",
+        "Temperature decreases as depth increases",
+        "Temperature remains constant at all depths",
+        "Temperature fluctuates randomly with depth"
+      ],
+      "correct": 1,
+      "explanation": "The data shows temperature consistently decreasing from 22°C at the surface to 6°C at 30 meters, demonstrating a clear inverse relationship between depth and temperature.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-002",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "A graph shows the population of a bacterial culture over 24 hours. At hour 0, there are 100 bacteria. At hour 6, there are 400 bacteria. At hour 12, there are 1,600 bacteria. At hour 18, there are 6,400 bacteria. Approximately how many bacteria would you expect at hour 24?",
+      "options": [
+        "12,800",
+        "25,600",
+        "50,000",
+        "100,000"
+      ],
+      "correct": 1,
+      "explanation": "The population quadruples every 6 hours: 100 → 400 → 1,600 → 6,400 → 25,600. This is exponential growth.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-003",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "Table: Solubility of substance X in water at various temperatures:\nTemperature (°C): 0 | 20 | 40 | 60 | 80\nSolubility (g/100mL): 35 | 38 | 42 | 48 | 55\nBased on the table, approximately how much substance X would dissolve in 100 mL of water at 40°C?",
+      "options": [
+        "35 g",
+        "38 g",
+        "42 g",
+        "48 g"
+      ],
+      "correct": 2,
+      "explanation": "At 40°C, the table shows a solubility of 42 g per 100 mL of water.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-004",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "medium",
+      "stem": "A graph plots the distance traveled by two cars over time. Car A travels at a constant speed, covering 60 miles in 1 hour and 120 miles in 2 hours. Car B starts at the same point but travels faster, covering 80 miles in 1 hour and 160 miles in 2 hours. Which statement about the two cars is true?",
+      "options": [
+        "Car A is faster than Car B",
+        "Car B travels at 80 miles per hour",
+        "Both cars travel at the same speed",
+        "Car A covers more distance than Car B in 1 hour"
+      ],
+      "correct": 1,
+      "explanation": "Car B covers 80 miles in 1 hour, indicating a speed of 80 mph. Car A travels at 60 mph, making Car B faster.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-005",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "medium",
+      "stem": "Table: Heart rate (beats per minute) before, during, and after exercise:\nCondition: Resting | Light exercise | Vigorous exercise | Recovery (5 min)\nHeart rate (bpm): 72 | 98 | 158 | 85\nBased on the data, which statement best describes the pattern?",
+      "options": [
+        "Heart rate decreases during exercise and increases at rest",
+        "Heart rate increases during exercise and decreases during recovery",
+        "Heart rate remains constant regardless of activity level",
+        "Heart rate is highest during the recovery period"
+      ],
+      "correct": 1,
+      "explanation": "Heart rate rises from 72 (resting) to 158 (vigorous exercise) and then drops to 85 during recovery, showing the expected pattern of increase with activity and decrease afterward.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-006",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "medium",
+      "stem": "Table: pH levels of common substances:\nSubstance: Lemon juice | Vinegar | Milk | Baking soda solution | Soap | Bleach\npH: 2.3 | 2.9 | 6.6 | 8.3 | 10.0 | 12.6\nBased on the table, which substance is the strongest acid?",
+      "options": [
+        "Vinegar",
+        "Lemon juice",
+        "Milk",
+        "Bleach"
+      ],
+      "correct": 1,
+      "explanation": "The lower the pH, the stronger the acid. Lemon juice has the lowest pH (2.3) among the options, making it the strongest acid. Bleach (12.6) is a strong base.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-007",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "hard",
+      "stem": "A graph shows the absorption spectrum of chlorophyll a and chlorophyll b. Chlorophyll a shows peak absorption at wavelengths of approximately 430 nm and 662 nm. Chlorophyll b shows peak absorption at approximately 453 nm and 642 nm. What can be concluded based on the absorption spectra?",
+      "options": [
+        "The two chlorophyll types absorb light at exactly the same wavelengths",
+        "Both chlorophyll types absorb strongly in the blue-violet and red regions, but their peak wavelengths differ slightly",
+        "Chlorophyll a absorbs only green light",
+        "Chlorophyll b does not absorb red light"
+      ],
+      "correct": 1,
+      "explanation": "Both forms have peak absorption in blue-violet (~430-453 nm) and red (~642-662 nm) regions, but the exact peak wavelengths differ, reflecting their slightly different molecular structures.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-008",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "hard",
+      "stem": "Table: Rate of photosynthesis (μmol CO₂/m²/s) at different light intensities (μmol photons/m²/s) and CO₂ concentrations:\nLight intensity: 0 | 100 | 200 | 400 | 600 | 800\nRate at 350 ppm CO₂: 0 | 5 | 12 | 22 | 28 | 28\nRate at 700 ppm CO₂: 0 | 5 | 14 | 28 | 38 | 42\nAt 800 μmol photons/m²/s, what is the effect of increasing CO₂ from 350 ppm to 700 ppm on the rate of photosynthesis?",
+      "options": [
+        "The rate decreases from 28 to 14",
+        "The rate stays the same",
+        "The rate increases from 28 to 42",
+        "The rate drops to zero"
+      ],
+      "correct": 2,
+      "explanation": "At 800 light intensity, the rate goes from 28 (at 350 ppm CO₂) to 42 (at 700 ppm CO₂), showing a substantial increase of 14 units.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-009",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "easy",
+      "stem": "A scientist wants to test whether a new fertilizer increases plant growth. She plants 50 seeds in soil with the new fertilizer and another 50 seeds in soil without fertilizer. After four weeks, she measures the height of all plants. In this experiment, what is the control group?",
+      "options": [
+        "The seeds planted with fertilizer",
+        "The seeds planted without fertilizer",
+        "The seeds that did not germinate",
+        "All 100 seeds"
+      ],
+      "correct": 1,
+      "explanation": "The control group is the one that does not receive the treatment (no fertilizer), providing a baseline for comparison against the experimental group (with fertilizer).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-010",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "easy",
+      "stem": "A researcher studying the effect of temperature on enzyme activity sets up five test tubes with the same enzyme and substrate solution. Tube 1 is kept at 10°C, Tube 2 at 20°C, Tube 3 at 30°C, Tube 4 at 40°C, and Tube 5 at 50°C. The rate of product formation is measured in each tube. What is the independent variable in this experiment?",
+      "options": [
+        "The rate of product formation",
+        "The temperature of the solution",
+        "The type of enzyme used",
+        "The volume of solution in each tube"
+      ],
+      "correct": 1,
+      "explanation": "The independent variable is what the researcher manipulates — temperature. The dependent variable (what is measured) is the rate of product formation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-011",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "easy",
+      "stem": "A team of researchers wants to determine whether a new drug reduces blood pressure. They give the drug to 100 patients and a placebo to another 100 patients. Neither the patients nor the doctors administering the treatment know which group receives the actual drug. What is this type of experimental design called?",
+      "options": [
+        "A single-blind study",
+        "A double-blind study",
+        "An observational study",
+        "A case study"
+      ],
+      "correct": 1,
+      "explanation": "In a double-blind study, neither the participants nor the researchers administering the treatment know who receives the actual treatment versus the placebo. This prevents bias.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-012",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "Experiment: A student tests the effect of different wavelengths of light on the rate of photosynthesis in spinach leaves. She places leaf discs in a sodium bicarbonate solution and measures the time it takes for the discs to float (indicating oxygen production). She uses red, blue, green, and white light. Why should the student also include a dark condition (no light) in her experiment?",
+      "options": [
+        "To provide a positive control showing maximum photosynthesis",
+        "To provide a negative control showing that no light produces no photosynthesis",
+        "To test whether spinach can photosynthesize in the dark",
+        "To save time by running more conditions at once"
+      ],
+      "correct": 1,
+      "explanation": "The dark condition is the negative control: it shows that in the absence of light, no oxygen is produced, confirming that any oxygen production in the light conditions is due to photosynthesis and not other factors.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-013",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A scientist tests the effect of soil salinity on bean plant growth. She plants identical bean seeds in three groups of pots: Group A receives fresh water, Group B receives water with 1% salt, and Group C receives water with 3% salt. All other conditions (light, temperature, soil type) are kept identical. After six weeks, she measures the average plant height in each group. Which variable is the dependent variable?",
+      "options": [
+        "The salt concentration of the water",
+        "The average plant height after six weeks",
+        "The type of bean seed used",
+        "The amount of light the plants receive"
+      ],
+      "correct": 1,
+      "explanation": "The dependent variable is what is measured as the outcome of the experiment — the average plant height. The salt concentration is the independent variable that is manipulated.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-014",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A research team wants to test whether a new fertilizer increases crop yield. They have limited land, so they test the fertilizer on 10 plots and use 10 identical plots without fertilizer as controls. The plots are randomly assigned to the two groups. Why is random assignment important in this experiment?",
+      "options": [
+        "It guarantees the fertilizer will work",
+        "It helps ensure that the two groups are similar, reducing the influence of confounding variables like soil quality differences",
+        "It makes the results easier to calculate",
+        "It eliminates the need for a control group"
+      ],
+      "correct": 1,
+      "explanation": "Random assignment distributes unknown differences (soil quality, drainage, etc.) roughly evenly between groups, so any yield difference can be more confidently attributed to the fertilizer rather than pre-existing plot differences.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-015",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "medium",
+      "stem": "Two scientists disagree about the cause of the extinction of the dinosaurs 66 million years ago. Scientist 1 argues that a large asteroid impact in the Yucatán Peninsula caused a global dust cloud that blocked sunlight and disrupted the food chain. Scientist 2 argues that massive volcanic eruptions in the Deccan Traps of India released enough gas and ash to cause climate change that killed the dinosaurs. Which piece of evidence would best support Scientist 1's view?",
+      "options": [
+        "The discovery of an iridium layer (an element rare on Earth but common in asteroids) at the Cretaceous-Paleogene boundary worldwide",
+        "Evidence that volcanoes in the Deccan Traps erupted for thousands of years",
+        "Fossil evidence that dinosaurs existed for 165 million years",
+        "The existence of other extinction events in Earth's history"
+      ],
+      "correct": 0,
+      "explanation": "A global iridium layer is key evidence for an asteroid impact because iridium is abundant in asteroids but extremely rare in Earth's crust. This directly supports the impact hypothesis of Scientist 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-016",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "medium",
+      "stem": "Table: Boiling points of four substances at standard pressure:\nSubstance: Water | Ethanol | Mercury | Acetic acid\nBoiling point (°C): 100 | 78 | 357 | 118\nBased on the table, which substance would boil first if a mixture of all four was heated gradually?",
+      "options": [
+        "Water",
+        "Ethanol",
+        "Mercury",
+        "Acetic acid"
+      ],
+      "correct": 1,
+      "explanation": "The substance with the lowest boiling point boils first. Ethanol at 78°C has the lowest boiling point of the four substances listed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-017",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "easy",
+      "stem": "A student wants to test how the angle of a ramp affects the distance a toy car travels after rolling off the ramp. She tests the car at ramp angles of 10°, 20°, 30°, and 40°. Which of the following should she keep constant to ensure a fair test?",
+      "options": [
+        "The angle of the ramp",
+        "The type of toy car and the height at the top of the ramp",
+        "The distance the car travels",
+        "The surface the car lands on, which may change between trials"
+      ],
+      "correct": 1,
+      "explanation": "To ensure a fair test, all variables except the ramp angle must be kept constant: the same car, same starting height, and same landing surface. The angle is the independent variable being changed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-018",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A biologist is studying whether a certain species of fish prefers water with high oxygen levels. She observes fish in three different ponds: one with an oxygen pump, one with heavy algae growth, and one with no special features. She counts fish in each pond over a week. A weakness of this observational study compared to a controlled experiment is that:",
+      "options": [
+        "There is no control over other differences between the ponds that could affect fish preference",
+        "Fish cannot be observed in their natural habitat",
+        "The study takes too long to produce results",
+        "Oxygen levels cannot be measured"
+      ],
+      "correct": 0,
+      "explanation": "In an observational study, the researcher does not control the conditions. The ponds differ in multiple ways (algae, aeration, size, depth), so any difference in fish counts could be due to factors other than oxygen level.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-019",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "hard",
+      "stem": "A researcher plots the growth of two plant species over 60 days. Species A grows from 2 cm to 30 cm in a pattern that curves steeply upward. Species B grows from 2 cm to 18 cm in a roughly straight line. Which conclusion is best supported?",
+      "options": [
+        "Species B grows faster than Species A overall",
+        "Species A shows accelerating (exponential-like) growth while Species B grows at a more constant rate",
+        "Both species grow at exactly the same rate",
+        "Species B will eventually exceed Species A in height"
+      ],
+      "correct": 1,
+      "explanation": "The steep upward curve of Species A indicates accelerating growth (increasing rate over time), while the straight line of Species B indicates constant-rate growth. The data do not support the other conclusions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-020",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "Researchers investigate the effect of a new antibiotic on bacteria. They grow bacteria in five identical dishes. Dish 1 receives 0 mg of antibiotic (control). Dishes 2-5 receive 5, 10, 20, and 40 mg respectively. After 24 hours, they measure the number of live bacteria in each dish. The results show fewer bacteria surviving as antibiotic dose increases. What is the most reasonable conclusion?",
+      "options": [
+        "Higher doses of the antibiotic kill more bacteria",
+        "The antibiotic is completely ineffective",
+        "The bacteria grew faster with the antibiotic",
+        "The dose of antibiotic has no effect on bacteria"
+      ],
+      "correct": 0,
+      "explanation": "The dose-response relationship (fewer survivors at higher doses) supports the conclusion that higher antibiotic doses are more effective at killing bacteria. The control dish confirms the baseline.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-021",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "hard",
+      "stem": "Two geologists study a rock layer containing fossils of marine organisms found high in the Himalayan mountains. Geologist 1 claims the fossils prove the area was once under the ocean, and the rocks were pushed upward when the Indian plate collided with the Eurasian plate. Geologist 2 claims the fossils were carried to the mountains by glaciers or transported by rivers. Which observation would most strongly support Geologist 1's claim?",
+      "options": [
+        "The fossils are found in marine sedimentary rock layers that are undisturbed and continuous along the mountain range",
+        "The fossils show signs of being broken and worn as if transported",
+        "The fossils are found only in loose surface deposits",
+        "The fossils are from species that also live in freshwater lakes"
+      ],
+      "correct": 0,
+      "explanation": "Undisturbed, continuous marine sedimentary layers high in the mountains support the claim that the area was once seafloor that was uplifted. Broken/worn or loose deposits would support transport (Geologist 2's view).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-022",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "Table: Number of daylight hours in a northern city by month:\nMonth: Jan | Mar | May | Jul | Sep | Nov\nDaylight (hours): 9 | 12 | 15 | 16 | 12 | 9\nBased on the table, which two months have the same amount of daylight?",
+      "options": [
+        "January and March",
+        "March and September",
+        "May and July",
+        "July and November"
+      ],
+      "correct": 1,
+      "explanation": "March and September both have 12 hours of daylight. These are the equinoxes, when day and night are nearly equal in length.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-023",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "Table: Average heart rate (beats per minute) of mammals at different body masses:\nAnimal: Mouse | Rabbit | Cat | Human | Elephant\nMass (kg): 0.03 | 2 | 4 | 70 | 5,000\nHeart rate (bpm): 600 | 205 | 190 | 72 | 30\nWhat general trend does the table show?",
+      "options": [
+        "Larger animals have faster heart rates",
+        "Smaller animals have faster heart rates",
+        "Heart rate is the same for all mammals",
+        "There is no relationship between mass and heart rate"
+      ],
+      "correct": 1,
+      "explanation": "The table shows an inverse relationship: the smallest animal (mouse, 0.03 kg) has the fastest heart rate (600 bpm), and the largest (elephant) has the slowest (30 bpm).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-024",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A nutrition scientist wants to determine whether a high-protein diet increases muscle mass in athletes. She recruits 200 athletes and randomly assigns half to a high-protein diet and half to a standard diet for 12 weeks. Both groups follow the same training program. At the end, she measures muscle mass in both groups. Why is it important that both groups follow the same training program?",
+      "options": [
+        "Training is the independent variable in this study",
+        "Training is a confounding variable that could affect muscle mass independently of diet",
+        "Training prevents the athletes from gaining muscle",
+        "The training program has no effect on the outcome"
+      ],
+      "correct": 1,
+      "explanation": "Training is a confounding variable because it independently affects muscle mass. By keeping training identical for both groups, any difference in muscle mass can be attributed to the diet rather than training.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-025",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "hard",
+      "stem": "Two biologists debate why a population of finches on an island developed larger beaks over several decades. Biologist 1 argues that during a drought, only large seeds were available, and finches with larger beaks survived and reproduced more (natural selection). Biologist 2 argues that finches' beaks grew larger because individual birds used their beaks more during the drought to crack hard seeds (acquired characteristic). Which observation would support Biologist 1 and refute Biologist 2?",
+      "options": [
+        "The beak size of individual finches did not change during their lifetimes, but the average beak size of the population increased across generations",
+        "All finches on the island developed larger beaks within a single year",
+        "Finches with small beaks also survived the drought",
+        "Beak size is determined entirely by diet"
+      ],
+      "correct": 0,
+      "explanation": "Natural selection (Biologist 1) predicts changes across generations via differential survival and reproduction, not within an individual's lifetime. If individual beak sizes didn't change but the population average increased over generations, that supports selection rather than acquired characteristics.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-026",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A chemist wants to test how temperature affects the rate of a chemical reaction. She runs the reaction at 20°C, 30°C, 40°C, and 50°C, measuring the time to completion at each temperature. To ensure reliable results, what should she do?",
+      "options": [
+        "Repeat the reaction at each temperature multiple times and average the results",
+        "Change the amount of reactants at each temperature",
+        "Use a different reaction at each temperature",
+        "Run the reaction only once at each temperature"
+      ],
+      "correct": 0,
+      "explanation": "Repeating trials at each temperature and averaging reduces the impact of random errors and improves the reliability of the data. Keeping other variables constant is also essential.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-027",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "hard",
+      "stem": "A graph shows the speed of an object over 10 seconds. The speed increases from 0 to 20 m/s during the first 4 seconds, stays at 20 m/s from 4 to 7 seconds, then decreases from 20 m/s to 0 m/s from 7 to 10 seconds. Which statement about the object's motion is correct?",
+      "options": [
+        "The object accelerates for the first 4 seconds, moves at constant speed for 3 seconds, then decelerates for 3 seconds",
+        "The object moves at constant speed the entire time",
+        "The object accelerates throughout the 10 seconds",
+        "The object decelerates for the first 4 seconds"
+      ],
+      "correct": 0,
+      "explanation": "The graph has three phases: acceleration (speed increasing, 0-4 s), constant speed (4-7 s), and deceleration (speed decreasing, 7-10 s). This matches the description in option A.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-028",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "Table: Average temperature (°C) and rainfall (mm) for four cities:\nCity: A | B | C | D\nTemperature (°C): 28 | 15 | 10 | 22\nRainfall (mm): 1200 | 800 | 400 | 1500\nWhich city has the highest rainfall?",
+      "options": [
+        "City A",
+        "City B",
+        "City C",
+        "City D"
+      ],
+      "correct": 3,
+      "explanation": "City D has 1500 mm of rainfall, which is the highest value in the rainfall row.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-029",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A student tests the rate of rusting of iron nails in three environments: dry air, moist air, and water with salt. After two weeks, she observes that the nail in salt water rusted most, the nail in moist air rusted moderately, and the nail in dry air showed almost no rust. What conclusion is best supported?",
+      "options": [
+        "Rusting requires both water and oxygen, and salt accelerates the process",
+        "Salt prevents rusting",
+        "Dry air causes the most rusting",
+        "Rusting occurs only in pure water"
+      ],
+      "correct": 0,
+      "explanation": "The results show moisture is needed for rust (dry air: almost none), and salt water speeds rusting compared to moist air alone. This supports that rusting requires water and oxygen, with salt as an accelerator.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-030",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "hard",
+      "stem": "Two psychologists offer explanations for why people conform to group opinions. Psychologist 1 argues conformity results from informational influence: people genuinely change their views because they believe the group has better information. Psychologist 2 argues conformity results from normative influence: people publicly agree to gain acceptance, even while privately disagreeing. In a famous experiment, participants gave the same wrong answer as a group of actors about the length of a line. If participants privately believed their own answer but publicly agreed with the group, this would support:",
+      "options": [
+        "Psychologist 1, because participants changed their genuine beliefs",
+        "Psychologist 2, because participants conformed publicly without changing their private beliefs",
+        "Both psychologists equally",
+        "Neither psychologist"
+      ],
+      "correct": 1,
+      "explanation": "Public agreement with private disagreement is the hallmark of normative influence described by Psychologist 2. Informational influence (Psychologist 1) would involve genuinely changing one's private belief.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-031",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "A bar graph shows the number of books read by four students in a month: Ana read 5, Ben read 8, Cara read 3, and Dan read 6. Who read the fewest books?",
+      "options": [
+        "Ana",
+        "Ben",
+        "Cara",
+        "Dan"
+      ],
+      "correct": 2,
+      "explanation": "Cara read 3 books, the fewest of the four students. Ben read the most (8).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-032",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "Researchers test whether music affects plant growth. They play classical music to one group of plants, rock music to a second group, and no music to a third group. All plants receive identical water, light, and soil. Which statement about this experiment is correct?",
+      "options": [
+        "The music type is the dependent variable",
+        "The group with no music serves as the control condition",
+        "Plant growth is the independent variable",
+        "The experiment cannot have a control group"
+      ],
+      "correct": 1,
+      "explanation": "The no-music group is the control condition because it lacks the treatment (music). Plant growth is the dependent variable, and music type is the independent variable.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-033",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "medium",
+      "stem": "Two astronomers explain the observed redshift of light from distant galaxies. Astronomer 1 argues the redshift means the universe is expanding, so galaxies are moving away from each other. Astronomer 2 argues the light could be 'tired' — losing energy over its long journey, which would also produce redshift without expansion. Which observation would distinguish between the two hypotheses?",
+      "options": [
+        "Redshift increases with distance in a consistent pattern that matches the predictions of expansion",
+        "All galaxies have identical redshifts",
+        "Some galaxies appear blue-shifted",
+        "Redshift is observed only in nearby galaxies"
+      ],
+      "correct": 0,
+      "explanation": "Expansion predicts a specific relationship: the farther the galaxy, the greater the redshift (Hubble's law). A 'tired light' hypothesis would not produce this consistent distance-redshift relation. This pattern is key evidence distinguishing expansion from tired light.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-034",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "medium",
+      "stem": "Table: Concentration of a pollutant (mg/L) in a river at increasing distance downstream from a factory:\nDistance (km): 0 | 2 | 4 | 6 | 8\nPollutant (mg/L): 50 | 42 | 30 | 15 | 5\nWhat is the best explanation for the observed trend?",
+      "options": [
+        "The pollutant is being diluted and/or broken down as it travels downstream",
+        "The factory releases more pollutant downstream",
+        "The river flows uphill",
+        "Pollutant concentration increases with distance"
+      ],
+      "correct": 0,
+      "explanation": "Concentration decreases steadily with distance from the factory (50 to 5 mg/L), consistent with dilution by river water and natural degradation or settling of the pollutant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-035",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "easy",
+      "stem": "A graph shows the melting time of ice cubes (minutes) at different temperatures (°C):\nTemperature: 0 | 10 | 20 | 30\nMelting time (min): 45 | 30 | 20 | 12\nHow long does it take an ice cube to melt at 30°C?",
+      "options": [
+        "12 minutes",
+        "20 minutes",
+        "30 minutes",
+        "45 minutes"
+      ],
+      "correct": 0,
+      "explanation": "At 30°C, the ice cube melts in 12 minutes, according to the graph data.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-036",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "medium",
+      "stem": "Two theories explain why some animals hibernate. Theory 1: Hibernation is an adaptation to conserve energy when food is scarce during winter. Theory 2: Hibernation is triggered by cold temperatures alone, regardless of food availability. Which experimental observation would support Theory 1 over Theory 2?",
+      "options": [
+        "Ground squirrels in a warm laboratory with abundant food do not hibernate, even in winter",
+        "Ground squirrels kept in the cold with plenty of food still hibernate",
+        "Hibernation occurs only in tropical species",
+        "Body temperature during hibernation drops to near freezing"
+      ],
+      "correct": 0,
+      "explanation": "If hibernation is an energy-conserving adaptation to food scarcity (Theory 1), animals with abundant food would not hibernate even in winter. This directly supports Theory 1. Observation B would support the cold-trigger theory.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-037",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "hard",
+      "stem": "A medical researcher tests a new vaccine. She vaccinates 5,000 volunteers and gives a placebo to 5,000 others. Over the following year, 12 vaccinated participants contract the disease while 80 placebo participants do. Before concluding the vaccine is effective, what additional check is most important?",
+      "options": [
+        "Confirming the difference is statistically significant (unlikely to be due to chance)",
+        "Ensuring the vaccinated group received larger doses",
+        "Discarding the results because some vaccinated people got sick",
+        "Testing the vaccine only on participants who were already immune"
+      ],
+      "correct": 0,
+      "explanation": "With large samples, small differences can arise by chance. Statistical significance testing determines whether the 12 vs. 80 difference is real rather than random, which is essential before drawing conclusions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-038",
+      "section": "science",
+      "topic": "Data representation — interpreting graphs and tables",
+      "difficulty": "hard",
+      "stem": "Table: Sound intensity (decibels, dB) recorded at increasing distance from a speaker:\nDistance (m): 1 | 2 | 4 | 8 | 16\nIntensity (dB): 90 | 84 | 78 | 72 | 66\nWhich statement best describes the relationship between distance and sound intensity in this table?",
+      "options": [
+        "Each doubling of distance reduces sound intensity by a constant 6 dB",
+        "Sound intensity decreases by half for every meter",
+        "Sound intensity increases with distance",
+        "Sound intensity is unrelated to distance"
+      ],
+      "correct": 0,
+      "explanation": "Going from 1→2 m: 90→84 (down 6). 2→4 m: 84→78 (down 6). 4→8 m: 78→72 (down 6). Each doubling of distance lowers intensity by exactly 6 dB, a constant logarithmic relationship.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-039",
+      "section": "science",
+      "topic": "Research summaries — experimental design",
+      "difficulty": "medium",
+      "stem": "A marine biologist studies whether coral bleaching is caused by rising water temperature. She records the temperature and bleaching status of corals at 20 reef sites over 5 years. She finds that bleaching events occur almost exclusively in years when water temperature exceeds 30°C. What is the main limitation of drawing a causal conclusion from this study?",
+      "options": [
+        "Correlation alone does not prove causation; other factors could also contribute to bleaching",
+        "The study lasted too many years",
+        "Coral reefs cannot be studied scientifically",
+        "Water temperature cannot be measured accurately"
+      ],
+      "correct": 0,
+      "explanation": "Observational data can show correlation (bleaching co-occurs with high temperature) but cannot rule out other contributing factors (pollution, ocean acidification, disease). A controlled experiment would be needed for stronger causal evidence.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    },
+    {
+      "id": "act-science-040",
+      "section": "science",
+      "topic": "Conflicting viewpoints — evaluating competing hypotheses",
+      "difficulty": "hard",
+      "stem": "Two linguists debate why human language emerged. Linguist 1 argues language evolved gradually from simpler communication systems shared with other primates, developing over hundreds of thousands of years. Linguist 2 argues language appeared relatively suddenly, as a unique human capacity requiring a specific genetic or cognitive change. Which evidence would most strongly support Linguist 1's gradualist view?",
+      "options": [
+        "Fossil evidence and comparative studies showing a continuous series of intermediate communication abilities across hominins and other primates",
+        "The fact that no other animal species uses language",
+        "Evidence that all human languages share the same grammatical structure",
+        "The discovery that language use requires no brain development"
+      ],
+      "correct": 0,
+      "explanation": "Gradual evolution predicts intermediate stages in communication abilities across related species and over time. A continuous series of intermediate forms supports Linguist 1, while the absence of such intermediates would support a sudden origin (Linguist 2).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://act.org"
+      ]
+    }
+  ]
+}

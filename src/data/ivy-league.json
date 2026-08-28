@@ -1,0 +1,610 @@
+{
+  "rateAsOf": "2026-08",
+  "universities": [
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "location": "Cambridge, Massachusetts, USA",
+      "founded": 1636,
+      "acceptanceRate": 4.2,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "SAT or ACT required. In exceptional cases when SAT/ACT is inaccessible, AP, IB, GCSE, or national leaving exam results may substitute. English proficiency exams (TOEFL, IELTS, Duolingo) cannot meet the standardized testing requirement.",
+      "satMid50": {
+        "math": "770-800",
+        "ebrw": "740-780"
+      },
+      "actMid50": "34-36",
+      "gpaBenchmark": "No minimum GPA published. Admitted students typically present top-tier grades in the most rigorous curriculum available at their school. Admission is holistic, considering academic accomplishment alongside extracurriculars, leadership, and personal qualities.",
+      "english": {
+        "toeflMin": null,
+        "ieltsMin": null,
+        "duolingoMin": null,
+        "exceptions": "No English proficiency exam required. English proficiency is evaluated holistically through the entire application. Applicants may optionally submit TOEFL, IELTS, or Duolingo scores."
+      },
+      "application": {
+        "platform": "Common App + Harvard supplement",
+        "feeUsd": 95,
+        "feePkr": 26410,
+        "feeWaiver": "Fee waived for students with financial hardship. Request via Common App fee waiver indicators (meeting at least one economic-need criterion).",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 1",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 59320,
+        "tuitionPkr": 16490960,
+        "totalCostUsd": 89426,
+        "totalCostPkr": 24860428,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "Need-blind for all applicants including international. Meets 100% of demonstrated need with scholarship grants (no loans). Families earning under $200,000 pay no tuition; under $100,000 pay nothing for tuition, housing, food, and fees. 55% of undergraduates receive need-based Harvard scholarship aid.",
+        "avgAwardUsd": null,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Harvard College Research Program (HCRP) funds undergraduate research with faculty across all disciplines",
+        "General Education curriculum: 4 categories — Aesthetics & Culture, Ethics & Civics, Histories/Societies/Individuals, Science & Technology in Society",
+        "Harvard Innovation Labs (i-lab): cross-disciplinary entrepreneurship ecosystem open to all students",
+        "43 Division I varsity sports teams — most in NCAA Division I"
+      ],
+      "notableFacts": [
+        "Oldest higher-education institution in the United States, founded in 1636",
+        "Largest academic library system in the world with over 20 million volumes across 70+ libraries",
+        "Over $7 million in funding available annually for undergraduate research projects",
+        "Need-blind admissions and 100% need-met for all students regardless of citizenship"
+      ],
+      "sources": {
+        "admissions": [
+          "https://college.harvard.edu/admissions",
+          "https://college.harvard.edu/admissions/admissions-statistics"
+        ],
+        "aid": [
+          "https://college.harvard.edu/financial-aid",
+          "https://college.harvard.edu/financial-aid/how-aid-works"
+        ],
+        "cost": [
+          "https://college.harvard.edu/financial-aid/how-aid-works"
+        ],
+        "english": [
+          "https://college.harvard.edu/admissions/apply/international-applicants"
+        ]
+      }
+    },
+    {
+      "id": "yale",
+      "name": "Yale University",
+      "location": "New Haven, Connecticut, USA",
+      "founded": 1701,
+      "acceptanceRate": 4.6,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "SAT or ACT required for all first-year and transfer applicants. ACT Science and Writing sections are optional. Yale superscores both SAT and ACT. AP and IB scores may be optionally submitted alongside SAT/ACT but cannot substitute for them.",
+      "satMid50": {
+        "math": "740-780",
+        "ebrw": "730-780"
+      },
+      "actMid50": "33-35",
+      "gpaBenchmark": "No minimum GPA published. The vast majority of admitted students present unweighted GPAs of 3.9 and above in the most challenging curriculum available. Admission is holistic; no single metric determines the outcome.",
+      "english": {
+        "toeflMin": 100,
+        "ieltsMin": 7,
+        "duolingoMin": 120,
+        "exceptions": "English proficiency tests required only for non-native speakers without two or more years of enrollment in an English-medium secondary school. TOEFL iBT minimum 100 (legacy 120-point scale) or 5 (new 6-point scale for tests taken after January 21, 2026). IELTS minimum 7. Duolingo minimum 120."
+      },
+      "application": {
+        "platform": "Common App, Coalition App on SCOIR, or QuestBridge",
+        "feeUsd": 80,
+        "feePkr": 22240,
+        "feeWaiver": "Yale does not issue its own fee waivers. Applicants may request a fee waiver through their chosen application platform (Common App, Coalition, or QuestBridge) if they meet eligibility criteria.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 2",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 69900,
+        "tuitionPkr": 19432200,
+        "totalCostUsd": 90550,
+        "totalCostPkr": 25172900,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "Need-blind for all applicants including international. Meets 100% of demonstrated need with Yale Scholarship grants (no loans). Average annual need-based scholarship is $75,220. 88% of Yale College students graduate debt-free. All aid is need-based; Yale does not award merit scholarships.",
+        "avgAwardUsd": 75220,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Residential college system: all undergraduates assigned to one of 14 residential colleges for all four years, each with its own dining hall, library, and traditions",
+        "Directed Studies: intensive first-year program in Western civilization spanning literature, philosophy, history, and political thought",
+        "Yale School of Drama and Yale Repertory Theatre — multiple Tony Award-winning regional theater",
+        "Yale Sustainable Food Program and on-campus Yale Farm integrating academics with hands-on agriculture"
+      ],
+      "notableFacts": [
+        "Third-oldest higher-education institution in the United States, founded in 1701",
+        "Residential college system modeled on Oxford and Cambridge, providing a small-college experience within a major research university",
+        "Need-blind and 100% need-met for all students including international — one of only a handful of US universities with this policy",
+        "One of the largest endowments per student globally, enabling generous no-loan financial aid"
+      ],
+      "sources": {
+        "admissions": [
+          "https://admissions.yale.edu/apply",
+          "https://admissions.yale.edu/standardized-testing",
+          "https://news.yale.edu/2025/03/27/yale-admits-2308-applicants-class-2029"
+        ],
+        "aid": [
+          "https://admissions.yale.edu/affordability",
+          "https://finaid.yale.edu"
+        ],
+        "cost": [
+          "https://finaid.yale.edu/coa",
+          "https://yaledailynews.com/articles/college-tuition-rises-to-90550-marking-a-decade-of-yearly-near-4-percent-increases"
+        ],
+        "english": [
+          "https://admissions.yale.edu/standardized-testing",
+          "https://admissions.yale.edu/international"
+        ]
+      }
+    },
+    {
+      "id": "princeton",
+      "name": "Princeton University",
+      "location": "Princeton, New Jersey, USA",
+      "founded": 1746,
+      "acceptanceRate": 4.4,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "optional",
+      "testingPolicyNote": "Test-optional for first-year applicants applying for Fall 2026 and Fall 2027 entry. Princeton will return to requiring SAT or ACT beginning with the 2027-2028 admission cycle. Applicants who choose to submit scores may self-report them.",
+      "satMid50": {
+        "math": "760-800",
+        "ebrw": "740-780"
+      },
+      "actMid50": "34-35",
+      "gpaBenchmark": "No minimum GPA published. The median SAT of enrolled students is 1530 and the unweighted GPA of admitted students clusters near 4.0. Admission is holistic; academic achievement in a rigorous curriculum is the primary consideration alongside extracurricular distinction and personal qualities.",
+      "english": {
+        "toeflMin": null,
+        "ieltsMin": null,
+        "duolingoMin": null,
+        "exceptions": "TOEFL, IELTS, Duolingo, or PTE Academic required only if English is not your native language AND you have not spent at least three years at a secondary school where English is the primary language of instruction. No published minimum scores; recommended competitive scores: TOEFL iBT 108+, IELTS 8.0+, Duolingo 125+."
+      },
+      "application": {
+        "platform": "Common App + Princeton supplement, or QuestBridge",
+        "feeUsd": 75,
+        "feePkr": 20850,
+        "feeWaiver": "Fee waived for students for whom the application fee presents a financial hardship. Request via Common App or QuestBridge application fee waiver indicators.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 1",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 65210,
+        "tuitionPkr": 18128380,
+        "totalCostUsd": 90730,
+        "totalCostPkr": 25222940,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "Need-blind for all applicants including international. Meets 100% of demonstrated need with grants (no loans). Average aid package over $80,000 for 2025-26. 69% of the Class of 2029 receives financial aid. 89% of recent seniors graduated debt-free. All aid is need-based; Princeton does not award merit scholarships.",
+        "avgAwardUsd": 80000,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Senior thesis: all undergraduates complete a major independent research project under faculty supervision — a Princeton hallmark since the 1920s",
+        "Preceptorial system: small weekly discussion groups (precepts) that supplement large lectures, fostering close intellectual engagement",
+        "Princeton School of Public and International Affairs (SPIA): consistently top-ranked for public policy and international affairs",
+        "Bridge Year Program: tuition-free gap year of international community service before freshman year for admitted students"
+      ],
+      "notableFacts": [
+        "Fourth-oldest higher-education institution in the United States, founded in 1746 as the College of New Jersey",
+        "One of the few major research universities without professional schools in law, business, or medicine — maintaining an intense focus on undergraduate liberal arts education",
+        "Need-blind and 100% need-met for all students including international — among the handful of US universities with this policy",
+        "All seniors complete a major independent research thesis, making Princeton one of the few universities with a universal thesis requirement"
+      ],
+      "sources": {
+        "admissions": [
+          "https://admission.princeton.edu/apply/admission-statistics",
+          "https://www.dailyprincetonian.com/article/2025/09/princeton-news-adpol-university-admits-applicants-acceptance-yield-rate-college-admissions",
+          "https://admission.princeton.edu/apply/standardized-testing"
+        ],
+        "aid": [
+          "https://admission.princeton.edu/cost-aid",
+          "https://www.princeton.edu/news/2025/08/07/princeton-enhances-financial-aid-again-it-welcomes-class-2029-which-includes"
+        ],
+        "cost": [
+          "https://admission.princeton.edu/cost-aid",
+          "https://finaid.princeton.edu/how-aid-works/student-budget"
+        ],
+        "english": [
+          "https://admission.princeton.edu/apply/international-students",
+          "https://admission.princeton.edu/apply/application-checklist"
+        ]
+      }
+    },
+    {
+      "id": "columbia",
+      "name": "Columbia University",
+      "location": "New York, New York, USA",
+      "founded": 1754,
+      "acceptanceRate": 4.3,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "optional",
+      "testingPolicyNote": "Test-optional for the 2025-2026 and 2026-2027 admissions cycles. Columbia will require standardized testing (SAT or ACT) starting in August 2027 for the 2027-2028 cycle. Applicants who submit scores may self-report them. For ACT, the Science and Writing sections are optional.",
+      "satMid50": {
+        "math": "760-790",
+        "ebrw": "740-770"
+      },
+      "actMid50": "34-36",
+      "gpaBenchmark": "No minimum GPA published. Admitted students typically present top-tier grades in the most demanding curriculum available. Columbia reads course rigor carefully; AP, IB, or honors courses across disciplines are expected where available. Admission is holistic and contextual.",
+      "english": {
+        "toeflMin": 100,
+        "ieltsMin": 7.5,
+        "duolingoMin": 135,
+        "exceptions": "English proficiency tests required for non-native speakers who have not attended an English-medium secondary school for the full duration. TOEFL iBT minimum 100 (internet-based). IELTS minimum 7.5. Duolingo English Test minimum 135. Cambridge English C1 Advanced or C2 Proficiency also accepted."
+      },
+      "application": {
+        "platform": "Common App + Columbia supplement, or Coalition App on SCOIR",
+        "feeUsd": 85,
+        "feePkr": 23630,
+        "feeWaiver": "Fee waived for students for whom the $85 fee presents a financial hardship. Request via Common App or Coalition App fee waiver indicators. QuestBridge applicants pay no fee.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 1",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 72800,
+        "tuitionPkr": 20238400,
+        "totalCostUsd": 99044,
+        "totalCostPkr": 27534232,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-aware",
+        "aidDetail": "Need-blind for US citizens and eligible non-citizens only; need-aware for international applicants. Meets 100% of demonstrated need for all admitted students, including international. Average award for international financial aid recipients is $79,375. All aid is need-based; Columbia does not award merit scholarships. About half of incoming first-year students receive grants from Columbia.",
+        "avgAwardUsd": 79375,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Core Curriculum: shared intellectual experience for all undergraduates — Literature Humanities, Contemporary Civilization, Art Humanities, Music Humanities, Frontiers of Science, and more — the oldest general education program in the US",
+        "Columbia-Juilliard Exchange: cross-registration program allowing Columbia students to take instrumental or vocal lessons at the Juilliard School",
+        "Dual BA Program with Sciences Po (France) and Trinity College Dublin: earn two bachelor's degrees in four years across two continents",
+        "Columbia Engineering's first-year design course: hands-on engineering design experience from day one"
+      ],
+      "notableFacts": [
+        "Fifth-oldest higher-education institution in the United States, founded in 1754 as King's College by royal charter of King George II",
+        "Located in Morningside Heights, Manhattan — New York City — providing unmatched access to internships, cultural institutions, and industry networks",
+        "Core Curriculum has been the foundation of a Columbia education since 1919, ensuring all undergraduates share a common intellectual experience",
+        "Meets 100% of demonstrated need for all admitted students including international, but admissions is need-aware for international applicants"
+      ],
+      "sources": {
+        "admissions": [
+          "https://undergrad.admissions.columbia.edu/apply/process/class-profile",
+          "https://undergrad.admissions.columbia.edu/apply/process/testing",
+          "https://www.columbiaspectator.com/news/2025/03/27/columbia-college-seas-see-slight-increase-in-acceptance-rate-for-class-of-2029/"
+        ],
+        "aid": [
+          "https://undergrad.admissions.columbia.edu/apply/international/aid",
+          "https://cc-seas.financialaid.columbia.edu/how/aid/works"
+        ],
+        "cost": [
+          "https://bulletin.columbia.edu/columbia-college/fees-expenses-financial-aid/",
+          "https://undergrad.admissions.columbia.edu/affordability/cost"
+        ],
+        "english": [
+          "https://undergrad.admissions.columbia.edu/apply/international/english-proficiency"
+        ]
+      }
+    },
+    {
+      "id": "upenn",
+      "name": "University of Pennsylvania",
+      "location": "Philadelphia, Pennsylvania, USA",
+      "founded": 1740,
+      "acceptanceRate": 4.9,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "Penn reinstated the SAT/ACT requirement beginning with fall 2026 admission (2025-26 application cycle); applicants who face hardship in meeting the requirement can submit a waiver instead.",
+      "satMid50": null,
+      "actMid50": "34-35",
+      "gpaBenchmark": "Penn publishes no minimum GPA; admission is holistic. From the official Class of 2029 profile, the middle 50% of enrolled students who chose to submit scores: SAT composite 1510-1560, ACT 34-35.",
+      "english": {
+        "toeflMin": null,
+        "ieltsMin": null,
+        "duolingoMin": null,
+        "exceptions": "Penn does not publish minimum scores. Exempt from submitting an English proficiency test if English is your native language, or was your primary language of instruction for at least three years (high school, college, or a combination) by enrollment. Penn does not accept IELTS Indicator, IELTS One Skill Retake, or TOEFL MyBest."
+      },
+      "application": {
+        "platform": "Common App or Coalition Application + Penn-specific essay",
+        "feeUsd": 75,
+        "feePkr": 20850,
+        "feeWaiver": "Fee or fee waiver due when the application is submitted; applicants facing financial hardship may request a fee waiver through the Common App/Coalition Application.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 5",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 63204,
+        "tuitionPkr": 17570712,
+        "totalCostUsd": 91112,
+        "totalCostPkr": 25329136,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-aware",
+        "aidDetail": "Penn is need-blind for U.S. citizens and permanent residents plus citizens of Canada and Mexico; need-aware for other international applicants. Admitted international aid recipients receive need-based aid that covers 100% of demonstrated need. In 2024-2025, 46% of all undergraduates received need-based aid with an average package of $72,155 (all students, not international-specific).",
+        "avgAwardUsd": 72155,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Wharton School (undergraduate business program)",
+        "Jerome Fisher Program in Management & Technology (M&T dual degree)",
+        "Huntsman Program in International Studies & Business",
+        "School of Nursing dual-degree and submatriculation options",
+        "Digital Media Design (DMD) program at Penn Engineering"
+      ],
+      "notableFacts": [
+        "4.9% acceptance rate for the Class of 2029 - the most selective year on record (72,544 applications).",
+        "Middle 50% SAT composite 1510-1560 and ACT 34-35 among Class of 2029 enrollees who submitted scores (official class profile).",
+        "Reinstated SAT/ACT requirement beginning with fall 2026 admission.",
+        "Need-blind for U.S. citizens/permanent residents and citizens of Canada and Mexico; need-aware for other internationals."
+      ],
+      "sources": {
+        "admissions": [
+          "https://admissions.upenn.edu/how-to-apply/resources-programs/incoming-class-profile",
+          "https://www.thedp.com/article/2025/06/penn-admissions-rate-class-2029",
+          "https://admissions.upenn.edu/how-to-apply/preparing-your-application/testing",
+          "https://admissions.upenn.edu/how-to-apply/first-year-applicants/application-requirements"
+        ],
+        "aid": [
+          "https://admissions.upenn.edu/affording-penn/international-aid",
+          "https://admissions.upenn.edu/affording-penn/how-it-works"
+        ],
+        "cost": [
+          "https://srfs.upenn.edu/costs-budgeting/undergraduate-cost-attendance",
+          "https://www.thedp.com/article/2026/03/penn-trustees-undergraduate-tuition-increase-2026"
+        ],
+        "english": [
+          "https://admissions.upenn.edu/how-to-apply/international-applicants/guidelines"
+        ]
+      }
+    },
+    {
+      "id": "brown",
+      "name": "Brown University",
+      "location": "Providence, Rhode Island, USA",
+      "founded": 1764,
+      "acceptanceRate": 5.6,
+      "acceptanceRateCycle": "Class of 2030",
+      "testingPolicy": "required",
+      "testingPolicyNote": "Brown reinstated the SAT/ACT requirement beginning with the Class of 2029 admission cycle (announced March 2024); standardized test scores remain one factor among many. The ACT Science section is optional from spring 2025.",
+      "satMid50": null,
+      "actMid50": "34-36",
+      "gpaBenchmark": "Brown does not publish a GPA minimum; admission is holistic. Official 'Admission by the Numbers' reports the middle 50% of admitted Class of 2030 students scored 1470-1550 on the SAT (Math + Evidence-Based Reading and Writing) and 34-36 on the ACT.",
+      "english": {
+        "toeflMin": 5.5,
+        "ieltsMin": 8,
+        "duolingoMin": 130,
+        "exceptions": "TOEFL iBT exams taken before January 2026: minimum 105 (old 0-120 scale); exams from January 2026: minimum 5.5 (new 0-5.5 scale). Also accepted: PTE 75, Cambridge C1 Advanced/C2 Proficiency 191. MyBest not accepted. Test submission is recommended rather than required only when English is your first language, primary home language, or the language of instruction for your whole secondary schooling."
+      },
+      "application": {
+        "platform": "Common App + Brown-specific essays",
+        "feeUsd": 80,
+        "feePkr": 22240,
+        "feeWaiver": "Automatic fee waiver for students enrolled in or eligible for the Federal Free or Reduced Price Lunch program, TRIO or similar programs, and members of qualifying community-based/college-access organizations; also accepts College Board/NACAC fee waiver forms or a counselor letter.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 5",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 71700,
+        "tuitionPkr": 19932600,
+        "totalCostUsd": 97284,
+        "totalCostPkr": 27044952,
+        "costCycle": "2025-2026"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "Brown is need-blind for international first-year applicants beginning with the Class of 2029 (fall 2025 entry), funded by a $120 million campaign. Brown meets 100% of demonstrated need without loans in university financial aid packages; aid is need-based only - Brown offers no merit awards.",
+        "avgAwardUsd": null,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "The Open Curriculum (no general-education requirements)",
+        "Program in Liberal Medical Education (PLME, 8-year BA/MD)",
+        "Brown|RISD Dual Degree Program (BRDD)",
+        "Watson Institute for International and Public Affairs",
+        "Nelson Center for Entrepreneurship"
+      ],
+      "notableFacts": [
+        "5.6% acceptance rate for the Class of 2030 (2,688 admitted from 47,944 applications).",
+        "Need-blind admission for international undergraduates since the Class of 2029.",
+        "69% of undergraduate classes have fewer than 20 students; 6:1 student-faculty ratio with 100% of faculty teaching undergraduates.",
+        "Reinstated the standardized test requirement for the Class of 2029 cycle."
+      ],
+      "sources": {
+        "admissions": [
+          "https://admission.brown.edu/explore/brown-admission-numbers",
+          "https://www.brown.edu/news/2024-03-05/admissions",
+          "https://admission.brown.edu/apply/how-apply",
+          "https://admission.brown.edu/first-year/standardized-tests"
+        ],
+        "aid": [
+          "https://admission.brown.edu/international/financial-aid",
+          "https://president.brown.edu/president/need-blind-admission-international-undergraduates",
+          "https://finaid.brown.edu/basics/financial-need-eligibility"
+        ],
+        "cost": [
+          "https://admission.brown.edu/tuition-aid/tuition-fees"
+        ],
+        "english": [
+          "https://admission.brown.edu/international/english-proficiency"
+        ]
+      }
+    },
+    {
+      "id": "dartmouth",
+      "name": "Dartmouth College",
+      "location": "Hanover, New Hampshire, USA",
+      "founded": 1769,
+      "acceptanceRate": 6,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "Dartmouth was the first Ivy to reinstate the SAT/ACT requirement, beginning with the Class of 2029 (announced February 2024); all first-year applicants must submit SAT or ACT scores. Dartmouth does not publish minimum test scores or middle-50 score ranges in its Class of 2029 profile.",
+      "satMid50": null,
+      "actMid50": null,
+      "gpaBenchmark": "Dartmouth publishes no minimum GPA or test cutoffs; admission is holistic. Official Class of 2029 profile: 95% of enrolled students ranked in the top 10% of their high school class and 22% were valedictorian/salutatorian.",
+      "english": {
+        "toeflMin": null,
+        "ieltsMin": null,
+        "duolingoMin": null,
+        "exceptions": "Dartmouth sets no official minimum scores; most successful applicants score above 7 on IELTS, above 135 on Duolingo, above 185 on Cambridge English, above 100 on TOEFL (exams before January 21, 2026), and 5 or above on TOEFL (new scale, exams from January 21, 2026). Required if your first language is not English and your curriculum has not been delivered in English for at least two years. MyBest and TOEFL Essentials are not accepted."
+      },
+      "application": {
+        "platform": "Common App + Dartmouth writing supplement",
+        "feeUsd": 85,
+        "feePkr": 23630,
+        "feeWaiver": "Fee waiver requests are considered via the Common App; students facing financial hardship may request a waiver.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 2",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 71697,
+        "tuitionPkr": 19931766,
+        "totalCostUsd": 98946,
+        "totalCostPkr": 27506988,
+        "costCycle": "2026-2027"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "Dartmouth extended its need-blind admissions policy to all applicants regardless of citizenship beginning with the Class of 2026. It meets 100% of demonstrated need with no required loans, and charges no parent contribution for families with income and typical assets below $125,000. Average scholarship offer for the Class of 2029: $74,765.",
+        "avgAwardUsd": 74765,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "The D-Plan (flexible year-round academic calendar)",
+        "Thayer School of Engineering (undergraduate engineering, BE dual degree)",
+        "Nelson A. Rockefeller Center for Public Policy",
+        "Irving Institute for Energy and Society",
+        "Tuck School of Business access for undergraduates (business minors and courses)"
+      ],
+      "notableFacts": [
+        "6.0% acceptance rate for the Class of 2029 (1,699 admitted from 28,230 applications).",
+        "Need-blind for all applicants regardless of citizenship since the Class of 2026.",
+        "99% of enrolled Class of 2029 students submitted testing; 95% had SAT/ACT scores at or above the 75th percentile of their high school class.",
+        "Average scholarship offer of $74,765 for the Class of 2029."
+      ],
+      "sources": {
+        "admissions": [
+          "https://home.dartmouth.edu/news/2025/03/admissions-class-2029",
+          "https://admissions.dartmouth.edu/apply/testing-policy",
+          "https://admissions.dartmouth.edu/apply/class-profile-testing",
+          "https://admissions.dartmouth.edu/apply-dartmouth"
+        ],
+        "aid": [
+          "https://financialaid.dartmouth.edu/apply-aid/international-students",
+          "https://financialaid.dartmouth.edu/news/2022/01/universal-need-blind-admissions-policy"
+        ],
+        "cost": [
+          "https://admissions.dartmouth.edu/estimate-your-cost/cost-attendance"
+        ],
+        "english": [
+          "https://admissions.dartmouth.edu/glossary-question/if-english-not-my-first-language-am-i-required-submit-language-proficiency-test"
+        ]
+      }
+    },
+    {
+      "id": "cornell",
+      "name": "Cornell University",
+      "location": "Ithaca, New York, USA",
+      "founded": 1865,
+      "acceptanceRate": 8.4,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "Effective for students applying to enroll for fall 2026 or beyond, applicants to all Cornell undergraduate colleges and schools are required to submit SAT or ACT scores. Published middle-50 ranges below are from Cornell's 2024-25 Common Data Set (Fall 2024 entrants) - the latest CDS published to date.",
+      "satMid50": {
+        "math": "770-800",
+        "ebrw": "730-770"
+      },
+      "actMid50": "33-35",
+      "gpaBenchmark": "Cornell publishes no minimum GPA; admission is holistic and college-specific. From the official 2024-25 Common Data Set (Fall 2024 entrants), 97% of enrolled students who submitted SAT had composite 1400-1600 and 93% had EBRW 700-800.",
+      "english": {
+        "toeflMin": 5,
+        "ieltsMin": 7.5,
+        "duolingoMin": 120,
+        "exceptions": "TOEFL iBT exams taken before January 2026: minimum competitive score 100 (old 0-120 scale); exams from January 2026: minimum 5.0, recommended 5.5 (new 0-5.5 scale). IELTS Academic minimum 7.5; Duolingo English Test minimum 120. Cornell calls these 'minimum competitive scores' - some applicants may be exempt; check the official English Language Proficiency page."
+      },
+      "application": {
+        "platform": "Common App (only) + Cornell writing supplement",
+        "feeUsd": 85,
+        "feePkr": 23630,
+        "feeWaiver": "If the application fee presents a financial burden and you plan to apply for financial aid, you may request a fee waiver through the Common App.",
+        "deadlines": {
+          "early": "Nov 1",
+          "regular": "Jan 2",
+          "cycleYear": "2025-2026"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 73946,
+        "tuitionPkr": 20556988,
+        "totalCostUsd": 99734,
+        "totalCostPkr": 27726052,
+        "costCycle": "2026-2027"
+      },
+      "financialAid": {
+        "intlPolicy": "need-aware",
+        "aidDetail": "Cornell's undergraduate admission process for international students is need-aware - financial need is one factor among many. Cornell meets 100% of admitted international undergraduates' demonstrated financial need with offers that include Cornell grants, an annual work-study award, and reasonable student loans depending on total family income. International aid applicants file the CSS Profile.",
+        "avgAwardUsd": null,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Nolan School of Hotel Administration (top-ranked hospitality program)",
+        "School of Industrial and Labor Relations (the only ILR school in the US)",
+        "College of Agriculture and Life Sciences (Ivy League + land-grant mission)",
+        "Charles H. Dyson School of Applied Economics and Management (undergraduate business)",
+        "College of Architecture, Art, and Planning (integrated design programs)"
+      ],
+      "notableFacts": [
+        "8.38% acceptance rate for the Class of 2029 (6,077 admitted from 72,523 applications).",
+        "Reinstated SAT/ACT requirement for fall 2026 entry across all undergraduate colleges and schools.",
+        "Need-blind for U.S. students; need-aware for international applicants.",
+        "2025-26 endowed-college tuition was $71,266 (approved March 2025); the cost-to-attend page now lists $73,946."
+      ],
+      "sources": {
+        "admissions": [
+          "https://admissions.cornell.edu/policies/standardized-testing-policy",
+          "https://irp.cornell.edu/university-factbook/undergraduate-admissions/first-year-admissions",
+          "https://faq.enrollment.cornell.edu/kb/article/1-does-cornell-university-require-the-sat-or-act/",
+          "https://irp.dpb.cornell.edu/wp-content/uploads/2025/07/CDS-2024-2025-v6-print.pdf"
+        ],
+        "aid": [
+          "https://finaid.cornell.edu/first-year-and-transfer-students-international"
+        ],
+        "cost": [
+          "https://finaid.cornell.edu/cost-attend",
+          "https://news.cornell.edu/stories/2025/03/board-trustees-approves-2025-26-budget-parameters"
+        ],
+        "english": [
+          "https://admissions.cornell.edu/resources/submit-english-language-proficiency"
+        ]
+      }
+    }
+  ]
+}

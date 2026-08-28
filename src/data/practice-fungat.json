@@ -1,0 +1,1197 @@
+{
+  "testId": "fungat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for FAST-NUCES FUNGAT/NU Test. Advanced Math covers calculus, algebra, trigonometry (50% weight). Analytical Skills covers logical reasoning and patterns (20%). Basic Math covers arithmetic and word problems (20%). English covers vocabulary and grammar (10%). Not affiliated with FAST-NUCES.",
+    "sources": [
+      "https://www.nu.edu.pk/Admissions/TestPattern",
+      "https://admissions.nu.edu.pk/"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 60,
+    "note": "60 MCQs, 60 marks, no negative marking. FAST-NUCES official pattern weights."
+  },
+  "benchmarks": [
+    {
+      "label": "BS CS/SE (Islamabad campus) (2026)",
+      "percent": 80
+    },
+    {
+      "label": "BS CS/SE (other campuses) (2026)",
+      "percent": 65
+    },
+    {
+      "label": "Passing benchmark (2026)",
+      "percent": 40
+    }
+  ],
+  "sections": [
+    {
+      "id": "advanced-math",
+      "name": "Advanced Mathematics",
+      "questionCount": 25
+    },
+    {
+      "id": "analytical",
+      "name": "Analytical Skills & IQ",
+      "questionCount": 15
+    },
+    {
+      "id": "basic-math",
+      "name": "Basic Mathematics",
+      "questionCount": 10
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 10
+    }
+  ],
+  "questions": [
+    {
+      "id": "fungat-advanced-math-001",
+      "section": "advanced-math",
+      "topic": "Calculus: limits and differentiation",
+      "difficulty": "easy",
+      "stem": "What is the value of lim (sin x)/x as x approaches 0?",
+      "options": [
+        "1",
+        "0",
+        "Infinity",
+        "-1"
+      ],
+      "correct": 0,
+      "explanation": "This is the standard limit: as x approaches 0, (sin x)/x approaches 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-002",
+      "section": "advanced-math",
+      "topic": "Calculus: differentiation",
+      "difficulty": "easy",
+      "stem": "What is the derivative of f(x) = x^3?",
+      "options": [
+        "3x",
+        "x^2",
+        "3x^2",
+        "x^3"
+      ],
+      "correct": 2,
+      "explanation": "Using the power rule, d/dx(x^n) = n x^(n-1), so d/dx(x^3) = 3x^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-003",
+      "section": "advanced-math",
+      "topic": "Trigonometry: standard values",
+      "difficulty": "easy",
+      "stem": "What is the exact value of sin(30°)?",
+      "options": [
+        "sqrt(3)/2",
+        "1/2",
+        "sqrt(2)/2",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "From the standard 30-60-90 triangle, sin(30°) = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-004",
+      "section": "advanced-math",
+      "topic": "Algebra: quadratic equations",
+      "difficulty": "easy",
+      "stem": "For the quadratic equation x^2 - 5x + 6 = 0, what is the sum of its roots?",
+      "options": [
+        "-5",
+        "6",
+        "-6",
+        "5"
+      ],
+      "correct": 3,
+      "explanation": "For ax^2 + bx + c = 0, the sum of roots is -b/a = 5/1 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-005",
+      "section": "advanced-math",
+      "topic": "Algebra: logarithms",
+      "difficulty": "easy",
+      "stem": "What is the value of log base 2 of 8?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "16"
+      ],
+      "correct": 1,
+      "explanation": "2^3 = 8, so log2(8) = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-006",
+      "section": "advanced-math",
+      "topic": "Calculus: differentiation",
+      "difficulty": "easy",
+      "stem": "What is the derivative of f(x) = e^x?",
+      "options": [
+        "x * e^x",
+        "e^x",
+        "1",
+        "0"
+      ],
+      "correct": 1,
+      "explanation": "The exponential function e^x is its own derivative: d/dx(e^x) = e^x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-007",
+      "section": "advanced-math",
+      "topic": "Calculus: integration",
+      "difficulty": "easy",
+      "stem": "What is the integral of 2x with respect to x?",
+      "options": [
+        "x^2 + C",
+        "2x^2 + C",
+        "x + C",
+        "x^3/3 + C"
+      ],
+      "correct": 0,
+      "explanation": "The reverse power rule gives integral(2x) dx = x^2 + C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-008",
+      "section": "advanced-math",
+      "topic": "Trigonometry: identities",
+      "difficulty": "easy",
+      "stem": "Simplify sin^2(theta) + cos^2(theta).",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "sin(theta) cos(theta)"
+      ],
+      "correct": 2,
+      "explanation": "The Pythagorean identity states that sin^2(theta) + cos^2(theta) = 1 for every angle.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-009",
+      "section": "advanced-math",
+      "topic": "Algebra: exponents",
+      "difficulty": "easy",
+      "stem": "Solve for x: 2^(x+1) = 32.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correct": 0,
+      "explanation": "32 = 2^5, so x + 1 = 5 and x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-010",
+      "section": "advanced-math",
+      "topic": "Calculus: differentiation",
+      "difficulty": "easy",
+      "stem": "What is the derivative of the constant function f(x) = 7?",
+      "options": [
+        "7",
+        "1",
+        "0",
+        "7x"
+      ],
+      "correct": 2,
+      "explanation": "The derivative of any constant is 0.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-011",
+      "section": "advanced-math",
+      "topic": "Calculus: differentiation",
+      "difficulty": "medium",
+      "stem": "What is the derivative of f(x) = tan(x)?",
+      "options": [
+        "sec^2(x)",
+        "csc^2(x)",
+        "sec(x) tan(x)",
+        "tan^2(x)"
+      ],
+      "correct": 0,
+      "explanation": "The standard derivative of tan(x) is sec^2(x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-012",
+      "section": "advanced-math",
+      "topic": "Calculus: limits",
+      "difficulty": "medium",
+      "stem": "Evaluate lim (x^2 - 1)/(x - 1) as x approaches 1.",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "The limit does not exist"
+      ],
+      "correct": 2,
+      "explanation": "Factor the numerator: (x^2 - 1)/(x - 1) = (x - 1)(x + 1)/(x - 1) = x + 1, which approaches 2 as x approaches 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-013",
+      "section": "advanced-math",
+      "topic": "Calculus: product rule",
+      "difficulty": "medium",
+      "stem": "What is the derivative of f(x) = x sin(x)?",
+      "options": [
+        "cos(x)",
+        "sin(x) + x cos(x)",
+        "sin(x) - x cos(x)",
+        "x cos(x)"
+      ],
+      "correct": 1,
+      "explanation": "By the product rule, d/dx[x sin x] = 1 * sin x + x * cos x = sin(x) + x cos(x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-014",
+      "section": "advanced-math",
+      "topic": "Calculus: chain rule",
+      "difficulty": "medium",
+      "stem": "What is the derivative of f(x) = e^(3x)?",
+      "options": [
+        "3e^(3x)",
+        "e^(3x)",
+        "3e^(2x)",
+        "(1/3)e^(3x)"
+      ],
+      "correct": 0,
+      "explanation": "By the chain rule, d/dx[e^(3x)] = e^(3x) * 3 = 3e^(3x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-015",
+      "section": "advanced-math",
+      "topic": "Algebra: functions and composition",
+      "difficulty": "medium",
+      "stem": "If f(x) = x^2 + 1 and g(x) = 2x, what is f(g(1))?",
+      "options": [
+        "5",
+        "3",
+        "9",
+        "4"
+      ],
+      "correct": 0,
+      "explanation": "g(1) = 2, then f(2) = 2^2 + 1 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-016",
+      "section": "advanced-math",
+      "topic": "Trigonometry: standard values",
+      "difficulty": "medium",
+      "stem": "What is the exact value of cos(60°)?",
+      "options": [
+        "sqrt(3)/2",
+        "1/2",
+        "1",
+        "0"
+      ],
+      "correct": 1,
+      "explanation": "From the standard 30-60-90 triangle, cos(60°) = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-017",
+      "section": "advanced-math",
+      "topic": "Algebra: quadratic equations",
+      "difficulty": "medium",
+      "stem": "Which of the following is a root of the equation x^2 - 4x + 3 = 0?",
+      "options": [
+        "2",
+        "5",
+        "-1",
+        "1"
+      ],
+      "correct": 3,
+      "explanation": "Factorising: x^2 - 4x + 3 = (x - 1)(x - 3) = 0, so the roots are 1 and 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-018",
+      "section": "advanced-math",
+      "topic": "Calculus: integration",
+      "difficulty": "medium",
+      "stem": "What is the integral of (2x + 3) with respect to x?",
+      "options": [
+        "2x^2 + 3x + C",
+        "x^2 + 3 + C",
+        "x^2 + 3x + C",
+        "2x + 3x^2 + C"
+      ],
+      "correct": 2,
+      "explanation": "Integrating term by term: integral(2x) dx = x^2 and integral(3) dx = 3x, so the result is x^2 + 3x + C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-019",
+      "section": "advanced-math",
+      "topic": "Sequences and series",
+      "difficulty": "medium",
+      "stem": "What is the sum of the infinite geometric series 1 + 1/2 + 1/4 + 1/8 + ...?",
+      "options": [
+        "3/2",
+        "1",
+        "4",
+        "2"
+      ],
+      "correct": 3,
+      "explanation": "For an infinite geometric series with |r| < 1, S = a/(1 - r) = 1/(1 - 1/2) = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-020",
+      "section": "advanced-math",
+      "topic": "Trigonometry: standard values",
+      "difficulty": "medium",
+      "stem": "What is the exact value of tan(45°)?",
+      "options": [
+        "0",
+        "sqrt(3)",
+        "1",
+        "Undefined"
+      ],
+      "correct": 2,
+      "explanation": "tan(45°) = sin(45°)/cos(45°) = (sqrt(2)/2)/(sqrt(2)/2) = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-021",
+      "section": "advanced-math",
+      "topic": "Calculus: chain rule",
+      "difficulty": "hard",
+      "stem": "What is the derivative of f(x) = sin(x^2)?",
+      "options": [
+        "cos(x^2)",
+        "2x cos(x^2)",
+        "-2x cos(x^2)",
+        "x^2 cos(x^2)"
+      ],
+      "correct": 1,
+      "explanation": "By the chain rule, d/dx[sin(u)] = cos(u) * du/dx, so d/dx[sin(x^2)] = cos(x^2) * 2x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-022",
+      "section": "advanced-math",
+      "topic": "Calculus: definite integrals",
+      "difficulty": "hard",
+      "stem": "What is the value of the definite integral of sin(x) from x = 0 to x = pi?",
+      "options": [
+        "1",
+        "0",
+        "-1",
+        "2"
+      ],
+      "correct": 3,
+      "explanation": "The antiderivative of sin(x) is -cos(x). Evaluating from 0 to pi: (-cos(pi)) - (-cos(0)) = 1 + 1 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-023",
+      "section": "advanced-math",
+      "topic": "Calculus: optimization",
+      "difficulty": "hard",
+      "stem": "The function f(x) = x^3 - 3x^2 + 2 has a local maximum at x = 0. What is its maximum value?",
+      "options": [
+        "0",
+        "2",
+        "-2",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "f'(x) = 3x^2 - 6x = 3x(x - 2), giving critical points x = 0 and x = 2. Since f''(x) = 6x - 6 and f''(0) = -6 < 0, x = 0 is a local maximum with f(0) = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-024",
+      "section": "advanced-math",
+      "topic": "Calculus: limits",
+      "difficulty": "hard",
+      "stem": "Evaluate lim (1 - cos x)/x as x approaches 0.",
+      "options": [
+        "1",
+        "0",
+        "1/2",
+        "The limit does not exist"
+      ],
+      "correct": 1,
+      "explanation": "Near 0, 1 - cos(x) is approximately x^2/2, so (x^2/2)/x approaches 0. (Equivalently, the limit follows from the half-angle identity.)",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-advanced-math-025",
+      "section": "advanced-math",
+      "topic": "Trigonometry: right triangles",
+      "difficulty": "hard",
+      "stem": "If sin(theta) = 3/5 and theta is an acute angle, what is tan(theta)?",
+      "options": [
+        "3/4",
+        "4/3",
+        "3/5",
+        "5/3"
+      ],
+      "correct": 0,
+      "explanation": "cos(theta) = sqrt(1 - 9/25) = 4/5, so tan(theta) = (3/5)/(4/5) = 3/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-001",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "easy",
+      "stem": "Complete the series: 2, 4, 6, 8, ...",
+      "options": [
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "correct": 1,
+      "explanation": "The series increases by 2 each time, so the next term is 8 + 2 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-002",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "easy",
+      "stem": "What is the next number in the series 1, 4, 9, 16, ...?",
+      "options": [
+        "20",
+        "36",
+        "24",
+        "25"
+      ],
+      "correct": 3,
+      "explanation": "These are perfect squares: 1^2, 2^2, 3^2, 4^2, so the next term is 5^2 = 25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-003",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "easy",
+      "stem": "What is the next number in the series 5, 10, 20, 40, ...?",
+      "options": [
+        "60",
+        "80",
+        "50",
+        "100"
+      ],
+      "correct": 1,
+      "explanation": "Each term is doubled, so the next term is 40 * 2 = 80.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-004",
+      "section": "analytical",
+      "topic": "Odd one out",
+      "difficulty": "easy",
+      "stem": "Which number does not belong in the set {3, 5, 7, 8, 11}?",
+      "options": [
+        "3",
+        "5",
+        "8",
+        "11"
+      ],
+      "correct": 2,
+      "explanation": "All the other numbers are odd; 8 is the only even number, so it does not belong.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-005",
+      "section": "analytical",
+      "topic": "Logical reasoning: ordering",
+      "difficulty": "easy",
+      "stem": "If A > B and B > C, which statement must be true?",
+      "options": [
+        "A = C",
+        "C > A",
+        "A > C",
+        "A < C"
+      ],
+      "correct": 2,
+      "explanation": "The greater-than relation is transitive: A > B > C implies A > C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-006",
+      "section": "analytical",
+      "topic": "Analogies",
+      "difficulty": "easy",
+      "stem": "Book is to Reading as Fork is to ...",
+      "options": [
+        "Cooking",
+        "Eating",
+        "Cutting",
+        "Writing"
+      ],
+      "correct": 1,
+      "explanation": "A book is used for reading; likewise, a fork is used for eating.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-007",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "medium",
+      "stem": "Complete the series: 2, 3, 5, 8, 13, ...",
+      "options": [
+        "18",
+        "19",
+        "21",
+        "34"
+      ],
+      "correct": 2,
+      "explanation": "Each term is the sum of the two previous terms (Fibonacci-type pattern): 13 + 8 = 21.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-008",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "medium",
+      "stem": "What is the next number in the series 1, 2, 6, 24, ...?",
+      "options": [
+        "48",
+        "72",
+        "96",
+        "120"
+      ],
+      "correct": 3,
+      "explanation": "Each term multiplies by an increasing integer: 1*2 = 2, 2*3 = 6, 6*4 = 24, so 24*5 = 120.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-009",
+      "section": "analytical",
+      "topic": "Logical reasoning: deduction",
+      "difficulty": "medium",
+      "stem": "All engineers are smart. Ali is an engineer. Which conclusion is valid?",
+      "options": [
+        "Ali is smart",
+        "Ali is not smart",
+        "Ali may not be smart",
+        "No conclusion is possible"
+      ],
+      "correct": 0,
+      "explanation": "This is a valid syllogism: since the category 'engineer' is fully contained in 'smart', Ali, being an engineer, must be smart.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-010",
+      "section": "analytical",
+      "topic": "Coding-decoding",
+      "difficulty": "medium",
+      "stem": "In a certain code, CAT is written as DBU. How will DOG be written in the same code?",
+      "options": [
+        "EPH",
+        "EPG",
+        "DPH",
+        "FQI"
+      ],
+      "correct": 0,
+      "explanation": "Each letter is shifted one place forward in the alphabet: D, O, G become E, P, H.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-011",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "medium",
+      "stem": "Complete the series: 3, 6, 11, 18, 27, ...",
+      "options": [
+        "36",
+        "38",
+        "39",
+        "40"
+      ],
+      "correct": 1,
+      "explanation": "The differences are 3, 5, 7, 9 (increasing by 2). The next difference is 11, so 27 + 11 = 38.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-012",
+      "section": "analytical",
+      "topic": "Calendar reasoning",
+      "difficulty": "medium",
+      "stem": "If today is Monday, what day of the week will it be 10 days from now?",
+      "options": [
+        "Wednesday",
+        "Friday",
+        "Thursday",
+        "Sunday"
+      ],
+      "correct": 2,
+      "explanation": "10 days = one full week (7 days) plus 3 days. Monday + 3 days = Thursday.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-013",
+      "section": "analytical",
+      "topic": "Logical reasoning: deduction",
+      "difficulty": "hard",
+      "stem": "If it rains, the ground gets wet. The ground is wet. Which conclusion is valid?",
+      "options": [
+        "It rained",
+        "It did not rain",
+        "We cannot conclude that it rained",
+        "The ground is always wet"
+      ],
+      "correct": 2,
+      "explanation": "This is the fallacy of affirming the consequent: the ground can become wet for many other reasons, so no definite conclusion follows.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-014",
+      "section": "analytical",
+      "topic": "Number series",
+      "difficulty": "hard",
+      "stem": "What is the next number in the series 7, 12, 22, 42, ...?",
+      "options": [
+        "62",
+        "72",
+        "82",
+        "92"
+      ],
+      "correct": 2,
+      "explanation": "The differences double each time: 5, 10, 20. The next difference is 40, so 42 + 40 = 82.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-analytical-015",
+      "section": "analytical",
+      "topic": "Logical reasoning: arrangement",
+      "difficulty": "hard",
+      "stem": "Four friends A, B, C and D are sitting in a row. A is to the left of B, C is to the right of B, and D is to the left of A. Who sits at the far left?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct": 3,
+      "explanation": "From the clues the order from left to right is D, A, B, C, so D sits at the far left.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-001",
+      "section": "basic-math",
+      "topic": "Percentages",
+      "difficulty": "easy",
+      "stem": "What is 15% of 200?",
+      "options": [
+        "30",
+        "20",
+        "35",
+        "15"
+      ],
+      "correct": 0,
+      "explanation": "15% of 200 = 0.15 * 200 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-002",
+      "section": "basic-math",
+      "topic": "Arithmetic: order of operations",
+      "difficulty": "easy",
+      "stem": "Simplify: 2 + 3 x 4.",
+      "options": [
+        "20",
+        "24",
+        "14",
+        "9"
+      ],
+      "correct": 2,
+      "explanation": "Multiplication is done before addition: 2 + (3 x 4) = 2 + 12 = 14.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-003",
+      "section": "basic-math",
+      "topic": "Averages",
+      "difficulty": "easy",
+      "stem": "What is the average of 5, 10 and 15?",
+      "options": [
+        "12",
+        "15",
+        "5",
+        "10"
+      ],
+      "correct": 3,
+      "explanation": "Average = (5 + 10 + 15)/3 = 30/3 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-004",
+      "section": "basic-math",
+      "topic": "Profit and loss",
+      "difficulty": "easy",
+      "stem": "A shopkeeper buys 10 pens for Rs 5 each and sells them for Rs 7 each. What is his total profit?",
+      "options": [
+        "Rs 10",
+        "Rs 20",
+        "Rs 30",
+        "Rs 70"
+      ],
+      "correct": 1,
+      "explanation": "Profit per pen = Rs 7 - Rs 5 = Rs 2, so total profit = 10 x Rs 2 = Rs 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-005",
+      "section": "basic-math",
+      "topic": "Speed and distance",
+      "difficulty": "medium",
+      "stem": "A train covers 150 metres in 10 seconds. What is its speed in km/h?",
+      "options": [
+        "45 km/h",
+        "60 km/h",
+        "54 km/h",
+        "72 km/h"
+      ],
+      "correct": 2,
+      "explanation": "150 m in 10 s = 15 m/s. Converting: 15 x 18/5 = 54 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-006",
+      "section": "basic-math",
+      "topic": "Work and time",
+      "difficulty": "medium",
+      "stem": "If 5 workers can build a wall in 12 days, how many days will 10 workers take to build the same wall at the same rate?",
+      "options": [
+        "6",
+        "4",
+        "8",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "Doubling the workers halves the time: 12/2 = 6 days.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-007",
+      "section": "basic-math",
+      "topic": "Simple interest",
+      "difficulty": "medium",
+      "stem": "What is the simple interest on Rs 1000 at 5% per annum for 2 years?",
+      "options": [
+        "Rs 50",
+        "Rs 100",
+        "Rs 200",
+        "Rs 150"
+      ],
+      "correct": 1,
+      "explanation": "Simple interest = (P x R x T)/100 = (1000 x 5 x 2)/100 = Rs 100.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-008",
+      "section": "basic-math",
+      "topic": "Percentages",
+      "difficulty": "medium",
+      "stem": "A number is increased by 20% to give 120. What was the original number?",
+      "options": [
+        "96",
+        "110",
+        "90",
+        "100"
+      ],
+      "correct": 3,
+      "explanation": "The new value is 120% of the original, so original = 120/1.2 = 100.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-009",
+      "section": "basic-math",
+      "topic": "Pipes and cisterns",
+      "difficulty": "hard",
+      "stem": "Pipe A fills a tank in 4 hours and pipe B empties it in 6 hours. If both pipes are opened together, how long will it take to fill the tank?",
+      "options": [
+        "12 hours",
+        "5 hours",
+        "10 hours",
+        "2.4 hours"
+      ],
+      "correct": 0,
+      "explanation": "Net rate = 1/4 - 1/6 = 1/12 of the tank per hour, so the tank fills in 12 hours.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-basic-math-010",
+      "section": "basic-math",
+      "topic": "Ratios",
+      "difficulty": "hard",
+      "stem": "If a : b = 2 : 3 and b : c = 4 : 5, what is a : b : c?",
+      "options": [
+        "8 : 12 : 15",
+        "2 : 3 : 5",
+        "6 : 12 : 15",
+        "8 : 15 : 12"
+      ],
+      "correct": 0,
+      "explanation": "Make b the same in both ratios: a : b = 8 : 12 and b : c = 12 : 15, so a : b : c = 8 : 12 : 15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-001",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'abundant'.",
+      "options": [
+        "Plentiful",
+        "Scarce",
+        "Tiny",
+        "Weak"
+      ],
+      "correct": 0,
+      "explanation": "'Abundant' means existing in large quantities; 'plentiful' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-002",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'ancient'.",
+      "options": [
+        "Old",
+        "Modern",
+        "Antique",
+        "Historic"
+      ],
+      "correct": 1,
+      "explanation": "'Ancient' means very old; its opposite is 'modern'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-003",
+      "section": "english",
+      "topic": "Grammar: verb forms",
+      "difficulty": "easy",
+      "stem": "Choose the correct sentence.",
+      "options": [
+        "She have gone to school.",
+        "She has gone to school.",
+        "She are gone to school.",
+        "She is went to school."
+      ],
+      "correct": 1,
+      "explanation": "'She' takes the third-person singular auxiliary 'has': 'She has gone to school.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-004",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'courageous'.",
+      "options": [
+        "Fearful",
+        "Timid",
+        "Brave",
+        "Lazy"
+      ],
+      "correct": 2,
+      "explanation": "'Courageous' means brave; 'brave' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-005",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most nearly OPPOSITE to 'transparent'.",
+      "options": [
+        "Clear",
+        "Bright",
+        "Thin",
+        "Opaque"
+      ],
+      "correct": 3,
+      "explanation": "'Transparent' means allowing light to pass through; its opposite is 'opaque'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-006",
+      "section": "english",
+      "topic": "Grammar: error identification",
+      "difficulty": "medium",
+      "stem": "Identify the error in the sentence: 'One of my friend is coming to the party.'",
+      "options": [
+        "No error",
+        "'friend' should be 'friends'",
+        "'is' should be 'are'",
+        "'my' should be 'mine'"
+      ],
+      "correct": 1,
+      "explanation": "After 'one of', the noun must be plural: 'One of my friends is coming.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-007",
+      "section": "english",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'Neither of the boys ___ present in class.'",
+      "options": [
+        "were",
+        "are",
+        "have",
+        "was"
+      ],
+      "correct": 3,
+      "explanation": "'Neither' is singular, so the verb must be singular: 'Neither of the boys was present.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-008",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'elucidate'.",
+      "options": [
+        "Confuse",
+        "Clarify",
+        "Conceal",
+        "Complicate"
+      ],
+      "correct": 1,
+      "explanation": "'Elucidate' means to make clear or explain, so 'clarify' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-009",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word most nearly OPPOSITE to 'ubiquitous'.",
+      "options": [
+        "Common",
+        "Omnipresent",
+        "Ordinary",
+        "Rare"
+      ],
+      "correct": 3,
+      "explanation": "'Ubiquitous' means present everywhere; its opposite is 'rare'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    },
+    {
+      "id": "fungat-english-010",
+      "section": "english",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "hard",
+      "stem": "Identify the error in the sentence: 'The number of students are increasing every year.'",
+      "options": [
+        "No error",
+        "'students' should be 'student'",
+        "'are' should be 'is'",
+        "'increasing' should be 'increased'"
+      ],
+      "correct": 2,
+      "explanation": "'The number of' takes a singular verb: 'The number of students is increasing.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.nu.edu.pk/"
+      ]
+    }
+  ]
+}

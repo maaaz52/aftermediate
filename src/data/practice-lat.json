@@ -1,0 +1,1563 @@
+{
+  "testId": "lat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for HEC Law Admission Test (LAT). 75 MCQs covering English, General Knowledge, Islamic Studies, Pakistan Studies, Urdu, and Mathematics per the official HEC pattern. Essay and personal statement sections are not auto-graded. Not affiliated with HEC or ETC.",
+    "sources": [
+      "https://etc.hec.gov.pk/",
+      "https://www.hec.gov.pk/"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 75,
+    "note": "75 MCQs, no negative marking. Does not include essay (15 marks) and personal statement (10 marks) which require manual grading."
+  },
+  "benchmarks": [
+    {
+      "label": "Passing (50% required) (2026)",
+      "percent": 50
+    },
+    {
+      "label": "Strong application (2026)",
+      "percent": 70
+    }
+  ],
+  "sections": [
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 20
+    },
+    {
+      "id": "gk",
+      "name": "General Knowledge",
+      "questionCount": 20
+    },
+    {
+      "id": "islamiat",
+      "name": "Islamic Studies",
+      "questionCount": 10
+    },
+    {
+      "id": "pakstudies",
+      "name": "Pakistan Studies",
+      "questionCount": 10
+    },
+    {
+      "id": "urdu",
+      "name": "Urdu",
+      "questionCount": 10
+    },
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "questionCount": 5
+    }
+  ],
+  "questions": [
+    {
+      "id": "lat-english-001",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Choose the synonym of 'abundant'.",
+      "options": [
+        "Plentiful",
+        "Scarce",
+        "Rare",
+        "Limited"
+      ],
+      "correct": 0,
+      "explanation": "Abundant means existing in large quantities; 'plentiful' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-002",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Choose the antonym of 'ancient'.",
+      "options": [
+        "Modern",
+        "Old",
+        "Aged",
+        "Antique"
+      ],
+      "correct": 0,
+      "explanation": "'Ancient' means very old; 'modern' is its opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-003",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Choose the correct form of the verb: 'She ___ to school every day.'",
+      "options": [
+        "goes",
+        "go",
+        "going",
+        "gone"
+      ],
+      "correct": 0,
+      "explanation": "The third-person singular subject 'She' takes the verb 'goes' in the present simple tense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-004",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Which of the following words is a noun?",
+      "options": [
+        "Happiness",
+        "Happy",
+        "Happily",
+        "Happen"
+      ],
+      "correct": 0,
+      "explanation": "'Happiness' is an abstract noun; the other options are an adjective, an adverb and a verb.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-005",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "The synonym of 'brave' is:",
+      "options": [
+        "Courageous",
+        "Cowardly",
+        "Fearful",
+        "Timid"
+      ],
+      "correct": 0,
+      "explanation": "'Brave' and 'courageous' both mean showing courage in the face of danger.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-006",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Choose the correct article: 'He is ___ honest man.'",
+      "options": [
+        "an",
+        "a",
+        "the",
+        "no article needed"
+      ],
+      "correct": 0,
+      "explanation": "Before 'honest', whose initial letter 'h' is silent, the article 'an' is used.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-007",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "The opposite of 'victory' is:",
+      "options": [
+        "Defeat",
+        "Triumph",
+        "Success",
+        "Conquest"
+      ],
+      "correct": 0,
+      "explanation": "'Victory' means winning; its antonym is 'defeat'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-008",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "easy",
+      "stem": "Choose the correct plural form of 'child':",
+      "options": [
+        "Children",
+        "Childs",
+        "Childes",
+        "Childrens"
+      ],
+      "correct": 0,
+      "explanation": "'Child' is an irregular noun; its plural is 'children'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-009",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'candid'.",
+      "options": [
+        "Frank",
+        "Secretive",
+        "Deceitful",
+        "Vague"
+      ],
+      "correct": 0,
+      "explanation": "'Candid' means honest and straightforward; 'frank' has the same meaning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-010",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "Identify the error in the following sentence: 'He don't like coffee.'",
+      "options": [
+        "don't should be doesn't",
+        "like should be likes",
+        "coffee should be coffees",
+        "There is no error"
+      ],
+      "correct": 0,
+      "explanation": "With the third-person singular subject 'He', the correct negative form is 'doesn't'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-011",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "The antonym of 'expand' is:",
+      "options": [
+        "Contract",
+        "Extend",
+        "Enlarge",
+        "Spread"
+      ],
+      "correct": 0,
+      "explanation": "'Expand' means to grow larger; its opposite is 'contract' (become smaller).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-012",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "Choose the correct form of the verb: 'If I ___ you, I would accept the offer.'",
+      "options": [
+        "were",
+        "was",
+        "am",
+        "be"
+      ],
+      "correct": 0,
+      "explanation": "In the second conditional, 'were' is used for all persons in the if-clause (subjunctive mood).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-013",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Read the passage and answer the question: 'Reading is a habit that broadens the mind. It improves vocabulary, enhances imagination and reduces stress. People who read regularly tend to perform better in academic work.' Question: According to the passage, what does reading improve?",
+      "options": [
+        "Vocabulary and imagination",
+        "Physical strength",
+        "Cooking skills",
+        "Memory of random facts"
+      ],
+      "correct": 0,
+      "explanation": "The passage states that reading improves vocabulary and enhances imagination, and also reduces stress.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-014",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "The word 'meticulous' most nearly means:",
+      "options": [
+        "Careful and precise",
+        "Careless",
+        "Rough",
+        "Hasty"
+      ],
+      "correct": 0,
+      "explanation": "'Meticulous' means showing great attention to detail, i.e. very careful and precise.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-015",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "medium",
+      "stem": "Choose the correct passive voice of: 'They built this bridge in 1980.'",
+      "options": [
+        "This bridge was built in 1980",
+        "This bridge is built in 1980",
+        "This bridge has built in 1980",
+        "This bridge was building in 1980"
+      ],
+      "correct": 0,
+      "explanation": "The past simple passive is formed with 'was/were + past participle', so 'was built' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-016",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Read the passage and answer the question: 'Trees play a vital role in maintaining ecological balance. They absorb carbon dioxide and release oxygen, provide shelter to wildlife and prevent soil erosion.' Question: Which of the following is NOT mentioned as a role of trees in the passage?",
+      "options": [
+        "Producing electricity",
+        "Absorbing carbon dioxide",
+        "Providing shelter to wildlife",
+        "Preventing soil erosion"
+      ],
+      "correct": 0,
+      "explanation": "The passage mentions absorbing carbon dioxide, sheltering wildlife and preventing erosion, but not producing electricity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-017",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "hard",
+      "stem": "Choose the word most nearly opposite in meaning to 'ephemeral'.",
+      "options": [
+        "Permanent",
+        "Temporary",
+        "Brief",
+        "Fleeting"
+      ],
+      "correct": 0,
+      "explanation": "'Ephemeral' means lasting for a very short time; its antonym is 'permanent'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-018",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "hard",
+      "stem": "Identify the error in the sentence: 'Neither of the two boys have completed their homework.'",
+      "options": [
+        "have should be has",
+        "completed should be completes",
+        "their should be his",
+        "There is no error"
+      ],
+      "correct": 0,
+      "explanation": "'Neither of' takes a singular verb, so 'has completed' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-019",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "hard",
+      "stem": "Read the passage and answer the question: 'The Industrial Revolution, which began in Britain in the late 18th century, transformed economies from agrarian to industrial. It brought urbanisation and technological innovation, but it also produced harsh working conditions and pollution.' Question: Which of the following is mentioned as a negative consequence of the Industrial Revolution?",
+      "options": [
+        "Harsh working conditions",
+        "Technological innovation",
+        "Urbanisation",
+        "Growth of trade"
+      ],
+      "correct": 0,
+      "explanation": "The passage lists harsh working conditions and pollution as negative consequences of the Industrial Revolution.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-english-020",
+      "section": "english",
+      "topic": "Vocabulary and grammar",
+      "difficulty": "hard",
+      "stem": "In the sentence 'The committee gave an unequivocal answer,' the word 'unequivocal' means:",
+      "options": [
+        "Clear and definite",
+        "Doubtful",
+        "Lengthy",
+        "Offensive"
+      ],
+      "correct": 0,
+      "explanation": "'Unequivocal' means leaving no doubt; clear and definite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-001",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "easy",
+      "stem": "Which country is the largest in the world by land area?",
+      "options": [
+        "Russia",
+        "Canada",
+        "China",
+        "United States"
+      ],
+      "correct": 0,
+      "explanation": "Russia is the largest country, covering about 17.1 million square kilometres.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-002",
+      "section": "gk",
+      "topic": "Current affairs and Pakistan affairs",
+      "difficulty": "easy",
+      "stem": "What is the official currency of Pakistan?",
+      "options": [
+        "Pakistani Rupee",
+        "Dinar",
+        "Taka",
+        "Riyal"
+      ],
+      "correct": 0,
+      "explanation": "The Pakistani Rupee (PKR) is the official currency of Pakistan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-003",
+      "section": "gk",
+      "topic": "Everyday science",
+      "difficulty": "easy",
+      "stem": "Which planet is known as the Red Planet?",
+      "options": [
+        "Mars",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "correct": 0,
+      "explanation": "Mars appears reddish because of iron oxide (rust) on its surface.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-004",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "easy",
+      "stem": "What is the highest mountain peak in the world?",
+      "options": [
+        "Mount Everest",
+        "K2",
+        "Nanga Parbat",
+        "Mount Kilimanjaro"
+      ],
+      "correct": 0,
+      "explanation": "Mount Everest (8,849 m) in the Himalayas is the world's highest peak; K2 is the second highest.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-005",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "easy",
+      "stem": "Which is the largest ocean on Earth?",
+      "options": [
+        "Pacific Ocean",
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean"
+      ],
+      "correct": 0,
+      "explanation": "The Pacific Ocean is the largest and deepest ocean, covering about one-third of Earth's surface.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-006",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "easy",
+      "stem": "What is the capital city of France?",
+      "options": [
+        "Paris",
+        "London",
+        "Berlin",
+        "Rome"
+      ],
+      "correct": 0,
+      "explanation": "Paris is the capital of France.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-007",
+      "section": "gk",
+      "topic": "Everyday science",
+      "difficulty": "easy",
+      "stem": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+      "options": [
+        "Carbon dioxide",
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "correct": 0,
+      "explanation": "Plants take in carbon dioxide and release oxygen during photosynthesis.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-008",
+      "section": "gk",
+      "topic": "International organizations",
+      "difficulty": "easy",
+      "stem": "The headquarters of the United Nations is located in:",
+      "options": [
+        "New York",
+        "Geneva",
+        "Paris",
+        "London"
+      ],
+      "correct": 0,
+      "explanation": "The UN headquarters is in New York City; Geneva hosts many UN agencies.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-009",
+      "section": "gk",
+      "topic": "International organizations",
+      "difficulty": "medium",
+      "stem": "SAARC (South Asian Association for Regional Cooperation) was founded in which year?",
+      "options": [
+        "1985",
+        "1975",
+        "1990",
+        "1995"
+      ],
+      "correct": 0,
+      "explanation": "SAARC was founded in Dhaka in 1985 with seven founding members.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-010",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "medium",
+      "stem": "Which is the smallest country in the world by area?",
+      "options": [
+        "Vatican City",
+        "Monaco",
+        "Malta",
+        "San Marino"
+      ],
+      "correct": 0,
+      "explanation": "Vatican City covers about 0.49 km², making it the world's smallest independent state.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-011",
+      "section": "gk",
+      "topic": "International organizations",
+      "difficulty": "medium",
+      "stem": "The headquarters of the Organisation of Islamic Cooperation (OIC) is located in:",
+      "options": [
+        "Jeddah",
+        "Riyadh",
+        "Cairo",
+        "Istanbul"
+      ],
+      "correct": 0,
+      "explanation": "The OIC, founded in 1969, has its permanent headquarters in Jeddah, Saudi Arabia.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-012",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "medium",
+      "stem": "Which is the longest river of Pakistan?",
+      "options": [
+        "Indus",
+        "Jhelum",
+        "Chenab",
+        "Ravi"
+      ],
+      "correct": 0,
+      "explanation": "The Indus is the longest river of Pakistan, flowing about 3,180 km from Tibet to the Arabian Sea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-013",
+      "section": "gk",
+      "topic": "Everyday science",
+      "difficulty": "medium",
+      "stem": "Which vitamin is synthesised in human skin on exposure to sunlight?",
+      "options": [
+        "Vitamin D",
+        "Vitamin C",
+        "Vitamin A",
+        "Vitamin K"
+      ],
+      "correct": 0,
+      "explanation": "Sunlight converts a cholesterol derivative in the skin into vitamin D.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-014",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "medium",
+      "stem": "The Indus River originates from:",
+      "options": [
+        "Tibet (China)",
+        "Nepal",
+        "Bhutan",
+        "Afghanistan"
+      ],
+      "correct": 0,
+      "explanation": "The Indus rises near Lake Mansarovar in Tibet, China, and enters Pakistan through Gilgit-Baltistan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-015",
+      "section": "gk",
+      "topic": "International organizations",
+      "difficulty": "medium",
+      "stem": "How many permanent members does the United Nations Security Council have?",
+      "options": [
+        "Five",
+        "Six",
+        "Ten",
+        "Fifteen"
+      ],
+      "correct": 0,
+      "explanation": "The five permanent members are China, France, Russia, the UK and the USA.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-016",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "medium",
+      "stem": "Which of the following deserts is located in Pakistan?",
+      "options": [
+        "Thar Desert",
+        "Sahara Desert",
+        "Gobi Desert",
+        "Kalahari Desert"
+      ],
+      "correct": 0,
+      "explanation": "The Thar Desert lies in the southeast of Pakistan and extends into northwest India.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-017",
+      "section": "gk",
+      "topic": "Current affairs and Pakistan affairs",
+      "difficulty": "hard",
+      "stem": "The Secretary-General of the United Nations in office during 2026 is:",
+      "options": [
+        "António Guterres",
+        "Ban Ki-moon",
+        "Kofi Annan",
+        "Boutros Boutros-Ghali"
+      ],
+      "correct": 0,
+      "explanation": "António Guterres of Portugal took office in January 2017 and served as UN Secretary-General through 2026.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-018",
+      "section": "gk",
+      "topic": "Current affairs and Pakistan affairs",
+      "difficulty": "hard",
+      "stem": "Which Pakistani physicist was awarded the Nobel Prize in Physics in 1979?",
+      "options": [
+        "Abdus Salam",
+        "Pervez Hoodbhoy",
+        "Salimuzzaman Siddiqui",
+        "Atta-ur-Rahman"
+      ],
+      "correct": 0,
+      "explanation": "Abdus Salam won the 1979 Nobel Prize in Physics for his work on electroweak unification.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-019",
+      "section": "gk",
+      "topic": "Geography and demography",
+      "difficulty": "hard",
+      "stem": "The Khyber Pass connects Pakistan with which country?",
+      "options": [
+        "Afghanistan",
+        "China",
+        "Iran",
+        "India"
+      ],
+      "correct": 0,
+      "explanation": "The Khyber Pass in the northwest connects Peshawar with Kabul in Afghanistan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-gk-020",
+      "section": "gk",
+      "topic": "Current affairs and Pakistan affairs",
+      "difficulty": "hard",
+      "stem": "The Indus Waters Treaty between Pakistan and India was signed in which year?",
+      "options": [
+        "1960",
+        "1947",
+        "1954",
+        "1971"
+      ],
+      "correct": 0,
+      "explanation": "The Indus Waters Treaty was signed in Karachi in 1960, brokered by the World Bank.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-001",
+      "section": "islamiat",
+      "topic": "Basic Islamic concepts and beliefs",
+      "difficulty": "easy",
+      "stem": "How many pillars (Arkan) of Islam are there?",
+      "options": [
+        "Five",
+        "Four",
+        "Six",
+        "Seven"
+      ],
+      "correct": 0,
+      "explanation": "Islam has five pillars: Shahadah, Salah, Zakat, Sawm and Hajj.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-002",
+      "section": "islamiat",
+      "topic": "Basic Islamic concepts and beliefs",
+      "difficulty": "easy",
+      "stem": "What is the first pillar of Islam?",
+      "options": [
+        "Shahadah (declaration of faith)",
+        "Salah (prayer)",
+        "Sawm (fasting)",
+        "Zakat (charity)"
+      ],
+      "correct": 0,
+      "explanation": "The Shahadah, the declaration that there is no god but Allah and Muhammad is His messenger, is the first pillar.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-003",
+      "section": "islamiat",
+      "topic": "Basic Islamic concepts and beliefs",
+      "difficulty": "easy",
+      "stem": "How many obligatory (fard) prayers does a Muslim offer every day?",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Six"
+      ],
+      "correct": 0,
+      "explanation": "The five daily prayers are Fajr, Zuhr, Asr, Maghrib and Isha.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-004",
+      "section": "islamiat",
+      "topic": "Basic Islamic concepts and beliefs",
+      "difficulty": "easy",
+      "stem": "In which Islamic month do Muslims fast during the day?",
+      "options": [
+        "Ramadan",
+        "Shawwal",
+        "Muharram",
+        "Rajab"
+      ],
+      "correct": 0,
+      "explanation": "Muslims fast from dawn to sunset throughout the month of Ramadan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-005",
+      "section": "islamiat",
+      "topic": "Seerah and Islamic history",
+      "difficulty": "medium",
+      "stem": "In which city was the Prophet Muhammad (peace be upon him) born?",
+      "options": [
+        "Makkah",
+        "Madinah",
+        "Taif",
+        "Jerusalem"
+      ],
+      "correct": 0,
+      "explanation": "The Prophet Muhammad (PBUH) was born in Makkah in the Year of the Elephant (570 CE).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-006",
+      "section": "islamiat",
+      "topic": "Quran and Hadith fundamentals",
+      "difficulty": "medium",
+      "stem": "Which angel brought the revelation of the Holy Quran to the Prophet Muhammad (peace be upon him)?",
+      "options": [
+        "Angel Jibra'il (Gabriel)",
+        "Angel Mika'il (Michael)",
+        "Angel Israfil",
+        "Angel Azra'il"
+      ],
+      "correct": 0,
+      "explanation": "Angel Jibra'il (Gabriel) conveyed the Quranic revelation to the Prophet (PBUH).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-007",
+      "section": "islamiat",
+      "topic": "Basic Islamic concepts and beliefs",
+      "difficulty": "medium",
+      "stem": "Which of the following is the fourth pillar of Islam?",
+      "options": [
+        "Sawm (fasting)",
+        "Hajj (pilgrimage)",
+        "Salah (prayer)",
+        "Shahadah (faith)"
+      ],
+      "correct": 0,
+      "explanation": "The pillars in order are Shahadah, Salah, Zakat, Sawm and Hajj; fasting (Sawm) is the fourth.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-008",
+      "section": "islamiat",
+      "topic": "Seerah and Islamic history",
+      "difficulty": "medium",
+      "stem": "Which was the first major battle between the Muslims of Madinah and the Quraysh of Makkah?",
+      "options": [
+        "Battle of Badr",
+        "Battle of Uhud",
+        "Battle of Khandaq",
+        "Battle of Tabuk"
+      ],
+      "correct": 0,
+      "explanation": "The Battle of Badr (2 AH) was the first major battle and ended in a Muslim victory.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-009",
+      "section": "islamiat",
+      "topic": "Seerah and Islamic history",
+      "difficulty": "hard",
+      "stem": "The Hijrah of the Prophet Muhammad (peace be upon him) from Makkah to Madinah marks the beginning of the Islamic calendar. In which year (AH) did it take place?",
+      "options": [
+        "1 AH",
+        "2 AH",
+        "5 AH",
+        "8 AH"
+      ],
+      "correct": 0,
+      "explanation": "The Islamic (Hijri) calendar begins with the year of the Hijrah, 1 AH (622 CE).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-islamiat-010",
+      "section": "islamiat",
+      "topic": "Quran and Hadith fundamentals",
+      "difficulty": "hard",
+      "stem": "How many Surahs (chapters) does the Holy Quran contain?",
+      "options": [
+        "114",
+        "112",
+        "110",
+        "120"
+      ],
+      "correct": 0,
+      "explanation": "The Holy Quran contains 114 Surahs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-001",
+      "section": "pakstudies",
+      "topic": "Pakistan movement and history",
+      "difficulty": "easy",
+      "stem": "Who is known as the founder of Pakistan?",
+      "options": [
+        "Quaid-e-Azam Muhammad Ali Jinnah",
+        "Allama Muhammad Iqbal",
+        "Liaquat Ali Khan",
+        "Sir Syed Ahmad Khan"
+      ],
+      "correct": 0,
+      "explanation": "Quaid-e-Azam Muhammad Ali Jinnah led the Pakistan Movement and is honoured as the founder of Pakistan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-002",
+      "section": "pakstudies",
+      "topic": "Constitution and governance",
+      "difficulty": "easy",
+      "stem": "What is the national language of Pakistan?",
+      "options": [
+        "Urdu",
+        "Punjabi",
+        "Sindhi",
+        "English"
+      ],
+      "correct": 0,
+      "explanation": "Urdu is the national language of Pakistan, while English is widely used for official purposes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-003",
+      "section": "pakstudies",
+      "topic": "Constitution and governance",
+      "difficulty": "easy",
+      "stem": "What is the capital city of Pakistan?",
+      "options": [
+        "Islamabad",
+        "Karachi",
+        "Lahore",
+        "Rawalpindi"
+      ],
+      "correct": 0,
+      "explanation": "Islamabad became the capital of Pakistan in the 1960s, replacing Karachi.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-004",
+      "section": "pakstudies",
+      "topic": "Pakistan movement and history",
+      "difficulty": "easy",
+      "stem": "Pakistan came into being in which year?",
+      "options": [
+        "1947",
+        "1940",
+        "1956",
+        "1949"
+      ],
+      "correct": 0,
+      "explanation": "Pakistan gained independence on 14 August 1947.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-005",
+      "section": "pakstudies",
+      "topic": "Pakistan movement and history",
+      "difficulty": "medium",
+      "stem": "Who first formally presented the Two-Nation Theory in his presidential address at Allahabad in 1930?",
+      "options": [
+        "Allama Muhammad Iqbal",
+        "Quaid-e-Azam",
+        "Sir Syed Ahmad Khan",
+        "Chaudhry Rehmat Ali"
+      ],
+      "correct": 0,
+      "explanation": "Allama Iqbal's Allahabad address of 1930 called for a separate homeland for the Muslims of the subcontinent.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-006",
+      "section": "pakstudies",
+      "topic": "Pakistan movement and history",
+      "difficulty": "medium",
+      "stem": "The Lahore Resolution (Pakistan Resolution) was passed in which year?",
+      "options": [
+        "1940",
+        "1930",
+        "1942",
+        "1946"
+      ],
+      "correct": 0,
+      "explanation": "The Lahore Resolution was adopted on 23 March 1940 at the annual session of the All-India Muslim League.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-007",
+      "section": "pakstudies",
+      "topic": "Culture and heritage",
+      "difficulty": "medium",
+      "stem": "What is the national flower of Pakistan?",
+      "options": [
+        "Jasmine",
+        "Rose",
+        "Tulip",
+        "Sunflower"
+      ],
+      "correct": 0,
+      "explanation": "Jasmine is the national flower of Pakistan.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-008",
+      "section": "pakstudies",
+      "topic": "Constitution and governance",
+      "difficulty": "medium",
+      "stem": "Who was the first Governor-General of Pakistan?",
+      "options": [
+        "Quaid-e-Azam Muhammad Ali Jinnah",
+        "Liaquat Ali Khan",
+        "Khawaja Nazimuddin",
+        "Iskander Mirza"
+      ],
+      "correct": 0,
+      "explanation": "Quaid-e-Azam Muhammad Ali Jinnah became Pakistan's first Governor-General in August 1947.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-009",
+      "section": "pakstudies",
+      "topic": "Constitution and governance",
+      "difficulty": "hard",
+      "stem": "The first Constitution of Pakistan was adopted in which year?",
+      "options": [
+        "1956",
+        "1947",
+        "1950",
+        "1962"
+      ],
+      "correct": 0,
+      "explanation": "The 1956 Constitution declared Pakistan an Islamic Republic; it was the country's first constitution.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-pakstudies-010",
+      "section": "pakstudies",
+      "topic": "Pakistan movement and history",
+      "difficulty": "hard",
+      "stem": "The Simla Deputation of 1906 was led by:",
+      "options": [
+        "Sir Aga Khan",
+        "Sir Syed Ahmad Khan",
+        "Allama Iqbal",
+        "Nawab Viqar-ul-Mulk"
+      ],
+      "correct": 0,
+      "explanation": "Sir Aga Khan III led the Simla Deputation that presented Muslim demands to Lord Minto in 1906.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-001",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "easy",
+      "stem": "درج ذیل الفاظ میں سے 'خوشی' کا مترادف کون سا ہے؟",
+      "options": [
+        "مسرت",
+        "غم",
+        "رنج",
+        "درد"
+      ],
+      "correct": 0,
+      "explanation": "'خوشی' کا مترادف 'مسرت' ہے۔ دونوں کا مطلب خوشی اور شادمانی ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-002",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "easy",
+      "stem": "'روشنی' کا مترادف کون سا لفظ ہے؟",
+      "options": [
+        "اجالا",
+        "تاریکی",
+        "اندھیرا",
+        "شب"
+      ],
+      "correct": 0,
+      "explanation": "'روشنی' کا مترادف 'اجالا' ہے جبکہ تاریکی اس کا متضاد ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-003",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "easy",
+      "stem": "درج ذیل میں سے 'وطن' کا مترادف کون سا ہے؟",
+      "options": [
+        "ملک",
+        "گھر",
+        "شہر",
+        "گاؤں"
+      ],
+      "correct": 0,
+      "explanation": "'وطن' اور 'ملک' دونوں اپنے ملک یا جائے پیدائش کے معنی میں استعمال ہوتے ہیں۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-004",
+      "section": "urdu",
+      "topic": "Urdu grammar",
+      "difficulty": "easy",
+      "stem": "درج ذیل میں سے گرامر کے لحاظ سے درست جملہ کون سا ہے؟",
+      "options": [
+        "میرے پاس ایک کتاب ہے",
+        "میرے پاس ایک کتاب ہیں",
+        "میرا پاس ایک کتاب ہے",
+        "میرے پاس کتاب ایک ہے"
+      ],
+      "correct": 0,
+      "explanation": "'کتاب' واحد اسم ہے اس لیے فعل 'ہے' درست ہے، 'ہیں' نہیں۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-005",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "medium",
+      "stem": "درج ذیل میں سے 'جہالت' کا متضاد کون سا ہے؟",
+      "options": [
+        "علم",
+        "نادانی",
+        "بےخبری",
+        "اندھیرا"
+      ],
+      "correct": 0,
+      "explanation": "'جہالت' کا متضاد 'علم' ہے یعنی علم کی ضد جہالت ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-006",
+      "section": "urdu",
+      "topic": "Urdu comprehension",
+      "difficulty": "medium",
+      "stem": "درج ذیل عبارت پڑھ کر سوال کا جواب دیجیے: 'محنت کامیابی کی کنجی ہے۔ جو شخص محنت کرتا ہے وہ کبھی ناکام نہیں ہوتا۔ صبر اور استقلال سے کام لینے والا انسان ضرور منزل پا لیتا ہے۔' سوال: کامیابی کی کنجی کیا ہے؟",
+      "options": [
+        "محنت",
+        "دولت",
+        "قسمت",
+        "نسب"
+      ],
+      "correct": 0,
+      "explanation": "عبارت کے مطابق محنت کامیابی کی کنجی ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-007",
+      "section": "urdu",
+      "topic": "Urdu grammar",
+      "difficulty": "medium",
+      "stem": "درج ذیل جملوں میں سے گرامر کے لحاظ سے درست فقرہ کون سا ہے؟",
+      "options": [
+        "لڑکا سکول جا رہا ہے",
+        "لڑکا سکول جا رہی ہے",
+        "لڑکا سکول جا رہے ہے",
+        "لڑکی سکول جا رہا ہے"
+      ],
+      "correct": 0,
+      "explanation": "'لڑکا' مذکر واحد ہے اس لیے فعل 'جا رہا ہے' درست ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-008",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "medium",
+      "stem": "'استقلال' کا مطلب کیا ہے؟",
+      "options": [
+        "ثابت قدمی",
+        "جلدی",
+        "ناامیدی",
+        "سستی"
+      ],
+      "correct": 0,
+      "explanation": "'استقلال' کا مطلب ثابت قدمی اور پختہ عزم ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-009",
+      "section": "urdu",
+      "topic": "Urdu vocabulary and phrase usage",
+      "difficulty": "hard",
+      "stem": "درج ذیل میں سے 'آفتاب' کا مترادف کون سا ہے؟",
+      "options": [
+        "سورج",
+        "چاند",
+        "ستارہ",
+        "بادل"
+      ],
+      "correct": 0,
+      "explanation": "'آفتاب' فارسی الاصل لفظ ہے جس کا مطلب سورج ہے۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-urdu-010",
+      "section": "urdu",
+      "topic": "Urdu comprehension",
+      "difficulty": "hard",
+      "stem": "درج ذیل عبارت پڑھ کر سوال کا جواب دیجیے: 'علم وہ دولت ہے جو نہ چوری ہو سکتی ہے اور نہ ڈوبتی ہے۔ علم انسان کا سب سے بڑا خزانہ ہے۔' سوال: عبارت کے مطابق علم کو کس سے تشبیہ دی گئی ہے؟",
+      "options": [
+        "دولت اور خزانہ",
+        "پھول اور پودے",
+        "پہاڑ اور دریا",
+        "دن اور رات"
+      ],
+      "correct": 0,
+      "explanation": "عبارت میں علم کو ایسی دولت اور خزانہ کہا گیا ہے جو کبھی ضائع نہیں ہوتی۔",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-math-001",
+      "section": "math",
+      "topic": "Basic arithmetic and number operations",
+      "difficulty": "easy",
+      "stem": "What is the value of 15 × 8?",
+      "options": [
+        "120",
+        "115",
+        "125",
+        "105"
+      ],
+      "correct": 0,
+      "explanation": "15 × 8 = 120.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-math-002",
+      "section": "math",
+      "topic": "Percentages, ratios and word problems",
+      "difficulty": "easy",
+      "stem": "What is 25% of 200?",
+      "options": [
+        "50",
+        "25",
+        "75",
+        "100"
+      ],
+      "correct": 0,
+      "explanation": "25% of 200 = (25/100) × 200 = 50.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-math-003",
+      "section": "math",
+      "topic": "Percentages, ratios and word problems",
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an item for Rs. 400 and sells it for Rs. 500. What is his profit percentage?",
+      "options": [
+        "25%",
+        "20%",
+        "10%",
+        "30%"
+      ],
+      "correct": 0,
+      "explanation": "Profit = 500 − 400 = Rs. 100; profit % = (100/400) × 100 = 25%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-math-004",
+      "section": "math",
+      "topic": "Percentages, ratios and word problems",
+      "difficulty": "medium",
+      "stem": "In a class, the ratio of boys to girls is 3:2. If there are 30 boys, how many girls are in the class?",
+      "options": [
+        "20",
+        "15",
+        "25",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "3 parts = 30, so 1 part = 10; girls = 2 × 10 = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    },
+    {
+      "id": "lat-math-005",
+      "section": "math",
+      "topic": "Basic arithmetic and number operations",
+      "difficulty": "hard",
+      "stem": "The average of five numbers is 18. If four of the numbers are 15, 20, 16 and 19, what is the fifth number?",
+      "options": [
+        "20",
+        "18",
+        "22",
+        "16"
+      ],
+      "correct": 0,
+      "explanation": "Total = 5 × 18 = 90; sum of the four given numbers = 70; fifth = 90 − 70 = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/"
+      ]
+    }
+  ]
+}

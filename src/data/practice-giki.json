@@ -1,0 +1,998 @@
+{
+  "testId": "giki",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for GIKI Undergraduate Admission Test. Intermediate-level MCQs in Mathematics, Physics and English for Engineering/Computing programmes. Not affiliated with GIKI.",
+    "sources": [
+      "https://giki.edu.pk/admissions/admissions-undergraduates/",
+      "https://giki.edu.pk/admissions/admissions-undergraduates/undergraduate-admission-test-syllabus/"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 50,
+    "note": "50 MCQs, no negative marking (GIKI pattern)."
+  },
+  "benchmarks": [
+    {
+      "label": "Engineering programmes (2026)",
+      "percent": 75
+    },
+    {
+      "label": "Computing / Management programmes (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "questionCount": 20
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 20
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 10
+    }
+  ],
+  "questions": [
+    {
+      "id": "giki-math-001",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If f(x) = 2x² - 3x + 1, what is f(2)?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correct": 0,
+      "explanation": "f(2) = 2(4) - 3(2) + 1 = 8 - 6 + 1 = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-002",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "Solve for x: 3x - 7 = 14.",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "Add 7 to both sides: 3x = 21, so x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-003",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "Simplify: 5(2x - 3) + 4.",
+      "options": [
+        "10x - 11",
+        "10x - 19",
+        "10x + 11",
+        "7x - 11"
+      ],
+      "correct": 0,
+      "explanation": "5(2x - 3) + 4 = 10x - 15 + 4 = 10x - 11.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-004",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If g(x) = x² + 3, what is g(-2)?",
+      "options": [
+        "1",
+        "-1",
+        "7",
+        "-7"
+      ],
+      "correct": 2,
+      "explanation": "g(-2) = (-2)² + 3 = 4 + 3 = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-005",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "What is the slope of the line y = 4x - 3?",
+      "options": [
+        "-3",
+        "3",
+        "4",
+        "-4"
+      ],
+      "correct": 2,
+      "explanation": "The line is in slope-intercept form y = mx + c, so the slope m = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-006",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "Solve for x: x/4 = 9.",
+      "options": [
+        "4",
+        "9",
+        "13",
+        "36"
+      ],
+      "correct": 3,
+      "explanation": "Multiply both sides by 4: x = 9 × 4 = 36.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-007",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the exact value of sin(30°)?",
+      "options": [
+        "1/2",
+        "√3/2",
+        "1/√2",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "sin(30°) = 1/2, a standard exact value from the special angles table.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-008",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "easy",
+      "stem": "What is log₂(16)?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "correct": 1,
+      "explanation": "Since 2⁴ = 16, log₂(16) = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-009",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "Solve the quadratic equation x² - 7x + 12 = 0.",
+      "options": [
+        "x = 3 or x = 4",
+        "x = -3 or x = -4",
+        "x = 2 or x = 6",
+        "x = 1 or x = 12"
+      ],
+      "correct": 0,
+      "explanation": "x² - 7x + 12 = (x - 3)(x - 4) = 0, so x = 3 or x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-010",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "If f(x) = 2x + 1 and g(x) = x², what is f(g(2))?",
+      "options": [
+        "5",
+        "9",
+        "10",
+        "17"
+      ],
+      "correct": 1,
+      "explanation": "g(2) = 4, then f(4) = 2(4) + 1 = 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-011",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "Factor completely: x² - 25.",
+      "options": [
+        "(x - 5)(x + 5)",
+        "(x - 5)²",
+        "(x + 5)²",
+        "(x - 25)(x + 1)"
+      ],
+      "correct": 0,
+      "explanation": "Difference of squares: x² - 25 = (x - 5)(x + 5).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-012",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "If tan(θ) = 1 and θ is acute, what is θ?",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correct": 1,
+      "explanation": "tan(45°) = 1, so θ = 45°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-013",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of x⁴ with respect to x?",
+      "options": [
+        "4x³",
+        "x³",
+        "4x⁴",
+        "3x⁴"
+      ],
+      "correct": 0,
+      "explanation": "Power rule: d/dx (xⁿ) = nxⁿ⁻¹, so d/dx (x⁴) = 4x³.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-014",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "medium",
+      "stem": "Find the sum of the first 10 terms of the arithmetic sequence 3, 6, 9, ...",
+      "options": [
+        "120",
+        "150",
+        "165",
+        "180"
+      ],
+      "correct": 2,
+      "explanation": "S₁₀ = (10/2)[2(3) + 9(3)] = 5(6 + 27) = 165.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-015",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "medium",
+      "stem": "A fair coin is tossed twice. What is the probability of getting two heads?",
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/8"
+      ],
+      "correct": 2,
+      "explanation": "P(HH) = (1/2) × (1/2) = 1/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-016",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "The circle x² + y² = 36 has centre and radius:",
+      "options": [
+        "(0, 0) and 6",
+        "(0, 0) and 36",
+        "(6, 6) and 6",
+        "(0, 6) and 36"
+      ],
+      "correct": 0,
+      "explanation": "x² + y² = r² has centre (0, 0) and radius r = √36 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-017",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "Evaluate ∫₀¹ (3x² + 2x) dx.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correct": 1,
+      "explanation": "∫(3x² + 2x) dx = x³ + x²; evaluated from 0 to 1: (1 + 1) - 0 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-018",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "hard",
+      "stem": "Solve for x: logₓ(81) = 2.",
+      "options": [
+        "3",
+        "9",
+        "27",
+        "81"
+      ],
+      "correct": 1,
+      "explanation": "By definition x² = 81, and since x > 0 and x ≠ 1, x = 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-019",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "hard",
+      "stem": "The third term of a geometric progression with first term 2 and common ratio 3 is:",
+      "options": [
+        "6",
+        "12",
+        "18",
+        "54"
+      ],
+      "correct": 2,
+      "explanation": "T₃ = ar² = 2(3)² = 2 × 9 = 18.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-math-020",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "What is the derivative of sin(3x)?",
+      "options": [
+        "cos(3x)",
+        "3cos(3x)",
+        "-3sin(3x)",
+        "3sin(3x)"
+      ],
+      "correct": 1,
+      "explanation": "Chain rule: d/dx [sin(3x)] = 3cos(3x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-001",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "What is the SI unit of force?",
+      "options": [
+        "Joule",
+        "Newton",
+        "Watt",
+        "Pascal"
+      ],
+      "correct": 1,
+      "explanation": "Force = mass × acceleration, and its SI unit is the newton (N).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-002",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "A car covers 150 m in 15 s at constant speed. What is its speed?",
+      "options": [
+        "5 m/s",
+        "10 m/s",
+        "15 m/s",
+        "150 m/s"
+      ],
+      "correct": 1,
+      "explanation": "Speed = distance/time = 150/15 = 10 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-003",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "The acceleration due to gravity near the Earth's surface is approximately:",
+      "options": [
+        "4.9 m/s²",
+        "9.8 m/s²",
+        "19.6 m/s²",
+        "98 m/s²"
+      ],
+      "correct": 1,
+      "explanation": "Standard value: g ≈ 9.8 m/s² near the Earth's surface.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-004",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "The SI unit of electric current is the:",
+      "options": [
+        "Volt",
+        "Ohm",
+        "Ampere",
+        "Coulomb"
+      ],
+      "correct": 2,
+      "explanation": "Electric current is measured in amperes (A).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-005",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "easy",
+      "stem": "The speed of light in vacuum is approximately:",
+      "options": [
+        "3 × 10⁶ m/s",
+        "3 × 10⁸ m/s",
+        "3 × 10¹⁰ m/s",
+        "340 m/s"
+      ],
+      "correct": 1,
+      "explanation": "c ≈ 3 × 10⁸ m/s in vacuum, the fastest speed in the universe.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-006",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "easy",
+      "stem": "Sound waves cannot travel through:",
+      "options": [
+        "air",
+        "water",
+        "steel",
+        "a vacuum"
+      ],
+      "correct": 3,
+      "explanation": "Sound is a mechanical wave and needs a material medium; it cannot travel through a vacuum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-007",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "According to Ohm's law:",
+      "options": [
+        "V = IR",
+        "V = I²R",
+        "V = R/I",
+        "V = IR²"
+      ],
+      "correct": 0,
+      "explanation": "Ohm's law: the potential difference V across a conductor equals the product of current I and resistance R.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-008",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "A net force of 10 N acts on a body of mass 2 kg. What is its acceleration?",
+      "options": [
+        "2 m/s²",
+        "5 m/s²",
+        "10 m/s²",
+        "20 m/s²"
+      ],
+      "correct": 1,
+      "explanation": "From Newton's second law, a = F/m = 10/2 = 5 m/s².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-009",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "The kinetic energy of a 2 kg object moving at 3 m/s is:",
+      "options": [
+        "3 J",
+        "6 J",
+        "9 J",
+        "18 J"
+      ],
+      "correct": 2,
+      "explanation": "KE = (1/2)mv² = (1/2)(2)(3)² = 9 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-010",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "medium",
+      "stem": "A sound wave has frequency 170 Hz and travels at 340 m/s. Its wavelength is:",
+      "options": [
+        "0.5 m",
+        "1 m",
+        "2 m",
+        "170 m"
+      ],
+      "correct": 2,
+      "explanation": "λ = v/f = 340/170 = 2 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-011",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "Newton's first law of motion is also known as the law of:",
+      "options": [
+        "inertia",
+        "momentum",
+        "action and reaction",
+        "gravitation"
+      ],
+      "correct": 0,
+      "explanation": "The first law states that a body continues in its state of rest or uniform motion unless acted on by a net force, hence the law of inertia.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-012",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "100 J of work is done in 5 s. The power developed is:",
+      "options": [
+        "5 W",
+        "20 W",
+        "100 W",
+        "500 W"
+      ],
+      "correct": 1,
+      "explanation": "Power = work/time = 100/5 = 20 W.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-013",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "The SI unit of electric field strength is:",
+      "options": [
+        "N/C",
+        "J",
+        "W",
+        "A"
+      ],
+      "correct": 0,
+      "explanation": "E = F/q, so the electric field is measured in newtons per coulomb (N/C).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-014",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "The momentum of a 0.5 kg ball moving at 20 m/s is:",
+      "options": [
+        "5 kg m/s",
+        "10 kg m/s",
+        "20 kg m/s",
+        "40 kg m/s"
+      ],
+      "correct": 1,
+      "explanation": "p = mv = 0.5 x 20 = 10 kg m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-015",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "The frequency of mains electricity in Pakistan is:",
+      "options": [
+        "40 Hz",
+        "50 Hz",
+        "60 Hz",
+        "100 Hz"
+      ],
+      "correct": 1,
+      "explanation": "Pakistan's grid operates at 50 Hz (230 V single phase).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-016",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "medium",
+      "stem": "An object is placed at a distance 2f in front of a convex lens of focal length f. The image formed is:",
+      "options": [
+        "virtual and magnified",
+        "real, inverted and the same size",
+        "virtual and the same size",
+        "real and magnified"
+      ],
+      "correct": 1,
+      "explanation": "An object at 2f gives an image at 2f on the other side: real, inverted and the same size (magnification 1).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-017",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "hard",
+      "stem": "For a projectile fired with a fixed speed on level ground, the horizontal range is maximum when the angle of projection is:",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correct": 1,
+      "explanation": "Range R = u²sin(2θ)/g is maximum when sin(2θ) = 1, i.e. θ = 45°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-018",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "hard",
+      "stem": "Using E = mc², the energy released when 1 kg of mass is completely converted into energy is:",
+      "options": [
+        "3 x 10⁸ J",
+        "9 x 10⁸ J",
+        "3 x 10¹⁶ J",
+        "9 x 10¹⁶ J"
+      ],
+      "correct": 3,
+      "explanation": "E = 1 x (3 x 10⁸)² = 9 x 10¹⁶ J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-phy-019",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "Resistors of 4 Ω and 6 Ω connected in series have an equivalent resistance of:",
+      "options": [
+        "2.4 Ω",
+        "10 Ω",
+        "12 Ω",
+        "24 Ω"
+      ],
+      "correct": 1,
+      "explanation": "In series resistances add: R = 4 + 6 = 10 Ω.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduas/"
+      ]
+    },
+    {
+      "id": "giki-phy-020",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "Resistors of 3 Ω and 6 Ω connected in parallel have an equivalent resistance of:",
+      "options": [
+        "2 Ω",
+        "4.5 Ω",
+        "9 Ω",
+        "18 Ω"
+      ],
+      "correct": 0,
+      "explanation": "1/R = 1/3 + 1/6 = 1/2, so R = 2 Ω.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-001",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is closest in meaning to 'abundant'?",
+      "options": [
+        "scarce",
+        "plentiful",
+        "tiny",
+        "weak"
+      ],
+      "correct": 1,
+      "explanation": "'Abundant' means existing in large quantities, i.e. plentiful.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-002",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "She ___ to school every day.",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "correct": 1,
+      "explanation": "Third-person singular present tense takes '-es': she goes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-003",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is an antonym of 'ancient'?",
+      "options": [
+        "old",
+        "historic",
+        "modern",
+        "antique"
+      ],
+      "correct": 2,
+      "explanation": "'Ancient' means very old; 'modern' is its direct opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-004",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "The past tense of 'begin' is:",
+      "options": [
+        "beginned",
+        "began",
+        "begun",
+        "begins"
+      ],
+      "correct": 1,
+      "explanation": "'Begin' is an irregular verb: begin, began, begun.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-005",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "'Benevolent' most nearly means:",
+      "options": [
+        "cruel",
+        "indifferent",
+        "kind and generous",
+        "proud"
+      ],
+      "correct": 2,
+      "explanation": "'Benevolent' means well-meaning and kindly, showing generosity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-006",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Neither Ali nor Ahmed ___ coming to the seminar.",
+      "options": [
+        "are",
+        "is",
+        "were",
+        "have"
+      ],
+      "correct": 1,
+      "explanation": "With 'neither...nor', the verb agrees with the nearer subject (Ahmed, singular), so 'is' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-007",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Plants make their own food through photosynthesis. They absorb carbon dioxide from the air and water from the soil, and use sunlight to convert these into glucose while releasing oxygen. According to the passage, plants release ___ into the air.",
+      "options": [
+        "carbon dioxide",
+        "oxygen",
+        "nitrogen",
+        "glucose"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that plants release oxygen during photosynthesis.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-008",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence:",
+      "options": [
+        "He has been working here since 2010.",
+        "He has been working here for 2010.",
+        "He is working here since 2010.",
+        "He work here since 2010."
+      ],
+      "correct": 0,
+      "explanation": "'Since' is used with a point in time (2010); the present perfect continuous is the correct tense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-009",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "'Ubiquitous' means:",
+      "options": [
+        "rare and valuable",
+        "present everywhere",
+        "outdated",
+        "harmful"
+      ],
+      "correct": 1,
+      "explanation": "'Ubiquitous' means existing or found everywhere at the same time.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    },
+    {
+      "id": "giki-eng-010",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "hard",
+      "stem": "The committee viewed the proposal with skepticism. The word 'skepticism' most nearly means:",
+      "options": [
+        "approval",
+        "enthusiasm",
+        "doubt",
+        "indifference"
+      ],
+      "correct": 2,
+      "explanation": "'Skepticism' is an attitude of doubt or questioning, not acceptance.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://giki.edu.pk/admissions/admissions-undergraduates/"
+      ]
+    }
+  ]
+}

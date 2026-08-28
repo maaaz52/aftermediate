@@ -4,19 +4,28 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 import {
-  Compass,
-  Target,
-  Rocket,
-  Wallet,
-  FileText,
-  TrendingUp,
-  User,
-  BookOpen,
-  Sparkles,
-  GraduationCap,
-  ClipboardList,
   Award,
   BarChart3,
+  BookOpen,
+  BookOpenCheck,
+  Bot,
+  Calculator,
+  ClipboardList,
+  Compass,
+  Eye,
+  FileText,
+  Globe,
+  GraduationCap,
+  Landmark,
+  Medal,
+  PenLine,
+  Rocket,
+  Sparkles,
+  Target,
+  TrendingUp,
+  User,
+  Video,
+  Wallet,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -37,6 +46,7 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/pakistan/universities", label: "Universities", icon: GraduationCap },
       { href: "/pakistan/entry-tests", label: "Entry Tests", icon: ClipboardList },
+      { href: "/pakistan/self-assessment", label: "Self Assessment", icon: PenLine },
       { href: "/pakistan/scholarships", label: "Scholarships", icon: Award },
       { href: "/pakistan/salary-insights", label: "Salary & Scope", icon: BarChart3 },
       { href: "/merit", label: "Merit", icon: Target },
@@ -47,9 +57,29 @@ export const groups: NavGroup[] = [
   {
     label: "Education Abroad",
     links: [
+      { href: "/abroad/countries", label: "Countries", icon: Globe },
+      { href: "/abroad/scholarships", label: "Scholarships", icon: Medal },
+      { href: "/abroad/test-prep", label: "Test Prep", icon: BookOpenCheck },
+      { href: "/abroad/self-assessment", label: "Self Assessment", icon: PenLine },
+      { href: "/abroad/ivy-league", label: "Ivy League", icon: Landmark },
+      { href: "/abroad/planner", label: "Planner", icon: Calculator },
       { href: "/money", label: "Money", icon: Wallet },
       { href: "/convince", label: "Convince", icon: FileText },
-      { href: "/study", label: "Ustaad", icon: BookOpen },
+    ],
+  },
+  {
+    label: "Resources",
+    links: [
+      { href: "/#reality", label: "Reality Check", icon: Eye },
+      { href: "/webinars", label: "Webinars", icon: Video },
+      { href: "/trends", label: "World Trends", icon: TrendingUp },
+    ],
+  },
+  {
+    label: "A.I Assistants",
+    links: [
+      { href: "/abroad/assistant", label: "Safar A.I", icon: Bot },
+      { href: "/study", label: "Ustaad A.I", icon: BookOpen },
     ],
   },
 ];
@@ -93,10 +123,10 @@ export function Sidebar() {
         <button
           type="button"
           onClick={() => document.dispatchEvent(new CustomEvent("open-rahbar"))}
-          className="mt-6 flex w-full items-center gap-3 rounded-lg border border-saffron/30 bg-saffron/5 px-3 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/10"
+          className="mt-1 flex w-full items-center gap-3 rounded-lg border border-saffron/30 bg-saffron/5 px-3 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/10"
         >
           <Sparkles className="h-4 w-4 shrink-0" />
-          Talk to Rahbar
+          Talk to Rahbar A.I
         </button>
       </nav>
     </aside>

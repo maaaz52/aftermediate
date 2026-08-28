@@ -1,0 +1,1958 @@
+{
+  "testId": "ecat",
+  "schemaVersion": 1,
+  "durationMinutes": 100,
+  "totalQuestions": 100,
+  "marking": {
+    "perQuestionMarks": 4,
+    "correctMarks": 4,
+    "negativeMarks": 0,
+    "totalMarks": 400,
+    "note": "100 MCQs, 400 total marks, no negative marking (ECAT pattern)"
+  },
+  "benchmarks": [
+    {
+      "label": "Top engineering programme (UET Lahore) (2026)",
+      "percent": 85
+    },
+    {
+      "label": "Good merit (UET Taxila, MNS-UET) (2026)",
+      "percent": 70
+    },
+    {
+      "label": "Passing benchmark (2026)",
+      "percent": 50
+    }
+  ],
+  "provenance": {
+    "note": "Practice questions written to the official ECAT syllabus by UET Lahore for engineering admissions in Punjab. English: vocabulary, grammar, comprehension. Mathematics: algebra, trigonometry, calculus, analytic geometry. Physics: mechanics, waves, electricity, modern physics. Chemistry: physical, inorganic, organic. Not affiliated with UET.",
+    "sources": [
+      "https://ecat.uet.edu.pk/",
+      "https://ecat.uet.edu.pk/General/Ecat"
+    ]
+  },
+  "sections": [
+    {
+      "name": "English",
+      "questionCount": 10,
+      "id": "english"
+    },
+    {
+      "name": "Mathematics",
+      "questionCount": 30,
+      "id": "mathematics"
+    },
+    {
+      "name": "Physics",
+      "questionCount": 30,
+      "id": "physics"
+    },
+    {
+      "name": "Chemistry",
+      "questionCount": 30,
+      "id": "chemistry"
+    }
+  ],
+  "questions": [
+    {
+      "id": "ecat-eng-001",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Choose the correct synonym of the word 'EPHEMERAL'.",
+      "options": [
+        "Short-lived",
+        "Eternal",
+        "Massive",
+        "Vibrant"
+      ],
+      "correct": 0,
+      "explanation": "Ephemeral means lasting for a very short time, i.e., short-lived.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-002",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "What is the antonym of 'BENEVOLENT'?",
+      "options": [
+        "Kind-hearted",
+        "Malevolent",
+        "Generous",
+        "Charitable"
+      ],
+      "correct": 1,
+      "explanation": "Benevolent means well-meaning and kindly; malevolent means having or showing a wish to do evil to others.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-003",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "The word 'AMICABLE' most nearly means:",
+      "options": [
+        "Hostile",
+        "Formal",
+        "Friendly",
+        "Aggressive"
+      ],
+      "correct": 2,
+      "explanation": "Amicable means characterized by friendly goodwill and peaceable relations.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-004",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "Select the correct meaning of 'UBIQUITOUS'.",
+      "options": [
+        "Extremely rare",
+        "Harmful in nature",
+        "Found everywhere",
+        "Difficult to understand"
+      ],
+      "correct": 2,
+      "explanation": "Ubiquitous means present, appearing, or found everywhere.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-005",
+      "section": "english",
+      "topic": "Grammar and sentence completion",
+      "difficulty": "easy",
+      "stem": "Choose the grammatically correct sentence:",
+      "options": [
+        "He don't like coffee.",
+        "He doesn't likes coffee.",
+        "He doesn't like coffee.",
+        "He do not likes coffee."
+      ],
+      "correct": 2,
+      "explanation": "With third-person singular subjects, the auxiliary 'does' is used with the base form of the main verb: 'He doesn't like coffee.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-006",
+      "section": "english",
+      "topic": "Grammar and sentence completion",
+      "difficulty": "medium",
+      "stem": "Identify the correct form: 'If I _____ you, I would accept the offer.'",
+      "options": [
+        "was",
+        "am",
+        "were",
+        "be"
+      ],
+      "correct": 2,
+      "explanation": "In second conditional (unreal/hypothetical situations), 'were' is used for all persons: 'If I were you...'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-007",
+      "section": "english",
+      "topic": "Grammar and sentence completion",
+      "difficulty": "medium",
+      "stem": "Complete the sentence: 'She has been studying _____ three hours.'",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "in"
+      ],
+      "correct": 1,
+      "explanation": "'For' is used with a duration of time (three hours). 'Since' is used with a specific point in time.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-008",
+      "section": "english",
+      "topic": "Comprehension and reading skills",
+      "difficulty": "easy",
+      "stem": "Read the passage: 'Pakistan is a country rich in cultural heritage. From the ancient Indus Valley Civilization to the magnificent Mughal Empire, the region has a long and storied history. The diverse traditions, languages, and cuisines reflect this vibrant cultural tapestry.' What is the main idea of this passage?",
+      "options": [
+        "Pakistan has a rapidly modernizing culture",
+        "Pakistan has a rich and diverse cultural heritage",
+        "The Mughal Empire was the only historical empire in Pakistan",
+        "Pakistan has very few cultural traditions"
+      ],
+      "correct": 1,
+      "explanation": "The passage emphasizes Pakistan's rich cultural heritage dating back to ancient civilizations.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-009",
+      "section": "english",
+      "topic": "Comprehension and reading skills",
+      "difficulty": "medium",
+      "stem": "Read the passage: 'The industrial revolution transformed societies from agrarian to industrial economies. This shift led to urbanization, as people moved from rural areas to cities in search of employment in factories. However, rapid urbanization also brought challenges such as overcrowding and pollution.' Which of the following can be inferred from the passage?",
+      "options": [
+        "Industrialization had only positive effects on society",
+        "Urbanization occurred as a result of industrial changes",
+        "Agrarian economies were more efficient than industrial ones",
+        "Factories were located exclusively in rural areas"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that people moved from rural areas to cities for factory work, indicating urbanization followed industrialization.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-eng-010",
+      "section": "english",
+      "topic": "Comprehension and reading skills",
+      "difficulty": "hard",
+      "stem": "Read the passage: 'Artificial intelligence has made remarkable strides in recent decades. Yet for all its achievements, AI still lacks genuine understanding — it processes patterns without comprehension. A self-driving car navigates roads but does not grasp what a road is. This distinction between simulation and true intelligence remains fundamentally important.' The author's primary purpose is to:",
+      "options": [
+        "Explain how self-driving cars work",
+        "Argue that AI has made no real progress",
+        "Highlight the difference between pattern-matching and genuine understanding",
+        "Advocate for more investment in AI research"
+      ],
+      "correct": 2,
+      "explanation": "The author uses the self-driving car example to illustrate that AI processes patterns without genuine comprehension, emphasizing the simulation vs. true intelligence distinction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-001",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "easy",
+      "stem": "If x² + 5x + 6 = 0, what are the roots of the equation?",
+      "options": [
+        "x = -2, -3",
+        "x = 2, 3",
+        "x = -2, 3",
+        "x = 2, -3"
+      ],
+      "correct": 0,
+      "explanation": "x² + 5x + 6 = (x+2)(x+3) = 0, therefore x = -2 or x = -3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-002",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "easy",
+      "stem": "Solve for x and y: 2x + y = 7 and x - y = 2.",
+      "options": [
+        "x = 3, y = 1",
+        "x = 2, y = 3",
+        "x = 3, y = 2",
+        "x = 1, y = 3"
+      ],
+      "correct": 0,
+      "explanation": "Adding the equations: (2x+y)+(x-y)=7+2 → 3x=9 → x=3. Substituting: 3-y=2 → y=1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-003",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "medium",
+      "stem": "If the sum of the roots of 3x² - (2k+1)x + 4 = 0 is 5, what is the value of k?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "Sum of roots = (2k+1)/3 = 5 → 2k+1 = 15 → 2k = 14 → k = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-004",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "medium",
+      "stem": "What is the solution set of the inequality x² - 5x + 6 < 0?",
+      "options": [
+        "(2, 3)",
+        "(-∞, 2) ∪ (3, ∞)",
+        "(-∞, -2) ∪ (-3, ∞)",
+        "(-3, -2)"
+      ],
+      "correct": 0,
+      "explanation": "x²-5x+6=(x-2)(x-3)<0. The product is negative when one factor is negative and the other positive, which occurs between the roots: 2 < x < 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-005",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "hard",
+      "stem": "If α and β are the roots of x² - 3x + 1 = 0, what is the value of α² + β²?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correct": 1,
+      "explanation": "α+β=3, αβ=1. α²+β² = (α+β)²-2αβ = 9-2 = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-006",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "easy",
+      "stem": "Simplify: (x³)⁴ ÷ x⁵.",
+      "options": [
+        "x⁷",
+        "x¹²",
+        "x¹⁷",
+        "x²"
+      ],
+      "correct": 0,
+      "explanation": "(x³)⁴ = x¹², then x¹² ÷ x⁵ = x⁷.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-007",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "medium",
+      "stem": "If A = [[2, 1], [3, 4]], what is the determinant of A?",
+      "options": [
+        "5",
+        "8",
+        "10",
+        "11"
+      ],
+      "correct": 0,
+      "explanation": "det(A) = (2×4) - (1×3) = 8 - 3 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-008",
+      "section": "mathematics",
+      "topic": "Algebra and quadratic equations",
+      "difficulty": "hard",
+      "stem": "For what value of k does the equation 2x² + kx + 8 = 0 have equal roots?",
+      "options": [
+        "k = ±4",
+        "k = ±6",
+        "k = ±8",
+        "k = ±10"
+      ],
+      "correct": 2,
+      "explanation": "For equal roots, discriminant = 0: k² - 4(2)(8) = 0 → k² - 64 = 0 → k = ±8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-009",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "easy",
+      "stem": "What is the value of sin²(30°) + cos²(30°)?",
+      "options": [
+        "0",
+        "0.5",
+        "1",
+        "2"
+      ],
+      "correct": 2,
+      "explanation": "By the Pythagorean identity, sin²θ + cos²θ = 1 for any angle θ.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-010",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "easy",
+      "stem": "What is the value of tan(45°)?",
+      "options": [
+        "0",
+        "0.5",
+        "1",
+        "√3"
+      ],
+      "correct": 2,
+      "explanation": "tan(45°) = sin(45°)/cos(45°) = (√2/2)/(√2/2) = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-011",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "medium",
+      "stem": "In a triangle ABC, if a = 8, b = 6, and sin A = 4/5, what is sin B?",
+      "options": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5"
+      ],
+      "correct": 2,
+      "explanation": "By the law of sines: a/sin A = b/sin B → 8/(4/5) = 6/sin B → 10 = 6/sin B → sin B = 3/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-012",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "medium",
+      "stem": "What is cos(60° + 30°) equal to?",
+      "options": [
+        "0",
+        "1/2",
+        "√3/2",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "cos(60°+30°) = cos(90°) = 0.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-013",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "medium",
+      "stem": "If sin θ = 3/5 and θ is acute, what is cos 2θ?",
+      "options": [
+        "7/25",
+        "9/25",
+        "16/25",
+        "24/25"
+      ],
+      "correct": 0,
+      "explanation": "cos 2θ = 1 - 2sin²θ = 1 - 2(9/25) = 1 - 18/25 = 7/25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-014",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "hard",
+      "stem": "Solve for θ in [0°, 360°): 2 sin²θ - sin θ - 1 = 0.",
+      "options": [
+        "30°, 150°, 270°",
+        "30°, 210°, 330°",
+        "45°, 135°, 225°",
+        "90°, 210°, 330°"
+      ],
+      "correct": 3,
+      "explanation": "Let u = sin θ: 2u²-u-1=0 → (2u+1)(u-1)=0 → u = 1 or u = -1/2. sin θ = 1 gives θ = 90°. sin θ = -1/2 gives θ = 210° and 330°. So θ = 90°, 210°, 330°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-015",
+      "section": "mathematics",
+      "topic": "Trigonometry",
+      "difficulty": "hard",
+      "stem": "What is the period of the function f(x) = 3 sin(4x)?",
+      "options": [
+        "2π",
+        "π",
+        "π/2",
+        "π/4"
+      ],
+      "correct": 2,
+      "explanation": "The period of sin(bx) is 2π/b. With b=4, period = 2π/4 = π/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-016",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "easy",
+      "stem": "Evaluate: lim(x→0) sin x / x.",
+      "options": [
+        "0",
+        "1",
+        "∞",
+        "Does not exist"
+      ],
+      "correct": 1,
+      "explanation": "lim(x→0) sin x / x = 1 (standard limit).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-017",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the derivative of f(x) = x⁵ with respect to x?",
+      "options": [
+        "5x⁴",
+        "5x⁵",
+        "x⁴",
+        "x⁵"
+      ],
+      "correct": 0,
+      "explanation": "d/dx(xⁿ) = n·xⁿ⁻¹, so d/dx(x⁵) = 5x⁴.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-018",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of f(x) = sin(3x)?",
+      "options": [
+        "cos(3x)",
+        "3 sin(3x)",
+        "3 cos(3x)",
+        "sin(3x)"
+      ],
+      "correct": 2,
+      "explanation": "Using the chain rule: d/dx[sin(3x)] = cos(3x) · 3 = 3cos(3x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-019",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "medium",
+      "stem": "Evaluate: ∫ (3x² + 2x) dx.",
+      "options": [
+        "x³ + x² + C",
+        "3x³ + x² + C",
+        "x³ + 3x² + C",
+        "3x³ + 2x² + C"
+      ],
+      "correct": 0,
+      "explanation": "∫ 3x² dx = x³ and ∫ 2x dx = x², so ∫ (3x²+2x) dx = x³ + x² + C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-020",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "medium",
+      "stem": "If f(x) = e^(2x) · ln(x), what is f'(x)?",
+      "options": [
+        "e^(2x)/x",
+        "2e^(2x)·ln(x) + e^(2x)/x",
+        "2e^(2x)·ln(x)",
+        "e^(2x)·(ln(x) + 1/x)"
+      ],
+      "correct": 1,
+      "explanation": "Using product rule: f'(x) = e^(2x)·2·ln(x) + e^(2x)·(1/x) = 2e^(2x)·ln(x) + e^(2x)/x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-021",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "hard",
+      "stem": "Evaluate the definite integral: ∫₀^π sin x dx.",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "π"
+      ],
+      "correct": 2,
+      "explanation": "∫₀^π sin x dx = [-cos x]₀^π = (-cos π) - (-cos 0) = -(-1) + 1 = 1+1 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-022",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "medium",
+      "stem": "Find lim(x→2) (x² - 4)/(x - 2).",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "∞"
+      ],
+      "correct": 2,
+      "explanation": "(x²-4)/(x-2) = (x-2)(x+2)/(x-2) = x+2. As x→2, x+2 = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-023",
+      "section": "mathematics",
+      "topic": "Calculus: limits, differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the slope of the tangent line to y = x² at x = 3?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "dy/dx = 2x. At x=3, slope = 2(3) = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-024",
+      "section": "mathematics",
+      "topic": "Analytic geometry and conic sections",
+      "difficulty": "easy",
+      "stem": "What is the distance between the points A(1, 2) and B(4, 6)?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 1,
+      "explanation": "d = √((4-1)²+(6-2)²) = √(9+16) = √25 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-025",
+      "section": "mathematics",
+      "topic": "Analytic geometry and conic sections",
+      "difficulty": "medium",
+      "stem": "What is the equation of the circle with centre (3, -2) and radius 5?",
+      "options": [
+        "(x-3)² + (y+2)² = 25",
+        "(x+3)² + (y-2)² = 25",
+        "(x-3)² + (y-2)² = 25",
+        "(x+3)² + (y+2)² = 25"
+      ],
+      "correct": 0,
+      "explanation": "The equation of a circle with centre (h,k) and radius r is (x-h)²+(y-k)²=r². So (x-3)²+(y+2)²=25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-026",
+      "section": "mathematics",
+      "topic": "Analytic geometry and conic sections",
+      "difficulty": "medium",
+      "stem": "The focus of the parabola y² = 12x is at:",
+      "options": [
+        "(3, 0)",
+        "(6, 0)",
+        "(0, 3)",
+        "(0, 6)"
+      ],
+      "correct": 0,
+      "explanation": "For y² = 4ax, a = 3. Focus is at (a, 0) = (3, 0).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-027",
+      "section": "mathematics",
+      "topic": "Analytic geometry and conic sections",
+      "difficulty": "hard",
+      "stem": "The eccentricity of the ellipse x²/25 + y²/9 = 1 is:",
+      "options": [
+        "2/5",
+        "3/5",
+        "4/5",
+        "5/4"
+      ],
+      "correct": 2,
+      "explanation": "a²=25, b²=9. e = √(1-b²/a²) = √(1-9/25) = √(16/25) = 4/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-028",
+      "section": "mathematics",
+      "topic": "Sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the 10th term of the arithmetic sequence: 3, 7, 11, 15, ...?",
+      "options": [
+        "35",
+        "37",
+        "39",
+        "41"
+      ],
+      "correct": 2,
+      "explanation": "First term a₁=3, common difference d=4. a₁₀ = a₁+(n-1)d = 3+9(4) = 3+36 = 39.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-029",
+      "section": "mathematics",
+      "topic": "Sequences and series",
+      "difficulty": "medium",
+      "stem": "Find the sum of the infinite geometric series: 8 + 4 + 2 + 1 + ...",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "First term a=8, common ratio r=1/2. Sum = a/(1-r) = 8/(1-1/2) = 8/(1/2) = 16.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-math-030",
+      "section": "mathematics",
+      "topic": "Sequences and series",
+      "difficulty": "medium",
+      "stem": "The sum of the first n terms of an AP is given by Sₙ = 3n² + 2n. What is the 5th term?",
+      "options": [
+        "25",
+        "27",
+        "29",
+        "31"
+      ],
+      "correct": 2,
+      "explanation": "a₅ = S₅ - S₄ = (3×25+2×5) - (3×16+2×4) = (75+10)-(48+8) = 85-56 = 29.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-001",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "easy",
+      "stem": "A 5 kg object accelerates at 2 m/s². What is the net force acting on it?",
+      "options": [
+        "2.5 N",
+        "7 N",
+        "10 N",
+        "25 N"
+      ],
+      "correct": 2,
+      "explanation": "F = ma = 5 kg × 2 m/s² = 10 N.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-002",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "easy",
+      "stem": "A car travels 150 km in 3 hours. What is its average speed?",
+      "options": [
+        "30 km/h",
+        "45 km/h",
+        "50 km/h",
+        "75 km/h"
+      ],
+      "correct": 2,
+      "explanation": "Average speed = total distance / total time = 150 km / 3 h = 50 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-003",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "medium",
+      "stem": "What is the kinetic energy of a 2 kg object moving at 3 m/s?",
+      "options": [
+        "3 J",
+        "6 J",
+        "9 J",
+        "18 J"
+      ],
+      "correct": 2,
+      "explanation": "KE = ½mv² = ½ × 2 × 3² = 1 × 9 = 9 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-004",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "medium",
+      "stem": "A ball is thrown vertically upward with an initial velocity of 20 m/s. What is the maximum height reached? (Take g = 10 m/s²)",
+      "options": [
+        "10 m",
+        "15 m",
+        "20 m",
+        "40 m"
+      ],
+      "correct": 2,
+      "explanation": "At maximum height, v=0. Using v² = u² - 2gh: 0 = 400 - 20h → h = 20 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-005",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "hard",
+      "stem": "A 10 kg block slides down a frictionless incline of 30° from a height of 5 m. What is its velocity at the bottom? (Take g = 10 m/s²)",
+      "options": [
+        "5 m/s",
+        "10 m/s",
+        "14 m/s",
+        "20 m/s"
+      ],
+      "correct": 1,
+      "explanation": "Using conservation of energy: mgh = ½mv² → v = √(2gh) = √(2×10×5) = √100 = 10 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-006",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "easy",
+      "stem": "According to Newton's Third Law, action and reaction forces:",
+      "options": [
+        "Act on the same body",
+        "Act on different bodies",
+        "Cancel each other out",
+        "Are always opposite in direction but equal in magnitude, acting on the same body"
+      ],
+      "correct": 1,
+      "explanation": "Newton's Third Law states that action and reaction forces act on different bodies, not the same body.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-007",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "medium",
+      "stem": "A 2 kg object moving at 4 m/s collides elastically with a stationary 2 kg object. After collision, what are their velocities if the first object stops completely?",
+      "options": [
+        "v₁=2, v₂=2 m/s",
+        "v₁=0, v₂=4 m/s",
+        "v₁=1, v₂=3 m/s",
+        "v₁=0, v₂=2 m/s"
+      ],
+      "correct": 1,
+      "explanation": "In an elastic collision between equal masses where one is stationary, the moving object stops and the stationary one moves with the original velocity. So v₁=0, v₂=4 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-008",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "easy",
+      "stem": "The gravitational force between two masses is F. If the distance between them is doubled, the new force becomes:",
+      "options": [
+        "F/4",
+        "F/2",
+        "2F",
+        "4F"
+      ],
+      "correct": 0,
+      "explanation": "F ∝ 1/r². If r doubles, the force becomes F/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-009",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "medium",
+      "stem": "A 1 kg object moves in a circle of radius 2 m at a speed of 4 m/s. What is the centripetal force?",
+      "options": [
+        "4 N",
+        "8 N",
+        "12 N",
+        "16 N"
+      ],
+      "correct": 1,
+      "explanation": "F_c = mv²/r = 1 × 4² / 2 = 16/2 = 8 N.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-010",
+      "section": "physics",
+      "topic": "Mechanics: motion, force, work and energy",
+      "difficulty": "hard",
+      "stem": "A 1000 kg car moving at 20 m/s applies brakes providing a constant force of 5000 N. What distance does it travel before stopping?",
+      "options": [
+        "20 m",
+        "30 m",
+        "40 m",
+        "50 m"
+      ],
+      "correct": 2,
+      "explanation": "Work-energy theorem: F·d = ½mv². d = mv²/(2F) = (1000×400)/(2×5000) = 400000/10000 = 40 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-011",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "easy",
+      "stem": "What is the speed of sound in air at room temperature approximately?",
+      "options": [
+        "343 m/s",
+        "500 m/s",
+        "700 m/s",
+        "1000 m/s"
+      ],
+      "correct": 0,
+      "explanation": "The speed of sound in air at room temperature (20°C) is approximately 343 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-012",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "medium",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 2 m. What is its speed?",
+      "options": [
+        "25 m/s",
+        "50 m/s",
+        "100 m/s",
+        "200 m/s"
+      ],
+      "correct": 2,
+      "explanation": "v = fλ = 50 × 2 = 100 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-013",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "medium",
+      "stem": "An ambulance siren emits a sound of frequency 1000 Hz. The ambulance approaches a stationary observer at 30 m/s. What frequency does the observer hear? (Speed of sound = 343 m/s)",
+      "options": [
+        "915 Hz",
+        "1000 Hz",
+        "1096 Hz",
+        "1200 Hz"
+      ],
+      "correct": 2,
+      "explanation": "f' = f × v/(v - v_s) = 1000 × 343/(343-30) = 1000 × 343/313 ≈ 1096 Hz.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-014",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "hard",
+      "stem": "Two coherent sources produce interference fringes. If the path difference is λ/2, the observed intensity is:",
+      "options": [
+        "Maximum",
+        "Minimum",
+        "Between maximum and minimum",
+        "Zero always"
+      ],
+      "correct": 1,
+      "explanation": "A path difference of λ/2 corresponds to destructive interference, where intensity is minimum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-015",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "easy",
+      "stem": "The angle of incidence is 30° and the angle of reflection is:",
+      "options": [
+        "15°",
+        "30°",
+        "60°",
+        "90°"
+      ],
+      "correct": 1,
+      "explanation": "By the law of reflection, angle of incidence = angle of reflection = 30°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-016",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "medium",
+      "stem": "Light enters from air into water (refractive index = 4/3). If the angle of incidence in air is 53° (sin 53° = 0.8), what is the angle of refraction?",
+      "options": [
+        "30°",
+        "37°",
+        "45°",
+        "53°"
+      ],
+      "correct": 1,
+      "explanation": "By Snell's law: n₁ sin θ₁ = n₂ sin θ₂ → 1 × 0.8 = (4/3) × sin θ₂ → sin θ₂ = 0.6 → θ₂ = 37°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-017",
+      "section": "physics",
+      "topic": "Waves, oscillations and optics",
+      "difficulty": "medium",
+      "stem": "An object is placed 30 cm from a convex lens of focal length 10 cm. Where is the image formed?",
+      "options": [
+        "7.5 cm",
+        "10 cm",
+        "15 cm",
+        "20 cm"
+      ],
+      "correct": 2,
+      "explanation": "Using the Cartesian sign convention, 1/f = 1/u + 1/v with f = +10 cm and u = +30 cm: 1/10 = 1/30 + 1/v → 1/v = 1/10 - 1/30 = 2/30 = 1/15 → v = 15 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-018",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "A resistor has a voltage of 12 V across it and a current of 3 A flowing through it. What is its resistance?",
+      "options": [
+        "3 Ω",
+        "4 Ω",
+        "9 Ω",
+        "36 Ω"
+      ],
+      "correct": 1,
+      "explanation": "By Ohm's Law: R = V/I = 12 V / 3 A = 4 Ω.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-019",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "A 60 W light bulb operates at 240 V. What current does it draw?",
+      "options": [
+        "0.15 A",
+        "0.25 A",
+        "0.5 A",
+        "4 A"
+      ],
+      "correct": 1,
+      "explanation": "P = VI → I = P/V = 60/240 = 0.25 A.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-020",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "Two point charges of +2 μC and +8 μC are separated by 0.2 m in air. What is the force between them? (k = 9×10⁹ N·m²/C²)",
+      "options": [
+        "0.9 N",
+        "1.8 N",
+        "3.6 N",
+        "7.2 N"
+      ],
+      "correct": 2,
+      "explanation": "F = k·q₁·q₂/r² = 9×10⁹ × 2×10⁻⁶ × 8×10⁻⁶ / (0.2)² = 9×10⁹ × 16×10⁻¹² / 0.04 = 144×10⁻³/0.04 = 3.6 N.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-021",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "In a series circuit, three resistors of 2 Ω, 3 Ω, and 5 Ω are connected across a 20 V battery. What is the voltage drop across the 3 Ω resistor?",
+      "options": [
+        "4 V",
+        "6 V",
+        "8 V",
+        "10 V"
+      ],
+      "correct": 1,
+      "explanation": "Total resistance = 2+3+5 = 10 Ω. Current I = V/R = 20/10 = 2 A. Voltage across 3 Ω = IR = 2×3 = 6 V.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-022",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "The magnetic field around a long straight current-carrying conductor is:",
+      "options": [
+        "Radial",
+        "Circular",
+        "Uniform",
+        "Zero"
+      ],
+      "correct": 1,
+      "explanation": "The magnetic field lines around a straight current-carrying conductor form concentric circles around the wire.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-023",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "A step-up transformer has 100 turns on the primary and 500 turns on the secondary. If the input voltage is 220 V, what is the output voltage?",
+      "options": [
+        "44 V",
+        "220 V",
+        "1100 V",
+        "2200 V"
+      ],
+      "correct": 2,
+      "explanation": "Vₛ/Vₚ = Nₛ/Nₚ → Vₛ/220 = 500/100 → Vₛ = 220 × 5 = 1100 V.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-024",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "A capacitor of 10 μF is charged to 100 V. What is the energy stored in the capacitor?",
+      "options": [
+        "0.05 J",
+        "0.1 J",
+        "0.5 J",
+        "1 J"
+      ],
+      "correct": 0,
+      "explanation": "E = ½CV² = ½ × 10×10⁻⁶ × 100² = ½ × 10⁻⁵ × 10⁴ = 0.5 × 10⁻¹ = 0.05 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-025",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "In an AC circuit, the RMS voltage is 220 V. What is the peak voltage?",
+      "options": [
+        "220 V",
+        "311 V",
+        "380 V",
+        "440 V"
+      ],
+      "correct": 1,
+      "explanation": "Vₚₑₐₖ = Vᵣₘₛ × √2 = 220 × 1.414 ≈ 311 V.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-026",
+      "section": "physics",
+      "topic": "Modern physics and electronics",
+      "difficulty": "easy",
+      "stem": "What is the energy of a photon with frequency 5×10¹⁴ Hz? (h = 6.63×10⁻³⁴ J·s)",
+      "options": [
+        "1.33×10⁻¹⁹ J",
+        "3.315×10⁻¹⁹ J",
+        "6.63×10⁻¹⁹ J",
+        "13.26×10⁻¹⁹ J"
+      ],
+      "correct": 1,
+      "explanation": "E = hf = 6.63×10⁻³⁴ × 5×10¹⁴ = 33.15×10⁻²⁰ = 3.315×10⁻¹⁹ J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-027",
+      "section": "physics",
+      "topic": "Modern physics and electronics",
+      "difficulty": "medium",
+      "stem": "In the photoelectric effect, the kinetic energy of emitted electrons depends on:",
+      "options": [
+        "Intensity of light",
+        "Frequency of light",
+        "Both intensity and frequency",
+        "Time of exposure"
+      ],
+      "correct": 1,
+      "explanation": "The kinetic energy of photoelectrons depends on the frequency (or wavelength) of incident light, not its intensity. Intensity affects only the number of electrons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-028",
+      "section": "physics",
+      "topic": "Modern physics and electronics",
+      "difficulty": "hard",
+      "stem": "What is the de Broglie wavelength of an electron moving at 1×10⁶ m/s? (mₑ = 9.11×10⁻³¹ kg, h = 6.63×10⁻³⁴ J·s)",
+      "options": [
+        "0.73 nm",
+        "0.73 pm",
+        "0.73 Å",
+        "0.73 μm"
+      ],
+      "correct": 0,
+      "explanation": "λ = h/(mv) = 6.63×10⁻³⁴/(9.11×10⁻³¹ × 10⁶) = 6.63×10⁻³⁴/9.11×10⁻²⁵ = 0.728×10⁻⁹ m = 0.73 nm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-029",
+      "section": "physics",
+      "topic": "Modern physics and electronics",
+      "difficulty": "easy",
+      "stem": "Alpha particles consist of:",
+      "options": [
+        "2 protons and 2 neutrons",
+        "2 protons and 2 electrons",
+        "1 proton and 1 neutron",
+        "2 neutrons and 2 electrons"
+      ],
+      "correct": 0,
+      "explanation": "Alpha particles are helium nuclei consisting of 2 protons and 2 neutrons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-phy-030",
+      "section": "physics",
+      "topic": "Modern physics and electronics",
+      "difficulty": "medium",
+      "stem": "A radioactive sample has a half-life of 10 days. How much of a 100 g sample remains after 30 days?",
+      "options": [
+        "3.125 g",
+        "6.25 g",
+        "12.5 g",
+        "25 g"
+      ],
+      "correct": 2,
+      "explanation": "After 3 half-lives (30/10=3): remaining = 100 × (1/2)³ = 100/8 = 12.5 g.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-001",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "easy",
+      "stem": "The atomic radius increases down a group because:",
+      "options": [
+        "Nuclear charge decreases",
+        "Number of shells increases",
+        "Electronegativity increases",
+        "Ionization energy increases"
+      ],
+      "correct": 1,
+      "explanation": "Down a group, additional electron shells are added, increasing the distance of valence electrons from the nucleus, thus increasing atomic radius.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-002",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "easy",
+      "stem": "How many moles are present in 18 g of water (H₂O)? (Atomic masses: H=1, O=16)",
+      "options": [
+        "0.5 mol",
+        "1 mol",
+        "2 mol",
+        "18 mol"
+      ],
+      "correct": 1,
+      "explanation": "Molar mass of H₂O = 2×1 + 16 = 18 g/mol. Moles = mass/molar mass = 18/18 = 1 mol.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-003",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "medium",
+      "stem": "What is the pH of a 0.001 M HCl solution?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "explanation": "HCl is a strong acid, so [H⁺] = 0.001 M = 10⁻³ M. pH = -log[H⁺] = -log(10⁻³) = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-004",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "medium",
+      "stem": "For a reaction A → B, the rate law is rate = k[A]². If the concentration of A is doubled, the rate becomes:",
+      "options": [
+        "Unchanged",
+        "Doubled",
+        "Quadrupled",
+        "Halved"
+      ],
+      "correct": 2,
+      "explanation": "Rate ∝ [A]². If [A] is doubled, rate increases by a factor of 2² = 4 (quadrupled).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-005",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "medium",
+      "stem": "For the reaction N₂(g) + 3H₂(g) ⇌ 2NH₃(g), the equilibrium constant Kc is expressed as:",
+      "options": [
+        "[NH₃]² / ([N₂][H₂]³)",
+        "[NH₃] / ([N₂][H₂])",
+        "([N₂][H₂]³) / [NH₃]²",
+        "[NH₃]² / [N₂]"
+      ],
+      "correct": 0,
+      "explanation": "Kc = [products]^coefficients / [reactants]^coefficients = [NH₃]²/([N₂][H₂]³).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-006",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "hard",
+      "stem": "For the exothermic reaction N₂ + 3H₂ ⇌ 2NH₃, which change will shift the equilibrium to the right?",
+      "options": [
+        "Increasing temperature",
+        "Decreasing pressure",
+        "Increasing pressure",
+        "Adding a catalyst"
+      ],
+      "correct": 2,
+      "explanation": "The forward reaction produces fewer moles of gas (4→2). By Le Chatelier's principle, increasing pressure shifts equilibrium toward the side with fewer moles (right).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-007",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "easy",
+      "stem": "How many atoms are present in 1 mole of carbon-12?",
+      "options": [
+        "6.022×10²²",
+        "6.022×10²³",
+        "12×10²³",
+        "6.022×10²⁴"
+      ],
+      "correct": 1,
+      "explanation": "One mole of any substance contains Avogadro's number (6.022×10²³) of particles.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-008",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "easy",
+      "stem": "The maximum number of electrons that can be accommodated in the third shell (n=3) is:",
+      "options": [
+        "8",
+        "18",
+        "32",
+        "50"
+      ],
+      "correct": 1,
+      "explanation": "Maximum electrons in a shell = 2n². For n=3: 2×9 = 18 electrons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-009",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "medium",
+      "stem": "The enthalpy change for a reaction is -100 kJ/mol. This means the reaction is:",
+      "options": [
+        "Endothermic",
+        "Exothermic",
+        "Isothermal",
+        "Adiabatic"
+      ],
+      "correct": 1,
+      "explanation": "A negative enthalpy change (ΔH < 0) means heat is released, indicating an exothermic reaction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-010",
+      "section": "chemistry",
+      "topic": "Physical chemistry: atomic structure, equilibrium, kinetics",
+      "difficulty": "hard",
+      "stem": "According to the Arrhenius equation, increasing temperature increases reaction rate primarily because it:",
+      "options": [
+        "Increases the number of effective collisions",
+        "Decreases activation energy",
+        "Changes the reaction mechanism",
+        "Increases the concentration of reactants"
+      ],
+      "correct": 0,
+      "explanation": "Higher temperature increases the kinetic energy of molecules, leading to more frequent and more energetic collisions, thereby increasing the fraction of molecules that exceed the activation energy barrier.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-011",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "easy",
+      "stem": "Alkali metals belong to which group of the periodic table?",
+      "options": [
+        "Group 1",
+        "Group 2",
+        "Group 7",
+        "Group 17"
+      ],
+      "correct": 0,
+      "explanation": "Alkali metals are the elements of Group 1 (Li, Na, K, Rb, Cs, Fr).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-012",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "medium",
+      "stem": "Which halogen has the highest electronegativity?",
+      "options": [
+        "Chlorine",
+        "Bromine",
+        "Fluorine",
+        "Iodine"
+      ],
+      "correct": 2,
+      "explanation": "Fluorine is the most electronegative element in the periodic table (EN ≈ 4.0 on the Pauling scale).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-013",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "medium",
+      "stem": "Noble gases are chemically inert because they have:",
+      "options": [
+        "Low ionization energies",
+        "High electronegativity",
+        "Complete octet/duplet configuration",
+        "Large atomic radii"
+      ],
+      "correct": 2,
+      "explanation": "Noble gases have completely filled electron shells (octet for He is duplet), giving them high stability and low tendency to react.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-014",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "easy",
+      "stem": "What is the oxidation state of sulfur in H₂SO₄?",
+      "options": [
+        "+2",
+        "+4",
+        "+6",
+        "-2"
+      ],
+      "correct": 2,
+      "explanation": "H is +1 (×2=+2), O is -2 (×4=-8). The sum must be 0: 2 + S - 8 = 0 → S = +6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-015",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "hard",
+      "stem": "Which of the following is a transition metal?",
+      "options": [
+        "Aluminium",
+        "Calcium",
+        "Zinc",
+        "Iron"
+      ],
+      "correct": 3,
+      "explanation": "Iron (Fe) is a d-block transition metal. Aluminium is p-block, calcium is s-block. Zinc is d-block but not strictly a transition metal as it has a fully filled d¹⁰ configuration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-016",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "medium",
+      "stem": "The bond in NaCl is primarily:",
+      "options": [
+        "Covalent",
+        "Ionic",
+        "Metallic",
+        "Hydrogen bonding"
+      ],
+      "correct": 1,
+      "explanation": "NaCl forms an ionic bond due to the complete transfer of an electron from Na (electropositive metal) to Cl (electronegative non-metal).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-017",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "easy",
+      "stem": "Which of the following elements shows allotropy in the form of diamond and graphite?",
+      "options": [
+        "Oxygen",
+        "Sulfur",
+        "Carbon",
+        "Phosphorus"
+      ],
+      "correct": 2,
+      "explanation": "Carbon exhibits allotropy with diamond (tetrahedral structure) and graphite (layered structure) as two common allotropes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-018",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "hard",
+      "stem": "In the compound [Co(NH₃)₆]Cl₃, the coordination number of cobalt is:",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "9"
+      ],
+      "correct": 2,
+      "explanation": "The coordination number is the number of donor atoms directly attached to the central metal ion. Here, 6 NH₃ ligands coordinate to Co, so the coordination number is 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-019",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "medium",
+      "stem": "Which of the following elements has the highest ionization energy?",
+      "options": [
+        "Na",
+        "Mg",
+        "Al",
+        "Si"
+      ],
+      "correct": 1,
+      "explanation": "Across period 3, ionization energy generally increases from left to right. Mg has higher IE than Na due to higher nuclear charge, and its 3s² configuration is relatively stable compared to Al (3s²3p¹).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-020",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: s- and p-block elements",
+      "difficulty": "medium",
+      "stem": "Which of the following oxides is amphoteric in nature?",
+      "options": [
+        "Na₂O",
+        "MgO",
+        "Al₂O₃",
+        "SO₃"
+      ],
+      "correct": 2,
+      "explanation": "Al₂O₃ is amphoteric — it can react with both acids (acting as a base) and bases (acting as an acid). Na₂O and MgO are basic, SO₃ is acidic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-021",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "easy",
+      "stem": "Which functional group is present in ethanol (C₂H₅OH)?",
+      "options": [
+        "Aldehyde",
+        "Ketone",
+        "Hydroxyl",
+        "Carboxyl"
+      ],
+      "correct": 2,
+      "explanation": "Ethanol contains the -OH (hydroxyl) functional group, which is characteristic of alcohols.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-022",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "medium",
+      "stem": "The IUPAC name of CH₃COCH₃ is:",
+      "options": [
+        "Acetone",
+        "Propanone",
+        "Propanal",
+        "Propanol"
+      ],
+      "correct": 1,
+      "explanation": "CH₃COCH₃ has 3 carbon atoms with a ketone (C=O) functional group, so its IUPAC name is propan-2-one or simply propanone. Acetone is its common name.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-023",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "easy",
+      "stem": "In methane (CH₄), the hybridization of carbon is:",
+      "options": [
+        "sp",
+        "sp²",
+        "sp³",
+        "dsp²"
+      ],
+      "correct": 2,
+      "explanation": "In CH₄, carbon forms four sigma bonds with no lone pairs, so its hybridization is sp³ with tetrahedral geometry.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-024",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "medium",
+      "stem": "Which type of isomerism is shown by butane and 2-methylpropane?",
+      "options": [
+        "Geometric isomerism",
+        "Chain isomerism",
+        "Optical isomerism",
+        "Functional isomerism"
+      ],
+      "correct": 1,
+      "explanation": "Butane (CH₃CH₂CH₂CH₃) and 2-methylpropane (CH₃CH(CH₃)CH₃) have the same molecular formula (C₄H₁₀) but different carbon chain arrangements, exhibiting chain isomerism.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-025",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "hard",
+      "stem": "In an electrophilic addition reaction, the reagent that attacks the alkene first is:",
+      "options": [
+        "Nucleophile",
+        "Electrophile",
+        "Free radical",
+        "Base"
+      ],
+      "correct": 1,
+      "explanation": "Alkenes are electron-rich due to their π-bond, so they are attacked by electrophiles (electron-seeking species) in the first step of electrophilic addition.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-026",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "medium",
+      "stem": "Which reagent is commonly used to oxidize a primary alcohol to an aldehyde?",
+      "options": [
+        "Alkaline KMnO₄",
+        "Acidified K₂Cr₂O₇",
+        "PCC (pyridinium chlorochromate)",
+        "NaBH₄"
+      ],
+      "correct": 2,
+      "explanation": "PCC is a mild oxidizing agent that oxidizes primary alcohols to aldehydes without further oxidizing them to carboxylic acids.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-027",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "easy",
+      "stem": "The general formula of alkanes is:",
+      "options": [
+        "CₙH₂ₙ",
+        "CₙH₂ₙ₊₂",
+        "CₙH₂ₙ₋₂",
+        "CₙH₂ₙ₊₁"
+      ],
+      "correct": 1,
+      "explanation": "Alkanes are saturated hydrocarbons with the general formula CₙH₂ₙ₊₂ (e.g., CH₄, C₂H₆, C₃H₈).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-028",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "medium",
+      "stem": "Vinegar contains which carboxylic acid?",
+      "options": [
+        "Citric acid",
+        "Tartaric acid",
+        "Acetic acid",
+        "Lactic acid"
+      ],
+      "correct": 2,
+      "explanation": "Vinegar is a dilute solution of acetic acid (CH₃COOH), typically 4-8% by volume.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-029",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "medium",
+      "stem": "Benzene undergoes which type of reactions more readily than addition reactions?",
+      "options": [
+        "Elimination",
+        "Substitution",
+        "Substitution (electrophilic aromatic)",
+        "Polymerization"
+      ],
+      "correct": 2,
+      "explanation": "Benzene's delocalized π-electron system makes it more stable and favors electrophilic aromatic substitution over addition reactions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    },
+    {
+      "id": "ecat-chem-030",
+      "section": "chemistry",
+      "topic": "Organic chemistry: hydrocarbons and functional groups",
+      "difficulty": "hard",
+      "stem": "Which of the following is a condensation polymer?",
+      "options": [
+        "Polyethene",
+        "Polystyrene",
+        "Nylon-6,6",
+        "Polyvinyl chloride (PVC)"
+      ],
+      "correct": 2,
+      "explanation": "Nylon-6,6 is formed by condensation polymerization between hexamethylenediamine and adipic acid, with elimination of water molecules. Polyethene, polystyrene, and PVC are addition polymers.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ecat.uet.edu.pk/"
+      ]
+    }
+  ]
+}

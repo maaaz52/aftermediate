@@ -1,0 +1,1268 @@
+{
+  "testId": "gmat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for the GMAT Focus Edition (GMAC). Quantitative: data sufficiency, algebra, word problems. Verbal: reading comprehension, critical reasoning. Data Insights: multi-source reasoning, table/graph analysis, two-part analysis. Not affiliated with GMAC.",
+    "sources": [
+      "https://mba.com/exams/gmat-focus-edition",
+      "https://gmacexperience.com"
+    ]
+  },
+  "durationMinutes": 135,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 64,
+    "note": "No negative marking (GMAT Focus Edition format, updated 2023). GMAT reports a 205-805 total score; your raw percentage here is a practice estimate."
+  },
+  "benchmarks": [
+    {
+      "label": "715+ (top 5 business schools) (2026)",
+      "percent": 90
+    },
+    {
+      "label": "655-695 (top 20 business schools) (2026)",
+      "percent": 80
+    },
+    {
+      "label": "555-605 (good MBA programmes) (2026)",
+      "percent": 65
+    }
+  ],
+  "sections": [
+    {
+      "id": "quantitative",
+      "name": "Quantitative Reasoning",
+      "questionCount": 21
+    },
+    {
+      "id": "verbal",
+      "name": "Verbal Reasoning",
+      "questionCount": 23
+    },
+    {
+      "id": "data-insights",
+      "name": "Data Insights",
+      "questionCount": 20
+    }
+  ],
+  "questions": [
+    {
+      "id": "gmat-quantitative-001",
+      "section": "quantitative",
+      "topic": "Problem Solving — percentages",
+      "difficulty": "easy",
+      "stem": "If a laptop costs $800 and the sales tax is 8%, what is the total price including tax?",
+      "options": [
+        "$832",
+        "$840",
+        "$864",
+        "$880"
+      ],
+      "correct": 2,
+      "explanation": "The total price is $800 × 1.08 = $864. Option A (832) is the result of adding 4% instead of 8%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-002",
+      "section": "quantitative",
+      "topic": "Problem Solving — algebra",
+      "difficulty": "easy",
+      "stem": "If 2x − 6 = 10, what is the value of x?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "Add 6 to both sides: 2x = 16. Divide by 2: x = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-003",
+      "section": "quantitative",
+      "topic": "Problem Solving — ratios",
+      "difficulty": "easy",
+      "stem": "A recipe requires 3 cups of flour for 12 cookies. How many cups of flour are needed for 36 cookies?",
+      "options": [
+        "6",
+        "9",
+        "12",
+        "18"
+      ],
+      "correct": 1,
+      "explanation": "36 cookies is 3 times 12, so the flour triples: 3 × 3 = 9 cups.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-004",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — equations",
+      "difficulty": "easy",
+      "stem": "What is the value of x? (1) x² = 49 (2) x > 0",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 2,
+      "explanation": "Statement (1) gives x = 7 or x = −7, so it is not sufficient alone. Statement (2) alone allows any positive number. Together, x = 7. Answer C: both statements together.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-005",
+      "section": "quantitative",
+      "topic": "Problem Solving — geometry",
+      "difficulty": "easy",
+      "stem": "What is the area of a triangle with base 10 and height 6?",
+      "options": [
+        "16",
+        "30",
+        "60",
+        "80"
+      ],
+      "correct": 1,
+      "explanation": "Area = ½ × base × height = ½ × 10 × 6 = 30. Option C (60) forgets the factor of ½.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-006",
+      "section": "quantitative",
+      "topic": "Problem Solving — ratio and proportion",
+      "difficulty": "easy",
+      "stem": "If the ratio of boys to girls in a class is 3:2 and there are 30 students, how many boys are in the class?",
+      "options": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "correct": 2,
+      "explanation": "Boys make up 3 out of every 5 students, so boys = (3/5) × 30 = 18. Option A (12) is the number of girls.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-007",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — inequalities",
+      "difficulty": "easy",
+      "stem": "Is x greater than 5? (1) x > 7 (2) x is an even integer",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 0,
+      "explanation": "Statement (1) alone answers 'yes' with certainty, since x > 7 implies x > 5. Statement (2) alone allows x = 2 or x = 8, so it is not sufficient. Answer A: statement (1) alone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-008",
+      "section": "quantitative",
+      "topic": "Problem Solving — successive percentages",
+      "difficulty": "medium",
+      "stem": "A store increases the price of an item by 20%, then reduces the new price by 20%. The final price is what percent of the original price?",
+      "options": [
+        "96%",
+        "100%",
+        "104%",
+        "120%"
+      ],
+      "correct": 0,
+      "explanation": "Let the original price be P. After the increase: 1.2P. After the decrease: 1.2P × 0.8 = 0.96P, which is 96% of the original. The changes do not cancel out because the 20% decrease applies to a larger base.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-009",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — simultaneous equations",
+      "difficulty": "medium",
+      "stem": "What is the value of x + y? (1) x − y = 4 (2) x² − y² = 32",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 2,
+      "explanation": "Statement (1) alone has infinitely many solutions. Statement (2) alone also leaves many possibilities. Together: x² − y² = (x − y)(x + y) = 4(x + y) = 32, so x + y = 8. Answer C: both statements together.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-010",
+      "section": "quantitative",
+      "topic": "Problem Solving — consecutive integers",
+      "difficulty": "medium",
+      "stem": "The sum of three consecutive even integers is 42. What is the largest of the three integers?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Let the integers be n, n + 2, and n + 4. Then 3n + 6 = 42, so n = 12. The largest is n + 4 = 16. Option A is the smallest.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-011",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — divisibility",
+      "difficulty": "medium",
+      "stem": "Is the integer m divisible by 6? (1) m is divisible by 3. (2) m is divisible by 2.",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 2,
+      "explanation": "Divisibility by 3 alone (e.g., m = 3) or by 2 alone (e.g., m = 2) is not enough. Together, a number divisible by both 3 and 2 is divisible by their least common multiple, 6. Answer C: both statements together.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-012",
+      "section": "quantitative",
+      "topic": "Problem Solving — coordinate geometry",
+      "difficulty": "medium",
+      "stem": "In the coordinate plane, what is the distance between the points (1, 2) and (4, 6)?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Distance = √((4 − 1)² + (6 − 2)²) = √(3² + 4²) = √25 = 5. This is the 3-4-5 triangle in distance form.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-013",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — geometry",
+      "difficulty": "medium",
+      "stem": "What is the area of a rectangle? (1) The perimeter of the rectangle is 24. (2) The length of the rectangle is twice its width.",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 2,
+      "explanation": "Statement (1) alone allows many rectangles with perimeter 24. Statement (2) alone fixes the shape but not the size. Together: 2(l + w) = 24 and l = 2w, so l + w = 12 and 3w = 12, giving w = 4, l = 8, area = 32. Answer C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-014",
+      "section": "quantitative",
+      "topic": "Problem Solving — averages",
+      "difficulty": "medium",
+      "stem": "The average (arithmetic mean) of 5 numbers is 18. If one of the numbers is 10, what is the average of the other four numbers?",
+      "options": [
+        "18",
+        "19",
+        "20",
+        "22"
+      ],
+      "correct": 2,
+      "explanation": "The total of all five numbers is 5 × 18 = 90. The other four sum to 90 − 10 = 80, so their average is 80 ÷ 4 = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-015",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — equations",
+      "difficulty": "medium",
+      "stem": "What is the value of x? (1) 3x = 21 (2) x² = 49",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 0,
+      "explanation": "Statement (1) alone gives x = 7 uniquely. Statement (2) alone gives x = 7 or x = −7, so it is not sufficient. Answer A: statement (1) alone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-016",
+      "section": "quantitative",
+      "topic": "Problem Solving — word problems",
+      "difficulty": "medium",
+      "stem": "A train travels 240 km at a constant speed in 3 hours. If it increases its speed by 20 km/h, how long will the same journey take?",
+      "options": [
+        "2 hours",
+        "2.4 hours",
+        "2.5 hours",
+        "3 hours"
+      ],
+      "correct": 1,
+      "explanation": "The original speed is 240 ÷ 3 = 80 km/h. The new speed is 100 km/h, so the time is 240 ÷ 100 = 2.4 hours.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-017",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — number properties",
+      "difficulty": "hard",
+      "stem": "What is the value of the positive integer p? (1) p is a two-digit number whose digits add to 9. (2) p is a multiple of 7.",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 2,
+      "explanation": "Statement (1) allows 18, 27, 36, 45, 54, 63, 72, 81, and 90. Statement (2) allows many multiples of 7. Together, the two-digit multiples of 7 with digit sum 9 are checked: 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98 — only 63 has digits summing to 9. Answer C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-018",
+      "section": "quantitative",
+      "topic": "Problem Solving — mixtures",
+      "difficulty": "hard",
+      "stem": "A mixture contains acid and water in the ratio 2:3. How many liters of pure acid must be added to 20 liters of the mixture to make the acid concentration 50%?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 2,
+      "explanation": "In 20 liters, acid = (2/5) × 20 = 8 L and water = 12 L. Adding a liters of acid: (8 + a) / (20 + a) = 0.5, so 8 + a = 10 + 0.5a and a = 4 liters.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-019",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — inequalities",
+      "difficulty": "hard",
+      "stem": "Is x < y? (1) x + y = 10 (2) x − y = 2",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 1,
+      "explanation": "Statement (1) alone allows x = 4, y = 6 (yes) or x = 6, y = 4 (no), so it is not sufficient. Statement (2) alone gives x = y + 2, so x > y — a definite 'no' answer, which is sufficient. Answer B: statement (2) alone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-020",
+      "section": "quantitative",
+      "topic": "Problem Solving — exponents",
+      "difficulty": "hard",
+      "stem": "If 2^x = 32 and y = 2x − 3, what is the value of y?",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "2^x = 32 = 2⁵, so x = 5. Then y = 2(5) − 3 = 7. Option A (5) is the value of x, not y.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-quantitative-021",
+      "section": "quantitative",
+      "topic": "Data Sufficiency — equations",
+      "difficulty": "hard",
+      "stem": "What is the value of x? (1) x + y = 10 (2) 2x = 14",
+      "options": [
+        "Statement (1) ALONE is sufficient, but statement (2) alone is not sufficient",
+        "Statement (2) ALONE is sufficient, but statement (1) alone is not sufficient",
+        "BOTH statements TOGETHER are sufficient, but NEITHER statement ALONE is sufficient",
+        "Statements (1) and (2) TOGETHER are NOT sufficient"
+      ],
+      "correct": 1,
+      "explanation": "Statement (1) alone has infinitely many solutions. Statement (2) alone gives 2x = 14, so x = 7 uniquely. Answer B: statement (2) alone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-001",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "easy",
+      "stem": "Passage: 'The sharing economy — platforms that let people rent out rooms, cars, and tools — has grown rapidly since 2010. Supporters argue that it puts underused assets to work and gives ordinary people income. Critics reply that it often operates outside the regulations that govern traditional businesses, and that the flexibility it offers comes without the protections of formal employment.' The passage presents the sharing economy as...",
+      "options": [
+        "a development with both supporters and critics",
+        "an unqualified success",
+        "a strictly regulated industry",
+        "a declining sector"
+      ],
+      "correct": 0,
+      "explanation": "The passage balances the supporters' claims against the critics' objections, so its presentation is balanced rather than one-sided. The other options describe positions the passage does not take.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-002",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "easy",
+      "stem": "Passage: 'Coffee was first cultivated in Ethiopia, but it was in the coffeehouses of seventeenth-century Europe that it reshaped public life. For the price of a cup, anyone could sit, read the newspapers, and argue politics with strangers — an environment one historian called the seedbed of the Enlightenment.' The passage implies that European coffeehouses...",
+      "options": [
+        "were restricted to the wealthy",
+        "encouraged open discussion among ordinary people",
+        "were mainly places of quiet study",
+        "disappeared by the eighteenth century"
+      ],
+      "correct": 1,
+      "explanation": "'Anyone could sit... and argue politics with strangers' implies an open, egalitarian forum for discussion. Option A contradicts the passage, and C and D are unsupported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-003",
+      "section": "verbal",
+      "topic": "Critical Reasoning — strengthen",
+      "difficulty": "easy",
+      "stem": "Argument: 'Studies show that employees who take short breaks during the workday report higher job satisfaction. Therefore, companies should encourage frequent breaks to improve employee morale.' Which of the following, if true, most strengthens the argument?",
+      "options": [
+        "Employees who take breaks also tend to be more productive",
+        "Some employees prefer to work straight through",
+        "Break policies vary widely between industries",
+        "Job satisfaction is difficult to measure"
+      ],
+      "correct": 0,
+      "explanation": "If breaks also raise productivity, the case for encouraging them strengthens further. Option B is neutral, C is irrelevant, and D could weaken the argument's basis.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-004",
+      "section": "verbal",
+      "topic": "Reading Comprehension — detail",
+      "difficulty": "easy",
+      "stem": "Passage: 'In 1969, two American astronauts walked on the Moon. The Apollo program that carried them there was a product of the Cold War: the United States and the Soviet Union competed for prestige in space. When the race was won, public interest waned, and funding for crewed exploration declined sharply.' According to the passage, the Apollo program was motivated primarily by...",
+      "options": [
+        "scientific curiosity about the Moon",
+        "competition with the Soviet Union",
+        "commercial opportunities in space",
+        "the personal ambition of the astronauts"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that Apollo 'was a product of the Cold War' and that the two superpowers competed for prestige — competition with the Soviet Union is the stated motivation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-005",
+      "section": "verbal",
+      "topic": "Critical Reasoning — assumption",
+      "difficulty": "easy",
+      "stem": "Argument: 'The city should plant more trees along its main boulevards because trees reduce street temperatures in summer, which will make the city more comfortable and cut air-conditioning costs.' Which of the following is an assumption on which the argument depends?",
+      "options": [
+        "Trees planted along boulevards will survive and grow",
+        "Air-conditioning costs are the city's largest expense",
+        "The boulevards are currently empty",
+        "Summer temperatures are lower than in the past"
+      ],
+      "correct": 0,
+      "explanation": "The argument assumes the planted trees will actually thrive and provide shade. Options B, C, and D are not required for the argument's logic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-006",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "easy",
+      "stem": "Passage: 'Ocean currents carry heat from the tropics toward the poles, moderating climate worldwide. The Gulf Stream, for example, keeps western Europe several degrees warmer than regions at the same latitude. If the current slowed, as some climate models project, winters in Europe could become significantly colder.' Which of the following best describes the main point of the passage?",
+      "options": [
+        "Ocean currents significantly influence regional climate",
+        "The Gulf Stream is the only warm current in the Atlantic",
+        "Climate models always predict colder winters",
+        "Europe will certainly experience an ice age"
+      ],
+      "correct": 0,
+      "explanation": "The passage uses the Gulf Stream to show how currents moderate regional climate and notes the consequences if it slowed. The other choices overstate or misstate the claims.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-007",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "easy",
+      "stem": "Argument: 'A food delivery company found that customers who received a free dessert with their order rated the service higher. Therefore, giving free desserts to all customers will increase overall customer satisfaction.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Customers who received free desserts were already loyal customers who rate the service highly regardless",
+        "The free desserts were popular with most customers",
+        "Delivery times were similar for both groups",
+        "The company surveyed 10,000 customers"
+      ],
+      "correct": 0,
+      "explanation": "If the dessert recipients were already inclined to rate highly, the dessert may not be the cause of the higher ratings — a selection effect. Options B, C, and D support the study's reliability.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-008",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "easy",
+      "stem": "Argument: 'The new airport security screening slowed average wait times by 10 minutes, yet the number of passengers who missed flights did not increase. Therefore, the slower screening has not harmed travelers.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Travelers began arriving at the airport earlier to compensate",
+        "Wait times were measured only at peak hours",
+        "Security staff received extra training",
+        "Missed flights were already rare before the change"
+      ],
+      "correct": 0,
+      "explanation": "If passengers adjusted by arriving earlier, the unchanged number of missed flights does not show the screening caused no harm — the cost was simply shifted onto travelers' time. The other options are neutral or support the conclusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-009",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "medium",
+      "stem": "Passage: 'Microfinance — small loans to low-income borrowers — was once hailed as a cure for poverty. Early studies in Bangladesh reported dramatic gains in income and schooling. Later, more rigorous randomized trials in several countries found more modest effects: borrowing helped some households smooth consumption and expand tiny businesses, but it did not, on average, lift families out of poverty. The lesson, researchers concluded, is not that microfinance fails but that no single tool transforms complex economies.' The passage's main conclusion is that...",
+      "options": [
+        "microfinance is a complete solution to poverty",
+        "microfinance has modest but real benefits and is not a cure-all",
+        "randomized trials are always wrong",
+        "borrowing harms poor households"
+      ],
+      "correct": 1,
+      "explanation": "The passage concludes that microfinance helps in limited ways but is no single cure for poverty. Options A, C, and D contradict or distort the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-010",
+      "section": "verbal",
+      "topic": "Critical Reasoning — assumption",
+      "difficulty": "medium",
+      "stem": "Argument: 'Surveys show that graduates of online MBA programs earn on average the same salaries as graduates of in-person programs. Since salary is the most important measure of program quality, online MBA programs are just as good as in-person programs.' Which of the following is an assumption on which the argument depends?",
+      "options": [
+        "Differences in salary between individuals are explained entirely by the programs they attended",
+        "Online programs cost less to operate",
+        "Graduates of both types of program work in the same industries",
+        "Employers prefer hiring in-person graduates"
+      ],
+      "correct": 0,
+      "explanation": "The argument assumes salary reflects program quality and that nothing else explains the comparison. Option C, if anything, would raise questions about comparability; B and D are irrelevant or contrary.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-011",
+      "section": "verbal",
+      "topic": "Reading Comprehension — strengthen",
+      "difficulty": "medium",
+      "stem": "Passage: 'In 1918, a strain of influenza killed tens of millions of people worldwide. The virus was unusually deadly for young adults, a pattern that puzzled scientists for decades. Recent research suggests an explanation: those aged 20–40 had been exposed in childhood to a flu strain whose surface proteins were similar enough to provoke a strong but misdirected immune response, while older adults carried protective antibodies from an earlier, more distant epidemic.' Which of the following, if true, would most strengthen the explanation offered in the passage?",
+      "options": [
+        "People born before 1889 had lower death rates from the 1918 flu",
+        "Young children also had very high death rates in 1918",
+        "The 1918 virus spread more slowly than modern flu viruses",
+        "Antibiotics were unavailable in 1918"
+      ],
+      "correct": 0,
+      "explanation": "The explanation predicts that those with older, unrelated childhood exposures were protected — a lower death rate among those born before 1889 supports it. Option B does not follow from the mechanism described, and C and D are irrelevant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-012",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "medium",
+      "stem": "Argument: 'A furniture chain replaced its sales-commission system with fixed salaries and found that customer satisfaction scores rose. Therefore, the chain should eliminate commissions at all of its stores to improve customer service.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "The chain also launched a customer feedback app at the same time",
+        "Commission-based stores had higher sales per employee",
+        "Fixed salaries increased the store's labor costs",
+        "Other retailers still use commissions"
+      ],
+      "correct": 0,
+      "explanation": "The simultaneous feedback app is an alternative cause of the satisfaction rise, weakening the causal claim. Option B concerns sales, not satisfaction; C is about costs; D is irrelevant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-013",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "medium",
+      "stem": "Passage: 'The terms used to describe people who move across borders reveal the assumptions behind them. \"Expatriate\" carries a hint of privilege, suggesting a professional who moved by choice. \"Refugee\" is a legal category with specific protections. \"Economic migrant\" is often used dismissively, implying that the search for work is less legitimate than flight from persecution — although hunger can be as coercive as any war.' The author's attitude toward the term 'economic migrant' is best described as...",
+      "options": [
+        "approving",
+        "critical",
+        "neutral",
+        "admiring"
+      ],
+      "correct": 1,
+      "explanation": "The author notes the term is 'often used dismissively' and argues that economic need can be as coercive as war — a critical stance toward the term's implications. The other options misdescribe the attitude.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-014",
+      "section": "verbal",
+      "topic": "Critical Reasoning — strengthen",
+      "difficulty": "medium",
+      "stem": "Argument: 'Since the toll was introduced, traffic on the bridge has fallen by 25 percent. The toll is therefore an effective way to reduce traffic in the city.' Which of the following, if true, most strengthens the argument?",
+      "options": [
+        "Traffic on other city bridges has increased by 25 percent",
+        "The toll applies only during peak hours",
+        "Traffic fell most during the hours when the toll is charged",
+        "The toll was reduced after its first year"
+      ],
+      "correct": 2,
+      "explanation": "If traffic fell most during tolled hours, the toll is most likely the cause. Option A would weaken the argument by suggesting the traffic was simply rerouted to other bridges.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-015",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "medium",
+      "stem": "Passage: 'Seagrass meadows store carbon in their roots and sediments at rates comparable to forests on land. Unlike trees, seagrasses do not burn in wildfires, and their carbon can remain locked in seafloor sediments for centuries. Coastal development and dredging, however, can disturb these sediments and release stored carbon back into the atmosphere.' The passage implies that preserving seagrass meadows may be valuable mainly because...",
+      "options": [
+        "they provide long-term carbon storage",
+        "they are the most common marine plant",
+        "they burn less easily than forests",
+        "they support the fishing industry"
+      ],
+      "correct": 0,
+      "explanation": "The passage emphasizes that seagrass sediments hold carbon for centuries and that disturbance releases it — implying their preservation value lies in long-term carbon storage. The other options are not supported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-016",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "medium",
+      "stem": "Argument: 'All employees at the company are required to complete a cybersecurity course. Employees who complete the course are significantly less likely to fall for phishing emails. Therefore, the course is responsible for the reduced susceptibility.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Employees who complete the course were already less likely to click phishing links before taking it",
+        "The course takes only one hour to complete",
+        "Phishing emails have become easier to spot in recent years",
+        "The company tests employees annually"
+      ],
+      "correct": 0,
+      "explanation": "If the reduced susceptibility predated the course, the course may not be the cause — a selection effect. Option C offers an alternative cause but only for recent years, while A directly attacks the causal claim.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-017",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "medium",
+      "stem": "Argument: 'A city banned plastic bags in grocery stores, and the amount of plastic waste sent to landfill fell by 8 percent within a year. Therefore, the ban successfully reduced plastic waste.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Residents increased their use of plastic packaging bags for household trash, offsetting the reduction",
+        "Recycling rates in the city were already high",
+        "The ban was popular with shoppers",
+        "Paper bag use increased slightly"
+      ],
+      "correct": 0,
+      "explanation": "If plastic bag use simply shifted to other plastic bags, total plastic waste may not have fallen — weakening the conclusion. Options B and C are neutral or positive, and D concerns paper, not plastic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-018",
+      "section": "verbal",
+      "topic": "Critical Reasoning — assumption",
+      "difficulty": "hard",
+      "stem": "Argument: 'The museum's new late-night opening has attracted more visitors than expected. Since attendance is the museum's main source of revenue, the late-night opening will improve the museum's finances.' Which of the following is an assumption on which the argument depends?",
+      "options": [
+        "The additional visitors are not being drawn from daytime hours that already paid admission",
+        "The museum has enough staff to stay open late",
+        "Other museums in the city also have late-night openings",
+        "Attendance has been declining for several years"
+      ],
+      "correct": 0,
+      "explanation": "The argument assumes the extra evening attendance adds revenue rather than simply shifting daytime visitors to a different time slot. Options B and C are about feasibility and context, not the financial logic; D is irrelevant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-019",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "hard",
+      "stem": "Passage: 'The so-called Dutch tulip mania of the 1630s is often told as a cautionary tale of financial frenzy: at its peak, a single tulip bulb allegedly sold for more than a house. Recent scholarship has complicated the story. The famous prices come from a few rare, virus-struck bulbs traded among a small circle of wealthy connoisseurs, not the broad market; and the crash, while real, did not ruin the Dutch economy, which continued to grow. The episode, in this view, was less a national mania than a localized speculative bubble.' The author's main point is that the tulip mania...",
+      "options": [
+        "was the worst financial crisis in Dutch history",
+        "is often exaggerated and misunderstood",
+        "affected the entire European economy",
+        "was caused by a tulip virus"
+      ],
+      "correct": 1,
+      "explanation": "The passage argues that the mania's famous prices and ruinous effects have been exaggerated, and that it was a localized bubble rather than a national frenzy. The other options contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-020",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "hard",
+      "stem": "Argument: 'A restaurant added calorie counts to its menu, and average calories ordered per customer fell by 12 percent. The calorie labeling therefore caused customers to choose healthier meals.' Which of the following, if true, most seriously weakens the argument?",
+      "options": [
+        "The restaurant also replaced its largest portion sizes with smaller ones at the same time",
+        "Calorie counts were already printed on the restaurant's website",
+        "Other restaurants in the city added calorie labels too",
+        "Customers reported that the labels were easy to read"
+      ],
+      "correct": 0,
+      "explanation": "The simultaneous portion-size change is an alternative cause of the calorie reduction, weakening the claim that labeling itself caused the change. The other options do not provide an alternative explanation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-021",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "hard",
+      "stem": "Passage: 'A firm's culture is often described as the values its employees share, but anthropologists who study organizations point out that culture is better understood as practice: what people actually do, day to day, rather than what mission statements say. A company can proclaim innovation while its routines punish risk-taking. Discrepancies between stated values and daily practice are not hypocrisy so much as the normal texture of organizational life.' The passage suggests that the stated values of an organization...",
+      "options": [
+        "always match employees' daily behavior",
+        "may differ from the organization's actual routines",
+        "are more important than any practice",
+        "cannot be changed"
+      ],
+      "correct": 1,
+      "explanation": "The passage's central claim is that stated values and daily practice frequently diverge — a company can proclaim innovation while its routines discourage risk. The other options contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-022",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken",
+      "difficulty": "hard",
+      "stem": "Argument: 'The government subsidized solar panel installation for homeowners, and residential electricity use fell by 10 percent over two years. Since the subsidy caused homeowners to use less electricity, the program should be expanded.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Electricity prices also rose sharply during the same period",
+        "The program was popular with homeowners",
+        "Solar panel costs fell during the same period",
+        "The subsidies were funded by a tax on electricity use"
+      ],
+      "correct": 0,
+      "explanation": "Rising electricity prices are an alternative cause of conservation, weakening the claim that the subsidy caused the reduction. Options B and C are neutral or supportive, and D concerns funding, not causation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-verbal-023",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "hard",
+      "stem": "Passage: 'Bats use echolocation — emitting high-frequency calls and reading the returning echoes — to navigate in darkness. The system is remarkably precise: some species can detect wires thinner than a human hair. Yet echolocation has limits: it works poorly over long distances, and some prey, such as certain moths, have evolved ears tuned to bat calls and can dodge approaching hunters. The bat–moth arms race illustrates how sensory systems shape, and are shaped by, competition between species.' The passage suggests that the moth's ability to hear bat calls is an example of...",
+      "options": [
+        "an evolutionary response to a predator's sensory system",
+        "a disadvantage caused by echolocation",
+        "a behavior learned from other moths",
+        "a random genetic mutation with no function"
+      ],
+      "correct": 0,
+      "explanation": "The passage frames the bat–moth interaction as an arms race in which each species' sensory system responds to the other's — an evolutionary response. The other options mischaracterize the example.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-001",
+      "section": "data-insights",
+      "topic": "Multi-Source Reasoning — email and reply",
+      "difficulty": "easy",
+      "stem": "Tab 1 (Email): 'All interns must submit their timesheets to HR by Friday at 5 p.m. Late submissions will not be processed until the following week.' Tab 2 (Intern's reply): 'I submitted my timesheet on Thursday afternoon.' Based on the two tabs, which of the following can be concluded?",
+      "options": [
+        "The intern's timesheet will be processed that same week",
+        "The intern's submission will not be processed until next week",
+        "The intern submitted the timesheet after the deadline",
+        "The intern did not submit a timesheet at all"
+      ],
+      "correct": 0,
+      "explanation": "Thursday afternoon is before the Friday 5 p.m. deadline, so the submission is on time and will be processed that same week. The other options contradict the tabs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-002",
+      "section": "data-insights",
+      "topic": "Table Analysis — sorting",
+      "difficulty": "easy",
+      "stem": "Table: 'Annual sales by region (in $ thousands): North 420; South 310; East 380; West 350.' If the table is sorted in descending order of sales, which region appears second?",
+      "options": [
+        "North",
+        "South",
+        "East",
+        "West"
+      ],
+      "correct": 2,
+      "explanation": "Descending order: North (420), East (380), West (350), South (310). East appears second.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-003",
+      "section": "data-insights",
+      "topic": "Graphics Interpretation — bar chart",
+      "difficulty": "easy",
+      "stem": "Bar chart: 'Coffee sales at a campus café across five days: Monday 120 cups, Tuesday 90, Wednesday 110, Thursday 95, Friday 150.' Approximately what was the average number of cups sold per day?",
+      "options": [
+        "100",
+        "113",
+        "120",
+        "150"
+      ],
+      "correct": 1,
+      "explanation": "Total sales = 120 + 90 + 110 + 95 + 150 = 565 cups. Average = 565 ÷ 5 = 113 cups per day.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-004",
+      "section": "data-insights",
+      "topic": "Two-Part Analysis — products and revenue",
+      "difficulty": "easy",
+      "stem": "A company produces two products, A and B. Product A sells for $10 and Product B sells for $15. Last month the company sold 100 units in total, and revenue was $1,200. Select the number of units of A and the number of units of B sold last month.",
+      "options": [
+        "A: 40, B: 60",
+        "A: 50, B: 50",
+        "A: 60, B: 40",
+        "A: 70, B: 30"
+      ],
+      "correct": 2,
+      "explanation": "Let a = units of A and b = units of B. Then a + b = 100 and 10a + 15b = 1,200. Substituting b = 100 − a: 10a + 1,500 − 15a = 1,200, so a = 60 and b = 40.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-005",
+      "section": "data-insights",
+      "topic": "Multi-Source Reasoning — schedule and policy",
+      "difficulty": "easy",
+      "stem": "Tab 1 (Flight schedule): 'Flight 203 departs at 9:15 a.m. and arrives at 11:45 a.m.' Tab 2 (Hotel policy): 'Check-in begins at 2:00 p.m.; early check-in is available only with 48-hour notice.' The traveler books the flight and calls the hotel two days before departure to request early check-in. What can be concluded?",
+      "options": [
+        "The traveler will not arrive in time for standard check-in",
+        "The traveler qualifies for early check-in",
+        "The traveler's flight arrives after 2 p.m.",
+        "The hotel cannot accommodate the traveler at all"
+      ],
+      "correct": 1,
+      "explanation": "The flight arrives at 11:45 a.m., before the 2:00 p.m. check-in, and the traveler called two days (48 hours) in advance, satisfying the early check-in condition. The other options contradict the tabs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-006",
+      "section": "data-insights",
+      "topic": "Graphics Interpretation — line graph",
+      "difficulty": "easy",
+      "stem": "Line graph: 'Monthly revenue of a startup, January to June: $10k, $15k, $12k, $18k, $22k, $20k.' Between which two consecutive months was the greatest increase in revenue?",
+      "options": [
+        "January to February",
+        "March to April",
+        "April to May",
+        "May to June"
+      ],
+      "correct": 1,
+      "explanation": "Changes: Jan–Feb +$5k, Feb–Mar −$3k, Mar–Apr +$6k, Apr–May +$4k, May–Jun −$2k. The greatest increase is March to April (+$6k).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-007",
+      "section": "data-insights",
+      "topic": "Table Analysis — direct lookup",
+      "difficulty": "easy",
+      "stem": "Table: 'Employee attendance (days present out of 20): Ali 18, Sara 20, Bilal 15, Ayesha 17.' Which employee had perfect attendance?",
+      "options": [
+        "Ali",
+        "Sara",
+        "Bilal",
+        "Ayesha"
+      ],
+      "correct": 1,
+      "explanation": "Sara is the only employee present all 20 days. Ali missed 2, Bilal missed 5, and Ayesha missed 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-008",
+      "section": "data-insights",
+      "topic": "Two-Part Analysis — cup sizes",
+      "difficulty": "medium",
+      "stem": "A coffee shop sells small (250 ml) and large (400 ml) cups. Yesterday it served 120 cups in total, and the total volume served was 36,000 ml. Select the number of small cups and the number of large cups served.",
+      "options": [
+        "Small 40, Large 80",
+        "Small 50, Large 70",
+        "Small 60, Large 60",
+        "Small 80, Large 40"
+      ],
+      "correct": 3,
+      "explanation": "Let s = small cups and l = large cups. Then s + l = 120 and 250s + 400l = 36,000. Substituting l = 120 − s: 250s + 48,000 − 400s = 36,000, so s = 80 and l = 40.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-009",
+      "section": "data-insights",
+      "topic": "Multi-Source Reasoning — data extraction",
+      "difficulty": "medium",
+      "stem": "Tab 1 (Manufacturer): 'Our printer consumes 10 ml of ink per 100 pages.' Tab 2 (Office manager): 'We printed 15,000 pages last quarter and paid $180 for ink cartridges at $30 each.' How many cartridges did the office use last quarter?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "$180 ÷ $30 = 6 cartridges. The ink consumption rate is a distractor — the purchase record already tells us the number of cartridges bought.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-010",
+      "section": "data-insights",
+      "topic": "Graphics Interpretation — pie chart",
+      "difficulty": "medium",
+      "stem": "Pie chart: 'A household's monthly budget: Housing 35%, Food 20%, Transport 15%, Utilities 10%, Other 20%.' If the household's monthly income is $3,000, how much is spent on Housing and Food combined?",
+      "options": [
+        "$1,050",
+        "$1,350",
+        "$1,650",
+        "$2,000"
+      ],
+      "correct": 2,
+      "explanation": "Housing and Food together are 35% + 20% = 55% of the budget. 55% of $3,000 = $1,650. Option A is Housing alone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-011",
+      "section": "data-insights",
+      "topic": "Table Analysis — comparison",
+      "difficulty": "medium",
+      "stem": "Table: 'Scores on two tests: Test 1, Test 2. Ali 82, 78; Sara 74, 88; Bilal 90, 80; Ayesha 68, 86.' Which student improved most from Test 1 to Test 2?",
+      "options": [
+        "Ali",
+        "Sara",
+        "Bilal",
+        "Ayesha"
+      ],
+      "correct": 3,
+      "explanation": "Changes: Ali −4, Sara +14, Bilal −10, Ayesha +18. Ayesha improved the most, by 18 points.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-012",
+      "section": "data-insights",
+      "topic": "Two-Part Analysis — tickets",
+      "difficulty": "medium",
+      "stem": "A bus company offers two ticket types: standard ($2) and premium ($3). On Monday it sold 200 tickets for total revenue of $480. Select the number of standard tickets and the number of premium tickets sold.",
+      "options": [
+        "Standard 100, Premium 100",
+        "Standard 120, Premium 80",
+        "Standard 140, Premium 60",
+        "Standard 160, Premium 40"
+      ],
+      "correct": 1,
+      "explanation": "Let s = standard and p = premium. Then s + p = 200 and 2s + 3p = 480. Substituting p = 200 − s: 2s + 600 − 3s = 480, so s = 120 and p = 80.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-013",
+      "section": "data-insights",
+      "topic": "Multi-Source Reasoning — policy and record",
+      "difficulty": "medium",
+      "stem": "Tab 1 (Policy): 'Returns are accepted within 30 days of purchase with a receipt.' Tab 2 (Customer record): 'Item purchased January 15. Customer contacts the store on February 10 and states the receipt was lost.' Based on the two tabs, what can be concluded?",
+      "options": [
+        "The customer is within the return window but lacks the required receipt",
+        "The customer can return the item without a receipt",
+        "The item cannot be returned because the window has passed",
+        "The customer never purchased the item"
+      ],
+      "correct": 0,
+      "explanation": "January 15 to February 10 is 26 days, within the 30-day window, but the policy requires a receipt, which the customer lost. Option B contradicts the policy, and C is wrong on timing.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-014",
+      "section": "data-insights",
+      "topic": "Graphics Interpretation — scatter plot",
+      "difficulty": "medium",
+      "stem": "Scatter plot: 'The graph plots 10 students' study hours (x-axis) against exam scores (y-axis). Most points trend upward from left to right.' Which conclusion is best supported by the graph?",
+      "options": [
+        "More study hours are associated with higher scores",
+        "Study hours guarantee a score above 90",
+        "Scores are unrelated to study hours",
+        "Students who studied less scored higher"
+      ],
+      "correct": 0,
+      "explanation": "An upward trend indicates a positive association between study hours and exam scores. Options B, C, and D overstate or contradict what a trend line shows.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-015",
+      "section": "data-insights",
+      "topic": "Table Analysis — percentages",
+      "difficulty": "medium",
+      "stem": "Table: 'Inventory: Product, Units in stock, Units sold this week. Laptops 50, 12; Phones 80, 20; Tablets 30, 9; Headphones 120, 24.' Which product sold the largest percentage of its stock this week?",
+      "options": [
+        "Laptops",
+        "Phones",
+        "Tablets",
+        "Headphones"
+      ],
+      "correct": 2,
+      "explanation": "Percentages sold: Laptops 12/50 = 24%, Phones 20/80 = 25%, Tablets 9/30 = 30%, Headphones 24/120 = 20%. Tablets sold the largest percentage of stock.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-016",
+      "section": "data-insights",
+      "topic": "Two-Part Analysis — interest",
+      "difficulty": "hard",
+      "stem": "An investment of $10,000 is split between two accounts: Account X pays 4% simple annual interest and Account Y pays 6% simple annual interest. After one year, the total interest earned is $520. Select the amount invested in Account X and the amount invested in Account Y.",
+      "options": [
+        "X $6,000, Y $4,000",
+        "X $5,000, Y $5,000",
+        "X $4,000, Y $6,000",
+        "X $8,000, Y $2,000"
+      ],
+      "correct": 2,
+      "explanation": "Let x = amount in X. Interest: 0.04x + 0.06(10,000 − x) = 520, so 600 − 0.02x = 520, giving x = 4,000 in X and 6,000 in Y.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-017",
+      "section": "data-insights",
+      "topic": "Multi-Source Reasoning — financial report",
+      "difficulty": "hard",
+      "stem": "Tab 1 (Financial report): 'Company revenue: 2023 $40M, 2024 $52M. Net profit margin: 2023 10%, 2024 12%.' Tab 2 (Analyst note): 'The company attributes 2024 growth to a new subscription product launched in January 2024.' What was the net profit in 2024?",
+      "options": [
+        "$4.0M",
+        "$5.2M",
+        "$6.24M",
+        "$10.4M"
+      ],
+      "correct": 2,
+      "explanation": "Net profit = margin × revenue = 12% × $52M = $6.24M. Option A is the 2023 profit, and D is 20% of revenue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-018",
+      "section": "data-insights",
+      "topic": "Graphics Interpretation — bar chart and target",
+      "difficulty": "hard",
+      "stem": "Bar chart: 'Unit sales by quarter: Q1 200, Q2 320, Q3 280, Q4 400.' The company's target was 300 units per quarter. In how many quarters did the company meet or exceed its target?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "Q2 (320) and Q4 (400) met or exceeded the 300-unit target; Q1 (200) and Q3 (280) fell short. That is 2 quarters.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-019",
+      "section": "data-insights",
+      "topic": "Table Analysis — filtering",
+      "difficulty": "hard",
+      "stem": "Table: 'Employee, Department, Salary, Years of service: Ali Sales $50k 2; Sara Sales $60k 5; Bilal IT $70k 4; Ayesha IT $65k 8.' The company is selecting the employee with the highest salary among those with at least 3 years of service. Which employee is selected?",
+      "options": [
+        "Ali",
+        "Sara",
+        "Bilal",
+        "Ayesha"
+      ],
+      "correct": 2,
+      "explanation": "Ali has only 2 years of service and is excluded. Among the eligible employees, Bilal has the highest salary ($70k), ahead of Sara ($60k) and Ayesha ($65k).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    },
+    {
+      "id": "gmat-data-insights-020",
+      "section": "data-insights",
+      "topic": "Two-Part Analysis — pricing",
+      "difficulty": "hard",
+      "stem": "A delivery company charges a base fee plus a per-kilometer rate. A 10 km delivery costs $14, and a 25 km delivery costs $29. Select the base fee and the per-kilometer rate.",
+      "options": [
+        "Base $4, rate $1.00",
+        "Base $5, rate $0.90",
+        "Base $6, rate $0.80",
+        "Base $9, rate $0.50"
+      ],
+      "correct": 0,
+      "explanation": "Let b = base fee and r = rate per km. Then b + 10r = 14 and b + 25r = 29. Subtracting: 15r = 15, so r = $1.00 and b = $4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://mba.com/exams/gmat-focus-edition"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+# =============================================================================
+# fetch-webinars.yml — Weekly Webinar Data Refresh
+# =============================================================================
+#
+# Runs scripts/fetch-webinars.ts every Sunday at midnight PKT (19:00 UTC
+# Saturday in winter, 19:00 UTC Sunday in summer; we use 19:00 UTC Sunday
+# for consistency).
+#
+# If the scraper produces changes to src/data/webinars.json, the action
+# commits them directly to the default branch (or opens a PR if you prefer
+# review — uncomment the PR section below).
+#
+# Prerequisites:
+#   - cheerio is listed in devDependencies (already installed)
+#   - tsx is listed in devDependencies (already installed)
+#   - GITHUB_TOKEN has write access to the repo (automatic for default token)
+#
+# =============================================================================
+
+name: Fetch Webinars
+
+on:
+  schedule:
+    # Sunday 19:00 UTC ≈ midnight PKT (UTC+5)
+    - cron: "0 19 * * 0"
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Required so the action can commit back
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Run webinar fetcher
+        run: npx tsx scripts/fetch-webinars.ts
+        env:
+          # The script uses native fetch — no extra deps needed
+          NODE_NO_WARNINGS: "1"
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if ! git diff --quiet -- src/data/webinars.json; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "aftermediate-bot"
+          git config user.email "bot@aftermediate.com"
+          git add src/data/webinars.json
+          git commit -m "chore: auto-update webinars data [skip ci]"
+          git push
+
+      # Alternative: Open a PR instead of committing directly
+      # Uncomment the block below and comment out the "Commit and push" step
+      # if you prefer a human review gate.
+      #
+      # - name: Create Pull Request
+      #   if: steps.git-check.outputs.changed == 'true'
+      #   uses: peter-evans/create-pull-request@v7
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     commit-message: "chore: auto-update webinars data [skip ci]"
+      #     title: "chore: auto-update webinars data"
+      #     body: |
+      #       Automated update from the weekly webinar scraper.
+      #
+      #       Sources: British Council, HEC, USEFP, DAAD, P@SHA, IDP IELTS
+      #     branch: auto/webinars-update
+      #     delete-branch: true
+      #     labels: automation

@@ -1,0 +1,807 @@
+{
+  "testId": "pte",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for PTE Academic (Pearson). Reading: fill in the blanks, multiple choice, re-order paragraphs. Listening: summarise spoken text, multiple choice, fill in the blanks, select missing word. Speaking and Writing sections are not auto-graded — they require open response. Not affiliated with Pearson.",
+    "sources": [
+      "https://pearsonpte.com",
+      "https://pearsonpte.com/the-test/format"
+    ]
+  },
+  "durationMinutes": 60,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 40,
+    "note": "No negative marking. PTE reports 10-90 overall score. Your percentage here is an approximation of Reading + Listening readiness."
+  },
+  "benchmarks": [
+    {
+      "label": "79+ (equivalent to IELTS 7.5 / CEFR C1) (2026)",
+      "percent": 85
+    },
+    {
+      "label": "65-78 (equivalent to IELTS 7.0 / CEFR B2) (2026)",
+      "percent": 72
+    },
+    {
+      "label": "50-64 (equivalent to IELTS 6.0 / CEFR B2) (2026)",
+      "percent": 58
+    }
+  ],
+  "sections": [
+    {
+      "id": "reading",
+      "name": "Reading",
+      "questionCount": 20
+    },
+    {
+      "id": "listening",
+      "name": "Listening",
+      "questionCount": 20
+    }
+  ],
+  "questions": [
+    {
+      "id": "pte-reading-001",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'The company's quarterly profits ___ significantly after the launch of its new product line.'",
+      "options": [
+        "increased",
+        "increasing",
+        "increase",
+        "to increase"
+      ],
+      "correct": 0,
+      "explanation": "The sentence requires a past-tense verb to match the past context ('after the launch'). 'Increased' is the correct simple past form.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-002",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'The discovery was considered a major ___ in the field of medical research.'",
+      "options": [
+        "breakthrough",
+        "breakup",
+        "breakdown",
+        "breakout"
+      ],
+      "correct": 0,
+      "explanation": "'Breakthrough' means a significant advance or discovery, which fits the context of a major medical research achievement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-003",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "easy",
+      "stem": "Text: 'Despite its small size, the country of Singapore has one of the world's most developed economies. Its strategic location at the crossroads of major shipping routes has made it a vital hub for international trade. The government's focus on education and technology has further solidified its position as a global financial center.' What is the main reason for Singapore's economic success according to the text?",
+      "options": [
+        "Its large agricultural sector",
+        "Its strategic location for trade and investment in education and technology",
+        "Its abundant natural resources",
+        "Its high population growth"
+      ],
+      "correct": 1,
+      "explanation": "The text identifies Singapore's strategic location for shipping routes and its government's focus on education and technology as key factors. The other options are not mentioned in the text.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-004",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "easy",
+      "stem": "Text: 'The Great Barrier Reef is the largest living structure on Earth, stretching over 2,300 kilometers. It is composed of billions of tiny organisms called coral polyps. The reef supports an extraordinary diversity of marine life and is visible from space.' According to the text, what makes the Great Barrier Reef unique?",
+      "options": [
+        "It is the deepest structure in the ocean",
+        "It is the largest living structure on Earth, made of coral polyps",
+        "It is located entirely in the Pacific Ocean",
+        "It was created by human construction"
+      ],
+      "correct": 1,
+      "explanation": "The text states the reef is 'the largest living structure on Earth' composed of coral polyps. The other options are not supported by the text.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-005",
+      "section": "reading",
+      "topic": "Re-order paragraphs",
+      "difficulty": "easy",
+      "stem": "The following sentences are from a paragraph about the water cycle. What is the correct order?\n1. This vapor rises into the atmosphere, where it cools and condenses into clouds.\n2. Eventually, the water falls back to the Earth's surface as precipitation.\n3. The water cycle begins when the sun's heat causes water from oceans and lakes to evaporate.\n4. From the ground, the water eventually flows back into rivers and oceans, starting the cycle anew.",
+      "options": [
+        "3, 1, 2, 4",
+        "1, 3, 2, 4",
+        "3, 2, 1, 4",
+        "2, 3, 1, 4"
+      ],
+      "correct": 0,
+      "explanation": "The paragraph should flow logically: evaporation (3) → condensation into clouds (1) → precipitation (2) → return flow to oceans (4). The cycle starts with evaporation, so sentence 3 comes first.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-006",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'The committee ___ the proposal after lengthy deliberation, citing concerns about its environmental impact.'",
+      "options": [
+        "rejected",
+        "rejecting",
+        "rejects",
+        "will reject"
+      ],
+      "correct": 0,
+      "explanation": "The past context ('after lengthy deliberation') requires the simple past 'rejected' to describe a completed action.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-007",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'Scientists are investigating whether the new drug can ___ the progression of the disease in its early stages.'",
+      "options": [
+        "halt",
+        "halting",
+        "halted",
+        "to halt"
+      ],
+      "correct": 0,
+      "explanation": "After the modal 'can,' the base form of the verb is required: 'can halt.' The other forms are grammatically incorrect after a modal verb.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-008",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "medium",
+      "stem": "Text: 'While many assume that the Industrial Revolution began in the textile industry, this is only partly true. The transformation was driven by a complex interplay of factors: agricultural innovations that freed labor, advances in iron production, and the development of steam power. These elements combined to create a self-reinforcing cycle of technological change.' What is the author's main point?",
+      "options": [
+        "The Industrial Revolution began exclusively in textiles",
+        "The Industrial Revolution resulted from the combination of multiple technological and social factors",
+        "Steam power was invented before the Industrial Revolution",
+        "Agriculture declined during the Industrial Revolution"
+      ],
+      "correct": 1,
+      "explanation": "The author explicitly challenges the textile-only view, arguing the revolution was driven by a combination of agricultural, metallurgical, and power-related innovations working together.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-009",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "medium",
+      "stem": "Text: 'Electric vehicles (EVs) offer several advantages over conventional cars: they produce zero tailpipe emissions, have lower running costs, and require less maintenance because they have fewer moving parts. However, their adoption faces challenges, including higher upfront prices, limited charging infrastructure in some regions, and longer refueling times compared to filling a gas tank.' Which of the following is NOT mentioned in the text as an advantage of electric vehicles?",
+      "options": [
+        "Zero tailpipe emissions",
+        "Lower running costs",
+        "Less maintenance due to fewer moving parts",
+        "Higher upfront prices"
+      ],
+      "correct": 3,
+      "explanation": "The text lists zero tailpipe emissions, lower running costs, and less maintenance as advantages. Higher upfront prices is mentioned as a challenge to adoption, not an advantage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-010",
+      "section": "reading",
+      "topic": "Re-order paragraphs",
+      "difficulty": "medium",
+      "stem": "The following sentences are from a paragraph about plate tectonics. What is the correct order?\n1. Where plates collide, mountains may form, and earthquakes are common.\n2. The Earth's outer shell is divided into several large plates that float on the semi-molten mantle.\n3. These plates move slowly over millions of years, driven by convection currents beneath them.\n4. At divergent boundaries, plates move apart, allowing magma to rise and create new crust.",
+      "options": [
+        "2, 3, 4, 1",
+        "3, 2, 1, 4",
+        "2, 4, 1, 3",
+        "4, 1, 2, 3"
+      ],
+      "correct": 0,
+      "explanation": "The paragraph should introduce the plates (2), explain their movement (3), then describe the two types of boundaries: divergent (4) and convergent (1).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-011",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'The study's findings are ___ with previous research, which also reported a correlation between sleep duration and academic performance.'",
+      "options": [
+        "consistent",
+        "consistency",
+        "consistently",
+        "consist"
+      ],
+      "correct": 0,
+      "explanation": "'Consistent with' is the correct adjective phrase meaning 'in agreement with.' The other options are incorrect word forms for this construction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-012",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'In addition to its economic importance, the region is noted for its rich cultural ___ , which includes festivals, crafts, and culinary traditions dating back centuries.'",
+      "options": [
+        "heritage",
+        "heritage's",
+        "heritages",
+        "hereditary"
+      ],
+      "correct": 0,
+      "explanation": "'Heritage' (uncountable noun meaning cultural traditions passed down) is correct here. 'Hereditary' is an adjective referring to genetics, not culture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-013",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "hard",
+      "stem": "Text: 'The concept of the 'tragedy of the commons' describes a situation in which individuals, acting independently and rationally according to their own self-interest, deplete a shared resource even when it is clear that doing so is contrary to the long-term interest of the group. Overfishing in international waters is a classic example: no single fishing company wants to overfish, yet without enforceable agreements, each is incentivized to catch as much as possible before others do.' The author would most likely agree that the tragedy of the commons can be avoided primarily through:",
+      "options": [
+        "Trusting individual fishermen to act responsibly",
+        "Establishing enforceable agreements that limit resource use",
+        "Banning all commercial fishing permanently",
+        "Allowing market forces to regulate resource use"
+      ],
+      "correct": 1,
+      "explanation": "The text notes that the problem arises 'without enforceable agreements,' implying that enforceable agreements limiting use would prevent the tragedy. The author does not advocate banning fishing or relying on self-interest.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-014",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "hard",
+      "stem": "Text: 'Urban green spaces provide measurable benefits to city dwellers. They reduce the urban heat island effect by providing shade and releasing moisture. They improve air quality by filtering pollutants. They also promote physical activity and mental wellbeing. Yet despite these benefits, green spaces in many cities are being converted to housing and commercial development as land values rise.' Which of the following is NOT mentioned in the text as a benefit of urban green spaces?",
+      "options": [
+        "Reducing the urban heat island effect",
+        "Improving air quality by filtering pollutants",
+        "Promoting physical activity and mental wellbeing",
+        "Increasing land values"
+      ],
+      "correct": 3,
+      "explanation": "The text lists heat reduction, air quality improvement, and promotion of physical activity and mental wellbeing as benefits. Rising land values are mentioned as a threat driving conversion of green spaces, not a benefit.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-015",
+      "section": "reading",
+      "topic": "Re-order paragraphs",
+      "difficulty": "hard",
+      "stem": "The following sentences are from a paragraph about the invention of the printing press. What is the correct order?\n1. This made books far cheaper and more accessible, fueling the spread of literacy and new ideas.\n2. Before its invention, books were copied by hand, making them rare and expensive.\n3. Gutenberg's press, with movable metal type, allowed the rapid production of identical copies.\n4. The printing press, developed by Johannes Gutenberg in the 15th century, transformed European society.",
+      "options": [
+        "4, 2, 3, 1",
+        "2, 4, 1, 3",
+        "4, 3, 2, 1",
+        "3, 4, 2, 1"
+      ],
+      "correct": 0,
+      "explanation": "Logical flow: introduce the printing press and its impact (4) → contrast with the pre-press situation (2) → describe how the press worked (3) → conclude with its consequences (1).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-016",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'Many students find that studying in short, regular sessions is more effective than ___ for hours at a time.'",
+      "options": [
+        "cramming",
+        "cram",
+        "crammed",
+        "to cramming"
+      ],
+      "correct": 0,
+      "explanation": "The sentence compares two gerund activities: 'studying' and 'cramming.' Parallel structure requires the gerund form 'cramming' after 'than.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-017",
+      "section": "reading",
+      "topic": "Reading and writing fill in the blanks",
+      "difficulty": "hard",
+      "stem": "Fill in the blank: 'The researchers acknowledged that their sample was not fully ___ of the general population, which limited the generalizability of their conclusions.'",
+      "options": [
+        "representative",
+        "representative's",
+        "representation",
+        "representing"
+      ],
+      "correct": 0,
+      "explanation": "'Representative of' is the correct adjective phrase meaning 'typical of' or 'characteristic of.' The other options are incorrect word forms in this context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-018",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "hard",
+      "stem": "Text: 'Historians have traditionally portrayed the 1920s as a decade of prosperity and cultural flowering. More recent scholarship, however, emphasizes the period's contradictions: rural poverty persisted alongside urban affluence, and social conservatism coexisted with dramatic changes in fashion and morals. The decade's economic boom, moreover, was built on unstable foundations, including speculative stock market practices that would culminate in the crash of 1929.' The author's attitude toward the traditional portrayal of the 1920s can best be described as:",
+      "options": [
+        "Fully endorsing it",
+        "Suggesting it is incomplete and oversimplified",
+        "Dismissing it as entirely false",
+        "Showing indifference toward it"
+      ],
+      "correct": 1,
+      "explanation": "The author notes that recent scholarship 'emphasizes the period's contradictions' and that the boom rested on 'unstable foundations,' indicating the traditional prosperity-focused view is incomplete rather than wholly wrong.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-019",
+      "section": "reading",
+      "topic": "Multiple choice single answer",
+      "difficulty": "medium",
+      "stem": "Text: 'The adoption of remote work has accelerated in recent years, driven by advances in communication technology and changing employee expectations. Companies benefit from reduced office costs and access to a wider talent pool, while employees enjoy flexibility and reduced commuting time. However, remote work also presents challenges, such as difficulties in collaboration, feelings of isolation, and the blurring of boundaries between work and personal life.' Which of the following is NOT mentioned in the text as a benefit of remote work?",
+      "options": [
+        "Reduced office costs for companies",
+        "Access to a wider talent pool",
+        "Flexibility and reduced commuting for employees",
+        "Feelings of isolation"
+      ],
+      "correct": 3,
+      "explanation": "The text lists reduced office costs, wider talent pool access, flexibility, and reduced commuting as benefits. Feelings of isolation are presented as a challenge of remote work, not a benefit.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-reading-020",
+      "section": "reading",
+      "topic": "Re-order paragraphs",
+      "difficulty": "hard",
+      "stem": "The following sentences are from a paragraph about the greenhouse effect. What is the correct order?\n1. This trapped heat warms the planet, making life as we know it possible.\n2. Greenhouse gases, such as carbon dioxide and methane, absorb this outgoing radiation and re-emit it back toward the surface.\n3. The greenhouse effect begins when solar energy reaches the Earth's surface and is re-radiated as heat.\n4. Without these gases, the Earth's average temperature would be roughly -18°C instead of about 15°C.",
+      "options": [
+        "3, 2, 1, 4",
+        "2, 3, 1, 4",
+        "3, 1, 2, 4",
+        "1, 3, 2, 4"
+      ],
+      "correct": 0,
+      "explanation": "The sequence should follow the mechanism: solar energy absorbed and re-radiated (3) → greenhouse gases trap the heat (2) → result is a warmer planet (1) → contrast without gases (4).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-001",
+      "section": "listening",
+      "topic": "Summarise spoken text (simulated)",
+      "difficulty": "easy",
+      "stem": "You hear a short lecture: 'Good morning. Today we're going to look at the migration patterns of monarch butterflies. Each year, millions of these butterflies travel up to 4,000 kilometers from Canada and the northern United States to overwinter in the forests of central Mexico. Remarkably, the butterflies that make the return journey north in spring are not the same individuals that flew south — the migration is completed over several generations. Scientists are studying how these insects, with brains the size of a pinhead, manage such an extraordinary navigation feat.' What is the main point of the lecture?",
+      "options": [
+        "Monarch butterflies migrate thousands of kilometers over multiple generations, a feat scientists are still studying",
+        "Monarch butterflies live in Mexico for their entire lives",
+        "Monarch butterfly brains are larger than other insects' brains",
+        "Monarch butterflies migrate only within the United States"
+      ],
+      "correct": 0,
+      "explanation": "The lecture describes the multi-generation migration of monarchs over thousands of kilometers and notes scientists' ongoing study of their navigation. The other options contradict the lecture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-002",
+      "section": "listening",
+      "topic": "Multiple choice",
+      "difficulty": "easy",
+      "stem": "You hear an announcement: 'Attention passengers. Flight AC 452 to Toronto is now boarding at Gate 12. Passengers in rows 20 through 35 may board first. Please have your boarding pass and passport ready. Those with connecting flights in Toronto should check the arrival board upon landing.' What should passengers in rows 20 through 35 do?",
+      "options": [
+        "Wait for a later announcement",
+        "Board the flight now at Gate 12",
+        "Go to the arrival board immediately",
+        "Report to the customer service desk"
+      ],
+      "correct": 1,
+      "explanation": "The announcement states passengers in rows 20-35 'may board first' at Gate 12. The connecting-flight instruction applies to everyone after landing in Toronto.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-003",
+      "section": "listening",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "You hear: 'The museum's new exhibition features over 200 works of modern art, including paintings, sculptures, and interactive installations. The exhibition will run until the end of September, and admission is free for students on ___ afternoons.' Which word did the speaker use to complete the sentence?",
+      "options": [
+        "Monday",
+        "Wednesday",
+        "Friday",
+        "Sunday"
+      ],
+      "correct": 1,
+      "explanation": "The speaker states that admission is free for students on Wednesday afternoons. This is the detail you need to catch from the announcement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-004",
+      "section": "listening",
+      "topic": "Select missing word",
+      "difficulty": "easy",
+      "stem": "You hear a radio program: '... and that brings us to the end of today's weather report. Remember, if you're planning outdoor activities this weekend, expect rain on Saturday but clearing skies by Sunday. That's all from the weather desk — we'll be back with more updates at ___' The final word of the broadcast was cut off. What did the speaker most likely say?",
+      "options": [
+        "six o'clock",
+        "noon",
+        "midnight",
+        "tomorrow morning"
+      ],
+      "correct": 0,
+      "explanation": "Weather updates are typically broadcast at regular intervals; 'six o'clock' is the most natural completion for a news station that provides updates throughout the day.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-005",
+      "section": "listening",
+      "topic": "Summarise spoken text (simulated)",
+      "difficulty": "medium",
+      "stem": "You hear a talk: 'Let me tell you about the Dead Sea. It's actually a salt lake bordered by Jordan, Israel, and Palestine, and it sits at about 430 meters below sea level — the lowest point on Earth's land surface. Its salinity is nearly ten times that of the ocean, which means almost nothing can live in it, hence the name 'Dead.' The high salt content also makes the water extremely buoyant, so swimmers float effortlessly. However, the lake is shrinking by about one meter per year as its main water source, the Jordan River, is increasingly diverted for agriculture and drinking water.' Which statement best summarizes the talk?",
+      "options": [
+        "The Dead Sea is the lowest point on land with extreme salinity that makes swimmers float, but it is shrinking due to water diversion",
+        "The Dead Sea is a popular swimming destination because of its warm water",
+        "The Dead Sea contains more marine life than any other lake",
+        "The Dead Sea is located at the highest point on Earth"
+      ],
+      "correct": 0,
+      "explanation": "The talk covers three main points: the Dead Sea's record-low elevation and high salinity, its buoyancy effect, and its ongoing shrinkage due to Jordan River diversion. Option A captures all key points.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-006",
+      "section": "listening",
+      "topic": "Multiple choice",
+      "difficulty": "medium",
+      "stem": "You hear a conversation between a student and a university advisor: Student: 'I'm thinking about switching my major from business to environmental science, but I'm worried it will delay my graduation.' Advisor: 'You've completed most of your general requirements, so the switch would add about one semester. The environmental science program also offers a summer internship track that could help you catch up.' What does the advisor suggest to address the student's concern?",
+      "options": [
+        "Completing an internship over the summer to stay on schedule",
+        "Staying with business as a major",
+        "Taking extra courses during the winter break",
+        "Delaying graduation by two years"
+      ],
+      "correct": 0,
+      "explanation": "The advisor says the switch adds one semester but mentions the summer internship track 'could help you catch up,' directly addressing the student's concern about delay.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-007",
+      "section": "listening",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "You hear a lecture excerpt: 'When we examine the fossil record, we find that the rate of species extinction has varied considerably over geological time. There have been five major mass extinction events, each wiping out more than seventy percent of existing species. The most recent, which occurred sixty-six million years ago, eliminated the ___ dinosaurs.' Which word did the speaker use?",
+      "options": [
+        "non-avian",
+        "carnivorous",
+        "herbivorous",
+        "aquatic"
+      ],
+      "correct": 0,
+      "explanation": "The speaker says the event eliminated the 'non-avian dinosaurs' — a key scientific distinction because birds are modern descendants of avian dinosaurs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-008",
+      "section": "listening",
+      "topic": "Select missing word",
+      "difficulty": "medium",
+      "stem": "You hear a manager addressing staff: 'Thank you all for your hard work on the quarterly report. The numbers are looking strong, particularly in the European market. Before we close, I want to remind everyone that the annual staff survey goes live on Friday, and I'd appreciate it if you could take ten minutes to complete it. Your feedback shapes our priorities for the coming ___' The final word was cut off. What did the manager most likely say?",
+      "options": [
+        "year",
+        "week",
+        "meeting",
+        "quarter"
+      ],
+      "correct": 0,
+      "explanation": "The survey feedback 'shapes our priorities' for the coming year — an annual survey logically informs annual planning. The other options are too short to be shaped by an annual survey.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-009",
+      "section": "listening",
+      "topic": "Summarise spoken text (simulated)",
+      "difficulty": "medium",
+      "stem": "You hear a talk: 'Today I want to discuss the pufferfish, which has a remarkable defense mechanism. When threatened, it rapidly ingests water, expanding its body to several times its normal size, making it too large for predators to swallow. Additionally, most pufferfish contain tetrodotoxin, a potent neurotoxin found in their skin and organs. This toxin is about 1,200 times more poisonous than cyanide, and a single fish contains enough to kill thirty adult humans. Despite this danger, pufferfish — or fugu — is considered a delicacy in Japan, where specially licensed chefs are trained to prepare it safely.' Which statement best captures the main idea of the talk?",
+      "options": [
+        "The pufferfish defends itself by inflating its body and contains a powerful toxin, yet it is eaten as a delicacy when prepared by licensed chefs",
+        "Pufferfish are the most dangerous animals in the ocean because of their size",
+        "Pufferfish toxin is only harmful if the fish is cooked",
+        "Pufferfish cannot be eaten anywhere in the world"
+      ],
+      "correct": 0,
+      "explanation": "The talk covers the pufferfish's inflation defense, its potent tetrodotoxin, and the fact that licensed chefs in Japan prepare it as the delicacy fugu. Option A captures all three elements.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-010",
+      "section": "listening",
+      "topic": "Multiple choice",
+      "difficulty": "medium",
+      "stem": "You hear part of a radio discussion about urban planning: 'Critics of the new bike lane network argue that removing car lanes will increase traffic congestion and hurt local businesses. Supporters, however, point to studies from cities like Copenhagen showing that cycling infrastructure reduces overall traffic, improves public health, and often increases foot traffic to shops. The debate really reflects deeper questions about what kind of city we want to live in.' What is the speaker's attitude toward the bike lane debate?",
+      "options": [
+        "She strongly opposes bike lanes",
+        "She presents it as a debate about fundamental urban values",
+        "She believes the critics are completely wrong",
+        "She thinks the debate is unimportant"
+      ],
+      "correct": 1,
+      "explanation": "The speaker presents both sides fairly and concludes the debate 'reflects deeper questions about what kind of city we want to live in,' indicating she frames it as a values question rather than taking a firm side.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-011",
+      "section": "listening",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "You hear a news report: 'A team of marine biologists has announced the discovery of a new species of deep-sea snailfish at a depth of more than 8,000 meters in the Pacific Ocean's Mariana Trench. The fish, which is translucent and lacks scales, survives under pressure that would crush most ___ creatures.' Which word did the speaker use?",
+      "options": [
+        "surface",
+        "giant",
+        "ancient",
+        "shallow"
+      ],
+      "correct": 0,
+      "explanation": "The speaker contrasts deep-sea creatures with 'surface' creatures that would be crushed by the extreme pressure at 8,000+ meters depth.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-012",
+      "section": "listening",
+      "topic": "Select missing word",
+      "difficulty": "hard",
+      "stem": "You hear a professor's closing remarks: 'So to sum up this week's lecture on behavioral economics: we've seen that people don't always act rationally, that they're influenced by framing, defaults, and social norms, and that these insights have real applications in public policy. Next week we'll examine the role of emotions in decision-making, and we'll consider how marketers exploit these biases. Please read chapters four and five before Wednesday's ___' The final word was cut off. What did the professor most likely say?",
+      "options": [
+        "seminar",
+        "exam",
+        "deadline",
+        "lecture"
+      ],
+      "correct": 0,
+      "explanation": "The professor is closing this week's lecture and refers to 'next week,' so the reading is due before Wednesday's seminar — the weekly discussion session associated with the course.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-013",
+      "section": "listening",
+      "topic": "Summarise spoken text (simulated)",
+      "difficulty": "hard",
+      "stem": "You hear a lecture: 'Let's talk about the placebo effect. In clinical trials, some patients given an inert substance — a sugar pill — still report improvement in their symptoms. This isn't simply 'all in the mind' in a dismissive sense; brain imaging studies show real physiological changes, such as altered pain perception and even changes in neurotransmitter levels. The effect appears strongest for conditions involving pain, depression, and anxiety. Interestingly, the effect seems to be influenced by the patient's expectations and by the doctor-patient relationship — more positive interactions are associated with stronger placebo responses. This raises complex ethical questions about whether and how to harness placebo effects in routine medical care.' What is the lecturer's main point about the placebo effect?",
+      "options": [
+        "The placebo effect is a purely psychological phenomenon with no physiological basis",
+        "The placebo effect involves real physiological changes influenced by expectations and the doctor-patient relationship, raising ethical questions",
+        "The placebo effect only occurs in patients with depression",
+        "The placebo effect proves that most medications are ineffective"
+      ],
+      "correct": 1,
+      "explanation": "The lecturer emphasizes that placebos produce measurable physiological changes, that expectations and the doctor-patient relationship modulate the effect, and that this raises ethical questions for medical practice.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-014",
+      "section": "listening",
+      "topic": "Multiple choice",
+      "difficulty": "hard",
+      "stem": "You hear a conversation between two colleagues: Maria: 'Did you see the updated budget proposal?' James: 'Briefly. I noticed the marketing allocation was cut by twenty percent.' Maria: 'Right. The finance team says we need to prioritize R&D this quarter, but I'm worried we're undervaluing brand awareness right before the product launch.' James: 'That's a fair concern. Maybe we can propose shifting funds from the contingency reserve instead.' What does Maria worry about?",
+      "options": [
+        "That the R&D budget is too large",
+        "That cutting marketing will harm the upcoming product launch",
+        "That the contingency reserve is empty",
+        "That James hasn't read the proposal"
+      ],
+      "correct": 1,
+      "explanation": "Maria says she's 'worried we're undervaluing brand awareness right before the product launch,' meaning she fears the marketing cut will hurt the launch. James then suggests using the contingency reserve as an alternative.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-015",
+      "section": "listening",
+      "topic": "Fill in the blanks",
+      "difficulty": "hard",
+      "stem": "You hear a documentary narration: 'The Sahara Desert was not always the vast expanse of sand we see today. Between roughly 10,000 and 5,000 years ago, the region was a lush landscape of grasslands and lakes, supporting herds of giraffes and elephants. Rock art from that era, found in caves across the region, depicts these animals — evidence of a dramatic climate shift that turned green ___ into desert.' Which word did the narrator use?",
+      "options": [
+        "savanna",
+        "tundra",
+        "rainforest",
+        "steppe"
+      ],
+      "correct": 0,
+      "explanation": "A 'savanna' is a grassland ecosystem with scattered trees, which matches the description of the Sahara's past (grasslands supporting herds of large animals).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-016",
+      "section": "listening",
+      "topic": "Select missing word",
+      "difficulty": "hard",
+      "stem": "You hear a tour guide: 'And if you look to your left, you'll see the old city walls, built in the twelfth century. Notice the arched gate — legend says the gate was designed so that no enemy army could pass through with its banners raised. The walls were restored in the nineteenth century and are now part of the UNESCO World Heritage Site. We'll stop here for ten minutes so you can take photos, and then we'll continue to the cathedral, which is our final ___' The final word was cut off. What did the guide most likely say?",
+      "options": [
+        "stop",
+        "breakfast",
+        "entrance",
+        "destination"
+      ],
+      "correct": 0,
+      "explanation": "The guide says the cathedral is 'our final stop' of the tour — matching the tour-ending context after the photo break. 'Destination' is possible but less natural for a tour itinerary.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-017",
+      "section": "listening",
+      "topic": "Summarise spoken text (simulated)",
+      "difficulty": "medium",
+      "stem": "You hear a radio feature: 'If you've ever wondered why we yawn, you're not alone — scientists have been puzzled by it for centuries. The old theory that yawning is triggered by low oxygen or high carbon dioxide in the blood has largely been abandoned; experiments where people breathe pure oxygen don't suppress yawning. The leading theory today is that yawning helps cool the brain. Supporters point out that we yawn more when we're tired or stressed — states associated with elevated brain temperature — and that yawning increases blood flow to the skull, which may facilitate cooling. Others argue yawning serves a social function, signaling boredom or acting as a subtle cue for group coordination.' Which of the following best summarizes the radio feature?",
+      "options": [
+        "The oxygen theory of yawning has been abandoned, and the leading explanations now involve brain cooling and possible social functions",
+        "Scientists have definitively proven that yawning cools the brain",
+        "Yawning is caused by a lack of sleep",
+        "The purpose of yawning remains completely unknown with no theories"
+      ],
+      "correct": 0,
+      "explanation": "The feature states the oxygen theory was abandoned, presents brain-cooling as the leading theory, and mentions the social function hypothesis as an alternative view. Option A captures this accurately.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-018",
+      "section": "listening",
+      "topic": "Multiple choice",
+      "difficulty": "medium",
+      "stem": "You hear a student asking a librarian: Student: 'Excuse me, I'm looking for the economics section. I need a textbook on microeconomics for my course.' Librarian: 'The economics books are on the third floor, in the north wing. But let me check the catalog... Actually, the professor has placed two copies of your textbook on reserve at the front desk. They can be borrowed for two hours at a time.' What does the student learn?",
+      "options": [
+        "The textbook is unavailable at the library",
+        "The textbook is on reserve and can be borrowed for two hours",
+        "The economics section is on the first floor",
+        "The textbook must be purchased from the bookstore"
+      ],
+      "correct": 1,
+      "explanation": "The librarian tells the student the professor put two copies of the textbook on reserve at the front desk, with a two-hour borrowing limit. The economics section location is a secondary detail.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-019",
+      "section": "listening",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "You hear a weather report: 'Good morning. Today's forecast calls for partly cloudy skies with a high of 22 degrees. There's a 40 percent chance of showers this afternoon, mainly after three o'clock. Overnight, temperatures will drop to around 12 degrees, with fog developing in low-lying areas by ___' Which word did the speaker use?",
+      "options": [
+        "dawn",
+        "noon",
+        "midday",
+        "sunset"
+      ],
+      "correct": 0,
+      "explanation": "Fog typically develops overnight and is at its densest toward dawn — the speaker says fog will develop 'by dawn.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    },
+    {
+      "id": "pte-listening-020",
+      "section": "listening",
+      "topic": "Select missing word",
+      "difficulty": "medium",
+      "stem": "You hear an airline announcement: 'This is the final boarding call for flight BA 118 to London Heathrow. All passengers should now proceed to Gate 15. Please note that the gate will close in ten minutes, and we are unable to accept passengers who arrive after that time. If you are holding a ticket for this flight and have not yet boarded, please make your way to Gate 15 ___' The final words were cut off. What did the announcer most likely say?",
+      "options": [
+        "immediately",
+        "tomorrow",
+        "later today",
+        "on arrival"
+      ],
+      "correct": 0,
+      "explanation": "In a final boarding call with the gate closing in ten minutes, the announcer would urge passengers to proceed 'immediately.' The other options contradict the urgency of the announcement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pearsonpte.com"
+      ]
+    }
+  ]
+}

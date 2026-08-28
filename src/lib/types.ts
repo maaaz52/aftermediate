@@ -210,6 +210,7 @@ export interface EntryTest {
   id: string;
   name: string;
   short: string;
+  category?: string;
   streams: Stream[];
   conductingBody: string;
   acceptedBy: string[];
@@ -313,6 +314,21 @@ export interface AbroadScholarship {
 }
 
 export type AbroadTestKind = "english" | "aptitude" | "graduate" | "language";
+
+export type PracticeMode = "full" | "quick";
+
+export interface PracticeAttempt {
+  id: string;
+  testId: string;
+  mode: PracticeMode;
+  submittedAt: string; // ISO
+  autoSubmitted: boolean;
+  timeUsedSeconds: number;
+  score: number;
+  maxScore: number;
+  percent: number; // 1 decimal
+  sections: { id: string; name: string; correct: number; wrong: number; skipped: number }[];
+}
 
 export interface AbroadTest {
   id: string;                // "ielts"

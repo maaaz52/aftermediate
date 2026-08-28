@@ -1,0 +1,1953 @@
+{
+  "testId": "pieas",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for PIEAS BS Admission Test. Per the official pattern: 100 MCQs, 3 hours, no negative marking. Mathematics 30, Physics 30, Chemistry 20, English 20. Not affiliated with PIEAS.",
+    "sources": [
+      "https://admissions.pieas.edu.pk/Admissions/BS.html",
+      "https://www.pieas.edu.pk/"
+    ]
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 100,
+    "note": "100 MCQs, 100 marks, no negative marking (PIEAS pattern)."
+  },
+  "benchmarks": [
+    {
+      "label": "Engineering programmes (2026)",
+      "percent": 75
+    },
+    {
+      "label": "Science programmes (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "questionCount": 30
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 30
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 20
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 20
+    }
+  ],
+  "questions": [
+    {
+      "id": "pieas-math-001",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If 3x - 6 = 0, what is the value of x?",
+      "options": [
+        "-2",
+        "2",
+        "3",
+        "6"
+      ],
+      "correct": 1,
+      "explanation": "3x = 6 → x = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-002",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "Simplify: 4a + 3b - 2a + b.",
+      "options": [
+        "2a + 4b",
+        "6a + 4b",
+        "2a + 2b",
+        "6a - 2b"
+      ],
+      "correct": 0,
+      "explanation": "4a - 2a = 2a; 3b + b = 4b; result = 2a + 4b.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-003",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If f(x) = 3x - 1, what is f(0)?",
+      "options": [
+        "-1",
+        "0",
+        "1",
+        "3"
+      ],
+      "correct": 0,
+      "explanation": "f(0) = 3(0) - 1 = -1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-004",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "The solution set of x² = 36 is:",
+      "options": [
+        "{6}",
+        "{-6}",
+        "{-6, 6}",
+        "{36}"
+      ],
+      "correct": 2,
+      "explanation": "x = √36 = ±6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-005",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the exact value of sin 90°?",
+      "options": [
+        "0",
+        "1/2",
+        "1",
+        "√2"
+      ],
+      "correct": 2,
+      "explanation": "sin 90° = 1, a standard trigonometric value.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-006",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "What is log₅ 25?",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "25"
+      ],
+      "correct": 1,
+      "explanation": "5² = 25, so log₅ 25 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-007",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "The coefficient of x in 7x - 3 is:",
+      "options": [
+        "-3",
+        "3",
+        "7",
+        "x"
+      ],
+      "correct": 2,
+      "explanation": "In the term 7x, the coefficient of x is 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-008",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If a = 2 and b = 3, what is a²b?",
+      "options": [
+        "6",
+        "8",
+        "12",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "a²b = 2² × 3 = 4 × 3 = 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-009",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "The sum of the interior angles of a triangle is:",
+      "options": [
+        "90°",
+        "180°",
+        "270°",
+        "360°"
+      ],
+      "correct": 1,
+      "explanation": "The interior angles of a triangle always sum to 180°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-010",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "What is 2/5 expressed as a percentage?",
+      "options": [
+        "20%",
+        "25%",
+        "40%",
+        "50%"
+      ],
+      "correct": 2,
+      "explanation": "(2/5) × 100 = 40%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-011",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "The distance between the points (0, 0) and (3, 4) is:",
+      "options": [
+        "1",
+        "5",
+        "7",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "Distance = √((3-0)² + (4-0)²) = √(9+16) = √25 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-012",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "easy",
+      "stem": "If x + y = 10 and x - y = 4, what is the value of x?",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "14"
+      ],
+      "correct": 2,
+      "explanation": "Adding the two equations: 2x = 14 → x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-013",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "Solve: 2x² + 5x - 3 = 0.",
+      "options": [
+        "x = 1/2 or x = -3",
+        "x = -1/2 or x = 3",
+        "x = 1 or x = -3",
+        "x = 3 or x = -2"
+      ],
+      "correct": 0,
+      "explanation": "2x² + 5x - 3 = (2x - 1)(x + 3) = 0 → x = 1/2 or x = -3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-014",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "If f(x) = x³ - 2x, what is f(-1)?",
+      "options": [
+        "-3",
+        "-1",
+        "1",
+        "3"
+      ],
+      "correct": 2,
+      "explanation": "f(-1) = (-1)³ - 2(-1) = -1 + 2 = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-015",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "The slope of the line passing through (1, 2) and (3, 8) is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 1,
+      "explanation": "Slope = (8 - 2)/(3 - 1) = 6/2 = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-016",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the exact value of sec 60°?",
+      "options": [
+        "1/2",
+        "√3",
+        "2",
+        "1"
+      ],
+      "correct": 2,
+      "explanation": "sec 60° = 1/cos 60° = 1/(1/2) = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-017",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of 5x³ with respect to x?",
+      "options": [
+        "15x²",
+        "15x³",
+        "5x²",
+        "3x²"
+      ],
+      "correct": 0,
+      "explanation": "d/dx (5x³) = 5 × 3x² = 15x².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-018",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "medium",
+      "stem": "The 7th term of the geometric progression 2, 6, 18, ... is:",
+      "options": [
+        "486",
+        "1458",
+        "4374",
+        "729"
+      ],
+      "correct": 1,
+      "explanation": "r = 3; T₇ = 2 × 3⁶ = 2 × 729 = 1458.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-019",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "medium",
+      "stem": "The probability of getting an even number when a fair six-sided die is rolled is:",
+      "options": [
+        "1/3",
+        "1/2",
+        "1/6",
+        "2/3"
+      ],
+      "correct": 1,
+      "explanation": "Even numbers: 2, 4, 6 (3 out of 6) = 3/6 = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-020",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "The roots of the equation x² - 6x + 9 = 0 are:",
+      "options": [
+        "3 and 3",
+        "6 and 3",
+        "-3 and -3",
+        "3 and 9"
+      ],
+      "correct": 0,
+      "explanation": "x² - 6x + 9 = (x - 3)², so the roots are x = 3 (repeated).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-021",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "The area of a triangle with base 10 cm and height 6 cm is:",
+      "options": [
+        "16 cm²",
+        "30 cm²",
+        "60 cm²",
+        "120 cm²"
+      ],
+      "correct": 1,
+      "explanation": "Area = (1/2) × base × height = (1/2) × 10 × 6 = 30 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-022",
+      "section": "mathematics",
+      "topic": "Algebra, equations and functions",
+      "difficulty": "medium",
+      "stem": "If log₁₀ 2 ≈ 0.3010 and log₁₀ 3 ≈ 0.4771, then log₁₀ 6 is approximately:",
+      "options": [
+        "0.7781",
+        "0.1761",
+        "0.9542",
+        "0.3010"
+      ],
+      "correct": 0,
+      "explanation": "log₁₀ 6 = log₁₀ (2 × 3) = 0.3010 + 0.4771 = 0.7781.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-023",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the exact value of cos 0°?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "1/2"
+      ],
+      "correct": 1,
+      "explanation": "cos 0° = 1, a standard trigonometric value.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-024",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "medium",
+      "stem": "If the sum of the first n terms of an arithmetic progression is n(n+1), the first term is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "S₁ = 1(1+1) = 2, so the first term is 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-025",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "Evaluate ∫₁³ (2x + 3) dx.",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correct": 1,
+      "explanation": "∫(2x+3)dx = x² + 3x; [x²+3x]₁³ = (9+9) - (1+3) = 18 - 4 = 14.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-026",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "If f(x) = sin x + cos x, what is f'(π/4)?",
+      "options": [
+        "0",
+        "1",
+        "√2",
+        "-√2"
+      ],
+      "correct": 0,
+      "explanation": "f'(x) = cos x - sin x; at π/4: √2/2 - √2/2 = 0.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-027",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "hard",
+      "stem": "How many 4-digit numbers can be formed using digits 1 through 9 without repetition?",
+      "options": [
+        "3024",
+        "4536",
+        "5040",
+        "6561"
+      ],
+      "correct": 0,
+      "explanation": "First digit: 9 choices; then 8, 7, 6 = 9 × 8 × 7 × 6 = 3024.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-028",
+      "section": "mathematics",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "The slope of the tangent to the curve y = x² at x = 2 is:",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "16"
+      ],
+      "correct": 1,
+      "explanation": "dy/dx = 2x; at x = 2 the slope is 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-029",
+      "section": "mathematics",
+      "topic": "Sequences, series and probability",
+      "difficulty": "hard",
+      "stem": "The sum of the infinite geometric series 1 + 1/2 + 1/4 + 1/8 + ... is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "S∞ = a/(1-r) = 1/(1-1/2) = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-math-030",
+      "section": "mathematics",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "hard",
+      "stem": "If sin θ = 3/5 and θ is acute, what is tan θ?",
+      "options": [
+        "3/4",
+        "4/3",
+        "4/5",
+        "5/3"
+      ],
+      "correct": 0,
+      "explanation": "cos θ = √(1 - 9/25) = √(16/25) = 4/5; tan θ = sin θ / cos θ = (3/5)/(4/5) = 3/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-001",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "Mass is measured in:",
+      "options": [
+        "newtons",
+        "kilograms",
+        "joules",
+        "watts"
+      ],
+      "correct": 1,
+      "explanation": "The SI unit of mass is the kilogram (kg).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-002",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "Which of the following is a scalar quantity?",
+      "options": [
+        "velocity",
+        "acceleration",
+        "speed",
+        "force"
+      ],
+      "correct": 2,
+      "explanation": "Speed has magnitude only; all others have both magnitude and direction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-003",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "The weight of a 1 kg mass at Earth's surface (g ≈ 10 m/s²) is:",
+      "options": [
+        "10 N",
+        "1 N",
+        "100 N",
+        "0.1 N"
+      ],
+      "correct": 0,
+      "explanation": "Weight = mg = 1 × 10 = 10 N.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-004",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "A boy walks 60 m in 30 s. His average speed is:",
+      "options": [
+        "0.5 m/s",
+        "2 m/s",
+        "30 m/s",
+        "90 m/s"
+      ],
+      "correct": 1,
+      "explanation": "Speed = distance/time = 60/30 = 2 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-005",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "The SI unit of pressure is the:",
+      "options": [
+        "newton",
+        "pascal",
+        "joule",
+        "watt"
+      ],
+      "correct": 1,
+      "explanation": "Pressure = force/area; its SI unit is the pascal (Pa).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-006",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "easy",
+      "stem": "The frequency of a wave is measured in:",
+      "options": [
+        "hertz",
+        "metres",
+        "joules",
+        "seconds"
+      ],
+      "correct": 0,
+      "explanation": "Frequency is measured in hertz (Hz), which is cycles per second.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-007",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "easy",
+      "stem": "A convex lens is also called a:",
+      "options": [
+        "diverging lens",
+        "converging lens",
+        "plane lens",
+        "concave mirror"
+      ],
+      "correct": 1,
+      "explanation": "A convex lens converges light rays and is called a converging lens.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-008",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "Current is measured in amperes using an instrument called:",
+      "options": [
+        "voltmeter",
+        "ammeter",
+        "barometer",
+        "thermometer"
+      ],
+      "correct": 1,
+      "explanation": "An ammeter measures electric current in amperes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-009",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "easy",
+      "stem": "Which type of electromagnetic radiation has the highest frequency?",
+      "options": [
+        "radio waves",
+        "visible light",
+        "gamma rays",
+        "infrared rays"
+      ],
+      "correct": 2,
+      "explanation": "Gamma rays have the highest frequency and shortest wavelength in the EM spectrum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-010",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "The instrument used to measure atmospheric pressure is the:",
+      "options": [
+        "ammeter",
+        "barometer",
+        "hydrometer",
+        "thermometer"
+      ],
+      "correct": 1,
+      "explanation": "Atmospheric pressure is measured by a barometer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-011",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "easy",
+      "stem": "When a body is at rest, its kinetic energy is:",
+      "options": [
+        "zero",
+        "maximum",
+        "negative",
+        "equal to potential energy"
+      ],
+      "correct": 0,
+      "explanation": "Kinetic energy depends on motion; a body at rest has zero kinetic energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-012",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "easy",
+      "stem": "The time period of a wave is the reciprocal of its:",
+      "options": [
+        "wavelength",
+        "amplitude",
+        "frequency",
+        "speed"
+      ],
+      "correct": 2,
+      "explanation": "T = 1/f, where f is the frequency.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-013",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "A 5 kg mass is lifted vertically through 4 m. The work done (g = 10 m/s²) is:",
+      "options": [
+        "20 J",
+        "50 J",
+        "200 J",
+        "400 J"
+      ],
+      "correct": 2,
+      "explanation": "Work = mgh = 5 × 10 × 4 = 200 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-014",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "The gravitational force between two masses is F. If the distance between them is doubled, the force becomes:",
+      "options": [
+        "F/2",
+        "F/4",
+        "2F",
+        "4F"
+      ],
+      "correct": 1,
+      "explanation": "Gravitational force is inversely proportional to the square of distance: F ∝ 1/r².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-015",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "A car's velocity changes from 10 m/s to 30 m/s in 4 s. The acceleration is:",
+      "options": [
+        "2.5 m/s²",
+        "5 m/s²",
+        "10 m/s²",
+        "20 m/s²"
+      ],
+      "correct": 1,
+      "explanation": "a = (v-u)/t = (30-10)/4 = 5 m/s².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-016",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "The image formed by a plane mirror is:",
+      "options": [
+        "real and inverted",
+        "virtual and erect, same size",
+        "virtual and inverted",
+        "real and magnified"
+      ],
+      "correct": 1,
+      "explanation": "A plane mirror always forms a virtual, erect image of the same size as the object.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-017",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "The SI unit of electric charge is the:",
+      "options": [
+        "coulomb",
+        "ampere",
+        "volt",
+        "ohm"
+      ],
+      "correct": 0,
+      "explanation": "Electric charge is measured in coulombs (C).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-018",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "medium",
+      "stem": "The energy of a photon is given by E = hf. If the frequency doubles, the photon energy:",
+      "options": [
+        "halves",
+        "doubles",
+        "stays the same",
+        "quadruples"
+      ],
+      "correct": 1,
+      "explanation": "Photon energy is directly proportional to frequency: E ∝ f, so doubling f doubles E.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-019",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "A body of mass 2 kg moves in a circle of radius 3 m at a speed of 6 m/s. The centripetal force is:",
+      "options": [
+        "12 N",
+        "24 N",
+        "36 N",
+        "72 N"
+      ],
+      "correct": 1,
+      "explanation": "F = mv²/r = 2 × 36 / 3 = 24 N.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-020",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "medium",
+      "stem": "When light travels from air into glass, which property decreases?",
+      "options": [
+        "frequency",
+        "speed",
+        "period",
+        "energy"
+      ],
+      "correct": 1,
+      "explanation": "Light slows down when entering a denser medium; frequency and period remain unchanged.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-021",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "medium",
+      "stem": "A sound wave has a frequency of 256 Hz. If the speed of sound is 340 m/s, the wavelength is approximately:",
+      "options": [
+        "0.75 m",
+        "1.33 m",
+        "1.87 m",
+        "2.66 m"
+      ],
+      "correct": 1,
+      "explanation": "λ = v/f = 340/256 ≈ 1.33 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-022",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "medium",
+      "stem": "The half-life of a radioactive substance is 4 days. After 8 days, the fraction remaining is:",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16"
+      ],
+      "correct": 1,
+      "explanation": "8 days = 2 half-lives; remaining = (1/2)² = 1/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-023",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "Three resistors of 2 Ω, 3 Ω and 5 Ω are connected in series. The total resistance is:",
+      "options": [
+        "10 Ω",
+        "30 Ω",
+        "5 Ω",
+        "0.97 Ω"
+      ],
+      "correct": 0,
+      "explanation": "In series resistances add: 2 + 3 + 5 = 10 Ω.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-024",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "medium",
+      "stem": "A stone is dropped from rest. After 2 seconds (g = 10 m/s²), its velocity is:",
+      "options": [
+        "5 m/s",
+        "10 m/s",
+        "20 m/s",
+        "40 m/s"
+      ],
+      "correct": 2,
+      "explanation": "v = u + gt = 0 + 10(2) = 20 m/s downward.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-025",
+      "section": "physics",
+      "topic": "Mechanics and rotational motion",
+      "difficulty": "hard",
+      "stem": "A projectile is launched at 60° to the horizontal with speed 20 m/s. Its maximum height (g = 10 m/s²) is:",
+      "options": [
+        "5 m",
+        "10 m",
+        "15 m",
+        "20 m"
+      ],
+      "correct": 2,
+      "explanation": "H = u²sin²θ/(2g) = 400 × (3/4) / 20 = 300/20 = 15 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-026",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "A 4 μF capacitor and a 6 μF capacitor are connected in series. The equivalent capacitance is:",
+      "options": [
+        "2.4 μF",
+        "10 μF",
+        "5 μF",
+        "1.2 μF"
+      ],
+      "correct": 0,
+      "explanation": "1/C = 1/4 + 1/6 = 5/12 → C = 12/5 = 2.4 μF.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-027",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "A wire of resistance R is stretched uniformly to twice its original length. Its new resistance is:",
+      "options": [
+        "R/2",
+        "R",
+        "2R",
+        "4R"
+      ],
+      "correct": 3,
+      "explanation": "Volume constant: length doubles, area halves. R' = ρ(2L)/(A/2) = 4ρL/A = 4R.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-028",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "hard",
+      "stem": "In the Bohr model of hydrogen, the first Bohr radius is 0.529 Å. The radius of the second orbit is:",
+      "options": [
+        "0.529 Å",
+        "1.058 Å",
+        "2.116 Å",
+        "4.232 Å"
+      ],
+      "correct": 2,
+      "explanation": "rₙ = n²a₀; for n = 2: r₂ = 4 × 0.529 = 2.116 Å.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-029",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "In an AC generator, the induced EMF is maximum when the plane of the coil is:",
+      "options": [
+        "parallel to the magnetic field",
+        "perpendicular to the magnetic field",
+        "at 45° to the field",
+        "at rest"
+      ],
+      "correct": 0,
+      "explanation": "EMF = NBAωsin(ωt); maximum when the plane is parallel to the field (sin = 1).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-phy-030",
+      "section": "physics",
+      "topic": "Waves, sound and optics",
+      "difficulty": "hard",
+      "stem": "An object is placed 30 cm in front of a convex lens of focal length 10 cm. The image distance is:",
+      "options": [
+        "7.5 cm",
+        "15 cm",
+        "20 cm",
+        "30 cm"
+      ],
+      "correct": 1,
+      "explanation": "1/f = 1/v + 1/u → 1/10 = 1/v + 1/30 → 1/v = 1/10 - 1/30 = 2/30 → v = 15 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-001",
+      "section": "chemistry",
+      "topic": "Atomic structure and periodic table",
+      "difficulty": "easy",
+      "stem": "The smallest particle of an element that retains its chemical properties is the:",
+      "options": [
+        "molecule",
+        "atom",
+        "electron",
+        "compound"
+      ],
+      "correct": 1,
+      "explanation": "An atom is the smallest unit of an element that retains its chemical identity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-002",
+      "section": "chemistry",
+      "topic": "Basic concepts",
+      "difficulty": "easy",
+      "stem": "The chemical formula of water is:",
+      "options": [
+        "HO",
+        "H₂O",
+        "H₂O₂",
+        "OH"
+      ],
+      "correct": 1,
+      "explanation": "Water's formula is H₂O (two hydrogen, one oxygen).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-003",
+      "section": "chemistry",
+      "topic": "Basic concepts",
+      "difficulty": "easy",
+      "stem": "Which gas is most abundant in the Earth's atmosphere?",
+      "options": [
+        "oxygen",
+        "nitrogen",
+        "carbon dioxide",
+        "argon"
+      ],
+      "correct": 1,
+      "explanation": "Nitrogen (N₂) makes up about 78% of the atmosphere.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-004",
+      "section": "chemistry",
+      "topic": "Acids, bases and salts",
+      "difficulty": "easy",
+      "stem": "The pH of a strong acid solution is:",
+      "options": [
+        "greater than 7",
+        "equal to 7",
+        "less than 7",
+        "equal to 14"
+      ],
+      "correct": 2,
+      "explanation": "Strong acids have a pH well below 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-005",
+      "section": "chemistry",
+      "topic": "Atomic structure and periodic table",
+      "difficulty": "easy",
+      "stem": "Magnesium has atomic number 12. Its valency is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "Mg has electron configuration 2,8,2; it loses 2 electrons, so valency is 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-006",
+      "section": "chemistry",
+      "topic": "Atomic structure and periodic table",
+      "difficulty": "easy",
+      "stem": "Which of the following is a noble gas?",
+      "options": [
+        "oxygen",
+        "nitrogen",
+        "neon",
+        "chlorine"
+      ],
+      "correct": 2,
+      "explanation": "Neon (Ne) is a noble gas, found in Group 18 of the periodic table.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-007",
+      "section": "chemistry",
+      "topic": "Physical chemistry",
+      "difficulty": "easy",
+      "stem": "The process by which a solid changes directly into a gas is called:",
+      "options": [
+        "melting",
+        "sublimation",
+        "evaporation",
+        "condensation"
+      ],
+      "correct": 1,
+      "explanation": "Sublimation is the direct transition from solid to gas without an intermediate liquid phase.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-008",
+      "section": "chemistry",
+      "topic": "Basic concepts",
+      "difficulty": "easy",
+      "stem": "The number of hydrogen atoms in one molecule of H₂SO₄ is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "H₂SO₄ contains two hydrogen atoms per molecule.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-009",
+      "section": "chemistry",
+      "topic": "Stoichiometry and mole concept",
+      "difficulty": "medium",
+      "stem": "How many moles are present in 18 g of water (H = 1, O = 16)?",
+      "options": [
+        "0.5",
+        "1",
+        "1.5",
+        "2"
+      ],
+      "correct": 1,
+      "explanation": "Molar mass of H₂O = 2 + 16 = 18 g/mol; 18/18 = 1 mol.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-010",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "In NaCl, the bond between sodium and chlorine is classified as:",
+      "options": [
+        "covalent",
+        "ionic",
+        "metallic",
+        "hydrogen"
+      ],
+      "correct": 1,
+      "explanation": "Na transfers an electron to Cl, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-011",
+      "section": "chemistry",
+      "topic": "Organic chemistry",
+      "difficulty": "medium",
+      "stem": "The empirical formula of glucose (C₆H₁₂O₆) is:",
+      "options": [
+        "C₆H₁₂O₆",
+        "CH₂O",
+        "C₂H₄O₂",
+        "CHO"
+      ],
+      "correct": 1,
+      "explanation": "Divide all subscripts by 6: C₆H₁₂O₆ → CH₂O.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-012",
+      "section": "chemistry",
+      "topic": "Redox reactions",
+      "difficulty": "medium",
+      "stem": "The oxidation state of sulfur in H₂SO₄ is:",
+      "options": [
+        "+2",
+        "+4",
+        "+6",
+        "-2"
+      ],
+      "correct": 2,
+      "explanation": "H = +1 (×2), O = -2 (×4), so S = 2×(+1) + 4×(-2) + x = 0 → x = +6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-013",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "Which of the following conducts electricity in the molten state?",
+      "options": [
+        "sugar",
+        "naphthalene",
+        "NaCl",
+        "alcohol"
+      ],
+      "correct": 2,
+      "explanation": "Ionic compounds like NaCl conduct electricity when molten, as ions become mobile.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-014",
+      "section": "chemistry",
+      "topic": "Acids, bases and salts",
+      "difficulty": "medium",
+      "stem": "The gas evolved when calcium carbonate reacts with dilute HCl is:",
+      "options": [
+        "hydrogen",
+        "oxygen",
+        "carbon dioxide",
+        "chlorine"
+      ],
+      "correct": 2,
+      "explanation": "CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂; carbon dioxide gas is released.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-015",
+      "section": "chemistry",
+      "topic": "Acids, bases and salts",
+      "difficulty": "medium",
+      "stem": "Which of the following is a strong acid?",
+      "options": [
+        "CH₃COOH",
+        "H₂CO₃",
+        "HCl",
+        "H₃PO₄"
+      ],
+      "correct": 2,
+      "explanation": "HCl (hydrochloric acid) is a strong acid, fully dissociating in water.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-016",
+      "section": "chemistry",
+      "topic": "Atomic structure and periodic table",
+      "difficulty": "medium",
+      "stem": "The number of neutrons in an atom of ²³Na (atomic number 11) is:",
+      "options": [
+        "11",
+        "12",
+        "23",
+        "34"
+      ],
+      "correct": 1,
+      "explanation": "Neutrons = mass number - atomic number = 23 - 11 = 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-017",
+      "section": "chemistry",
+      "topic": "Stoichiometry and mole concept",
+      "difficulty": "hard",
+      "stem": "20 g of NaOH (molar mass = 40 g/mol) is dissolved in water to make 500 cm³ of solution. The molarity is:",
+      "options": [
+        "0.5 M",
+        "1.0 M",
+        "2.0 M",
+        "0.25 M"
+      ],
+      "correct": 1,
+      "explanation": "Moles = 20/40 = 0.5 mol; volume = 0.5 L; M = 0.5/0.5 = 1.0 M.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-018",
+      "section": "chemistry",
+      "topic": "Stoichiometry and mole concept",
+      "difficulty": "hard",
+      "stem": "In the reaction N₂ + 3H₂ → 2NH₃, how many moles of NH₃ are formed from 6 moles of H₂?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 2,
+      "explanation": "Mole ratio H₂:NH₃ = 3:2; 6 × (2/3) = 4 mol NH₃.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-019",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "stem": "The hybridization of carbon in methane (CH₄) is:",
+      "options": [
+        "sp",
+        "sp²",
+        "sp³",
+        "dsp²"
+      ],
+      "correct": 2,
+      "explanation": "Carbon in CH₄ forms four single bonds — sp³ hybridization with tetrahedral geometry.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-chem-020",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "stem": "Which of the following has the highest boiling point?",
+      "options": [
+        "CH₄",
+        "NaCl",
+        "HCl",
+        "NH₃"
+      ],
+      "correct": 1,
+      "explanation": "NaCl is an ionic compound with strong electrostatic forces; it has a much higher boiling point than molecular compounds.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-001",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Choose the correct synonym of 'happy':",
+      "options": [
+        "sad",
+        "joyful",
+        "angry",
+        "tired"
+      ],
+      "correct": 1,
+      "explanation": "'Happy' and 'joyful' both describe a feeling of pleasure or contentment.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-002",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "The plural of 'woman' is:",
+      "options": [
+        "womans",
+        "women",
+        "womens",
+        "woman"
+      ],
+      "correct": 1,
+      "explanation": "'Woman' is an irregular noun; its plural is 'women'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-003",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "Choose the correctly spelled word:",
+      "options": [
+        "recieve",
+        "receive",
+        "receeve",
+        "receve"
+      ],
+      "correct": 1,
+      "explanation": "'Receive' follows the rule 'i before e except after c'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-004",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "She ___ a letter to her friend yesterday.",
+      "options": [
+        "write",
+        "writes",
+        "wrote",
+        "written"
+      ],
+      "correct": 2,
+      "explanation": "'Yesterday' requires the simple past tense 'wrote'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-005",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "An antonym of 'difficult' is:",
+      "options": [
+        "hard",
+        "easy",
+        "tough",
+        "complex"
+      ],
+      "correct": 1,
+      "explanation": "'Easy' is the direct opposite of 'difficult'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-006",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "He is ___ honest man. Choose the correct article:",
+      "options": [
+        "a",
+        "an",
+        "the",
+        "no article"
+      ],
+      "correct": 1,
+      "explanation": "'Honest' begins with a silent 'h', so the article 'an' is used.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-007",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "The word 'quickly' is an:",
+      "options": [
+        "adjective",
+        "adverb",
+        "noun",
+        "preposition"
+      ],
+      "correct": 1,
+      "explanation": "'Quickly' describes how an action is performed, making it an adverb.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-008",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "Complete: The weather is ___ today than yesterday.",
+      "options": [
+        "good",
+        "better",
+        "best",
+        "well"
+      ],
+      "correct": 1,
+      "explanation": "The comparative form 'better' is used with 'than'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-009",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Bees play an essential role in agriculture by pollinating crops. Without bees, the yields of many fruits and vegetables would decline sharply. Beekeepers move their hives across regions to coincide with flowering seasons. According to the passage, bees contribute to agriculture by:",
+      "options": [
+        "producing honey only",
+        "pollinating crops",
+        "controlling pests",
+        "improving soil fertility"
+      ],
+      "correct": 1,
+      "explanation": "The passage states bees 'pollinating crops' is their essential agricultural role.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-010",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "Choose the word most similar in meaning to 'fragile':",
+      "options": [
+        "strong",
+        "delicate",
+        "rough",
+        "heavy"
+      ],
+      "correct": 1,
+      "explanation": "'Fragile' means easily broken; 'delicate' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-011",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Neither the manager nor the employees ___ satisfied with the decision.",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "has"
+      ],
+      "correct": 1,
+      "explanation": "With 'neither...nor', the verb agrees with the nearer subject 'employees' (plural), so 'were' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-012",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence:",
+      "options": [
+        "The team are playing well today.",
+        "The team is playing well today.",
+        "The team were play well today.",
+        "The team playing well today."
+      ],
+      "correct": 1,
+      "explanation": "'Team' is a collective noun taking a singular verb in standard English: 'the team is playing'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-013",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "The Karakoram Highway, completed in 1978, links Pakistan with China across the Karakoram mountains. It is one of the highest paved roads in the world, crossing the Khunjerab Pass at about 4,700 metres. The Karakoram Highway connects Pakistan with:",
+      "options": [
+        "India",
+        "Afghanistan",
+        "China",
+        "Iran"
+      ],
+      "correct": 2,
+      "explanation": "The passage states the highway links Pakistan with China.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-014",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "The opposite of 'permanent' is:",
+      "options": [
+        "temporary",
+        "lasting",
+        "stable",
+        "constant"
+      ],
+      "correct": 0,
+      "explanation": "'Temporary' is the direct opposite of 'permanent'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-015",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "If he had studied harder, he ___ the exam.",
+      "options": [
+        "would pass",
+        "would have passed",
+        "will pass",
+        "passes"
+      ],
+      "correct": 1,
+      "explanation": "Third conditional: 'if + past perfect, would have + past participle'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-016",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'reluctant':",
+      "options": [
+        "eager",
+        "unwilling",
+        "ready",
+        "certain"
+      ],
+      "correct": 1,
+      "explanation": "'Reluctant' means hesitant or unwilling to do something.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-017",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "Choose the word most nearly opposite in meaning to 'verbose':",
+      "options": [
+        "lengthy",
+        "concise",
+        "talkative",
+        "detailed"
+      ],
+      "correct": 1,
+      "explanation": "'Verbose' means using more words than needed; 'concise' means brief and to the point.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-018",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "hard",
+      "stem": "Recent studies suggest that regular physical exercise improves not only cardiovascular health but also cognitive function, particularly memory and attention. The effect appears strongest when exercise is sustained over months rather than weeks. According to the passage, the cognitive benefits of exercise:",
+      "options": [
+        "appear immediately after a single session",
+        "are strongest when exercise continues over months",
+        "only affect cardiovascular health",
+        "have been disproved by recent studies"
+      ],
+      "correct": 1,
+      "explanation": "The passage states the cognitive benefits 'appear strongest when exercise is sustained over months'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-019",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "hard",
+      "stem": "Choose the correct sentence with subject–verb agreement:",
+      "options": [
+        "Each of the students have submitted their assignment.",
+        "Each of the students has submitted the assignment.",
+        "Each of the student has submitted the assignment.",
+        "Each students has submitted the assignment."
+      ],
+      "correct": 1,
+      "explanation": "'Each of the' takes a plural noun but a singular verb: 'has submitted'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    },
+    {
+      "id": "pieas-eng-020",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "The manager's decision was arbitrary. 'Arbitrary' most nearly means:",
+      "options": [
+        "carefully reasoned",
+        "based on random choice",
+        "well documented",
+        "legally required"
+      ],
+      "correct": 1,
+      "explanation": "'Arbitrary' means based on random choice or personal whim rather than reason.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.pieas.edu.pk/Admissions/BS.html"
+      ]
+    }
+  ]
+}

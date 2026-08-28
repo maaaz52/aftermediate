@@ -19,9 +19,13 @@ create table if not exists public.profiles (
   budget text,
   quiz jsonb default '{}'::jsonb,
   quiz_completed_at timestamptz,
+  practice jsonb default '[]'::jsonb,
   created_at timestamptz default now(),
   updated_at timestamptz default now()
 );
+
+-- Migration for databases created before the Self Assessment feature:
+-- alter table public.profiles add column if not exists practice jsonb default '[]'::jsonb;
 
 -- Saved plans (roadmaps a user saves)
 create table if not exists public.saved_plans (

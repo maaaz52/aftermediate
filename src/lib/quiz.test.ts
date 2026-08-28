@@ -27,6 +27,7 @@ function blank(): StudentProfile {
     quiz: {},
     quizStep: 0,
     quizCompletedAt: null,
+    practice: [],
   };
 }
 

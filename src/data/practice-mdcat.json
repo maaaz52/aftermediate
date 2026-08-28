@@ -1,0 +1,3479 @@
+{
+  "testId": "mdcat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Assembled August 2026. PM&DC publishes the curriculum but no reusable past papers for recent cycles, so this bank is original practice questions written strictly to the PM&DC Uniform Curriculum (final, May 2025) topic lists, replicating the official 180-MCQ distribution (Biology 81, Chemistry 45, Physics 36, English 9, Logical Reasoning 9) over the full 180 minutes. Every question is labeled practice. Not affiliated with PM&DC.",
+    "sources": [
+      "https://pmdc.pk/",
+      "https://pmdc.pk/Publication/Syllabus",
+      "https://mdcat.pmdc.pk"
+    ]
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 180,
+    "note": "180 MCQs, 180 marks, no negative marking (PM&DC MDCAT pattern)."
+  },
+  "benchmarks": [
+    {
+      "label": "MBBS qualifying (2025 cycle)",
+      "percent": 55
+    },
+    {
+      "label": "BDS qualifying (2025 cycle)",
+      "percent": 50
+    }
+  ],
+  "sections": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "questionCount": 81
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 45
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 36
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 9
+    },
+    {
+      "id": "logic",
+      "name": "Logical Reasoning",
+      "questionCount": 9
+    }
+  ],
+  "questions": [
+    {
+      "id": "mdcat-bio-001",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Which organelle is the main site of aerobic respiration and of ATP synthesis in a eukaryotic cell?",
+      "options": [
+        "Ribosome",
+        "Mitochondrion",
+        "Golgi apparatus",
+        "Lysosome"
+      ],
+      "correct": 1,
+      "explanation": "The mitochondrion carries out the Krebs cycle and electron transport on its matrix and inner membrane, so it supplies most of the cell's ATP. Ribosomes make protein, the Golgi packages it and lysosomes digest material.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-002",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Enzymes speed up biological reactions mainly because they",
+      "options": [
+        "make an endergonic reaction become exergonic",
+        "supply the substrate with extra kinetic energy",
+        "increase the activation energy of the reverse reaction only",
+        "lower the activation energy that reacting molecules must acquire"
+      ],
+      "correct": 3,
+      "explanation": "A catalyst provides an alternative route of lower activation energy; it does not alter the free-energy change of the reaction and is not used up.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-003",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Modification, concentration, packaging and dispatch of proteins for secretion or for lysosomes is the main function of the",
+      "options": [
+        "nucleolus",
+        "rough endoplasmic reticulum",
+        "Golgi apparatus",
+        "free cytoplasmic ribosome"
+      ],
+      "correct": 2,
+      "explanation": "The Golgi cisternae receive transport vesicles from the endoplasmic reticulum, modify the proteins (for example by adding carbohydrate) and pin off secretory vesicles.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-004",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "In the fluid mosaic model of the plasma membrane, the word mosaic refers mainly to",
+      "options": [
+        "the two phospholipid layers arranged tail to tail",
+        "the irregular pattern of protein molecules embedded in and attached to the lipid bilayer",
+        "the cholesterol molecules lying between the hydrocarbon tails",
+        "the carbohydrate chains present only on the outer surface"
+      ],
+      "correct": 1,
+      "explanation": "Integral and peripheral proteins of many shapes and sizes are scattered through the bilayer like pieces of a mosaic, while the lipids and most proteins drift laterally (fluid).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-005",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "A leaf epidermal cell is placed in concentrated sodium chloride solution and its protoplast shrinks away from the wall. The correct explanation is that",
+      "options": [
+        "water leaves the cell by osmosis, the vacuole shrinks and the plasma membrane pulls away from the rigid wall",
+        "salt enters the cell and dissolves the cellulose wall",
+        "the cell wall contracts as its turgor pressure falls to zero",
+        "the cytoplasm sets into a solid gel in the strong salt solution"
+      ],
+      "correct": 0,
+      "explanation": "In a hypertonic medium the cell loses water and plasmolyses. The fully permeable, inelastic wall keeps its shape, so it is the protoplast that shrinks.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-006",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Which process moves dissolved substances across a membrane against their concentration gradient?",
+      "options": [
+        "Osmosis through a partially permeable membrane",
+        "Active transport coupled to ATP hydrolysis",
+        "Facilitated diffusion through a channel protein",
+        "Filtration under hydrostatic pressure"
+      ],
+      "correct": 1,
+      "explanation": "Only active transport uses metabolic energy (usually ATP) to pump solutes uphill; diffusion, osmosis and filtration are all downhill and passive.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-007",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Which lipid is the principal structural component of every cell membrane?",
+      "options": [
+        "Triglyceride",
+        "Phospholipid",
+        "Wax",
+        "Steroid such as cholesterol"
+      ],
+      "correct": 1,
+      "explanation": "Amphipathic phospholipids form the continuous bilayer that is the framework of all membranes; cholesterol is inserted between the tails in animal membranes but triglycerides, waxes and steroids do not form bilayers.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-008",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "The activity of an enzyme falls sharply when the temperature is raised well above its optimum because",
+      "options": [
+        "the substrate molecules are destroyed by the heat",
+        "the enzyme is converted into a different protein",
+        "the active site is permanently blocked by the product",
+        "hydrogen bonds and other weak bonds of the tertiary structure break, so the active site loses its shape"
+      ],
+      "correct": 3,
+      "explanation": "Heat breaks the weak bonds that hold the enzyme's three-dimensional shape; the active site is distorted, substrate no longer fits and the enzyme is denatured.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-009",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "During which phase of mitosis do the centromeres divide and the sister chromatids move towards opposite poles?",
+      "options": [
+        "Prophase",
+        "Metaphase",
+        "Anaphase",
+        "Telophase"
+      ],
+      "correct": 2,
+      "explanation": "Anaphase is the moving-apart stage; in metaphase the chromosomes are aligned at the equator and in telophase the nuclear envelopes re-form.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-010",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "After a cell is damaged or dies, its own proteins and organelles are digested by hydrolytic enzymes released from the",
+      "options": [
+        "peroxisomes",
+        "ribosomes",
+        "centrioles",
+        "lysosomes"
+      ],
+      "correct": 3,
+      "explanation": "Lysosomes contain acid hydrolases; their rupture brings about autolysis, and they also digest material taken in by phagocytosis or by autophagy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-011",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "Which of the following is found in a bacterial cell but not in a human white blood cell?",
+      "options": [
+        "Circular DNA lying free in a nucleoid region",
+        "A cell membrane",
+        "Cytoplasm",
+        "Ribosomes"
+      ],
+      "correct": 0,
+      "explanation": "Prokaryotes have no nuclear envelope, their genome being a naked circular molecule in a nucleoid. Both cell types do possess a membrane, cytoplasm and ribosomes (70S in bacteria, 80S in humans).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-012",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "hard",
+      "stem": "For each molecule of ATP hydrolysed, the sodium-potassium pump of a nerve cell membrane transfers",
+      "options": [
+        "3 sodium ions out of the axoplasm and 2 potassium ions into it",
+        "2 sodium ions out and 3 potassium ions in",
+        "3 sodium ions in and 2 potassium ions out",
+        "1 sodium ion out in exchange for 1 potassium ion in"
+      ],
+      "correct": 0,
+      "explanation": "The Na+/K+-ATPase is electrogenic: 3 Na+ are pumped out for every 2 K+ taken in, using one ATP, which helps maintain the resting potential.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-013",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "Which pair of organelles provides the strongest support for the endosymbiotic theory?",
+      "options": [
+        "Golgi apparatus and lysosomes",
+        "Endoplasmic reticulum and ribosomes",
+        "Mitochondria and chloroplasts",
+        "Nucleus and contractile vacuole"
+      ],
+      "correct": 2,
+      "explanation": "Mitochondria and chloroplasts have their own circular DNA, their own 70S-type ribosomes, double membranes and divide independently, all signs of free-living ancestors.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-014",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "hard",
+      "stem": "A cell of the adrenal cortex that is specialised for synthesising steroid hormones would be expected to contain an especially abundant",
+      "options": [
+        "rough endoplasmic reticulum studded with ribosomes",
+        "population of free ribosomes in polysomes",
+        "smooth endoplasmic reticulum",
+        "number of lysosomes"
+      ],
+      "correct": 2,
+      "explanation": "The enzymes that build steroid (lipid) molecules are membrane-bound enzymes of the smooth ER, so steroid-secreting cells of the adrenal cortex and the testis are rich in it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-015",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Which nitrogenous base occurs in RNA but not in DNA?",
+      "options": [
+        "Adenine",
+        "Cytosine",
+        "Thymine",
+        "Uracil"
+      ],
+      "correct": 3,
+      "explanation": "RNA replaces thymine with uracil, which pairs with adenine; adenine, guanine and cytosine are common to both nucleic acids.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-016",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "hard",
+      "stem": "A competitive inhibitor reduces the velocity of an enzyme-catalysed reaction because it",
+      "options": [
+        "binds to the substrate molecule and prevents it reaching the enzyme",
+        "binds to a site other than the active site and changes the enzyme's shape",
+        "hydrolyses the enzyme at very low inhibitor concentration",
+        "occupies the active site, so its effect can be overcome by raising the substrate concentration"
+      ],
+      "correct": 3,
+      "explanation": "A competitive inhibitor is usually substrate-like and reversibly blocks the active site; enough substrate out-competes it, so Vmax is still reached and only Km rises.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-017",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "The carbohydrate chains of glycoproteins and glycolipids on the outer face of the plasma membrane function mainly in",
+      "options": [
+        "forming the permeability barrier of the membrane",
+        "storing glucose for later respiration",
+        "catalysing reactions inside the cytoplasm",
+        "cell recognition and cell-to-cell communication"
+      ],
+      "correct": 3,
+      "explanation": "The glycocalyx acts as an identification system, as in antigens of the ABO and tissue types and as receptors for hormones; the barrier function belongs to the bilayer itself.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-018",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "medium",
+      "stem": "Which pair of substances is built entirely from amino-acid units?",
+      "options": [
+        "Glycogen and cellulose",
+        "Testosterone and oestradiol",
+        "Haemoglobin and insulin",
+        "DNA and RNA"
+      ],
+      "correct": 2,
+      "explanation": "Haemoglobin and insulin are both proteins, so their monomers are amino acids. Glycogen and cellulose are polysaccharides of glucose, the steroids are lipids and the nucleic acids are polymers of nucleotides.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-019",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "hard",
+      "stem": "A food sample gives a blue-black colour with iodine solution, stays blue with Benedict's reagent on heating, and turns violet with Biuret reagent. The sample contains",
+      "options": [
+        "glucose and protein",
+        "starch and protein",
+        "starch only",
+        "protein only"
+      ],
+      "correct": 1,
+      "explanation": "Iodine blue-black proves starch and Biuret violet proves protein, while the unchanged blue of Benedict's shows no reducing sugar is present.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-020",
+      "section": "biology",
+      "topic": "Cell structure and biological molecules",
+      "difficulty": "easy",
+      "stem": "Replication of DNA takes place during which stage of the cell cycle?",
+      "options": [
+        "G1 phase",
+        "Prophase",
+        "S phase",
+        "G2 phase"
+      ],
+      "correct": 2,
+      "explanation": "Synthesis phase of interphase is when each chromosome is duplicated into two chromatids; G1 and G2 are growth gaps and in prophase the chromosomes merely condense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-021",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "Crossing over between non-sister chromatids of a homologous pair takes place during",
+      "options": [
+        "Prophase II of meiosis",
+        "Prophase I of meiosis",
+        "Anaphase of mitosis",
+        "Metaphase I of meiosis"
+      ],
+      "correct": 1,
+      "explanation": "Chiasmata form when homologues synapse in prophase I and exchange segments; meiosis II and mitosis involve no pairing of homologues.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-022",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "The final result of meiosis in a germ cell is",
+      "options": [
+        "two diploid daughter cells",
+        "two haploid daughter cells",
+        "four diploid daughter cells",
+        "four haploid daughter cells"
+      ],
+      "correct": 3,
+      "explanation": "One replication is followed by two divisions, so a diploid cell yields four genetically different haploid cells (sperm, or one ovum plus polar bodies).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-023",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "The semi-conservative replication of DNA was demonstrated by the density-labelling experiment using heavy nitrogen (15N) performed by",
+      "options": [
+        "Meselson and Stahl",
+        "Watson and Crick",
+        "Morgan and Muller",
+        "Hershey and Chase"
+      ],
+      "correct": 0,
+      "explanation": "Meselson and Stahl grew E. coli in 15N then transferred it to 14N and followed the hybrid bands of DNA in a caesium chloride gradient. Hershey and Chase proved DNA is the genetic material of a phage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-024",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "There are 64 possible codons but only 20 amino acids. How many codons specify amino acids?",
+      "options": [
+        "20",
+        "61",
+        "64",
+        "3"
+      ],
+      "correct": 1,
+      "explanation": "Three codons (UAA, UAG and UGA) are stop signals that code for no amino acid, leaving 61 sense codons; the code is degenerate because several codons share one amino acid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-025",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "The enzyme that synthesises messenger RNA using a DNA template is",
+      "options": [
+        "DNA-dependent RNA polymerase",
+        "DNA-dependent DNA polymerase",
+        "RNA-dependent DNA polymerase",
+        "DNA ligase"
+      ],
+      "correct": 0,
+      "explanation": "During transcription, RNA polymerase reads the template strand and builds a complementary RNA chain. Reverse transcriptase (RNA-dependent DNA polymerase) works the other way in retroviruses.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-026",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "A test cross, used to find the genotype of an organism showing a dominant phenotype, is a mating with",
+      "options": [
+        "a homozygous dominant individual",
+        "another individual with the same phenotype",
+        "a heterozygous individual",
+        "a homozygous recessive individual"
+      ],
+      "correct": 3,
+      "explanation": "Only a homozygous recessive partner reveals hidden recessive alleles: a dominant parent gives all dominant offspring if homozygous but a 1:1 ratio if heterozygous.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-027",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "The phenotypic ratio in the F2 generation of a Mendelian monohybrid cross with complete dominance is",
+      "options": [
+        "3:1",
+        "1:2:1",
+        "9:3:3:1",
+        "1:1"
+      ],
+      "correct": 0,
+      "explanation": "F1 heterozygotes selfed give 3 dominant to 1 recessive in phenotype but 1:2:1 in genotype. A 9:3:3:1 ratio belongs to a dihybrid cross.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-028",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "hard",
+      "stem": "A man with X-linked red-green colour blindness marries a woman with normal vision who is homozygous for the normal allele. Which statement about their children is correct?",
+      "options": [
+        "All their sons will be colour-blind",
+        "All their daughters will be carriers with normal vision and all their sons will have normal vision",
+        "Half their daughters will be colour-blind",
+        "None of their children can carry the colour-blindness allele"
+      ],
+      "correct": 1,
+      "explanation": "The father passes his affected X to every daughter, making them XN Xc carriers with normal vision, and his Y to his sons, who receive a normal X from their mother. Daughters can, however, pass the allele on.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-029",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "Analysis of the DNA of a bacterium shows that adenine makes up 30 per cent of its bases. What percentage of the bases is guanine?",
+      "options": [
+        "70%",
+        "40%",
+        "30%",
+        "20%"
+      ],
+      "correct": 3,
+      "explanation": "By Chargaff's rule A = T = 30 per cent each, so the remaining 40 per cent is G + C and G = C = 20 per cent.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-030",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "The reduction of the chromosome number to half takes place at",
+      "options": [
+        "Anaphase of mitosis",
+        "Anaphase I of meiosis",
+        "Anaphase II of meiosis",
+        "Metaphase II of meiosis"
+      ],
+      "correct": 1,
+      "explanation": "At anaphase I whole homologues separate while their sister chromatids remain joined, so the nuclei produced after meiosis I are already haploid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-031",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "Sickle-cell haemoglobin differs from normal haemoglobin because valine replaces glutamic acid at the sixth position of the beta chain. The underlying mutation is a",
+      "options": [
+        "substitution of a single base pair in the coding region of the globin gene",
+        "crossing over between homologous chromosomes",
+        "loss of one chromosome during meiosis",
+        "fusion of two chromosomes at the centromere"
+      ],
+      "correct": 0,
+      "explanation": "A gene (point) mutation changes the codon GAG to GUG in the beta-globin DNA, so the messenger RNA specifies valine; neither the number nor the general structure of the chromosomes changes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-032",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "The forelimbs of a whale, a bat and a human contain the same basic arrangement of bones yet are used for swimming, flying and grasping. They are",
+      "options": [
+        "analogous organs showing convergent evolution",
+        "homologous organs showing divergent evolution",
+        "vestigial organs without any function",
+        "acquired characters passed on to the next generation"
+      ],
+      "correct": 1,
+      "explanation": "Same structure, different function and a common ancestor define homology and divergent evolution; analogous organs such as the wing of a bird and the wing of an insect have different structure but similar function.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-033",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "hard",
+      "stem": "In a large population in Hardy-Weinberg equilibrium the frequency of a recessive allele q is 0.2. What is the expected frequency of heterozygous individuals?",
+      "options": [
+        "0.04",
+        "0.16",
+        "0.32",
+        "0.64"
+      ],
+      "correct": 2,
+      "explanation": "With p = 0.8 and q = 0.2 the heterozygote frequency is 2pq = 2 x 0.8 x 0.2 = 0.32. The 0.04 value is q squared, the homozygous recessives.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-034",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "In chromatin the DNA double helix is coiled around a core of eight histone molecules; this repeating packing unit is the",
+      "options": [
+        "centromere",
+        "chromatid",
+        "codon",
+        "nucleosome"
+      ],
+      "correct": 3,
+      "explanation": "The nucleosome is the basic unit of DNA packing, with linker DNA running from one histone core to the next.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-035",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "The initiator codon on messenger RNA is 5'-AUG-3'. The anticodon of the transfer RNA that carries methionine is",
+      "options": [
+        "3'-UAC-5'",
+        "3'-TAC-5'",
+        "5'-AUG-3'",
+        "5'-CAU-3'"
+      ],
+      "correct": 0,
+      "explanation": "Codon and anticodon are complementary and antiparallel and RNA uses uracil, so UAC pairs with AUG. TAC is the DNA triplet of the template strand, which is the usual trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-036",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "A man of blood group AB marries a woman of blood group O. Which blood groups can their children have?",
+      "options": [
+        "Group AB only",
+        "Group O only",
+        "Group A or group B only",
+        "Any of the four ABO groups"
+      ],
+      "correct": 2,
+      "explanation": "The father gives either I(A) or I(B) and the mother always gives i, so the children are I(A)i (group A) or I(B)i (group B); groups AB and O cannot appear.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-037",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "medium",
+      "stem": "Non-disjunction of the sex chromosomes can produce a child with the karyotype 47, XXY. This individual is male and shows",
+      "options": [
+        "Down syndrome",
+        "Turner syndrome",
+        "Klinefelter syndrome",
+        "Haemophilia A"
+      ],
+      "correct": 2,
+      "explanation": "An extra X in a male gives Klinefelter syndrome with small testes and usually sterility; Turner syndrome is the 45, X0 female and Down syndrome is trisomy of chromosome 21.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-038",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "easy",
+      "stem": "In industrial areas of England the dark melanic form of the peppered moth Biston betularia replaced the pale form on soot-blackened tree trunks. This is an example of",
+      "options": [
+        "stabilising selection that keeps the intermediate form",
+        "disruptive selection favouring both extremes",
+        "sexual selection for darker wings",
+        "directional selection favouring one extreme of the variation"
+      ],
+      "correct": 3,
+      "explanation": "Birds removed the conspicuous pale moths, so survival favoured one extreme and the gene pool shifted toward the dark form.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-039",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "hard",
+      "stem": "Albinism is an autosomal recessive condition. Two normally pigmented heterozygous parents have three children. What is the probability that all three children are albino?",
+      "options": [
+        "1/64",
+        "1/8",
+        "1/4",
+        "3/4"
+      ],
+      "correct": 0,
+      "explanation": "Each birth independently has a 1/4 chance of being aa, so three affected children have probability (1/4) cubed = 1/64.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-040",
+      "section": "biology",
+      "topic": "Inheritance, genes and evolution",
+      "difficulty": "hard",
+      "stem": "The two genes A/a and B/b assort independently. In the progeny of the cross AaBb x AaBb, what proportion are heterozygous for both genes?",
+      "options": [
+        "1/16",
+        "1/4",
+        "1/8",
+        "9/16"
+      ],
+      "correct": 1,
+      "explanation": "Aa x Aa gives 1/2 Aa and Bb x Bb gives 1/2 Bb, so by the product rule 1/2 x 1/2 = 1/4 of the offspring are AaBb. The 9/16 value is the double-dominant phenotype.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-041",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Which structure normally acts as the pacemaker of the human heart?",
+      "options": [
+        "Atrio-ventricular node",
+        "Purkinje fibres",
+        "Bundle of His",
+        "Sinoatrial node"
+      ],
+      "correct": 3,
+      "explanation": "The sinoatrial node in the wall of the right atrium fires spontaneously about 70 times a minute and the wave of excitation then passes to the AV node; the AV node can pace only as a slower back-up.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-042",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Oxygenated blood is conveyed from the lungs to the left atrium by the",
+      "options": [
+        "pulmonary artery",
+        "superior vena cava",
+        "pulmonary vein",
+        "hepatic portal vein"
+      ],
+      "correct": 2,
+      "explanation": "The pulmonary veins are the only veins carrying oxygen-rich blood; the pulmonary artery takes deoxygenated blood away from the heart to the lungs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-043",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Which formed element of blood initiates clotting by adhering to damaged endothelium and aggregating at a wound?",
+      "options": [
+        "Erythrocytes",
+        "Platelets",
+        "Neutrophils",
+        "Monocytes"
+      ],
+      "correct": 1,
+      "explanation": "Platelets, fragments of megakaryocytes, form the temporary plug and release thromboplastin that starts the cascade converting prothrombin into thrombin.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-044",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "The guard valve between the left atrium and the left ventricle is the",
+      "options": [
+        "bicuspid (mitral) valve",
+        "tricuspid valve",
+        "semilunar valve of the aorta",
+        "semilunar valve of the pulmonary artery"
+      ],
+      "correct": 0,
+      "explanation": "The left auriculo-ventricular aperture has two cusps and is called bicuspid or mitral; the tricuspid valve guards the right aperture and the semilunar valves lie at the roots of the aorta and pulmonary artery.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-045",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "The wall of the left ventricle is much thicker than that of the right ventricle because the left ventricle",
+      "options": [
+        "receives blood from the lungs at high pressure",
+        "pumps blood into the low-resistance pulmonary circuit",
+        "must generate the high pressure needed to drive blood through the systemic circuit",
+        "contains more oxygen than the right ventricle"
+      ],
+      "correct": 2,
+      "explanation": "The greater muscle mass of the left wall produces the higher systolic pressure needed to push blood around the whole body, whereas the right ventricle only serves the nearby lungs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-046",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "If the stroke volume is 70 cm3 and the heart rate is 72 beats per minute, the cardiac output is approximately",
+      "options": [
+        "5 dm3 per minute",
+        "50 dm3 per minute",
+        "100 cm3 per minute",
+        "1.4 dm3 per minute"
+      ],
+      "correct": 0,
+      "explanation": "Cardiac output = stroke volume x heart rate = 70 x 72 = 5040 cm3 per minute, about 5 dm3, the normal resting value.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-047",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Most of the oxygen carried in human blood is present as",
+      "options": [
+        "bicarbonate ions in the plasma",
+        "oxygen dissolved freely in the plasma",
+        "oxyhaemoglobin inside red blood cells",
+        "carbamino compounds in the plasma"
+      ],
+      "correct": 2,
+      "explanation": "Oxygen combines reversibly with the iron of haemoglobin within erythrocytes; only some 2 to 3 per cent is dissolved in plasma.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-048",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Exchange of oxygen and carbon dioxide between air and blood takes place across the thin walls of the",
+      "options": [
+        "trachea",
+        "alveoli",
+        "primary bronchi",
+        "pleural cavity"
+      ],
+      "correct": 1,
+      "explanation": "Alveoli offer a vast moist epithelial surface closely opposed to the pulmonary capillaries; the conducting passages are far too thick for diffusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-049",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "During inspiration in a resting person",
+      "options": [
+        "the diaphragm contracts and flattens, the thoracic volume increases and air rushes in",
+        "the diaphragm domes upward and air is expelled",
+        "the internal intercostal muscles contract and the ribs move downward",
+        "the thoracic volume decreases so the pressure inside rises above atmospheric"
+      ],
+      "correct": 0,
+      "explanation": "Contraction of the diaphragm and of the external intercostals enlarges the chest cavity, intrapulmonary pressure falls below atmospheric and air flows in.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-050",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "About seven-tenths of the carbon dioxide transported in the blood is carried as",
+      "options": [
+        "carbamino compounds bound to haemoglobin",
+        "carbon dioxide dissolved in the plasma",
+        "carbonic acid inside the red cells",
+        "bicarbonate ions dissolved in the plasma"
+      ],
+      "correct": 3,
+      "explanation": "Carbonic anhydrase of the red cell forms carbonic acid which at once dissociates; the bicarbonate ions diffuse out into plasma with the chloride shift and account for roughly 70 per cent of the CO2 transported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-051",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "hard",
+      "stem": "The breathing rate rises steeply during heavy muscular exercise mainly because",
+      "options": [
+        "the oxygen shortage in the muscles acts directly on the diaphragm",
+        "the vagus nerve to the heart is cut off completely at once",
+        "rising carbon dioxide and the resulting fall in pH of the cerebrospinal fluid stimulate the respiratory centre of the medulla",
+        "the stretch receptors of the lungs inhibit the pneumotaxic centre"
+      ],
+      "correct": 2,
+      "explanation": "Central chemoreceptors of the medulla are the dominant control: CO2 crosses into the cerebrospinal fluid, forms carbonic acid and the hydrogen ions excite the respiratory centre. Falling oxygen is only a weak stimulus acting through the carotid and aortic bodies.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-052",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "Bile, which emulsifies fat in the duodenum, is produced by the",
+      "options": [
+        "gall bladder",
+        "liver",
+        "pancreas",
+        "glands of the caecum"
+      ],
+      "correct": 1,
+      "explanation": "Hepatic cells secrete bile, which is then stored and concentrated in the gall bladder; bile contains bile salts and pigment but no enzyme.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-053",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "Pepsin of the gastric juice hydrolyses proteins most rapidly at a pH of about",
+      "options": [
+        "8.5",
+        "1.5 to 2",
+        "7.0",
+        "11"
+      ],
+      "correct": 1,
+      "explanation": "Pepsin is an acid protease with an optimum near pH 2, maintained by hydrochloric acid; the alkaline pH 8 values suit trypsin in the duodenum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-054",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "The products of fat digestion, fatty acids and glycerol, are absorbed from the small intestine chiefly into the",
+      "options": [
+        "blood capillaries of the villus",
+        "epithelial cells of the stomach wall",
+        "lacteal of the villus",
+        "columnar cells of the gall bladder"
+      ],
+      "correct": 2,
+      "explanation": "After resynthesis into protein-coated fat droplets in the epithelium, the lipids enter the blind-ended lymphatic lacteal of the villus, whereas glucose and amino acids enter the blood capillaries.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-055",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "Glucose and amino acids absorbed from the ileum are carried by the blood first to the",
+      "options": [
+        "heart",
+        "kidney",
+        "brain",
+        "liver, by the hepatic portal vein"
+      ],
+      "correct": 3,
+      "explanation": "The hepatic portal vein drains the gut to the liver, where excess glucose is converted to glycogen and amino acids are deaminated before the blood returns to the heart.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-056",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "The urea found in mammalian blood plasma is formed mainly by",
+      "options": [
+        "deamination of excess amino acids in liver cells",
+        "breakdown of uric acid in the kidney",
+        "putrefaction of undigested protein in the colon",
+        "hydrolysis of nucleotides in the blood plasma"
+      ],
+      "correct": 0,
+      "explanation": "Amino acids that cannot be stored are deaminated in the liver; the ammonia is converted to urea by the ornithine cycle and the rest of the molecule is oxidised or turned to glucose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-057",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "The structural and functional unit of the mammalian kidney is the",
+      "options": [
+        "glomerulus",
+        "nephron",
+        "neuron",
+        "ureter"
+      ],
+      "correct": 1,
+      "explanation": "Each nephron carries out ultrafiltration at Bowman's capsule and selective reabsorption along the tubule; a glomerulus is only its capillary knot.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-058",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "hard",
+      "stem": "Antidiuretic hormone reduces the volume of urine by making the walls of the distal tubules and collecting ducts",
+      "options": [
+        "more permeable to water, because aquaporin channels are inserted into the tubule cell membranes",
+        "less permeable to water",
+        "permeable to sodium ions only",
+        "able to secrete urea actively into the filtrate"
+      ],
+      "correct": 0,
+      "explanation": "ADH from the posterior pituitary causes vesicles carrying aquaporin water channels to fuse with the tubule cell membranes, so water is osmotically reabsorbed into the hypertonic medulla.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-059",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "hard",
+      "stem": "A desert rodent whose kidneys possess very long loops of Henle and long vasa recta would be expected to",
+      "options": [
+        "excrete its nitrogen mainly as uric acid",
+        "produce a large volume of dilute urine",
+        "reabsorb almost no water from the filtrate",
+        "produce a small volume of very concentrated urine"
+      ],
+      "correct": 3,
+      "explanation": "A long loop of Henle creates a steeper medullary osmotic gradient, so more water is withdrawn from the collecting duct and little, concentrated urine is passed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-060",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "easy",
+      "stem": "Which hormone lowers the glucose concentration of the blood after a meal?",
+      "options": [
+        "Glucagon",
+        "Adrenaline",
+        "Insulin",
+        "Cortisol"
+      ],
+      "correct": 2,
+      "explanation": "Insulin from the beta cells of the islets of Langerhans promotes uptake of glucose by liver, muscle and fat cells and its conversion to glycogen; glucagon, adrenaline and cortisol all raise blood glucose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-061",
+      "section": "biology",
+      "topic": "Human physiology",
+      "difficulty": "medium",
+      "stem": "When the environmental temperature is high, the human body increases heat loss mainly by",
+      "options": [
+        "vasoconstriction of the arterioles of the skin",
+        "vasodilation of the skin capillaries and secretion of sweat",
+        "raising the metabolic rate and shivering",
+        "contracting the erector muscles of the hairs"
+      ],
+      "correct": 1,
+      "explanation": "Dilated skin capillaries bring more blood to the surface to radiate and conduct heat, and the evaporation of sweat removes further heat; the other three responses conserve heat in the cold.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-062",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "hard",
+      "stem": "In the central nervous system the myelin sheath round an axon is formed by the",
+      "options": [
+        "Schwann cells",
+        "astrocytes",
+        "oligodendrocytes",
+        "microglia"
+      ],
+      "correct": 2,
+      "explanation": "Oligodendrocytes myelinate central axons, one cell wrapping several fibres, whereas Schwann cells sheath peripheral axons; astrocytes support and microglia phagocytose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-063",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "The neurotransmitter released at the motor end-plate of a neuromuscular junction is",
+      "options": [
+        "acetylcholine",
+        "dopamine",
+        "serotonin",
+        "adrenaline"
+      ],
+      "correct": 0,
+      "explanation": "Synaptic vesicles discharge acetylcholine, which depolarises the sarcolemma and is then split by acetylcholinesterase; the others act at different central synapses.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-064",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "The depolarisation phase of a nerve action potential is caused mainly by",
+      "options": [
+        "efflux of potassium ions through leak channels",
+        "active pumping of sodium ions out of the axon",
+        "influx of sodium ions through voltage-gated channels",
+        "influx of chloride ions into the axon"
+      ],
+      "correct": 2,
+      "explanation": "When threshold is reached the sodium gates open and Na+ rushes in, reversing the potential to about plus 40 mV; potassium efflux afterwards repolarises the membrane.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-065",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "The correct sequence of components in a reflex arc is",
+      "options": [
+        "receptor, motor neuron, relay neuron, sensory neuron, effector",
+        "effector, sensory neuron, relay neuron, motor neuron, receptor",
+        "receptor, motor neuron, spinal cord, sensory neuron, effector",
+        "receptor, sensory neuron, relay neuron, motor neuron, effector"
+      ],
+      "correct": 3,
+      "explanation": "A stimulus is detected by a receptor, passed in on a sensory neurone, integrated by a connector neurone in the spinal cord and carried out by a motor neurone to an effector.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-066",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "Which hormone lowers the calcium ion concentration of the blood?",
+      "options": [
+        "Calcitonin secreted by the thyroid gland",
+        "Parathyroid hormone",
+        "Aldosterone",
+        "Glucagon"
+      ],
+      "correct": 0,
+      "explanation": "Calcitonin inhibits osteoclast activity so less calcium leaves bone and the blood level falls; parathyroid hormone is its antagonist and raises blood calcium.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-067",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "Which hormone brings about the fight-or-flight responses of increased heart rate, bronchodilation and glycogen breakdown?",
+      "options": [
+        "Insulin",
+        "Oxytocin",
+        "Adrenaline",
+        "Melatonin"
+      ],
+      "correct": 2,
+      "explanation": "Adrenaline (epinephrine) from the adrenal medulla is released during stress and prepares the body for sudden action.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-068",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "The region of the brain that contains the centres for temperature regulation, hunger and thirst, that controls water balance and that directs the pituitary gland is the",
+      "options": [
+        "cerebellum",
+        "medulla oblongata",
+        "thalamus",
+        "hypothalamus"
+      ],
+      "correct": 3,
+      "explanation": "The hypothalamus is the homeostatic control centre and links nervous and endocrine systems through the hypophyseal portal system to the pituitary.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-069",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "hard",
+      "stem": "Accommodation of the human eye for near vision involves",
+      "options": [
+        "the suspensory ligaments slackening while the ciliary muscles relax",
+        "contraction of the ciliary muscles, slackening of the suspensory ligaments and a more convex lens",
+        "relaxation of the ciliary muscles with tightening of the ligaments and a flatter lens",
+        "contraction of the dilator muscle of the iris"
+      ],
+      "correct": 1,
+      "explanation": "The ciliary body forms a ring of smooth muscle; when it contracts the ligaments go slack and the elastic lens rounds up, increasing its refracting power for a near object.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-070",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "In the male reproductive system, sperm complete their maturation and are stored in the",
+      "options": [
+        "vas deferens",
+        "seminal vesicle",
+        "prostate gland",
+        "epididymis"
+      ],
+      "correct": 3,
+      "explanation": "Sperm produced in the seminiferous tubules pass into the coiled epididymis, where they gain motility and fertilising ability before the vas deferens carries them away.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-071",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "Ovulation of the secondary oocyte from the mature Graafian follicle is triggered by the mid-cycle surge of",
+      "options": [
+        "follicle-stimulating hormone",
+        "luteinising hormone",
+        "progesterone",
+        "oestrogen"
+      ],
+      "correct": 1,
+      "explanation": "Rising oestrogen from the growing follicle finally stimulates a sudden output of LH from the anterior pituitary, and the LH surge about a day before ovulation ruptures the follicle.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-072",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "Fertilisation of the human ovum by a sperm normally takes place in the",
+      "options": [
+        "uterus",
+        "ovary",
+        "ampullary region of the oviduct",
+        "fundus of the uterus"
+      ],
+      "correct": 2,
+      "explanation": "Sperm meet the secondary oocyte in the oviduct; the zygote then implants in the prepared endometrium several days later.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-073",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "Which hormone maintains the thick, vascular endometrium during pregnancy and inhibits further ovulation, being secreted at first by the corpus luteum and later by the placenta?",
+      "options": [
+        "Oestrogen",
+        "Human chorionic gonadotropin",
+        "Relaxin",
+        "Progesterone"
+      ],
+      "correct": 3,
+      "explanation": "Progesterone is the hormone of pregnancy; it keeps the endometrium intact, and by suppressing FSH and LH it prevents a new cycle. Human chorionic gonadotropin only rescues the corpus luteum early on.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-074",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "Antibodies circulating in the blood plasma are secreted by",
+      "options": [
+        "macrophages",
+        "helper T cells",
+        "plasma cells",
+        "natural killer cells"
+      ],
+      "correct": 2,
+      "explanation": "Activated B lymphocytes divide and differentiate into plasma cells, which are antibody factories; helper T cells coordinate the response but do not secrete antibody themselves.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-075",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "hard",
+      "stem": "The class of immunoglobulin that crosses the placenta and gives the unborn baby passive natural immunity is",
+      "options": [
+        "IgM",
+        "IgA",
+        "IgE",
+        "IgG"
+      ],
+      "correct": 3,
+      "explanation": "Only IgG passes the placental barrier; IgM is the first antibody of a primary response and is too large, IgA is passed in milk and IgE mediates allergic reactions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-076",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "Immunisation of a child with a polio vaccine gives the child",
+      "options": [
+        "active artificial immunity",
+        "passive artificial immunity",
+        "passive natural immunity",
+        "active natural immunity"
+      ],
+      "correct": 0,
+      "explanation": "A vaccine stimulates the child's own lymphocytes to make antibody and memory cells, and it is given deliberately, so the immunity is active and artificial; antiserum injection would be passive artificial and maternal antibody passive natural.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-077",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "Restriction endonucleases are indispensable in genetic engineering because they",
+      "options": [
+        "join fragments of DNA into recombinant molecules",
+        "copy a gene from an mRNA template",
+        "cut DNA at particular short recognition sequences, often leaving sticky ends",
+        "force plasmid DNA into bacterial cells"
+      ],
+      "correct": 2,
+      "explanation": "Each enzyme recognises a specific palindrome and cuts at a fixed point, so the same enzyme gives compatible ends on gene and vector that can later be ligated.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-078",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "The polymerase chain reaction can amplify a small DNA sample because each cycle uses",
+      "options": [
+        "reverse transcriptase and ribosomes",
+        "restriction enzymes and DNA ligase",
+        "a bacterial DNA polymerase and a single primer",
+        "a thermostable Taq DNA polymerase, two primers and free deoxynucleotides"
+      ],
+      "correct": 3,
+      "explanation": "Heating denatures the strands, the two primers anneal to opposite ends of the target and Taq polymerase, which survives the denaturation temperature, extends them, doubling the product each cycle.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-079",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "easy",
+      "stem": "Human insulin for diabetics is now produced on an industrial scale by inserting the insulin gene into",
+      "options": [
+        "cultured human pancreatic cells",
+        "Escherichia coli bacteria carrying a recombinant plasmid",
+        "isolated mitochondria",
+        "a virus used to infect the patients"
+      ],
+      "correct": 1,
+      "explanation": "The synthetic gene is cloned into a bacterial expression vector and the transgenic E. coli (or yeast) are grown in a fermenter to make the protein.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-080",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "hard",
+      "stem": "In a recombinant DNA experiment, the bacteria that have actually taken up the plasmid vector are recognised because the vector carries",
+      "options": [
+        "a gene coding for the required human protein",
+        "a eukaryotic promoter",
+        "an antibiotic-resistance marker gene",
+        "a molecule of radiolabelled DNA probe"
+      ],
+      "correct": 2,
+      "explanation": "Only transformed cells survive when the culture is spread on agar containing the antibiotic, because the plasmid's resistance gene is the selectable marker.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-bio-081",
+      "section": "biology",
+      "topic": "Coordination, reproduction, immunity and biotechnology",
+      "difficulty": "medium",
+      "stem": "The enzyme that seals the sugar-phosphate backbone between an inserted gene and its vector in recombinant DNA work is",
+      "options": [
+        "DNA ligase",
+        "restriction endonuclease",
+        "helicase",
+        "primase"
+      ],
+      "correct": 0,
+      "explanation": "Ligase catalyses the formation of phosphodiester bonds between adjacent nucleotides, closing the nicks left after the complementary sticky ends have paired.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-001",
+      "section": "chemistry",
+      "topic": "Stoichiometry",
+      "difficulty": "easy",
+      "stem": "How many moles of O2 are required for the complete combustion of 1 mole of glucose (C6H12O6)?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "C6H12O6 + 6O2 -> 6CO2 + 6H2O, so 6 moles of oxygen are needed per mole of glucose. The other values come from mis-balancing the equation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-002",
+      "section": "chemistry",
+      "topic": "Stoichiometry",
+      "difficulty": "medium",
+      "stem": "A hydrocarbon contains 80% carbon and 20% hydrogen by mass. Its empirical formula is:",
+      "options": [
+        "CH2",
+        "CH3",
+        "CH4",
+        "C2H5"
+      ],
+      "correct": 2,
+      "explanation": "Moles: C = 80/12 = 6.67 and H = 20/1 = 20; dividing by 6.67 gives C:H = 1:3, i.e. CH4. Mis-rounding the 1:3 ratio gives the C2H5 trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-003",
+      "section": "chemistry",
+      "topic": "Stoichiometry",
+      "difficulty": "medium",
+      "stem": "The molarity of a NaOH solution prepared by dissolving 4 g of NaOH and making up the volume to 250 cm3 is: (Na = 23, O = 16, H = 1)",
+      "options": [
+        "0.1 M",
+        "0.25 M",
+        "1 M",
+        "0.4 M"
+      ],
+      "correct": 3,
+      "explanation": "Molar mass NaOH = 40 g/mol, so moles = 4/40 = 0.1 and M = 0.1/0.25 dm3 = 0.4 M. The 0.1 option traps those who forget to divide by the volume.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-004",
+      "section": "chemistry",
+      "topic": "Stoichiometry",
+      "difficulty": "medium",
+      "stem": "What volume of 0.5 M H2SO4 is needed to neutralise 20 cm3 of 0.1 M NaOH?",
+      "options": [
+        "40 cm3",
+        "4 cm3",
+        "20 cm3",
+        "2 cm3"
+      ],
+      "correct": 3,
+      "explanation": "Moles NaOH = 0.02 x 0.1 = 0.002; H2SO4 supplies 2 H+, so moles acid = 0.001 and V = 0.001/0.5 = 0.002 dm3 = 2 cm3. Forgetting the diprotic nature doubles the answer to 4 cm3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-005",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "easy",
+      "stem": "How many neutrons are present in an atom of chlorine-37 (atomic number 17)?",
+      "options": [
+        "20",
+        "17",
+        "37",
+        "54"
+      ],
+      "correct": 0,
+      "explanation": "Neutrons = mass number - protons = 37 - 17 = 20. 17 is the proton-number trap and 37 the mass-number trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-006",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "medium",
+      "stem": "The correct ground-state electronic configuration of the Fe2+ ion is: (Fe: Z = 26)",
+      "options": [
+        "[Ar] 3d4 4s2",
+        "[Ar] 3d5 4s1",
+        "[Ar] 3d8",
+        "[Ar] 3d6"
+      ],
+      "correct": 3,
+      "explanation": "Fe is [Ar] 3d6 4s2; on ionisation the 4s electrons leave before 3d, giving [Ar] 3d6. The 3d4 4s2 option reflects the belief that 3d electrons are lost first.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-007",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "easy",
+      "stem": "Which pair of species are isoelectronic (same number of electrons)?",
+      "options": [
+        "Ne and Na+",
+        "Na and Na+",
+        "Cl and Cl-",
+        "O2 and O3"
+      ],
+      "correct": 0,
+      "explanation": "Ne has 10 electrons and Na+ has 11 - 1 = 10. A neutral atom and its own ion can never match each other, and O2/O3 differ in the number of atoms.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-008",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "medium",
+      "stem": "How many distinct spectral lines can be emitted by hydrogen atoms excited to the n = 3 level as they fall back to the ground state?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correct": 3,
+      "explanation": "The allowed drops are 3->2, 3->1 and 2->1, i.e. n(n-1)/2 = 3 lines. Answering 1 confuses one cascade step with the whole set of transitions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-009",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "hard",
+      "stem": "How many electrons in a silicon atom (Z = 14) have angular momentum quantum number l = 1?",
+      "options": [
+        "8",
+        "6",
+        "4",
+        "12"
+      ],
+      "correct": 0,
+      "explanation": "Si is 1s2 2s2 2p6 3s2 3p2 and l = 1 denotes p electrons: 6 in 2p plus 2 in 3p = 8. Choosing 4 counts only the outer electrons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-010",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "stem": "Which intermolecular force is mainly responsible for the unusually high boiling point of ethanol?",
+      "options": [
+        "Hydrogen bonding",
+        "Dipole-dipole forces",
+        "London dispersion forces",
+        "Ion-dipole forces"
+      ],
+      "correct": 0,
+      "explanation": "The O-H group lets ethanol molecules link by strong hydrogen bonds, raising the boiling point far above compounds of similar molar mass.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-011",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "Which compound contains both ionic and covalent bonds?",
+      "options": [
+        "NaCl",
+        "NaOH",
+        "HCl",
+        "CH4"
+      ],
+      "correct": 1,
+      "explanation": "In NaOH the Na+ ... OH- attraction is ionic while the O-H bond inside hydroxide is covalent. NaCl is purely ionic; HCl and CH4 are purely covalent.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-012",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "The geometry and bond angles of PCl5 are:",
+      "options": [
+        "Trigonal planar, all 120",
+        "Trigonal bipyramidal, 90 and 120",
+        "T-shaped, about 90",
+        "Square pyramidal, about 90"
+      ],
+      "correct": 1,
+      "explanation": "Five bonding pairs and no lone pair on phosphorus give a trigonal bipyramid: equatorial Cl at 120 to each other and axial Cl at 90 to the plane.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-013",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "stem": "Water is a polar molecule mainly because:",
+      "options": [
+        "Its bent shape stops the two O-H bond dipoles from cancelling",
+        "It has a high boiling point",
+        "It forms hydrogen bonds",
+        "Its molar mass is small"
+      ],
+      "correct": 0,
+      "explanation": "The two lone pairs on oxygen give a bent shape, so the bond dipoles add to a net dipole. Hydrogen bonding is a consequence of that polarity, not its cause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-014",
+      "section": "chemistry",
+      "topic": "Gases",
+      "difficulty": "hard",
+      "stem": "A gas occupies 300 cm3 at 27 C. At what Celsius temperature will it occupy 600 cm3 if the pressure is constant?",
+      "options": [
+        "-173 C",
+        "173 C",
+        "600 C",
+        "327 C"
+      ],
+      "correct": 3,
+      "explanation": "Charles' law uses kelvin: T1 = 300 K, so doubling the volume needs T2 = 600 K = 327 C. Answering 600 C is the unit slip of reading kelvin as Celsius.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-015",
+      "section": "chemistry",
+      "topic": "Industrial chemistry",
+      "difficulty": "easy",
+      "stem": "In the Haber process for manufacturing ammonia, the catalyst used is:",
+      "options": [
+        "Finely divided nickel",
+        "Vanadium pentoxide",
+        "Finely divided iron",
+        "Chromium(III) oxide"
+      ],
+      "correct": 2,
+      "explanation": "Ammonia is made over a promoted iron catalyst at roughly 400-450 C and 200 atm. V2O5 belongs to the Contact process and finely divided nickel to the hydrogenation of oils.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-016",
+      "section": "chemistry",
+      "topic": "Gases",
+      "difficulty": "medium",
+      "stem": "A gas has a density of 1.25 g/dm3 at STP. Its molar mass is:",
+      "options": [
+        "2.8 g/mol",
+        "16 g/mol",
+        "28 g/mol",
+        "44 g/mol"
+      ],
+      "correct": 2,
+      "explanation": "Molar mass = density x molar volume = 1.25 x 22.4 = 28 g/mol, matching N2 or CO. 2.8 is a decimal slip and 44 assumes CO2 without calculating.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-017",
+      "section": "chemistry",
+      "topic": "Gases",
+      "difficulty": "medium",
+      "stem": "A sealed cylinder of gas at 3.0 atm and 27 C is heated to 327 C at constant volume. The new pressure is:",
+      "options": [
+        "3.0 atm",
+        "6.0 atm",
+        "9.0 atm",
+        "36.3 atm"
+      ],
+      "correct": 1,
+      "explanation": "Gay-Lussac's law with kelvin: P2 = 3.0 x 600/300 = 6.0 atm. The 36.3 atm trap comes from inserting Celsius values directly (3 x 327/27).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-018",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "easy",
+      "stem": "For a reversible reaction at equilibrium, the equilibrium constant Kc depends on:",
+      "options": [
+        "Initial concentrations",
+        "A catalyst added",
+        "Temperature only",
+        "Pressure only"
+      ],
+      "correct": 2,
+      "explanation": "Kc is temperature-dependent only; concentration or pressure changes and catalysts shift the position of equilibrium but leave Kc unchanged.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-019",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "hard",
+      "stem": "In a 1 dm3 vessel at equilibrium, 0.4 mol SO3, 0.2 mol SO2 and 0.1 mol O2 are present for 2SO2 + O2 = 2SO3. The Kc is:",
+      "options": [
+        "10",
+        "20",
+        "80",
+        "40"
+      ],
+      "correct": 3,
+      "explanation": "Kc = [SO3]^2/([SO2]^2[O2]) = 0.16/(0.04 x 0.1) = 40. Omitting the square on [SO2] gives 80 and inverting the expression gives 0.025.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-020",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "medium",
+      "stem": "For N2 + 3H2 = 2NH3 with an exothermic forward reaction, which change increases the equilibrium yield of ammonia?",
+      "options": [
+        "Increasing the pressure",
+        "Raising the temperature",
+        "Adding a catalyst",
+        "Running the reaction in a larger vessel at the same moles"
+      ],
+      "correct": 0,
+      "explanation": "Four gas moles become two, so higher pressure drives the system to the right (Le Chatelier). Higher temperature favours the endothermic reverse reaction and a catalyst only changes the rate.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-021",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "hard",
+      "stem": "For 2SO2(g) + O2(g) = 2SO3(g), the relationship between Kp and Kc at temperature T is:",
+      "options": [
+        "Kp = Kc(RT)^-2",
+        "Kp = Kc(RT)^2",
+        "Kp = Kc(RT)^-1",
+        "Kp = Kc"
+      ],
+      "correct": 2,
+      "explanation": "Kp = Kc(RT)^dn with dn = gaseous product moles - gaseous reactant moles = 2 - 3 = -1. Using the SO3 coefficient 2 as the exponent is the usual error.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-022",
+      "section": "chemistry",
+      "topic": "Acids and bases",
+      "difficulty": "medium",
+      "stem": "The pH of 0.1 M ethanoic acid (Ka = 1.8 x 10^-5) is approximately:",
+      "options": [
+        "1.0",
+        "2.7",
+        "4.7",
+        "13.0"
+      ],
+      "correct": 1,
+      "explanation": "For a weak acid [H+] = sqrt(Ka x C) = sqrt(1.8 x 10^-6) = 1.34 x 10^-3, so pH = 2.7. The 1.0 answer assumes complete ionisation and 4.7 is the pKa itself.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-023",
+      "section": "chemistry",
+      "topic": "Acids and bases",
+      "difficulty": "medium",
+      "stem": "The bicarbonate buffer keeps blood pH near 7.4 mainly because:",
+      "options": [
+        "Hemoglobin binds all excess H+",
+        "Plasma proteins are the only buffers present",
+        "HCO3- neutralises added acid while H2CO3 neutralises added base",
+        "The kidneys remove all carbonic acid"
+      ],
+      "correct": 2,
+      "explanation": "The conjugate pair HCO3-/H2CO3 absorbs added H+ (forming H2CO3) and added base (H2CO3 donates H+), so the pH barely moves.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-024",
+      "section": "chemistry",
+      "topic": "Industrial chemistry",
+      "difficulty": "medium",
+      "stem": "In the Contact process, SO3 is absorbed in concentrated H2SO4 to form oleum rather than being bubbled directly into water because:",
+      "options": [
+        "Direct hydration makes a fine mist of H2SO4 that is hard to condense",
+        "SO3 is insoluble in water",
+        "Water poisons the V2O5 catalyst",
+        "Hydration of SO3 is endothermic"
+      ],
+      "correct": 0,
+      "explanation": "SO3 + H2O is so violently exothermic that it raises an acid aerosol; oleum (H2S2O7) is instead diluted with water to give concentrated H2SO4. The V2O5 converter bed lies upstream of the absorber.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-025",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "medium",
+      "stem": "A first-order reaction has rate constant k = 0.0693 min^-1. Its half-life is:",
+      "options": [
+        "6.93 min",
+        "0.0693 min",
+        "14.4 min",
+        "10 min"
+      ],
+      "correct": 3,
+      "explanation": "For a first-order reaction t1/2 = 0.693/k = 0.693/0.0693 = 10 min, independent of the starting concentration. Using 1/k gives 14.4 min.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-026",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "easy",
+      "stem": "Raising the temperature of a reaction mainly increases the rate because:",
+      "options": [
+        "The activation energy decreases",
+        "The rate constant decreases",
+        "A larger fraction of molecules have energy equal to or above the activation energy",
+        "Collisions cease to be effective"
+      ],
+      "correct": 2,
+      "explanation": "Heating shifts the Maxwell-Boltzmann distribution so more collisions clear the unchanged activation-energy barrier.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-027",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "hard",
+      "stem": "A zero-order reaction proceeds at 0.2 mol dm^-3 s^-1 when the reactant concentration is 0.5 M. When the concentration falls to 0.25 M, the rate is:",
+      "options": [
+        "0.05 mol dm^-3 s^-1",
+        "0.1 mol dm^-3 s^-1",
+        "0.2 mol dm^-3 s^-1",
+        "0.4 mol dm^-3 s^-1"
+      ],
+      "correct": 2,
+      "explanation": "Rate = k[A]^0 = k for zero order, so the rate stays 0.2 mol dm^-3 s^-1. Halving it is the first-order reflex and quartering it the second-order reflex.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-028",
+      "section": "chemistry",
+      "topic": "Thermochemistry",
+      "difficulty": "hard",
+      "stem": "Given C (graphite) + O2 -> CO2 with Delta-H = -393.5 kJ/mol and CO + 1/2 O2 -> CO2 with Delta-H = -283.0 kJ/mol, the Delta-H for C (graphite) + 1/2 O2 -> CO is:",
+      "options": [
+        "-110.5 kJ/mol",
+        "-676.5 kJ/mol",
+        "+110.5 kJ/mol",
+        "-393.5 kJ/mol"
+      ],
+      "correct": 0,
+      "explanation": "Hess's law: subtract the second equation from the first, -393.5 - (-283.0) = -110.5 kJ/mol. Adding the two values gives the -676.5 kJ/mol trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-029",
+      "section": "chemistry",
+      "topic": "Electrochemistry",
+      "difficulty": "easy",
+      "stem": "Steel pipes are galvanised with a coating of zinc, which keeps the iron from rusting even where the coating is scratched because:",
+      "options": [
+        "Zinc is less reactive than iron and merely acts as a barrier",
+        "Zinc is more easily oxidised than iron and corrodes sacrificially",
+        "Zinc chemically repels water from the surface",
+        "Zinc turns the surface into a stainless steel alloy"
+      ],
+      "correct": 1,
+      "explanation": "Zinc lies above iron in the electrochemical series, so the Zn-Fe couple makes zinc the anode, which oxidises in place of the iron (cathodic or sacrificial protection). A less reactive coating such as tin speeds up rusting once scratched.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-030",
+      "section": "chemistry",
+      "topic": "Thermochemistry",
+      "difficulty": "medium",
+      "stem": "How much heat is needed to raise the temperature of 100 g of water from 20 C to 80 C? (specific heat of water = 4.18 J g^-1 C^-1)",
+      "options": [
+        "836 J",
+        "25,080 J",
+        "41,800 J",
+        "33,440 J"
+      ],
+      "correct": 3,
+      "explanation": "q = m x s x Delta-T = 100 x 4.18 x 60 = 33,440 J. Using 20 instead of 60 for Delta-T gives 25,080 J and using 100 gives 41,800 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-031",
+      "section": "chemistry",
+      "topic": "Electrochemistry",
+      "difficulty": "medium",
+      "stem": "In a galvanic cell the main function of the salt bridge is to:",
+      "options": [
+        "Complete the circuit by allowing ions to migrate, keeping both half-cells neutral",
+        "Supply electrons from the anode to the cathode",
+        "Provide the surface on which oxidation takes place",
+        "Raise the emf of the cell"
+      ],
+      "correct": 0,
+      "explanation": "Anions drift toward the anode compartment and cations toward the cathode compartment, cancelling the charge build-up that would otherwise stop the cell. Electrons move only through the external wire.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-032",
+      "section": "chemistry",
+      "topic": "Hydrocarbons",
+      "difficulty": "easy",
+      "stem": "Which compound decolorizes bromine water at room temperature?",
+      "options": [
+        "Ethene",
+        "Methane",
+        "Benzene",
+        "Cyclohexane"
+      ],
+      "correct": 0,
+      "explanation": "The C=C bond of ethene adds Br2 readily; alkanes do not react with bromine water and benzene resists addition because of its aromatic stability.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-033",
+      "section": "chemistry",
+      "topic": "Hydrocarbons",
+      "difficulty": "medium",
+      "stem": "The major product of the addition of HBr to propene (Markovnikov addition) is:",
+      "options": [
+        "1-bromopropane",
+        "2-bromopropane",
+        "1,2-dibromopropane",
+        "Propane"
+      ],
+      "correct": 1,
+      "explanation": "Hydrogen adds to C-1, which already carries more hydrogens, so bromine ends up on C-2 through the more stable secondary carbocation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-034",
+      "section": "chemistry",
+      "topic": "Hydrocarbons",
+      "difficulty": "hard",
+      "stem": "Combustion of 1 mole of a hydrocarbon gives equal numbers of moles of CO2 and H2O. The hydrocarbon is:",
+      "options": [
+        "C2H4",
+        "C2H6",
+        "CH4",
+        "C3H8"
+      ],
+      "correct": 0,
+      "explanation": "Equal moles of CO2 and H2O require H = 2C, the alkene ratio: C2H4 + 3O2 -> 2CO2 + 2H2O. Alkanes CnH2n+2 always give more water than carbon dioxide.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-035",
+      "section": "chemistry",
+      "topic": "Hydrocarbons",
+      "difficulty": "easy",
+      "stem": "The reaction of methane with chlorine in bright sunlight is an example of:",
+      "options": [
+        "Addition",
+        "Polymerisation",
+        "Elimination",
+        "Substitution"
+      ],
+      "correct": 3,
+      "explanation": "Alkanes react with halogens by free-radical substitution, replacing hydrogen with chlorine; addition and polymerisation require multiple bonds.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-036",
+      "section": "chemistry",
+      "topic": "Alcohols",
+      "difficulty": "medium",
+      "stem": "2-methylpropan-2-ol is a tertiary alcohol because:",
+      "options": [
+        "It has three carbon atoms",
+        "The carbon carrying the OH group is bonded to three other carbons",
+        "It has three OH groups",
+        "It is easily oxidised to a ketone"
+      ],
+      "correct": 1,
+      "explanation": "The class of an alcohol depends on how many carbons attach to the C-OH carbon; here three methyl groups are attached, and such alcohols resist oxidation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-037",
+      "section": "chemistry",
+      "topic": "Alcohols",
+      "difficulty": "medium",
+      "stem": "Propan-1-ol heated with alkaline KMnO4 and then acidified gives:",
+      "options": [
+        "Propanal",
+        "Propanoic acid",
+        "Propanone",
+        "Propane"
+      ],
+      "correct": 1,
+      "explanation": "Strong aqueous oxidation carries a primary alcohol past the aldehyde stage to the carboxylic acid, propanoic acid. Propanone would need a secondary alcohol.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-038",
+      "section": "chemistry",
+      "topic": "Alcohols",
+      "difficulty": "easy",
+      "stem": "Which alcohol is the main active ingredient of hand sanitisers and of fermented drinks?",
+      "options": [
+        "Methanol",
+        "Propan-1-ol",
+        "Ethanol",
+        "Ethylene glycol"
+      ],
+      "correct": 2,
+      "explanation": "Ethanol (C2H5OH) is made by yeast fermentation of sugars and is the safe sanitising alcohol; methanol and ethylene glycol are toxic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-039",
+      "section": "chemistry",
+      "topic": "Aldehydes and ketones",
+      "difficulty": "easy",
+      "stem": "Which compound gives a silver mirror with Tollens' reagent?",
+      "options": [
+        "Propanone",
+        "Ethanal",
+        "Ethanol",
+        "Ethanoic acid"
+      ],
+      "correct": 1,
+      "explanation": "Aldehydes such as ethanal reduce the diamminesilver(I) ion to metallic silver; ketones, alcohols and carboxylic acids do not.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-040",
+      "section": "chemistry",
+      "topic": "Aldehydes and ketones",
+      "difficulty": "hard",
+      "stem": "Which compound gives a positive iodoform test (yellow precipitate)?",
+      "options": [
+        "Methanal",
+        "Propanone",
+        "Ethanoic acid",
+        "Propan-1-ol"
+      ],
+      "correct": 1,
+      "explanation": "The test needs the CH3-CO- or CH3-CH(OH)- grouping, which propanone CH3COCH3 has. Methanal, ethanoic acid and propan-1-ol lack it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-041",
+      "section": "chemistry",
+      "topic": "Carboxylic acids",
+      "difficulty": "easy",
+      "stem": "Which reagent distinguishes ethanoic acid from ethanol by brisk effervescence?",
+      "options": [
+        "Aqueous sodium hydrogen carbonate",
+        "Sodium metal",
+        "Dilute HCl",
+        "Aqueous NaCl"
+      ],
+      "correct": 0,
+      "explanation": "Carboxylic acids liberate CO2 from NaHCO3 with effervescence while alcohols are far too weakly acidic to react. Sodium metal reacts with both.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-042",
+      "section": "chemistry",
+      "topic": "Carboxylic acids",
+      "difficulty": "easy",
+      "stem": "Ethanoic acid and ethanol refluxed with a few drops of concentrated H2SO4 give:",
+      "options": [
+        "Sodium ethanoate",
+        "Ethyl ethanoate",
+        "Diethyl ether",
+        "Ethanal"
+      ],
+      "correct": 1,
+      "explanation": "Fischer esterification yields the fruity ester ethyl ethanoate plus water; concentrated H2SO4 is catalyst and dehydrating agent and supplies no sodium.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-043",
+      "section": "chemistry",
+      "topic": "Electrochemistry",
+      "difficulty": "easy",
+      "stem": "The oxidation number of chromium in K2Cr2O7 is:",
+      "options": [
+        "+3",
+        "+5",
+        "+12",
+        "+6"
+      ],
+      "correct": 3,
+      "explanation": "2(+1) + 2x + 7(-2) = 0 gives x = +6. The +12 answer forgets that two chromium atoms share the +12 balance.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-044",
+      "section": "chemistry",
+      "topic": "Industrial chemistry",
+      "difficulty": "medium",
+      "stem": "In the electrolysis of concentrated aqueous NaCl (brine) with inert electrodes, the gas liberated at the cathode is:",
+      "options": [
+        "Chlorine",
+        "Oxygen",
+        "Hydrogen",
+        "Sodium vapour"
+      ],
+      "correct": 2,
+      "explanation": "H+ from water discharges in preference to Na+, giving hydrogen at the cathode; chlorine forms at the anode and NaOH remains in solution (chlor-alkali process).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-chem-045",
+      "section": "chemistry",
+      "topic": "Electrochemistry",
+      "difficulty": "hard",
+      "stem": "A current of 2.0 A is passed through CuSO4 solution for 1930 s. The mass of copper deposited at the cathode is: (Cu = 63.5, 1 F = 96500 C/mol)",
+      "options": [
+        "0.635 g",
+        "6.35 g",
+        "2.54 g",
+        "1.27 g"
+      ],
+      "correct": 3,
+      "explanation": "Charge = 2.0 x 1930 = 3860 C = 0.04 mol of electrons; Cu2+ + 2e- -> Cu gives 0.02 mol Cu = 1.27 g. Ignoring the two electrons per copper ion gives 2.54 g.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-001",
+      "section": "physics",
+      "topic": "Motion",
+      "difficulty": "easy",
+      "stem": "A ball is thrown vertically upward at 19.6 m/s. The maximum height reached is: (take g = 9.8 m/s^2)",
+      "options": [
+        "4.9 m",
+        "19.6 m",
+        "9.8 m",
+        "39.2 m"
+      ],
+      "correct": 1,
+      "explanation": "H = v^2/(2g) = 384.16/19.6 = 19.6 m. Using v^2/g (39.2 m) is the factor-of-2 trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-002",
+      "section": "physics",
+      "topic": "Motion",
+      "difficulty": "medium",
+      "stem": "A car travelling at 20 m/s brakes to rest with uniform deceleration over 50 m. The magnitude of the deceleration is:",
+      "options": [
+        "2 m/s^2",
+        "8 m/s^2",
+        "5 m/s^2",
+        "4 m/s^2"
+      ],
+      "correct": 3,
+      "explanation": "v^2 = u^2 + 2as gives 0 = 400 + 2a(50), so a = -4 m/s^2. Dividing 400 by 50 without the factor 2 gives the 8 m/s^2 trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-003",
+      "section": "physics",
+      "topic": "Force and momentum",
+      "difficulty": "easy",
+      "stem": "A 2 kg object accelerates uniformly from rest to 10 m/s in 5 s. The net force acting on it is:",
+      "options": [
+        "4 N",
+        "2 N",
+        "5 N",
+        "20 N"
+      ],
+      "correct": 0,
+      "explanation": "a = 10/5 = 2 m/s^2, so F = ma = 2 x 2 = 4 N. The 20 N option confuses force with the final momentum m x v.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-004",
+      "section": "physics",
+      "topic": "Force and momentum",
+      "difficulty": "hard",
+      "stem": "A 0.1 kg ball strikes a vertical wall horizontally at 20 m/s and rebounds along the same line at 20 m/s. The magnitude of the change in momentum is:",
+      "options": [
+        "0",
+        "4 kg m/s",
+        "2 kg m/s",
+        "8 kg m/s"
+      ],
+      "correct": 1,
+      "explanation": "Taking the incoming direction as positive, Delta-p = 0.1(-20) - 0.1(20) = -4 kg m/s, magnitude 4. Saying 0 (equal speeds) or 2 (ignoring the reversal) are the classic errors.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-005",
+      "section": "physics",
+      "topic": "Force and momentum",
+      "difficulty": "medium",
+      "stem": "A 50 kg block hangs from a rope in a lift accelerating upward at 2 m/s^2. The tension in the rope is: (g = 9.8 m/s^2)",
+      "options": [
+        "390 N",
+        "490 N",
+        "590 N",
+        "100 N"
+      ],
+      "correct": 2,
+      "explanation": "T - mg = ma, so T = m(g + a) = 50 x 11.8 = 590 N. 490 N is the weight when a = 0 and 390 N uses g - a for downward acceleration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-006",
+      "section": "physics",
+      "topic": "Circular motion",
+      "difficulty": "easy",
+      "stem": "An object moves with constant speed v around a circle of radius r. Its acceleration is directed:",
+      "options": [
+        "Toward the centre of the circle",
+        "Along the velocity, in the direction of motion",
+        "Radially outward, balancing the centripetal force",
+        "Tangentially opposite to the velocity"
+      ],
+      "correct": 0,
+      "explanation": "Uniform circular motion requires a centripetal acceleration v^2/r toward the centre; no outward force acts on the body itself.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-007",
+      "section": "physics",
+      "topic": "Work and energy",
+      "difficulty": "medium",
+      "stem": "A 2 kg block is pushed 5 m along a horizontal floor by a 10 N force inclined at 60 degrees to the direction of motion. The work done by the force is:",
+      "options": [
+        "25 J",
+        "50 J",
+        "86.6 J",
+        "100 J"
+      ],
+      "correct": 0,
+      "explanation": "W = Fd cos(theta) = 10 x 5 x 0.5 = 25 J. Using sin 60 instead gives 86.6 J and ignoring the angle gives 50 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-008",
+      "section": "physics",
+      "topic": "Work and energy",
+      "difficulty": "hard",
+      "stem": "A 0.2 kg stone on a 1 m string is whirled in a vertical circle at a constant 5 m/s. The greatest tension in the string, at the lowest point, is: (g = 9.8 m/s^2)",
+      "options": [
+        "2.0 N",
+        "5.0 N",
+        "7.0 N",
+        "12.0 N"
+      ],
+      "correct": 2,
+      "explanation": "At the bottom T = mv^2/r + mg = 0.2 x 25/1 + 0.2 x 9.8 = 5.0 + 1.96 = 6.96 = 7.0 N. Omitting the weight gives 5.0 N; subtracting it is the top-of-circle case.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-009",
+      "section": "physics",
+      "topic": "Work and energy",
+      "difficulty": "medium",
+      "stem": "A block is released from rest and slides 5 m down a smooth plane inclined at 30 degrees to the horizontal. Its speed at the foot is approximately: (g = 9.8 m/s^2)",
+      "options": [
+        "4.9 m/s",
+        "14.0 m/s",
+        "9.9 m/s",
+        "7.0 m/s"
+      ],
+      "correct": 3,
+      "explanation": "Vertical drop h = 5 sin 30 = 2.5 m, so v = sqrt(2gh) = sqrt(49) = 7.0 m/s. Using the 5 m slope length as the height gives 9.9 m/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-010",
+      "section": "physics",
+      "topic": "Electronics",
+      "difficulty": "medium",
+      "stem": "In a half-wave rectifier power supply, a large capacitor placed across the output mainly serves to:",
+      "options": [
+        "Step the AC voltage up or down",
+        "Smooth the pulsating output so the voltage is nearly steady",
+        "Increase the reverse leakage current of the diode",
+        "Block the direct current from reaching the load"
+      ],
+      "correct": 1,
+      "explanation": "The capacitor charges toward the peak while the diode conducts and discharges into the load during the gap, so the ripple is reduced; the transformer, not the capacitor, changes the voltage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-011",
+      "section": "physics",
+      "topic": "Sound waves",
+      "difficulty": "easy",
+      "stem": "A tuning fork vibrates at 440 Hz and the speed of sound in air is 330 m/s. The wavelength is:",
+      "options": [
+        "0.133 m",
+        "75 m",
+        "1.33 m",
+        "0.75 m"
+      ],
+      "correct": 3,
+      "explanation": "lambda = v/f = 330/440 = 0.75 m. Inverting to f/v gives 1.33 m and multiplying the two gives a nonsensical 145,200-style figure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-012",
+      "section": "physics",
+      "topic": "Sound waves",
+      "difficulty": "hard",
+      "stem": "An organ pipe closed at one end is 0.17 m long. Its fundamental frequency is approximately: (speed of sound = 330 m/s)",
+      "options": [
+        "243 Hz",
+        "485 Hz",
+        "970 Hz",
+        "1940 Hz"
+      ],
+      "correct": 1,
+      "explanation": "A closed pipe has lambda = 4L = 0.68 m for its fundamental, so f = 330/0.68 = 485 Hz. Modelling it as an open pipe (lambda = 2L) doubles the result to 970 Hz.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-013",
+      "section": "physics",
+      "topic": "Sound waves",
+      "difficulty": "easy",
+      "stem": "Two tuning forks of 256 Hz and 260 Hz are sounded together. The beat frequency heard is:",
+      "options": [
+        "2 Hz",
+        "258 Hz",
+        "8 Hz",
+        "4 Hz"
+      ],
+      "correct": 3,
+      "explanation": "Beats occur at the difference frequency, 260 - 256 = 4 Hz; the mean value 258 Hz is the usual trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-014",
+      "section": "physics",
+      "topic": "Sound waves",
+      "difficulty": "hard",
+      "stem": "An ambulance siren emits 320 Hz while approaching a stationary listener at 10 m/s. The apparent frequency heard is: (speed of sound = 330 m/s)",
+      "options": [
+        "310.6 Hz",
+        "320.0 Hz",
+        "330.0 Hz",
+        "340.0 Hz"
+      ],
+      "correct": 2,
+      "explanation": "Moving source toward a stationary observer: f' = f x v/(v - vs) = 320 x 330/320 = 330 Hz. Using v + vs instead gives the receding-source value 310.6 Hz.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-015",
+      "section": "physics",
+      "topic": "Sound waves",
+      "difficulty": "medium",
+      "stem": "The intensity of a patient-monitor alarm is increased by a factor of 100. The sound level rises by:",
+      "options": [
+        "2 dB",
+        "10 dB",
+        "20 dB",
+        "100 dB"
+      ],
+      "correct": 2,
+      "explanation": "Change in level = 10 log10(I2/I1) = 10 log10(100) = 20 dB. Using the pressure formula 20 log10 would wrongly give 40 dB.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-016",
+      "section": "physics",
+      "topic": "Stationary waves",
+      "difficulty": "hard",
+      "stem": "In a stationary wave on a string the distance between two consecutive nodes is 10 cm. If the wave speed is 340 m/s, the frequency is:",
+      "options": [
+        "1700 Hz",
+        "340 Hz",
+        "17 Hz",
+        "3400 Hz"
+      ],
+      "correct": 0,
+      "explanation": "Node spacing equals lambda/2, so lambda = 0.20 m and f = v/lambda = 340/0.20 = 1700 Hz. Treating 10 cm as the full wavelength gives 3400 Hz.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-017",
+      "section": "physics",
+      "topic": "Fluid dynamics",
+      "difficulty": "medium",
+      "stem": "In a narrowed artery the effective radius falls to one-third of normal while the pressure difference is unchanged. The volume flow rate becomes: (Poiseuille: Q proportional to r^4)",
+      "options": [
+        "1/3 of normal",
+        "1/81 of normal",
+        "1/27 of normal",
+        "1/9 of normal"
+      ],
+      "correct": 1,
+      "explanation": "Q is proportional to r^4, so the flow falls to (1/3)^4 = 1/81 of normal. Squaring (1/9) or cubing (1/27) instead of the fourth power is the standard slip.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-018",
+      "section": "physics",
+      "topic": "Fluid statics",
+      "difficulty": "easy",
+      "stem": "The gauge pressure at a depth of 3 m below the surface of water in a tank is about: (rho = 1000 kg/m^3, g = 9.8 m/s^2)",
+      "options": [
+        "29,400 Pa",
+        "294 Pa",
+        "29.4 Pa",
+        "294,000 Pa"
+      ],
+      "correct": 0,
+      "explanation": "p = rho g h = 1000 x 9.8 x 3 = 29,400 Pa, roughly 0.29 atm. The other values are decimal-place slips.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-019",
+      "section": "physics",
+      "topic": "Fluid dynamics",
+      "difficulty": "medium",
+      "stem": "For a steady flow of an ideal fluid, Bernoulli's equation is a statement of conservation of:",
+      "options": [
+        "Mass",
+        "Energy",
+        "Momentum",
+        "Charge"
+      ],
+      "correct": 1,
+      "explanation": "P + 1/2 rho v^2 + rho g h = constant expresses energy per unit volume along a streamline; mass conservation gives the continuity equation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-020",
+      "section": "physics",
+      "topic": "Fluid dynamics",
+      "difficulty": "hard",
+      "stem": "A syringe barrel of area 2 cm^2 is joined to a needle of area 0.02 cm^2. If the plunger moves at 0.2 cm/s, the speed at which fluid leaves the needle is:",
+      "options": [
+        "0.002 cm/s",
+        "2 cm/s",
+        "200 cm/s",
+        "20 cm/s"
+      ],
+      "correct": 3,
+      "explanation": "Continuity: A1v1 = A2v2, so v2 = 0.2 x (2/0.02) = 20 cm/s. Inverting the area ratio gives 0.002 cm/s and decimal slips give 2 or 200 cm/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-021",
+      "section": "physics",
+      "topic": "Electronics",
+      "difficulty": "easy",
+      "stem": "A p-n junction diode passes a large current when it is:",
+      "options": [
+        "Connected with no battery across it",
+        "Reverse biased, with the n-side at the higher potential",
+        "Forward biased, with the p-side at the higher potential",
+        "Biased either way, because a diode obeys Ohm's law"
+      ],
+      "correct": 2,
+      "explanation": "Forward bias narrows the depletion layer, and beyond about 0.7 V for silicon carriers cross freely; reverse bias widens it and only a tiny leakage current flows. This one-way action is what rectifiers in medical equipment power supplies depend on.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-022",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "easy",
+      "stem": "Two point charges exert a force F on each other. If the separation between them is doubled, the force becomes:",
+      "options": [
+        "4F",
+        "F/2",
+        "2F",
+        "F/4"
+      ],
+      "correct": 3,
+      "explanation": "Coulomb's law is inverse-square, so the new force is F/2^2 = F/4. Treating it as a simple inverse law gives the F/2 trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-023",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "The electric field strength at a point 0.5 m from a charge of 2 microcoulomb is: (k = 9 x 10^9 N m^2 C^-2)",
+      "options": [
+        "1.8 x 10^4 N/C",
+        "3.6 x 10^5 N/C",
+        "7.2 x 10^5 N/C",
+        "9.0 x 10^4 N/C"
+      ],
+      "correct": 2,
+      "explanation": "E = kQ/r^2 = 9 x 10^9 x 2 x 10^-6/0.25 = 7.2 x 10^5 N/C. Forgetting to square 0.5 gives exactly half the correct value.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-024",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "A 2 microfarad capacitor is connected across a 100 V supply. The charge stored is:",
+      "options": [
+        "2 x 10^-4 C",
+        "5 x 10^-4 C",
+        "2 x 10^-2 C",
+        "2 x 10^4 C"
+      ],
+      "correct": 0,
+      "explanation": "Q = CV = 2 x 10^-6 x 100 = 2 x 10^-4 C. Using C/V gives 5 x 10^-4 and forgetting the micro prefix gives 2 x 10^4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-025",
+      "section": "physics",
+      "topic": "Current electricity",
+      "difficulty": "easy",
+      "stem": "Three 9-ohm resistors connected in series give a total resistance of:",
+      "options": [
+        "27 ohm",
+        "9 ohm",
+        "18 ohm",
+        "3 ohm"
+      ],
+      "correct": 0,
+      "explanation": "Series resistances add: 9 + 9 + 9 = 27 ohm. Dividing by three (3 ohm) borrows the identical-resistors-in-parallel result.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-026",
+      "section": "physics",
+      "topic": "Current electricity",
+      "difficulty": "medium",
+      "stem": "Two 6-ohm resistors are connected in parallel across a 12 V battery. The current drawn from the battery is:",
+      "options": [
+        "1 A",
+        "2 A",
+        "4 A",
+        "6 A"
+      ],
+      "correct": 2,
+      "explanation": "The parallel combination is 3 ohm, so I = V/R = 12/3 = 4 A. Treating the pair as 12 ohm in series gives 1 A.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-027",
+      "section": "physics",
+      "topic": "Current electricity",
+      "difficulty": "medium",
+      "stem": "A 60 W electric blanket operates from a 240 V mains supply. The current it draws and its resistance are:",
+      "options": [
+        "4 A and 960 ohm",
+        "0.25 A and 4 ohm",
+        "0.25 A and 960 ohm",
+        "2.5 A and 24 ohm"
+      ],
+      "correct": 2,
+      "explanation": "I = P/V = 60/240 = 0.25 A and R = V^2/P = 57,600/60 = 960 ohm. Using V/P gives the 4 A reciprocal trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-028",
+      "section": "physics",
+      "topic": "Current electricity",
+      "difficulty": "medium",
+      "stem": "A cell of emf 12 V and internal resistance 0.5 ohm delivers a current of 2 A. Its terminal voltage is:",
+      "options": [
+        "10 V",
+        "11 V",
+        "11.5 V",
+        "12 V"
+      ],
+      "correct": 1,
+      "explanation": "V = emf - I r = 12 - (2 x 0.5) = 11 V. Answering 12 V ignores the internal potential drop.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-029",
+      "section": "physics",
+      "topic": "Electromagnetism",
+      "difficulty": "easy",
+      "stem": "A charged particle enters a uniform magnetic field. The magnetic force on it is greatest when its velocity is:",
+      "options": [
+        "Parallel to the field",
+        "Antiparallel to the field",
+        "At 45 degrees to the field",
+        "Perpendicular to the field"
+      ],
+      "correct": 3,
+      "explanation": "F = qvB sin(theta) is maximum at 90 degrees and zero along the field lines, so a perpendicular entry gives the largest force.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-030",
+      "section": "physics",
+      "topic": "Electromagnetism",
+      "difficulty": "medium",
+      "stem": "An ideal transformer has 100 turns on its primary and 500 turns on its secondary. With 220 V AC on the primary, the secondary voltage is:",
+      "options": [
+        "44 V",
+        "220 V",
+        "2200 V",
+        "1100 V"
+      ],
+      "correct": 3,
+      "explanation": "Vs/Vp = Ns/Np = 500/100 = 5, so Vs = 1100 V. Inverting the ratio gives 44 V; in an ideal transformer it is power, not voltage, that is conserved.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-031",
+      "section": "physics",
+      "topic": "Electromagnetism",
+      "difficulty": "hard",
+      "stem": "In a velocity selector, crossed fields have E = 6 x 10^4 V/m and B = 0.3 T. Electrons pass through undeflected at a speed of:",
+      "options": [
+        "2 x 10^5 m/s",
+        "1.8 x 10^5 m/s",
+        "2 x 10^4 m/s",
+        "1.8 x 10^6 m/s"
+      ],
+      "correct": 0,
+      "explanation": "No deflection means qE = qvB, so v = E/B = 6 x 10^4/0.3 = 2 x 10^5 m/s. Multiplying E by B gives the 1.8 x 10^5 trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-032",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "easy",
+      "stem": "In the photoelectric effect, the maximum kinetic energy of the emitted electrons depends on the frequency of the incident light and on:",
+      "options": [
+        "The intensity of the light",
+        "The thickness of the metal plate",
+        "The work function of the metal",
+        "The distance of the source from the plate"
+      ],
+      "correct": 2,
+      "explanation": "Einstein's relation is Kmax = h f - (work function). Intensity changes how many electrons leave, never their maximum energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-033",
+      "section": "physics",
+      "topic": "Modern physics",
+      "difficulty": "easy",
+      "stem": "If the momentum of a moving electron is doubled, its de Broglie wavelength:",
+      "options": [
+        "Doubles",
+        "Halves",
+        "Stays the same",
+        "Becomes four times larger"
+      ],
+      "correct": 1,
+      "explanation": "lambda = h/p is an inverse relation, so doubling the momentum halves the wavelength; assuming proportionality gives the doubling trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-034",
+      "section": "physics",
+      "topic": "Atomic spectra",
+      "difficulty": "medium",
+      "stem": "Which transition in the hydrogen atom emits a photon of the greatest energy?",
+      "options": [
+        "n = 3 to n = 2",
+        "n = 2 to n = 1",
+        "n = 4 to n = 3",
+        "n = infinity to n = 2"
+      ],
+      "correct": 1,
+      "explanation": "Level spacing falls off quickly with n: 2->1 releases 10.2 eV (Lyman, ultraviolet) while infinity->2 gives 3.4 eV and 3->2 gives 1.89 eV.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-035",
+      "section": "physics",
+      "topic": "Nuclear physics",
+      "difficulty": "medium",
+      "stem": "In the nuclear reaction N-14 + alpha -> O-17 + X, the emitted particle X is:",
+      "options": [
+        "A proton",
+        "A neutron",
+        "An electron",
+        "A positron"
+      ],
+      "correct": 0,
+      "explanation": "Mass numbers give 14 + 4 = 17 + 1 and charges give 7 + 2 = 8 + 1, so X is a proton - Rutherford's 1919 artificial transmutation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-phy-036",
+      "section": "physics",
+      "topic": "Nuclear physics",
+      "difficulty": "medium",
+      "stem": "A Co-60 source of half-life 5 years has an activity of 800 Bq today. Its activity after 15 years will be:",
+      "options": [
+        "400 Bq",
+        "200 Bq",
+        "50 Bq",
+        "100 Bq"
+      ],
+      "correct": 3,
+      "explanation": "Fifteen years is three half-lives, so A = 800/2^3 = 100 Bq. Halving once (400) or four times (50) is the counting error.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-001",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "medium",
+      "stem": "Choose the sentence with correct subject-verb agreement:",
+      "options": [
+        "Neither the surgeons nor the resident were available during the emergency.",
+        "Neither the surgeons nor the resident was available during the emergency.",
+        "Neither the surgeons nor the resident are available during the emergency.",
+        "Neither the surgeons or the resident was available during the emergency."
+      ],
+      "correct": 1,
+      "explanation": "With 'neither ... nor', the verb agrees with the nearer subject. 'The resident' is singular, so the singular verb 'was' is required. Option A uses a plural verb, C uses present-tense 'are' (and breaks proximity), and D corrupts the correlative pair 'neither ... nor' into 'neither ... or'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-002",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "easy",
+      "stem": "Select the option that correctly completes the sentence: \"The patient has been complaining of headaches ______ he started the new medication.\"",
+      "options": [
+        "for",
+        "since",
+        "during",
+        "from"
+      ],
+      "correct": 1,
+      "explanation": "The present perfect ('has been complaining') pairs with 'since' to mark the starting point of a period continuing to the present. 'For' needs a duration (e.g., 'for two weeks'), 'during' cannot introduce a clause, and 'from' needs 'onwards' or a 'to' pair.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-003",
+      "section": "english",
+      "topic": "Punctuation",
+      "difficulty": "medium",
+      "stem": "Which sentence is punctuated correctly?",
+      "options": [
+        "The train was late, we missed the orientation session.",
+        "The train was late; we missed the orientation session.",
+        "The train was late we, missed the orientation session.",
+        "The train; was late, we missed the orientation session."
+      ],
+      "correct": 1,
+      "explanation": "Two independent clauses must be joined by a semicolon (or a comma plus a coordinating conjunction). Option A is a comma splice, C splits subject and verb with a stray comma, and D places a semicolon inside a clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-004",
+      "section": "english",
+      "topic": "Vocabulary",
+      "difficulty": "hard",
+      "stem": "Read the passage: \"Before the trial produced any real data, Farhan built a tenuous case for his hypothesis, and reviewers quickly picked it apart. Once the results arrived, however, the argument grew steadily stronger.\" What does 'tenuous' most nearly mean as used in the passage?",
+      "options": [
+        "weak and slight",
+        "bold and innovative",
+        "deliberately misleading",
+        "long and complicated"
+      ],
+      "correct": 0,
+      "explanation": "'Tenuous' means thin, slender, or flimsy; the passage's contrast with 'grew steadily stronger' and the image of reviewers 'picking it apart' confirm the meaning 'weak and slight'. 'Bold and innovative', 'deliberately misleading', and 'long and complicated' none contrast with 'stronger' and are not supported by context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-005",
+      "section": "english",
+      "topic": "Vocabulary",
+      "difficulty": "easy",
+      "stem": "Select the option most nearly similar in meaning to \"candid\":",
+      "options": [
+        "evasive",
+        "frank",
+        "diplomatic",
+        "taciturn"
+      ],
+      "correct": 1,
+      "explanation": "'Candid' means truthful and straightforward, so 'frank' is the closest synonym. 'Evasive' is an antonym, 'diplomatic' implies careful tact rather than openness, and 'taciturn' means habitually silent.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-006",
+      "section": "english",
+      "topic": "Vocabulary",
+      "difficulty": "easy",
+      "stem": "Select the option most nearly opposite in meaning to \"abundant\":",
+      "options": [
+        "plentiful",
+        "ample",
+        "scarce",
+        "lavish"
+      ],
+      "correct": 2,
+      "explanation": "'Abundant' means existing in large quantity, so its opposite is 'scarce'. 'Plentiful', 'ample', and 'lavish' all convey plenty and are therefore synonyms or near-synonyms, not antonyms.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-007",
+      "section": "english",
+      "topic": "Writing skills",
+      "difficulty": "medium",
+      "stem": "Read the passage: \"Shahrah-e-Faisal turns into a river of brake lights every evening. Sitting patiently in the crawl, a veteran commuter remembers the same jam fifteen years ago. The city, it seems, has grown faster than its roads.\"\n\nWhich sentence best expresses the overall meaning of the passage?",
+      "options": [
+        "Karachi's traffic infrastructure has not kept pace with the city's growth.",
+        "Veteran commuters enjoy driving on Shahrah-e-Faisal.",
+        "The city has decided to widen Shahrah-e-Faisal immediately.",
+        "Traffic jams only occur in the early morning hours."
+      ],
+      "correct": 0,
+      "explanation": "The closing sentence — the road network growing slower than the city — states the main idea, which option A paraphrases. B invents an enjoyment the passage does not mention, C invents a decision no sentence supports, and D contradicts the passage's explicit 'every evening'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-008",
+      "section": "english",
+      "topic": "Writing skills",
+      "difficulty": "hard",
+      "stem": "Choose the sentence that is free of grammatical and structural errors:",
+      "options": [
+        "Studying late into the night, his notes were still unfinished by dawn.",
+        "Studying late into the night, the notes remained unfinished because of he was tired.",
+        "He studied late into the night, so his notes were finally complete by dawn.",
+        "Because he studied late into the night, so his notes were complete by dawn."
+      ],
+      "correct": 2,
+      "explanation": "Option C is a properly coordinated sentence with a consistent subject. A contains a dangling modifier ('his notes' did not do the studying), B both breaks the subordinator ('because of he was') and repeats the dangling modifier, and D double-marks the cause with 'Because ... so', which standard English does not allow.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-eng-009",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "medium",
+      "stem": "Identify the part containing an error. \"The committee (A) / has announced (B) / its decision (C) / before the meeting ended (D).\"",
+      "options": [
+        "The committee (A)",
+        "has announced (B)",
+        "its decision (C)",
+        "before the meeting ended (D)"
+      ],
+      "correct": 1,
+      "explanation": "The finished past time reference 'before the meeting ended' requires the past tense ('announced' or 'had announced'); the present perfect 'has announced' cannot be used because it links the action to the present. Parts A, C, and D are individually correct: 'committee' agrees with the singular pronoun 'its', and the conjunction and past-tense verb in D are properly formed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-001",
+      "section": "logic",
+      "topic": "Logical deductions",
+      "difficulty": "medium",
+      "stem": "Statements: \"All research scholars have published at least one paper. Some research scholars are psychologists.\" If both statements are true, which conclusion MUST also be true?",
+      "options": [
+        "All psychologists have published at least one paper.",
+        "Some psychologists have published at least one paper.",
+        "No psychologists have published at least one paper.",
+        "All research scholars are psychologists."
+      ],
+      "correct": 1,
+      "explanation": "The psychologists who are research scholars must have published, so 'some psychologists have published' follows necessarily. A over-generalises from 'some' to 'all'; C contradicts the given statements; D inverts a 'some' relation into an 'all' relation, which a valid syllogism never permits.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-002",
+      "section": "logic",
+      "topic": "Letter series",
+      "difficulty": "medium",
+      "stem": "Which letter comes next in the series: B, E, J, Q, ?",
+      "options": [
+        "X",
+        "W",
+        "Y",
+        "Z"
+      ],
+      "correct": 2,
+      "explanation": "The positions are 2, 5, 10, 17; the gaps increase by successive odd numbers: +3, +5, +7, so the next gap is +9, giving position 26 — the letter Z. X (24), W (23), and Y (25) do not fit the +9 step.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-003",
+      "section": "logic",
+      "topic": "Number series",
+      "difficulty": "easy",
+      "stem": "Which number comes next in the series: 3, 6, 12, 24, ?",
+      "options": [
+        "30",
+        "36",
+        "48",
+        "42"
+      ],
+      "correct": 2,
+      "explanation": "Each term is double the previous one (times-2 rule), so 24 x 2 = 48. 30 and 36 continue an additive pattern that the given terms do not follow, and 42 fits no consistent rule in the series.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-004",
+      "section": "logic",
+      "topic": "Argument evaluation",
+      "difficulty": "medium",
+      "stem": "Argument: \"Students who use the university library grade better on average than students who do not. Therefore, library use causes better grades.\" Which option most seriously weakens this argument?",
+      "options": [
+        "University libraries stay open until midnight during exam weeks.",
+        "Students who are already highly motivated both choose to use the library and study harder on their own.",
+        "Most students find library desks more comfortable than their hostel rooms.",
+        "The university has two libraries, one for each campus."
+      ],
+      "correct": 1,
+      "explanation": "The inference from correlation to causation is weakened by showing a common cause: motivation drives both library use and better grades, so the correlation need not be causal. The other options comment on opening hours, comfort, or infrastructure and leave the causal claim untouched.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-005",
+      "section": "logic",
+      "topic": "Course of action",
+      "difficulty": "easy",
+      "stem": "Statement: \"Cases of post-surgical infection at a district hospital have tripled in one month, and every affected patient was operated on in Ward 3.\" Which course of action should be pursued immediately?",
+      "options": [
+        "Audit sterility and instrument-sterilisation practices in Ward 3 at once.",
+        "Ask every surgical patient in the district whether they wash their hands regularly.",
+        "Close the entire district hospital until the next quarterly review.",
+        "Wait another month to see whether the trend continues on its own."
+      ],
+      "correct": 0,
+      "explanation": "A valid course of action must be both immediate and proportionate to the evidence: the cluster points to Ward 3, so auditing its sterility practices directly targets the likely source. B blames patients without evidence, C is a disproportionate blanket shutdown, and D delays a response to a safety emergency.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-006",
+      "section": "logic",
+      "topic": "Symbol series",
+      "difficulty": "hard",
+      "stem": "In a certain code, LAMP is written as 36-3-39-48. Using the same code, how is BRISK written?",
+      "options": [
+        "6-54-27-57-33",
+        "6-51-27-57-33",
+        "2-17-9-19-11",
+        "6-54-27-39-33"
+      ],
+      "correct": 0,
+      "explanation": "The rule is: replace each letter with three times its position in the alphabet. LAMP check: L(12)=36, A(1)=3, M(13)=39, P(16)=48 — matches the sample. BRISK: B(2)=6, R(18)=54, I(9)=27, S(19)=57, K(11)=33. Option C uses the raw positions without tripling; B miscounts R as 17; D miscounts S as 13.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-007",
+      "section": "logic",
+      "topic": "Logical deductions",
+      "difficulty": "hard",
+      "stem": "Statements: \"No dental college in Sindh admits students below the published merit list. Ali was admitted to a dental college in Sindh.\" If both statements are true, what MUST be true about Ali?",
+      "options": [
+        "Ali scored above the published merit list cut-off.",
+        "Ali scored the highest merit in his college's intake.",
+        "Ali was admitted on a management quota seat.",
+        "Ali applied to more than one dental college."
+      ],
+      "correct": 0,
+      "explanation": "This denies the consequent: since sub-merit students are never admitted and Ali was admitted, he cannot be below the cut-off, so he met or exceeded it. B asserts a superlative the premises never establish, C invents an unmentioned admission route, and D adds a fact outside the statements.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-008",
+      "section": "logic",
+      "topic": "Critical thinking",
+      "difficulty": "medium",
+      "stem": "Statement: \"The number of seats in government medical colleges has stayed almost unchanged for a decade while HSSC pre-medical enrolment has grown every year.\" Which conclusion is most validly drawn from the statement?",
+      "options": [
+        "Competition for government medical college seats has intensified over the decade.",
+        "The quality of medical education in Pakistan has declined.",
+        "Private medical colleges have stopped expanding.",
+        "Fewer students now wish to study medicine abroad."
+      ],
+      "correct": 0,
+      "explanation": "Constant supply against a rising applicant pool means the ratio of candidates to seats has grown, so competition must have intensified. The other options each reach beyond the data: quality trends (B), private-sector plans (C), and abroad-study choices (D) are all untouched by the statement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    },
+    {
+      "id": "mdcat-log-009",
+      "section": "logic",
+      "topic": "Cause and effect",
+      "difficulty": "easy",
+      "stem": "Statement I: \"Continuous heavy monsoon rain flooded low-lying villages near Tarbela all week.\" Statement II: \"Wheat stocks stored in the affected villages' union council warehouses were written off as a loss.\" What is the relationship between the two statements?",
+      "options": [
+        "Statement I is the cause and Statement II is its effect.",
+        "Statement II is the cause and Statement I is its effect.",
+        "Both statements are independent effects of a common third cause.",
+        "Both statements describe unrelated events with no causal link."
+      ],
+      "correct": 0,
+      "explanation": "Flooding submerges stored grain and ruins it, so the rain (I) causes the write-off (II). II cannot cause I because warehouse losses do not produce monsoon rain, and the two are neither unrelated nor parallel effects of an unstated third event.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://pmdc.pk/Publication/Syllabus"
+      ]
+    }
+  ]
+}

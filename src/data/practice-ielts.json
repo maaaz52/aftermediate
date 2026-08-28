@@ -1,0 +1,1648 @@
+{
+  "testId": "ielts",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions written to the official IELTS Academic syllabus (British Council/IDP). Listening: 4 sections with 10 questions each covering everyday and academic contexts. Reading: 3 passages covering scientific, historical and argumentative texts with multiple question types.",
+    "sources": [
+      "https://ielts.org",
+      "https://takeielts.britishcouncil.org",
+      "https://ielts.idp.com/pakistan"
+    ]
+  },
+  "durationMinutes": 90,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 80,
+    "note": "No negative marking. IELTS band scores are a 1–9 scale combining all four sections. Your percentage here is an approximation of Listening + Reading readiness, not a band score."
+  },
+  "benchmarks": [
+    {
+      "label": "Band 7.0 · Good user",
+      "percent": 75
+    },
+    {
+      "label": "Band 6.5 · Competent user",
+      "percent": 65
+    },
+    {
+      "label": "Band 6.0 · Modest user",
+      "percent": 55
+    }
+  ],
+  "sections": [
+    {
+      "id": "listening",
+      "name": "Listening",
+      "questionCount": 40
+    },
+    {
+      "id": "reading",
+      "name": "Reading",
+      "questionCount": 40
+    }
+  ],
+  "questions": [
+    {
+      "id": "ielts-listening-1",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a conversation between a student and a librarian. The student wants to borrow a book that is...",
+      "options": [
+        "currently on display",
+        "already checked out to another student",
+        "available in the reference section",
+        "being repaired"
+      ],
+      "correct": 2,
+      "explanation": "The librarian explains that the book is kept in the reference section, where it can be read but not taken out. The student therefore cannot borrow it, which makes option C the correct answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-2",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a woman phoning a hotel to book a room for two nights. The receptionist tells her that the price she is quoted for a double room...",
+      "options": [
+        "includes breakfast only",
+        "includes breakfast and evening meal",
+        "does not include any meals",
+        "is a special weekend rate"
+      ],
+      "correct": 1,
+      "explanation": "The receptionist confirms that the double room rate covers both breakfast and the evening meal as part of a half-board package. Options A and C are therefore ruled out, leaving option B as correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-3",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a man enquiring about a gym membership. The receptionist says that if he joins before the end of the month, he...",
+      "options": [
+        "pays no joining fee",
+        "gets three months free",
+        "receives a free personal trainer session",
+        "pays half price for the first year"
+      ],
+      "correct": 0,
+      "explanation": "The receptionist states that the joining fee is being waived for anyone who signs up during the current promotional month. Since the man qualifies by joining before the deadline, option A is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-4",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a customer calling a local plumber about a leaking tap. The plumber's assistant says the earliest the plumber can visit is...",
+      "options": [
+        "later this afternoon",
+        "tomorrow morning",
+        "tomorrow evening",
+        "Friday of this week"
+      ],
+      "correct": 3,
+      "explanation": "The assistant checks the appointment diary and explains that the plumber is fully booked until Friday, which is the first available slot. The other suggested times are all earlier and are therefore incorrect.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-5",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a student buying a concert ticket at the box office. To get the student discount, the student must...",
+      "options": [
+        "buy the ticket online",
+        "show a valid student card",
+        "book at least a week in advance",
+        "bring a friend who is also a student"
+      ],
+      "correct": 1,
+      "explanation": "The box office assistant explains that the reduced student rate applies only when a valid student card is presented at the time of purchase. No online booking or advance notice is required, so option B is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-6",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a young man viewing a flat with a letting agent. The monthly rent of the flat...",
+      "options": [
+        "covers water and electricity",
+        "covers water but not electricity",
+        "covers electricity but not water",
+        "covers neither water nor electricity"
+      ],
+      "correct": 2,
+      "explanation": "The letting agent clarifies that the rent includes electricity but that water bills are billed separately to the tenant. This matches option C exactly, while the other combinations are contradicted in the dialogue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-7",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a patient booking a dental appointment. The receptionist offers a slot that is...",
+      "options": [
+        "on Tuesday morning",
+        "on Wednesday afternoon",
+        "on Thursday at lunchtime",
+        "on Friday morning"
+      ],
+      "correct": 0,
+      "explanation": "The receptionist says the dentist is fully booked on Wednesday and Thursday and can only see the patient on Tuesday morning. The patient accepts this slot, making option A the correct answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-8",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a woman asking at the lost property office about a bag she left on a bus. To identify the bag, the woman describes it as...",
+      "options": [
+        "a small black leather bag",
+        "a large blue canvas bag",
+        "a red bag with a silver buckle",
+        "a brown bag with a long strap"
+      ],
+      "correct": 3,
+      "explanation": "The woman corrects herself during the conversation and specifies that the bag is brown with a long shoulder strap. The attendant identifies it from this description, making option D the correct answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-9",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "easy",
+      "stem": "You hear a customer ordering coffee and cake in a café. The waitress tells her that the chocolate cake...",
+      "options": [
+        "has just sold out",
+        "is available but cold",
+        "was replaced by a lemon cake",
+        "is served with ice cream"
+      ],
+      "correct": 2,
+      "explanation": "The waitress apologises and explains that the chocolate cake is finished for the day, but that a lemon cake has been made as a substitute. The customer accepts the alternative, so option C is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-10",
+      "section": "listening",
+      "topic": "Section 1 — Everyday conversation",
+      "difficulty": "medium",
+      "stem": "You hear a customer asking a travel agent about a package tour. The agent says the quoted price does not include...",
+      "options": [
+        "return flights",
+        "hotel accommodation",
+        "airport transfers",
+        "travel insurance"
+      ],
+      "correct": 1,
+      "explanation": "The travel agent lists what is covered and states clearly that hotel accommodation is the one item not included in the basic package, although it can be added for an extra charge. This matches option B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-11",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "easy",
+      "stem": "You hear a recorded announcement about a local swimming pool. The pool now opens to the public at...",
+      "options": [
+        "6:00 a.m.",
+        "6:30 a.m.",
+        "7:00 a.m.",
+        "7:30 a.m."
+      ],
+      "correct": 0,
+      "explanation": "The announcement states that opening time has been brought forward and the pool now opens at six in the morning, half an hour earlier than before. The other times are mentioned only as past or alternative schedules.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-12",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "easy",
+      "stem": "You hear a radio announcement about a community festival. Because of bad weather, the festival will now take place...",
+      "options": [
+        "on the same day in the town hall",
+        "one week later in the town square",
+        "one week later in the community centre",
+        "two weeks later in the park"
+      ],
+      "correct": 2,
+      "explanation": "The announcement explains that heavy rain has forced the organisers to postpone the festival by a week and move it indoors to the community centre. Option C captures both the new date and the new venue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-13",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "easy",
+      "stem": "You hear a guide welcoming visitors to a local museum. Visitors are told that in the main gallery they are allowed to...",
+      "options": [
+        "take photographs without flash",
+        "touch some of the exhibits",
+        "eat and drink at the benches",
+        "borrow audio guides for free"
+      ],
+      "correct": 3,
+      "explanation": "The guide states that audio guides are available free of charge from the information desk. Photography and touching exhibits are both prohibited in the main gallery, and eating is only allowed in the café, so option D is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-14",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "easy",
+      "stem": "You hear an announcement about a city park. The new children's play area is being built...",
+      "options": [
+        "next to the main entrance",
+        "behind the boathouse",
+        "near the old fountain",
+        "opposite the café"
+      ],
+      "correct": 1,
+      "explanation": "The announcement describes the new play area as being located behind the boathouse, away from the busier entrance and café areas. The other locations are mentioned in connection with different facilities, so option B is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-15",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "easy",
+      "stem": "You hear a talk about a new household recycling scheme. Under the scheme, residents can recycle...",
+      "options": [
+        "plastic bottles and glass jars",
+        "plastic bottles but not glass",
+        "paper and plastic bags",
+        "glass jars but not paper"
+      ],
+      "correct": 0,
+      "explanation": "The speaker explains that both plastic bottles and glass jars are now collected from homes, whereas paper must still be taken to a drop-off point. This makes option A the accurate summary of the scheme.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-16",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "medium",
+      "stem": "You hear a keeper giving a talk at a wildlife park. The keeper warns visitors that the sea lion feeding display, which is normally at 2 p.m.,...",
+      "options": [
+        "has been cancelled this week",
+        "has been moved to the morning",
+        "has been moved to a different pool",
+        "will start only if the weather is dry"
+      ],
+      "correct": 3,
+      "explanation": "The keeper announces that the feeding display goes ahead only in dry weather, since wet conditions make the viewing area unsafe. Visitors are advised to check the board for updates, which matches option D.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-17",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "medium",
+      "stem": "You hear a station announcement about weekend engineering works. Passengers travelling to the airport on Saturday are advised to...",
+      "options": [
+        "take a replacement bus from platform two",
+        "change trains at the city centre station",
+        "add an extra hour to their journey",
+        "use the airport shuttle from the east entrance"
+      ],
+      "correct": 1,
+      "explanation": "The announcement explains that trains cannot run directly to the airport this weekend, so passengers must change at the city centre station. This instruction is repeated at the end of the announcement, confirming option B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-18",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "medium",
+      "stem": "You hear a librarian describing new services at a community library. To use the new meeting room, users must...",
+      "options": [
+        "be library members for over a year",
+        "book it at least two days in advance",
+        "pay a small fee per hour",
+        "collect a key from the front desk"
+      ],
+      "correct": 1,
+      "explanation": "The librarian states that the meeting room is free for members but must be booked at least forty-eight hours in advance. No membership length or key collection is required, so option B is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-19",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "medium",
+      "stem": "You hear an orientation talk for new students at a college. Students are told that their student ID cards can be collected...",
+      "options": [
+        "from the main office in the library",
+        "from the reception of the sports centre",
+        "from their faculty secretary",
+        "from the student services building"
+      ],
+      "correct": 0,
+      "explanation": "The speaker directs new students to the main office, which is located on the ground floor of the library, where ID cards are ready for collection. The other locations are mentioned for different registration matters.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-20",
+      "section": "listening",
+      "topic": "Section 2 — Informational talk",
+      "difficulty": "medium",
+      "stem": "You hear a talk about a farmers' market that is moving to a new site. Visitors arriving by car are told that...",
+      "options": [
+        "free parking is available beside the market",
+        "they should use the public car park across the river",
+        "parking spaces must be reserved in advance",
+        "parking is available but time-limited to two hours"
+      ],
+      "correct": 3,
+      "explanation": "The speaker explains that the new site has limited parking, so drivers are allowed to park for a maximum of two hours, after which they must move their vehicles. This restriction is the key detail, making option D correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-21",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear two students discussing the design of a psychology experiment on memory. The main criticism of their study is that...",
+      "options": [
+        "the memory test is too difficult",
+        "the participants are not representative",
+        "the results cannot be compared across groups",
+        "the sample size is too small"
+      ],
+      "correct": 3,
+      "explanation": "One student points out that only twelve participants took part, which the other agrees is too small to draw reliable conclusions. They decide to recruit more volunteers, confirming that the sample size is the central issue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-22",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear a tutor discussing an essay draft with two students. The tutor's main criticism of the essay is that...",
+      "options": [
+        "the introduction is too long",
+        "the conclusion repeats the introduction",
+        "the argument lacks supporting evidence",
+        "the referencing style is inconsistent"
+      ],
+      "correct": 2,
+      "explanation": "The tutor praises the structure but says the central claims are asserted without enough evidence, especially in the middle paragraphs. The students agree to add more examples and sources, so option C is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-23",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear three students planning a group presentation on renewable energy. They decide that the student who will present the section on costs is...",
+      "options": [
+        "the student who researched the case studies",
+        "the student who prepared the graphs",
+        "the student who wrote the introduction",
+        "the student who handled the references"
+      ],
+      "correct": 0,
+      "explanation": "During the division of tasks, the student who had already gathered the case-study data is also assigned the costs section because the figures appear in those cases. The others take responsibility for different parts of the talk.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-24",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear a student discussing a research proposal with her supervisor. The supervisor says the section that most needs to be revised is...",
+      "options": [
+        "the literature review",
+        "the research questions",
+        "the methodology",
+        "the expected outcomes"
+      ],
+      "correct": 2,
+      "explanation": "The supervisor is satisfied with the literature review and questions but explains that the methodology section lacks detail about how participants will be selected. The student agrees to expand it, making option C correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-25",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear two students discussing a journal article on urban farming. According to the article, the main benefit the author attributes to rooftop gardens is...",
+      "options": [
+        "lower food prices for residents",
+        "reduced energy use in buildings",
+        "increased biodiversity in cities",
+        "better mental health for workers"
+      ],
+      "correct": 3,
+      "explanation": "The students note that the author's central claim is that rooftop gardens improve the psychological wellbeing of building occupants, while the other benefits are treated as secondary. This matches option D.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-26",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "medium",
+      "stem": "You hear a tutor and a student discussing possible dissertation topics. The tutor warns the student that the original topic is too...",
+      "options": [
+        "difficult to find data for",
+        "similar to another student's project",
+        "broad to cover in the time available",
+        "dependent on unpublished sources"
+      ],
+      "correct": 2,
+      "explanation": "The tutor advises that the original topic, comparing transport systems in five countries, cannot be researched properly within one term and suggests narrowing it to two cities. The scope is therefore the problem, so option C is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-27",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "hard",
+      "stem": "You hear three students analysing the results of a geography fieldwork survey. Looking at the questionnaire responses, they conclude that the data...",
+      "options": [
+        "support the original hypothesis",
+        "are invalid because questions were ambiguous",
+        "show a pattern opposite to expectations",
+        "need to be rechecked because of missing entries"
+      ],
+      "correct": 0,
+      "explanation": "After examining the responses, the students agree that residents' answers consistently reflect the predicted trend, confirming the original hypothesis. The discussion is nuanced, but their final conclusion explicitly endorses the hypothesis, making option A correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-28",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "hard",
+      "stem": "You hear a tutor giving feedback to a student on a laboratory report. The tutor identifies the area needing the most improvement as...",
+      "options": [
+        "the accuracy of the recorded measurements",
+        "the clarity of the experimental procedure",
+        "the interpretation of the anomalous results",
+        "the presentation of the graphs and tables"
+      ],
+      "correct": 2,
+      "explanation": "The tutor notes that the measurements and figures are sound, but that the student dismisses the anomalous results too quickly instead of offering possible explanations for them. The interpretation of those results is therefore the main weakness, so option C is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-29",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "hard",
+      "stem": "You hear three students discussing a chapter on economic models. The point on which two of the students disagree is whether the model...",
+      "options": [
+        "applies to developing economies",
+        "overestimates the role of interest rates",
+        "ignores the effects of inflation",
+        "assumes consumers behave rationally"
+      ],
+      "correct": 3,
+      "explanation": "The chapter is generally praised, but two students argue about the rationality assumption: one thinks it is unrealistic, while the other defends it as a useful simplification. The third student stays neutral, so option D captures the disagreement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-30",
+      "section": "listening",
+      "topic": "Section 3 — Academic discussion",
+      "difficulty": "hard",
+      "stem": "You hear a tutor and two students discussing why a research project was temporarily suspended. The tutor explains that the project was paused because...",
+      "options": [
+        "the funding ran out unexpectedly",
+        "a participant raised a privacy concern",
+        "the equipment failed during testing",
+        "one researcher had to leave the team"
+      ],
+      "correct": 1,
+      "explanation": "The tutor reveals that a participant complained about how personal data were being stored, and the ethics committee asked the team to halt work while the issue was reviewed. The pause was therefore ethical rather than practical, making option B correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-31",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "easy",
+      "stem": "You hear the beginning of a lecture on urban beekeeping. The lecturer says the talk will focus mainly on...",
+      "options": [
+        "the history of beekeeping in cities",
+        "the health risks of urban honey",
+        "the challenges facing city beekeepers",
+        "the economics of selling honey"
+      ],
+      "correct": 2,
+      "explanation": "In the introduction, the lecturer announces that the talk will examine the practical difficulties of keeping bees in urban environments, such as limited forage and pesticide exposure. The other topics are mentioned only in passing, so option C is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-32",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a lecture about sleep research. The lecturer argues that REM sleep is especially important because it...",
+      "options": [
+        "helps consolidate emotional memories",
+        "repairs physical damage to muscles",
+        "regulates the body's temperature",
+        "controls the release of growth hormones"
+      ],
+      "correct": 0,
+      "explanation": "The lecturer cites studies showing that REM sleep strengthens emotional memory and helps people process stressful experiences, while the other functions are linked to non-REM sleep. This makes option A the correct answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-33",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a lecture on the history of the postal service. According to the lecturer, the change that transformed mail delivery in the nineteenth century was...",
+      "options": [
+        "the introduction of postage stamps",
+        "the invention of the railway network",
+        "the use of airmail aircraft",
+        "the opening of rural post offices"
+      ],
+      "correct": 1,
+      "explanation": "The lecturer explains that stamps standardised payment but that it was the expansion of railways that made fast, reliable delivery possible at scale. Airmail and rural offices came later, so option B is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-34",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a marine biology lecture about mangrove forests. The lecturer emphasises that mangroves are valuable mainly because they...",
+      "options": [
+        "provide timber for local communities",
+        "attract tourists to coastal areas",
+        "filter pollutants from river water",
+        "protect coastlines from storms"
+      ],
+      "correct": 3,
+      "explanation": "The lecturer stresses that mangrove roots absorb wave energy and reduce storm damage, and warns that their removal has worsened flooding in several regions. The other uses are mentioned but presented as secondary, so option D is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-35",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a lecture on the economics of coffee production. The lecturer says the main reason coffee prices paid to farmers have fallen is...",
+      "options": [
+        "a decline in global consumption",
+        "the rising cost of fertiliser",
+        "an oversupply on the world market",
+        "the dominance of supermarket brands"
+      ],
+      "correct": 2,
+      "explanation": "The lecturer explains that global production has repeatedly exceeded demand, driving prices down for growers, even though consumption remains steady. This oversupply is identified as the central cause, making option C correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-36",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a linguistics lecture about sign language. The research described in the lecture showed that sign languages...",
+      "options": [
+        "have grammatical structures similar to spoken languages",
+        "developed only within the last century",
+        "cannot express abstract concepts",
+        "are learned more slowly than spoken languages"
+      ],
+      "correct": 0,
+      "explanation": "The lecturer presents studies demonstrating that sign languages contain the same kinds of grammar, word formation and sentence rules as spoken languages. The other claims are contradicted by the research, so option A is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-37",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a public health lecture about salt reduction. The lecturer argues that public campaigns have had limited success because...",
+      "options": [
+        "most people do not know salt is unhealthy",
+        "salt is hidden in processed foods",
+        "governments refuse to set targets",
+        "consumers prefer salty snacks"
+      ],
+      "correct": 1,
+      "explanation": "The lecturer explains that people cannot easily reduce their intake because most salt is already added during food manufacturing, before it reaches the table. This hidden salt is the key obstacle, making option B correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-38",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear a lecture on climate science about the role of clouds. The lecturer says that the greatest uncertainty in climate models comes from...",
+      "options": [
+        "measuring ocean temperatures",
+        "tracking greenhouse gas emissions",
+        "recording polar ice loss",
+        "predicting how clouds will change"
+      ],
+      "correct": 3,
+      "explanation": "The lecturer explains that clouds can both cool and warm the planet, and that their behaviour under a warmer atmosphere is the least well understood factor in the models. This makes option D the correct answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-39",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "medium",
+      "stem": "You hear an archaeology lecture about dating ancient pottery. The lecturer warns that radiocarbon dating of such objects is problematic because...",
+      "options": [
+        "the method damages the objects",
+        "organic material may be contaminated",
+        "the technique is too expensive",
+        "results are delayed for months"
+      ],
+      "correct": 1,
+      "explanation": "The lecturer explains that pottery itself contains no carbon that can be dated, so samples come from surrounding organic material, which is easily contaminated by roots or soil. This makes radiocarbon dates unreliable, so option B is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-listening-40",
+      "section": "listening",
+      "topic": "Section 4 — Academic lecture",
+      "difficulty": "hard",
+      "stem": "You hear the final part of a lecture on memory and eyewitness testimony. The most significant implication the lecturer draws from the studies is that...",
+      "options": [
+        "memory is an accurate record of events",
+        "confidence should not guide legal decisions",
+        "children remember events more accurately than adults",
+        "repeated questioning improves recall"
+      ],
+      "correct": 1,
+      "explanation": "The lecturer concludes that witnesses who are highly confident can still be mistaken, especially after misleading questions, so courts should not treat confidence as a sign of accuracy. This is presented as the talk's central warning, making option B correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-1",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "easy",
+      "stem": "The passage states that bees pollinate approximately three-quarters of the world's flowering plants.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 0,
+      "explanation": "Paragraph A of the passage states that bees are responsible for pollinating about 75% of flowering plant species, so the statement matches the passage exactly.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-2",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "easy",
+      "stem": "The passage puts the economic value of bee pollination at roughly $200 billion per year.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 0,
+      "explanation": "Paragraph A explicitly cites a global figure of around $200 billion a year for the pollination services provided by bees.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-3",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "According to the passage, colony collapse disorder was first documented by European scientists in the early 1990s.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 1,
+      "explanation": "The passage says the disorder first emerged around 2006, when beekeepers began reporting sudden colony losses of 30–50%; there is no mention of European scientists or of the 1990s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-4",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "easy",
+      "stem": "The passage claims that neonicotinoid pesticides disrupt bees' navigation and weaken their immune systems.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 0,
+      "explanation": "Paragraph C describes how laboratory studies showed neonicotinoids interfering with bees' ability to navigate and making them more vulnerable to disease.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-5",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "The passage states that the Varroa mite feeds exclusively on honey stored in the hive.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 1,
+      "explanation": "The passage describes the Varroa mite as feeding on the body fluids of developing bee larvae and pupae, not on honey, so the statement contradicts the text.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-6",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "hard",
+      "stem": "The passage reports that climate change has caused the complete disappearance of at least one wildflower species.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 2,
+      "explanation": "The passage mentions that warmer temperatures have shifted flowering seasons, but it never says any species has disappeared, so there is not enough information to judge the statement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-7",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "easy",
+      "stem": "The passage concludes that a single cause is responsible for colony collapse disorder.",
+      "options": [
+        "True",
+        "False",
+        "Not Given",
+        "Can't tell from the passage"
+      ],
+      "correct": 1,
+      "explanation": "The final paragraph argues that CCD results from several interacting factors and that a single cause is unlikely, so the statement is the opposite of the conclusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-8",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "easy",
+      "stem": "According to the passage, what is described as the main reason for the decline in bee populations?",
+      "options": [
+        "climate change affecting flower blooming seasons",
+        "increased use of pesticides in agriculture",
+        "loss of natural habitat to urban development",
+        "the spread of parasitic mites among colonies"
+      ],
+      "correct": 1,
+      "explanation": "The passage identifies neonicotinoid pesticides as the primary driver of colony collapse disorder, while the other factors are mentioned only as secondary contributors.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-9",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "What evidence from around 2006 is cited as the first sign that something new was affecting bee colonies?",
+      "options": [
+        "a 10 percent fall in honey production across Europe",
+        "sudden colony losses of between 30 and 50 percent reported by beekeepers",
+        "the closure of several large commercial apiaries",
+        "a sharp decline in the number of newly trained beekeepers"
+      ],
+      "correct": 1,
+      "explanation": "Paragraph B states that in roughly 2006 beekeepers began reporting that 30–50% of their colonies were collapsing suddenly, an event unlike anything previously recorded.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-10",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "Why are neonicotinoid pesticides considered especially damaging to bees, according to the passage?",
+      "options": [
+        "they are used in larger quantities than any other pesticide",
+        "they accumulate in the honey that bees produce",
+        "they disrupt navigation and weaken the bees' immune systems",
+        "they kill the flowers that bees feed on"
+      ],
+      "correct": 2,
+      "explanation": "The passage explains that neonicotinoids impair bees' navigation, causing them to lose their way, and depress their immune systems, making them more vulnerable to disease.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-11",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "What does the passage say about the Varroa mite?",
+      "options": [
+        "It is harmless to adult bees but destroys their eggs.",
+        "It only attacks colonies that are already dying.",
+        "It is carried from hive to hive by beekeepers' equipment.",
+        "It weakens colonies and transmits viruses to them."
+      ],
+      "correct": 3,
+      "explanation": "Paragraph D describes the Varroa mite feeding on larvae and pupae, which weakens colonies and at the same time spreads viruses from one bee to another.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-12",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "medium",
+      "stem": "According to the passage, how does the loss of natural habitat harm bees?",
+      "options": [
+        "It reduces the diversity of plants available for foraging.",
+        "It forces bees to build hives in urban areas.",
+        "It exposes bees to higher levels of urban pollution.",
+        "It shortens the bees' active season each year."
+      ],
+      "correct": 0,
+      "explanation": "Paragraph E says that urban development and intensive farming reduce the variety of flowering plants, so bees find less diverse forage and weaker nutrition.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-13",
+      "section": "reading",
+      "topic": "Passage 1 — The decline of bee populations",
+      "difficulty": "hard",
+      "stem": "Which conclusion does the passage draw about the future of bee conservation?",
+      "options": [
+        "Research funding should focus exclusively on breeding disease-resistant bees.",
+        "A single 'silver bullet' solution is likely to be found within a decade.",
+        "Only an integrated approach addressing several factors can halt the decline.",
+        "Banning all pesticides is the only realistic way to save bee populations."
+      ],
+      "correct": 2,
+      "explanation": "The final paragraph concludes that because multiple factors interact, no single remedy will work and only a coordinated strategy tackling pesticides, disease, and habitat can reverse the decline.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-14",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "easy",
+      "stem": "Which of the following is the best heading for the paragraph that describes the spread of tea to Japan?",
+      "options": [
+        "A Buddhist tradition of tea",
+        "The accidental discovery of tea",
+        "Tea smuggling in the nineteenth century",
+        "The rise of the tea bag"
+      ],
+      "correct": 0,
+      "explanation": "The second paragraph explains that Buddhist monks carried tea from China to Japan, where it became central to monastic life and later to the formal tea ceremony.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-15",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "easy",
+      "stem": "Which of the following is the best heading for the paragraph describing the arrival of tea in Europe?",
+      "options": [
+        "A drink for the masses",
+        "An expensive novelty for the wealthy",
+        "The rise of coffee houses",
+        "Trade wars over tea"
+      ],
+      "correct": 1,
+      "explanation": "The third paragraph says that when Dutch and Portuguese traders first brought tea to Europe in the seventeenth century, its high price made it a luxury enjoyed only by the rich.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-16",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "easy",
+      "stem": "Which of the following is the best heading for the paragraph about tea cultivation in Assam?",
+      "options": [
+        "The origins of the tea plant",
+        "Japan's influence on European tea",
+        "Ending China's near-monopoly on tea",
+        "The invention of the tea break"
+      ],
+      "correct": 2,
+      "explanation": "The fifth paragraph describes how the British developed plantations in Assam specifically to reduce their dependence on Chinese supplies and break China's grip on the trade.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-17",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "Which of the following is the best heading for the paragraph about tea in the industrial age?",
+      "options": [
+        "Tea becomes a drink of the working classes",
+        "The decline of tea drinking in Britain",
+        "Tea as a medicinal remedy",
+        "The first tea plantations in China"
+      ],
+      "correct": 0,
+      "explanation": "The sixth paragraph explains that falling prices during industrialisation made tea affordable for ordinary workers, and the workplace tea break became a British institution.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-18",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "Which of the following is the best heading for the paragraph describing the modern tea market?",
+      "options": [
+        "The end of tea culture",
+        "A globalised market for speciality teas",
+        "The return of the tea ceremony",
+        "The collapse of tea bag sales"
+      ],
+      "correct": 1,
+      "explanation": "The final paragraph describes tea production spreading worldwide and the market diversifying into speciality single-origin teas alongside mass-market innovations such as the tea bag.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-19",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "Which of the following is the best heading for the opening paragraph of the passage?",
+      "options": [
+        "A legendary discovery in ancient China",
+        "The first tea plantation in India",
+        "Tea arrives in Britain",
+        "The Japanese tea ceremony"
+      ],
+      "correct": 0,
+      "explanation": "The first paragraph retells the legend of Emperor Shennong, who is said to have discovered tea in 2737 BCE when leaves from a wild bush fell into his boiling water.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-20",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "Which of the following is the best heading for the paragraph describing tea's status in eighteenth-century Britain?",
+      "options": [
+        "The tea break at work",
+        "From royal luxury to national drink",
+        "The smuggling of tea into China",
+        "The invention of tea cultivation"
+      ],
+      "correct": 1,
+      "explanation": "The fourth paragraph traces how the East India Company turned tea from a courtly luxury into Britain's national drink, even though heavy taxation made it costly.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-21",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "easy",
+      "stem": "According to the passage, how did the emperor Shennong supposedly discover tea?",
+      "options": [
+        "A Buddhist monk presented him with a cup of tea.",
+        "He tasted leaves plucked from a tree in his garden.",
+        "Leaves from a bush fell into his boiling water.",
+        "A trader from India brought tea to his court."
+      ],
+      "correct": 2,
+      "explanation": "The legend recounted in paragraph 1 says Shennong was boiling water when leaves blew in from a nearby bush, and he found the resulting infusion refreshing.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-22",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "easy",
+      "stem": "Which traders are credited with first bringing tea to Europe in the seventeenth century?",
+      "options": [
+        "the British East India Company",
+        "Dutch and Portuguese traders",
+        "Japanese merchants",
+        "Italian explorers"
+      ],
+      "correct": 1,
+      "explanation": "Paragraph 3 credits Dutch and Portuguese traders with introducing tea to Europe in the early seventeenth century, well before the East India Company's involvement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-23",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "Why did the British begin growing tea in India during the nineteenth century?",
+      "options": [
+        "to reduce their dependence on Chinese supplies",
+        "to make tea cheaper for Indian workers",
+        "because Chinese tea was considered poor quality",
+        "to compete with Dutch coffee plantations"
+      ],
+      "correct": 0,
+      "explanation": "Paragraph 5 says the British developed Assam tea plantations largely to end their reliance on China, which controlled the supply and the price of tea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-24",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "According to the passage, what effect did industrialisation have on tea drinking in Britain?",
+      "options": [
+        "It made tea too expensive for factory workers.",
+        "It ended the tradition of afternoon tea.",
+        "It made tea affordable for working people and created the workplace tea break.",
+        "It reduced the amount of tea imported from India."
+      ],
+      "correct": 2,
+      "explanation": "Paragraph 6 explains that cheaper production and transport during the industrial age brought tea within reach of workers, and the tea break became a standard part of the working day.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-25",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "What does the passage say was a consequence of the heavy taxation of tea in eighteenth-century Britain?",
+      "options": [
+        "the growth of tea smuggling",
+        "a ban on tea imports",
+        "the collapse of the East India Company",
+        "the spread of tea drinking to France"
+      ],
+      "correct": 0,
+      "explanation": "Paragraph 4 notes that high duties pushed up prices so much that a lively smuggling trade in untaxed tea developed along the British coast.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-26",
+      "section": "reading",
+      "topic": "Passage 2 — The social history of tea",
+      "difficulty": "medium",
+      "stem": "How does the passage describe the modern tea industry?",
+      "options": [
+        "It has returned to traditional Chinese methods.",
+        "It is dominated by a single producing country.",
+        "It has abandoned the loose-leaf market entirely.",
+        "It offers speciality teas alongside innovations such as the tea bag."
+      ],
+      "correct": 3,
+      "explanation": "The final paragraph describes a globalised industry in which speciality and single-origin teas coexist with mass-produced tea bags, appealing to very different consumers.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-27",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "According to the passage, what does conservationist Dr Elena Marsh regard as the main value of zoos?",
+      "options": [
+        "their ability to generate tourism revenue",
+        "their role in breeding endangered species for release into the wild",
+        "their power to educate the general public",
+        "their function as centres of historical research"
+      ],
+      "correct": 1,
+      "explanation": "Marsh argues that zoos' most important contribution is their coordinated breeding programmes, which have saved species such as the California condor from extinction and allowed reintroduction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-28",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "What is economist Professor James Okafor's main argument about spending on zoos?",
+      "options": [
+        "Zoos pay for themselves through entrance fees.",
+        "Zoos should be funded entirely by private donations.",
+        "Money spent on zoos would be better used to protect habitats in the wild.",
+        "Zoos are the most cost-effective form of conservation."
+      ],
+      "correct": 2,
+      "explanation": "Okafor calculates that the sums invested in new zoo exhibits would protect far more species if spent on securing wild habitats, which he sees as the only lasting solution.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-29",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "What is Dr Priya Sharma's position on modern zoo enclosures?",
+      "options": [
+        "They are so well designed that animals no longer suffer stress.",
+        "They are worse for animals than the cages of the past.",
+        "They keep animals healthy but do nothing to educate visitors.",
+        "They are an improvement, yet captivity still causes animals stress."
+      ],
+      "correct": 3,
+      "explanation": "Sharma acknowledges that enclosure design has improved dramatically but argues that captivity itself continues to produce stress, and she advocates sanctuary-style facilities instead.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-30",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "According to historian Dr Tomas Reyes, how has the role of zoos changed over the past century?",
+      "options": [
+        "It has moved from public spectacle towards education.",
+        "It has become purely commercial.",
+        "It has shifted from education towards entertainment.",
+        "It has remained largely unchanged."
+      ],
+      "correct": 0,
+      "explanation": "Reyes traces how nineteenth-century menageries displayed animals purely for spectacle, whereas modern zoos present themselves as institutions of conservation and learning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-31",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "What conclusion does the author of the passage draw about the future of zoos?",
+      "options": [
+        "They should be closed down and replaced by safari parks.",
+        "They should become conservation centres with restricted public access.",
+        "They should double their animal collections to attract more visitors.",
+        "They should return to their original role as places of spectacle."
+      ],
+      "correct": 1,
+      "explanation": "In the final paragraph the author argues that zoos will only justify their existence by transforming into conservation centres where breeding takes priority and public access is limited.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-32",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "On which point do Dr Marsh and Dr Reyes appear to agree?",
+      "options": [
+        "Zoos can serve a legitimate purpose in society.",
+        "Visitors should be banned from all zoos.",
+        "Zoos should be funded entirely by governments.",
+        "Captive breeding has been a total failure."
+      ],
+      "correct": 0,
+      "explanation": "Although they value zoos for different reasons (Marsh for conservation, Reyes for education), both explicitly reject the view that zoos have no useful function at all.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-33",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "What does Dr Sharma say about stress in zoo animals?",
+      "options": [
+        "It disappears once animals are used to their surroundings.",
+        "It is limited to large predators.",
+        "It persists even in well-designed modern enclosures.",
+        "It can be eliminated with better veterinary care."
+      ],
+      "correct": 2,
+      "explanation": "Sharma's research shows that stereotyped behaviours and raised stress hormones continue in animals even inside the best modern enclosures, which is why she favours sanctuaries.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-34",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "Which expert argues that money spent building zoo exhibits would produce a better return if invested in protecting wild habitats?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 1,
+      "explanation": "This is Okafor's central economic claim: the same funds spent on exhibits would, in his analysis, protect more species if directed at preserving habitats in the wild.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-35",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "medium",
+      "stem": "Which expert argues that zoos are vital for breeding species that can later be released into the wild?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 0,
+      "explanation": "Marsh champions captive breeding and reintroduction, citing the California condor as proof that zoos can restore species that have vanished from the wild.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-36",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "Which expert advocates a sanctuary model in which animals are not put on public display?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 2,
+      "explanation": "Sharma proposes converting zoos into sanctuaries where rescued animals live undisturbed, with education carried out through films and live feeds rather than public display.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-37",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "Which expert argues that the social function of zoos has changed over time?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 3,
+      "explanation": "Reyes, a historian, documents the shift in zoos' function from imperial spectacle in the nineteenth century to conservation and education in the present day.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-38",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "Which expert claims that, despite the educational claims made by zoos, most visitors come mainly for entertainment?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 1,
+      "explanation": "Okafor questions the educational value of zoos, pointing to visitor surveys showing that most people attend for a day out rather than to learn about conservation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-39",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "Which expert argues that improvements to enclosures have not removed the welfare problems of captivity?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 2,
+      "explanation": "Sharma concedes that modern enclosures are far better than old-fashioned cages but insists that stress-related problems remain, so enclosure design alone is not the answer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    },
+    {
+      "id": "ielts-reading-40",
+      "section": "reading",
+      "topic": "Passage 3 — Do zoos still have a role?",
+      "difficulty": "hard",
+      "stem": "Which expert's position is closest to the author's own conclusion about the future role of zoos?",
+      "options": [
+        "Dr Elena Marsh",
+        "Professor James Okafor",
+        "Dr Priya Sharma",
+        "Dr Tomas Reyes"
+      ],
+      "correct": 0,
+      "explanation": "The author concludes that zoos should become conservation centres with breeding as their priority, a position closest to Marsh's, while acknowledging Okafor's and Sharma's reservations.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://takeielts.britishcouncil.org",
+        "https://ielts.org"
+      ]
+    }
+  ]
+}

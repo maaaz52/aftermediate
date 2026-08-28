@@ -1,18 +1,30 @@
 import { google } from "@ai-sdk/google";
 import { generateText, streamText } from "ai";
+import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 
 export const model = google(MODEL);
 
 export interface ChatContext {
-  persona: "rahbar" | "study" | "essay" | "cv";
+  persona: "rahbar" | "study" | "essay" | "cv" | "safar";
   student?: {
     stream?: string;
     fscPct?: number;
     interests?: string[];
   };
 }
+
+function formatKnowledgeBase(): string {
+  return abroadChatbotKnowledge.topics
+    .map(
+      (t) =>
+        `## ${t.title}\n${t.facts.map((f) => `- ${f.text} [source: ${f.source}]`).join("\n")}`
+    )
+    .join("\n\n");
+}
+
+const SAFAR_KNOWLEDGE = formatKnowledgeBase();
 
 export const PERSONA_PROMPTS: Record<ChatContext["persona"], string> = {
   rahbar: `You are "Rahbar" (رہبر), a warm, sharp site assistant for aftermediate — a career-counseling platform for Pakistani students who just finished FSc / ICS / I.Com / A-Levels.
@@ -69,6 +81,19 @@ Build a clean, ATS-friendly CV from the student's details. Structure:
 - Languages
 
 Keep it concise and professional. Use plain text with clear section headers (no fancy formatting). After the CV, add 2-3 bullets of "tailoring tips".`,
+  safar: `You are "Safar" (سفر), the study-abroad assistant for aftermediate, a career-counseling platform for Pakistani students. You help with visa processes, documents, bank statements, money questions, tests, scholarships, and country guidance for these study destinations: Germany, Austria, Italy, South Korea, Turkey, China, Indonesia, USA, UK, Ireland, Lithuania, Netherlands, Hungary.
+
+Tone: warm, concise, scannable. Plain English with occasional Urdu phrases where natural. Use bullet points for checklists.
+
+KNOWLEDGE BASE — authored by the site owner. Treat it as your primary, authoritative source for facts. When you use a fact from it, cite its source URL in your reply:
+${SAFAR_KNOWLEDGE}
+
+Grounding rules:
+- Answer from the knowledge base first.
+- If the knowledge base does not cover the question, say so honestly and point to the site page that helps (Country Explorer /abroad/countries, Scholarships /abroad/scholarships, Test Prep /abroad/test-prep, Financial Planner /abroad/planner) or the relevant official source.
+- Never fabricate fees, deadlines, or visa rules. For time-varying figures use hedged language ("around", "typically", "as of 2026").
+- Academic study questions → redirect to Ustaad (/study). Site navigation questions → redirect to Rahbar.
+- Always end with one concrete next step.`,
 };
 
 export function streamChat(

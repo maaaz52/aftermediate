@@ -1,0 +1,152 @@
+{
+  "stories": [
+    {
+      "id": "kainat-ansari-harvard",
+      "type": "real",
+      "name": "Kainat Ansari",
+      "school": "Harvard",
+      "year": "2025",
+      "background": "Kainat Ansari grew up in Orangi Town, one of Karachi's largest low-income settlements, and received her early education at a school run by The Citizens Foundation (TCF). She went on to study at Whitman College in the United States and at the University of Oxford before being accepted to the Harvard Graduate School of Education for a Master of Education (Ed.M.) in Education Policy and Analysis — an achievement announced by TCF in 2025.",
+      "challenges": [
+        "Coming from Orangi Town, where women are often told places like Harvard are not meant for them",
+        "Building an academic record across multiple education systems with limited financial resources",
+        "Overcoming the belief that elite institutions are out of reach for girls from low-income settlements"
+      ],
+      "keyFactors": [
+        "A strong educational foundation from TCF that made the most of limited resources",
+        "Academic success at Whitman College and Oxford before applying to Harvard",
+        "Perseverance and a refusal to be limited by societal expectations",
+        "A clear commitment to education that connects her personal story to her field of study"
+      ],
+      "sourceUrl": "https://www.tcf.org.pk/tcf-alumna-kainat-makes-it-to-harvard/"
+    },
+    {
+      "id": "haider-sultan-yale",
+      "type": "real",
+      "name": "Haider Sultan",
+      "school": "Yale",
+      "year": "2024",
+      "background": "Haider Sultan completed his BSc in Accounting and Finance at the Suleman Dawood School of Business, Lahore University of Management Sciences (LUMS). He consistently featured on the Dean's Honour List and received the 50% Merit Scholarship. In 2024 he was accepted as one of the 10 Silver Scholars in the world for the Yale School of Management MBA — the first Pakistani ever admitted to this selective accelerated pathway for exceptional college seniors — and also received the Dean's Scholarship at Yale.",
+      "challenges": [
+        "Competing for a program that admits only 10 college seniors globally each year",
+        "Being the first Pakistani to pursue the Silver Scholars pathway, with no precedent from compatriots",
+        "Balancing academic rigour with leadership roles and internship commitments"
+      ],
+      "keyFactors": [
+        "Consistent position on the Dean's Honour List throughout his time at LUMS",
+        "Leadership as Convenor of South Asia's largest youth entrepreneurial summit and President of the LUMS Entrepreneurial Society",
+        "Internships at multinationals that built practical business acumen",
+        "A long-term vision of bringing venture capital and private equity to Pakistan"
+      ],
+      "sourceUrl": "https://lums.edu.pk/news/first-pakistan-lums-student-accepted-silver-scholar-mba-yale-university"
+    },
+    {
+      "id": "muhammad-omer-princeton",
+      "type": "real",
+      "name": "Muhammad Omer",
+      "school": "Princeton",
+      "year": "2024",
+      "background": "Muhammad Omer, a student of Lahore Grammar School Johar Town, received an admission offer to Princeton University and is listed on his school's official admissions record for the 2023-2024 cycle as Princeton University Class of 2028.",
+      "challenges": [
+        "Winning an undergraduate place at Princeton from Pakistan's international applicant pool",
+        "Managing a competitive US application alongside Pakistan's school curriculum"
+      ],
+      "keyFactors": [
+        "A strong academic profile developed through his schooling at LGS Johar Town",
+        "A successful application cycle recorded by his school's counselling office"
+      ],
+      "sourceUrl": "https://counselling.lgsjt.edu.pk/admission-offers/"
+    },
+    {
+      "id": "muaaz-humayun-penn",
+      "type": "real",
+      "name": "M. Muaaz Humayun",
+      "school": "University of Pennsylvania",
+      "year": "2025",
+      "background": "M. Muaaz Humayun is a student of Aitchison College, Lahore, who received an early acceptance to the University of Pennsylvania. He was part of a cohort of nine Aitchison students who achieved early acceptances at leading US universities that year, including four Ivy League institutions — a result the college celebrated as an unprecedented early-admission success.",
+      "challenges": [
+        "Competing in the early-admissions round against a global pool of applicants for a UPenn place",
+        "Meeting the demands of one of the most selective US application rounds"
+      ],
+      "keyFactors": [
+        "Dedication, talent and hard work recognized by his college community",
+        "The unwavering support of his family and Aitchison's US admissions team"
+      ],
+      "sourceUrl": "https://www.aitchison.edu.pk/news-2797-aitchison-celebrates-unprecedented-early-admission-success-at-top-us-universities"
+    },
+    {
+      "id": "schahmyr-siddiqui-cornell",
+      "type": "real",
+      "name": "Schahmyr Siddiqui",
+      "school": "Cornell",
+      "year": "2025",
+      "background": "Schahmyr Siddiqui is a student of Aitchison College, Lahore, who received an early acceptance to Cornell University. He was part of a cohort of nine Aitchison students who achieved early acceptances at leading US universities that year, including four Ivy League institutions — a result the college celebrated as an unprecedented early-admission success.",
+      "challenges": [
+        "Competing in the early-admissions round against a global pool of applicants for a Cornell place",
+        "Meeting the demands of one of the most selective US application rounds"
+      ],
+      "keyFactors": [
+        "Dedication, talent and hard work recognized by his college community",
+        "The unwavering support of his family and Aitchison's US admissions team"
+      ],
+      "sourceUrl": "https://www.aitchison.edu.pk/news-2797-aitchison-celebrates-unprecedented-early-admission-success-at-top-us-universities"
+    },
+    {
+      "id": "mubeen-chaudhary-dartmouth",
+      "type": "real",
+      "name": "Mubeen Irfan Chaudhary",
+      "school": "Dartmouth",
+      "year": "2025",
+      "background": "Mubeen Irfan Chaudhary is a student of Aitchison College, Lahore, who received an early acceptance to Dartmouth College. He was part of a cohort of nine Aitchison students who achieved early acceptances at leading US universities that year, including four Ivy League institutions — a result the college celebrated as an unprecedented early-admission success.",
+      "challenges": [
+        "Competing in the early-admissions round against a global pool of applicants for a Dartmouth place",
+        "Meeting the demands of one of the most selective US application rounds"
+      ],
+      "keyFactors": [
+        "Dedication, talent and hard work recognized by his college community",
+        "The unwavering support of his family and Aitchison's US admissions team"
+      ],
+      "sourceUrl": "https://www.aitchison.edu.pk/news-2797-aitchison-celebrates-unprecedented-early-admission-success-at-top-us-universities"
+    },
+    {
+      "id": "illustrative-pre-med-lahore",
+      "type": "illustrative",
+      "name": "Illustrative profile — Pre-Med, Lahore",
+      "school": "Columbia",
+      "year": "illustrative",
+      "background": "This composite profile represents the kind of applicant who has succeeded at Ivy League admissions from Pakistan. A student from a private school in Lahore with strong A-Level results, this applicant pursued a pre-medical track while building a distinctive extracurricular profile around public health awareness and community medicine. They conducted independent research on healthcare access in underserved neighborhoods and founded a peer health education initiative at their school.",
+      "challenges": [
+        "Limited access to advanced lab facilities and research mentorship compared to applicants from well-resourced international schools",
+        "Navigating the US admissions process without school-based counseling familiar with Ivy League requirements",
+        "Convincing family that an overseas pre-med path was viable given the preference for local medical college routes"
+      ],
+      "keyFactors": [
+        "Strong standardized test scores alongside excellent A-Level grades",
+        "A cohesive narrative connecting academic interests in biology with demonstrated community impact",
+        "Compelling personal essays that highlighted unique perspectives shaped by experiences in Pakistan's healthcare landscape",
+        "Letters of recommendation from teachers who could speak to both intellectual curiosity and character"
+      ],
+      "sourceUrl": null
+    },
+    {
+      "id": "illustrative-cs-karachi",
+      "type": "illustrative",
+      "name": "Illustrative profile — Computer Science, Karachi",
+      "school": "Brown",
+      "year": "illustrative",
+      "background": "This composite profile represents a student from a mid-tier private school in Karachi who followed the FSc Pre-Engineering track. With a passion for technology cultivated through self-directed learning, this applicant built a portfolio of software projects addressing local problems — including a mobile app for small-business inventory management and a web platform connecting tutors with students in low-income neighborhoods. They also participated in and won national-level coding competitions.",
+      "challenges": [
+        "Coming from an FSc background rather than A-Levels or IB, which required additional effort to demonstrate readiness for a US-style liberal arts curriculum",
+        "Limited access to formal computer science coursework at the high school level",
+        "Financial constraints requiring full or near-full financial aid to attend"
+      ],
+      "keyFactors": [
+        "Self-initiated projects that demonstrated genuine technical skill and community-oriented problem-solving",
+        "Strong performance in national STEM competitions that provided external validation of abilities",
+        "A well-articulated vision for using computer science to address Pakistan's digital divide",
+        "Thorough research into Brown's specific CS and open-curriculum offerings, reflected in tailored supplemental essays"
+      ],
+      "sourceUrl": null
+    }
+  ]
+}

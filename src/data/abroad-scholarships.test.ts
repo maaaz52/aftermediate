@@ -3,7 +3,10 @@ import json from "@/data/abroad-scholarships.json";
 import countriesJson from "@/data/abroad-countries.json";
 import type { AbroadCountry, AbroadScholarship, AbroadScholarshipCategory } from "@/lib/types";
 
-const data = json as unknown as { dataYear: number; scholarships: AbroadScholarship[] };
+const data = json as unknown as {
+  dataYear: number;
+  scholarships: (AbroadScholarship & { ivyLeague?: boolean })[];
+};
 const countryIds = (countriesJson as unknown as { countries: AbroadCountry[] }).countries.map((c) => c.id);
 const CATEGORIES: AbroadScholarshipCategory[] = [
   "hec", "host-government", "university-specific", "merit-based", "need-based",
@@ -19,8 +22,8 @@ const FLAGSHIPS = [
 ] as const;
 
 describe("abroad-scholarships.json", () => {
-  it("has 50-70 scholarships", () => {
-    expect(data.scholarships.length).toBeGreaterThanOrEqual(50);
+  it("has 56-70 scholarships", () => {
+    expect(data.scholarships.length).toBeGreaterThanOrEqual(56);
     expect(data.scholarships.length).toBeLessThanOrEqual(70);
   });
 
@@ -79,6 +82,18 @@ describe("abroad-scholarships.json", () => {
       expect(s.coverageDetail.length, s.id).toBeGreaterThan(10);
       expect(s.sourceUrls.length, s.id).toBeGreaterThanOrEqual(1);
       for (const url of s.sourceUrls) expect(url.startsWith("https://"), `${s.id}:${url}`).toBe(true);
+    }
+  });
+
+  it("every ivyLeague entry has 1+ https source and a valid category", () => {
+    const ivy = data.scholarships.filter((s) => s.ivyLeague === true);
+    expect(ivy.length, "ivyLeague entries").toBeGreaterThanOrEqual(4);
+    for (const s of ivy) {
+      expect(s.sourceUrls.length, s.id).toBeGreaterThanOrEqual(1);
+      for (const url of s.sourceUrls) {
+        expect(url.startsWith("https://"), `${s.id}:${url}`).toBe(true);
+      }
+      expect(CATEGORIES, `${s.id}:${s.category}`).toContain(s.category);
     }
   });
 });

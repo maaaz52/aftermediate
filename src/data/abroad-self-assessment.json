@@ -1,0 +1,203 @@
+{
+  "dataYear": 2026,
+  "tests": [
+    {
+      "id": "ielts",
+      "name": "IELTS — International English Language Testing System",
+      "short": "IELTS",
+      "category": "english-proficiency",
+      "streams": [],
+      "conductingBody": "British Council / IDP / Cambridge Assessment English",
+      "acceptedBy": ["10,000+ institutions worldwide including UK, Australia, Canada, New Zealand, US"],
+      "fee": "USD 215–250 (approx. PKR 60,000–70,000 at 2026 rates)",
+      "frequency": "Multiple dates per month at test centres across Pakistan",
+      "validity": "2 years",
+      "pattern": [
+        { "section": "Listening", "questions": 40, "marks": 40, "time": "30 minutes" },
+        { "section": "Reading", "questions": 40, "marks": 40, "time": "60 minutes" },
+        { "section": "Writing", "time": "60 minutes" },
+        { "section": "Speaking", "time": "11–14 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Listening", "topics": ["Conversations and monologues in everyday contexts", "Academic lectures and discussions", "Following instructions and identifying key information", "Recognising speaker attitude and purpose"] },
+        { "subject": "Reading", "topics": ["Reading for gist and main ideas", "Reading for detail and specific information", "Understanding logical argument and writer opinion", "Recognising features of academic texts"] }
+      ],
+      "howToApply": ["Register on the British Council or IDP website", "Choose test type (Academic or General Training)", "Select test date and centre in Pakistan", "Pay the test fee and confirm your booking"],
+      "sourceUrls": ["https://ielts.org", "https://takeielts.britishcouncil.org", "https://ielts.idp.com/pakistan"],
+      "note": "MCQ mock covers Listening (40) + Reading (40) only. Writing and Speaking are not auto-graded — practice offline with official prompts."
+    },
+    {
+      "id": "sat",
+      "name": "SAT — Scholastic Assessment Test",
+      "short": "SAT",
+      "category": "undergraduate-admission",
+      "streams": [],
+      "conductingBody": "College Board",
+      "acceptedBy": ["4,000+ colleges and universities in the US and abroad"],
+      "fee": "USD 60 (approx. PKR 16,680 at 2026 rates); additional fees for international test centres",
+      "frequency": "7 times per year (March, May, June, August, October, November, December)",
+      "validity": "5 years",
+      "pattern": [
+        { "section": "Reading & Writing", "questions": 54, "marks": 54, "time": "64 minutes" },
+        { "section": "Math", "questions": 44, "marks": 44, "time": "70 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Reading & Writing", "topics": ["Information and ideas: reading comprehension, main ideas, details, inferences", "Craft and structure: vocabulary in context, text structure, purpose", "Expression of ideas: rhetoric, organization, transitions", "Standard English conventions: grammar, punctuation, usage"] },
+        { "subject": "Math", "topics": ["Algebra: linear equations, systems, inequalities", "Problem-solving and data analysis: ratios, proportions, statistics", "Advanced math: quadratics, polynomials, functions", "Geometry and trigonometry: circles, triangles, trigonometric ratios"] }
+      ],
+      "howToApply": ["Create a College Board account at sat.org", "Register for a test date and select a test centre in Pakistan", "Upload a photo and pay the registration fee", "Download your admission ticket before test day"],
+      "sourceUrls": ["https://sat.org", "https://collegereadiness.collegeboard.org/sat", "https://satsuite.collegeboard.org/sat/whats-on-the-test"],
+      "note": "Digital SAT format (2024+). All sections are MCQ and fully auto-gradeable. SAT reports a 200–800 scale per section; your percentage here is a practice estimate."
+    },
+    {
+      "id": "toefl",
+      "name": "TOEFL iBT — Test of English as a Foreign Language",
+      "short": "TOEFL",
+      "category": "english-proficiency",
+      "streams": [],
+      "conductingBody": "Educational Testing Service (ETS)",
+      "acceptedBy": ["11,500+ institutions in 160+ countries including the US, Canada, UK, Australia"],
+      "fee": "USD 180–240 (approx. PKR 50,000–67,000 at 2026 rates)",
+      "frequency": "Multiple dates per month at test centres across Pakistan + Home Edition",
+      "validity": "2 years",
+      "pattern": [
+        { "section": "Reading", "questions": 20, "marks": 20, "time": "35 minutes" },
+        { "section": "Listening", "questions": 28, "marks": 28, "time": "36 minutes" },
+        { "section": "Speaking", "time": "16 minutes" },
+        { "section": "Writing", "time": "29 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Reading", "topics": ["Reading academic passages", "Understanding vocabulary in context", "Identifying main ideas and details", "Making inferences and rhetorical purposes"] },
+        { "subject": "Listening", "topics": ["Academic lectures and discussions", "Conversations on campus", "Understanding speaker intent and organization"] }
+      ],
+      "howToApply": ["Create an ETS account and register for TOEFL iBT", "Select a test centre in Pakistan or choose the Home Edition", "Pay the test fee and confirm registration", "Take the test at the centre or from home"],
+      "sourceUrls": ["https://ets.org/toefl", "https://toefl.org"],
+      "note": "MCQ mock covers Reading (20) + Listening (28) only. Speaking and Writing are not auto-graded — practice offline with official prompts."
+    },
+    {
+      "id": "gre",
+      "name": "GRE — Graduate Record Examination",
+      "short": "GRE",
+      "category": "graduate-admission",
+      "streams": [],
+      "conductingBody": "Educational Testing Service (ETS)",
+      "acceptedBy": ["Thousands of graduate and business schools worldwide"],
+      "fee": "USD 220 (approx. PKR 61,160 at 2026 rates)",
+      "frequency": "Multiple dates per year at test centres across Pakistan + at-home testing",
+      "validity": "5 years",
+      "pattern": [
+        { "section": "Verbal Reasoning", "questions": 27, "marks": 27, "time": "41 minutes" },
+        { "section": "Quantitative Reasoning", "questions": 27, "marks": 27, "time": "47 minutes" },
+        { "section": "Analytical Writing", "time": "30 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Verbal Reasoning", "topics": ["Reading comprehension", "Text completion", "Sentence equivalence", "Critical reasoning"] },
+        { "subject": "Quantitative Reasoning", "topics": ["Arithmetic and number properties", "Algebra and equation solving", "Geometry and coordinate geometry", "Data analysis and statistics"] }
+      ],
+      "howToApply": ["Create an ETS account and register for the GRE", "Select a test centre in Pakistan or choose at-home testing", "Pay the test fee and confirm registration", "Download the ETS browser for at-home testing"],
+      "sourceUrls": ["https://ets.org/gre", "https://takethegre.com"],
+      "note": "MCQ mock covers Verbal (27) + Quantitative (27) only. Analytical Writing is not auto-graded — practice offline with official prompts."
+    },
+    {
+      "id": "gmat",
+      "name": "GMAT — Graduate Management Admission Test",
+      "short": "GMAT",
+      "category": "graduate-admission",
+      "streams": [],
+      "conductingBody": "Graduate Management Admission Council (GMAC)",
+      "acceptedBy": ["7,000+ graduate business programmes worldwide"],
+      "fee": "USD 275 (approx. PKR 76,450 at 2026 rates)",
+      "frequency": "Year-round at test centres + online (GMAT Focus Edition)",
+      "validity": "5 years",
+      "pattern": [
+        { "section": "Quantitative Reasoning", "questions": 21, "marks": 21, "time": "45 minutes" },
+        { "section": "Verbal Reasoning", "questions": 23, "marks": 23, "time": "45 minutes" },
+        { "section": "Data Insights", "questions": 20, "marks": 20, "time": "45 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Quantitative", "topics": ["Algebra and linear equations", "Ratios, rates and percentages", "Number properties and word problems", "Data sufficiency strategy"] },
+        { "subject": "Verbal", "topics": ["Reading comprehension", "Critical reasoning", "Sentence correction"] },
+        { "subject": "Data Insights", "topics": ["Data sufficiency", "Multi-source reasoning", "Table and graph analysis", "Two-part analysis"] }
+      ],
+      "howToApply": ["Create a GMAC account at mba.com", "Register for GMAT Focus Edition", "Select a test centre in Pakistan or schedule online", "Pay the test fee and confirm"],
+      "sourceUrls": ["https://mba.com/exams/gmat-focus-edition", "https://gmacexperience.com"],
+      "note": "GMAT Focus Edition format: Quantitative (21) + Verbal (23) + Data Insights (20). All sections are auto-graded in this mock."
+    },
+    {
+      "id": "pte",
+      "name": "PTE Academic — Pearson Test of English",
+      "short": "PTE",
+      "category": "english-proficiency",
+      "streams": [],
+      "conductingBody": "Pearson PLC",
+      "acceptedBy": ["3,000+ institutions globally including UK, Australia, New Zealand, Canada"],
+      "fee": "USD 180–210 (approx. PKR 50,000–58,000 at 2026 rates)",
+      "frequency": "Year-round at test centres across Pakistan + at-home testing",
+      "validity": "2 years",
+      "pattern": [
+        { "section": "Speaking & Writing", "time": "54–67 minutes" },
+        { "section": "Reading", "time": "29–30 minutes" },
+        { "section": "Listening", "time": "30–43 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "Reading", "topics": ["Reading and writing fill in the blanks", "Multiple choice single and multiple answer", "Re-order paragraphs"] },
+        { "subject": "Listening", "topics": ["Summarise spoken text", "Multiple choice", "Fill in the blanks", "Select missing word"] }
+      ],
+      "howToApply": ["Create a Pearson PTE account and register", "Select a test centre in Pakistan or choose at-home", "Pay the test fee and confirm registration", "Complete the test day check-in procedures"],
+      "sourceUrls": ["https://pearsonpte.com", "https://pearsonpte.com/the-test/format"],
+      "note": "MCQ mock covers Reading (20) + Listening (20) only. Speaking and Writing are not auto-graded — practice offline with official prompts."
+    },
+    {
+      "id": "duolingo",
+      "name": "Duolingo English Test",
+      "short": "Duolingo",
+      "category": "english-proficiency",
+      "streams": [],
+      "conductingBody": "Duolingo, Inc.",
+      "acceptedBy": ["4,500+ institutions globally"],
+      "fee": "USD 59 (approx. PKR 16,400 at 2026 rates)",
+      "frequency": "On-demand, anytime, from home",
+      "validity": "2 years",
+      "pattern": [
+        { "section": "Adaptive: Literacy", "time": "60 minutes (variable, computer-adaptive)" },
+        { "section": "Adaptive: Conversation", "time": "60 minutes (variable, computer-adaptive)" },
+        { "section": "Adaptive: Comprehension", "time": "60 minutes (variable, computer-adaptive)" },
+        { "section": "Adaptive: Production", "time": "60 minutes (variable, computer-adaptive)" }
+      ],
+      "syllabus": [
+        { "subject": "Overview", "topics": ["Computer-adaptive format — difficulty adjusts in real time based on performance", "Not replicable as a static mock exam", "Visit englishtest.duolingo.com for the official free practice test"] }
+      ],
+      "howToApply": ["Create an account at englishtest.duolingo.com", "Ensure you have a computer with a camera and microphone", "Take the test anytime from home with proctoring", "Share your verified score with institutions for free"],
+      "sourceUrls": ["https://englishtest.duolingo.com", "https://englishtest.duolingo.com/faq"],
+      "note": "Computer-adaptive test — not replicable as a static mock. Visit englishtest.duolingo.com for the official practice test."
+    },
+    {
+      "id": "act",
+      "name": "ACT — American College Test",
+      "short": "ACT",
+      "category": "undergraduate-admission",
+      "streams": [],
+      "conductingBody": "ACT, Inc.",
+      "acceptedBy": ["All US colleges and universities that accept the SAT"],
+      "fee": "USD 68 (approx. PKR 18,900 at 2026 rates); USD 103 with writing",
+      "frequency": "6 times per year (usually September, October, December, February, April, June)",
+      "validity": "5 years",
+      "pattern": [
+        { "section": "English", "questions": 75, "marks": 75, "time": "45 minutes" },
+        { "section": "Mathematics", "questions": 60, "marks": 60, "time": "60 minutes" },
+        { "section": "Reading", "questions": 40, "marks": 40, "time": "35 minutes" },
+        { "section": "Science", "questions": 40, "marks": 40, "time": "35 minutes" },
+        { "section": "Writing (optional)", "time": "40 minutes" }
+      ],
+      "syllabus": [
+        { "subject": "English", "topics": ["Production of writing", "Knowledge of language", "Conventions of standard English"] },
+        { "subject": "Mathematics", "topics": ["Pre-algebra and elementary algebra", "Intermediate algebra and coordinate geometry", "Plane geometry and trigonometry"] },
+        { "subject": "Reading", "topics": ["Key ideas and details", "Craft and structure", "Integration of knowledge and ideas"] },
+        { "subject": "Science", "topics": ["Data representation", "Research summaries", "Conflicting viewpoints"] }
+      ],
+      "howToApply": ["Create a MyACT account", "Register for a test date and select a centre", "Upload a photo and pay the test fee", "Download your admission ticket"],
+      "sourceUrls": ["https://act.org", "https://act.org/content/act/en/products-and-services/the-act.html"],
+      "note": "MCQ mock covers English (75) + Math (60) + Reading (40) + Science (40). The optional Writing essay is not auto-graded."
+    }
+  ]
+}

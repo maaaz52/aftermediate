@@ -1,0 +1,1763 @@
+{
+  "testId": "comsats",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for COMSATS University Islamabad admission test (NTS NAT based). NAT-IE pattern: English 20, Analytical 20, Quantitative 20, Subject 30. Subject section covers Physics, Chemistry, Mathematics. Not affiliated with COMSATS or NTS.",
+    "sources": [
+      "https://admissions.comsats.edu.pk/",
+      "https://www.nts.org.pk/new/NAT.php"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 90,
+    "note": "90 MCQs, no negative marking (NTS NAT pattern)."
+  },
+  "benchmarks": [
+    {
+      "label": "CS / Engineering programmes (2026)",
+      "percent": 75
+    },
+    {
+      "label": "Business / Social Science programmes (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 20
+    },
+    {
+      "id": "analytical",
+      "name": "Analytical Reasoning",
+      "questionCount": 20
+    },
+    {
+      "id": "quantitative",
+      "name": "Quantitative",
+      "questionCount": 20
+    },
+    {
+      "id": "subject",
+      "name": "Subject (Physics, Chemistry, Mathematics for NAT-IE)",
+      "questionCount": 30
+    }
+  ],
+  "questions": [
+    {
+      "id": "comsats-eng-001",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is closest in meaning to 'courageous'?",
+      "options": [
+        "timid",
+        "brave",
+        "foolish",
+        "angry"
+      ],
+      "correct": 1,
+      "explanation": "'Courageous' means brave, not timid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-002",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "Choose the correctly spelled word:",
+      "options": [
+        "accomodation",
+        "accommodation",
+        "acommodation",
+        "acomodation"
+      ],
+      "correct": 1,
+      "explanation": "'Accommodation' has double 'c' and double 'm'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-003",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "They ___ cricket every Friday.",
+      "options": [
+        "plays",
+        "playing",
+        "play",
+        "played"
+      ],
+      "correct": 2,
+      "explanation": "Plural subject 'they' requires the base form 'play'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-004",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is an antonym of 'expand'?",
+      "options": [
+        "enlarge",
+        "shrink",
+        "grow",
+        "spread"
+      ],
+      "correct": 1,
+      "explanation": "'Expand' means to increase in size; 'shrink' is its opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-005",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "The plural of 'child' is:",
+      "options": [
+        "childs",
+        "children",
+        "childes",
+        "childrens"
+      ],
+      "correct": 1,
+      "explanation": "'Child' is an irregular noun; its plural is 'children'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-006",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "I ___ the film last night.",
+      "options": [
+        "watch",
+        "watched",
+        "watching",
+        "have watch"
+      ],
+      "correct": 1,
+      "explanation": "'Last night' requires the simple past tense 'watched'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-007",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is closest in meaning to 'rapid'?",
+      "options": [
+        "slow",
+        "quick",
+        "heavy",
+        "light"
+      ],
+      "correct": 1,
+      "explanation": "'Rapid' means fast or quick.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-008",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "There ___ many books on the shelf.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "be"
+      ],
+      "correct": 1,
+      "explanation": "The subject 'books' is plural, so the verb must be 'are'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-009",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "The Indus River, one of the longest rivers in Asia, rises in the Himalayas and flows through Pakistan into the Arabian Sea. It supplies irrigation water that supports agriculture in Punjab and Sindh. According to the passage, the Indus River ends in the:",
+      "options": [
+        "Arabian Sea",
+        "Bay of Bengal",
+        "Persian Gulf",
+        "Red Sea"
+      ],
+      "correct": 0,
+      "explanation": "The passage states the Indus flows into the Arabian Sea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-010",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "She is good ___ mathematics.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "for"
+      ],
+      "correct": 1,
+      "explanation": "The correct preposition after 'good' when referring to a subject is 'at'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-011",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "'Diligent' most nearly means:",
+      "options": [
+        "lazy",
+        "careless",
+        "hard-working",
+        "wealthy"
+      ],
+      "correct": 2,
+      "explanation": "'Diligent' means showing careful and persistent effort — hard-working.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-012",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Choose the grammatically correct sentence:",
+      "options": [
+        "If I was you, I would accept the offer.",
+        "If I were you, I would accept the offer.",
+        "If I am you, I would accept the offer.",
+        "If I be you, I would accept the offer."
+      ],
+      "correct": 1,
+      "explanation": "The subjunctive mood requires 'were' in hypothetical 'if' clauses: 'If I were you...'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-013",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Global warming is caused mainly by the increase of greenhouse gases such as carbon dioxide in the atmosphere. These gases trap heat, raising the planet's average temperature and altering weather patterns. According to the passage, greenhouse gases:",
+      "options": [
+        "reflect heat back into space",
+        "trap heat in the atmosphere",
+        "absorb all sunlight",
+        "release oxygen"
+      ],
+      "correct": 1,
+      "explanation": "The passage states greenhouse gases 'trap heat' in the atmosphere.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-014",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "He has lived in Lahore ___ 2015.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "by"
+      ],
+      "correct": 1,
+      "explanation": "'Since' is used with a specific point in time; 'for' with a duration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-015",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "What is the antonym of 'transparent'?",
+      "options": [
+        "clear",
+        "opaque",
+        "visible",
+        "bright"
+      ],
+      "correct": 1,
+      "explanation": "'Transparent' means allowing light to pass through; 'opaque' blocks light — its opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-016",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "The report must be submitted ___ Friday.",
+      "options": [
+        "at",
+        "on",
+        "by",
+        "in"
+      ],
+      "correct": 2,
+      "explanation": "'By' indicates a deadline — submission on or before Friday.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-017",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "'Ephemeral' means:",
+      "options": [
+        "permanent",
+        "short-lived",
+        "spacious",
+        "brilliant"
+      ],
+      "correct": 1,
+      "explanation": "'Ephemeral' means lasting for a very short time.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-018",
+      "section": "english",
+      "topic": "Reading comprehension",
+      "difficulty": "hard",
+      "stem": "Although the company's revenue increased by 20 percent last year, its profit margin fell because operating costs rose faster than sales. Management responded by automating several processes and renegotiating supplier contracts. The company's profit margin fell because:",
+      "options": [
+        "revenue decreased",
+        "operating costs rose faster than sales",
+        "it automated several processes",
+        "suppliers refused to negotiate"
+      ],
+      "correct": 1,
+      "explanation": "The passage states profit margin fell because operating costs rose faster than sales.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-019",
+      "section": "english",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "hard",
+      "stem": "Choose the correct sentence:",
+      "options": [
+        "One of my friends are a doctor.",
+        "One of my friends is a doctor.",
+        "One of my friend is a doctor.",
+        "One of my friends were a doctor."
+      ],
+      "correct": 1,
+      "explanation": "'One of' is singular, so the verb must be 'is'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-eng-020",
+      "section": "english",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "The negotiations reached an impasse when neither side would compromise. 'Impasse' most nearly means:",
+      "options": [
+        "agreement",
+        "deadlock",
+        "beginning",
+        "celebration"
+      ],
+      "correct": 1,
+      "explanation": "An 'impasse' is a situation where no progress is possible — a deadlock.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-001",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "All students in the science club are in Grade 11. Ahmed is in the science club. Which conclusion is valid?",
+      "options": [
+        "Ahmed is in Grade 11.",
+        "Ahmed is not in Grade 11.",
+        "All Grade 11 students are in the science club.",
+        "No Grade 11 students are in the science club."
+      ],
+      "correct": 0,
+      "explanation": "If all members of the club are Grade 11, and Ahmed is a member, then Ahmed must be in Grade 11.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-002",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "easy",
+      "stem": "If it rains, the ground will be wet. The ground is wet. What can you conclude?",
+      "options": [
+        "It rained.",
+        "It did not rain.",
+        "The ground may be wet for another reason.",
+        "It will rain soon."
+      ],
+      "correct": 2,
+      "explanation": "Wet ground does not guarantee rain — the ground could be wet from other causes (e.g. sprinklers).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-003",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "A is taller than B. B is taller than C. Who is the shortest?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "Cannot be determined"
+      ],
+      "correct": 2,
+      "explanation": "From A > B and B > C, the order is A > B > C, so C is shortest.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-004",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "All roses are flowers. Some flowers fade quickly. Which statement must be true?",
+      "options": [
+        "All roses fade quickly.",
+        "Some roses fade quickly.",
+        "Roses are flowers.",
+        "Flowers that fade quickly are roses."
+      ],
+      "correct": 2,
+      "explanation": "The first premise directly tells us roses are flowers. The other statements are not guaranteed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-005",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "easy",
+      "stem": "In a queue, Sara is 3rd from the front and 5th from the back. How many people are in the queue?",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "correct": 0,
+      "explanation": "Total = position from front + position from back - 1 = 3 + 5 - 1 = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-006",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "All birds have feathers. A penguin is a bird. Therefore:",
+      "options": [
+        "A penguin can fly.",
+        "A penguin has feathers.",
+        "All feathered animals are birds.",
+        "Penguins live only in cold regions."
+      ],
+      "correct": 1,
+      "explanation": "Since a penguin is a bird, and all birds have feathers, the penguin must have feathers.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-007",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "Ali is older than Bilal. Bilal is older than Chohan. Who is the oldest?",
+      "options": [
+        "Ali",
+        "Bilal",
+        "Chohan",
+        "Cannot be determined"
+      ],
+      "correct": 0,
+      "explanation": "Ali > Bilal > Chohan, so Ali is the oldest.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-008",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "easy",
+      "stem": "Every member of the club attended the meeting. Usman is a member of the club. Therefore:",
+      "options": [
+        "Usman attended the meeting.",
+        "Usman did not attend the meeting.",
+        "Only members attended the meeting.",
+        "Usman is the president."
+      ],
+      "correct": 0,
+      "explanation": "If every member attended, and Usman is a member, then Usman attended.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-009",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "medium",
+      "stem": "No successful business ignores its customers. XYZ Company is successful. Which conclusion follows?",
+      "options": [
+        "XYZ ignores its customers.",
+        "XYZ does not ignore its customers.",
+        "Companies that ignore customers are successful.",
+        "XYZ has many customers."
+      ],
+      "correct": 1,
+      "explanation": "If no successful business ignores customers and XYZ is successful, then XYZ does not ignore its customers.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-010",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "medium",
+      "stem": "If the code for 'CAT' is 'DBU', what is the code for 'DOG'?",
+      "options": [
+        "EPH",
+        "CNF",
+        "EPI",
+        "FQI"
+      ],
+      "correct": 0,
+      "explanation": "Each letter is shifted forward by one: C→D, A→B, T→U. So D→E, O→P, G→H, giving 'EPH'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-011",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "medium",
+      "stem": "In a code, '123' means 'hot sweet tea', '356' means 'tea with milk', and '279' means 'milk in cup'. Which digit stands for 'milk'?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 2,
+      "explanation": "Common digit between '356' (tea with milk) and '279' (milk in cup) is '6', so 6 = milk.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-012",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "medium",
+      "stem": "Five friends sit in a row facing north. Danish is immediately left of Aslam. Aslam is immediately left of Bilal. Bilal is immediately left of Chohan. Ehsan sits at the far right end. Who is in the middle?",
+      "options": [
+        "Danish",
+        "Aslam",
+        "Bilal",
+        "Ehsan"
+      ],
+      "correct": 2,
+      "explanation": "Order left to right: Danish, Aslam, Bilal, Chohan, Ehsan. The middle person is Bilal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-013",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "medium",
+      "stem": "All engineers at the company have degrees. Sana has a degree. Which conclusion is valid?",
+      "options": [
+        "Sana is definitely an engineer.",
+        "Sana may or may not be an engineer.",
+        "Sana is not an engineer.",
+        "No employee has a degree."
+      ],
+      "correct": 1,
+      "explanation": "Having a degree is necessary but not sufficient to be an engineer; Sana could be any other employee with a degree.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-014",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "medium",
+      "stem": "Statements: Some fruits are apples. All apples are sweet. Which conclusion is valid?",
+      "options": [
+        "Some fruits are sweet.",
+        "No fruits are sweet.",
+        "All sweet things are fruits.",
+        "Some sweets are apples."
+      ],
+      "correct": 0,
+      "explanation": "Some fruits (the ones that are apples) are sweet, so 'some fruits are sweet' is valid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-015",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "medium",
+      "stem": "The day after tomorrow is Monday. What day is today?",
+      "options": [
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "Tuesday"
+      ],
+      "correct": 1,
+      "explanation": "If day+2 = Monday, then today is Monday - 2 = Saturday.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-016",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "medium",
+      "stem": "A fruit seller had 120 oranges. He sold 25 percent and then gave away 10. How many oranges are left?",
+      "options": [
+        "70",
+        "80",
+        "90",
+        "100"
+      ],
+      "correct": 1,
+      "explanation": "25% of 120 = 30; 120 - 30 - 10 = 80 oranges left.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-017",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "hard",
+      "stem": "In a class of 40 students, 25 play cricket and 20 play hockey. If every student plays at least one game, how many play both?",
+      "options": [
+        "5",
+        "10",
+        "15",
+        "20"
+      ],
+      "correct": 0,
+      "explanation": "Total = cricket + hockey - both; 40 = 25 + 20 - both; both = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-018",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "hard",
+      "stem": "Five people (A, B, C, D, E) stand in a line. A is immediately between B and C. D is at the left end. E is immediately to the right of D. B is immediately to the right of A. What is the order from left to right?",
+      "options": [
+        "D, E, C, A, B",
+        "D, E, A, B, C",
+        "D, E, B, A, C",
+        "E, D, C, A, B"
+      ],
+      "correct": 0,
+      "explanation": "D at left, E right of D. A between B and C, with B right of A → order C A B. So: D, E, C, A, B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-019",
+      "section": "analytical",
+      "topic": "Statement-based reasoning",
+      "difficulty": "hard",
+      "stem": "If all As are Bs and some Bs are Cs, which conclusion is definitely true?",
+      "options": [
+        "All Cs are As.",
+        "Some As are Cs.",
+        "All As are Cs.",
+        "None of the above is definitely true."
+      ],
+      "correct": 3,
+      "explanation": "We know As are Bs and some Bs are Cs, but we cannot be certain about any relationship linking As and Cs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-analytical-020",
+      "section": "analytical",
+      "topic": "Scenario analysis",
+      "difficulty": "hard",
+      "stem": "A man walks 5 km north, then 3 km east, then 5 km south. How far and in which direction is he from the starting point?",
+      "options": [
+        "3 km east",
+        "3 km west",
+        "5 km east",
+        "10 km north"
+      ],
+      "correct": 0,
+      "explanation": "North-south cancels out (5-5=0); he is 3 km east of the start.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-001",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "What is 15 percent of 200?",
+      "options": [
+        "15",
+        "20",
+        "30",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "15% of 200 = 0.15 × 200 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-002",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "If a shirt costs Rs 800 and the discount is Rs 160, the discount percent is:",
+      "options": [
+        "15%",
+        "18%",
+        "20%",
+        "25%"
+      ],
+      "correct": 2,
+      "explanation": "(160/800) × 100 = 20% discount.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-003",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "Simplify: 24 ÷ 6 × 2.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "24 ÷ 6 = 4, then 4 × 2 = 8 (operations performed left to right).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-004",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "The average of 4, 8, 12 and 16 is:",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correct": 1,
+      "explanation": "Sum = 40; average = 40/4 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-005",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "easy",
+      "stem": "If x + 4 = 9, then x = ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "13"
+      ],
+      "correct": 2,
+      "explanation": "x = 9 - 4 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-006",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "easy",
+      "stem": "A rectangle is 8 cm long and 5 cm wide. Its area is:",
+      "options": [
+        "13 cm²",
+        "26 cm²",
+        "40 cm²",
+        "80 cm²"
+      ],
+      "correct": 2,
+      "explanation": "Area = length × width = 8 × 5 = 40 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-007",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "What is 0.25 expressed as a fraction in lowest terms?",
+      "options": [
+        "25/100",
+        "1/4",
+        "2/5",
+        "1/5"
+      ],
+      "correct": 1,
+      "explanation": "0.25 = 25/100 = 1/4 in lowest terms.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-008",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "If 3 pens cost Rs 45, one pen costs:",
+      "options": [
+        "Rs 10",
+        "Rs 15",
+        "Rs 20",
+        "Rs 25"
+      ],
+      "correct": 1,
+      "explanation": "45/3 = Rs 15 per pen.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-009",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "A train covers 240 km in 3 hours. Its average speed is:",
+      "options": [
+        "60 km/h",
+        "70 km/h",
+        "80 km/h",
+        "90 km/h"
+      ],
+      "correct": 2,
+      "explanation": "Speed = distance/time = 240/3 = 80 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-010",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "Solve for x: 5x - 7 = 3x + 9.",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correct": 2,
+      "explanation": "5x - 3x = 9 + 7 → 2x = 16 → x = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-011",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "medium",
+      "stem": "The area of a circle with radius 7 cm (using π = 22/7) is:",
+      "options": [
+        "44 cm²",
+        "154 cm²",
+        "88 cm²",
+        "308 cm²"
+      ],
+      "correct": 1,
+      "explanation": "Area = πr² = (22/7)(49) = 154 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-012",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an item for Rs 600 and sells it for Rs 750. His profit percent is:",
+      "options": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "correct": 2,
+      "explanation": "Profit = Rs 150; (150/600) × 100 = 25%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-013",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "The ratio of 30 minutes to 2 hours is:",
+      "options": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "2:1"
+      ],
+      "correct": 2,
+      "explanation": "2 hours = 120 minutes; 30:120 = 1:4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-014",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "Find the value of 2³ + 3².",
+      "options": [
+        "13",
+        "15",
+        "17",
+        "72"
+      ],
+      "correct": 2,
+      "explanation": "2³ = 8; 3² = 9; 8 + 9 = 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-015",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "medium",
+      "stem": "The perimeter of a square whose area is 64 m² is:",
+      "options": [
+        "16 m",
+        "24 m",
+        "32 m",
+        "64 m"
+      ],
+      "correct": 2,
+      "explanation": "Side = √64 = 8 m; perimeter = 4 × 8 = 32 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-016",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "A number increased by 25 percent becomes 100. The original number is:",
+      "options": [
+        "75",
+        "80",
+        "90",
+        "95"
+      ],
+      "correct": 1,
+      "explanation": "Let x be the number: x × 1.25 = 100 → x = 100/1.25 = 80.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-017",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "If 5 machines produce 100 items in 4 hours, how many items will 8 machines produce in 6 hours?",
+      "options": [
+        "180",
+        "200",
+        "240",
+        "300"
+      ],
+      "correct": 2,
+      "explanation": "Rate = 100/(5×4) = 5 items per machine-hour; 8×6×5 = 240 items.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-018",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "hard",
+      "stem": "The sum of three consecutive odd integers is 57. The largest is:",
+      "options": [
+        "17",
+        "19",
+        "21",
+        "23"
+      ],
+      "correct": 2,
+      "explanation": "Let numbers be n, n+2, n+4. Sum = 3n+6 = 57 → n = 17. Largest = 17+4 = 21.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-019",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "A boat travels 20 km downstream in 2 hours and returns upstream in 4 hours. The speed of the stream (in km/h) is:",
+      "options": [
+        "2.5 km/h",
+        "5 km/h",
+        "7.5 km/h",
+        "10 km/h"
+      ],
+      "correct": 0,
+      "explanation": "Downstream speed = 10 km/h; upstream = 5 km/h. Stream speed = (10 - 5)/2 = 2.5 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-quantitative-020",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "The compound interest on Rs 10,000 at 10% per annum for 2 years (compounded annually) is:",
+      "options": [
+        "Rs 2,000",
+        "Rs 2,100",
+        "Rs 2,500",
+        "Rs 3,100"
+      ],
+      "correct": 1,
+      "explanation": "Amount = 10000(1.1)² = 12100; CI = 12100 - 10000 = Rs 2,100.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-001",
+      "section": "subject",
+      "topic": "Physics: mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "The SI unit of energy is the:",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Pascal"
+      ],
+      "correct": 1,
+      "explanation": "Energy is measured in joules (J).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-002",
+      "section": "subject",
+      "topic": "Physics: mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "A body thrown upward reaches its highest point. At that instant its velocity is:",
+      "options": [
+        "maximum",
+        "zero",
+        "constant",
+        "equal to initial velocity"
+      ],
+      "correct": 1,
+      "explanation": "At maximum height, the vertical velocity becomes zero before reversing direction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-003",
+      "section": "subject",
+      "topic": "Physics: mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "Which of the following is a vector quantity?",
+      "options": [
+        "speed",
+        "mass",
+        "velocity",
+        "temperature"
+      ],
+      "correct": 2,
+      "explanation": "Velocity has both magnitude and direction, making it a vector. Speed, mass and temperature are scalars.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-004",
+      "section": "subject",
+      "topic": "Physics: modern physics",
+      "difficulty": "easy",
+      "stem": "The value of Planck's constant is approximately:",
+      "options": [
+        "6.63 × 10⁻³⁴ J·s",
+        "3 × 10⁸ J·s",
+        "9.8 × 10⁻³⁴ J·s",
+        "1.6 × 10⁻¹⁹ J·s"
+      ],
+      "correct": 0,
+      "explanation": "Planck's constant h ≈ 6.63 × 10⁻³⁴ J·s, a fundamental constant in quantum mechanics.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-005",
+      "section": "subject",
+      "topic": "Physics: mechanics and kinematics",
+      "difficulty": "medium",
+      "stem": "A force of 20 N moves a body 5 m in the direction of the force. The work done is:",
+      "options": [
+        "4 J",
+        "25 J",
+        "100 J",
+        "200 J"
+      ],
+      "correct": 2,
+      "explanation": "Work = force × distance = 20 × 5 = 100 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-006",
+      "section": "subject",
+      "topic": "Physics: electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "If the frequency of a wave doubles while its speed remains constant, its wavelength:",
+      "options": [
+        "doubles",
+        "halves",
+        "stays the same",
+        "quadruples"
+      ],
+      "correct": 1,
+      "explanation": "v = fλ, so if v is constant and f doubles, λ halves.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-007",
+      "section": "subject",
+      "topic": "Physics: electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "In a series circuit with a 6 V battery and two identical bulbs, the voltage across each bulb is:",
+      "options": [
+        "6 V",
+        "3 V",
+        "12 V",
+        "1.5 V"
+      ],
+      "correct": 1,
+      "explanation": "In a series circuit, voltage divides equally across identical bulbs: 6/2 = 3 V each.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-008",
+      "section": "subject",
+      "topic": "Physics: modern physics",
+      "difficulty": "medium",
+      "stem": "The photoelectric effect provides direct evidence for:",
+      "options": [
+        "the wave nature of light",
+        "the particle nature of light",
+        "the wave nature of electrons",
+        "the continuous emission of energy"
+      ],
+      "correct": 1,
+      "explanation": "The photoelectric effect shows light behaves as discrete packets of energy (photons), supporting the particle nature of light.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-009",
+      "section": "subject",
+      "topic": "Physics: mechanics and kinematics",
+      "difficulty": "hard",
+      "stem": "A ball is dropped from a height of 45 m. How long does it take to reach the ground? (g = 10 m/s²)",
+      "options": [
+        "2 s",
+        "3 s",
+        "4.5 s",
+        "9 s"
+      ],
+      "correct": 1,
+      "explanation": "h = (1/2)gt² → t² = 2h/g = 90/10 = 9 → t = 3 s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-010",
+      "section": "subject",
+      "topic": "Physics: modern physics",
+      "difficulty": "hard",
+      "stem": "The half-life of a radioactive isotope is 8 days. The fraction remaining after 24 days is:",
+      "options": [
+        "1/2",
+        "1/4",
+        "1/8",
+        "1/16"
+      ],
+      "correct": 2,
+      "explanation": "24/8 = 3 half-lives; fraction remaining = (1/2)³ = 1/8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-011",
+      "section": "subject",
+      "topic": "Chemistry: basic concepts",
+      "difficulty": "easy",
+      "stem": "The chemical symbol of sodium is:",
+      "options": [
+        "S",
+        "So",
+        "Na",
+        "N"
+      ],
+      "correct": 2,
+      "explanation": "Sodium's symbol is Na, from the Latin 'natrium'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-012",
+      "section": "subject",
+      "topic": "Chemistry: basic concepts",
+      "difficulty": "easy",
+      "stem": "The most abundant gas in Earth's atmosphere is:",
+      "options": [
+        "oxygen",
+        "carbon dioxide",
+        "nitrogen",
+        "hydrogen"
+      ],
+      "correct": 2,
+      "explanation": "Nitrogen makes up about 78% of the Earth's atmosphere.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-013",
+      "section": "subject",
+      "topic": "Chemistry: acids, bases and salts",
+      "difficulty": "easy",
+      "stem": "The pH of a neutral solution at 25°C is:",
+      "options": [
+        "0",
+        "7",
+        "14",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "Neutral solutions have pH = 7 at 25°C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-014",
+      "section": "subject",
+      "topic": "Chemistry: basic concepts",
+      "difficulty": "easy",
+      "stem": "The chemical formula of common salt is:",
+      "options": [
+        "KCl",
+        "NaCl",
+        "Na₂CO₃",
+        "CaCO₃"
+      ],
+      "correct": 1,
+      "explanation": "Common table salt is sodium chloride, NaCl.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-015",
+      "section": "subject",
+      "topic": "Chemistry: moles and stoichiometry",
+      "difficulty": "medium",
+      "stem": "How many moles are in 44 g of CO₂ (molar mass 44 g/mol)?",
+      "options": [
+        "0.5",
+        "1",
+        "2",
+        "44"
+      ],
+      "correct": 1,
+      "explanation": "Moles = mass/molar mass = 44/44 = 1 mol.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-016",
+      "section": "subject",
+      "topic": "Chemistry: organic chemistry",
+      "difficulty": "medium",
+      "stem": "Which of the following is an organic compound?",
+      "options": [
+        "NaCl",
+        "CH₄",
+        "H₂O",
+        "NH₃"
+      ],
+      "correct": 1,
+      "explanation": "Methane (CH₄) is an organic compound containing carbon bonded to hydrogen.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-017",
+      "section": "subject",
+      "topic": "Chemistry: redox reactions",
+      "difficulty": "medium",
+      "stem": "The oxidation state of oxygen in H₂O₂ is:",
+      "options": [
+        "-2",
+        "-1",
+        "0",
+        "+2"
+      ],
+      "correct": 1,
+      "explanation": "In hydrogen peroxide, the oxidation state of oxygen is -1, not the usual -2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-018",
+      "section": "subject",
+      "topic": "Chemistry: acids, bases and salts",
+      "difficulty": "medium",
+      "stem": "Which gas is liberated when a metal reacts with a dilute acid?",
+      "options": [
+        "oxygen",
+        "hydrogen",
+        "chlorine",
+        "carbon dioxide"
+      ],
+      "correct": 1,
+      "explanation": "Metals react with dilute acids to produce hydrogen gas (H₂).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-019",
+      "section": "subject",
+      "topic": "Chemistry: moles and stoichiometry",
+      "difficulty": "hard",
+      "stem": "The molar mass of CaCO₃ (Ca = 40, C = 12, O = 16) is:",
+      "options": [
+        "84 g/mol",
+        "96 g/mol",
+        "100 g/mol",
+        "108 g/mol"
+      ],
+      "correct": 2,
+      "explanation": "CaCO₃ = 40 + 12 + (16 × 3) = 100 g/mol.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-020",
+      "section": "subject",
+      "topic": "Chemistry: moles and stoichiometry",
+      "difficulty": "hard",
+      "stem": "In the reaction 2H₂ + O₂ → 2H₂O, how many grams of water form from 4 g of H₂? (O = 16, H = 1)",
+      "options": [
+        "18 g",
+        "32 g",
+        "36 g",
+        "72 g"
+      ],
+      "correct": 2,
+      "explanation": "4 g H₂ = 2 mol H₂; from the equation, 2 mol H₂ → 2 mol H₂O = 2 × 18 = 36 g.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-021",
+      "section": "subject",
+      "topic": "Mathematics: calculus",
+      "difficulty": "easy",
+      "stem": "The derivative of x² with respect to x is:",
+      "options": [
+        "x",
+        "2x",
+        "2",
+        "x²"
+      ],
+      "correct": 1,
+      "explanation": "Power rule: d/dx (x²) = 2x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-022",
+      "section": "subject",
+      "topic": "Mathematics: trigonometry",
+      "difficulty": "easy",
+      "stem": "sin²θ + cos²θ = ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "sin 2θ"
+      ],
+      "correct": 1,
+      "explanation": "The Pythagorean identity: sin²θ + cos²θ = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-023",
+      "section": "subject",
+      "topic": "Mathematics: algebra",
+      "difficulty": "easy",
+      "stem": "The value of 3! (3 factorial) is:",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "3! = 3 × 2 × 1 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-024",
+      "section": "subject",
+      "topic": "Mathematics: algebra",
+      "difficulty": "easy",
+      "stem": "If y = 2x + 3, the y-intercept is:",
+      "options": [
+        "2",
+        "3",
+        "-3",
+        "-2"
+      ],
+      "correct": 1,
+      "explanation": "In y = mx + c, the y-intercept is c = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-025",
+      "section": "subject",
+      "topic": "Mathematics: calculus",
+      "difficulty": "medium",
+      "stem": "Find ∫ 2x dx.",
+      "options": [
+        "2x² + C",
+        "x² + C",
+        "x + C",
+        "2 + C"
+      ],
+      "correct": 1,
+      "explanation": "∫ 2x dx = x² + C (power rule of integration).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-026",
+      "section": "subject",
+      "topic": "Mathematics: algebra",
+      "difficulty": "medium",
+      "stem": "The roots of x² - 4 = 0 are:",
+      "options": [
+        "±2",
+        "±4",
+        "2 only",
+        "-2 only"
+      ],
+      "correct": 0,
+      "explanation": "x² = 4 → x = 2 or x = -2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-027",
+      "section": "subject",
+      "topic": "Mathematics: sequences and series",
+      "difficulty": "medium",
+      "stem": "The 10th term of the arithmetic progression 5, 8, 11, ... is:",
+      "options": [
+        "29",
+        "30",
+        "32",
+        "35"
+      ],
+      "correct": 2,
+      "explanation": "a₁₀ = a₁ + (n-1)d = 5 + 9(3) = 32.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-028",
+      "section": "subject",
+      "topic": "Mathematics: trigonometry",
+      "difficulty": "medium",
+      "stem": "The value of tan 60° is:",
+      "options": [
+        "1/√3",
+        "1",
+        "√3",
+        "1/2"
+      ],
+      "correct": 2,
+      "explanation": "tan 60° = √3 from the special angles table.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-029",
+      "section": "subject",
+      "topic": "Mathematics: logarithms",
+      "difficulty": "hard",
+      "stem": "If log₁₀ 2 = 0.3010, what is log₁₀ 8?",
+      "options": [
+        "0.3010",
+        "0.6020",
+        "0.9030",
+        "1.2040"
+      ],
+      "correct": 2,
+      "explanation": "log₁₀ 8 = log₁₀ (2³) = 3 × 0.3010 = 0.9030.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    },
+    {
+      "id": "comsats-subject-030",
+      "section": "subject",
+      "topic": "Mathematics: calculus",
+      "difficulty": "hard",
+      "stem": "What is d/dx (x²eˣ) evaluated at x = 0?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "e"
+      ],
+      "correct": 0,
+      "explanation": "Using product rule: d/dx = 2xeˣ + x²eˣ. At x = 0, both terms are zero.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.comsats.edu.pk/"
+      ]
+    }
+  ]
+}

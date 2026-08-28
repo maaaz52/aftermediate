@@ -1,0 +1,2007 @@
+{
+  "testId": "sat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions written to the official SAT (Digital SAT 2024+) syllabus by College Board. Reading & Writing: passages covering literature, history/social studies, and science plus standard English conventions. Math: algebra, problem-solving, advanced math, and geometry/trigonometry at the official difficulty distribution.",
+    "sources": [
+      "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+      "https://sat.org"
+    ]
+  },
+  "durationMinutes": 134,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 98,
+    "note": "No negative marking (College Board policy since 2016). SAT reports a 200–800 scale per section; your raw percentage here is a practice estimate, not an official score."
+  },
+  "benchmarks": [
+    {
+      "label": "1400 (75th percentile approx)",
+      "percent": 87.5
+    },
+    {
+      "label": "1200 (50th percentile approx)",
+      "percent": 75
+    },
+    {
+      "label": "1000 (25th percentile approx)",
+      "percent": 62.5
+    }
+  ],
+  "sections": [
+    {
+      "id": "reading-writing",
+      "name": "Reading & Writing",
+      "questionCount": 54
+    },
+    {
+      "id": "math",
+      "name": "Math",
+      "questionCount": 44
+    }
+  ],
+  "questions": [
+    {
+      "id": "sat-rw-1",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "easy",
+      "stem": "In a passage, a biologist explains that honeybees perform a 'waggle dance' to communicate the location of food sources to other members of the hive. The direction of the dance indicates the direction of the food relative to the sun, and the duration of the dance indicates the distance to the food. Which choice best states the central idea of the passage?",
+      "options": [
+        "Honeybees can communicate detailed spatial information to one another through a specialized behavior.",
+        "The waggle dance is performed only when food is scarce.",
+        "Honeybees rely primarily on scent to locate food.",
+        "The study of honeybee behavior has declined in recent decades."
+      ],
+      "correct": 0,
+      "explanation": "The passage explains how the waggle dance encodes direction and distance, so its central idea is that honeybees communicate detailed spatial information through this behavior. The other choices introduce claims that the passage does not make.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-2",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "easy",
+      "stem": "A passage about the history of the postal service states that in 1860 the Pony Express could deliver a letter from Missouri to California in about ten days, cutting the previous overland delivery time roughly in half. According to the passage, what was the approximate overland delivery time for a letter before the Pony Express began operating?",
+      "options": [
+        "About five days",
+        "About ten days",
+        "About twenty days",
+        "About forty days"
+      ],
+      "correct": 2,
+      "explanation": "If the Pony Express took about ten days and that was roughly half the previous delivery time, the earlier overland mail took about twenty days. The other choices do not follow from the 'roughly in half' relationship.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-3",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Inferences",
+      "difficulty": "easy",
+      "stem": "A passage describes a study of urban parks in which researchers recorded the number of bird species present in parks of different sizes. They found that parks larger than 20 hectares contained, on average, twice as many species as parks smaller than 2 hectares. Which statement is most strongly supported by the results of the study?",
+      "options": [
+        "Small parks contain no birds at all.",
+        "Park size appears to be associated with bird species diversity.",
+        "Birds prefer urban areas to rural areas.",
+        "All large parks contain exactly twice as many birds as small parks."
+      ],
+      "correct": 1,
+      "explanation": "The finding that larger parks average more species supports an association between park size and species diversity. Option A overstates the data, C concerns urban versus rural habitats the study did not examine, and D mistakes an average pattern for a fixed rule.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-4",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "easy",
+      "stem": "An essay about the history of elevators argues that the invention of the safety elevator in 1853 was a turning point in urban development because it made tall buildings practical. Before elevators could stop safely if a cable broke, buildings taller than five or six stories were impractical. Which choice best states the main idea of the essay?",
+      "options": [
+        "Building codes limited building height until 1900.",
+        "Elevators were invented primarily for entertainment.",
+        "Cable technology remains unchanged since 1853.",
+        "Safe elevators helped make skyscrapers possible."
+      ],
+      "correct": 3,
+      "explanation": "The essay's claim is that the safety elevator was pivotal because it made tall buildings practical, so the main idea is that safe elevators helped make skyscrapers possible. The other choices are unsupported or contradict the essay.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-5",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "medium",
+      "stem": "A passage about the aurora borealis explains that the lights occur when charged particles from the sun collide with gas atoms in Earth's upper atmosphere. The color of the aurora depends on which gas is struck: collisions with oxygen produce green or red light, while collisions with nitrogen produce blue or purple light. According to the passage, which color is produced when charged particles collide with nitrogen?",
+      "options": [
+        "Green",
+        "Red",
+        "Blue",
+        "White"
+      ],
+      "correct": 2,
+      "explanation": "The passage states that collisions with nitrogen produce blue or purple light, so blue is correct. Green and red result from collisions with oxygen, and white is not mentioned.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-6",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Inferences",
+      "difficulty": "medium",
+      "stem": "In a passage about deep-sea exploration, an oceanographer notes that sunlight penetrates only the top 200 meters of the ocean and that below this depth, organisms must rely on other strategies for survival. The oceanographer then describes anglerfish, which use a glowing lure to attract prey in the darkness. Which inference is most strongly supported by the passage?",
+      "options": [
+        "All deep-sea fish produce their own light.",
+        "Anglerfish are unable to see in the dark.",
+        "Anglerfish prefer to hunt during the day.",
+        "Light from the surface is unavailable to anglerfish as a visual cue."
+      ],
+      "correct": 3,
+      "explanation": "Because sunlight reaches only the top 200 meters, anglerfish living below that depth cannot use surface light. The passage does not claim that all deep-sea fish glow, that anglerfish cannot see, or that they hunt by day.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-7",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "medium",
+      "stem": "A researcher claims that exposure to natural light during the workday improves office workers' alertness. Which finding, if true, would most directly support the researcher's claim?",
+      "options": [
+        "Workers in windowless offices drink more coffee than workers near windows.",
+        "Artificial lighting is cheaper to maintain than natural lighting.",
+        "Workers with windows near their desks report higher alertness in the afternoon than workers without windows.",
+        "Some workers prefer evening shifts to morning shifts."
+      ],
+      "correct": 2,
+      "explanation": "Comparing alertness between workers with and without window access directly tests the claim. Coffee consumption is only indirect evidence, and the other choices are unrelated to natural light and alertness.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-8",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "medium",
+      "stem": "A researcher argues that a school's new reading program has improved student performance. A chart shows the average reading scores of students at the school for the five years before the program began and the three years after it began; scores were stable in the first period and rose steadily in the second. Which choice best describes how the chart supports the researcher's argument?",
+      "options": [
+        "It shows that scores rose only in the year the program began.",
+        "It shows that the increase in scores began only after the program was introduced.",
+        "It shows that the program was the only factor affecting reading scores.",
+        "It shows that scores declined before the program and recovered after it."
+      ],
+      "correct": 1,
+      "explanation": "Scores were stable before the program and rose after it, so the increase began only after the program was introduced, which is consistent with the researcher's argument. Option A misstates the trend, C overstates causation, and D misdescribes the pre-program pattern.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-9",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "medium",
+      "stem": "A passage about vaccines explains that vaccines work by exposing the immune system to a harmless form of a pathogen, prompting it to produce antibodies and memory cells. The passage also notes that herd immunity occurs when a large portion of a population is vaccinated, making it harder for the pathogen to spread. Which choice best states the main idea of the passage?",
+      "options": [
+        "Herd immunity eliminates the need for vaccination.",
+        "Vaccines protect individuals by training the immune system and can protect communities through herd immunity.",
+        "Memory cells are destroyed by repeated vaccination.",
+        "Vaccines are effective only for children."
+      ],
+      "correct": 1,
+      "explanation": "The passage covers two levels of protection: the individual immune response and community-level herd immunity. The other choices contradict or misrepresent what the passage says.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-10",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Inferences",
+      "difficulty": "medium",
+      "stem": "In a passage about urban beekeeping, the author describes the growth of rooftop hives in cities and notes that urban honey often contains fewer pesticide residues than rural honey, since city bees forage on a wider variety of plants, many of which are untreated. Which statement best reflects the author's implied view of urban beekeeping?",
+      "options": [
+        "It poses a serious public health risk.",
+        "It is a harmless hobby with little real benefit.",
+        "It may offer advantages over rural beekeeping in some respects.",
+        "It should be banned until pesticide use is eliminated."
+      ],
+      "correct": 2,
+      "explanation": "By highlighting that urban honey can contain fewer pesticide residues, the author implies that urban beekeeping has potential advantages over rural beekeeping. Nothing in the passage supports the risk, dismissal, or ban claims.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-11",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "medium",
+      "stem": "A passage about coral bleaching explains that when ocean temperatures rise, corals expel the symbiotic algae that give them their color and provide them with nutrients. Without these algae, corals turn white and, if temperatures remain high for too long, can die. According to the passage, corals turn white because...",
+      "options": [
+        "...they lose the algae living in their tissues.",
+        "...their predators consume the algae.",
+        "...they are covered with white sediment.",
+        "...they produce too little calcium carbonate."
+      ],
+      "correct": 0,
+      "explanation": "The passage states that corals expel the symbiotic algae that give them their color, so the loss of these algae explains the whitening. The other causes are not mentioned in the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-12",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "medium",
+      "stem": "A historian argues that the invention of the printing press in the fifteenth century was the most important factor in the spread of the Reformation. Which additional piece of evidence would most strengthen the historian's argument?",
+      "options": [
+        "Evidence that printed books were no more popular than sermons",
+        "Evidence that the press lowered the cost of books, allowing reformist pamphlets to reach wide audiences",
+        "Evidence that hand-copied manuscripts were inexpensive before the press was invented",
+        "Evidence that the Reformation began before the press was widely used"
+      ],
+      "correct": 1,
+      "explanation": "The argument claims the press was decisive because it enabled wide dissemination of reformist ideas; evidence that the press lowered costs and expanded audiences directly supports that mechanism. The other options weaken or do not address the argument.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-13",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Inferences",
+      "difficulty": "hard",
+      "stem": "A passage about the history of cartography notes that before the nineteenth century, maps of Africa's interior routinely showed lakes and mountain ranges that did not exist, and that mapmakers copied these errors from one another for generations. The passage suggests that these phantom features persisted because...",
+      "options": [
+        "...mapmakers lacked instruments for measuring longitude.",
+        "...mapmakers had no incentive to correct errors.",
+        "...successive mapmakers reproduced the errors found on earlier maps.",
+        "...African rulers requested that the features be included."
+      ],
+      "correct": 2,
+      "explanation": "The passage explicitly explains the persistence through copying: each generation of mapmakers reproduced the errors of earlier maps. The other explanations are not suggested by the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-14",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "hard",
+      "stem": "A student claims that a passage about the painter Artemisia Gentileschi emphasizes the obstacles she overcame as a woman in seventeenth-century Italy. Which quotation from the passage best supports the student's claim?",
+      "options": [
+        "'Gentileschi trained in her father's workshop, an unusual opportunity for a girl of her time.'",
+        "'Her paintings are notable for their dramatic use of light and shadow.'",
+        "'Gentileschi produced more than fifty known works over a career spanning four decades.'",
+        "'Her later works were acquired by collectors across Europe.'"
+      ],
+      "correct": 0,
+      "explanation": "Only the first quotation describes a gender-based obstacle: the unusual nature of workshop training for a girl of her time. The others describe style, productivity, and reputation without reference to obstacles.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-15",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Cross-Text Connections",
+      "difficulty": "hard",
+      "stem": "Passage 1 argues that school uniforms reduce distractions and promote equality among students. Passage 2 argues that uniforms limit students' self-expression and do little to improve academic outcomes. Which choice best describes the relationship between the two passages?",
+      "options": [
+        "Passage 2 provides evidence that directly contradicts Passage 1.",
+        "Passage 2 challenges the conclusions Passage 1 draws about uniforms.",
+        "Passage 2 discusses a different subject from Passage 1.",
+        "Passage 2 supports Passage 1 with additional examples."
+      ],
+      "correct": 1,
+      "explanation": "Passage 2 disputes the benefits Passage 1 attributes to uniforms, so it challenges Passage 1's conclusions. It offers no evidence to the contrary (A), addresses the same subject (C), and does not support Passage 1 (D).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-16",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "hard",
+      "stem": "A researcher claims that the increase in a city's recycling rate between 2010 and 2020 was caused by the introduction of curbside pickup in 2015. A line graph shows the city's recycling rate each year from 2005 to 2020; the rate is roughly flat from 2005 to 2014, rises sharply from 2015 to 2017, and then levels off. Which statement is best supported by the graph?",
+      "options": [
+        "The recycling rate began rising before curbside pickup was introduced.",
+        "The recycling rate never changed during the period shown.",
+        "Curbside pickup caused a decline in recycling.",
+        "The recycling rate rose most quickly after curbside pickup was introduced."
+      ],
+      "correct": 3,
+      "explanation": "The sharp rise begins in 2015, exactly when curbside pickup was introduced, so the graph shows the fastest increase after its introduction. Option A contradicts the flat trend from 2005 to 2014, and B and C misread the graph.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-17",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Command of Evidence",
+      "difficulty": "medium",
+      "stem": "A researcher argues that increasing the number of traffic cameras in a city reduces traffic accidents. Which finding, if true, would most directly weaken the researcher's argument?",
+      "options": [
+        "Accident rates declined in cities that installed cameras on busy intersections.",
+        "Drivers report that cameras make them more cautious.",
+        "Accidents in the city declined in neighborhoods with cameras but rose in neighborhoods without them.",
+        "A city that installed cameras in 2018 saw no decline in accidents between 2018 and 2022."
+      ],
+      "correct": 3,
+      "explanation": "A city with cameras showing no decline in accidents directly undermines the claim that cameras reduce accidents. The other findings either support the argument or are consistent with it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-18",
+      "section": "reading-writing",
+      "topic": "Information and Ideas — Central Ideas and Details",
+      "difficulty": "hard",
+      "stem": "A passage about sleep in adolescence notes that teenagers' circadian rhythms shift later, making early school start times difficult for them. The author then reviews studies showing that delaying school start times improves attendance and grades, and concludes that school districts should adopt later start times. Which choice best describes the structure of the passage?",
+      "options": [
+        "A problem, evidence for a solution, and a recommendation",
+        "A definition followed by a historical account",
+        "A comparison of two school districts",
+        "A refutation of a common misconception"
+      ],
+      "correct": 0,
+      "explanation": "The passage presents the mismatch between adolescent rhythms and early start times (problem), cites supporting studies (evidence), and ends with a recommendation. The other choices do not match the described organization.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-19",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Words in Context",
+      "difficulty": "easy",
+      "stem": "In a passage about glaciers, the author writes that the glacier's retreat was 'imperceptible' to casual observers, though measurements showed it receded by several meters each year. As used in the sentence, 'imperceptible' most nearly means...",
+      "options": [
+        "dangerous",
+        "unnoticeable",
+        "steady",
+        "harmful"
+      ],
+      "correct": 1,
+      "explanation": "The contrast with precise measurements shows that the retreat was not noticeable to casual observers, so 'unnoticeable' is the closest meaning. The other choices do not fit the context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-20",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Text Structure and Purpose",
+      "difficulty": "easy",
+      "stem": "A passage about the history of the bicycle explains how the penny-farthing gave way to the safety bicycle in the 1880s. The author writes, 'The safety bicycle, with two equal-sized wheels, was far easier to mount and dismount than its predecessor.' What is the primary purpose of this sentence in the passage?",
+      "options": [
+        "To contrast the safety bicycle with the penny-farthing",
+        "To criticize the design of modern bicycles",
+        "To describe the cost of early bicycles",
+        "To suggest that bicycles are unsafe"
+      ],
+      "correct": 0,
+      "explanation": "The sentence directly compares the two designs, explaining the newer bicycle's advantage. It does not criticize modern bicycles, discuss cost, or suggest bicycles are unsafe.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-21",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Words in Context",
+      "difficulty": "easy",
+      "stem": "A passage about the theater describes an actor's 'commanding' stage presence, noting that the audience fell silent the moment she stepped on stage. As used in the passage, 'commanding' most nearly means...",
+      "options": [
+        "requesting",
+        "confusing",
+        "quiet",
+        "impressive and authoritative"
+      ],
+      "correct": 3,
+      "explanation": "The audience's immediate silence indicates a strong, authoritative presence, so 'impressive and authoritative' captures the meaning of 'commanding' here. The other choices do not fit the context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-22",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Text Structure and Purpose",
+      "difficulty": "easy",
+      "stem": "A passage about volcanoes is organized as follows: the first paragraph defines what a volcano is, the second describes how eruptions occur, and the third discusses the effects of eruptions on climate. Which choice best describes the structure of the passage?",
+      "options": [
+        "A comparison of volcanoes and earthquakes",
+        "A definition, an explanation of process, and a discussion of consequences",
+        "A chronological history of eruptions",
+        "Cause and effect followed by a definition"
+      ],
+      "correct": 1,
+      "explanation": "The passage moves from a definition, to how eruptions occur, to their climate effects, which matches the description in option B. The other choices describe different organizational patterns.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-23",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Words in Context",
+      "difficulty": "medium",
+      "stem": "In an article about coral reefs, the author writes that 'the reef's resilience is remarkable,' noting that it recovered within a decade of the bleaching event. As used in the sentence, 'resilience' most nearly means...",
+      "options": [
+        "fragility",
+        "color",
+        "ability to recover",
+        "popularity"
+      ],
+      "correct": 2,
+      "explanation": "The recovery described in the same sentence shows that 'resilience' refers to the ability to recover from disturbance. 'Fragility' is nearly the opposite, and the other options are unrelated.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-24",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Text Structure and Purpose",
+      "difficulty": "medium",
+      "stem": "In a passage about the history of flight, the author includes a paragraph about the kites used in ancient China, which were flown thousands of years before the first airplane. What is the function of this paragraph in the passage?",
+      "options": [
+        "To show that humans experimented with flight-related ideas long before airplanes",
+        "To prove that kites are a modern invention",
+        "To argue that kites were used only for recreation",
+        "To compare kites with hot-air balloons"
+      ],
+      "correct": 0,
+      "explanation": "By pointing to kites flown thousands of years before the airplane, the author shows that flight-related experimentation is ancient. The paragraph does not claim kites are modern, restrict their uses, or discuss balloons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-25",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Cross-Text Connections",
+      "difficulty": "medium",
+      "stem": "Text 1 argues that the decline of a certain songbird species is caused primarily by habitat loss. Text 2 argues that the decline is caused primarily by pesticide use. Both texts agree that the songbird population has declined sharply. Which choice best states how the two texts relate?",
+      "options": [
+        "They agree on the cause but disagree about the population trend.",
+        "They disagree about the population trend but agree on the cause.",
+        "They agree that the population has declined but offer different explanations for the decline.",
+        "They discuss unrelated species."
+      ],
+      "correct": 2,
+      "explanation": "Both texts accept the sharp decline but attribute it to different causes, so option C correctly captures their agreement and disagreement. The other choices reverse the agreement and disagreement or are contradicted by the texts.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-26",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Words in Context",
+      "difficulty": "medium",
+      "stem": "In a passage about scientific publishing, the author writes that peer review 'is not infallible' and that errors occasionally slip through. As used in the sentence, 'infallible' most nearly means...",
+      "options": [
+        "incapable of error",
+        "expensive",
+        "slow",
+        "unnecessary"
+      ],
+      "correct": 0,
+      "explanation": "Saying that peer review is not infallible means it is not incapable of error, which matches the claim that errors occasionally slip through. The other meanings do not fit the context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-27",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Text Structure and Purpose",
+      "difficulty": "medium",
+      "stem": "A passage about noise pollution in cities describes the health effects of prolonged exposure to traffic noise and ends with a call for stricter noise regulations. Which statement best describes the author's point of view?",
+      "options": [
+        "The author is neutral about noise regulations.",
+        "The author believes traffic noise is beneficial.",
+        "The author believes noise pollution is a serious problem that warrants regulation.",
+        "The author doubts that noise affects health."
+      ],
+      "correct": 2,
+      "explanation": "The passage's account of health effects and its call for stricter regulations show that the author regards noise pollution as a serious problem needing regulation. The other choices contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-28",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Text Structure and Purpose",
+      "difficulty": "medium",
+      "stem": "A passage about the honeybee begins with the sentence: 'No one expected the honeybee to become a celebrity.' The passage then describes the attention bees received after a series of news stories about colony collapse disorder. What is the primary function of the opening sentence?",
+      "options": [
+        "To correct a factual error about bees",
+        "To state the passage's main argument in literal terms",
+        "To summarize the passage's conclusion",
+        "To introduce the topic by noting how surprising the bee's prominence was"
+      ],
+      "correct": 3,
+      "explanation": "The opening sentence frames the bee's fame as unexpected, drawing readers in and introducing the topic. It is not a correction, a literal argument, or the passage's conclusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-29",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Rhetorical Synthesis",
+      "difficulty": "medium",
+      "stem": "A student is writing a research paper about the effects of social media on teenage mental health and wants to include a sentence that synthesizes two findings: (1) a 2021 study found that teens who limited social media use to 30 minutes per day reported higher life satisfaction; (2) a 2023 study found that teens' well-being was more strongly related to the quality of their in-person friendships than to their social media use. Which choice best combines the two findings?",
+      "options": [
+        "Although limiting social media to 30 minutes per day was linked to higher life satisfaction in 2021, a 2023 study found that the quality of in-person friendships mattered more to teens' well-being than social media use did.",
+        "Teens' well-being improved whenever they stopped using social media entirely.",
+        "Both studies proved that social media is the only factor affecting teen mental health.",
+        "Neither study examined how teens use social media."
+      ],
+      "correct": 0,
+      "explanation": "Only the first option accurately joins both findings without distortion: the 2021 result about time limits and the 2023 result about friendships. The other options misstate or contradict the findings.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-30",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Words in Context",
+      "difficulty": "hard",
+      "stem": "In a passage about nineteenth-century photography, the author writes that early portraits were often 'stilted,' with subjects holding rigid poses for the long exposure times required. As used in the passage, 'stilted' most nearly means...",
+      "options": [
+        "elevated",
+        "artificial and stiff",
+        "expensive",
+        "artistic"
+      ],
+      "correct": 1,
+      "explanation": "Rigid poses held for long exposures suggest portraits that appear artificial and stiff, which is the relevant sense of 'stilted.' The literal sense 'elevated' does not fit, and the other options are unsupported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-31",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Cross-Text Connections",
+      "difficulty": "hard",
+      "stem": "Text 1, written by an economist, argues that a city's rent control policy reduces the supply of rental housing. Text 2, written by a housing advocate, argues that the same policy keeps longtime residents in their neighborhoods. Which choice correctly pairs each author's position?",
+      "options": [
+        "Text 1: rent control protects tenants; Text 2: rent control discourages new construction.",
+        "Text 1: rent control discourages new construction; Text 2: rent control helps tenants stay in their neighborhoods.",
+        "Both texts agree that rent control has no effect on housing.",
+        "Text 1: rent control is unnecessary; Text 2: rent control is harmful."
+      ],
+      "correct": 1,
+      "explanation": "The economist's claim about reduced supply corresponds to discouraging new construction, while the advocate's claim about keeping longtime residents corresponds to helping tenants stay. Only option B pairs each author with the correct position.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-32",
+      "section": "reading-writing",
+      "topic": "Craft and Structure — Rhetorical Synthesis",
+      "difficulty": "hard",
+      "stem": "A student is writing about energy sources and wants to cite data from a graph showing that solar energy's share of U.S. electricity generation rose from under 1% in 2010 to roughly 4% in 2023, while wind energy's share rose from about 2% to about 10%. Which sentence most accurately reports the data?",
+      "options": [
+        "Between 2010 and 2023, wind energy grew faster than solar energy, increasing from about 2% to about 10% of U.S. electricity generation while solar rose from under 1% to about 4%.",
+        "Solar energy produced more electricity than wind energy in 2023.",
+        "Both solar and wind energy declined between 2010 and 2023.",
+        "Wind energy contributed less than 1% of U.S. electricity in 2023."
+      ],
+      "correct": 0,
+      "explanation": "Only the first option reports both trends accurately and notes that wind grew faster. Option B reverses the 2023 shares, C contradicts the upward trends, and D misstates wind's share.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-33",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Transitions",
+      "difficulty": "easy",
+      "stem": "A student is writing a paragraph about the benefits of exercise. The first sentence states that regular exercise strengthens the heart and lungs. The second sentence states that exercise also improves mood by releasing endorphins. Which choice best connects the two sentences?",
+      "options": [
+        "Furthermore, exercise also improves mood by releasing endorphins.",
+        "In contrast, exercise also improves mood by releasing endorphins.",
+        "Therefore, exercise also improves mood by releasing endorphins.",
+        "For example, exercise also improves mood by releasing endorphins."
+      ],
+      "correct": 0,
+      "explanation": "The second sentence adds another benefit, so the additive transition 'furthermore' is appropriate. 'In contrast' signals opposition, 'therefore' signals consequence, and 'for example' signals illustration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-34",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Organization",
+      "difficulty": "easy",
+      "stem": "A student is drafting a paragraph about the water cycle. Which choice places the sentences in the most logical order? 1) As the vapor rises, it cools and condenses into clouds. 2) Water evaporates from oceans and lakes into the air. 3) Eventually, water falls back to the ground as precipitation. 4) From the clouds, droplets grow heavy and fall.",
+      "options": [
+        "2, 1, 4, 3",
+        "1, 2, 3, 4",
+        "3, 4, 1, 2",
+        "4, 3, 2, 1"
+      ],
+      "correct": 0,
+      "explanation": "The water cycle proceeds from evaporation (2) to condensation (1) to falling droplets (4) to precipitation (3), so 2, 1, 4, 3 is the logical order. The other sequences break the cause-and-effect chain.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-35",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Rhetorical Synthesis",
+      "difficulty": "medium",
+      "stem": "A student wants to combine these two sentences into one: 'The museum's new wing opened in March. It was designed by a firm based in Copenhagen.' Which choice combines the sentences in the most effective way, keeping the meaning unchanged?",
+      "options": [
+        "The museum's new wing, designed by a firm based in Copenhagen, opened in March.",
+        "The museum's new wing opened in March, although it was designed by a firm based in Copenhagen.",
+        "Opening in March, the museum's new wing was designed by a firm based in Copenhagen, and it opened in March.",
+        "The museum's new wing opened in March because it was designed by a firm based in Copenhagen."
+      ],
+      "correct": 0,
+      "explanation": "The first option joins the two facts concisely with a participial phrase while preserving the meaning. Option B adds an unwarranted contrast, C is redundant, and D implies a false causal link.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-36",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Transitions",
+      "difficulty": "easy",
+      "stem": "A passage about urban planning states that cities with extensive public transit tend to have lower per-capita carbon emissions. The next sentence states that building transit systems is expensive in the short term. Which choice best transitions between the two ideas?",
+      "options": [
+        "Similarly, building transit systems is expensive in the short term.",
+        "For instance, building transit systems is expensive in the short term.",
+        "In other words, building transit systems is expensive in the short term.",
+        "However, building transit systems is expensive in the short term."
+      ],
+      "correct": 3,
+      "explanation": "The second sentence introduces a counterpoint to the benefit described in the first, so the contrastive transition 'however' is correct. The other options signal addition, example, or restatement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-37",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Organization",
+      "difficulty": "medium",
+      "stem": "A student is writing a paragraph arguing that school libraries should stay open longer. Which order of sentences is most logical? 1) Students without internet access at home rely on the library for research. 2) Many students cannot visit the library before school. 3) Extending evening hours would give these students time to use library resources. 4) Most school libraries currently close at 4 p.m.",
+      "options": [
+        "3, 1, 4, 2",
+        "4, 2, 1, 3",
+        "1, 2, 3, 4",
+        "2, 4, 1, 3"
+      ],
+      "correct": 1,
+      "explanation": "The paragraph should establish the current situation (4), the constraint (2), the affected group (1), and then the proposed solution (3), so 4, 2, 1, 3 is the logical order. The other sequences put the conclusion before its support.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-38",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Rhetorical Synthesis",
+      "difficulty": "medium",
+      "stem": "A student's sentence reads: 'The results of the experiment were kind of unclear, and the team decided to repeat it.' Which replacement for 'kind of unclear' is the most precise and formal choice?",
+      "options": [
+        "sort of confusing",
+        "ambiguous",
+        "not very clear",
+        "unclear, like, at all"
+      ],
+      "correct": 1,
+      "explanation": "'Ambiguous' is the precise, formal word for results open to more than one interpretation. The other options remain informal or wordy and do not improve the sentence.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-39",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Rhetorical Synthesis",
+      "difficulty": "medium",
+      "stem": "A student is writing a report about sea otters and has gathered these notes: sea otters eat sea urchins; sea urchins feed on kelp; where sea otters are present, kelp forests thrive. Which sentence best synthesizes the notes?",
+      "options": [
+        "Kelp forests are destroyed wherever sea otters are present.",
+        "Sea urchins are the only predators of kelp.",
+        "Because sea otters eat sea urchins, and sea urchins feed on kelp, kelp forests thrive where sea otters are present.",
+        "Sea otters and sea urchins both depend on kelp forests for survival."
+      ],
+      "correct": 2,
+      "explanation": "Only the third option chains all three notes into a single causal statement. The other options contradict or distort the notes: the first reverses the relationship, the second overstates, and the fourth reverses which species depends on kelp.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-40",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Organization",
+      "difficulty": "medium",
+      "stem": "A paragraph about the history of the typewriter describes early models, then discusses how the QWERTY layout was designed to prevent jamming, and finally explains the spread of typing schools. The student wants to add this sentence: 'The layout is still used on most keyboards today.' Where should the sentence most logically be placed?",
+      "options": [
+        "At the end of the paragraph",
+        "Immediately after the sentence describing the QWERTY layout's design",
+        "At the beginning of the paragraph",
+        "Nowhere, because it contradicts the paragraph"
+      ],
+      "correct": 1,
+      "explanation": "The sentence extends the discussion of the QWERTY layout, so it belongs directly after the sentence about the layout's design. Placing it elsewhere would interrupt the paragraph's chronological flow, and it does not contradict the paragraph.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-41",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Transitions",
+      "difficulty": "hard",
+      "stem": "A student writes: 'The new policy did not reduce traffic congestion. ___ it led to an increase in travel times.' Which choice best fills the blank?",
+      "options": [
+        "Similarly,",
+        "For example,",
+        "Nevertheless,",
+        "Instead,"
+      ],
+      "correct": 3,
+      "explanation": "The second clause states the opposite of what the policy was meant to achieve, so 'instead' correctly signals that outcome. 'Similarly' and 'for example' imply agreement, and 'nevertheless' would suggest a concession rather than a replacement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-42",
+      "section": "reading-writing",
+      "topic": "Expression of Ideas — Rhetorical Synthesis",
+      "difficulty": "hard",
+      "stem": "A student is writing an essay about the history of libraries and wants to include a sentence that combines three facts: (1) the Library of Alexandria was founded in the third century BCE; (2) it aimed to collect copies of every known book; (3) part of its collection was destroyed by fire. Which choice best combines the facts into one sentence?",
+      "options": [
+        "Founded by fire in the third century BCE, the Library of Alexandria collected copies of some known books.",
+        "The Library of Alexandria aimed to collect every known book, and it never suffered any damage.",
+        "Founded in the third century BCE with the aim of collecting copies of every known book, the Library of Alexandria saw part of its collection destroyed by fire.",
+        "The Library of Alexandria, which collected every book ever written, was founded by fire in the third century BCE."
+      ],
+      "correct": 2,
+      "explanation": "Only the third option preserves all three facts accurately and reads smoothly. The others distort details, such as being 'founded by fire,' or contradict the fire altogether.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-43",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Grammar and Usage",
+      "difficulty": "easy",
+      "stem": "Each of the experiments ______ carefully documented by the research team. Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        "were",
+        "are",
+        "have been",
+        "was"
+      ],
+      "correct": 3,
+      "explanation": "The subject 'each' is singular, so the verb must be singular: 'was.' The plural verbs in the other options do not agree with 'each.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-44",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Grammar and Usage",
+      "difficulty": "easy",
+      "stem": "A student must submit ______ application before the deadline on Friday. Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        "his",
+        "her",
+        "their",
+        "its"
+      ],
+      "correct": 2,
+      "explanation": "'A student' is singular but of unspecified gender, so the singular gender-neutral possessive 'their' is the standard choice. 'His' and 'her' assume a gender, and 'its' is used for things rather than people.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-45",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Punctuation",
+      "difficulty": "easy",
+      "stem": "After the concert ended the crowd streamed out of the stadium. Which choice best revises the sentence so that it is punctuated correctly?",
+      "options": [
+        "After the concert, ended the crowd streamed out of the stadium.",
+        "After the concert ended the crowd, streamed out of the stadium.",
+        "After the concert ended; the crowd streamed out of the stadium.",
+        "After the concert ended, the crowd streamed out of the stadium."
+      ],
+      "correct": 3,
+      "explanation": "An introductory dependent clause should be followed by a comma, so the fourth option is correct. The other options misplace commas or use a semicolon between a dependent clause and an independent clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-46",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Punctuation",
+      "difficulty": "medium",
+      "stem": "The library was quiet the students were all studying for exams. Which choice best revises the sentence so that it is grammatically correct?",
+      "options": [
+        "The library was quiet; the students were all studying for exams.",
+        "The library was quiet, the students were all studying for exams.",
+        "The library was quiet the students were all, studying for exams.",
+        "The library, was quiet the students were all studying for exams."
+      ],
+      "correct": 0,
+      "explanation": "Two independent clauses need a semicolon (or a coordinating conjunction), so the first option is correct. Option B creates a comma splice, and the other options are not grammatical.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-47",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Grammar and Usage",
+      "difficulty": "medium",
+      "stem": "When the archaeologists opened the tomb, they found that the murals ______ remarkably well preserved. Which choice completes the text so that it conforms to the conventions of Standard English?",
+      "options": [
+        "have been",
+        "are",
+        "will be",
+        "were"
+      ],
+      "correct": 3,
+      "explanation": "The verbs 'opened' and 'found' set the sentence in the past tense, so the past-tense verb 'were' maintains consistency. The other tenses do not agree with the established time frame.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-48",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Punctuation",
+      "difficulty": "medium",
+      "stem": "The pantry contained everything the recipe required flour, eggs, butter, and vanilla. Which choice best revises the sentence so that it is punctuated correctly?",
+      "options": [
+        "The pantry contained everything, the recipe required flour, eggs, butter, and vanilla.",
+        "The pantry contained everything the recipe required: flour, eggs, butter, and vanilla.",
+        "The pantry contained everything the recipe required; flour, eggs, butter, and vanilla.",
+        "The pantry contained: everything the recipe required flour, eggs, butter, and vanilla."
+      ],
+      "correct": 1,
+      "explanation": "A colon correctly introduces the list after the complete clause 'The pantry contained everything the recipe required.' Option A creates a comma splice, C misuses a semicolon before a list, and D places the colon too early.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-49",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Sentence Structure",
+      "difficulty": "medium",
+      "stem": "The workshop taught students how to write a résumé, how to prepare for interviews, and ______. Which choice completes the sentence so that it preserves parallel structure?",
+      "options": [
+        "negotiating salaries",
+        "salary negotiation is important",
+        "how to negotiate salaries",
+        "they should negotiate salaries"
+      ],
+      "correct": 2,
+      "explanation": "The first two items use the pattern 'how to + verb,' so the third item must match: 'how to negotiate salaries.' The other options break the parallel structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-50",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Grammar and Usage",
+      "difficulty": "medium",
+      "stem": "The judges awarded the prize to Maria and ______. Which choice completes the sentence so that it conforms to the conventions of Standard English?",
+      "options": [
+        "I",
+        "myself",
+        "me",
+        "we"
+      ],
+      "correct": 2,
+      "explanation": "'Me' is the object of the preposition 'to,' so the objective case is required. 'I' and 'we' are subjective, and 'myself' is reflexive and unnecessary here.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-51",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Sentence Structure",
+      "difficulty": "hard",
+      "stem": "Walking through the market, the smell of spices filled the air. Which choice best revises the sentence so that the modifier is attached to the correct element?",
+      "options": [
+        "Walking through the market, spices filled the air with smell.",
+        "As we walked through the market, the smell of spices filled the air.",
+        "Walking through the market, the air filled with the smell of spices.",
+        "The smell of spices filled the air while walking through the market."
+      ],
+      "correct": 1,
+      "explanation": "The participial phrase 'walking through the market' must modify a person or persons, but the original sentence implies the smell was walking. Only the second option supplies the missing subject 'we.' The others keep the dangling modifier or leave the subject ambiguous.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-52",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Punctuation",
+      "difficulty": "hard",
+      "stem": "The novel, which was published in 1925, remains a staple of high school curricula. The student wants to revise the sentence to make it more concise without changing the meaning. Which choice is the best revision?",
+      "options": [
+        "Published in 1925 the novel remains a staple of high school curricula.",
+        "The novel remains a staple of high school curricula published in 1925.",
+        "The novel, published in 1925, remains a staple of high school curricula.",
+        "The novel which was published in 1925 remains a staple of high school curricula."
+      ],
+      "correct": 2,
+      "explanation": "Replacing the relative clause with the participial phrase 'published in 1925' preserves the meaning and is more concise, and the commas remain correct. Option A is missing a comma after the introductory phrase, B makes it sound as if the curricula were published in 1925, and D drops the required commas.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-53",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Grammar and Usage",
+      "difficulty": "hard",
+      "stem": "Neither the conductor nor the musicians were satisfied with the rehearsal, and ______ discussed the problem afterward. Which choice completes the sentence so that it conforms to the conventions of Standard English?",
+      "options": [
+        "they",
+        "he",
+        "she",
+        "it"
+      ],
+      "correct": 0,
+      "explanation": "The compound subject refers to a group of people (the conductor and the musicians), so the plural pronoun 'they' is required. 'He' or 'she' would refer only to the conductor, and 'it' is used for things.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-rw-54",
+      "section": "reading-writing",
+      "topic": "Standard English Conventions — Punctuation",
+      "difficulty": "hard",
+      "stem": "By the time the fire department arrived the building had already collapsed. Which choice best revises the sentence so that it is correctly punctuated and maintains the past perfect tense?",
+      "options": [
+        "By the time the fire department arrived the building has already collapsed.",
+        "By the time the fire department, arrived the building had already collapsed.",
+        "By the time the fire department arrived; the building had already collapsed.",
+        "By the time the fire department arrived, the building had already collapsed."
+      ],
+      "correct": 3,
+      "explanation": "The introductory dependent clause requires a comma, and 'had collapsed' correctly expresses the earlier past action. Option A changes the tense, B misplaces the comma, and C misuses a semicolon.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://satsuite.collegeboard.org"
+      ]
+    },
+    {
+      "id": "sat-math-1",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "easy",
+      "stem": "If 3(x + 4) - 2 = 16, what is the value of x?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correct": 0,
+      "explanation": "3(x + 4) - 2 = 16, so 3(x + 4) = 18, x + 4 = 6, and x = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-2",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "easy",
+      "stem": "What is the solution to the equation 5x - 7 = 3x + 9?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "Subtract 3x from both sides: 2x - 7 = 9, so 2x = 16 and x = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-3",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "easy",
+      "stem": "If x - 2y = 7 and x = 11, what is the value of y?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "Substitute x = 11: 11 - 2y = 7, so 2y = 4 and y = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-4",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "easy",
+      "stem": "Which of the following expressions is equivalent to 2(3x + 1) - 4x?",
+      "options": [
+        "2x + 2",
+        "6x + 1",
+        "2x + 1",
+        "6x + 2"
+      ],
+      "correct": 0,
+      "explanation": "Distribute: 6x + 2 - 4x = 2x + 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-5",
+      "section": "math",
+      "topic": "Algebra — Linear inequalities",
+      "difficulty": "medium",
+      "stem": "What is the solution set for the inequality 4x - 9 >= 11?",
+      "options": [
+        "x >= 5",
+        "x >= 20",
+        "x >= 2.75",
+        "x <= 5"
+      ],
+      "correct": 0,
+      "explanation": "Add 9 to both sides: 4x >= 20, then divide by 4: x >= 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-6",
+      "section": "math",
+      "topic": "Algebra — Systems of linear equations",
+      "difficulty": "medium",
+      "stem": "If 2x + y = 10 and x - y = 2, what is the value of x + y?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "correct": 1,
+      "explanation": "Add the equations: 3x = 12, so x = 4. Then 4 - y = 2, so y = 2. Therefore x + y = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-7",
+      "section": "math",
+      "topic": "Algebra — Linear functions",
+      "difficulty": "medium",
+      "stem": "The function f is defined by f(x) = 3x - 5. What is the value of f(4) - f(2)?",
+      "options": [
+        "6",
+        "12",
+        "9",
+        "3"
+      ],
+      "correct": 0,
+      "explanation": "f(4) = 12 - 5 = 7 and f(2) = 6 - 5 = 1, so f(4) - f(2) = 7 - 1 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-8",
+      "section": "math",
+      "topic": "Algebra — Absolute value",
+      "difficulty": "medium",
+      "stem": "What are all values of x that satisfy |2x - 6| = 8?",
+      "options": [
+        "x = 7 only",
+        "x = -1 and x = 7",
+        "x = -1 only",
+        "x = 1 and x = 7"
+      ],
+      "correct": 1,
+      "explanation": "2x - 6 = 8 gives x = 7, and 2x - 6 = -8 gives x = -1. So x = -1 and x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-9",
+      "section": "math",
+      "topic": "Algebra — Linear functions",
+      "difficulty": "medium",
+      "stem": "In the xy-plane, the graph of y = 2x + 3 is shifted up 4 units. What is the y-intercept of the new graph?",
+      "options": [
+        "3",
+        "4",
+        "7",
+        "11"
+      ],
+      "correct": 2,
+      "explanation": "Shifting up 4 units adds 4 to the constant term: y = 2x + 7, so the y-intercept is 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-10",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "medium",
+      "stem": "A taxi charges a flat fee of $3 plus $2 per mile. If a ride costs $19, how many miles long was the ride?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "16"
+      ],
+      "correct": 1,
+      "explanation": "The cost is modeled by C = 2m + 3. Set 2m + 3 = 19, so 2m = 16 and m = 8 miles.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-11",
+      "section": "math",
+      "topic": "Algebra — Linear equations",
+      "difficulty": "hard",
+      "stem": "If (ax + b)/c = d, where a, b, c, and d are constants with a != 0 and c != 0, which of the following gives x in terms of a, b, c, and d?",
+      "options": [
+        "x = (cd - b)/a",
+        "x = (cd + b)/a",
+        "x = (d - b)/(ac)",
+        "x = c(d - b)/a"
+      ],
+      "correct": 0,
+      "explanation": "Multiply both sides by c: ax + b = cd. Subtract b: ax = cd - b. Divide by a: x = (cd - b)/a.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-12",
+      "section": "math",
+      "topic": "Algebra — Systems of linear equations",
+      "difficulty": "hard",
+      "stem": "If (x, y) is the solution to the system 2x - 3y = 7 and 4x + 5y = 3, what is the value of 6x + 2y?",
+      "options": [
+        "10",
+        "4",
+        "-4",
+        "14"
+      ],
+      "correct": 0,
+      "explanation": "Adding the two equations directly gives 6x + 2y = 10, so no need to solve for x and y individually.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-13",
+      "section": "math",
+      "topic": "Algebra — Absolute value",
+      "difficulty": "hard",
+      "stem": "If |x - 3| = 2 and |y - 4| = 1, what is the greatest possible value of x + y?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "|x - 3| = 2 means x = 1 or 5. |y - 4| = 1 means y = 3 or 5. The greatest sum is 5 + 5 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-14",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Ratios and proportions",
+      "difficulty": "easy",
+      "stem": "A recipe calls for 2 cups of flour for every 3 cups of sugar. If 12 cups of sugar are used, how many cups of flour are needed?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "18"
+      ],
+      "correct": 1,
+      "explanation": "Set up the proportion 2/3 = f/12. Cross-multiply: 3f = 24, so f = 8 cups of flour.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-15",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Percentages",
+      "difficulty": "easy",
+      "stem": "What is 15% of 240?",
+      "options": [
+        "24",
+        "32",
+        "36",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "0.15 x 240 = 36.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-16",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Statistics",
+      "difficulty": "easy",
+      "stem": "What is the median of the data set {3, 7, 2, 9, 5}?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "correct": 1,
+      "explanation": "Arrange in order: 2, 3, 5, 7, 9. The middle value is 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-17",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Probability",
+      "difficulty": "medium",
+      "stem": "A bag contains 5 red marbles, 4 blue marbles, and 6 green marbles. If one marble is drawn at random, what is the probability that it is blue?",
+      "options": [
+        "1/3",
+        "4/15",
+        "1/5",
+        "4/11"
+      ],
+      "correct": 1,
+      "explanation": "There are 4 blue marbles out of 5 + 4 + 6 = 15 total, so the probability is 4/15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-18",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Percentages",
+      "difficulty": "medium",
+      "stem": "The price of a jacket increased from $80 to $100. What is the percent increase?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "40%"
+      ],
+      "correct": 1,
+      "explanation": "Increase = 100 - 80 = 20. Percent increase = 20/80 x 100% = 25%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-19",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Data interpretation",
+      "difficulty": "medium",
+      "stem": "In a survey of 200 students, 60 prefer online classes. How many degrees in a circle graph would represent the students who prefer online classes?",
+      "options": [
+        "90",
+        "108",
+        "120",
+        "144"
+      ],
+      "correct": 1,
+      "explanation": "The sector is (60/200) x 360 = 0.3 x 360 = 108 degrees.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-20",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Ratios and proportions",
+      "difficulty": "medium",
+      "stem": "A machine produces 45 items in 3 hours. At this rate, how many items will it produce in 7 hours?",
+      "options": [
+        "90",
+        "100",
+        "105",
+        "115"
+      ],
+      "correct": 2,
+      "explanation": "The rate is 45/3 = 15 items per hour, so in 7 hours it produces 15 x 7 = 105 items.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-21",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Statistics",
+      "difficulty": "medium",
+      "stem": "The average (arithmetic mean) of five numbers is 12. If four of the numbers are 10, 14, 8, and 12, what is the fifth number?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "The sum of all five numbers is 5 x 12 = 60. The known four sum to 44, so the fifth is 60 - 44 = 16.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-22",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Statistics",
+      "difficulty": "hard",
+      "stem": "A data set has a mean of 20. Every value in the set is multiplied by 2 and then increased by 5. What is the mean of the new data set?",
+      "options": [
+        "25",
+        "40",
+        "45",
+        "50"
+      ],
+      "correct": 2,
+      "explanation": "Multiplying every value by 2 multiplies the mean by 2 (20 x 2 = 40), then adding 5 gives 40 + 5 = 45.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-23",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Probability",
+      "difficulty": "hard",
+      "stem": "A jar contains only red and blue marbles. The probability of drawing a red marble is 3/8. If there are 15 red marbles, how many blue marbles are in the jar?",
+      "options": [
+        "15",
+        "20",
+        "25",
+        "30"
+      ],
+      "correct": 2,
+      "explanation": "If R is red and T is total, R/T = 3/8, so 15/T = 3/8 and T = 40. Blue = 40 - 15 = 25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-24",
+      "section": "math",
+      "topic": "Problem-Solving and Data Analysis — Percentages",
+      "difficulty": "hard",
+      "stem": "A store's sales increased by 20% in 2024 and then decreased by 10% in 2025. If sales in 2025 were $1,080, what were the sales in 2023?",
+      "options": [
+        "$900",
+        "$1,000",
+        "$1,100",
+        "$1,200"
+      ],
+      "correct": 1,
+      "explanation": "Let S be 2023 sales. Then 1.2S x 0.9 = 1.08S = 1080, so S = 1080/1.08 = 1000.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-25",
+      "section": "math",
+      "topic": "Advanced Math — Nonlinear expressions",
+      "difficulty": "easy",
+      "stem": "What is the value of x^2 + 2x when x = 3?",
+      "options": [
+        "9",
+        "12",
+        "15",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "x^2 + 2x = 3^2 + 2(3) = 9 + 6 = 15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-26",
+      "section": "math",
+      "topic": "Advanced Math — Equivalent expressions",
+      "difficulty": "easy",
+      "stem": "Which of the following is equivalent to (x + 3)(x - 3)?",
+      "options": [
+        "x^2 + 9",
+        "x^2 - 9",
+        "x^2 - 6x + 9",
+        "x^2 + 6x + 9"
+      ],
+      "correct": 1,
+      "explanation": "This is a difference of squares: (x + 3)(x - 3) = x^2 - 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-27",
+      "section": "math",
+      "topic": "Advanced Math — Exponential functions",
+      "difficulty": "easy",
+      "stem": "If f(x) = 2^x, what is the value of f(5)?",
+      "options": [
+        "10",
+        "25",
+        "32",
+        "64"
+      ],
+      "correct": 2,
+      "explanation": "f(5) = 2^5 = 32.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-28",
+      "section": "math",
+      "topic": "Advanced Math — Quadratic functions and equations",
+      "difficulty": "medium",
+      "stem": "What are the solutions to the equation x^2 - 5x + 6 = 0?",
+      "options": [
+        "x = 2 and x = 3",
+        "x = -2 and x = -3",
+        "x = -2 and x = 3",
+        "x = 1 and x = 6"
+      ],
+      "correct": 0,
+      "explanation": "Factor: (x - 2)(x - 3) = 0, so x = 2 or x = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-29",
+      "section": "math",
+      "topic": "Advanced Math — Quadratic functions and equations",
+      "difficulty": "medium",
+      "stem": "What is the y-coordinate of the vertex of the parabola y = x^2 - 4x + 7?",
+      "options": [
+        "3",
+        "7",
+        "-3",
+        "2"
+      ],
+      "correct": 0,
+      "explanation": "The x-coordinate of the vertex is -b/(2a) = 4/2 = 2. Then y = 4 - 8 + 7 = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-30",
+      "section": "math",
+      "topic": "Advanced Math — Equivalent expressions",
+      "difficulty": "medium",
+      "stem": "Which of the following is equivalent to (2x + 1)(x - 3)?",
+      "options": [
+        "2x^2 - 5x - 3",
+        "2x^2 - 5x + 3",
+        "2x^2 + 7x - 3",
+        "2x^2 + x - 3"
+      ],
+      "correct": 0,
+      "explanation": "Distribute: 2x(x - 3) + 1(x - 3) = 2x^2 - 6x + x - 3 = 2x^2 - 5x - 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-31",
+      "section": "math",
+      "topic": "Advanced Math — Exponential functions",
+      "difficulty": "medium",
+      "stem": "A population of bacteria doubles every hour. If there are initially 100 bacteria, which function models the population P after t hours?",
+      "options": [
+        "P = 100(2)^t",
+        "P = 100(1.2)^t",
+        "P = 200t",
+        "P = 100 + 2t"
+      ],
+      "correct": 0,
+      "explanation": "Doubling every hour means the growth factor is 2, so P = 100(2)^t.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-32",
+      "section": "math",
+      "topic": "Advanced Math — Polynomials",
+      "difficulty": "medium",
+      "stem": "If x^3 - 2x^2 + x is divided by x, where x != 0, what is the quotient?",
+      "options": [
+        "x^2 - 2x + 1",
+        "x^2 - 2x",
+        "x^3 - 2x^2",
+        "x^2 - 2x + x"
+      ],
+      "correct": 0,
+      "explanation": "Divide each term by x: x^3/x - 2x^2/x + x/x = x^2 - 2x + 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-33",
+      "section": "math",
+      "topic": "Advanced Math — Nonlinear functions",
+      "difficulty": "medium",
+      "stem": "The graph of y = x^2 is shifted 3 units to the right. What is the equation of the new graph?",
+      "options": [
+        "y = (x + 3)^2",
+        "y = (x - 3)^2",
+        "y = x^2 + 3",
+        "y = x^2 - 3"
+      ],
+      "correct": 1,
+      "explanation": "A shift to the right by 3 replaces x with x - 3, giving y = (x - 3)^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-34",
+      "section": "math",
+      "topic": "Advanced Math — Quadratic functions and equations",
+      "difficulty": "hard",
+      "stem": "For what value of k does the equation x^2 - 6x + k = 0 have exactly one real solution?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "There is exactly one real solution when the discriminant is 0: (-6)^2 - 4k = 0, so 36 = 4k and k = 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-35",
+      "section": "math",
+      "topic": "Advanced Math — Quadratic functions and equations",
+      "difficulty": "hard",
+      "stem": "If x^2 - 4x - 5 = 0 and x > 0, what is the value of x + 1?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "Factor: (x - 5)(x + 1) = 0, so x = 5 or x = -1. Since x > 0, x = 5, and x + 1 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-36",
+      "section": "math",
+      "topic": "Advanced Math — Equivalent expressions",
+      "difficulty": "hard",
+      "stem": "If x^2 + bx + 16 is a perfect square trinomial and b > 0, what is the value of b?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "correct": 1,
+      "explanation": "A perfect square trinomial has the form (x + 4)^2 = x^2 + 8x + 16, so b = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-37",
+      "section": "math",
+      "topic": "Advanced Math — Polynomials",
+      "difficulty": "hard",
+      "stem": "Which of the following is equivalent to (x^2 + 4x + 4)/(x + 2) for x != -2?",
+      "options": [
+        "x + 2",
+        "x - 2",
+        "x^2 + 2",
+        "x + 4"
+      ],
+      "correct": 0,
+      "explanation": "x^2 + 4x + 4 = (x + 2)^2, so the expression simplifies to (x + 2)^2/(x + 2) = x + 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-38",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Area and volume",
+      "difficulty": "easy",
+      "stem": "What is the area of a triangle with base 6 and height 8?",
+      "options": [
+        "14",
+        "24",
+        "48",
+        "96"
+      ],
+      "correct": 1,
+      "explanation": "Area = (1/2) x base x height = (1/2) x 6 x 8 = 24.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-39",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Triangles",
+      "difficulty": "easy",
+      "stem": "In a right triangle, one leg has length 3 and the hypotenuse has length 5. What is the length of the other leg?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "By the Pythagorean theorem, the other leg is sqrt(5^2 - 3^2) = sqrt(16) = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-40",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Circles",
+      "difficulty": "medium",
+      "stem": "What is the area of a circle with circumference 8*pi?",
+      "options": [
+        "4*pi",
+        "8*pi",
+        "16*pi",
+        "32*pi"
+      ],
+      "correct": 2,
+      "explanation": "Circumference = 2*pi*r = 8*pi, so r = 4. Area = pi*r^2 = pi(4)^2 = 16*pi.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-41",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Right triangle trigonometry",
+      "difficulty": "medium",
+      "stem": "In right triangle ABC with the right angle at C, sin A = 3/5. What is the value of cos B?",
+      "options": [
+        "3/5",
+        "4/5",
+        "3/4",
+        "5/3"
+      ],
+      "correct": 0,
+      "explanation": "Angles A and B are complementary, so cos B = sin A = 3/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-42",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Angles",
+      "difficulty": "medium",
+      "stem": "The measures of the three angles of a triangle are in the ratio 2:3:4. What is the measure of the largest angle?",
+      "options": [
+        "60",
+        "70",
+        "80",
+        "90"
+      ],
+      "correct": 2,
+      "explanation": "The angles sum to 180, and 2 + 3 + 4 = 9 parts, so each part is 20. The largest angle is 4 x 20 = 80.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-43",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Area and volume",
+      "difficulty": "hard",
+      "stem": "The radius of a sphere is doubled. By what factor does the volume of the sphere increase?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "correct": 3,
+      "explanation": "Volume = (4/3)*pi*r^3. Doubling the radius multiplies the volume by 2^3 = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    },
+    {
+      "id": "sat-math-44",
+      "section": "math",
+      "topic": "Geometry and Trigonometry — Right triangle trigonometry",
+      "difficulty": "hard",
+      "stem": "If tan(theta) = 3/4 and theta is an acute angle, what is the value of sin(theta)?",
+      "options": [
+        "3/5",
+        "4/5",
+        "3/4",
+        "5/3"
+      ],
+      "correct": 0,
+      "explanation": "tan(theta) = opposite/adjacent = 3/4, so the hypotenuse is sqrt(3^2 + 4^2) = 5, and sin(theta) = 3/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/sat/whats-on-the-test",
+        "https://sat.org"
+      ]
+    }
+  ]
+}

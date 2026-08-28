@@ -1,0 +1,993 @@
+{
+  "testId": "lcat",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for LUMS LCAT. Verbal section covers reading comprehension, vocabulary, grammar. Quantitative covers arithmetic, algebra, geometry, data interpretation. SAT/ACT may be submitted instead. Not affiliated with LUMS.",
+    "sources": [
+      "https://admission.lums.edu.pk/testing-admissions",
+      "https://admission.lums.edu.pk/checklist-admissions"
+    ]
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 50,
+    "note": "50 MCQs, no negative marking (LCAT format)."
+  },
+  "benchmarks": [
+    {
+      "label": "SDSB / SBASSE programmes (2026)",
+      "percent": 80
+    },
+    {
+      "label": "MGSHSS / SAHSOL programmes (2026)",
+      "percent": 65
+    }
+  ],
+  "sections": [
+    {
+      "id": "verbal",
+      "name": "English (Verbal Reasoning)",
+      "questionCount": 25
+    },
+    {
+      "id": "quantitative",
+      "name": "Mathematics (Quantitative Reasoning)",
+      "questionCount": 25
+    }
+  ],
+  "questions": [
+    {
+      "id": "lcat-verbal-001",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'happy'.",
+      "options": [
+        "Sad",
+        "Joyful",
+        "Angry",
+        "Tired"
+      ],
+      "correct": 1,
+      "explanation": "'Happy' means feeling pleasure or contentment; 'joyful' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-002",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'expand'.",
+      "options": [
+        "Grow",
+        "Spread",
+        "Contract",
+        "Extend"
+      ],
+      "correct": 2,
+      "explanation": "'Expand' means to become larger; its opposite is 'contract'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-003",
+      "section": "verbal",
+      "topic": "Grammar: verb forms",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'She ___ to school every day.'",
+      "options": [
+        "go",
+        "going",
+        "gone",
+        "goes"
+      ],
+      "correct": 3,
+      "explanation": "The third-person singular present form is 'goes'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-004",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'begin'.",
+      "options": [
+        "Finish",
+        "Commence",
+        "Delay",
+        "Stop"
+      ],
+      "correct": 1,
+      "explanation": "'Begin' and 'commence' both mean to start.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-005",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'victory'.",
+      "options": [
+        "Triumph",
+        "Win",
+        "Success",
+        "Defeat"
+      ],
+      "correct": 3,
+      "explanation": "'Victory' means winning; its opposite is 'defeat'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-006",
+      "section": "verbal",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "easy",
+      "stem": "Choose the correct sentence.",
+      "options": [
+        "The team are playing well.",
+        "The team is playing well.",
+        "The team is play well.",
+        "The team are plays well."
+      ],
+      "correct": 1,
+      "explanation": "The team is treated as a single unit here, so it takes the singular verb 'is'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-007",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'rapid'.",
+      "options": [
+        "Slow",
+        "Steady",
+        "Late",
+        "Fast"
+      ],
+      "correct": 3,
+      "explanation": "'Rapid' means happening quickly; 'fast' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-008",
+      "section": "verbal",
+      "topic": "Reading comprehension: detail",
+      "difficulty": "easy",
+      "stem": "The camel is often called the ship of the desert. It can travel long distances without water because it stores fat in its hump and can tolerate high body temperatures. Broad, padded feet stop it from sinking into the sand. According to the passage, what helps a camel walk on sand?",
+      "options": [
+        "Its hump",
+        "Its high body temperature",
+        "Its broad, padded feet",
+        "Its ability to store fat"
+      ],
+      "correct": 2,
+      "explanation": "The passage states that 'broad, padded feet stop it from sinking into the sand', which is what helps it walk on sand.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-009",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'permanent'.",
+      "options": [
+        "Lasting",
+        "Temporary",
+        "Constant",
+        "Durable"
+      ],
+      "correct": 1,
+      "explanation": "'Permanent' means lasting indefinitely; its opposite is 'temporary'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-010",
+      "section": "verbal",
+      "topic": "Grammar: prepositions",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'I have lived in this city ___ 2010.'",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "at"
+      ],
+      "correct": 1,
+      "explanation": "'Since' is used with a point in time (2010); 'for' is used with a duration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-011",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'meticulous'.",
+      "options": [
+        "Careless",
+        "Hasty",
+        "Rough",
+        "Careful"
+      ],
+      "correct": 3,
+      "explanation": "'Meticulous' means showing great attention to detail; 'careful' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-012",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most nearly OPPOSITE to 'vague'.",
+      "options": [
+        "Unclear",
+        "Ambiguous",
+        "Clear",
+        "Obscure"
+      ],
+      "correct": 2,
+      "explanation": "'Vague' means not clearly expressed; its opposite is 'clear'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-013",
+      "section": "verbal",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'Neither John nor his brothers ___ invited to the ceremony.'",
+      "options": [
+        "was",
+        "is",
+        "were",
+        "has"
+      ],
+      "correct": 2,
+      "explanation": "With 'neither ... nor', the verb agrees with the nearer subject, 'brothers' (plural), so 'were' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-014",
+      "section": "verbal",
+      "topic": "Reading comprehension: main idea",
+      "difficulty": "medium",
+      "stem": "Urbanization brings both opportunities and challenges. Cities concentrate jobs, education and healthcare, attracting millions from rural areas. However, rapid growth without planning leads to traffic congestion, pollution and housing shortages. Sustainable urban planning seeks to balance economic growth with quality of life. What is the main idea of the passage?",
+      "options": [
+        "Cities offer more jobs than rural areas",
+        "Unplanned urban growth causes only benefits",
+        "Urbanization has no challenges",
+        "Urban planning should balance growth with quality of life"
+      ],
+      "correct": 3,
+      "explanation": "The passage weighs opportunities against challenges and concludes that planning must balance growth with quality of life, which is the main idea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-015",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'alleviate'.",
+      "options": [
+        "Aggravate",
+        "Reduce",
+        "Increase",
+        "Ignore"
+      ],
+      "correct": 1,
+      "explanation": "'Alleviate' means to make (pain or a problem) less severe; 'reduce' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-016",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most nearly OPPOSITE to 'ephemeral'.",
+      "options": [
+        "Brief",
+        "Fleeting",
+        "Permanent",
+        "Momentary"
+      ],
+      "correct": 2,
+      "explanation": "'Ephemeral' means lasting a very short time; its opposite is 'permanent'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-017",
+      "section": "verbal",
+      "topic": "Grammar: error identification",
+      "difficulty": "medium",
+      "stem": "Identify the error in the sentence: 'He is senior than me in the office.'",
+      "options": [
+        "No error",
+        "'senior' should be 'more senior'",
+        "'than' should be 'to'",
+        "'me' should be 'I'"
+      ],
+      "correct": 2,
+      "explanation": "The adjective 'senior' takes the preposition 'to', not 'than': 'He is senior to me.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-018",
+      "section": "verbal",
+      "topic": "Reading comprehension: detail",
+      "difficulty": "medium",
+      "stem": "The Indus Valley civilization flourished around 2500 BCE along the Indus River. Its cities, such as Mohenjo-Daro and Harappa, featured advanced drainage systems and standardized brick sizes, indicating strong central planning. Its script remains undeciphered, so much about its governance is still unknown. What evidence of central planning does the passage mention?",
+      "options": [
+        "The undeciphered script",
+        "Standardized brick sizes and advanced drainage",
+        "The location along the Indus River",
+        "The civilization's date of origin"
+      ],
+      "correct": 1,
+      "explanation": "The passage says the 'advanced drainage systems and standardized brick sizes' indicate strong central planning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-019",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'frugal'.",
+      "options": [
+        "Extravagant",
+        "Wasteful",
+        "Economical",
+        "Generous"
+      ],
+      "correct": 2,
+      "explanation": "'Frugal' means sparing or economical with money; 'economical' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-020",
+      "section": "verbal",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'Each of the students ___ a textbook.'",
+      "options": [
+        "have",
+        "has",
+        "are having",
+        "were"
+      ],
+      "correct": 1,
+      "explanation": "'Each' is singular, so the verb must be 'has'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-021",
+      "section": "verbal",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word most nearly OPPOSITE to 'obfuscate'.",
+      "options": [
+        "Confuse",
+        "Clarify",
+        "Complicate",
+        "Muddle"
+      ],
+      "correct": 1,
+      "explanation": "'Obfuscate' means to make obscure or unclear; its opposite is 'clarify'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-022",
+      "section": "verbal",
+      "topic": "Reading comprehension: tone",
+      "difficulty": "hard",
+      "stem": "Some critics dismiss social media as a distraction from genuine communication. Yet for diaspora communities, these platforms are vital lifelines, preserving languages and connecting families across borders. Dismissing them entirely ignores their cultural function. What is the tone of the passage?",
+      "options": [
+        "Dismissive",
+        "Nostalgic",
+        "Indifferent",
+        "Balanced"
+      ],
+      "correct": 3,
+      "explanation": "The author acknowledges the critics' position but then presents counter-evidence, so the tone is balanced rather than one-sided.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-023",
+      "section": "verbal",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word closest in meaning to 'sycophant'.",
+      "options": [
+        "Critic",
+        "Flatterer",
+        "Rival",
+        "Leader"
+      ],
+      "correct": 1,
+      "explanation": "A 'sycophant' is a person who flatters others to gain advantage; 'flatterer' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-024",
+      "section": "verbal",
+      "topic": "Grammar: subject-verb agreement",
+      "difficulty": "hard",
+      "stem": "Fill in the blank: 'Not only he but also his friends ___ at fault.'",
+      "options": [
+        "was",
+        "is",
+        "were",
+        "has"
+      ],
+      "correct": 2,
+      "explanation": "With 'not only ... but also', the verb agrees with the nearer subject, 'friends' (plural), so 'were' is correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-verbal-025",
+      "section": "verbal",
+      "topic": "Reading comprehension: inference",
+      "difficulty": "hard",
+      "stem": "A recent study found that students who reviewed material within 24 hours of learning it retained significantly more than those who reviewed after a week. Researchers suggest that the timing of review matters more than its duration. Which statement is best supported by the passage?",
+      "options": [
+        "Long review sessions are ineffective",
+        "Reviewing within a day of learning improves retention",
+        "All students forget material within a week",
+        "Review duration has no effect on memory"
+      ],
+      "correct": 1,
+      "explanation": "The study's finding directly supports that reviewing within 24 hours improves retention; the other choices overstate or contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-001",
+      "section": "quantitative",
+      "topic": "Arithmetic: percentages",
+      "difficulty": "easy",
+      "stem": "What is 25% of 80?",
+      "options": [
+        "20",
+        "25",
+        "30",
+        "40"
+      ],
+      "correct": 0,
+      "explanation": "25% of 80 = 0.25 * 80 = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-002",
+      "section": "quantitative",
+      "topic": "Algebra: linear equations",
+      "difficulty": "easy",
+      "stem": "If x + 5 = 12, what is the value of x?",
+      "options": [
+        "17",
+        "5",
+        "7",
+        "6"
+      ],
+      "correct": 2,
+      "explanation": "Subtracting 5 from both sides gives x = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-003",
+      "section": "quantitative",
+      "topic": "Geometry: area",
+      "difficulty": "easy",
+      "stem": "What is the area of a square with side length 6 cm?",
+      "options": [
+        "24 cm^2",
+        "12 cm^2",
+        "30 cm^2",
+        "36 cm^2"
+      ],
+      "correct": 3,
+      "explanation": "Area of a square = side^2 = 6^2 = 36 cm^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-004",
+      "section": "quantitative",
+      "topic": "Fractions",
+      "difficulty": "easy",
+      "stem": "Simplify: 3/4 + 1/4.",
+      "options": [
+        "3/8",
+        "1",
+        "4/8",
+        "3/4"
+      ],
+      "correct": 1,
+      "explanation": "Adding like fractions: (3 + 1)/4 = 4/4 = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-005",
+      "section": "quantitative",
+      "topic": "Arithmetic: multiplication",
+      "difficulty": "easy",
+      "stem": "What is 15 x 12?",
+      "options": [
+        "170",
+        "150",
+        "200",
+        "180"
+      ],
+      "correct": 3,
+      "explanation": "15 x 12 = 15 x 10 + 15 x 2 = 150 + 30 = 180.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-006",
+      "section": "quantitative",
+      "topic": "Geometry: perimeter",
+      "difficulty": "easy",
+      "stem": "What is the perimeter of a rectangle that is 5 cm long and 3 cm wide?",
+      "options": [
+        "8 cm",
+        "15 cm",
+        "16 cm",
+        "30 cm"
+      ],
+      "correct": 2,
+      "explanation": "Perimeter = 2(length + width) = 2(5 + 3) = 16 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-007",
+      "section": "quantitative",
+      "topic": "Arithmetic: exponents",
+      "difficulty": "easy",
+      "stem": "What is the value of 2^3?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "2^3 = 2 x 2 x 2 = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-008",
+      "section": "quantitative",
+      "topic": "Averages",
+      "difficulty": "easy",
+      "stem": "What is the average of 4, 6, 8 and 10?",
+      "options": [
+        "7",
+        "6",
+        "8",
+        "9"
+      ],
+      "correct": 0,
+      "explanation": "Average = (4 + 6 + 8 + 10)/4 = 28/4 = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-009",
+      "section": "quantitative",
+      "topic": "Arithmetic: percentages",
+      "difficulty": "easy",
+      "stem": "What is 30% of 50?",
+      "options": [
+        "15",
+        "20",
+        "25",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "30% of 50 = 0.30 * 50 = 15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-010",
+      "section": "quantitative",
+      "topic": "Algebra: linear equations",
+      "difficulty": "easy",
+      "stem": "If 2x = 10, what is the value of x?",
+      "options": [
+        "12",
+        "8",
+        "5",
+        "20"
+      ],
+      "correct": 2,
+      "explanation": "Dividing both sides by 2 gives x = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-011",
+      "section": "quantitative",
+      "topic": "Word problems: speed",
+      "difficulty": "medium",
+      "stem": "A car travels 90 km at a constant speed of 60 km/h. How long does the journey take?",
+      "options": [
+        "1 hour",
+        "1.5 hours",
+        "2 hours",
+        "0.5 hours"
+      ],
+      "correct": 1,
+      "explanation": "Time = distance/speed = 90/60 = 1.5 hours.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-012",
+      "section": "quantitative",
+      "topic": "Geometry: triangles",
+      "difficulty": "medium",
+      "stem": "Two angles of a triangle are 40° and 60°. What is the third angle?",
+      "options": [
+        "60°",
+        "70°",
+        "100°",
+        "80°"
+      ],
+      "correct": 3,
+      "explanation": "Angles of a triangle sum to 180°: 180 - 40 - 60 = 80°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-013",
+      "section": "quantitative",
+      "topic": "Algebra: linear equations",
+      "difficulty": "medium",
+      "stem": "Solve for x: 3(x - 2) = 9.",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "4"
+      ],
+      "correct": 0,
+      "explanation": "3x - 6 = 9, so 3x = 15 and x = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-014",
+      "section": "quantitative",
+      "topic": "Data interpretation: mean",
+      "difficulty": "medium",
+      "stem": "A class scored the following marks in a test: Ali 72, Sara 68, Bilal 85, Ayesha 55. What is the mean score of the class?",
+      "options": [
+        "68",
+        "70",
+        "72",
+        "75"
+      ],
+      "correct": 1,
+      "explanation": "Mean = (72 + 68 + 85 + 55)/4 = 280/4 = 70.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-015",
+      "section": "quantitative",
+      "topic": "Ratios",
+      "difficulty": "medium",
+      "stem": "Two numbers are in the ratio 3 : 4 and their sum is 28. What is the smaller number?",
+      "options": [
+        "12",
+        "16",
+        "14",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "Total parts = 3 + 4 = 7; each part = 28/7 = 4, so the smaller number is 3 x 4 = 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-016",
+      "section": "quantitative",
+      "topic": "Geometry: circles",
+      "difficulty": "medium",
+      "stem": "Taking pi = 22/7, what is the area of a circle with radius 7 cm?",
+      "options": [
+        "44 cm^2",
+        "154 cm^2",
+        "88 cm^2",
+        "308 cm^2"
+      ],
+      "correct": 1,
+      "explanation": "Area = pi * r^2 = (22/7) * 7 * 7 = 154 cm^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-017",
+      "section": "quantitative",
+      "topic": "Work and time",
+      "difficulty": "medium",
+      "stem": "A can complete a job in 6 days and B can complete it in 12 days. Working together, how many days will they take?",
+      "options": [
+        "9",
+        "3",
+        "4",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "Combined rate = 1/6 + 1/12 = 3/12 = 1/4 of the job per day, so they finish in 4 days.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-018",
+      "section": "quantitative",
+      "topic": "Ratios",
+      "difficulty": "medium",
+      "stem": "If a : b = 2 : 3 and a + b = 25, what is the value of a?",
+      "options": [
+        "15",
+        "12",
+        "10",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Total parts = 2 + 3 = 5; each part = 25/5 = 5, so a = 2 x 5 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-019",
+      "section": "quantitative",
+      "topic": "Data interpretation: percentages",
+      "difficulty": "medium",
+      "stem": "In a survey of 200 students, 40% preferred cricket and the rest preferred football. How many students preferred football?",
+      "options": [
+        "80",
+        "100",
+        "160",
+        "120"
+      ],
+      "correct": 3,
+      "explanation": "60% preferred football: 0.60 * 200 = 120 students.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-020",
+      "section": "quantitative",
+      "topic": "Percentages: discount",
+      "difficulty": "medium",
+      "stem": "A shirt priced at Rs 500 is sold at a 20% discount. What is the selling price?",
+      "options": [
+        "Rs 400",
+        "Rs 450",
+        "Rs 380",
+        "Rs 420"
+      ],
+      "correct": 0,
+      "explanation": "Discount = 20% of 500 = Rs 100, so selling price = 500 - 100 = Rs 400.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-021",
+      "section": "quantitative",
+      "topic": "Data sufficiency",
+      "difficulty": "hard",
+      "stem": "What is the value of x? (1) x^2 = 16 (2) x > 0",
+      "options": [
+        "Statement (1) alone is sufficient",
+        "Statement (2) alone is sufficient",
+        "Both statements together are needed",
+        "The question cannot be answered even with both statements"
+      ],
+      "correct": 2,
+      "explanation": "From (1), x = 4 or x = -4, so (1) alone is not sufficient. Statement (2) alone gives no value. Together they give x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-022",
+      "section": "quantitative",
+      "topic": "Geometry: right triangles",
+      "difficulty": "hard",
+      "stem": "In a right-angled triangle, the two perpendicular sides are 9 cm and 12 cm. What is the length of the hypotenuse?",
+      "options": [
+        "15 cm",
+        "21 cm",
+        "18 cm",
+        "13 cm"
+      ],
+      "correct": 0,
+      "explanation": "By Pythagoras: sqrt(9^2 + 12^2) = sqrt(81 + 144) = sqrt(225) = 15 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-023",
+      "section": "quantitative",
+      "topic": "Word problems: digits",
+      "difficulty": "hard",
+      "stem": "The sum of the digits of a two-digit number is 9. Reversing the digits increases the number by 27. What is the number?",
+      "options": [
+        "36",
+        "27",
+        "63",
+        "45"
+      ],
+      "correct": 0,
+      "explanation": "Let the digits be t (tens) and u (units): t + u = 9 and (10u + t) - (10t + u) = 27, so u - t = 3. Solving gives t = 3, u = 6, so the number is 36.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-024",
+      "section": "quantitative",
+      "topic": "Word problems: mixtures",
+      "difficulty": "hard",
+      "stem": "A 10-litre solution contains 30% salt. How many litres of pure salt must be added to make the solution 50% salt?",
+      "options": [
+        "2 L",
+        "3 L",
+        "4 L",
+        "5 L"
+      ],
+      "correct": 2,
+      "explanation": "Salt present = 3 L. After adding x L: (3 + x)/(10 + x) = 0.5, so 3 + x = 5 + 0.5x and x = 4 L.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    },
+    {
+      "id": "lcat-quantitative-025",
+      "section": "quantitative",
+      "topic": "Geometry: angles",
+      "difficulty": "hard",
+      "stem": "In a triangle, one angle is twice another angle, and the third angle is 30° more than the smaller of the two. What is the smallest angle?",
+      "options": [
+        "30°",
+        "35°",
+        "37.5°",
+        "40°"
+      ],
+      "correct": 2,
+      "explanation": "Let the smallest angle be a: a + 2a + (a + 30) = 180, so 4a = 150 and a = 37.5°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admission.lums.edu.pk/testing-admissions"
+      ]
+    }
+  ]
+}

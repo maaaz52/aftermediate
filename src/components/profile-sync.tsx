@@ -35,7 +35,7 @@ export function ProfileSync() {
 
     supabase
       .from("profiles")
-      .select("name, avatar, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, updated_at")
+      .select("name, avatar, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, practice, updated_at")
       .eq("id", user.id)
       .maybeSingle()
       .then(({ data, error }) => {
@@ -60,6 +60,7 @@ export function ProfileSync() {
               budget: data.budget ?? "",
               quiz: data.quiz ?? {},
               quizCompletedAt: data.quiz_completed_at ?? null,
+              practice: data.practice ?? [],
             }
           : null;
 
@@ -121,6 +122,7 @@ export function ProfileSync() {
               : profile.budget || null,
           quiz: profile.quiz,
           quiz_completed_at: profile.quizCompletedAt,
+          practice: profile.practice,
           updated_at: now,
         })
         .then(({ error }) => {

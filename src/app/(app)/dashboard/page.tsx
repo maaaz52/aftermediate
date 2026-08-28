@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ProfileSummary } from "@/components/dashboard/profile-summary";
+import { PracticeSummary } from "@/components/dashboard/practice-summary";
 import { CoarseAggregate } from "@/components/dashboard/coarse-aggregate";
 import { FineAggregate } from "@/components/dashboard/fine-aggregate";
 import { ValuableCountries } from "@/components/dashboard/valuable-countries";
@@ -32,6 +33,10 @@ export default function DashboardPage() {
 
       <div className="mt-6 animate-reveal" style={{ animationDelay: "60ms" }}>
         <ProfileSummary />
+      </div>
+
+      <div className="mt-4 animate-reveal" style={{ animationDelay: "120ms" }}>
+        <PracticeSummary />
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">

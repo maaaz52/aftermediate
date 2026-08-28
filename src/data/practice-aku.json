@@ -1,0 +1,997 @@
+{
+  "testId": "aku",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for Aga Khan University (AKU) Medical College admission test. Science Achievement section covering Biology, Chemistry, and Physics at intermediate/Higher Secondary level. Not affiliated with AKU.",
+    "sources": [
+      "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 50,
+    "note": "50 MCQs, no negative marking (AKU admission test pattern)."
+  },
+  "benchmarks": [
+    {
+      "label": "MBBS programme (2026)",
+      "percent": 80
+    },
+    {
+      "label": "BSc Nursing (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "questionCount": 20
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 15
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 15
+    }
+  ],
+  "questions": [
+    {
+      "id": "aku-biology-001",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "easy",
+      "stem": "Which organelle is responsible for the synthesis of proteins in a cell?",
+      "options": [
+        "Ribosome",
+        "Lysosome",
+        "Golgi apparatus",
+        "Mitochondrion"
+      ],
+      "correct": 0,
+      "explanation": "Ribosomes are the cellular organelles that synthesise proteins by translating messenger RNA.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-002",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "easy",
+      "stem": "Which part of the cell controls all its activities and contains the genetic material?",
+      "options": [
+        "Nucleus",
+        "Cytoplasm",
+        "Cell membrane",
+        "Vacuole"
+      ],
+      "correct": 0,
+      "explanation": "The nucleus is the control centre of the cell and houses the chromosomes carrying genetic material (DNA).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-003",
+      "section": "biology",
+      "topic": "Human physiology and anatomy",
+      "difficulty": "easy",
+      "stem": "Which type of blood cells primarily defends the body against infection?",
+      "options": [
+        "White blood cells",
+        "Red blood cells",
+        "Platelets",
+        "Nerve cells"
+      ],
+      "correct": 0,
+      "explanation": "White blood cells (leucocytes) fight infections by engulfing pathogens and producing antibodies.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-004",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "easy",
+      "stem": "Which organelle is known as the powerhouse of the cell?",
+      "options": [
+        "Mitochondrion",
+        "Nucleus",
+        "Ribosome",
+        "Golgi apparatus"
+      ],
+      "correct": 0,
+      "explanation": "Mitochondria generate most of the cell's ATP through cellular respiration, earning them the name powerhouse of the cell.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-005",
+      "section": "biology",
+      "topic": "Biochemistry and molecular biology",
+      "difficulty": "easy",
+      "stem": "Which gas is released as a by-product of photosynthesis?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen",
+        "Methane"
+      ],
+      "correct": 0,
+      "explanation": "During photosynthesis plants convert carbon dioxide and water into glucose and release oxygen as a by-product.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-006",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "easy",
+      "stem": "What is the basic structural and functional unit of all living organisms?",
+      "options": [
+        "Cell",
+        "Tissue",
+        "Organ",
+        "Organ system"
+      ],
+      "correct": 0,
+      "explanation": "The cell is the smallest unit that can carry out all the processes of life; tissues, organs and systems are built from cells.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-007",
+      "section": "biology",
+      "topic": "Human physiology and anatomy",
+      "difficulty": "easy",
+      "stem": "Which organ of the human body pumps blood through the circulatory system?",
+      "options": [
+        "Heart",
+        "Liver",
+        "Kidney",
+        "Lungs"
+      ],
+      "correct": 0,
+      "explanation": "The heart is a muscular organ that contracts rhythmically to pump blood around the body.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-008",
+      "section": "biology",
+      "topic": "Biochemistry and molecular biology",
+      "difficulty": "easy",
+      "stem": "The green pigment in plant leaves that absorbs light energy for photosynthesis is:",
+      "options": [
+        "Chlorophyll",
+        "Carotene",
+        "Xanthophyll",
+        "Haemoglobin"
+      ],
+      "correct": 0,
+      "explanation": "Chlorophyll is the green photosynthetic pigment found in chloroplasts that absorbs light energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-009",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "medium",
+      "stem": "How many chromosomes are present in a normal human somatic (body) cell?",
+      "options": [
+        "46",
+        "44",
+        "48",
+        "23"
+      ],
+      "correct": 0,
+      "explanation": "Human somatic cells are diploid and contain 46 chromosomes (23 pairs); gametes contain only 23.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-010",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "medium",
+      "stem": "Which organelle is mainly involved in the synthesis of lipids and the detoxification of drugs in the liver?",
+      "options": [
+        "Smooth endoplasmic reticulum",
+        "Rough endoplasmic reticulum",
+        "Nucleolus",
+        "Centriole"
+      ],
+      "correct": 0,
+      "explanation": "The smooth endoplasmic reticulum lacks ribosomes and is the site of lipid synthesis and drug detoxification.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-011",
+      "section": "biology",
+      "topic": "Human physiology and anatomy",
+      "difficulty": "medium",
+      "stem": "Which hormone, secreted by the pancreas, lowers the level of glucose in the blood?",
+      "options": [
+        "Insulin",
+        "Glucagon",
+        "Thyroxine",
+        "Adrenaline"
+      ],
+      "correct": 0,
+      "explanation": "Insulin, released by the beta cells of the islets of Langerhans, promotes glucose uptake and lowers blood glucose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-012",
+      "section": "biology",
+      "topic": "Human physiology and anatomy",
+      "difficulty": "medium",
+      "stem": "In human lungs, the exchange of oxygen and carbon dioxide takes place across the walls of the:",
+      "options": [
+        "Alveoli",
+        "Bronchi",
+        "Trachea",
+        "Bronchioles"
+      ],
+      "correct": 0,
+      "explanation": "The alveoli are thin-walled air sacs surrounded by capillaries where gaseous exchange occurs.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-013",
+      "section": "biology",
+      "topic": "Biochemistry and molecular biology",
+      "difficulty": "medium",
+      "stem": "The enzyme present in human saliva that begins the digestion of starch is:",
+      "options": [
+        "Salivary amylase",
+        "Pepsin",
+        "Lipase",
+        "Trypsin"
+      ],
+      "correct": 0,
+      "explanation": "Salivary amylase (ptyalin) hydrolyses starch into maltose in the mouth.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-014",
+      "section": "biology",
+      "topic": "Biochemistry and molecular biology",
+      "difficulty": "medium",
+      "stem": "DNA replication is described as semiconservative because:",
+      "options": [
+        "Each new DNA molecule contains one parental and one newly synthesised strand",
+        "Both strands of the new molecule are entirely new",
+        "DNA is copied from an RNA template",
+        "Replication occurs only in prokaryotic cells"
+      ],
+      "correct": 0,
+      "explanation": "In semiconservative replication each daughter molecule keeps one original strand and one new complementary strand, as shown by the Meselson-Stahl experiment.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-015",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "medium",
+      "stem": "Which type of cell division produces four haploid daughter cells from one diploid parent cell?",
+      "options": [
+        "Meiosis",
+        "Mitosis",
+        "Binary fission",
+        "Budding"
+      ],
+      "correct": 0,
+      "explanation": "Meiosis involves two successive divisions and halves the chromosome number, producing four haploid gametes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-016",
+      "section": "biology",
+      "topic": "Human physiology and anatomy",
+      "difficulty": "medium",
+      "stem": "The part of the human brain that maintains balance and coordinates voluntary movement is the:",
+      "options": [
+        "Cerebellum",
+        "Cerebrum",
+        "Medulla oblongata",
+        "Hypothalamus"
+      ],
+      "correct": 0,
+      "explanation": "The cerebellum coordinates muscle movements and maintains posture and balance.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-017",
+      "section": "biology",
+      "topic": "Cell biology and genetics",
+      "difficulty": "hard",
+      "stem": "In a DNA double helix, adenine always pairs with:",
+      "options": [
+        "Thymine",
+        "Guanine",
+        "Cytosine",
+        "Uracil"
+      ],
+      "correct": 0,
+      "explanation": "Complementary base pairing in DNA is A-T and G-C, held together by hydrogen bonds.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-018",
+      "section": "biology",
+      "topic": "Ecology and evolution",
+      "difficulty": "hard",
+      "stem": "Which of the following is considered a vestigial organ in humans?",
+      "options": [
+        "Appendix",
+        "Liver",
+        "Spleen",
+        "Pancreas"
+      ],
+      "correct": 0,
+      "explanation": "The vermiform appendix has lost most of its original digestive function in humans and is a vestigial structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-019",
+      "section": "biology",
+      "topic": "Biochemistry and molecular biology",
+      "difficulty": "hard",
+      "stem": "Which organelle contains hydrolytic enzymes that digest worn-out organelles and foreign material?",
+      "options": [
+        "Lysosome",
+        "Peroxisome",
+        "Golgi apparatus",
+        "Ribosome"
+      ],
+      "correct": 0,
+      "explanation": "Lysosomes are membrane-bound sacs of hydrolytic enzymes that carry out intracellular digestion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-biology-020",
+      "section": "biology",
+      "topic": "Ecology and evolution",
+      "difficulty": "hard",
+      "stem": "The theory of evolution through natural selection was proposed by:",
+      "options": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur",
+        "Jean-Baptiste Lamarck"
+      ],
+      "correct": 0,
+      "explanation": "Charles Darwin's On the Origin of Species (1859) proposed natural selection as the mechanism of evolution.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-001",
+      "section": "chemistry",
+      "topic": "Organic chemistry: functional groups, reactions",
+      "difficulty": "easy",
+      "stem": "Which functional group is characteristic of alcohols?",
+      "options": [
+        "Hydroxyl group (-OH)",
+        "Carbonyl group (C=O)",
+        "Carboxyl group (-COOH)",
+        "Amino group (-NH2)"
+      ],
+      "correct": 0,
+      "explanation": "Alcohols contain the hydroxyl functional group (-OH) attached to a saturated carbon atom.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-002",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: periodicity, bonding, coordination",
+      "difficulty": "easy",
+      "stem": "What is the chemical symbol of sodium?",
+      "options": [
+        "Na",
+        "S",
+        "So",
+        "N"
+      ],
+      "correct": 0,
+      "explanation": "Sodium's symbol Na comes from its Latin name natrium.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-003",
+      "section": "chemistry",
+      "topic": "Physical chemistry: equilibrium, kinetics, thermodynamics",
+      "difficulty": "easy",
+      "stem": "The pH of a neutral solution at 25°C is:",
+      "options": [
+        "7",
+        "0",
+        "14",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "At 25°C a neutral solution has pH 7, where [H+] = [OH-] = 10^-7 mol/dm^3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-004",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: periodicity, bonding, coordination",
+      "difficulty": "easy",
+      "stem": "Which gas is commonly known as laughing gas?",
+      "options": [
+        "Nitrous oxide (N2O)",
+        "Carbon dioxide (CO2)",
+        "Oxygen (O2)",
+        "Ammonia (NH3)"
+      ],
+      "correct": 0,
+      "explanation": "Nitrous oxide (N2O) is called laughing gas because of its euphoric effect when inhaled.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-005",
+      "section": "chemistry",
+      "topic": "Organic chemistry: functional groups, reactions",
+      "difficulty": "easy",
+      "stem": "The chemical formula of methane is:",
+      "options": [
+        "CH4",
+        "C2H6",
+        "C3H8",
+        "CO2"
+      ],
+      "correct": 0,
+      "explanation": "Methane, the simplest hydrocarbon of the alkane family, has the formula CH4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-006",
+      "section": "chemistry",
+      "topic": "Physical chemistry: equilibrium, kinetics, thermodynamics",
+      "difficulty": "easy",
+      "stem": "Which state of matter has both a definite shape and a definite volume?",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma"
+      ],
+      "correct": 0,
+      "explanation": "Solids have fixed shape and volume because their particles are tightly packed in a regular arrangement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-007",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: periodicity, bonding, coordination",
+      "difficulty": "medium",
+      "stem": "Which element has the highest electronegativity in the periodic table?",
+      "options": [
+        "Fluorine",
+        "Oxygen",
+        "Chlorine",
+        "Nitrogen"
+      ],
+      "correct": 0,
+      "explanation": "Fluorine (3.98 on the Pauling scale) is the most electronegative element.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-008",
+      "section": "chemistry",
+      "topic": "Physical chemistry: equilibrium, kinetics, thermodynamics",
+      "difficulty": "medium",
+      "stem": "According to Le Chatelier's principle, increasing the temperature of an exothermic reaction at equilibrium will:",
+      "options": [
+        "Shift the equilibrium towards the reactants",
+        "Shift the equilibrium towards the products",
+        "Leave the equilibrium unchanged",
+        "Stop the reaction completely"
+      ],
+      "correct": 0,
+      "explanation": "Raising the temperature favours the endothermic (reverse) direction, so an exothermic equilibrium shifts towards the reactants.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-009",
+      "section": "chemistry",
+      "topic": "Organic chemistry: functional groups, reactions",
+      "difficulty": "medium",
+      "stem": "Which of the following is the simplest alkene?",
+      "options": [
+        "Ethene",
+        "Ethane",
+        "Ethyne",
+        "Methane"
+      ],
+      "correct": 0,
+      "explanation": "Ethene (C2H4) is the simplest alkene, containing one carbon-carbon double bond.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-010",
+      "section": "chemistry",
+      "topic": "Physical chemistry: equilibrium, kinetics, thermodynamics",
+      "difficulty": "medium",
+      "stem": "The rate of a chemical reaction generally ___ as the temperature is increased.",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains constant",
+        "Falls to zero"
+      ],
+      "correct": 0,
+      "explanation": "Higher temperature increases the kinetic energy of molecules, raising the frequency and energy of effective collisions and hence the reaction rate.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-011",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: periodicity, bonding, coordination",
+      "difficulty": "medium",
+      "stem": "Which of the following is a noble gas?",
+      "options": [
+        "Argon",
+        "Nitrogen",
+        "Hydrogen",
+        "Chlorine"
+      ],
+      "correct": 0,
+      "explanation": "Argon belongs to Group 18; noble gases have completely filled valence shells and are chemically inert.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-012",
+      "section": "chemistry",
+      "topic": "Organic chemistry: functional groups, reactions",
+      "difficulty": "medium",
+      "stem": "Which reagent is commonly used in the laboratory to test for unsaturation in organic compounds?",
+      "options": [
+        "Bromine water",
+        "Sodium hydroxide",
+        "Dilute hydrochloric acid",
+        "Copper sulphate solution"
+      ],
+      "correct": 0,
+      "explanation": "Bromine water is decolourised by alkenes and alkynes, confirming the presence of multiple bonds.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-013",
+      "section": "chemistry",
+      "topic": "Physical chemistry: equilibrium, kinetics, thermodynamics",
+      "difficulty": "hard",
+      "stem": "For a first-order reaction, the half-life is:",
+      "options": [
+        "Independent of the initial concentration",
+        "Directly proportional to the initial concentration",
+        "Inversely proportional to the initial concentration",
+        "Equal to the initial concentration"
+      ],
+      "correct": 0,
+      "explanation": "For first-order kinetics t1/2 = 0.693/k, which does not depend on the initial concentration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-014",
+      "section": "chemistry",
+      "topic": "Organic chemistry: functional groups, reactions",
+      "difficulty": "hard",
+      "stem": "Which of the following compounds can show geometrical (cis-trans) isomerism?",
+      "options": [
+        "2-butene",
+        "Propane",
+        "Ethanol",
+        "Methane"
+      ],
+      "correct": 0,
+      "explanation": "2-butene has a carbon-carbon double bond with different groups on each carbon, allowing cis and trans forms.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-chemistry-015",
+      "section": "chemistry",
+      "topic": "Inorganic chemistry: periodicity, bonding, coordination",
+      "difficulty": "hard",
+      "stem": "In a coordination compound, a ligand donates a lone pair of electrons to the central metal ion, forming a:",
+      "options": [
+        "Coordinate covalent bond",
+        "Pure ionic bond",
+        "Metallic bond",
+        "Hydrogen bond"
+      ],
+      "correct": 0,
+      "explanation": "A coordinate (dative covalent) bond forms when one species provides both electrons of the shared pair.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-001",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "easy",
+      "stem": "What is the SI unit of force?",
+      "options": [
+        "Newton",
+        "Joule",
+        "Watt",
+        "Pascal"
+      ],
+      "correct": 0,
+      "explanation": "Force is measured in newtons (N); 1 N = 1 kg m/s^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-002",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "What is the SI unit of electric current?",
+      "options": [
+        "Ampere",
+        "Volt",
+        "Ohm",
+        "Coulomb"
+      ],
+      "correct": 0,
+      "explanation": "Electric current is measured in amperes (A), defined as one coulomb of charge per second.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-003",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "easy",
+      "stem": "The speed of light in a vacuum is approximately:",
+      "options": [
+        "3 × 10^8 m/s",
+        "3 × 10^6 m/s",
+        "3 × 10^10 m/s",
+        "3 × 10^5 m/s"
+      ],
+      "correct": 0,
+      "explanation": "Light travels at about 3 × 10^8 m/s (300,000 km/s) in vacuum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-004",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "easy",
+      "stem": "Which of the following is a vector quantity?",
+      "options": [
+        "Velocity",
+        "Speed",
+        "Mass",
+        "Temperature"
+      ],
+      "correct": 0,
+      "explanation": "Velocity has both magnitude and direction, so it is a vector; speed, mass and temperature are scalars.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-005",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "easy",
+      "stem": "Which law states that the current through a conductor is directly proportional to the potential difference across it at constant temperature?",
+      "options": [
+        "Ohm's law",
+        "Newton's first law",
+        "Coulomb's law",
+        "Faraday's law of induction"
+      ],
+      "correct": 0,
+      "explanation": "Ohm's law states V = IR; the current is directly proportional to voltage when resistance is constant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-006",
+      "section": "physics",
+      "topic": "Modern physics and atomic structure",
+      "difficulty": "easy",
+      "stem": "The smallest particle of an element that retains the chemical properties of the element is the:",
+      "options": [
+        "Atom",
+        "Molecule",
+        "Electron",
+        "Proton"
+      ],
+      "correct": 0,
+      "explanation": "The atom is the smallest unit of an element that takes part in chemical reactions and retains its identity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-007",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "medium",
+      "stem": "According to Newton's second law of motion, the net force acting on a body equals:",
+      "options": [
+        "Mass × acceleration",
+        "Mass × velocity",
+        "Mass × distance",
+        "Mass ÷ acceleration"
+      ],
+      "correct": 0,
+      "explanation": "Newton's second law states F = ma; force equals the product of mass and acceleration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-008",
+      "section": "physics",
+      "topic": "Modern physics and atomic structure",
+      "difficulty": "medium",
+      "stem": "The photoelectric effect was explained by Albert Einstein in 1905 using:",
+      "options": [
+        "The quantum theory of light",
+        "The wave theory of light",
+        "Classical thermodynamics",
+        "The Lorentz transformation"
+      ],
+      "correct": 0,
+      "explanation": "Einstein proposed that light consists of quanta (photons), each carrying energy E = hf, explaining the photoelectric effect.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-009",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "Two resistors of 4 Ω and 6 Ω are connected in series. What is the total resistance of the combination?",
+      "options": [
+        "10 Ω",
+        "2.4 Ω",
+        "24 Ω",
+        "1.5 Ω"
+      ],
+      "correct": 0,
+      "explanation": "In a series circuit resistances add: 4 + 6 = 10 Ω.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-010",
+      "section": "physics",
+      "topic": "Modern physics and atomic structure",
+      "difficulty": "medium",
+      "stem": "The atomic number of an element is equal to the number of:",
+      "options": [
+        "Protons in its nucleus",
+        "Neutrons in its nucleus",
+        "Protons plus neutrons",
+        "Electrons in the outermost shell"
+      ],
+      "correct": 0,
+      "explanation": "The atomic number (Z) is the number of protons in the nucleus, which determines the identity of the element.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-011",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "medium",
+      "stem": "The kinetic energy of a body of mass m moving with velocity v is given by:",
+      "options": [
+        "1/2 mv^2",
+        "mv",
+        "mgh",
+        "1/2 mv"
+      ],
+      "correct": 0,
+      "explanation": "Kinetic energy K = 1/2 mv^2; it depends on the square of the velocity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-012",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "The magnetic effect of an electric current (deflection of a compass needle near a current-carrying wire) was discovered by:",
+      "options": [
+        "Hans Christian Ørsted",
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Heinrich Hertz"
+      ],
+      "correct": 0,
+      "explanation": "In 1820 Ørsted observed that a current-carrying wire deflects a magnetic needle, revealing the magnetic effect of current.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-013",
+      "section": "physics",
+      "topic": "Modern physics and atomic structure",
+      "difficulty": "hard",
+      "stem": "Total internal reflection of light is the principle underlying the working of:",
+      "options": [
+        "Optical fibres",
+        "Convex mirrors",
+        "Bifocal spectacles",
+        "Simple microscopes"
+      ],
+      "correct": 0,
+      "explanation": "Optical fibres guide light through repeated total internal reflection along the core-cladding boundary.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-014",
+      "section": "physics",
+      "topic": "Electricity and magnetism",
+      "difficulty": "hard",
+      "stem": "In an ideal transformer, the relationship between primary voltage Vp, secondary voltage Vs and the number of turns Np and Ns is:",
+      "options": [
+        "Vp/Vs = Np/Ns",
+        "Vp/Vs = Ns/Np",
+        "Vp × Vs = Np × Ns",
+        "Vp/Vs = Np × Ns"
+      ],
+      "correct": 0,
+      "explanation": "The voltage ratio equals the turns ratio: Vp/Vs = Np/Ns.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    },
+    {
+      "id": "aku-physics-015",
+      "section": "physics",
+      "topic": "Mechanics and motion",
+      "difficulty": "hard",
+      "stem": "A car moving at 20 m/s is brought to rest uniformly in 5 seconds. What is its acceleration?",
+      "options": [
+        "-4 m/s^2",
+        "4 m/s^2",
+        "-100 m/s^2",
+        "0.25 m/s^2"
+      ],
+      "correct": 0,
+      "explanation": "a = (v - u)/t = (0 - 20)/5 = -4 m/s^2; the negative sign shows deceleration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.aku.edu/admissions/mbbs/Pages/home.aspx"
+      ]
+    }
+  ]
+}

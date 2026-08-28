@@ -1,0 +1,622 @@
+{
+  "testId": "duolingo",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions modeled on the Duolingo English Test content areas: literacy, comprehension, and conversation. The real Duolingo English Test is computer-adaptive, meaning difficulty adjusts in real time — this static bank cannot replicate that format exactly. Use as familiarity practice; take the official free practice test at englishtest.duolingo.com. Not affiliated with Duolingo, Inc.",
+    "sources": [
+      "https://englishtest.duolingo.com",
+      "https://englishtest.duolingo.com/faq"
+    ]
+  },
+  "durationMinutes": 60,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 30,
+    "note": "No negative marking. Duolingo English Test reports 10-160 overall score. This static bank approximates the question styles but cannot adapt to performance. Take the official free practice test at englishtest.duolingo.com."
+  },
+  "benchmarks": [
+    {
+      "label": "120-160 (Accepted by top institutions) (2026)",
+      "percent": 80
+    },
+    {
+      "label": "90-120 (Accepted by most institutions) (2026)",
+      "percent": 60
+    },
+    {
+      "label": "60-90 (Foundation / conditional admission) (2026)",
+      "percent": 40
+    }
+  ],
+  "sections": [
+    {
+      "id": "literacy",
+      "name": "Literacy (adaptive)",
+      "questionCount": 10
+    },
+    {
+      "id": "comprehension",
+      "name": "Comprehension (adaptive)",
+      "questionCount": 10
+    },
+    {
+      "id": "conversation",
+      "name": "Conversation (adaptive)",
+      "questionCount": 10
+    }
+  ],
+  "questions": [
+    {
+      "id": "duolingo-literacy-001",
+      "section": "literacy",
+      "topic": "Reading comprehension — main ideas and details",
+      "difficulty": "easy",
+      "stem": "Read the passage: 'The library at the university stays open until midnight during exam week. Students can use the quiet study rooms on the third floor, and the computer lab on the ground floor is available around the clock. Free coffee is served in the lobby every evening.' What is the main purpose of this passage?",
+      "options": [
+        "To inform students about library services and hours during exam week",
+        "To complain about the library's limited hours",
+        "To advertise a coffee shop near the campus",
+        "To explain how to use a computer lab"
+      ],
+      "correct": 0,
+      "explanation": "The passage informs students about extended hours, study rooms, the computer lab, and free coffee — all library services relevant during exam week.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-002",
+      "section": "literacy",
+      "topic": "Vocabulary in context",
+      "difficulty": "easy",
+      "stem": "Complete the sentence with the correct word: 'The scientist presented her findings at the international conference, where her research was ___ by experts from several countries.'",
+      "options": [
+        "discussed",
+        "discussion",
+        "discussing",
+        "discusses"
+      ],
+      "correct": 0,
+      "explanation": "The passive construction 'was discussed' requires the past participle form of the verb. The other options are incorrect verb forms for this context.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-003",
+      "section": "literacy",
+      "topic": "Grammar and sentence structure",
+      "difficulty": "easy",
+      "stem": "Choose the sentence that is grammatically correct:",
+      "options": [
+        "She don't like coffee, but she drinks tea every morning",
+        "She doesn't like coffee, but she drinks tea every morning",
+        "She doesn't likes coffee, but she drinks tea every morning",
+        "She don't likes coffee, but she drinks tea every morning"
+      ],
+      "correct": 1,
+      "explanation": "With the third-person singular subject 'she,' the auxiliary 'does' is required with 'not,' and the main verb stays in base form: 'doesn't like.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-004",
+      "section": "literacy",
+      "topic": "Reading comprehension — main ideas and details",
+      "difficulty": "easy",
+      "stem": "Read the passage: 'The village of Pella sits on the banks of a wide river, surrounded by hills covered in olive trees. The villagers earn their living mainly from fishing and farming. Every autumn, they hold a harvest festival that draws visitors from nearby towns.' According to the passage, how do the villagers of Pella primarily earn their living?",
+      "options": [
+        "By fishing and farming",
+        "By organizing festivals",
+        "By selling olive oil",
+        "By working in nearby towns"
+      ],
+      "correct": 0,
+      "explanation": "The passage explicitly states the villagers 'earn their living mainly from fishing and farming.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-005",
+      "section": "literacy",
+      "topic": "Vocabulary in context",
+      "difficulty": "medium",
+      "stem": "Select the word that best completes the sentence: 'After months of negotiation, the two countries finally reached an ___ that ended the trade dispute.'",
+      "options": [
+        "agreement",
+        "argument",
+        "appointment",
+        "arrangement"
+      ],
+      "correct": 0,
+      "explanation": "'Agreement' (a formal decision reached by two parties) fits the context of ending a dispute. 'Arrangement' implies organization rather than resolution, and the other options don't make sense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-006",
+      "section": "literacy",
+      "topic": "Grammar and sentence structure",
+      "difficulty": "medium",
+      "stem": "Choose the option that correctly completes the sentence: 'By the time the firefighters arrived, the building ___ completely.'",
+      "options": [
+        "had burned",
+        "has burned",
+        "burned",
+        "was burning"
+      ],
+      "correct": 0,
+      "explanation": "'By the time' with a past event requires the past perfect ('had burned') to show that the action was completed before the firefighters' arrival.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-007",
+      "section": "literacy",
+      "topic": "Reading comprehension — main ideas and details",
+      "difficulty": "medium",
+      "stem": "Read the passage: 'Solar panels convert sunlight into electricity. However, their efficiency depends on several factors, including the angle of installation, the amount of direct sunlight, and the temperature — panels actually perform better in cooler conditions. Regular cleaning also matters, since dust and bird droppings can block light and reduce output by up to 20 percent.' Which factor might surprise someone who assumes solar panels work best in hot weather?",
+      "options": [
+        "Solar panels perform better in cooler conditions",
+        "Solar panels need direct sunlight",
+        "Cleaning improves panel output",
+        "Installation angle affects efficiency"
+      ],
+      "correct": 0,
+      "explanation": "The passage notes panels 'actually perform better in cooler conditions,' which is the counterintuitive point that contradicts the common assumption about hot weather being best.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-008",
+      "section": "literacy",
+      "topic": "Vocabulary in context",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to the underlined word: 'The company's decision to close the factory was highly controversial, sparking protests from workers and local officials.'",
+      "options": [
+        "disputed",
+        "successful",
+        "secret",
+        "temporary"
+      ],
+      "correct": 0,
+      "explanation": "'Controversial' means causing disagreement or debate. 'Disputed' (challenged or argued about) is the closest synonym. The other options have different meanings.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-009",
+      "section": "literacy",
+      "topic": "Grammar and sentence structure",
+      "difficulty": "hard",
+      "stem": "Choose the sentence with correct grammar:",
+      "options": [
+        "The report, which the committee requested last month, were delivered this morning",
+        "The report, which the committee requested last month, was delivered this morning",
+        "The report, which the committee requested last month, have been delivered this morning",
+        "The report, whom the committee requested last month, was delivered this morning"
+      ],
+      "correct": 1,
+      "explanation": "'Report' is singular, requiring 'was delivered,' and the relative clause about a thing requires 'which' (not 'whom,' which is for people). Option B is fully correct.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-literacy-010",
+      "section": "literacy",
+      "topic": "Vocabulary in context",
+      "difficulty": "hard",
+      "stem": "Select the word that best completes the sentence: 'The new evidence ___ the defendant's alibi, making it impossible for him to have been at the scene of the crime.'",
+      "options": [
+        "corroborates",
+        "contradicts",
+        "concludes",
+        "converts"
+      ],
+      "correct": 0,
+      "explanation": "'Corroborates' means to confirm or support (evidence supporting an alibi). 'Contradicts' would mean the opposite — challenging the alibi — which doesn't fit the second half of the sentence.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-001",
+      "section": "comprehension",
+      "topic": "Listening comprehension",
+      "difficulty": "easy",
+      "stem": "You hear: 'Hi, this is the Riverside Dental Clinic. You've reached our answering service. Our office hours are Monday through Friday, from nine in the morning until five in the afternoon. If you have a dental emergency, please call the emergency line at 555-0142. For all other matters, please leave a message after the tone, and we will return your call within one business day.' What should you do if you have a dental emergency?",
+      "options": [
+        "Call the emergency line at 555-0142",
+        "Leave a message after the tone",
+        "Visit the clinic on Saturday",
+        "Call back during business hours"
+      ],
+      "correct": 0,
+      "explanation": "The recording explicitly instructs callers with dental emergencies to call the emergency line at 555-0142, while other matters should be left as messages.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-002",
+      "section": "comprehension",
+      "topic": "Passage interpretation",
+      "difficulty": "easy",
+      "stem": "Read the passage: 'The bakery on Main Street opened at six this morning, and by nine, most of the fresh bread was already sold. The owner, Mrs. Chen, says she never expected such demand when she started the business twenty years ago.' What does the passage imply about the bakery?",
+      "options": [
+        "It has been popular for a long time",
+        "It just opened this year",
+        "It sells only bread",
+        "It will close soon"
+      ],
+      "correct": 0,
+      "explanation": "The passage notes the owner started the business 20 years ago and that demand is so high bread sells out by 9 a.m. — implying sustained popularity over a long period.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-003",
+      "section": "comprehension",
+      "topic": "Inference and purpose",
+      "difficulty": "easy",
+      "stem": "Read the notice: 'The swimming pool will be closed for maintenance from July 15 to July 22. We apologize for any inconvenience. All season passes will be extended by one week.' What can you infer from the notice?",
+      "options": [
+        "The pool will reopen on July 22",
+        "Season pass holders will lose a week of access",
+        "The maintenance will last longer than a week",
+        "Swimming lessons are canceled permanently"
+      ],
+      "correct": 0,
+      "explanation": "The closure is stated as July 15 to July 22, so the pool reopens on July 22. Passes are extended (not lost), and only maintenance is mentioned, not canceled lessons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-004",
+      "section": "comprehension",
+      "topic": "Listening comprehension",
+      "difficulty": "medium",
+      "stem": "You hear a conversation between two coworkers: Ahmed: 'Did you finish the presentation for Friday?' Sara: 'Almost. I'm waiting on the sales figures from the marketing team. They said the numbers would be ready by Wednesday.' Ahmed: 'That's cutting it close. Do you want me to help with the design slides in the meantime?' Sara: 'That would be great, actually.' What does Sara still need before finishing the presentation?",
+      "options": [
+        "The sales figures from the marketing team",
+        "Help designing the slides",
+        "More time to rehearse",
+        "Approval from her manager"
+      ],
+      "correct": 0,
+      "explanation": "Sara says she's 'waiting on the sales figures from the marketing team' — that's the missing component. Ahmed offers design help, which she accepts, but that's separate from the figures.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-005",
+      "section": "comprehension",
+      "topic": "Passage interpretation",
+      "difficulty": "medium",
+      "stem": "Read the passage: 'When the railway reached the town in 1888, its economy changed almost overnight. Goods that once took weeks to reach the coast could now be shipped in days. Farmers began growing crops for distant markets, and the town's population doubled within a decade.' What was the main effect of the railway's arrival?",
+      "options": [
+        "It transformed the town's economy and accelerated its growth",
+        "It caused farmers to stop shipping goods",
+        "It reduced the town's population",
+        "It made goods take longer to reach the coast"
+      ],
+      "correct": 0,
+      "explanation": "The passage describes how the railway sped up shipping, opened distant markets, and doubled the population — all signs of economic transformation and growth.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-006",
+      "section": "comprehension",
+      "topic": "Inference and purpose",
+      "difficulty": "medium",
+      "stem": "Read the short article: 'Volunteers at the city shelter report that adoptions of adult dogs have risen sharply this year, while puppies remain the most popular choice. Staff members say adult dogs are often calmer and already house-trained, making them ideal for first-time owners.' Why might the author have included the staff members' comment?",
+      "options": [
+        "To encourage potential owners to consider adult dogs",
+        "To criticize people who prefer puppies",
+        "To explain why the shelter is closing",
+        "To compare dog breeds"
+      ],
+      "correct": 0,
+      "explanation": "The staff comment highlights the practical advantages of adult dogs (calmer, house-trained, ideal for first-time owners), which serves to encourage adoption of adult dogs rather than just puppies.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-007",
+      "section": "comprehension",
+      "topic": "Listening comprehension",
+      "difficulty": "medium",
+      "stem": "You hear a tour guide: 'We're now approaching the old harbor, which has been in continuous use for over six hundred years. The stone warehouses you see on your right date from the seventeenth century and once stored spices brought by trading ships from the east. Today, most of them have been converted into restaurants and galleries, though the harbor still serves fishing boats and ferries.' Which statement is true according to the guide?",
+      "options": [
+        "The harbor has been used for more than six hundred years",
+        "The warehouses were built in the nineteenth century",
+        "The harbor no longer serves any boats",
+        "The warehouses are all abandoned"
+      ],
+      "correct": 0,
+      "explanation": "The guide states the harbor 'has been in continuous use for over six hundred years.' The warehouses are from the seventeenth century and now house restaurants and galleries, and the harbor still serves boats.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-008",
+      "section": "comprehension",
+      "topic": "Passage interpretation",
+      "difficulty": "hard",
+      "stem": "Read the passage: 'The film's opening scenes deliberately mislead the viewer. We see the protagonist as a devoted family man, but later flashbacks reveal that his memory of his own past is unreliable — a device the director uses to explore how people rewrite their personal histories to suit their self-image.' What is the passage's main claim about the film's opening scenes?",
+      "options": [
+        "They intentionally deceive the viewer to explore how people distort their own memories",
+        "They accurately portray the protagonist's life",
+        "They are poorly directed and confusing",
+        "They reveal the ending of the film"
+      ],
+      "correct": 0,
+      "explanation": "The passage explicitly says the opening scenes 'deliberately mislead the viewer' and explains this serves the director's exploration of how people rewrite personal histories.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-009",
+      "section": "comprehension",
+      "topic": "Inference and purpose",
+      "difficulty": "hard",
+      "stem": "Read the passage: 'A 2023 study tracked 1,200 university students over four years and found that those who maintained a consistent sleep schedule performed better academically than those who slept irregular hours, even when total sleep time was similar. The researchers suggest that regularity may be more important than duration for cognitive performance.' What can be inferred about the study's design?",
+      "options": [
+        "It compared students with regular sleep schedules to those with irregular ones",
+        "It was based on laboratory experiments with controlled sleep",
+        "It focused only on students with sleep disorders",
+        "It measured academic performance over four months"
+      ],
+      "correct": 0,
+      "explanation": "The study tracked students and compared those with 'consistent sleep schedules' to those who 'slept irregular hours,' indicating a comparison of the two groups. The four-year tracking and natural variation in schedules point to an observational longitudinal design, not a lab experiment.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-comprehension-010",
+      "section": "comprehension",
+      "topic": "Listening comprehension",
+      "difficulty": "hard",
+      "stem": "You hear a university lecture excerpt: 'Now, when we talk about the Renaissance, we tend to focus on Italy — Florence, Rome, Venice. But it's important to remember that the movement had parallel developments across Europe. In the Low Countries, for example, artists pioneered oil painting techniques that Italian painters later adopted. And in England, the Renaissance arrived later but produced perhaps its greatest literary flowering with Shakespeare. So the Renaissance wasn't a single wave emanating from Italy — it was more like a set of connected currents.' What is the lecturer's main point?",
+      "options": [
+        "The Renaissance developed across Europe in interconnected ways, not just in Italy",
+        "Italian artists learned oil painting from the English",
+        "The Renaissance in England was unimportant",
+        "Florence was the only center of Renaissance art"
+      ],
+      "correct": 0,
+      "explanation": "The lecturer emphasizes parallel developments in the Low Countries and England, concluding the Renaissance was 'a set of connected currents' rather than a single wave from Italy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-001",
+      "section": "conversation",
+      "topic": "Complete the sentences",
+      "difficulty": "easy",
+      "stem": "Complete the sentence: 'If it rains tomorrow, we ___ the picnic indoors.'",
+      "options": [
+        "will have",
+        "have",
+        "had",
+        "would had"
+      ],
+      "correct": 0,
+      "explanation": "This is a first conditional: 'If + present, will + base verb.' 'Will have' correctly completes the structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-002",
+      "section": "conversation",
+      "topic": "Interactive reading",
+      "difficulty": "easy",
+      "stem": "You are chatting with a friend who writes: 'I'm going to the market later. Do you need anything?' Choose the most natural response:",
+      "options": [
+        "Yes, could you pick up some milk and bread?",
+        "Yes, I need the market to be bigger",
+        "No, markets are expensive these days",
+        "Maybe, what time is the market closing tomorrow?"
+      ],
+      "correct": 0,
+      "explanation": "The friend offers to buy things at the market; asking them to pick up milk and bread is a natural, relevant response. The other options are off-topic or don't respond to the offer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-003",
+      "section": "conversation",
+      "topic": "Fill in the blanks",
+      "difficulty": "easy",
+      "stem": "Fill in the blank in the conversation: A: 'Have you seen the new café on Elm Street?' B: 'Not yet. Is it ___?' A: 'Yeah, the coffee is great and it's usually quiet.'",
+      "options": [
+        "good",
+        "well",
+        "goodly",
+        "better off"
+      ],
+      "correct": 0,
+      "explanation": "'Good' is the adjective used after the linking verb 'is' to describe the café. 'Well' typically describes actions or health, not a noun subject.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-004",
+      "section": "conversation",
+      "topic": "Complete the sentences",
+      "difficulty": "easy",
+      "stem": "Complete the sentence: 'She has lived in Chicago ___ 2015.'",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "during"
+      ],
+      "correct": 0,
+      "explanation": "'Since' is used with a specific point in time (2015) in the present perfect tense. 'For' would require a duration ('for eight years').",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-005",
+      "section": "conversation",
+      "topic": "Interactive reading",
+      "difficulty": "medium",
+      "stem": "You receive this email from a colleague: 'Hi Omar, I've attached the revised budget. Could you review the marketing section and send back your comments by Thursday? Also, let me know if Friday's meeting time still works for you.' What should you do first according to the email?",
+      "options": [
+        "Review the marketing section and comment by Thursday",
+        "Reschedule Friday's meeting",
+        "Send a new budget proposal",
+        "Reply with your meeting preferences for next week"
+      ],
+      "correct": 0,
+      "explanation": "The email's primary request is to review the marketing section and send comments by Thursday. Confirming Friday's meeting time is the secondary request.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-006",
+      "section": "conversation",
+      "topic": "Fill in the blanks",
+      "difficulty": "medium",
+      "stem": "Fill in the blank to complete the dialogue: A: 'I'm exhausted. I stayed up late finishing the project.' B: 'You ___ taken a break. You've been working nonstop all week.'",
+      "options": [
+        "should have",
+        "should of",
+        "must have",
+        "could had"
+      ],
+      "correct": 0,
+      "explanation": "'Should have taken' expresses a missed recommendation about the past. 'Should of' is a common spelling error for 'should have,' and 'must have' implies certainty rather than advice.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-007",
+      "section": "conversation",
+      "topic": "Complete the sentences",
+      "difficulty": "medium",
+      "stem": "Complete the sentence: 'The more she practiced the violin, ___ she became.'",
+      "options": [
+        "the more confident",
+        "the confident",
+        "more confident",
+        "confident"
+      ],
+      "correct": 0,
+      "explanation": "The comparative structure 'the more..., the more...' is required: 'The more she practiced, the more confident she became.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-008",
+      "section": "conversation",
+      "topic": "Interactive reading",
+      "difficulty": "medium",
+      "stem": "You are texting a classmate about a group project: You: 'Do you want to meet tomorrow to work on the presentation?' Classmate: 'I can't tomorrow — I have a dentist appointment in the morning and work in the afternoon. What about Thursday?' You: 'Thursday works. Where should we meet?' Classmate: 'The library's group study room? I can book it for 3 p.m.' What is the final arrangement?",
+      "options": [
+        "Meeting Thursday at 3 p.m. in the library's group study room",
+        "Meeting tomorrow in the library",
+        "Meeting Thursday at the dentist's office",
+        "No meeting is arranged"
+      ],
+      "correct": 0,
+      "explanation": "The classmates agree to meet Thursday (tomorrow is unavailable), at the library's group study room at 3 p.m., which the classmate will book.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-009",
+      "section": "conversation",
+      "topic": "Fill in the blanks",
+      "difficulty": "hard",
+      "stem": "Fill in the blank in the conversation: A: 'I heard the manager is retiring next month.' B: 'Really? I wonder who ___ her place.' A: 'No idea, but I hope they promote from within.'",
+      "options": [
+        "will take",
+        "takes",
+        "took",
+        "has taken"
+      ],
+      "correct": 0,
+      "explanation": "'I wonder who will take her place' refers to a future event (the retirement next month), so the future form 'will take' is needed after 'I wonder.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    },
+    {
+      "id": "duolingo-conversation-010",
+      "section": "conversation",
+      "topic": "Complete the sentences",
+      "difficulty": "hard",
+      "stem": "Complete the sentence: 'Had the train been on time, we ___ missed our connecting flight.'",
+      "options": [
+        "would not have",
+        "will not have",
+        "do not",
+        "would not"
+      ],
+      "correct": 0,
+      "explanation": "This is a third conditional (past unreal): 'Had + past participle... would not have + past participle.' The correct completion is 'would not have missed.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://englishtest.duolingo.com"
+      ]
+    }
+  ]
+}

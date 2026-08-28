@@ -113,7 +113,7 @@ export function RahbarDrawer() {
               <Sparkles className="h-4 w-4 text-saffron" />
             </div>
             <div>
-              <p className="text-sm font-bold text-ink">Rahbar</p>
+              <p className="text-sm font-bold text-ink">Rahbar A.I</p>
               <p className="text-[11px] text-muted">Site guide · online</p>
             </div>
           </div>

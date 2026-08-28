@@ -1,0 +1,1073 @@
+{
+  "testId": "gre",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for the GRE General Test (ETS). Verbal: reading comprehension, text completion, sentence equivalence, critical reasoning. Quantitative: arithmetic, algebra, geometry, data analysis including numeric entry and quantitative comparison. Analytical Writing section is not auto-graded. Not affiliated with ETS.",
+    "sources": [
+      "https://ets.org/gre",
+      "https://takethegre.com"
+    ]
+  },
+  "durationMinutes": 88,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 54,
+    "note": "No negative marking. GRE reports 130-170 per section; your raw percentage here is a practice estimate of Verbal + Quantitative readiness."
+  },
+  "benchmarks": [
+    {
+      "label": "330+ (top PhD programmes) (2026)",
+      "percent": 90
+    },
+    {
+      "label": "310-320 (competitive MS programmes) (2026)",
+      "percent": 75
+    },
+    {
+      "label": "290-300 (many MS programmes minimum) (2026)",
+      "percent": 60
+    }
+  ],
+  "sections": [
+    {
+      "id": "verbal",
+      "name": "Verbal Reasoning",
+      "questionCount": 27
+    },
+    {
+      "id": "quantitative",
+      "name": "Quantitative Reasoning",
+      "questionCount": 27
+    }
+  ],
+  "questions": [
+    {
+      "id": "gre-verbal-001",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "easy",
+      "stem": "Despite decades of research, the causes of the ancient city's collapse remain ______; scholars have proposed at least a dozen competing explanations, none of which is fully supported by the evidence.",
+      "options": [
+        "obscure",
+        "irrelevant",
+        "obvious",
+        "urgent"
+      ],
+      "correct": 0,
+      "explanation": "The clause 'competing explanations... none fully supported' indicates the causes are unclear, so 'obscure' fits. 'Obvious' contradicts the context, 'irrelevant' does not follow from competing explanations, and 'urgent' does not match the meaning.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-002",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "easy",
+      "stem": "The committee's compromise was ______: it satisfied neither the supporters of the new policy nor its opponents.",
+      "options": [
+        "unanimous",
+        "welcomed",
+        "unsatisfactory",
+        "delayed"
+      ],
+      "correct": 2,
+      "explanation": "Pleasing neither side means the compromise was unsatisfactory. 'Unanimous' and 'welcomed' contradict the sentence, and 'delayed' does not follow from the reaction described.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-003",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "easy",
+      "stem": "Although the evidence for the theory was ______, the researchers presented it with surprising confidence.",
+      "options": [
+        "conclusive",
+        "overwhelming",
+        "scant",
+        "irrefutable"
+      ],
+      "correct": 2,
+      "explanation": "'Although' signals contrast: the evidence was weak (scant) yet the researchers were confident. 'Conclusive', 'overwhelming', and 'irrefutable' all describe strong evidence and destroy the contrast.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-004",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "easy",
+      "stem": "The professor's lectures are known for their ______ style; students say he can explain even the most complex theories in straightforward terms.",
+      "options": [
+        "convoluted",
+        "lucid",
+        "opaque",
+        "labored"
+      ],
+      "correct": 1,
+      "explanation": "Straightforward explanations of complex theories describe a clear, easy-to-follow style — 'lucid'. In the real GRE a synonym such as 'clear' would also be correct; here the other choices ('convoluted', 'opaque', 'labored') all suggest difficulty or confusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-005",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "easy",
+      "stem": "After years of drought, the reservoir's water level fell to a(n) ______ low, forcing the city to impose strict conservation measures.",
+      "options": [
+        "record",
+        "moderate",
+        "comfortable",
+        "negligible"
+      ],
+      "correct": 0,
+      "explanation": "The consequence — strict conservation measures — indicates the level reached an extreme, a record low. 'Moderate' and 'comfortable' contradict the context, and 'negligible' describes a tiny amount rather than a comparison with the past.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-006",
+      "section": "verbal",
+      "topic": "Reading Comprehension — detail",
+      "difficulty": "easy",
+      "stem": "Passage: 'When archaeologists uncovered the harbor town of Herculaneum, they found wooden objects — furniture, doors, even food — that had been preserved by the same volcanic eruption that destroyed the town. Because the site was buried in hot ash and mud that excluded oxygen, organic materials that normally decay within decades survived for nearly two thousand years.' The preservation of the wooden objects at Herculaneum was possible mainly because...",
+      "options": [
+        "The town was abandoned before the eruption",
+        "Burying material excluded oxygen, slowing decay",
+        "The objects were coated in metal",
+        "The eruption was very small"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that oxygen-excluding ash and mud preserved organic materials that normally decay quickly. Options A, C, and D are not supported by the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-007",
+      "section": "verbal",
+      "topic": "Reading Comprehension — detail",
+      "difficulty": "easy",
+      "stem": "Passage: 'In many bird species, males are more brightly colored than females. The classic explanation is sexual selection: females prefer showy males, so flashy plumage spreads. A competing idea holds that bright colors may also warn predators of a meal that is dangerous or distasteful, a signal called aposematism.' Which of the following is presented in the passage as a possible function of bright plumage in male birds?",
+      "options": [
+        "Camouflage from predators",
+        "Attracting mates or warning predators",
+        "Keeping the body warm",
+        "Aiding flight speed"
+      ],
+      "correct": 1,
+      "explanation": "The passage offers two explanations — attracting mates through sexual selection and warning predators through aposematism — which option B captures. The other functions are not mentioned.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-008",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "easy",
+      "stem": "The museum's new exhibit traces the ______ of printing technology, from hand-carved wooden blocks to high-speed digital presses.",
+      "options": [
+        "evolution",
+        "extinction",
+        "monopoly",
+        "criticism"
+      ],
+      "correct": 0,
+      "explanation": "The exhibit follows the development of printing over time — its evolution. 'Extinction' and 'monopoly' do not fit the sequence of technologies described, and 'criticism' is unrelated.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-009",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "easy",
+      "stem": "The two historians reached ______ conclusions despite examining the same documents, which shows how much interpretation shapes the writing of history.",
+      "options": [
+        "identical",
+        "divergent",
+        "matching",
+        "unavoidable"
+      ],
+      "correct": 1,
+      "explanation": "The point about interpretation shaping history implies the historians reached different — divergent — conclusions. 'Identical' and 'matching' contradict the sentence's meaning, and 'unavoidable' is not supported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-010",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "medium",
+      "stem": "The senator's speech was notable for its ______: rather than addressing the audience's concerns, she repeated the same carefully rehearsed phrases.",
+      "options": [
+        "sincerity",
+        "evasiveness",
+        "candor",
+        "specificity"
+      ],
+      "correct": 1,
+      "explanation": "Not addressing concerns and repeating rehearsed phrases describes evasiveness — avoiding the real issues. 'Sincerity' and 'candor' describe open, direct communication, the opposite of the behavior described.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-011",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "medium",
+      "stem": "Far from being a spontaneous decision, the merger was the result of months of ______ negotiation between the two boards.",
+      "options": [
+        "hasty",
+        "protracted",
+        "brief",
+        "carefree"
+      ],
+      "correct": 1,
+      "explanation": "'Far from being spontaneous' and 'months of' indicate the negotiation was drawn out — protracted. 'Hasty' and 'brief' contradict the context, and 'carefree' does not describe negotiation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-012",
+      "section": "verbal",
+      "topic": "Reading Comprehension — detail",
+      "difficulty": "medium",
+      "stem": "Passage: 'The Panama Canal, completed in 1914, cut the sea voyage between the Atlantic and Pacific Oceans by thousands of miles. The canal's success had unexpected consequences: the city of San Francisco, whose port had dominated Pacific trade, lost business to East Coast ports that could now ship directly to Asia. Meanwhile, the canal itself created a new bottleneck — a single point where a disruption could halt global commerce.' According to the passage, one unintended consequence of the canal was that...",
+      "options": [
+        "East Coast ports gained trade at San Francisco's expense",
+        "San Francisco doubled its shipping business",
+        "Pacific trade came to a permanent halt",
+        "The canal was closed within a decade"
+      ],
+      "correct": 0,
+      "explanation": "The passage states that San Francisco lost business to East Coast ports able to ship directly to Asia. Options B, C, and D contradict or exaggerate the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-013",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken the argument",
+      "difficulty": "medium",
+      "stem": "Argument: 'A university installed vending machines selling healthy snacks in its dormitories and found that students' purchases of sugary drinks fell by 15 percent over the semester. Therefore, the university should replace all snack machines with healthy options to reduce sugar consumption across campus.' Which of the following, if true, most weakens the argument?",
+      "options": [
+        "Students bought more sugary drinks from off-campus stores during the same period",
+        "The vending machines were popular with students",
+        "Other universities reported similar results",
+        "Healthy snacks cost more than sugary ones"
+      ],
+      "correct": 0,
+      "explanation": "If students simply shifted their sugary-drink purchases off campus, total consumption may be unchanged, weakening the conclusion. Options B and C support the argument; D concerns cost, not consumption.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-014",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "medium",
+      "stem": "Although the two countries had signed a peace treaty, border skirmishes continued, and diplomats warned that the agreement remained ______.",
+      "options": [
+        "permanent",
+        "fragile",
+        "binding",
+        "redundant"
+      ],
+      "correct": 1,
+      "explanation": "Continued skirmishes mean the peace remains easily broken — fragile. 'Permanent' and 'binding' contradict the warning, and 'redundant' is irrelevant to the situation described.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-015",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "medium",
+      "stem": "The CEO's habit of interrupting colleagues made meetings ______ for everyone involved, since no one could finish a sentence.",
+      "options": [
+        "productive",
+        "frustrating",
+        "efficient",
+        "pleasant"
+      ],
+      "correct": 1,
+      "explanation": "Being unable to finish sentences makes meetings frustrating. 'Productive', 'efficient', and 'pleasant' all contradict the experience described.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-016",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "medium",
+      "stem": "Passage: 'Ecologists studying a grassland found that removing a single species of ant changed the entire plant community. The ants dispersed the seeds of a dominant grass; without them, that grass declined and other species moved in. This experiment is often cited as evidence that species can matter far more than their abundance suggests.' The experiment is cited as evidence for which claim?",
+      "options": [
+        "Ants are the most numerous species in grasslands",
+        "A species's impact can be disproportionate to its abundance",
+        "Grasslands cannot survive without ants",
+        "Seed dispersal is the only role of ants"
+      ],
+      "correct": 1,
+      "explanation": "The passage says the experiment supports the idea that species can matter far more than their abundance suggests — option B. The other options overstate or misread the findings.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-017",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "medium",
+      "stem": "Passage: 'Nineteenth-century railway companies in Britain were private ventures, yet Parliament regulated their fares and safety standards from the start. The result was a curious hybrid: a competitive industry operating inside a firm regulatory framework. Proponents of laissez-faire objected that regulation stifled innovation, while critics of the companies complained that regulation was too weak to protect passengers.' Which of the following best describes the author's characterization of Britain's early railways?",
+      "options": [
+        "A purely free-market enterprise",
+        "A competitive industry subject to government regulation",
+        "A state-owned monopoly",
+        "An unregulated monopoly"
+      ],
+      "correct": 1,
+      "explanation": "The passage describes the railways as private and competitive but regulated by Parliament from the start — a hybrid, matching option B. The other options describe systems the passage explicitly rules out.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-018",
+      "section": "verbal",
+      "topic": "Critical Reasoning — strengthen the argument",
+      "difficulty": "medium",
+      "stem": "Argument: 'City officials argue that the new bike lanes caused the 20 percent drop in downtown traffic congestion. Critics respond that the drop began six months before the bike lanes were installed. Officials counter that the lanes still deserve the credit.' Which of the following, if true, most strengthens the officials' argument?",
+      "options": [
+        "Traffic congestion in nearby cities also fell by 20 percent",
+        "Congestion continued falling steadily after the lanes were installed, while city population grew",
+        "The lanes were installed ahead of schedule",
+        "Fewer commuters used the lanes than expected"
+      ],
+      "correct": 1,
+      "explanation": "Continued improvement after installation, despite population growth, supports a causal role for the lanes. Option A suggests a regional trend that would weaken the officials' case; C and D are neutral or weak.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-019",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "medium",
+      "stem": "The director's first film was a commercial failure, but critics praised its ______ visuals, and the director later built a career on that distinctive look.",
+      "options": [
+        "generic",
+        "striking",
+        "derivative",
+        "banal"
+      ],
+      "correct": 1,
+      "explanation": "Critics praising visuals that shaped the director's later career implies they were distinctive and memorable — striking. The other words describe unoriginal or dull qualities that would not build a career.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-020",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "medium",
+      "stem": "Faced with mounting losses, the company had little choice but to ______ its overseas division, selling off assets and laying off staff.",
+      "options": [
+        "expand",
+        "dissolve",
+        "establish",
+        "replicate"
+      ],
+      "correct": 1,
+      "explanation": "Selling assets and laying off staff describes dissolving (closing down) the division. 'Expand', 'establish', and 'replicate' are all opposites of the described action.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-021",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "hard",
+      "stem": "Passage: 'Some linguists argue that language shapes thought, a hypothesis known as linguistic relativity. The strongest evidence comes from domains such as color and spatial orientation, where speakers of different languages categorize experience differently. Yet the hypothesis is often overstated: a speaker who lacks a word for a concept can usually still grasp it through description, and bilinguals can shift between frames of reference with ease. The question, then, is not whether language influences thought but how deep that influence runs.' The author's main point is that...",
+      "options": [
+        "language completely determines what people can think",
+        "the influence of language on thought is real but limited in depth",
+        "linguistic relativity has been disproved by bilingual studies",
+        "color categories are identical across all languages"
+      ],
+      "correct": 1,
+      "explanation": "The author accepts evidence for linguistic relativity but argues it is often overstated, concluding the real question is how deep the influence runs — option B. Options A, C, and D contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-022",
+      "section": "verbal",
+      "topic": "Critical Reasoning — weaken the argument",
+      "difficulty": "hard",
+      "stem": "Argument: 'A pharmaceutical company claims its new allergy drug is safe because in its clinical trial, only 3 percent of patients reported side effects, compared with 5 percent in the placebo group. Since the drug caused fewer reports than the placebo, the company concludes the drug is harmless.' Which of the following, if true, most calls the company's conclusion into question?",
+      "options": [
+        "The trial lasted only four weeks",
+        "Patients taking the drug reported different side effects from those taking the placebo",
+        "Both groups took the medication in identical capsules",
+        "The trial included 10,000 patients"
+      ],
+      "correct": 1,
+      "explanation": "If the side-effect profiles differ, the overall 3 percent figure may hide serious effects unique to the drug, undermining the 'harmless' claim. Option A is weaker, and C and D strengthen the trial's credibility.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-023",
+      "section": "verbal",
+      "topic": "Text Completion — single blank",
+      "difficulty": "hard",
+      "stem": "The discovery that the manuscript contained passages copied almost word for word from an earlier, obscure text did not ______ the author's originality so much as reveal the scholarly conventions of the period, when imitation was a mark of learning rather than a failing.",
+      "options": [
+        "augment",
+        "diminish",
+        "demonstrate",
+        "celebrate"
+      ],
+      "correct": 1,
+      "explanation": "'Did not diminish... so much as reveal' — the copied passages reduce the appearance of originality, but the point is redirected to period conventions. 'Augment' means the opposite, and the other choices do not fit the contrast structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-024",
+      "section": "verbal",
+      "topic": "Sentence Equivalence — choose the fitting word",
+      "difficulty": "hard",
+      "stem": "The committee's report was ______ in its praise of the director, mentioning his achievements at length while devoting barely a sentence to the controversies surrounding his tenure.",
+      "options": [
+        "measured",
+        "effusive",
+        "restrained",
+        "ambiguous"
+      ],
+      "correct": 1,
+      "explanation": "Lengthy praise with almost no criticism describes effusive praise — lavish and unrestrained. 'Measured' and 'restrained' describe the opposite quality, and 'ambiguous' is not supported by the description.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-025",
+      "section": "verbal",
+      "topic": "Reading Comprehension — inference",
+      "difficulty": "hard",
+      "stem": "Passage: 'Historians once portrayed the Industrial Revolution as a single watershed that transformed Britain within a generation. Recent scholarship complicates this picture. Textile production did mechanize rapidly, but many trades — construction, tailoring, food processing — continued largely by hand for decades. Growth was real but uneven, and living standards for workers improved slowly and erratically rather than suddenly. The revolution, in short, was less a flood than a tide.' The author of the passage would most likely agree that the Industrial Revolution...",
+      "options": [
+        "was complete within a single generation",
+        "brought immediate prosperity to all workers",
+        "transformed the economy gradually and unevenly",
+        "had no effect on textile production"
+      ],
+      "correct": 2,
+      "explanation": "The passage's thesis is that change was real but uneven and gradual — 'less a flood than a tide' — matching option C. Options A and B state the traditional view the author rejects; D contradicts the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-026",
+      "section": "verbal",
+      "topic": "Critical Reasoning — strengthen the argument",
+      "difficulty": "hard",
+      "stem": "Argument: 'The town council claims that the new recycling program reduced landfill waste by 12 percent. However, during the same period, the town also imposed a fee for large-item disposal, and many residents simply dumped bulky waste in the countryside. Therefore, the recycling program itself was responsible for none of the reported reduction.' Which of the following, if true, most strengthens the argument?",
+      "options": [
+        "Recycling participation doubled during the program's first year",
+        "Most of the waste reduction consisted of materials the recycling program collects",
+        "The fee for large-item disposal was introduced after the measured period ended",
+        "Landfill waste rose in neighboring towns without recycling programs"
+      ],
+      "correct": 2,
+      "explanation": "If the fee came after the measurement period, dumping cannot explain the 12 percent drop, leaving recycling as the only explanation — strengthening the argument. Options A and B suggest recycling did contribute, and D is neutral.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-verbal-027",
+      "section": "verbal",
+      "topic": "Reading Comprehension — main idea",
+      "difficulty": "hard",
+      "stem": "Passage: 'Biologists classify animal coloration by function. Some patterns conceal: the peppered moth blends with lichen-covered bark. Others advertise: the bright stripes of a coral snake warn predators of its venom. But a single pattern can serve multiple functions. The eye spots on a peacock's tail attract mates, yet they may also startle predators when flashed suddenly. Function, in other words, is not always a neat category.' Which of the following best states the main point of the passage?",
+      "options": [
+        "Coloration serves only to conceal animals from predators",
+        "A single coloration pattern can have more than one function",
+        "Warning coloration is found only in snakes",
+        "Peacocks use their tails exclusively for flying"
+      ],
+      "correct": 1,
+      "explanation": "The passage's thesis is that one pattern can serve several functions, as the peacock's eye spots illustrate. Options A, C, and D contradict or oversimplify the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-001",
+      "section": "quantitative",
+      "topic": "Arithmetic — percentages (quantitative comparison)",
+      "difficulty": "easy",
+      "stem": "Quantity A: 25% of 80. Quantity B: 20% of 100. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "Quantity A = 0.25 × 80 = 20. Quantity B = 0.20 × 100 = 20. The quantities are equal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-002",
+      "section": "quantitative",
+      "topic": "Arithmetic — percentages",
+      "difficulty": "easy",
+      "stem": "A jacket originally priced at $120 is on sale at 25% off. What is the sale price?",
+      "options": [
+        "$90",
+        "$95",
+        "$100",
+        "$30"
+      ],
+      "correct": 0,
+      "explanation": "25% of $120 is $30, and $120 − $30 = $90. Option D is the discount, not the sale price.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-003",
+      "section": "quantitative",
+      "topic": "Algebra — linear equations",
+      "difficulty": "easy",
+      "stem": "If 3x + 5 = 20, what is the value of x?",
+      "options": [
+        "3",
+        "5",
+        "10",
+        "15"
+      ],
+      "correct": 1,
+      "explanation": "Subtract 5 from both sides: 3x = 15. Divide by 3: x = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-004",
+      "section": "quantitative",
+      "topic": "Arithmetic — integers (quantitative comparison)",
+      "difficulty": "easy",
+      "stem": "Quantity A: The sum of the first five positive integers. Quantity B: 15. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "The first five positive integers are 1, 2, 3, 4, and 5. Their sum is 1 + 2 + 3 + 4 + 5 = 15, equal to Quantity B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-005",
+      "section": "quantitative",
+      "topic": "Geometry — right triangles",
+      "difficulty": "easy",
+      "stem": "In a right triangle, the two legs measure 6 and 8. What is the length of the hypotenuse?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correct": 0,
+      "explanation": "By the Pythagorean theorem, the hypotenuse is √(6² + 8²) = √(36 + 64) = √100 = 10. This is the familiar 6-8-10 right triangle.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-006",
+      "section": "quantitative",
+      "topic": "Data analysis — averages",
+      "difficulty": "easy",
+      "stem": "The average (arithmetic mean) of four numbers is 12. If three of the numbers are 8, 10, and 14, what is the fourth number?",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "The total of all four numbers is 4 × 12 = 48. The three given numbers sum to 8 + 10 + 14 = 32, so the fourth number is 48 − 32 = 16.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-007",
+      "section": "quantitative",
+      "topic": "Arithmetic — exponents",
+      "difficulty": "easy",
+      "stem": "What is the value of 2³ × 2²?",
+      "options": [
+        "10",
+        "16",
+        "32",
+        "64"
+      ],
+      "correct": 2,
+      "explanation": "2³ = 8 and 2² = 4, so 8 × 4 = 32. Equivalently, 2³ × 2² = 2⁵ = 32.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-008",
+      "section": "quantitative",
+      "topic": "Algebra — word problems",
+      "difficulty": "easy",
+      "stem": "A store sells pens for $2 each and pencils for $1 each. If a student buys 3 pens and 5 pencils, what is the total cost?",
+      "options": [
+        "$8",
+        "$11",
+        "$13",
+        "$15"
+      ],
+      "correct": 1,
+      "explanation": "3 pens cost 3 × $2 = $6, and 5 pencils cost 5 × $1 = $5. The total is $6 + $5 = $11.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-009",
+      "section": "quantitative",
+      "topic": "Geometry — areas (quantitative comparison)",
+      "difficulty": "easy",
+      "stem": "Quantity A: The area of a square with side 4. Quantity B: The area of a rectangle with length 8 and width 2. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "The square's area is 4 × 4 = 16. The rectangle's area is 8 × 2 = 16. The quantities are equal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-010",
+      "section": "quantitative",
+      "topic": "Data analysis — probability",
+      "difficulty": "easy",
+      "stem": "A bag contains 3 red marbles and 7 blue marbles. If one marble is drawn at random, what is the probability that it is red?",
+      "options": [
+        "3/10",
+        "3/7",
+        "7/10",
+        "1/3"
+      ],
+      "correct": 0,
+      "explanation": "There are 3 red marbles out of 10 total, so the probability is 3/10. Option B confuses the red-to-blue ratio, and C is the probability of drawing blue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-011",
+      "section": "quantitative",
+      "topic": "Arithmetic — percentages (quantitative comparison)",
+      "difficulty": "medium",
+      "stem": "Quantity A: 30% of 150. Quantity B: 50% of 90. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "Quantity A = 0.30 × 150 = 45. Quantity B = 0.50 × 90 = 45. The quantities are equal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-012",
+      "section": "quantitative",
+      "topic": "Algebra — simultaneous equations",
+      "difficulty": "medium",
+      "stem": "If x − y = 5 and x + y = 13, what is the value of x?",
+      "options": [
+        "4",
+        "8",
+        "9",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Adding the two equations gives 2x = 18, so x = 9. Option A is the value of y (13 − 9 = 4).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-013",
+      "section": "quantitative",
+      "topic": "Geometry — circles",
+      "difficulty": "medium",
+      "stem": "A circle has a radius of 7. What is its circumference? (Use π ≈ 22/7.)",
+      "options": [
+        "14",
+        "22",
+        "44",
+        "154"
+      ],
+      "correct": 2,
+      "explanation": "Circumference = 2πr = 2 × (22/7) × 7 = 44. Option D is the area (πr² = 154), a common trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-014",
+      "section": "quantitative",
+      "topic": "Data analysis — median (numeric entry)",
+      "difficulty": "medium",
+      "stem": "The scores of five students on a 100-point exam are 70, 80, 85, 90, and 95. What is the median score?",
+      "options": [
+        "80",
+        "85",
+        "88",
+        "90"
+      ],
+      "correct": 1,
+      "explanation": "The values are already in order, and with five values the median is the middle one: 85. Option C is the average of 80 and 90, not the median.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-015",
+      "section": "quantitative",
+      "topic": "Arithmetic — decimals (quantitative comparison)",
+      "difficulty": "medium",
+      "stem": "Quantity A: 0.4 × 0.5. Quantity B: 0.2 × 1.0. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "Quantity A = 0.4 × 0.5 = 0.20. Quantity B = 0.2 × 1.0 = 0.20. The quantities are equal.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-016",
+      "section": "quantitative",
+      "topic": "Algebra — word problems",
+      "difficulty": "medium",
+      "stem": "The sum of two consecutive integers is 47. What is the smaller of the two integers?",
+      "options": [
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "correct": 2,
+      "explanation": "Let the integers be n and n + 1. Then n + (n + 1) = 47, so 2n = 46 and n = 23. The smaller integer is 23.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-017",
+      "section": "quantitative",
+      "topic": "Geometry — perimeter (numeric entry)",
+      "difficulty": "medium",
+      "stem": "In a rectangle, the length is 12 and the width is 5. What is the perimeter of the rectangle?",
+      "options": [
+        "17",
+        "24",
+        "34",
+        "60"
+      ],
+      "correct": 2,
+      "explanation": "Perimeter = 2(length + width) = 2(12 + 5) = 2 × 17 = 34. Option A is the sum of one length and one width; D is the area.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-018",
+      "section": "quantitative",
+      "topic": "Data analysis — percentages",
+      "difficulty": "medium",
+      "stem": "A survey of 200 students found that 120 prefer online classes. What percent of the students prefer online classes?",
+      "options": [
+        "50%",
+        "55%",
+        "60%",
+        "65%"
+      ],
+      "correct": 2,
+      "explanation": "120/200 = 0.60, which is 60%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-019",
+      "section": "quantitative",
+      "topic": "Arithmetic — least common multiple",
+      "difficulty": "medium",
+      "stem": "What is the least common multiple (LCM) of 6 and 8?",
+      "options": [
+        "12",
+        "16",
+        "24",
+        "48"
+      ],
+      "correct": 2,
+      "explanation": "Multiples of 6: 6, 12, 18, 24... Multiples of 8: 8, 16, 24... The smallest common multiple is 24. Option D is a common multiple but not the least.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-020",
+      "section": "quantitative",
+      "topic": "Algebra — equations (quantitative comparison)",
+      "difficulty": "medium",
+      "stem": "Quantity A: The value of x if 2(x + 3) = 14. Quantity B: 4. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "2(x + 3) = 14 → x + 3 = 7 → x = 4. Quantity A equals Quantity B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-021",
+      "section": "quantitative",
+      "topic": "Data analysis — mode",
+      "difficulty": "medium",
+      "stem": "A data set consists of the values 4, 8, 8, 12, 16. What is the mode?",
+      "options": [
+        "8",
+        "9.6",
+        "10",
+        "12"
+      ],
+      "correct": 0,
+      "explanation": "The mode is the most frequent value: 8 appears twice, more than any other value. Option B is the mean (48/5 = 9.6), a common trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-022",
+      "section": "quantitative",
+      "topic": "Arithmetic — percentages (numeric entry)",
+      "difficulty": "hard",
+      "stem": "If a number is increased by 20% and the result is 60, what was the original number?",
+      "options": [
+        "48",
+        "50",
+        "52",
+        "72"
+      ],
+      "correct": 1,
+      "explanation": "Let the original number be x. Then 1.2x = 60, so x = 60 ÷ 1.2 = 50. Option D (72) incorrectly adds 20% of 60 to 60.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-023",
+      "section": "quantitative",
+      "topic": "Algebra — quadratic equations",
+      "difficulty": "hard",
+      "stem": "If x² + 3x − 10 = 0 and x > 0, what is the value of x?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "10"
+      ],
+      "correct": 0,
+      "explanation": "x² + 3x − 10 factors as (x + 5)(x − 2) = 0, giving x = −5 or x = 2. Since x > 0, x = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-024",
+      "section": "quantitative",
+      "topic": "Geometry — areas (quantitative comparison)",
+      "difficulty": "hard",
+      "stem": "Quantity A: The area of a circle with radius 3. Quantity B: The area of a square with side 5. Compare the two quantities. (Use π ≈ 3.14.)",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 0,
+      "explanation": "Quantity A = π × 3² = 9π ≈ 28.26. Quantity B = 5² = 25. Quantity A is greater.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-025",
+      "section": "quantitative",
+      "topic": "Data analysis — probability without replacement",
+      "difficulty": "hard",
+      "stem": "A jar contains 4 red, 5 green, and 6 blue marbles. If two marbles are drawn at random without replacement, what is the probability that both are blue?",
+      "options": [
+        "1/7",
+        "2/7",
+        "6/15",
+        "1/5"
+      ],
+      "correct": 0,
+      "explanation": "The probability is (6/15) × (5/14) = 30/210 = 1/7. Option C is only the probability of the first draw being blue.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-026",
+      "section": "quantitative",
+      "topic": "Algebra — word problems",
+      "difficulty": "hard",
+      "stem": "A car travels at 60 km/h for 2 hours, then at 80 km/h for 1.5 hours. What is the total distance traveled?",
+      "options": [
+        "210 km",
+        "220 km",
+        "240 km",
+        "300 km"
+      ],
+      "correct": 2,
+      "explanation": "Distance = speed × time: 60 × 2 = 120 km, and 80 × 1.5 = 120 km. Total = 120 + 120 = 240 km.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    },
+    {
+      "id": "gre-quantitative-027",
+      "section": "quantitative",
+      "topic": "Data analysis — averages (quantitative comparison)",
+      "difficulty": "hard",
+      "stem": "The average (arithmetic mean) of 10 numbers is 20. Quantity A: The sum of the numbers. Quantity B: 200. Compare the two quantities.",
+      "options": [
+        "Quantity A is greater",
+        "Quantity B is greater",
+        "The two quantities are equal",
+        "The relationship cannot be determined from the information given"
+      ],
+      "correct": 2,
+      "explanation": "The sum of the numbers is 10 × 20 = 200, equal to Quantity B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/gre"
+      ]
+    }
+  ]
+}

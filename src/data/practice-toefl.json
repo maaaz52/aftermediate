@@ -1,0 +1,959 @@
+{
+  "testId": "toefl",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for TOEFL iBT. Reading: academic passages with comprehension questions. Listening: academic lectures and campus conversations. Speaking and Writing sections are not auto-graded — practice offline with official prompts. Not affiliated with ETS.",
+    "sources": [
+      "https://ets.org/toefl",
+      "https://toefl.org"
+    ]
+  },
+  "durationMinutes": 71,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 48,
+    "note": "No negative marking. TOEFL iBT scores are reported on a 0-120 scale (30 per section). Your percentage here is an approximation of Reading + Listening readiness."
+  },
+  "benchmarks": [
+    {
+      "label": "100+ (competitive for top US/UK universities) (2026)",
+      "percent": 85
+    },
+    {
+      "label": "80-90 (most universities minimum) (2026)",
+      "percent": 70
+    },
+    {
+      "label": "61-70 (foundation/conditional admission) (2026)",
+      "percent": 55
+    }
+  ],
+  "sections": [
+    {
+      "id": "reading",
+      "name": "Reading",
+      "questionCount": 20
+    },
+    {
+      "id": "listening",
+      "name": "Listening",
+      "questionCount": 28
+    }
+  ],
+  "questions": [
+    {
+      "id": "toefl-reading-001",
+      "section": "reading",
+      "topic": "Reading — Main idea (natural science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'The solar system formed about 4.6 billion years ago from a vast rotating cloud of gas and dust called the solar nebula. As the nebula collapsed under its own gravity, it spun faster and flattened into a disk. Most of the material gathered at the center to form the Sun, while the remaining particles in the disk collided and clumped together, gradually building the planets.' The passage primarily discusses which of the following aspects of the solar system?",
+      "options": [
+        "The process by which the Sun and planets formed",
+        "The discovery of new celestial bodies beyond Neptune",
+        "The chemical composition of the Sun and its effects on Earth",
+        "The history of space exploration missions"
+      ],
+      "correct": 0,
+      "explanation": "The passage traces the solar system's origin from the solar nebula to the Sun and planets, so its central topic is the formation process. Options B, C, and D describe topics the passage never mentions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-002",
+      "section": "reading",
+      "topic": "Reading — Detail (natural science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'Coral reefs are built by tiny animals called coral polyps that secrete hard skeletons of calcium carbonate. Most reef-building corals live in a partnership with microscopic algae known as zooxanthellae, which live inside the polyps' tissues. The algae carry out photosynthesis and pass sugars to the coral, while the coral provides the algae with nutrients and a protected environment.' According to the passage, what do zooxanthellae provide to coral polyps?",
+      "options": [
+        "Hard skeletons of calcium carbonate",
+        "A protected environment",
+        "Sugars produced by photosynthesis",
+        "Nutrients dissolved in seawater"
+      ],
+      "correct": 2,
+      "explanation": "The passage states that the algae carry out photosynthesis and pass sugars to the coral, making option C correct. The coral, not the algae, secretes the skeleton (A), and it is the coral that provides the protected environment (B) and nutrients (D).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-003",
+      "section": "reading",
+      "topic": "Reading — Detail (social science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'The Silk Road was not a single road but a network of trade routes connecting China with Central Asia, the Middle East, and Europe. Although silk was the most famous commodity, merchants also transported spices, glass, horses, and paper. Ideas traveled as well: Buddhism spread from India to China along these routes, and technologies such as papermaking moved westward.' According to the passage, which of the following spread along the Silk Road?",
+      "options": [
+        "The cultivation of coffee in China",
+        "Buddhism from India to China",
+        "The invention of the printing press in Europe",
+        "The domestication of horses in the Americas"
+      ],
+      "correct": 1,
+      "explanation": "The passage explicitly states that Buddhism spread from India to China along the trade routes, so option B is correct. The other options involve goods or events the passage does not mention.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-004",
+      "section": "reading",
+      "topic": "Reading — Vocabulary in context (natural science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'Glaciers are powerful agents of erosion. As a glacier advances, the rock fragments frozen into its base act like sandpaper, scraping and grinding the bedrock beneath it. Over thousands of years, this abrasion can carve deep valleys and sharpen mountain ridges.' In the passage, the word 'abrasion' is closest in meaning to which of the following?",
+      "options": [
+        "Deposition of sediment",
+        "Wearing away by friction",
+        "Melting under pressure",
+        "Fracturing by temperature change"
+      ],
+      "correct": 1,
+      "explanation": "The passage describes rock fragments scraping and grinding the bedrock, which is wearing away by friction — the meaning of 'abrasion'. The other choices describe different geological processes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-005",
+      "section": "reading",
+      "topic": "Reading — Main idea (social science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'In 1800, only about 3 percent of the world's population lived in cities. By 2007, for the first time in history, more than half of humanity was urban. This shift was driven by industrialization, which created factory jobs in cities, and by improvements in agriculture, which freed rural workers to migrate. Rapid urbanization has brought both opportunity and strain: cities concentrate talent and innovation, but they also face challenges of housing, sanitation, and transportation.' Which of the following best states the main idea of the passage?",
+      "options": [
+        "Industrialization caused a decline in agricultural productivity",
+        "Cities have always been home to most of the world's people",
+        "Urbanization has transformed human settlement but created new challenges",
+        "Housing shortages are the only problem facing modern cities"
+      ],
+      "correct": 2,
+      "explanation": "The passage describes the historic shift to urban living and its dual consequences — opportunity and strain — making option C the best statement of the main idea. The other options contradict or oversimplify the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-006",
+      "section": "reading",
+      "topic": "Reading — Inference (social science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'At the Neolithic settlement of Çatalhöyük in modern Turkey, archaeologists found that houses were built so close together that residents entered through holes in the roofs. Inside the houses, walls were decorated with paintings of hunting scenes and geometric patterns. The absence of streets and doorways suggests that the inhabitants' daily life centered on the household rather than the public square.' What can be inferred about the people of Çatalhöyük?",
+      "options": [
+        "They traded primarily with distant seaports",
+        "Their social life may have revolved around the home",
+        "They built houses with strong public squares",
+        "They migrated seasonally between two settlements"
+      ],
+      "correct": 1,
+      "explanation": "The passage's point about roof entries and interior decoration supports the inference that household life was central. Nothing in the passage supports options A, C, or D — indeed, the absence of public squares is mentioned, the opposite of C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-007",
+      "section": "reading",
+      "topic": "Reading — Rhetorical purpose (social science)",
+      "difficulty": "easy",
+      "stem": "Read the passage. 'Many people believe that we use only 10 percent of our brains. This popular myth is false. Neuroimaging studies show that even simple tasks activate networks spread across many brain regions, and over the course of a day nearly every part of the brain is active at some point. The myth persists, however, partly because it is flattering: it suggests that vast mental reserves are waiting to be unlocked.' Why does the author mention neuroimaging studies?",
+      "options": [
+        "To prove that some people use more of their brains than others",
+        "To provide evidence that the 10-percent myth is incorrect",
+        "To explain how the myth first became popular",
+        "To recommend a method for improving memory"
+      ],
+      "correct": 1,
+      "explanation": "The author cites neuroimaging to show that brain activity is widespread, directly contradicting the 10-percent claim. The other choices describe purposes the passage does not carry out.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-008",
+      "section": "reading",
+      "topic": "Reading — Inference (social science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'The introduction of the camel to North Africa around the first century CE revolutionized trans-Saharan trade. Camels could travel long distances with little water and carry far heavier loads than the donkeys and oxen used previously. Caravan routes across the desert expanded, linking the markets of North Africa with the kingdoms of West Africa, which exchanged gold for salt, cloth, and manufactured goods.' What can be inferred from the passage about trade before the camel?",
+      "options": [
+        "It was limited by the weight and endurance of pack animals",
+        "It moved exclusively by river rather than over land",
+        "It did not involve gold or salt at all",
+        "It was controlled entirely by North African kingdoms"
+      ],
+      "correct": 0,
+      "explanation": "Because camels could carry heavier loads and travel farther than the earlier animals, the passage implies that previous overland trade was constrained by what donkeys and oxen could manage. Options B, C, and D make claims the passage neither states nor implies.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-009",
+      "section": "reading",
+      "topic": "Reading — Vocabulary in context (natural science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Phytoplankton are microscopic marine plants that drift near the ocean surface. Although individually invisible to the naked eye, they are so abundant that they form the base of nearly all marine food webs and generate roughly half of the oxygen in Earth's atmosphere. Their numbers rise and fall in seasonal blooms that can be tracked from space by satellite.' The word 'abundant' in the passage is closest in meaning to which of the following?",
+      "options": [
+        "Rare and fragile",
+        "Present in large numbers",
+        "Tiny and invisible",
+        "Rapidly moving"
+      ],
+      "correct": 1,
+      "explanation": "The passage stresses how many phytoplankton exist — enough to feed marine food webs and produce half of Earth's oxygen — so 'abundant' means present in large numbers, option B. The other choices describe different qualities.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-010",
+      "section": "reading",
+      "topic": "Reading — Detail (humanities)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Impressionism emerged in France in the 1870s as a rebellion against the academic art of the time. Instead of painting idealized scenes in studios, artists such as Claude Monet and Pierre-Auguste Renoir set up their easels outdoors to capture fleeting effects of light and weather. Their loose brushstrokes and bright palettes were initially ridiculed by critics, who gave the movement its name as an insult after Monet's painting Impression, Sunrise.' According to the passage, the term 'Impressionism' originally...",
+      "options": [
+        "Was chosen by the artists themselves",
+        "Was coined by a critic as a derogatory label",
+        "Described a style of academic studio painting",
+        "Referred to a school of sculpture"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that critics gave the movement its name as an insult after Monet's painting, so the label was originally derogatory and not chosen by the artists, ruling out A. Options C and D contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-011",
+      "section": "reading",
+      "topic": "Reading — Rhetorical purpose (natural science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'In a famous series of experiments, the ecologist Robert Paine removed all the starfish from a stretch of rocky shoreline in Washington state. Within months, mussels — the starfish's main prey — spread until they crowded out other species, and the diversity of the community collapsed. Paine's results led him to call the starfish a keystone species, one whose presence has an outsized effect on its ecosystem. As he later wrote, the experiment showed that some species are much more important than their numbers would suggest.' Why does the author quote Robert Paine?",
+      "options": [
+        "To show that he disagreed with the results of his own experiment",
+        "To emphasize that a keystone species' impact exceeds its abundance",
+        "To prove that mussels are the most common species on rocky shores",
+        "To explain why starfish are difficult to study in the wild"
+      ],
+      "correct": 1,
+      "explanation": "The quotation directly restates the passage's central claim — that some species matter far more than their abundance indicates. Options A, C, and D attribute statements or purposes to the quote that it does not serve.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-012",
+      "section": "reading",
+      "topic": "Reading — Main idea (natural science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Volcanoes are often divided into two broad types. Shield volcanoes, such as those of Hawaii, erupt runny lava that flows for long distances, building broad, gently sloping mountains. Stratovolcanoes, such as Mount Fuji in Japan, erupt thicker, more viscous lava and explosive clouds of ash, producing steep, cone-shaped peaks. The shape of a volcano therefore reflects the composition of its magma.' Which of the following best summarizes the main idea of the passage?",
+      "options": [
+        "Volcanic eruptions are becoming more frequent",
+        "Magma composition helps determine a volcano's shape",
+        "Stratovolcanoes are found only in Japan",
+        "Shield volcanoes are older than stratovolcanoes"
+      ],
+      "correct": 1,
+      "explanation": "The passage links magma thickness to the resulting landform — runny magma builds shields, thick magma builds stratovolcanoes — so the main idea is that magma composition shapes the volcano. The other choices make claims the passage does not support.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-013",
+      "section": "reading",
+      "topic": "Reading — Sentence simplification (humanities)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Although the novels of Charles Dickens were serialized in monthly installments, which encouraged cliffhanger endings and sprawling plots, they nevertheless achieved a degree of social depth unmatched by many of his contemporaries, exposing the harsh conditions of Victorian London through characters drawn from every level of society.' Which of the following best expresses the essential information in the highlighted sentence?",
+      "options": [
+        "Dickens's serialized novels were popular but lacked social depth",
+        "Despite being published in installments, Dickens's novels combined social depth with vivid portrayals of Victorian society",
+        "Victorian London was described more harshly by Dickens than by any other writer",
+        "Monthly serialization prevented Dickens from writing about the poor"
+      ],
+      "correct": 1,
+      "explanation": "The sentence acknowledges the serialized format while asserting that Dickens's novels achieved exceptional social depth through characters from all levels of Victorian society — exactly what option B captures. The other options invert or distort the sentence's claims.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-014",
+      "section": "reading",
+      "topic": "Reading — Inference (social science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Potlatch ceremonies among Indigenous peoples of the Pacific Northwest involved elaborate gift-giving in which hosts distributed food and valuables to guests. Anthropologists once interpreted the potlatch as a wasteful practice that contradicted rational economic behavior. Later research showed that the obligation to give created reciprocal obligations, distributed resources across the community, and publicly affirmed the host's social standing.' What can be inferred about the earlier interpretation of the potlatch?",
+      "options": [
+        "It was based on a misunderstanding of the ceremony's social functions",
+        "It correctly identified the potlatch as purely an economic exchange",
+        "It was developed by Indigenous anthropologists",
+        "It predicted the decline of gift-giving worldwide"
+      ],
+      "correct": 0,
+      "explanation": "The passage contrasts the earlier view of the potlatch as 'wasteful' and economically irrational with later research revealing its social functions, so the earlier interpretation rested on a misunderstanding. Options B, C, and D are contradicted or unsupported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-015",
+      "section": "reading",
+      "topic": "Reading — Vocabulary in context (natural science)",
+      "difficulty": "medium",
+      "stem": "Read the passage. 'Sea levels are rising as glaciers melt and warming oceans expand, threatening coastal cities around the world. In response, some cities have begun to mitigate the risks by building sea walls, restoring wetlands that absorb storm surges, and raising critical infrastructure above projected flood levels.' In the passage, the word 'mitigate' is closest in meaning to which of the following?",
+      "options": [
+        "Increase or intensify",
+        "Measure precisely",
+        "Reduce or lessen",
+        "Ignore completely"
+      ],
+      "correct": 2,
+      "explanation": "The passage lists actions cities take to defend against rising seas, so 'mitigate the risks' means to reduce or lessen them — option C. The other choices have opposite or unrelated meanings.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-016",
+      "section": "reading",
+      "topic": "Reading — Rhetorical purpose (social science)",
+      "difficulty": "hard",
+      "stem": "Read the passage. 'The Great Depression of the 1930s transformed the role of government in the American economy. Before 1929, federal policy had largely left economic management to private markets. The New Deal changed that calculus: programs such as Social Security and the Securities and Exchange Commission established permanent federal responsibilities for welfare and financial regulation. It is worth remembering that these institutions were not the product of abstract ideology but of specific, painful experience.' Why does the author add the final sentence?",
+      "options": [
+        "To argue that the New Deal was poorly planned",
+        "To suggest that the Depression shaped the New Deal's institutions through concrete experience",
+        "To prove that ideology played no role in American politics",
+        "To recommend dismantling the New Deal programs"
+      ],
+      "correct": 1,
+      "explanation": "The final sentence emphasizes that the New Deal's institutions grew out of the Depression's practical hardships rather than abstract theory. Options A, C, and D misread the sentence's purpose entirely.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-017",
+      "section": "reading",
+      "topic": "Reading — Sentence simplification (social science)",
+      "difficulty": "hard",
+      "stem": "Read the passage. 'Because inflation erodes the purchasing power of money, lenders typically demand higher nominal interest rates when they expect prices to rise, which is why periods of rapid inflation are usually accompanied by elevated interest rates that can, in turn, slow borrowing and dampen economic growth.' Which of the following best expresses the essential information in the highlighted sentence?",
+      "options": [
+        "Inflation rises because interest rates make borrowing cheaper",
+        "Lenders raise rates in anticipation of inflation, and the higher rates can then slow the economy",
+        "High interest rates cause inflation by increasing the money supply",
+        "Economic growth always prevents inflation from rising"
+      ],
+      "correct": 1,
+      "explanation": "The sentence's chain is: expected inflation → lenders demand higher rates → higher rates slow borrowing and growth. Option B captures this sequence; the others reverse or distort the causal logic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-018",
+      "section": "reading",
+      "topic": "Reading — Inference (natural science)",
+      "difficulty": "hard",
+      "stem": "Read the passage. 'The peppered moth of Britain exists in two color forms: a light speckled form and a dark form. Before the Industrial Revolution, the light form predominated because it matched the pale bark of lichen-covered trees. As soot darkened the trees near industrial cities, dark moths gained an advantage by being harder for birds to see, and their numbers rose sharply. When clean-air laws later restored lighter bark, the light form became common again.' What can be inferred about the relationship between pollution and the dark form?",
+      "options": [
+        "Pollution caused the moths to change color within a single generation",
+        "The dark form's prevalence tracked changes in the darkness of tree bark",
+        "Dark moths were always more common than light moths",
+        "Birds preferred the taste of light moths"
+      ],
+      "correct": 1,
+      "explanation": "The passage shows the dark form rising with soot-darkened bark and falling when the bark lightened, implying that the dark form's prevalence tracked bark color. Option A confuses natural selection with individual change; C and D contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-019",
+      "section": "reading",
+      "topic": "Reading — Detail (natural science)",
+      "difficulty": "hard",
+      "stem": "Read the passage. 'Mars today is a cold desert, but evidence from orbiters and rovers indicates that it once had a much thicker atmosphere and flowing surface water. Features such as dry river valleys, deltas, and lakebeds point to a warmer, wetter past roughly three to four billion years ago. However, the planet's small size and weak gravity allowed much of its atmosphere to be stripped away by the solar wind, and as the atmosphere thinned, surface water could no longer persist.' According to the passage, why did Mars lose most of its atmosphere?",
+      "options": [
+        "Its volcanoes erupted continuously for billions of years",
+        "Its weak gravity allowed the solar wind to strip the atmosphere",
+        "Collisions with large asteroids destroyed it in a single event",
+        "Its oceans froze solid and trapped the gases in ice"
+      ],
+      "correct": 1,
+      "explanation": "The passage states directly that Mars's small size and weak gravity allowed the solar wind to strip the atmosphere, making option B correct. The other options describe mechanisms the passage does not propose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-reading-020",
+      "section": "reading",
+      "topic": "Reading — Main idea (humanities)",
+      "difficulty": "hard",
+      "stem": "Read the passage. 'The history of the symphony orchestra is one of gradual expansion. In the late eighteenth century, orchestras were modest ensembles of strings with a few winds and timpani. During the nineteenth century, composers such as Berlioz and Wagner added more brass, woodwinds, and percussion, seeking richer colors and greater dramatic power. By the early twentieth century, some works called for more than a hundred players. Yet this growth was not simply a matter of volume: the enlarged orchestra also multiplied the expressive combinations available to composers.' Which of the following best states the main idea of the passage?",
+      "options": [
+        "The orchestra expanded over time and gained expressive possibilities",
+        "Orchestral music was more popular in the eighteenth century",
+        "Composers abandoned the orchestra in the twentieth century",
+        "Larger orchestras always produce louder performances"
+      ],
+      "correct": 0,
+      "explanation": "The passage traces the orchestra's growth and concludes that the expansion increased expressive possibilities, not just volume — the essence of option A. The other choices misstate or contradict the passage.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-001",
+      "section": "listening",
+      "topic": "Listening — Gist (academic lecture)",
+      "difficulty": "easy",
+      "stem": "Listen to part of a lecture in a botany class. 'Today we are going to talk about seed dispersal, the many ways plants move their offspring away from the parent plant. Some seeds are light and carried by wind; others hitch rides on animal fur; still others are eaten by birds and dropped far away. The common thread is that spreading out gives each seed a better chance of finding light, water, and space of its own.' What is the lecture mainly about?",
+      "options": [
+        "Why some plants produce no seeds at all",
+        "The different methods plants use to disperse seeds",
+        "How birds build their nests",
+        "The effects of wind on forest growth"
+      ],
+      "correct": 1,
+      "explanation": "The professor lists wind, animal fur, and bird transport as seed-dispersal methods and explains their purpose, so the lecture's gist is the methods of seed dispersal. The other options name topics not discussed.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-002",
+      "section": "listening",
+      "topic": "Listening — Detail (campus conversation)",
+      "difficulty": "easy",
+      "stem": "Listen to a conversation between a student and a librarian. 'Student: Hi, I need to find the book for my art history paper. The course site says the library has it on reserve. Librarian: Let me check... yes, it's on two-hour reserve at the circulation desk. Student: Two hours? I was hoping to take it overnight. Librarian: Overnight loans are only available starting at six p.m. If you come back then, you can have it until ten a.m. tomorrow.' What can the student do to take the book overnight?",
+      "options": [
+        "Renew the book online",
+        "Pick it up after six p.m.",
+        "Ask the professor for an extension",
+        "Use the book in the library only"
+      ],
+      "correct": 1,
+      "explanation": "The librarian explains that overnight loans begin at six p.m., so the student should return at that time. The other options describe arrangements the librarian does not offer.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-003",
+      "section": "listening",
+      "topic": "Listening — Gist (campus conversation)",
+      "difficulty": "easy",
+      "stem": "Listen to a conversation between a student and a registration advisor. 'Student: I tried to add Economics 202 but the system says the section is full. Advisor: It happens every semester. Have you joined the waitlist? Student: Yes, I'm number twelve. Advisor: That's not terrible. By the end of the first week, a few students usually drop. Also, the department sometimes opens a second section, so check your email.' What is the advisor's main point?",
+      "options": [
+        "The student should change majors",
+        "The student should give up on the course",
+        "The waitlist may still lead to a seat",
+        "Registration opens only once a year"
+      ],
+      "correct": 2,
+      "explanation": "The advisor reassures the student that drops and possibly a new section could create space, so the main point is that the waitlist may still work out. The other options misstate the advisor's advice.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-004",
+      "section": "listening",
+      "topic": "Listening — Detail (academic lecture)",
+      "difficulty": "easy",
+      "stem": "Listen to part of a lecture in a world history class. 'The printing press that Johannes Gutenberg developed in the 1450s in Mainz, Germany, used movable metal type. This meant individual letters could be rearranged and reused, so a printer did not have to carve a new block for every page. Combined with an oil-based ink and a press adapted from wine-making, the system allowed books to be produced far more quickly and cheaply than handwritten manuscripts.' What was the key advantage of movable metal type?",
+      "options": [
+        "It was lighter than wooden blocks",
+        "Letters could be rearranged and reused",
+        "It produced only illustrated books",
+        "It required no ink"
+      ],
+      "correct": 1,
+      "explanation": "The professor explains that movable type allowed individual letters to be rearranged and reused, eliminating the need to carve a new block per page. The other options contradict the lecture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-005",
+      "section": "listening",
+      "topic": "Listening — Inference (campus conversation)",
+      "difficulty": "easy",
+      "stem": "Listen to a conversation between a student and a chemistry professor. 'Student: Professor, I got a C on the midterm and I studied for a week. Professor: Hmm, that's disappointing. Tell me how you studied. Student: I reread the chapters and highlighted everything. Professor: That may be the problem. Highlighting feels like studying but it is passive. Next time, try closing the book and writing out the reactions from memory, then checking. Student: OK, I'll try that.' What can be inferred about why the student did poorly?",
+      "options": [
+        "The student did not attend class",
+        "The student's study method was passive",
+        "The exam was based on material not in the book",
+        "The professor graded unfairly"
+      ],
+      "correct": 1,
+      "explanation": "The professor identifies the student's rereading-and-highlighting routine as passive, implying that this ineffective method caused the poor result. The other explanations are not suggested anywhere in the conversation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-006",
+      "section": "listening",
+      "topic": "Listening — Speaker purpose (academic lecture)",
+      "difficulty": "easy",
+      "stem": "Listen to part of a lecture in an astronomy class. 'Now, some of you may have seen movies in which asteroids threaten Earth. I bring this up not to spoil the plot but because it is worth separating science from fiction: while real asteroid impacts have happened, the risk of one in our lifetime is extremely small, and astronomers now track the largest near-Earth objects.' Why does the professor mention movies about asteroids?",
+      "options": [
+        "To recommend a film for the class",
+        "To introduce the real risk of asteroid impacts",
+        "To complain about students watching movies in class",
+        "To explain how movies are made"
+      ],
+      "correct": 1,
+      "explanation": "The professor mentions asteroid movies as a way into the real topic — the actual, small risk of impacts and how astronomers monitor it. The other options do not match the professor's stated purpose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-007",
+      "section": "listening",
+      "topic": "Listening — Detail (campus conversation)",
+      "difficulty": "easy",
+      "stem": "Listen to a conversation between a student and a housing office clerk. 'Student: I'm moving into the dorms next month and I wanted to ask about the meal plan. Clerk: Sure. The basic plan covers ten meals a week. The standard plan covers fourteen. Student: And if I run out of meals? Clerk: You can add cash to your dining account, and each swipe is a discount over the posted prices.' What does the clerk say about adding cash to the dining account?",
+      "options": [
+        "It is not allowed after the semester begins",
+        "It gives a discount compared with posted prices",
+        "It must be done in person",
+        "It replaces the meal plan entirely"
+      ],
+      "correct": 1,
+      "explanation": "The clerk states that adding cash to the dining account gives a discount over posted prices. The other options describe policies the clerk does not mention.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-008",
+      "section": "listening",
+      "topic": "Listening — Organization (academic lecture)",
+      "difficulty": "easy",
+      "stem": "Listen to part of a lecture in a geology class. 'We will look at earthquakes in three steps. First, I will describe what causes them — the sudden release of stress along faults in the Earth's crust. Second, I will explain how seismologists measure their strength using the moment magnitude scale. And finally, I will talk about why some regions, such as the Pacific Ring of Fire, experience far more earthquakes than others.' How does the professor organize the lecture?",
+      "options": [
+        "Cause, measurement, and geographic distribution",
+        "History, case studies, and predictions",
+        "Equipment, data, and funding",
+        "Definition, prevention, and repair"
+      ],
+      "correct": 0,
+      "explanation": "The professor announces three parts: causes, measurement, and geographic distribution, matching option A. The other options do not match the announced structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-009",
+      "section": "listening",
+      "topic": "Listening — Gist (campus conversation)",
+      "difficulty": "easy",
+      "stem": "Listen to a conversation between two students in the cafeteria. 'Man: The line for the pasta station is really long today. Woman: Yeah, but it moves fast, and the stir-fry is closed for renovation. Man: I guess I'll wait then. Hey, after lunch, are you going to the study session for the statistics quiz? Woman: Definitely — I still don't understand the last two chapters.' What is the woman mainly planning to do after lunch?",
+      "options": [
+        "Renovate the cafeteria",
+        "Attend a statistics study session",
+        "Close the pasta station",
+        "Skip class for the day"
+      ],
+      "correct": 1,
+      "explanation": "The woman says she will definitely go to the study session for the statistics quiz, making option B the correct gist. The other options confuse details from earlier in the conversation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-010",
+      "section": "listening",
+      "topic": "Listening — Detail (academic lecture)",
+      "difficulty": "easy",
+      "stem": "Listen to part of a lecture in a biology class. 'Camels are famously adapted to desert life. Their humps store fat, not water, and that fat provides energy when food is scarce. Their kidneys produce very concentrated urine, and their body temperature can rise several degrees during the day, which reduces the amount of water they need to sweat away.' According to the lecture, what do camel humps store?",
+      "options": [
+        "Water for long journeys",
+        "Fat for energy",
+        "Milk for their young",
+        "Cooling salts"
+      ],
+      "correct": 1,
+      "explanation": "The professor explicitly corrects a common assumption: camel humps store fat, not water, as an energy reserve. Options A, C, and D contradict the lecture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-011",
+      "section": "listening",
+      "topic": "Listening — Inference (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in a psychology class. 'In the 1970s, psychologists gave children a marshmallow and told them they would receive a second one if they could wait fifteen minutes before eating the first. Follow-up studies found that the children who waited tended to have better academic and health outcomes decades later. More recent work, however, suggests that self-control is not a fixed trait: it depends heavily on the situation and on the child's trust that the promise will be kept.' What can be inferred from the more recent research?",
+      "options": [
+        "Delaying gratification is an unchangeable personality trait",
+        "Self-control can vary with circumstances and expectations",
+        "Children should never be given sweets",
+        "The original study was completely meaningless"
+      ],
+      "correct": 1,
+      "explanation": "The professor says self-control 'depends heavily on the situation' and on trust, supporting the inference that it varies with circumstances. Option A states the opposite; C and D go beyond the lecture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-012",
+      "section": "listening",
+      "topic": "Listening — Gist (campus conversation)",
+      "difficulty": "medium",
+      "stem": "Listen to a conversation between two students about a group project. 'Man: We need to divide the presentation, and the deadline is Friday. Woman: Right. I can cover the introduction and the data analysis if you do the case study and the conclusion. Man: Works for me. Should we practice the transitions? Woman: Definitely — last semester our group failed the delivery marks because we kept cutting each other off.' What is the woman's main concern?",
+      "options": [
+        "The topic is too difficult",
+        "The group may lose marks for poor delivery",
+        "The professor is unfair",
+        "The deadline is too far away"
+      ],
+      "correct": 1,
+      "explanation": "The woman recalls losing delivery marks when a previous group interrupted one another, so her main concern is that poor coordination may cost marks again. The other options do not reflect her statements.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-013",
+      "section": "listening",
+      "topic": "Listening — Detail (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in an art history class. 'Consider the ceiling of the Sistine Chapel, painted by Michelangelo between 1508 and 1512. Because the surface is a curved vault, Michelangelo had to design figures that would look correct from the floor, foreshortening bodies and exaggerating proportions. He also had to work quickly, since wet plaster dries within a day, which is why some sections show a more hurried technique than others.' According to the lecture, why do some sections of the ceiling show a hurried technique?",
+      "options": [
+        "The artist was interrupted by war",
+        "Wet plaster dries quickly, forcing speed",
+        "The ceiling was repainted several times",
+        "Candles damaged the original paint"
+      ],
+      "correct": 1,
+      "explanation": "The professor explains that fresco plaster dries within a day, forcing Michelangelo to work fast and producing a hurried technique in places. The other explanations are not given.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-014",
+      "section": "listening",
+      "topic": "Listening — Speaker purpose (campus conversation)",
+      "difficulty": "medium",
+      "stem": "Listen to a conversation between a student and her academic advisor. 'Student: I'm thinking of taking four science courses next semester. Advisor: That is a very heavy load. Student: But I want to finish early. Advisor: Let me tell you a quick story. Last year a student with a very similar plan ended up dropping everything by October. My point is that an extra semester is cheaper than a semester of failing grades.' What is the advisor's purpose in telling the story?",
+      "options": [
+        "To discourage the student from overloading her schedule",
+        "To describe his own experience as a science student",
+        "To prove that all students fail science courses",
+        "To recommend dropping out of university"
+      ],
+      "correct": 0,
+      "explanation": "The advisor tells the cautionary story to warn the student against taking on too much, as the final sentence makes explicit. The other options misstate the advisor's purpose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-015",
+      "section": "listening",
+      "topic": "Listening — Organization (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in an economics class. 'Let me structure today's discussion of inflation around two questions. The first question: what causes inflation? Economists usually point to demand pulling prices up, or costs pushing them up. The second question: who is hurt most? Here the answer is savers and people on fixed incomes, because the purchasing power of their money falls. If we have time, I would like to open the floor for questions.' How does the professor organize the discussion?",
+      "options": [
+        "By comparing two historical periods",
+        "By asking and answering two questions",
+        "By following one case study chronologically",
+        "By listing policy recommendations only"
+      ],
+      "correct": 1,
+      "explanation": "The professor explicitly frames the lecture around two questions — causes and victims of inflation — making option B correct. The other options do not match the announced structure.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-016",
+      "section": "listening",
+      "topic": "Listening — Inference (campus conversation)",
+      "difficulty": "medium",
+      "stem": "Listen to a conversation between a student and his supervisor at the campus computer lab. 'Supervisor: You have been here for two months now, and I have noticed you leave five minutes early whenever things are quiet. Student: I thought it was fine since no one needed help. Supervisor: Quiet is exactly when we reorganize the cables and update the machines. Those tasks are part of the job.' What can be inferred about the student's behavior?",
+      "options": [
+        "He has been doing extra tasks without pay",
+        "He has been leaving before completing all his duties",
+        "He has been working on personal projects",
+        "He has been promoted to a new position"
+      ],
+      "correct": 1,
+      "explanation": "The supervisor points out that the student skips the maintenance tasks that fill quiet periods, so the student has been leaving work unfinished. Options A, C, and D describe behavior the conversation does not support.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-017",
+      "section": "listening",
+      "topic": "Listening — Detail (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in an astronomy class. 'Jupiter's moon Europa is one of the most promising places to search for life beyond Earth. Its surface is a smooth shell of ice, but beneath it scientists believe there is a global ocean of liquid water, kept warm by the tidal pull of Jupiter. That ocean may contain more than twice the water of all Earth's oceans combined, and where there is liquid water and energy, life as we know it can potentially survive.' According to the lecture, why might Europa's ocean be warm?",
+      "options": [
+        "Heat from the Sun's rays",
+        "The tidal pull of Jupiter",
+        "Volcanic vents on its surface",
+        "Radioactive decay in its core"
+      ],
+      "correct": 1,
+      "explanation": "The professor states that Jupiter's tidal pull keeps the subsurface ocean warm. Options A, C, and D name heat sources the lecture does not mention.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-018",
+      "section": "listening",
+      "topic": "Listening — Gist (campus conversation)",
+      "difficulty": "medium",
+      "stem": "Listen to a conversation between a student and an IT support technician. 'Student: My laptop will not connect to the campus Wi-Fi anymore. Technician: Did you update the operating system recently? Student: Last night. Technician: That is probably it — the new version reset the network settings. Reconnect through the network panel and re-enter your username, and it should work.' What is the technician's diagnosis?",
+      "options": [
+        "The laptop's battery is failing",
+        "The recent system update reset the network settings",
+        "The campus network is down permanently",
+        "The student needs a new computer"
+      ],
+      "correct": 1,
+      "explanation": "The technician attributes the problem to the system update resetting network settings and offers a fix. The other options are not part of the diagnosis.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-019",
+      "section": "listening",
+      "topic": "Listening — Inference (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in a biology class. 'The arctic fox changes color with the seasons — brown in summer, white in winter — so it blends into its surroundings year-round. The mountain hare does the same. What is interesting is that the timing of the change is controlled by day length, not temperature. If a warm winter arrives late, a hare that has already turned white stands out against bare ground, and foxes notice.' What can be inferred about the mountain hare's color change?",
+      "options": [
+        "It is triggered by temperature, not daylight",
+        "It leaves the hare vulnerable when snow is late",
+        "It happens only in captivity",
+        "It is controlled by the hare's diet"
+      ],
+      "correct": 1,
+      "explanation": "Because day length, not weather, triggers the change, a late warm winter leaves a white hare exposed on dark ground — the inference in option B. Option A states the opposite of the lecture, and C and D are unsupported.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-020",
+      "section": "listening",
+      "topic": "Listening — Speaker purpose (campus conversation)",
+      "difficulty": "medium",
+      "stem": "Listen to a conversation between a student and a history professor. 'Student: I found a source that says the treaty was signed in 1848. Professor: Let me see... that source is a popular blog, and its author made several errors in this article. Student: Oh. I did not realize. Professor: Look — I am not telling you this to discourage you. I am telling you because learning to evaluate sources is exactly the skill this course is meant to build.' What is the professor's purpose in pointing out the blog's errors?",
+      "options": [
+        "To punish the student for careless research",
+        "To teach the student how to evaluate sources",
+        "To ban the use of online sources",
+        "To prove that all historians disagree"
+      ],
+      "correct": 1,
+      "explanation": "The professor explicitly says the correction is meant to build the skill of evaluating sources. Options A, C, and D contradict the professor's stated purpose.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-021",
+      "section": "listening",
+      "topic": "Listening — Organization (academic lecture)",
+      "difficulty": "medium",
+      "stem": "Listen to part of a lecture in an anthropology class. 'I would like to examine gift-giving in three societies to show how it differs across cultures. We will start with the Trobriand Islands, where the kula ring circulates shell ornaments between trading partners. Then we will look at the potlatch of the Pacific Northwest, where hosts give away wealth to gain prestige. Finally, we will consider Christmas gift exchange in modern consumer economies, which anthropologists argue also follows implicit rules.' Which three societies does the professor compare?",
+      "options": [
+        "Trobriand Islands, Pacific Northwest, and modern consumer economies",
+        "Ancient Egypt, Rome, and Greece",
+        "Japan, China, and Korea",
+        "Amazon tribes, Australian Aborigines, and Siberia"
+      ],
+      "correct": 0,
+      "explanation": "The professor announces the kula ring of the Trobriands, the potlatch of the Pacific Northwest, and modern Christmas gift exchange. The other trios do not appear in the lecture.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-022",
+      "section": "listening",
+      "topic": "Listening — Inference (academic lecture)",
+      "difficulty": "hard",
+      "stem": "Listen to part of a lecture in an environmental science class. 'Tree rings are a natural archive of climate. Each year a tree adds a ring, and the width of the ring reflects growing conditions — wide rings in good years, narrow rings in droughts. By matching overlapping ring patterns from living trees, dead wood, and ancient timbers, scientists have built chronologies that reach back thousands of years. The catch is that a ring only records conditions where the tree actually grows, so we need many trees across many regions to reconstruct a reliable picture.' What can be inferred about building a reliable climate record from tree rings?",
+      "options": [
+        "It requires samples from many locations",
+        "It can be done with a single very old tree",
+        "It records conditions only in tropical forests",
+        "It does not require any dating methods"
+      ],
+      "correct": 0,
+      "explanation": "The professor stresses that because each ring reflects local conditions, many trees across regions are needed — the inference in option A. Options B, C, and D contradict the lecture's details.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-023",
+      "section": "listening",
+      "topic": "Listening — Detail (campus conversation)",
+      "difficulty": "hard",
+      "stem": "Listen to a conversation between a student and her biology professor about her thesis proposal. 'Student: I want to study how temperature affects seed germination in native grasses. Professor: Interesting, but your proposal says you will test only one species. Student: Is that a problem? Professor: With one species, you cannot know whether your results reflect a general rule or an exception. I would suggest comparing at least three species, with several replicate trays per temperature.' According to the professor, why should the student test more than one species?",
+      "options": [
+        "To make the experiment cheaper",
+        "To determine whether results reflect a general rule or an exception",
+        "Because native grasses are rare",
+        "To avoid using a greenhouse"
+      ],
+      "correct": 1,
+      "explanation": "The professor says a single species cannot reveal whether the results are general or exceptional, so multiple species are needed — option B. The other reasons are not given.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-024",
+      "section": "listening",
+      "topic": "Listening — Organization (academic lecture)",
+      "difficulty": "hard",
+      "stem": "Listen to part of a lecture in a music history class. 'Let me walk you through the structure of a typical sonata form, which dominated instrumental music in the classical period. It has three main parts. The exposition presents two contrasting themes in different keys. The development then takes those themes apart, fragments them, and modulates through distant keys. Finally, the recapitulation returns to the opening material, this time keeping both themes in the home key, which brings the movement to a stable close.' How does the professor present the material?",
+      "options": [
+        "By comparing two composers' styles",
+        "By describing the three parts of sonata form in order",
+        "By listing the instruments in a typical orchestra",
+        "By narrating the life of a famous musician"
+      ],
+      "correct": 1,
+      "explanation": "The professor explains sonata form part by part — exposition, development, recapitulation — which matches option B. The other options describe organizational approaches the lecture does not use.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-025",
+      "section": "listening",
+      "topic": "Listening — Speaker purpose (campus conversation)",
+      "difficulty": "hard",
+      "stem": "Listen to a conversation between two students planning a campus event. 'Man: The guest speaker wants a larger room than we booked. Woman: The big hall is taken that evening. Man: Then we might have to turn people away. Woman: Hold on — before we do that, let me suggest something. We could set up a second room with a video link, and I bet the speaker would be happy to answer questions there afterward. It solves the space problem without losing anyone.' What is the woman's purpose in mentioning the video link?",
+      "options": [
+        "To cancel the event entirely",
+        "To propose a way to fit everyone without changing the main room",
+        "To complain about the speaker's demands",
+        "To book an entirely new date"
+      ],
+      "correct": 1,
+      "explanation": "The woman proposes a video-linked second room as a solution that keeps everyone in the audience. Options A, C, and D contradict her suggestion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-026",
+      "section": "listening",
+      "topic": "Listening — Inference (academic lecture)",
+      "difficulty": "hard",
+      "stem": "Listen to part of a lecture in a sociology class. 'In the early 1900s, the sociologist Georg Simmel argued that city life overwhelms the senses with constant stimulation. To cope, he claimed, urban dwellers develop a blasé attitude — they become detached and focus on practical concerns. Yet Simmel also saw the city as liberating: because individuals are surrounded by strangers, they are freer to pursue unusual interests than in small towns, where everyone knows everyone.' What can be inferred about life in small towns, according to Simmel?",
+      "options": [
+        "It is more stimulating than city life",
+        "It offers less privacy and less freedom to be unconventional",
+        "It produces a more blasé attitude",
+        "It has no social rules at all"
+      ],
+      "correct": 1,
+      "explanation": "Simmel implies that in small towns, where everyone knows everyone, conformity is stronger and unusual interests are less free — the inference in option B. The other options reverse or overstate his claims.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-027",
+      "section": "listening",
+      "topic": "Listening — Detail (academic lecture)",
+      "difficulty": "hard",
+      "stem": "Listen to part of a lecture in a biochemistry class. 'Photosynthesis happens in two linked stages. In the light-dependent reactions, chlorophyll absorbs sunlight and uses its energy to split water molecules, releasing oxygen and generating energy-carrying molecules called ATP and NADPH. In the Calvin cycle, which does not require light directly, those molecules are used to convert carbon dioxide into sugar. Notice that the oxygen released by plants comes from the water, not from the carbon dioxide.' According to the lecture, where does the oxygen released during photosynthesis come from?",
+      "options": [
+        "Carbon dioxide molecules",
+        "Chlorophyll pigments",
+        "Water molecules split in the light-dependent reactions",
+        "Sugar molecules in the Calvin cycle"
+      ],
+      "correct": 2,
+      "explanation": "The professor stresses that the oxygen comes from splitting water in the light-dependent reactions. Options A, B, and D name sources the lecture rules out or does not mention.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    },
+    {
+      "id": "toefl-listening-028",
+      "section": "listening",
+      "topic": "Listening — Gist (campus conversation)",
+      "difficulty": "hard",
+      "stem": "Listen to a conversation between a student and a career services counselor. 'Student: I have two internship offers and I cannot decide. One is a big bank, the other is a small environmental nonprofit. Counselor: Let me ask what you want the internship to do for you. Student: Honestly, I want to see what a working environment feels like and build skills I can use anywhere. Counselor: Then I would not choose by name recognition alone. The nonprofit will probably give you broader responsibilities and more direct mentorship — which may serve that goal better.' What is the counselor's main point?",
+      "options": [
+        "The student should always choose the larger company",
+        "The student should choose the internship that best fits her goals",
+        "Internships are not worth the time",
+        "The student should accept both offers"
+      ],
+      "correct": 1,
+      "explanation": "The counselor steers the student to choose based on her stated goals — broad experience and mentorship — rather than prestige. The other options contradict the counselor's advice.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://ets.org/toefl"
+      ]
+    }
+  ]
+}

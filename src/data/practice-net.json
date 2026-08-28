@@ -1,0 +1,3849 @@
+{
+  "testId": "net",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Assembled August 2026. NUST's CBNET demo papers are login-gated, so this bank is original practice questions written strictly to NUST's published NET Engineering syllabus, replicating the official 200-MCQ distribution (Math 80, Physics 60, Chemistry 30, English 20, Intelligence 10) over the full 180 minutes. Every question is labeled practice. Not affiliated with NUST.",
+    "sources": [
+      "https://nust.edu.pk/admissions/undergraduates/",
+      "https://ugadmissions.nust.edu.pk/"
+    ]
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 200,
+    "note": "200 MCQs, 200 marks, no negative marking (NET Engineering pattern)."
+  },
+  "benchmarks": [],
+  "sections": [
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "questionCount": 80
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 60
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 30
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 20
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence",
+      "questionCount": 10
+    }
+  ],
+  "questions": [
+    {
+      "id": "net-math-001",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "In the arithmetic progression 5, 9, 13, ..., which term is equal to 81?",
+      "options": [
+        "19th",
+        "20th",
+        "21st",
+        "18th"
+      ],
+      "correct": 1,
+      "explanation": "a_n = a + (n-1)d = 5 + (n-1)4 = 81, so (n-1)4 = 76, n-1 = 19, n = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-002",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the 6th term of the geometric sequence 2, 6, 18, ...?",
+      "options": [
+        "162",
+        "729",
+        "486",
+        "1458"
+      ],
+      "correct": 2,
+      "explanation": "First term a = 2, common ratio r = 3. a_6 = a r^5 = 2 * 3^5 = 2 * 243 = 486.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-003",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the sum of the first 20 natural numbers?",
+      "options": [
+        "190",
+        "210",
+        "200",
+        "420"
+      ],
+      "correct": 1,
+      "explanation": "S = n(n+1)/2 = 20 * 21 / 2 = 210.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-004",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the sum of the roots of the equation x^2 - 5x + 6 = 0?",
+      "options": [
+        "-5",
+        "1",
+        "6",
+        "5"
+      ],
+      "correct": 3,
+      "explanation": "For ax^2 + bx + c = 0, the sum of roots is -b/a = 5/1 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-005",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the determinant of the matrix [[2, 0], [0, 3]]?",
+      "options": [
+        "5",
+        "6",
+        "0",
+        "9"
+      ],
+      "correct": 1,
+      "explanation": "For a diagonal 2x2 matrix, det = (2)(3) - (0)(0) = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-006",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "Evaluate log base 2 of 8.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "2^3 = 8, so log2(8) = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-007",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the 8th term of the geometric sequence 1, 2, 4, 8, ...?",
+      "options": [
+        "64",
+        "256",
+        "16",
+        "128"
+      ],
+      "correct": 3,
+      "explanation": "a = 1, r = 2, so a_8 = 1 * 2^7 = 128.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-008",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "What is the determinant of the matrix [[3, 1], [2, 4]]?",
+      "options": [
+        "14",
+        "11",
+        "8",
+        "10"
+      ],
+      "correct": 3,
+      "explanation": "det = (3)(4) - (1)(2) = 12 - 2 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-009",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "easy",
+      "stem": "If f(x) = 2x + 3, what is the value of f(f(1))?",
+      "options": [
+        "13",
+        "11",
+        "10",
+        "16"
+      ],
+      "correct": 0,
+      "explanation": "f(1) = 2(1) + 3 = 5, then f(5) = 2(5) + 3 = 13.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-010",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "What is the sum of the infinite geometric series 27 + 9 + 3 + ...?",
+      "options": [
+        "13.5",
+        "40.5",
+        "40",
+        "81"
+      ],
+      "correct": 1,
+      "explanation": "a = 27, r = 1/3. S = a / (1 - r) = 27 / (1 - 1/3) = 27 / (2/3) = 40.5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-011",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "If the equation x^2 - kx + 9 = 0 has equal roots and k > 0, what is the value of k?",
+      "options": [
+        "3",
+        "9",
+        "6",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "Equal roots require discriminant = 0: k^2 - 4(1)(9) = 0, so k^2 = 36, k = 6 (taking k > 0).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-012",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "In a geometric sequence the 3rd term is 12 and the common ratio is 2. What is the first term?",
+      "options": [
+        "6",
+        "3",
+        "24",
+        "1.5"
+      ],
+      "correct": 1,
+      "explanation": "a_3 = a r^2, so 12 = a * 2^2 = 4a, giving a = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-013",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "What is the sum of the first 15 terms of an arithmetic progression with first term 2 and common difference 3?",
+      "options": [
+        "360",
+        "330",
+        "345",
+        "375"
+      ],
+      "correct": 2,
+      "explanation": "S = n/2 [2a + (n-1)d] = 15/2 [4 + 14*3] = 15/2 * 46 = 15 * 23 = 345.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-014",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "What are the roots of the equation 2x^2 - 7x + 3 = 0?",
+      "options": [
+        "1 and 3",
+        "3 and 1/2",
+        "-3 and 1/2",
+        "3/2 and 2"
+      ],
+      "correct": 1,
+      "explanation": "x = (7 +/- sqrt(49 - 24)) / 4 = (7 +/- 5) / 4, giving x = 3 or x = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-015",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "If A = [[1, 2], [3, 4]] and B = [[0, 1], [1, 0]], what is the product AB?",
+      "options": [
+        "[[2, 1], [4, 3]]",
+        "[[1, 2], [4, 3]]",
+        "[[2, 4], [1, 3]]",
+        "[[4, 3], [2, 1]]"
+      ],
+      "correct": 0,
+      "explanation": "AB = [[1*0+2*1, 1*1+2*0], [3*0+4*1, 3*1+4*0]] = [[2, 1], [4, 3]].",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-016",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "What is the magnitude of the vector 3i - 4j + 12k?",
+      "options": [
+        "12",
+        "5",
+        "13",
+        "15"
+      ],
+      "correct": 2,
+      "explanation": "|v| = sqrt(3^2 + (-4)^2 + 12^2) = sqrt(9 + 16 + 144) = sqrt(169) = 13.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-017",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "medium",
+      "stem": "Solve for x: log10(x) - log10(3) = 2.",
+      "options": [
+        "60",
+        "9",
+        "30",
+        "300"
+      ],
+      "correct": 3,
+      "explanation": "log10(x/3) = 2 means x/3 = 10^2 = 100, so x = 300.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-018",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "hard",
+      "stem": "The first two terms of a geometric sequence have sum 20 and product 64. What is the common ratio r if r > 1?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "1/4"
+      ],
+      "correct": 1,
+      "explanation": "With terms a and ar: a(1+r) = 20 and a^2 r = 64. Substituting gives 4r^2 - 17r + 4 = 0, so r = 4 or r = 1/4; taking r > 1 gives r = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-019",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "hard",
+      "stem": "If alpha and beta are the roots of 3x^2 - 12x + 2 = 0, what is the value of alpha^2 + beta^2?",
+      "options": [
+        "16/3",
+        "40/3",
+        "44/3",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "Sum = 4, product = 2/3. alpha^2 + beta^2 = (sum)^2 - 2(product) = 16 - 4/3 = 44/3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-020",
+      "section": "math",
+      "topic": "Algebra, sequences and series",
+      "difficulty": "hard",
+      "stem": "What is the coefficient of x^4 in the expansion of (2 + x)^6?",
+      "options": [
+        "240",
+        "60",
+        "15",
+        "30"
+      ],
+      "correct": 1,
+      "explanation": "The general term is C(6,r) 2^(6-r) x^r. For r = 4: C(6,4) * 2^2 = 15 * 4 = 60.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-021",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the exact value of sin(30 degrees)?",
+      "options": [
+        "sqrt(3)/2",
+        "1",
+        "1/2",
+        "sqrt(2)/2"
+      ],
+      "correct": 2,
+      "explanation": "sin(30 degrees) = 1/2 is a standard exact trigonometric value.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-022",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the value of cos(0 degrees)?",
+      "options": [
+        "1",
+        "0",
+        "1/2",
+        "-1"
+      ],
+      "correct": 0,
+      "explanation": "cos(0) = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-023",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the value of tan(45 degrees)?",
+      "options": [
+        "sqrt(3)",
+        "1/2",
+        "1",
+        "0"
+      ],
+      "correct": 2,
+      "explanation": "tan(45 degrees) = sin(45)/cos(45) = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-024",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "The expression sin^2(x) + cos^2(x) is always equal to:",
+      "options": [
+        "0",
+        "2",
+        "tan^2(x)",
+        "1"
+      ],
+      "correct": 3,
+      "explanation": "This is the Pythagorean identity: sin^2(x) + cos^2(x) = 1 for all x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-025",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the distance between the points (0, 0) and (3, 4)?",
+      "options": [
+        "5",
+        "7",
+        "12",
+        "1"
+      ],
+      "correct": 0,
+      "explanation": "d = sqrt((3-0)^2 + (4-0)^2) = sqrt(9 + 16) = sqrt(25) = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-026",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "What is the slope of the line passing through (1, 2) and (3, 6)?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correct": 1,
+      "explanation": "m = (6 - 2) / (3 - 1) = 4 / 2 = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-027",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "easy",
+      "stem": "The equation x^2 + y^2 = 25 represents a circle. What is its radius?",
+      "options": [
+        "25",
+        "5",
+        "10",
+        "12.5"
+      ],
+      "correct": 1,
+      "explanation": "Comparing with x^2 + y^2 = r^2 gives r^2 = 25, so r = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-028",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "Evaluate cos(60 degrees) + sin(30 degrees).",
+      "options": [
+        "1/2",
+        "1",
+        "sqrt(3)/2",
+        "0"
+      ],
+      "correct": 1,
+      "explanation": "cos(60) = 1/2 and sin(30) = 1/2, so the sum = 1/2 + 1/2 = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-029",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "If sin(A) = 3/5 and angle A lies in the first quadrant, what is tan(A)?",
+      "options": [
+        "4/3",
+        "3/4",
+        "5/3",
+        "5/4"
+      ],
+      "correct": 1,
+      "explanation": "In Q1, cos(A) = 4/5, so tan(A) = sin/cos = (3/5)/(4/5) = 3/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-030",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the exact value of sin(150 degrees)?",
+      "options": [
+        "-1/2",
+        "sqrt(3)/2",
+        "1/2",
+        "sqrt(2)/2"
+      ],
+      "correct": 2,
+      "explanation": "sin(150) = sin(180 - 150) = sin(30) = 1/2 (positive in the second quadrant).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-031",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the midpoint of the segment joining (2, 3) and (6, 7)?",
+      "options": [
+        "(8, 10)",
+        "(4, 5)",
+        "(3, 4)",
+        "(4, 4)"
+      ],
+      "correct": 1,
+      "explanation": "Midpoint = ((2+6)/2, (3+7)/2) = (4, 5).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-032",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the centre of the circle x^2 + y^2 - 4x + 6y - 12 = 0?",
+      "options": [
+        "(-2, 3)",
+        "(2, 3)",
+        "(2, -3)",
+        "(4, -6)"
+      ],
+      "correct": 2,
+      "explanation": "Completing squares: (x-2)^2 + (y+3)^2 = 25, so the centre is (2, -3).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-033",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the slope of a line perpendicular to the line y = 2x + 1?",
+      "options": [
+        "2",
+        "1/2",
+        "-2",
+        "-1/2"
+      ],
+      "correct": 3,
+      "explanation": "Perpendicular slopes satisfy m1*m2 = -1. With m1 = 2, m2 = -1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-034",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "If tan(x) = 3/4 and x is an acute angle, what is sin(x)?",
+      "options": [
+        "4/5",
+        "3/5",
+        "5/3",
+        "5/4"
+      ],
+      "correct": 1,
+      "explanation": "Opposite = 3, adjacent = 4, hypotenuse = sqrt(9+16) = 5, so sin(x) = 3/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-035",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "What is the focus of the parabola y^2 = 8x?",
+      "options": [
+        "(4, 0)",
+        "(2, 0)",
+        "(0, 2)",
+        "(8, 0)"
+      ],
+      "correct": 1,
+      "explanation": "For y^2 = 4ax, 4a = 8 so a = 2, and the focus is (a, 0) = (2, 0).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-036",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "medium",
+      "stem": "The expression sin(x)cos(y) - cos(x)sin(y) simplifies to:",
+      "options": [
+        "sin(x + y)",
+        "sin(x - y)",
+        "cos(x - y)",
+        "cos(x + y)"
+      ],
+      "correct": 1,
+      "explanation": "This is the sine difference identity: sin(x - y) = sin(x)cos(y) - cos(x)sin(y).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-037",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "hard",
+      "stem": "What is the exact value of cos(75 degrees)?",
+      "options": [
+        "(sqrt(6) + sqrt(2))/4",
+        "(sqrt(3) - 1)/2",
+        "(sqrt(6) - sqrt(2))/4",
+        "sqrt(2)/2"
+      ],
+      "correct": 2,
+      "explanation": "cos(75) = cos(45+30) = cos45 cos30 - sin45 sin30 = (sqrt6 - sqrt2)/4 (about 0.259).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-038",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "hard",
+      "stem": "What is the eccentricity of the ellipse x^2/25 + y^2/9 = 1?",
+      "options": [
+        "3/5",
+        "4/5",
+        "5/4",
+        "16/25"
+      ],
+      "correct": 1,
+      "explanation": "a^2 = 25, b^2 = 9, so c^2 = a^2 - b^2 = 16, c = 4. Eccentricity e = c/a = 4/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-039",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "hard",
+      "stem": "For 0 <= x <= 2pi, how many solutions does the equation 2 sin(x) = 1 have?",
+      "options": [
+        "1",
+        "4",
+        "2",
+        "6"
+      ],
+      "correct": 2,
+      "explanation": "sin(x) = 1/2 gives x = pi/6 and x = 5pi/6 in [0, 2pi], so there are 2 solutions.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-040",
+      "section": "math",
+      "topic": "Trigonometry and analytic geometry",
+      "difficulty": "hard",
+      "stem": "What is the perpendicular distance from the point (3, 4) to the line 3x + 4y - 5 = 0?",
+      "options": [
+        "5",
+        "3",
+        "20",
+        "4"
+      ],
+      "correct": 3,
+      "explanation": "d = |3(3) + 4(4) - 5| / sqrt(3^2 + 4^2) = |9 + 16 - 5| / 5 = 20 / 5 = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-041",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the derivative of x^3 with respect to x?",
+      "options": [
+        "x^2",
+        "3x^2",
+        "3x",
+        "x^4/4"
+      ],
+      "correct": 1,
+      "explanation": "By the power rule, d/dx(x^n) = n x^(n-1), so d/dx(x^3) = 3x^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-042",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the derivative of sin(x) with respect to x?",
+      "options": [
+        "-cos(x)",
+        "cos(x)",
+        "-sin(x)",
+        "tan(x)"
+      ],
+      "correct": 1,
+      "explanation": "d/dx sin(x) = cos(x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-043",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "Evaluate the integral of 2x dx.",
+      "options": [
+        "x^2 + C",
+        "2 + C",
+        "x^2",
+        "2x^2 + C"
+      ],
+      "correct": 0,
+      "explanation": "The integral of 2x is x^2, plus an arbitrary constant C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-044",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the derivative of the constant 7?",
+      "options": [
+        "7",
+        "0",
+        "1",
+        "x"
+      ],
+      "correct": 1,
+      "explanation": "The derivative of any constant is 0.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-045",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the limit of x^2 as x approaches 2?",
+      "options": [
+        "2",
+        "8",
+        "4",
+        "0"
+      ],
+      "correct": 2,
+      "explanation": "x^2 is continuous, so the limit equals 2^2 = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-046",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "What is the derivative of e^x with respect to x?",
+      "options": [
+        "x e^(x-1)",
+        "e^x",
+        "e",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "The exponential function e^x is its own derivative: d/dx(e^x) = e^x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-047",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "easy",
+      "stem": "Evaluate the definite integral of x dx from 0 to 1.",
+      "options": [
+        "1",
+        "1/2",
+        "0",
+        "1/3"
+      ],
+      "correct": 1,
+      "explanation": "Integral = x^2/2 evaluated from 0 to 1 = 1/2 - 0 = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-048",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of 3x^4 - 2x^2 + 5x with respect to x?",
+      "options": [
+        "12x^3 - 2x + 5",
+        "12x^3 - 4x + 5",
+        "3x^3 - 4x + 5",
+        "12x^4 - 4x + 5"
+      ],
+      "correct": 1,
+      "explanation": "Differentiate term by term: 12x^3 - 4x + 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-049",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "What is the derivative of x^2 sin(x) with respect to x?",
+      "options": [
+        "x^2 cos(x)",
+        "2x cos(x)",
+        "2x sin(x) + x^2 cos(x)",
+        "2x sin(x) - x^2 cos(x)"
+      ],
+      "correct": 2,
+      "explanation": "Product rule: d/dx(uv) = u'v + uv'. With u = x^2, v = sin(x): 2x sin(x) + x^2 cos(x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-050",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of ln(x) with respect to x?",
+      "options": [
+        "ln(x) / x",
+        "1/x",
+        "x",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "d/dx ln(x) = 1/x for x > 0.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-051",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "Evaluate the definite integral of cos(x) dx from 0 to pi/2.",
+      "options": [
+        "0",
+        "pi/2",
+        "1",
+        "2"
+      ],
+      "correct": 2,
+      "explanation": "Antiderivative is sin(x); sin(pi/2) - sin(0) = 1 - 0 = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-052",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the slope of the tangent to the curve y = x^2 at the point where x = 3?",
+      "options": [
+        "9",
+        "3",
+        "2",
+        "6"
+      ],
+      "correct": 3,
+      "explanation": "dy/dx = 2x; at x = 3 the slope is 2*3 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-053",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of 1/x with respect to x?",
+      "options": [
+        "1/x^2",
+        "-1/x^2",
+        "-x^2",
+        "ln(x)"
+      ],
+      "correct": 1,
+      "explanation": "1/x = x^-1, so d/dx = -1 * x^-2 = -1/x^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-054",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "Evaluate the integral of 1/x dx.",
+      "options": [
+        "-1/x^2 + C",
+        "x^0 + C",
+        "ln|x| + C",
+        "1 + x"
+      ],
+      "correct": 2,
+      "explanation": "The antiderivative of 1/x is ln|x| + C.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-055",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "What is the derivative of (2x + 1)^5 with respect to x?",
+      "options": [
+        "5(2x + 1)^4",
+        "10(2x + 1)^4",
+        "(2x + 1)^4",
+        "2(2x + 1)^4"
+      ],
+      "correct": 1,
+      "explanation": "Chain rule: 5(2x+1)^4 * d/dx(2x+1) = 5(2x+1)^4 * 2 = 10(2x+1)^4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-056",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "What is the limit of sin(3x)/x as x approaches 0?",
+      "options": [
+        "1",
+        "0",
+        "1/3",
+        "3"
+      ],
+      "correct": 3,
+      "explanation": "sin(3x)/x = 3 * sin(3x)/(3x), and sin(u)/u tends to 1 as u tends to 0, so the limit is 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-057",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "Evaluate the integral of x e^x dx.",
+      "options": [
+        "e^x (x + 1) + C",
+        "e^x (x - 1) + C",
+        "(x^2 e^x)/2 + C",
+        "e^x + C"
+      ],
+      "correct": 1,
+      "explanation": "Integration by parts gives e^x(x - 1) + C; differentiating e^x(x-1) returns x e^x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-058",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "What is the derivative of tan(x) with respect to x?",
+      "options": [
+        "cot(x)",
+        "-csc^2(x)",
+        "sec^2(x)",
+        "sec(x)tan(x)"
+      ],
+      "correct": 2,
+      "explanation": "d/dx tan(x) = sec^2(x).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-059",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "medium",
+      "stem": "At what value of x does the function f(x) = x^2 - 6x + 4 attain its minimum?",
+      "options": [
+        "3",
+        "6",
+        "-3",
+        "2"
+      ],
+      "correct": 0,
+      "explanation": "f'(x) = 2x - 6 = 0 gives x = 3; since the parabola opens upward this is the minimum.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-060",
+      "section": "math",
+      "topic": "Calculus: differentiation and integration",
+      "difficulty": "hard",
+      "stem": "Evaluate the definite integral of 2x (x^2 + 1)^3 dx from 0 to 1.",
+      "options": [
+        "16/4",
+        "15/2",
+        "15/4",
+        "5/4"
+      ],
+      "correct": 2,
+      "explanation": "Substitute u = x^2 + 1, du = 2x dx; limits 1 to 2. Integral of u^3 du = u^4/4 from 1 to 2 = (16 - 1)/4 = 15/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-061",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "In how many ways can 3 distinct books be arranged in a row?",
+      "options": [
+        "3",
+        "9",
+        "6",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "The number of arrangements is 3! = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-062",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "Evaluate C(4, 2), the number of ways to choose 2 items from 4.",
+      "options": [
+        "12",
+        "6",
+        "4",
+        "8"
+      ],
+      "correct": 1,
+      "explanation": "C(4,2) = 4! / (2! 2!) = 24 / 4 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-063",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "A fair coin is tossed once. What is the probability of getting a head?",
+      "options": [
+        "1/4",
+        "1/2",
+        "1",
+        "0"
+      ],
+      "correct": 1,
+      "explanation": "A fair coin has two equally likely outcomes, so P(head) = 1/2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-064",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "What is the probability of rolling a 4 on a single fair six-sided die?",
+      "options": [
+        "1/3",
+        "1/6",
+        "1/2",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "One favourable face out of six equally likely faces gives 1/6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-065",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "If the probability of an event E is 0.3, what is the probability of not E?",
+      "options": [
+        "0.3",
+        "1",
+        "0.5",
+        "0.7"
+      ],
+      "correct": 3,
+      "explanation": "P(not E) = 1 - P(E) = 1 - 0.3 = 0.7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-066",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "What is the value of 5! (5 factorial)?",
+      "options": [
+        "60",
+        "120",
+        "25",
+        "24"
+      ],
+      "correct": 1,
+      "explanation": "5! = 5 * 4 * 3 * 2 * 1 = 120.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-067",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "easy",
+      "stem": "Two fair coins are tossed. What is the probability that both show heads?",
+      "options": [
+        "1/2",
+        "1",
+        "1/4",
+        "1/8"
+      ],
+      "correct": 2,
+      "explanation": "Independent tosses: P(HH) = (1/2)(1/2) = 1/4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-068",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "How many distinct arrangements can be made from the letters of the word LEVEL?",
+      "options": [
+        "120",
+        "30",
+        "60",
+        "20"
+      ],
+      "correct": 1,
+      "explanation": "The word LEVEL has 5 letters with L twice and E twice: 5! / (2! 2!) = 120 / 4 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-069",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "In how many ways can 2 items be chosen from 6 distinct items?",
+      "options": [
+        "30",
+        "12",
+        "15",
+        "36"
+      ],
+      "correct": 2,
+      "explanation": "C(6,2) = 6! / (2! 4!) = (6 * 5) / 2 = 15.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-070",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "A card is drawn from a standard 52-card deck. What is the probability that it is an ace?",
+      "options": [
+        "1/4",
+        "4/13",
+        "1/52",
+        "1/13"
+      ],
+      "correct": 3,
+      "explanation": "There are 4 aces in 52 cards, so P = 4/52 = 1/13.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-071",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "Two fair dice are rolled. What is the probability that the sum of the two faces is 7?",
+      "options": [
+        "1/12",
+        "1/6",
+        "1/36",
+        "5/36"
+      ],
+      "correct": 1,
+      "explanation": "Six ordered pairs sum to 7 out of 36 total, so P = 6/36 = 1/6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-072",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "From 8 people, in how many ways can a president and a vice-president (different people) be chosen?",
+      "options": [
+        "28",
+        "64",
+        "56",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "Order matters here: P(8,2) = 8 * 7 = 56.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-073",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "Events A and B are independent with P(A) = 0.4 and P(B) = 0.5. What is P(A and B)?",
+      "options": [
+        "0.9",
+        "0.1",
+        "0.2",
+        "0.45"
+      ],
+      "correct": 2,
+      "explanation": "For independent events P(A and B) = P(A) * P(B) = 0.4 * 0.5 = 0.2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-074",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "How many 3-digit codes can be formed from the digits 1 to 5 if repetition is allowed?",
+      "options": [
+        "60",
+        "15",
+        "243",
+        "125"
+      ],
+      "correct": 3,
+      "explanation": "Each of the 3 positions has 5 choices, so 5^3 = 125.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-075",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "A bag contains 4 red and 6 blue marbles. What is the probability of drawing a red marble?",
+      "options": [
+        "3/5",
+        "2/5",
+        "1/2",
+        "1/5"
+      ],
+      "correct": 1,
+      "explanation": "P(red) = 4 / (4 + 6) = 4/10 = 2/5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-076",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "medium",
+      "stem": "What is the value of 0! + 1!?",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "correct": 3,
+      "explanation": "By definition 0! = 1 and 1! = 1, so the sum is 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-077",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "hard",
+      "stem": "A fair coin is tossed 4 times. What is the probability of getting exactly 2 heads?",
+      "options": [
+        "1/4",
+        "3/8",
+        "1/2",
+        "1/16"
+      ],
+      "correct": 1,
+      "explanation": "Favourable outcomes = C(4,2) = 6 out of 2^4 = 16, so P = 6/16 = 3/8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-078",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "hard",
+      "stem": "How many diagonals does a convex hexagon have?",
+      "options": [
+        "6",
+        "12",
+        "9",
+        "15"
+      ],
+      "correct": 2,
+      "explanation": "Number of diagonals = n(n-3)/2 = 6 * 3 / 2 = 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-079",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "hard",
+      "stem": "A committee of 3 is chosen from 5 men and 4 women. How many committees contain at least one woman?",
+      "options": [
+        "84",
+        "10",
+        "74",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "Total C(9,3) = 84; all-men C(5,3) = 10; at least one woman = 84 - 10 = 74.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-math-080",
+      "section": "math",
+      "topic": "Probability, permutations and combinations",
+      "difficulty": "hard",
+      "stem": "What is the probability that a randomly chosen leap year has 53 Sundays?",
+      "options": [
+        "1/7",
+        "3/7",
+        "2/7",
+        "1/2"
+      ],
+      "correct": 2,
+      "explanation": "A leap year has 366 = 52*7 + 2 days. The 2 extra days fall in 7 equally likely consecutive combinations; 2 of them include a Sunday, so P = 2/7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-001",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "easy",
+      "stem": "A car starts from rest and accelerates uniformly, reaching 20 m/s in 5 s. What distance does it cover in this time?",
+      "options": [
+        "100 m",
+        "50 m",
+        "25 m",
+        "200 m"
+      ],
+      "correct": 1,
+      "explanation": "a = (20 - 0)/5 = 4 m/s^2, so s = ut + (1/2)at^2 = 0 + (1/2)(4)(5^2) = 50 m. (Equivalently, average speed 10 m/s for 5 s.)",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-002",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "easy",
+      "stem": "A net force of 20 N acts on a body of mass 5 kg resting on a frictionless surface. What is its acceleration?",
+      "options": [
+        "4 m/s^2",
+        "0.25 m/s^2",
+        "100 m/s^2",
+        "10 m/s^2"
+      ],
+      "correct": 0,
+      "explanation": "Newton's second law: a = F/m = 20/5 = 4 m/s^2. Choosing 0.25 comes from inverting the ratio.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-003",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "easy",
+      "stem": "Two forces of 3 N and 4 N act at a point at right angles to each other. What is the magnitude of their resultant?",
+      "options": [
+        "5 N",
+        "1 N",
+        "7 N",
+        "12 N"
+      ],
+      "correct": 0,
+      "explanation": "For perpendicular vectors R = sqrt(3^2 + 4^2) = sqrt(25) = 5 N. Adding them directly (7 N) ignores direction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-004",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "easy",
+      "stem": "A stone is dropped from rest from the top of a tower. How far does it fall in the first 2 s? (Take g = 10 m/s^2.)",
+      "options": [
+        "20 m",
+        "10 m",
+        "5 m",
+        "40 m"
+      ],
+      "correct": 0,
+      "explanation": "s = ut + (1/2)gt^2 = 0 + (1/2)(10)(2^2) = 20 m, using g = 10 m/s^2 as stated.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-005",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "easy",
+      "stem": "The inertia of a body depends primarily on its:",
+      "options": [
+        "acceleration",
+        "velocity",
+        "weight at a given place",
+        "mass"
+      ],
+      "correct": 3,
+      "explanation": "Inertia is the reluctance to change state of motion and is measured by mass alone; velocity and acceleration do not change it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-006",
+      "section": "physics",
+      "topic": "Work and Energy",
+      "difficulty": "easy",
+      "stem": "The speed of a particle is doubled. By what factor does its kinetic energy change?",
+      "options": [
+        "remains the same",
+        "2 times",
+        "4 times",
+        "8 times"
+      ],
+      "correct": 2,
+      "explanation": "KE = (1/2)mv^2 is proportional to v^2, so doubling v gives 2^2 = 4 times the kinetic energy.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-007",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "medium",
+      "stem": "A 2 kg block moving at 5 m/s on a smooth surface collides with a stationary 3 kg block and sticks to it. What is their common velocity?",
+      "options": [
+        "5 m/s",
+        "3 m/s",
+        "1 m/s",
+        "2 m/s"
+      ],
+      "correct": 3,
+      "explanation": "Momentum is conserved in a perfectly inelastic collision: v = (2 x 5)/(2 + 3) = 10/5 = 2 m/s. Kinetic energy is NOT conserved here.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-008",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "medium",
+      "stem": "For a projectile launched from level ground with a fixed speed (air resistance neglected), the horizontal range is maximum at a launch angle of:",
+      "options": [
+        "90 degrees",
+        "60 degrees",
+        "30 degrees",
+        "45 degrees"
+      ],
+      "correct": 3,
+      "explanation": "R = v^2 sin(2 theta)/g is maximum when sin(2 theta) = 1, i.e. 2 theta = 90 degrees, so theta = 45 degrees.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-009",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "medium",
+      "stem": "A ball is thrown vertically upward with a speed of 20 m/s. What maximum height does it reach? (Take g = 10 m/s^2.)",
+      "options": [
+        "20 m",
+        "10 m",
+        "40 m",
+        "2 m"
+      ],
+      "correct": 0,
+      "explanation": "At the top v = 0, so h = v0^2/(2g) = (20^2)/(2 x 10) = 400/20 = 20 m, using g = 10 m/s^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-010",
+      "section": "physics",
+      "topic": "Work and Energy",
+      "difficulty": "easy",
+      "stem": "A constant force of 10 N acts on a body that moves 5 m, the force being inclined at 60 degrees to the displacement. What work does the force do?",
+      "options": [
+        "5 J",
+        "50 J",
+        "86.6 J",
+        "25 J"
+      ],
+      "correct": 3,
+      "explanation": "W = Fd cos(theta) = 10 x 5 x cos 60 degrees = 50 x 0.5 = 25 J. Forgetting the cos factor gives the distractor 50 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-011",
+      "section": "physics",
+      "topic": "Work and Energy",
+      "difficulty": "medium",
+      "stem": "An electric motor lifts a 100 kg load through 10 m in 20 s at constant speed. What is the minimum power output of the motor? (Take g = 10 m/s^2.)",
+      "options": [
+        "5000 W",
+        "1000 W",
+        "500 W",
+        "50 W"
+      ],
+      "correct": 2,
+      "explanation": "Work done = mgh = 100 x 10 x 10 = 10^4 J (g = 10 m/s^2). Power = W/t = 10^4/20 = 500 W.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-012",
+      "section": "physics",
+      "topic": "Circular Motion",
+      "difficulty": "medium",
+      "stem": "A particle moves in a circle of radius 20 m with a constant speed of 10 m/s. What is its centripetal acceleration?",
+      "options": [
+        "2 m/s^2",
+        "5 m/s^2",
+        "50 m/s^2",
+        "0.5 m/s^2"
+      ],
+      "correct": 1,
+      "explanation": "a = v^2/r = (10^2)/20 = 100/20 = 5 m/s^2, directed towards the centre even though the speed is constant.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-013",
+      "section": "physics",
+      "topic": "Gravitation",
+      "difficulty": "medium",
+      "stem": "The separation between two point masses is reduced to half its original value. What happens to the gravitational force between them?",
+      "options": [
+        "It becomes half",
+        "It becomes four times",
+        "It becomes double",
+        "It remains the same"
+      ],
+      "correct": 1,
+      "explanation": "F = Gm1m2/r^2, so halving r multiplies F by 1/(1/2)^2 = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-014",
+      "section": "physics",
+      "topic": "Oscillations",
+      "difficulty": "easy",
+      "stem": "The length of a simple pendulum is made four times its original value. Its time period becomes:",
+      "options": [
+        "four times smaller",
+        "four times",
+        "two times",
+        "half"
+      ],
+      "correct": 2,
+      "explanation": "T = 2 pi sqrt(L/g), so T is proportional to sqrt(L); sqrt(4) = 2, hence the period doubles (small-amplitude swings assumed).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-015",
+      "section": "physics",
+      "topic": "Fluids",
+      "difficulty": "medium",
+      "stem": "Water flows through a horizontal pipe whose cross-sectional area is reduced to half its original value. By the equation of continuity, the speed of flow in the narrow part becomes:",
+      "options": [
+        "double",
+        "unchanged",
+        "four times",
+        "half"
+      ],
+      "correct": 0,
+      "explanation": "A1v1 = A2v2 for an incompressible fluid, so v2 = v1(A1/A2) = 2v1. Pressure falls in the narrow part (Bernoulli), but speed rises.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-016",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "hard",
+      "stem": "A 0.5 kg cricket ball moving at 4 m/s is hit back along the same line with the same speed of 4 m/s. If contact with the bat lasts 0.02 s, what is the average force on the ball?",
+      "options": [
+        "400 N",
+        "2 N",
+        "20 N",
+        "200 N"
+      ],
+      "correct": 3,
+      "explanation": "Change in momentum = m(v - u) = 0.5(-4 - 4) = -4 kg m/s, magnitude 4 N s. Average force = impulse/time = 4/0.02 = 200 N. Taking the change as zero misses the reversal of direction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-017",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "hard",
+      "stem": "A body of mass 5 kg is suspended from a spring balance in a lift accelerating upward at 2 m/s^2. What does the balance read? (Take g = 10 m/s^2.)",
+      "options": [
+        "60 N",
+        "50 N",
+        "40 N",
+        "100 N"
+      ],
+      "correct": 0,
+      "explanation": "Tension T = m(g + a) = 5(10 + 2) = 60 N with g = 10 m/s^2; the apparent weight increases while accelerating upward (it would be 40 N for downward acceleration).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-018",
+      "section": "physics",
+      "topic": "Gravitation",
+      "difficulty": "hard",
+      "stem": "The escape velocity from the surface of Earth is 11.2 km/s. If a planet had twice Earth's mass and half Earth's radius, its escape velocity would be:",
+      "options": [
+        "11.2 km/s",
+        "5.6 km/s",
+        "44.8 km/s",
+        "22.4 km/s"
+      ],
+      "correct": 3,
+      "explanation": "v_e = sqrt(2GM/R). With M doubled and R halved the factor is sqrt(2/(1/2)) = sqrt(4) = 2, so v_e = 2 x 11.2 = 22.4 km/s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-019",
+      "section": "physics",
+      "topic": "Gravitation",
+      "difficulty": "hard",
+      "stem": "Two satellites of masses m and 2m circle the Earth in the same circular orbit at the same radius. Which statement is true about their time periods?",
+      "options": [
+        "The periods depend on the masses but not on radius",
+        "The heavier satellite has the shorter period",
+        "The lighter satellite has the shorter period",
+        "Both have the same time period"
+      ],
+      "correct": 3,
+      "explanation": "Equating GMMm/r^2 = m(2 pi/T)^2 r, the satellite mass cancels: T = 2 pi sqrt(r^3/GM). Period depends only on orbital radius and Earth's mass.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-020",
+      "section": "physics",
+      "topic": "Oscillations",
+      "difficulty": "hard",
+      "stem": "A 0.25 kg mass attached to a spring of force constant 100 N/m oscillates horizontally. What is its time period? (Take pi^2 = 10.)",
+      "options": [
+        "1.57 s",
+        "0.314 s",
+        "0.628 s",
+        "3.14 s"
+      ],
+      "correct": 1,
+      "explanation": "T = 2 pi sqrt(m/k) = 2 pi sqrt(0.25/100) = 2 pi sqrt(0.0025) = 2 pi(0.05) = 0.1 pi ≈ 0.314 s.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-021",
+      "section": "physics",
+      "topic": "Oscillations",
+      "difficulty": "easy",
+      "stem": "A spring of force constant 200 N/m is stretched by 5 cm. What is the restoring force in the spring?",
+      "options": [
+        "40 N",
+        "1 N",
+        "10 N",
+        "1000 N"
+      ],
+      "correct": 2,
+      "explanation": "Hooke's law F = kx = 200 x 0.05 = 10 N. Using 5 (cm) instead of 0.05 (m) is the usual unit slip.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-022",
+      "section": "physics",
+      "topic": "Mechanics",
+      "difficulty": "hard",
+      "stem": "A wooden block just begins to slide down an inclined plane set at 30 degrees to the horizontal. What is the coefficient of static friction between the block and the plane?",
+      "options": [
+        "0.50",
+        "0.71",
+        "0.58",
+        "1.00"
+      ],
+      "correct": 2,
+      "explanation": "At the sliding point mg sin(theta) = mu mg cos(theta), so mu = tan 30 degrees = 1/sqrt(3) ≈ 0.58. Using sin instead of tan gives the 0.50 distractor.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-023",
+      "section": "physics",
+      "topic": "Fluids",
+      "difficulty": "medium",
+      "stem": "A small sphere falling in a viscous liquid reaches terminal velocity. If its radius is doubled (same material and liquid), the terminal velocity becomes:",
+      "options": [
+        "eight times",
+        "four times",
+        "half",
+        "two times"
+      ],
+      "correct": 1,
+      "explanation": "Stokes' drag gives v_t = 2 r^2 (rho - sigma) g/(9 eta), so v_t is proportional to r^2; doubling r makes it 4 times.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-024",
+      "section": "physics",
+      "topic": "Sound",
+      "difficulty": "easy",
+      "stem": "Sound waves cannot travel through:",
+      "options": [
+        "water",
+        "steel",
+        "a vacuum",
+        "air"
+      ],
+      "correct": 2,
+      "explanation": "Sound is a mechanical longitudinal wave and needs a material medium to propagate; solids and liquids transmit it faster than air, but a vacuum transmits nothing.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-025",
+      "section": "physics",
+      "topic": "Sound",
+      "difficulty": "easy",
+      "stem": "A tuning fork of frequency 1000 Hz produces sound in air where the speed of sound is 343 m/s. What is the wavelength?",
+      "options": [
+        "34.3 m",
+        "0.0343 m",
+        "3.43 m",
+        "0.343 m"
+      ],
+      "correct": 3,
+      "explanation": "lambda = v/f = 343/1000 = 0.343 m. Dividing wrongly (1000/343) gives the reciprocal distractor.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-026",
+      "section": "physics",
+      "topic": "Waves",
+      "difficulty": "easy",
+      "stem": "In a stationary (standing) wave on a string of length L fixed at both ends, the wavelength of the fundamental mode is:",
+      "options": [
+        "L",
+        "4L",
+        "L/2",
+        "2L"
+      ],
+      "correct": 3,
+      "explanation": "The fundamental has nodes only at the two ends, i.e. half a wavelength fits in L, so lambda = 2L. Overtones are n lambda/2 = L.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-027",
+      "section": "physics",
+      "topic": "Waves",
+      "difficulty": "medium",
+      "stem": "The tension in a stretched string is increased to four times its original value while its length and mass stay the same. The speed of a wave on the string becomes:",
+      "options": [
+        "two times",
+        "half",
+        "unchanged",
+        "four times"
+      ],
+      "correct": 0,
+      "explanation": "v = sqrt(T/mu), where mu is mass per unit length, so speed scales as the square root of tension: sqrt(4) = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-028",
+      "section": "physics",
+      "topic": "Sound",
+      "difficulty": "medium",
+      "stem": "Two tuning forks of frequencies 256 Hz and 260 Hz are sounded together. What is the beat frequency heard?",
+      "options": [
+        "4 Hz",
+        "8 Hz",
+        "516 Hz",
+        "2 Hz"
+      ],
+      "correct": 0,
+      "explanation": "Beats occur at the difference frequency: 260 - 256 = 4 Hz.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-029",
+      "section": "physics",
+      "topic": "Sound",
+      "difficulty": "medium",
+      "stem": "A source of sound moves towards a stationary observer. The observer perceives the pitch as:",
+      "options": [
+        "zero",
+        "the same as the actual frequency",
+        "lower than the actual frequency",
+        "higher than the actual frequency"
+      ],
+      "correct": 3,
+      "explanation": "Doppler effect: approach shortens the received wavelength, so f' = f v/(v - v_s) > f. Receding gives a lower pitch.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-030",
+      "section": "physics",
+      "topic": "Sound",
+      "difficulty": "hard",
+      "stem": "The intensity level of a sound increases by 20 dB. By what factor does the intensity increase?",
+      "options": [
+        "1000",
+        "2",
+        "20",
+        "100"
+      ],
+      "correct": 3,
+      "explanation": "beta = 10 log10(I/I0), so a rise of 20 dB means log10(I2/I1) = 2, hence I2/I1 = 10^2 = 100.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-031",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "easy",
+      "stem": "The speed of light in glass of refractive index 1.5 is (c = 3 x 10^8 m/s):",
+      "options": [
+        "4.5 x 10^8 m/s",
+        "2 x 10^8 m/s",
+        "1.5 x 10^8 m/s",
+        "3 x 10^8 m/s"
+      ],
+      "correct": 1,
+      "explanation": "n = c/v, so v = c/n = (3 x 10^8)/1.5 = 2 x 10^8 m/s. Frequency is unchanged on refraction; wavelength shortens.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-032",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "easy",
+      "stem": "An object is placed 30 cm from a concave mirror of focal length 10 cm. Where is the image formed?",
+      "options": [
+        "30 cm in front of the mirror",
+        "20 cm behind the mirror",
+        "15 cm in front of the mirror",
+        "7.5 cm in front of the mirror"
+      ],
+      "correct": 2,
+      "explanation": "Mirror formula 1/f = 1/v + 1/u with real distances positive: 1/v = 1/10 - 1/30 = 2/30, so v = 15 cm, real and inverted.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-033",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "medium",
+      "stem": "The critical angle for a glass-to-air boundary (refractive index 1.5) is closest to:",
+      "options": [
+        "41.8 degrees",
+        "30.0 degrees",
+        "60.0 degrees",
+        "45.0 degrees"
+      ],
+      "correct": 0,
+      "explanation": "sin C = 1/n = 1/1.5 = 0.667, so C = 41.8 degrees. Using n instead of 1/n gives 56.3 degrees, outside the options but a common slip.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-034",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "medium",
+      "stem": "The power of a converging lens of focal length 20 cm is:",
+      "options": [
+        "+0.5 D",
+        "+20 D",
+        "+5 D",
+        "-5 D"
+      ],
+      "correct": 2,
+      "explanation": "P = 1/f (f in metres) = 1/0.2 = +5 D; the sign is positive for a converging lens.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-035",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "easy",
+      "stem": "Short-sightedness (myopia) is corrected by using:",
+      "options": [
+        "a cylindrical lens only",
+        "a plane glass plate",
+        "a diverging (concave) lens",
+        "a converging (convex) lens"
+      ],
+      "correct": 2,
+      "explanation": "In myopia the image forms in front of the retina; a diverging lens spreads the rays so the image falls on the retina.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-036",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "easy",
+      "stem": "Polarization of light demonstrates that light waves are:",
+      "options": [
+        "longitudinal in nature",
+        "transverse in nature",
+        "of very high frequency",
+        "not electromagnetic"
+      ],
+      "correct": 1,
+      "explanation": "Only transverse waves can be polarized, because their vibrations have a direction perpendicular to propagation; longitudinal sound waves cannot be polarized.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-037",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "hard",
+      "stem": "An object is placed 15 cm from a concave mirror of radius of curvature 20 cm. What is the image distance?",
+      "options": [
+        "10 cm",
+        "30 cm",
+        "60 cm",
+        "7.5 cm"
+      ],
+      "correct": 1,
+      "explanation": "f = R/2 = 10 cm. Then 1/v = 1/f - 1/u = 1/10 - 1/15 = 1/30, so v = 30 cm: a real, inverted, magnified image (object lies between C and F).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-038",
+      "section": "physics",
+      "topic": "Optics",
+      "difficulty": "hard",
+      "stem": "In Young's double-slit experiment, a dark fringe is produced at a point where the path difference between the two waves is:",
+      "options": [
+        "2 lambda",
+        "lambda/4",
+        "lambda/2",
+        "lambda"
+      ],
+      "correct": 2,
+      "explanation": "Destructive interference needs a path difference of an odd multiple of lambda/2, i.e. (2n - 1)lambda/2; whole multiples of lambda give bright fringes.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-039",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "easy",
+      "stem": "A charge of 120 C passes through a wire in 60 s. What is the current?",
+      "options": [
+        "2 A",
+        "0.5 A",
+        "7200 A",
+        "6 A"
+      ],
+      "correct": 0,
+      "explanation": "I = Q/t = 120/60 = 2 A. Multiplying instead of dividing gives 7200.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-040",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "easy",
+      "stem": "The SI unit of electric field intensity is:",
+      "options": [
+        "C/N",
+        "J/C",
+        "N/C",
+        "V/C"
+      ],
+      "correct": 2,
+      "explanation": "E = F/q, so its unit is newton per coulomb (equivalently V/m). J/C is the unit of potential (volt).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-041",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "easy",
+      "stem": "One kilowatt-hour (kWh) of electrical energy equals:",
+      "options": [
+        "3.6 x 10^3 J",
+        "3.6 x 10^6 J",
+        "1.6 x 10^6 J",
+        "1000 J"
+      ],
+      "correct": 1,
+      "explanation": "1 kWh = 1000 W x 3600 s = 3.6 x 10^6 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-042",
+      "section": "physics",
+      "topic": "Magnetism",
+      "difficulty": "easy",
+      "stem": "A charged particle moves parallel to a uniform magnetic field. The magnetic force on it is:",
+      "options": [
+        "maximum",
+        "qBv",
+        "zero",
+        "qB/(2v)"
+      ],
+      "correct": 2,
+      "explanation": "F = qvB sin(theta) and theta = 0 degrees for parallel motion, so sin(theta) = 0 and no force acts. The force is maximum only when the motion is perpendicular to the field.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-043",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "The magnitude of each of two point charges is doubled while their separation is also doubled. The electrostatic force between them:",
+      "options": [
+        "becomes double",
+        "remains the same",
+        "becomes four times",
+        "becomes half"
+      ],
+      "correct": 1,
+      "explanation": "F = k q1 q2/r^2. Doubling both charges multiplies the numerator by 4 while doubling r multiplies the denominator by 4, so F is unchanged.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-044",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "Two point charges +q and -q are fixed a distance d apart. What is the electric potential at the midpoint of the line joining them?",
+      "options": [
+        "kq/d",
+        "2kq/d",
+        "4kq/d",
+        "zero"
+      ],
+      "correct": 3,
+      "explanation": "Potential is a scalar: V = kq/(d/2) + k(-q)/(d/2) = 0. Note that the electric FIELD at that midpoint is not zero; it points from +q towards -q.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-045",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "How much work is done in moving a charge of 2 C between two points having a potential difference of 12 V?",
+      "options": [
+        "6 J",
+        "24 J",
+        "24 W",
+        "14 J"
+      ],
+      "correct": 1,
+      "explanation": "W = qV = 2 x 12 = 24 J. Work is energy (joule), not power, so the watt option is a unit trap.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-046",
+      "section": "physics",
+      "topic": "Electrostatics",
+      "difficulty": "medium",
+      "stem": "Two capacitors of 2 microfarad and 3 microfarad are connected in series. Their equivalent capacitance is:",
+      "options": [
+        "6 microfarad",
+        "1.2 microfarad",
+        "5 microfarad",
+        "2.5 microfarad"
+      ],
+      "correct": 1,
+      "explanation": "For series: 1/C = 1/2 + 1/3 = 5/6, so C = 6/5 = 1.2 microfarad, which is smaller than either capacitor. Adding directly (5 microfarad) is the parallel rule.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-047",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "medium",
+      "stem": "A resistor of 4 ohm is connected across a 12 V battery. What power is dissipated in it?",
+      "options": [
+        "36 W",
+        "16 W",
+        "48 W",
+        "3 W"
+      ],
+      "correct": 0,
+      "explanation": "P = V^2/R = (12^2)/4 = 144/4 = 36 W (equivalently I = 3 A and P = IV = 36 W).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-048",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "medium",
+      "stem": "A 3 ohm resistor is connected in parallel with a 6 ohm resistor, and the combination is connected in series with a 4 ohm resistor. What is the total resistance?",
+      "options": [
+        "9 ohm",
+        "6 ohm",
+        "13 ohm",
+        "2 ohm"
+      ],
+      "correct": 1,
+      "explanation": "Parallel pair: (3 x 6)/(3 + 6) = 2 ohm; adding the series 4 ohm gives 6 ohm total.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-049",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "medium",
+      "stem": "A cell of emf 6 V and internal resistance 0.5 ohm is connected to an external resistance of 2.5 ohm. What is the terminal potential difference?",
+      "options": [
+        "5 V",
+        "6 V",
+        "7 V",
+        "3 V"
+      ],
+      "correct": 0,
+      "explanation": "I = E/(R + r) = 6/(2.5 + 0.5) = 2 A, so terminal p.d. V = IR = 2 x 2.5 = 5 V (= E - Ir = 6 - 1).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-050",
+      "section": "physics",
+      "topic": "Magnetism",
+      "difficulty": "medium",
+      "stem": "A straight wire of length 0.5 m carries a current of 4 A and lies perpendicular to a uniform magnetic field of 0.2 T. What force acts on the wire?",
+      "options": [
+        "0.04 N",
+        "40 N",
+        "0.4 N",
+        "4 N"
+      ],
+      "correct": 2,
+      "explanation": "F = BIL sin(theta) = 0.2 x 4 x 0.5 x 1 = 0.4 N. Direction is given by Fleming's left-hand rule.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-051",
+      "section": "physics",
+      "topic": "Current Electricity",
+      "difficulty": "hard",
+      "stem": "A uniform wire of resistance R is stretched to twice its original length, its volume remaining constant. What is its new resistance?",
+      "options": [
+        "R/4",
+        "R/2",
+        "4R",
+        "2R"
+      ],
+      "correct": 2,
+      "explanation": "R = rho L/A. Stretching doubles L and, since volume is fixed, halves A, so R' = rho(2L)/(A/2) = 4R.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-052",
+      "section": "physics",
+      "topic": "Electromagnetic Induction",
+      "difficulty": "hard",
+      "stem": "Lenz's law, which gives the direction of an induced current, is a consequence of the law of conservation of:",
+      "options": [
+        "energy",
+        "magnetic flux",
+        "charge",
+        "momentum"
+      ],
+      "correct": 0,
+      "explanation": "The induced current always opposes the change producing it; without this opposition a magnet could be accelerated for free, creating energy from nothing.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-053",
+      "section": "physics",
+      "topic": "Electromagnetic Induction",
+      "difficulty": "medium",
+      "stem": "A coil of 100 turns has its magnetic flux change uniformly from 0.2 Wb to 0.8 Wb in 0.5 s. What is the magnitude of the induced emf?",
+      "options": [
+        "120 V",
+        "12 V",
+        "1200 V",
+        "60 V"
+      ],
+      "correct": 0,
+      "explanation": "emf = N dPhi/dt = 100 x (0.8 - 0.2)/0.5 = 100 x 1.2 = 120 V.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-054",
+      "section": "physics",
+      "topic": "Nuclear Physics",
+      "difficulty": "easy",
+      "stem": "Which of the following radiations has the greatest penetrating power through matter?",
+      "options": [
+        "gamma rays",
+        "they all penetrate equally",
+        "alpha particles",
+        "beta particles"
+      ],
+      "correct": 0,
+      "explanation": "Gamma rays are uncharged, high-energy photons and are the most penetrating; alpha particles are stopped by paper and beta by thin aluminium.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-055",
+      "section": "physics",
+      "topic": "Modern Physics",
+      "difficulty": "medium",
+      "stem": "In the photoelectric effect, the frequency of incident light is kept above the threshold and the intensity is then increased. What happens?",
+      "options": [
+        "The threshold frequency increases",
+        "More photoelectrons are emitted per second with the same maximum kinetic energy",
+        "The maximum kinetic energy of the photoelectrons increases",
+        "No photoelectrons are emitted"
+      ],
+      "correct": 1,
+      "explanation": "Intensity sets the number of photons, hence the number of photoelectrons. Maximum KE = hf - phi depends only on frequency, not intensity.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-056",
+      "section": "physics",
+      "topic": "Modern Physics",
+      "difficulty": "medium",
+      "stem": "The energy of an electron in the ground state (n = 1) of a hydrogen atom is -13.6 eV. What is its energy in the first excited state (n = 2)?",
+      "options": [
+        "-1.51 eV",
+        "-13.6 eV",
+        "-6.8 eV",
+        "-3.4 eV"
+      ],
+      "correct": 3,
+      "explanation": "En = -13.6/n^2 eV, so E2 = -13.6/4 = -3.4 eV.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-057",
+      "section": "physics",
+      "topic": "Nuclear Physics",
+      "difficulty": "medium",
+      "stem": "When a nucleus emits a beta-minus particle, its:",
+      "options": [
+        "atomic and mass numbers both stay the same",
+        "atomic number increases by one and mass number stays the same",
+        "atomic number decreases by one",
+        "mass number decreases by four"
+      ],
+      "correct": 1,
+      "explanation": "Beta-minus decay converts a neutron into a proton plus an electron: n -> p + e-, so Z increases by 1 while A is unchanged.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-058",
+      "section": "physics",
+      "topic": "Nuclear Physics",
+      "difficulty": "medium",
+      "stem": "The energy equivalent of one atomic mass unit (1 u) is approximately:",
+      "options": [
+        "13.6 eV",
+        "931.5 MeV",
+        "0.511 MeV",
+        "100 MeV"
+      ],
+      "correct": 1,
+      "explanation": "E = mc^2 with 1 u = 1.66 x 10^-27 kg gives 931.5 MeV; 0.511 MeV is the rest energy of an electron.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-059",
+      "section": "physics",
+      "topic": "Nuclear Physics",
+      "difficulty": "hard",
+      "stem": "A radioactive sample has a half-life of 5 days. If the initial mass is 80 g, how much of it remains undecayed after 15 days?",
+      "options": [
+        "10 g",
+        "5 g",
+        "40 g",
+        "20 g"
+      ],
+      "correct": 0,
+      "explanation": "15 days is 3 half-lives: 80 -> 40 -> 20 -> 10 g, i.e. m = m0 (1/2)^3 = 10 g.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-phy-060",
+      "section": "physics",
+      "topic": "Modern Physics",
+      "difficulty": "hard",
+      "stem": "An electron and a proton have the same linear momentum. How do their de Broglie wavelengths compare?",
+      "options": [
+        "Both are zero",
+        "The electron's wavelength is greater",
+        "The proton's wavelength is greater",
+        "They are equal"
+      ],
+      "correct": 3,
+      "explanation": "lambda = h/p depends only on momentum, so equal momenta give equal wavelengths. The mass difference would matter only if their kinetic energies were equal instead.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-001",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "easy",
+      "stem": "Which molecule has a trigonal pyramidal geometry?",
+      "options": [
+        "CH4",
+        "SO3",
+        "NH3",
+        "BF3"
+      ],
+      "correct": 2,
+      "explanation": "NH3 has one lone pair on nitrogen that pushes the three N-H bonds into a trigonal pyramidal shape (bond angle about 107 degrees); BF3 and SO3 are trigonal planar and CH4 is tetrahedral.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-002",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "easy",
+      "stem": "A chlorine atom has atomic number 17 and mass number 35. How many neutrons does its nucleus contain?",
+      "options": [
+        "18",
+        "35",
+        "17",
+        "52"
+      ],
+      "correct": 0,
+      "explanation": "Neutrons = mass number - atomic number = 35 - 17 = 18. The 17 protons are what make the atom chlorine.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-003",
+      "section": "chemistry",
+      "topic": "Periodic trends",
+      "difficulty": "easy",
+      "stem": "Which of the following elements is the most electronegative?",
+      "options": [
+        "Bromine",
+        "Iodine",
+        "Chlorine",
+        "Fluorine"
+      ],
+      "correct": 3,
+      "explanation": "Electronegativity falls down Group 17 as atomic size increases, so fluorine at the top is the most electronegative element in the periodic table.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-004",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "easy",
+      "stem": "What is the ground-state electronic configuration of sodium (atomic number 11)?",
+      "options": [
+        "1s2 2s2 2p6 3p1",
+        "1s2 2s2 2p6 3s1",
+        "1s2 2s2 2p6 3s2",
+        "1s2 2s2 2p5 3s2"
+      ],
+      "correct": 1,
+      "explanation": "Sodium's 11 electrons fill 1s2, 2s2 and 2p6 (ten electrons) before the eleventh enters 3s, giving 1s2 2s2 2p6 3s1. The 3s2 option is magnesium (12 electrons).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-005",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "What is the molecular shape of SF4?",
+      "options": [
+        "Square planar",
+        "See-saw",
+        "Tetrahedral",
+        "Trigonal bipyramidal"
+      ],
+      "correct": 1,
+      "explanation": "Sulfur in SF4 carries four bond pairs and one lone pair (five electron domains arranged trigonal bipyramidally). The lone pair takes an equatorial site, so the shape of the molecule is see-saw; trigonal bipyramidal describes the electron-pair arrangement, not the molecular shape.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-006",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "medium",
+      "stem": "How many unpaired electrons are present in the Fe3+ ion (atomic number of Fe = 26)?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "correct": 0,
+      "explanation": "Iron is [Ar] 3d6 4s2; loss of three electrons gives [Ar] 3d5, and by Hund's rule the five d electrons occupy separate orbitals, so Fe3+ has five unpaired electrons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-007",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "Which compound shows the strongest intermolecular hydrogen bonding?",
+      "options": [
+        "CH4",
+        "H2S",
+        "HCl",
+        "HF"
+      ],
+      "correct": 3,
+      "explanation": "Hydrogen bonding requires H bonded to a small, highly electronegative atom (N, O or F). Fluorine is the smallest and most electronegative of these, so HF associates most strongly; HCl, H2S and CH4 form no significant hydrogen bonds.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-008",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "Which molecule is non-polar even though it contains polar covalent bonds?",
+      "options": [
+        "CCl4",
+        "CH3Cl",
+        "H2O",
+        "NH3"
+      ],
+      "correct": 0,
+      "explanation": "Each C-Cl bond in tetrahedral CCl4 is polar, but the four identical bonds are symmetrically arranged so the dipoles cancel. CH3Cl, H2O and NH3 are unsymmetrical and remain polar.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-009",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "What is the coordination number of Na+ in a sodium chloride crystal?",
+      "options": [
+        "8",
+        "4",
+        "6",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "Rock salt has 6:6 coordination: every Na+ is surrounded octahedrally by six Cl- ions and every Cl- by six Na+.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-010",
+      "section": "chemistry",
+      "topic": "Atomic structure",
+      "difficulty": "hard",
+      "stem": "Which set of quantum numbers (n, l, ml, ms) is NOT permitted?",
+      "options": [
+        "(3, 2, -2, +1/2)",
+        "(4, 0, 0, -1/2)",
+        "(3, 3, 0, -1/2)",
+        "(2, 1, 0, +1/2)"
+      ],
+      "correct": 2,
+      "explanation": "For a given shell n, l may only range from 0 to n-1. With n = 3 the largest allowed l is 2, so a 3f subshell (l = 3) cannot exist; the other three sets obey all the quantum-number rules.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-011",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "hard",
+      "stem": "Which ionic solid is expected to have the highest lattice energy?",
+      "options": [
+        "NaCl",
+        "MgO",
+        "KBr",
+        "RbI"
+      ],
+      "correct": 1,
+      "explanation": "Lattice energy grows with ionic charge and shrinks as ionic size increases. MgO contains small Mg2+ and O2- ions whose doubly charged attraction is far stronger than that in the singly charged halides NaCl, KBr and RbI.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-012",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "easy",
+      "stem": "Which statement is true for a reversible reaction that has reached equilibrium?",
+      "options": [
+        "The concentrations of reactants and products are equal",
+        "The equilibrium constant is zero",
+        "The reaction has stopped completely",
+        "The forward and reverse reactions proceed at the same rate"
+      ],
+      "correct": 3,
+      "explanation": "Chemical equilibrium is dynamic: both directions keep occurring at equal rates, so concentrations stay constant without necessarily being equal, and Kc has a fixed non-zero value at that temperature.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-013",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "medium",
+      "stem": "For the reaction N2 + 3H2 = 2NH3, which is the correct equilibrium constant expression?",
+      "options": [
+        "Kc = [NH3]^2 / ([N2] [H2]^3)",
+        "Kc = ([N2] [H2]^3) / [NH3]^2",
+        "Kc = 2[NH3] / (3[N2] [H2])",
+        "Kc = [NH3] / ([N2] [H2])"
+      ],
+      "correct": 0,
+      "explanation": "Kc is products over reactants with each concentration raised to its stoichiometric coefficient, giving [NH3]^2 / ([N2] [H2]^3). The inverted ratio, reactants over products, is the expression for the reverse reaction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-014",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "easy",
+      "stem": "What is the effect of adding a positive catalyst to a system already at equilibrium?",
+      "options": [
+        "It increases Kc and shifts the equilibrium to the right",
+        "It speeds up only the forward reaction",
+        "It lowers the activation energy of both forward and reverse reactions and leaves Kc unchanged",
+        "It raises the activation energy of the reverse reaction"
+      ],
+      "correct": 2,
+      "explanation": "A catalyst opens a lower-energy path that accelerates both directions equally, so equilibrium is reached sooner but its position and the value of Kc stay the same.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-015",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "medium",
+      "stem": "For the reaction A = B, Kc is 4 at a certain temperature. What is Kc for the reverse reaction B = A?",
+      "options": [
+        "0.5",
+        "0.25",
+        "16",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "The equilibrium constant of a reverse reaction is the reciprocal of that of the forward reaction: 1/4 = 0.25.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-016",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "medium",
+      "stem": "A reaction is second order in A, with rate = k[A]^2. By what factor does the rate change when [A] is tripled at constant temperature?",
+      "options": [
+        "6",
+        "9",
+        "3",
+        "27"
+      ],
+      "correct": 1,
+      "explanation": "Rate is proportional to the square of [A], so tripling the concentration gives 3^2 = 9 times the rate. The rate constant k does not change with concentration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-017",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "hard",
+      "stem": "For 2SO2(g) + O2(g) = 2SO3(g), the forward reaction is exothermic with delta H = -198 kJ. Which conditions give the highest equilibrium yield of SO3?",
+      "options": [
+        "Low temperature and high pressure",
+        "High temperature and high pressure",
+        "High temperature and low pressure",
+        "Low temperature and low pressure"
+      ],
+      "correct": 0,
+      "explanation": "The product side has fewer gas moles (2 against 3), so high pressure shifts the equilibrium towards SO3; and because the forward step is exothermic, heat is a product, so a lower temperature also favours SO3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-018",
+      "section": "chemistry",
+      "topic": "Ionic equilibrium",
+      "difficulty": "easy",
+      "stem": "What is the pH of a 0.001 M hydrochloric acid solution, assuming complete ionisation?",
+      "options": [
+        "13",
+        "11",
+        "1",
+        "3"
+      ],
+      "correct": 3,
+      "explanation": "HCl is a strong acid, so [H+] = 1 x 10^-3 M and pH = -log[H+] = 3. The value 11 would belong to a 0.001 M strong base, whose pOH is 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-019",
+      "section": "chemistry",
+      "topic": "Chemical equilibrium",
+      "difficulty": "hard",
+      "stem": "For N2(g) + 3H2(g) = 2NH3(g), which relation between Kp and Kc is correct?",
+      "options": [
+        "Kp = Kc",
+        "Kp = Kc (RT)^-1",
+        "Kp = Kc (RT)^2",
+        "Kp = Kc (RT)^-2"
+      ],
+      "correct": 3,
+      "explanation": "Kp = Kc(RT)^(delta n), where delta n = moles of gaseous product minus moles of gaseous reactant = 2 - 4 = -2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-020",
+      "section": "chemistry",
+      "topic": "Chemical kinetics",
+      "difficulty": "medium",
+      "stem": "The decomposition of a reactant follows first-order kinetics with rate constant k = 0.0693 per minute. What is the half-life of the reaction?",
+      "options": [
+        "0.693 minutes",
+        "69.3 seconds",
+        "5 minutes",
+        "10 minutes"
+      ],
+      "correct": 3,
+      "explanation": "For a first-order reaction t1/2 = 0.693/k = 0.693 / 0.0693 = 10 minutes, and this half-life is independent of the starting concentration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-021",
+      "section": "chemistry",
+      "topic": "Organic nomenclature",
+      "difficulty": "easy",
+      "stem": "What is the IUPAC name of CH3-CH2-OH?",
+      "options": [
+        "methanol",
+        "ethanol",
+        "ethanal",
+        "ethanoic acid"
+      ],
+      "correct": 1,
+      "explanation": "A two-carbon chain bearing the alcohol group -OH is ethanol. Ethanal is the aldehyde CH3-CHO and ethanoic acid is CH3-COOH; methanol has only one carbon.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-022",
+      "section": "chemistry",
+      "topic": "Functional groups",
+      "difficulty": "easy",
+      "stem": "Which functional group characterises carboxylic acids?",
+      "options": [
+        "-OH",
+        "-CO-",
+        "-COOH",
+        "-CHO"
+      ],
+      "correct": 2,
+      "explanation": "The carboxyl group -COOH, a carbonyl and a hydroxyl on the same carbon, defines carboxylic acids such as CH3-COOH. -CHO is an aldehyde, -OH an alcohol and -CO- a ketone.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-023",
+      "section": "chemistry",
+      "topic": "Hydrocarbons",
+      "difficulty": "easy",
+      "stem": "Which gas decolourises bromine water at room temperature?",
+      "options": [
+        "ethane",
+        "methane",
+        "ethene",
+        "propane"
+      ],
+      "correct": 2,
+      "explanation": "The C=C double bond of ethene adds bromine readily and removes its colour; the saturated alkanes ethane, methane and propane do not react with bromine water in the dark.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-024",
+      "section": "chemistry",
+      "topic": "Organic nomenclature",
+      "difficulty": "medium",
+      "stem": "What is the IUPAC name of (CH3)2CH-CH2-CH3?",
+      "options": [
+        "3-methylbutane",
+        "pentane",
+        "2-methylpropane",
+        "2-methylbutane"
+      ],
+      "correct": 3,
+      "explanation": "The longest continuous chain has four carbons (butane) and numbering from the nearer end puts the branch on C-2. Calling it 3-methylbutane uses a higher locant, which IUPAC rules forbid; the molecule has five carbons, so it is not 2-methylpropane, and it is branched, so it is not pentane.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-025",
+      "section": "chemistry",
+      "topic": "Organic reactions",
+      "difficulty": "medium",
+      "stem": "Which compound gives a silver mirror with Tollens' reagent?",
+      "options": [
+        "ethanol",
+        "ethanoic acid",
+        "ethanal",
+        "ethane"
+      ],
+      "correct": 2,
+      "explanation": "Tollens' reagent is reduced to metallic silver by aldehydes. Ethanal (CH3-CHO) is the aldehyde; ethanol, ethanoic acid and ethane cannot reduce it.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-026",
+      "section": "chemistry",
+      "topic": "Organic reactions",
+      "difficulty": "medium",
+      "stem": "According to Markovnikov's rule, what is the major product when propene reacts with HBr?",
+      "options": [
+        "1,2-dibromopropane",
+        "propane",
+        "1-bromopropane",
+        "2-bromopropane"
+      ],
+      "correct": 3,
+      "explanation": "Hydrogen adds to the double-bond carbon that already carries more hydrogens, generating the more stable secondary carbocation on C-2, so bromine ends there and 2-bromopropane predominates.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-027",
+      "section": "chemistry",
+      "topic": "Isomerism",
+      "difficulty": "medium",
+      "stem": "How many structural (chain) isomers are possible for the molecular formula C5H12?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correct": 1,
+      "explanation": "Pentane, 2-methylbutane and 2,2-dimethylpropane are the three chain isomers of C5H12; only two exist for C4H10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-028",
+      "section": "chemistry",
+      "topic": "Chemical bonding",
+      "difficulty": "medium",
+      "stem": "What is the hybridisation of each carbon atom in ethene (C2H4)?",
+      "options": [
+        "sp",
+        "sp2",
+        "dsp2",
+        "sp3"
+      ],
+      "correct": 1,
+      "explanation": "Each carbon forms three sigma bonds (two C-H and one C-C) and retains one unhybridised p orbital for the pi bond, giving three sp2 hybrids and a planar molecule with bond angles of about 120 degrees.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-029",
+      "section": "chemistry",
+      "topic": "Organic reactions",
+      "difficulty": "hard",
+      "stem": "Which order correctly shows decreasing acidic strength?",
+      "options": [
+        "ethanoic acid > ethanol > phenol",
+        "ethanol > phenol > ethanoic acid",
+        "phenol > ethanoic acid > ethanol",
+        "ethanoic acid > phenol > ethanol"
+      ],
+      "correct": 3,
+      "explanation": "Approximate pKa values are 4.76 for ethanoic acid, 10 for phenol and 16 for ethanol. The carboxylate ion is resonance-stabilised over two oxygens, making the acid strongest, while the ethoxide ion is the least stable, making ethanol the weakest of the three.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-chem-030",
+      "section": "chemistry",
+      "topic": "Isomerism",
+      "difficulty": "medium",
+      "stem": "Which compound shows geometrical (cis-trans) isomerism?",
+      "options": [
+        "2-methylpropene",
+        "but-2-ene",
+        "propene",
+        "but-1-ene"
+      ],
+      "correct": 1,
+      "explanation": "Geometrical isomerism needs two different groups attached to each carbon of the C=C bond. But-2-ene (CH3-CH=CH-CH3) satisfies this; propene and but-1-ene each have two hydrogens on the terminal carbon, and 2-methylpropene has two identical methyl groups on one carbon.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-001",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to ABUNDANT.",
+      "options": [
+        "scarce",
+        "sudden",
+        "costly",
+        "plentiful"
+      ],
+      "correct": 3,
+      "explanation": "Abundant means existing in large quantities, so plentiful is the closest synonym; scarce is its opposite and the other two are unrelated in sense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-002",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most opposite in meaning to ANCIENT.",
+      "options": [
+        "antique",
+        "aged",
+        "modern",
+        "bygone"
+      ],
+      "correct": 2,
+      "explanation": "Ancient means extremely old, so its antonym is modern; antique, aged and bygone all belong to the same idea of the past.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-003",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to METICULOUS.",
+      "options": [
+        "indifferent",
+        "vague",
+        "conscientious",
+        "hasty"
+      ],
+      "correct": 2,
+      "explanation": "Meticulous describes someone who pays extreme attention to detail, which matches conscientious; hasty, indifferent and vague all describe the opposite kind of work.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-004",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to CANDID.",
+      "options": [
+        "evasive",
+        "frank",
+        "forthright",
+        "open"
+      ],
+      "correct": 0,
+      "explanation": "Candid means truthful and direct, so evasive (dodging a straight answer) is its opposite; frank, forthright and open are all synonyms of candid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-005",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "easy",
+      "stem": "In the sentence 'The committee decided to postpone the meeting until Monday', which word can best replace POSTPONE?",
+      "options": [
+        "cancel",
+        "prolong",
+        "defer",
+        "hasten"
+      ],
+      "correct": 2,
+      "explanation": "To postpone is to put something off to a later time, that is, to defer. Cancel means to call it off, hasten is the opposite, and prolong means to make something last longer once it has started.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-006",
+      "section": "english",
+      "topic": "Vocabulary and synonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word closest in meaning to EPHEMERAL.",
+      "options": [
+        "mysterious",
+        "everlasting",
+        "short-lived",
+        "extravagant"
+      ],
+      "correct": 2,
+      "explanation": "Ephemeral describes anything lasting a very brief time, such as a mayfly or a passing fad, so short-lived is correct; everlasting is the direct opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-007",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "easy",
+      "stem": "Which sentence is grammatically correct?",
+      "options": [
+        "He not likes coffee.",
+        "He does not likes coffee.",
+        "He does not like coffee.",
+        "He do not likes coffee."
+      ],
+      "correct": 2,
+      "explanation": "After the auxiliary does not, the main verb stays in its base form (like). The other three break either subject-verb agreement or the do + base-verb pattern.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-008",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "easy",
+      "stem": "Choose the correct preposition: 'Our new lecturer is very good ___ mathematics.'",
+      "options": [
+        "with",
+        "on",
+        "in",
+        "at"
+      ],
+      "correct": 3,
+      "explanation": "Good takes at when it means skilful (good at mathematics, good at swimming). In is the common interference error; on and with do not collocate with good in this sense.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-009",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "medium",
+      "stem": "Choose the correct verb form: 'Neither the players nor the coach ___ satisfied with the referee's decision.'",
+      "options": [
+        "were",
+        "have been",
+        "are",
+        "was"
+      ],
+      "correct": 3,
+      "explanation": "With neither...nor, the verb agrees with the nearer subject. Coach is singular and the sentence is in the past, so was is required.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-010",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "medium",
+      "stem": "Choose the correct form: 'By the time we reached the station, the train ___.'",
+      "options": [
+        "had left",
+        "left",
+        "has left",
+        "was leaving"
+      ],
+      "correct": 0,
+      "explanation": "The past perfect marks an action completed before another past action; reaching the station is already past, so the earlier departure must be had left. The present perfect has left cannot pair with a finished past time clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-011",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "medium",
+      "stem": "Identify the part that contains an error: 'Despite of (A) his hard work (B), he could not (C) pass the entry test (D).'",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct": 0,
+      "explanation": "Despite is itself a preposition and is followed directly by a noun phrase: 'Despite his hard work'. Only the phrase 'in spite of' carries the word of.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-012",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "hard",
+      "stem": "Choose the correct form: 'If he ___ harder, he would have passed the test.'",
+      "options": [
+        "would study",
+        "studies",
+        "studied",
+        "had studied"
+      ],
+      "correct": 3,
+      "explanation": "The result clause would have passed marks an unreal past (third conditional), which requires the past perfect had studied in the if-clause; would study is never used inside the if-clause.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-013",
+      "section": "english",
+      "topic": "Grammar",
+      "difficulty": "hard",
+      "stem": "Identify the part that contains an error: 'The teacher asked the students (A) to read the chapter (B) and answering the questions (C) on the board (D).'",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct": 2,
+      "explanation": "Structures joined by and must be parallel, so answering should be the infinitive (to) answer to match to read. Parts A, B and D are grammatically sound.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-014",
+      "section": "english",
+      "topic": "Sentence completion",
+      "difficulty": "medium",
+      "stem": "Despite his ___ nature, he finally agreed to fund the scholarship for two students.",
+      "options": [
+        "miserly",
+        "forgetful",
+        "cheerful",
+        "generous"
+      ],
+      "correct": 0,
+      "explanation": "Despite signals a contrast with agreeing to spend money, so the blank must mean unwilling to part with money: miserly. Generous would remove the contrast, and cheerful or forgetful do not oppose the act of funding.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-015",
+      "section": "english",
+      "topic": "Sentence completion",
+      "difficulty": "easy",
+      "stem": "The speaker's remarks were so ___ that half the audience walked out of boredom.",
+      "options": [
+        "hilarious",
+        "ambiguous",
+        "tedious",
+        "succinct"
+      ],
+      "correct": 2,
+      "explanation": "Only tedious (dull and drawn out) produces the stated result of an audience leaving from boredom; succinct and hilarious would hold attention, and ambiguity alone does not cause boredom.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-016",
+      "section": "english",
+      "topic": "Sentence completion",
+      "difficulty": "hard",
+      "stem": "Far from being ___, the new campus rule was in fact quite restrictive.",
+      "options": [
+        "unpopular",
+        "ambiguous",
+        "lenient",
+        "costly"
+      ],
+      "correct": 2,
+      "explanation": "Far from being sets up a direct opposition with restrictive, and the opposite of restrictive is lenient (permissive). Unpopular, costly and ambiguous are not contrasted with restrictiveness.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-017",
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "easy",
+      "stem": "Read the passage: 'The glacier has retreated nearly two kilometres since 1980, exposing bare rock that was once locked under ice. Scientists link most of this shrinkage to rising summer temperatures rather than to any fall in snowfall.' According to the passage, the glacier's retreat is mainly attributed to ___.",
+      "options": [
+        "volcanic activity",
+        "warmer summer temperatures",
+        "reduced snowfall",
+        "stronger valley winds"
+      ],
+      "correct": 1,
+      "explanation": "The passage names rising summer temperatures and explicitly rules out reduced snowfall; volcanic activity and valley winds are never mentioned.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-018",
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "medium",
+      "stem": "Read the passage: 'Mira typed quickly during the online test but had to restart twice when the connection dropped. Each restart cost her nearly five minutes, and the clock was never stopped.' What can be inferred about Mira's test?",
+      "options": [
+        "She lost working time that the system did not give back.",
+        "She typed her answers too slowly.",
+        "She was disqualified for cheating.",
+        "Her answers were never recorded."
+      ],
+      "correct": 0,
+      "explanation": "Two interruptions of about five minutes each were taken from a clock that kept running, so roughly ten minutes of working time were never returned. The passage says nothing about disqualification or unrecorded answers, and it states she typed quickly.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-019",
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "medium",
+      "stem": "Read the passage: 'The minister's statement was hedged with caveats; he promised a decision in due course but ruled out any firm deadline.' The statement is best described as ___.",
+      "options": [
+        "guarded and non-committal",
+        "careless and incoherent",
+        "angry and personal",
+        "bold and decisive"
+      ],
+      "correct": 0,
+      "explanation": "Caveats plus a refusal to fix a deadline make the statement cautious and non-committal. A decisive statement would name a date, and nothing in the passage suggests carelessness, incoherence or anger.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-eng-020",
+      "section": "english",
+      "topic": "Comprehension",
+      "difficulty": "hard",
+      "stem": "Read the passage: 'Street vendors were offered licences to trade from numbered carts. Most declined: the fee cost more than a week's earnings and the carts stood far from the foot traffic they depended on.' Which conclusion is best supported by the passage?",
+      "options": [
+        "The scheme failed because its cost and its cart sites did not suit the vendors' needs.",
+        "The numbered carts reduced the foot traffic in the market.",
+        "The authorities withdrew the licences after receiving complaints.",
+        "Most vendors preferred to trade without any licence for the rest of the year."
+      ],
+      "correct": 0,
+      "explanation": "Both reasons given for declining, a fee above a week's earnings and poorly sited carts, show the scheme's design clashed with the vendors' economics. The passage does not report later choices, any withdrawal of the scheme, or carts reducing foot traffic.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-001",
+      "section": "intelligence",
+      "topic": "Number series",
+      "difficulty": "easy",
+      "stem": "Find the next term: 2, 6, 12, 20, 30, ?",
+      "options": [
+        "42",
+        "40",
+        "44",
+        "36"
+      ],
+      "correct": 0,
+      "explanation": "The differences are 4, 6, 8, 10, so the next difference is 12 and 30 + 12 = 42. Equivalently the nth term is n^2 + n (6^2 + 6 = 42).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-002",
+      "section": "intelligence",
+      "topic": "Letter series",
+      "difficulty": "easy",
+      "stem": "Find the next pair: AZ, BY, CX, DW, ?",
+      "options": [
+        "EU",
+        "CV",
+        "FV",
+        "EV"
+      ],
+      "correct": 3,
+      "explanation": "The first letters run forward A, B, C, D, so next is E; the second letters run backward Z, Y, X, W, so next is V. The pair is EV.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-003",
+      "section": "intelligence",
+      "topic": "Odd one out",
+      "difficulty": "easy",
+      "stem": "Which number is the odd one out: 3, 5, 11, 14, 17?",
+      "options": [
+        "11",
+        "17",
+        "14",
+        "3"
+      ],
+      "correct": 2,
+      "explanation": "3, 5, 11 and 17 are all prime numbers, while 14 is composite (2 x 7), so 14 is the odd one out.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-004",
+      "section": "intelligence",
+      "topic": "Analogy",
+      "difficulty": "easy",
+      "stem": "Thermometer is to temperature as barometer is to:",
+      "options": [
+        "altitude",
+        "atmospheric pressure",
+        "wind speed",
+        "humidity"
+      ],
+      "correct": 1,
+      "explanation": "A thermometer measures temperature; a barometer measures atmospheric pressure. A hydrometer, not a barometer, is the instrument for humidity-related measurement.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-005",
+      "section": "intelligence",
+      "topic": "Number series",
+      "difficulty": "medium",
+      "stem": "Find the next term: 3, 8, 15, 24, 35, ?",
+      "options": [
+        "48",
+        "45",
+        "50",
+        "46"
+      ],
+      "correct": 0,
+      "explanation": "The differences are 5, 7, 9, 11, so the next difference is 13 and 35 + 13 = 48. Equivalently the nth term is n^2 - 1 (7^2 - 1 = 48).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-006",
+      "section": "intelligence",
+      "topic": "Coding and decoding",
+      "difficulty": "medium",
+      "stem": "In a certain code, DELHI is written as EDMIJ. How is MUMBAI written in the same code?",
+      "options": [
+        "NVNCCJ",
+        "MUMBAI",
+        "LVTLAZH",
+        "NVNCBJ"
+      ],
+      "correct": 3,
+      "explanation": "Each letter is replaced by the next letter of the alphabet (shift +1): M->N, U->V, M->N, B->C, A->B, I->J, giving NVNCBJ.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-007",
+      "section": "intelligence",
+      "topic": "Cause and effect",
+      "difficulty": "medium",
+      "stem": "Statement I: The water level in village wells dropped sharply this summer. Statement II: The previous monsoon season brought very little rainfall. Which is correct?",
+      "options": [
+        "Both are effects of unrelated causes",
+        "II is the cause and I is its effect",
+        "Both are independent causes",
+        "I is the cause and II is its effect"
+      ],
+      "correct": 1,
+      "explanation": "Groundwater is recharged by rain; a weak monsoon (II) is the cause and the falling well level (I) is its effect, not the reverse.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-008",
+      "section": "intelligence",
+      "topic": "Direction sense",
+      "difficulty": "medium",
+      "stem": "A man walks 5 km north, turns right and walks 3 km, then turns right and walks 5 km. Where is he relative to his starting point?",
+      "options": [
+        "5 km south of the start",
+        "8 km from the start",
+        "3 km east of the start",
+        "3 km west of the start"
+      ],
+      "correct": 2,
+      "explanation": "Taking north as +y: (0,0) -> (0,5) -> east to (3,5) -> south to (3,0). The north and south legs of 5 km cancel, leaving him 3 km due east of the start.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-009",
+      "section": "intelligence",
+      "topic": "Logical reasoning",
+      "difficulty": "hard",
+      "stem": "Showing a woman's photograph, a man said: \"She is the only daughter of my father.\" How is the woman related to the man?",
+      "options": [
+        "His mother",
+        "His niece",
+        "His sister",
+        "His aunt"
+      ],
+      "correct": 2,
+      "explanation": "The only daughter of the man's father must be the man's own sister (he has no other sister and the daughter is female, so it cannot be the man himself).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    },
+    {
+      "id": "net-int-010",
+      "section": "intelligence",
+      "topic": "Pattern recognition",
+      "difficulty": "hard",
+      "stem": "Find the next term: 7, 11, 14, 20, 21, 29, ?",
+      "options": [
+        "30",
+        "38",
+        "26",
+        "28"
+      ],
+      "correct": 3,
+      "explanation": "Two alternating series: odd positions 7, 14, 21, ? increase by 7, giving 28; even positions 11, 20, 29 increase by 9. The seventh term continues the first series: 21 + 7 = 28.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://nust.edu.pk/admissions/undergraduates/"
+      ]
+    }
+  ]
+}

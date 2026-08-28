@@ -1,0 +1,993 @@
+{
+  "testId": "iba",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "Practice questions for IBA Karachi Aptitude Test. English Composition: comprehension, vocabulary, grammar. Mathematics: arithmetic, algebra, geometry, data sufficiency at SAT-I level. Not affiliated with IBA.",
+    "sources": [
+      "https://admissions.iba.edu.pk/",
+      "https://admissions.iba.edu.pk/AdmissionProcedure.php"
+    ]
+  },
+  "durationMinutes": 120,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 50,
+    "note": "50 MCQs, no negative marking (IBA format, SAT-I difficulty level)."
+  },
+  "benchmarks": [
+    {
+      "label": "BBA / BS Computer Science (2026)",
+      "percent": 80
+    },
+    {
+      "label": "BS Economics / Social Sciences (2026)",
+      "percent": 65
+    }
+  ],
+  "sections": [
+    {
+      "id": "english",
+      "name": "English Composition",
+      "questionCount": 25
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "questionCount": 25
+    }
+  ],
+  "questions": [
+    {
+      "id": "iba-english-001",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'famous'.",
+      "options": [
+        "Renowned",
+        "Unknown",
+        "Ordinary",
+        "Hidden"
+      ],
+      "correct": 0,
+      "explanation": "'Famous' means widely known; 'renowned' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-002",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'always'.",
+      "options": [
+        "Often",
+        "Usually",
+        "Never",
+        "Frequently"
+      ],
+      "correct": 2,
+      "explanation": "'Always' means at all times; its opposite is 'never'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-003",
+      "section": "english",
+      "topic": "Grammar: verb forms",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'They ___ football yesterday.'",
+      "options": [
+        "play",
+        "plays",
+        "playing",
+        "played"
+      ],
+      "correct": 3,
+      "explanation": "The past tense of 'play' is 'played', which fits the time marker 'yesterday'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-004",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'difficult'.",
+      "options": [
+        "Challenging",
+        "Easy",
+        "Simple",
+        "Clear"
+      ],
+      "correct": 0,
+      "explanation": "'Difficult' means hard to do or understand; 'challenging' is its closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-005",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'bright'.",
+      "options": [
+        "Shiny",
+        "Radiant",
+        "Dim",
+        "Luminous"
+      ],
+      "correct": 2,
+      "explanation": "'Bright' means giving out much light; its opposite is 'dim'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-006",
+      "section": "english",
+      "topic": "Grammar: countable and uncountable nouns",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'We need ___ sugar for the recipe.'",
+      "options": [
+        "many",
+        "some",
+        "a few",
+        "fewer"
+      ],
+      "correct": 1,
+      "explanation": "'Sugar' is uncountable, so 'some' is correct; 'many' and 'a few' require countable nouns.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-007",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'quiet'.",
+      "options": [
+        "Noisy",
+        "Loud",
+        "Silent",
+        "Busy"
+      ],
+      "correct": 2,
+      "explanation": "'Quiet' means making little or no noise; 'silent' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-008",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word most nearly OPPOSITE to 'success'.",
+      "options": [
+        "Triumph",
+        "Achievement",
+        "Failure",
+        "Prosperity"
+      ],
+      "correct": 2,
+      "explanation": "'Success' means achieving a goal; its opposite is 'failure'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-009",
+      "section": "english",
+      "topic": "Grammar: prepositions",
+      "difficulty": "easy",
+      "stem": "Fill in the blank: 'She is good ___ mathematics.'",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "with"
+      ],
+      "correct": 1,
+      "explanation": "The correct collocation is 'good at' a subject or skill.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-010",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "easy",
+      "stem": "Choose the word closest in meaning to 'wealthy'.",
+      "options": [
+        "Poor",
+        "Rich",
+        "Broke",
+        "Needy"
+      ],
+      "correct": 1,
+      "explanation": "'Wealthy' means having a great deal of money; 'rich' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-011",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'obstinate'.",
+      "options": [
+        "Flexible",
+        "Obedient",
+        "Cooperative",
+        "Stubborn"
+      ],
+      "correct": 3,
+      "explanation": "'Obstinate' means refusing to change one's opinion; 'stubborn' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-012",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most nearly OPPOSITE to 'candid'.",
+      "options": [
+        "Honest",
+        "Insincere",
+        "Frank",
+        "Direct"
+      ],
+      "correct": 1,
+      "explanation": "'Candid' means truthful and straightforward; its opposite is 'insincere'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-013",
+      "section": "english",
+      "topic": "Grammar: error identification",
+      "difficulty": "medium",
+      "stem": "Identify the error in the sentence: 'He prefers tea than coffee.'",
+      "options": [
+        "No error",
+        "'prefers' should be 'prefer'",
+        "'than' should be 'to'",
+        "'coffee' should be 'coffees'"
+      ],
+      "correct": 2,
+      "explanation": "The correct construction is 'prefer X to Y': 'He prefers tea to coffee.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-014",
+      "section": "english",
+      "topic": "Reading comprehension: detail",
+      "difficulty": "medium",
+      "stem": "The printing press, introduced to Europe in the 15th century, transformed the spread of knowledge. Books that once took months to copy by hand could be produced in days, lowering their cost and making them accessible to a wider public. This, in turn, fueled the Renaissance and the Reformation. What was one major effect of the printing press according to the passage?",
+      "options": [
+        "Books became more expensive",
+        "Books became cheaper and more accessible",
+        "Hand copying became faster",
+        "The Renaissance ended"
+      ],
+      "correct": 1,
+      "explanation": "The passage states that printing lowered the cost of books and made them accessible to a wider public.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-015",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'hasten'.",
+      "options": [
+        "Delay",
+        "Slow",
+        "Postpone",
+        "Hurry"
+      ],
+      "correct": 3,
+      "explanation": "'Hasten' means to act or move quickly; 'hurry' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-016",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word most nearly OPPOSITE to 'fragile'.",
+      "options": [
+        "Delicate",
+        "Breakable",
+        "Frail",
+        "Sturdy"
+      ],
+      "correct": 3,
+      "explanation": "'Fragile' means easily broken; its opposite is 'sturdy'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-017",
+      "section": "english",
+      "topic": "Grammar: conditionals",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'If I ___ you, I would apologize immediately.'",
+      "options": [
+        "was",
+        "am",
+        "were",
+        "be"
+      ],
+      "correct": 2,
+      "explanation": "In the second conditional, 'were' is used for all persons: 'If I were you...'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-018",
+      "section": "english",
+      "topic": "Reading comprehension: detail",
+      "difficulty": "medium",
+      "stem": "Migratory birds navigate using a combination of the sun's position, the Earth's magnetic field, and learned landmarks. Young birds on their first migration often follow experienced adults, while older birds can correct their course even in cloudy conditions. According to the passage, how do young birds learn migration routes?",
+      "options": [
+        "By following experienced adults",
+        "By using the magnetic field alone",
+        "By memorizing maps",
+        "By flying at night only"
+      ],
+      "correct": 0,
+      "explanation": "The passage says that young birds on their first migration often follow experienced adults.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-019",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "medium",
+      "stem": "Choose the word closest in meaning to 'prudent'.",
+      "options": [
+        "Reckless",
+        "Wise",
+        "Foolish",
+        "Careless"
+      ],
+      "correct": 1,
+      "explanation": "'Prudent' means acting with care and good judgment; 'wise' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-020",
+      "section": "english",
+      "topic": "Grammar: reported speech",
+      "difficulty": "medium",
+      "stem": "Fill in the blank: 'She told me that she ___ coming to the meeting.'",
+      "options": [
+        "is",
+        "was",
+        "will",
+        "has"
+      ],
+      "correct": 1,
+      "explanation": "In reported speech the tense shifts back: 'is coming' becomes 'was coming'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-021",
+      "section": "english",
+      "topic": "Vocabulary: antonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word most nearly OPPOSITE to 'loquacious'.",
+      "options": [
+        "Talkative",
+        "Taciturn",
+        "Chatty",
+        "Verbose"
+      ],
+      "correct": 1,
+      "explanation": "'Loquacious' means very talkative; its opposite is 'taciturn' (reserved or silent).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-022",
+      "section": "english",
+      "topic": "Grammar: uncountable nouns",
+      "difficulty": "hard",
+      "stem": "Fill in the blank: 'The furniture in the rooms ___ very old.'",
+      "options": [
+        "are",
+        "were",
+        "is",
+        "have been"
+      ],
+      "correct": 2,
+      "explanation": "'Furniture' is an uncountable noun and takes a singular verb: 'The furniture ... is very old.'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-023",
+      "section": "english",
+      "topic": "Reading comprehension: inference",
+      "difficulty": "hard",
+      "stem": "Company surveys consistently rank employee autonomy among the top drivers of job satisfaction, yet many firms still rely on rigid oversight. Managers who experiment with flexible schedules report higher retention without measurable drops in productivity. What is the most reasonable conclusion supported by the passage?",
+      "options": [
+        "Rigid oversight always improves productivity",
+        "Flexible schedules may improve retention without hurting productivity",
+        "All employees dislike autonomy",
+        "Surveys are unreliable"
+      ],
+      "correct": 1,
+      "explanation": "The passage links flexible schedules to higher retention with no measurable drop in productivity, which directly supports the chosen conclusion.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-024",
+      "section": "english",
+      "topic": "Vocabulary: synonyms",
+      "difficulty": "hard",
+      "stem": "Choose the word closest in meaning to 'magnanimous'.",
+      "options": [
+        "Mean",
+        "Generous",
+        "Spiteful",
+        "Petty"
+      ],
+      "correct": 1,
+      "explanation": "'Magnanimous' means generous and forgiving, especially toward a rival; 'generous' is the closest synonym.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-english-025",
+      "section": "english",
+      "topic": "Grammar: correlative conjunctions",
+      "difficulty": "hard",
+      "stem": "Fill in the blank: 'Scarcely had he arrived ___ it started to rain.'",
+      "options": [
+        "than",
+        "then",
+        "when",
+        "that"
+      ],
+      "correct": 2,
+      "explanation": "The correct correlative pair is 'scarcely ... when'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-001",
+      "section": "mathematics",
+      "topic": "Arithmetic: percentages",
+      "difficulty": "easy",
+      "stem": "What is 20% of 150?",
+      "options": [
+        "30",
+        "20",
+        "25",
+        "35"
+      ],
+      "correct": 0,
+      "explanation": "20% of 150 = 0.20 * 150 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-002",
+      "section": "mathematics",
+      "topic": "Algebra: linear equations",
+      "difficulty": "easy",
+      "stem": "Solve for x: 3x - 6 = 0.",
+      "options": [
+        "-2",
+        "3",
+        "-3",
+        "2"
+      ],
+      "correct": 3,
+      "explanation": "3x = 6, so x = 2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-003",
+      "section": "mathematics",
+      "topic": "Geometry: area",
+      "difficulty": "easy",
+      "stem": "What is the area of a rectangle that is 8 cm long and 5 cm wide?",
+      "options": [
+        "26 cm^2",
+        "40 cm^2",
+        "13 cm^2",
+        "80 cm^2"
+      ],
+      "correct": 1,
+      "explanation": "Area = length x width = 8 x 5 = 40 cm^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-004",
+      "section": "mathematics",
+      "topic": "Fractions",
+      "difficulty": "easy",
+      "stem": "Simplify: 7/8 - 1/4.",
+      "options": [
+        "6/8",
+        "5/8",
+        "3/4",
+        "1/2"
+      ],
+      "correct": 1,
+      "explanation": "1/4 = 2/8, so 7/8 - 2/8 = 5/8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-005",
+      "section": "mathematics",
+      "topic": "Algebra: substitution",
+      "difficulty": "easy",
+      "stem": "If y = 2x + 1 and x = 3, what is the value of y?",
+      "options": [
+        "7",
+        "6",
+        "8",
+        "5"
+      ],
+      "correct": 0,
+      "explanation": "y = 2(3) + 1 = 6 + 1 = 7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-006",
+      "section": "mathematics",
+      "topic": "Geometry: angles",
+      "difficulty": "easy",
+      "stem": "What is the sum of the interior angles of a quadrilateral?",
+      "options": [
+        "180°",
+        "270°",
+        "360°",
+        "540°"
+      ],
+      "correct": 2,
+      "explanation": "The interior angles of any quadrilateral sum to 360°.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-007",
+      "section": "mathematics",
+      "topic": "Arithmetic: decimals",
+      "difficulty": "easy",
+      "stem": "What is 0.5 x 0.4?",
+      "options": [
+        "0.2",
+        "2.0",
+        "0.04",
+        "0.9"
+      ],
+      "correct": 0,
+      "explanation": "0.5 x 0.4 = 0.20 = 0.2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-008",
+      "section": "mathematics",
+      "topic": "Averages",
+      "difficulty": "easy",
+      "stem": "What is the average of 10, 20 and 30?",
+      "options": [
+        "15",
+        "25",
+        "20",
+        "30"
+      ],
+      "correct": 2,
+      "explanation": "Average = (10 + 20 + 30)/3 = 60/3 = 20.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-009",
+      "section": "mathematics",
+      "topic": "Algebra: square roots",
+      "difficulty": "easy",
+      "stem": "If x^2 = 49, what are the possible values of x?",
+      "options": [
+        "7 only",
+        "-7 only",
+        "7 and -7",
+        "49 and -49"
+      ],
+      "correct": 2,
+      "explanation": "Both 7^2 and (-7)^2 equal 49, so x = 7 or x = -7.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-010",
+      "section": "mathematics",
+      "topic": "Arithmetic: division",
+      "difficulty": "easy",
+      "stem": "What is 144 divided by 12?",
+      "options": [
+        "10",
+        "14",
+        "16",
+        "12"
+      ],
+      "correct": 3,
+      "explanation": "144/12 = 12.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-011",
+      "section": "mathematics",
+      "topic": "Word problems: proportion",
+      "difficulty": "medium",
+      "stem": "If 5 books cost Rs 750, what is the cost of 3 books?",
+      "options": [
+        "Rs 450",
+        "Rs 500",
+        "Rs 400",
+        "Rs 550"
+      ],
+      "correct": 0,
+      "explanation": "One book costs 750/5 = Rs 150, so 3 books cost 3 x 150 = Rs 450.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-012",
+      "section": "mathematics",
+      "topic": "Geometry: circles",
+      "difficulty": "medium",
+      "stem": "Taking pi = 22/7, what is the circumference of a circle with radius 7 cm?",
+      "options": [
+        "154 cm",
+        "44 cm",
+        "22 cm",
+        "88 cm"
+      ],
+      "correct": 1,
+      "explanation": "Circumference = 2 * pi * r = 2 * (22/7) * 7 = 44 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-013",
+      "section": "mathematics",
+      "topic": "Algebra: linear equations",
+      "difficulty": "medium",
+      "stem": "Solve for x: 2(x + 3) = x + 10.",
+      "options": [
+        "6",
+        "4",
+        "3",
+        "7"
+      ],
+      "correct": 1,
+      "explanation": "2x + 6 = x + 10, so x = 4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-014",
+      "section": "mathematics",
+      "topic": "Data sufficiency",
+      "difficulty": "medium",
+      "stem": "Is x > 0? (1) x^2 > 0 (2) x^3 > 0",
+      "options": [
+        "Statement (2) alone is sufficient",
+        "Both statements together are needed",
+        "The question cannot be answered even with both statements",
+        "Statement (1) alone is sufficient"
+      ],
+      "correct": 3,
+      "explanation": "x^2 > 0 is true for every non-zero x, positive or negative, so (1) is insufficient. x^3 > 0 implies x > 0, so (2) alone is sufficient.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-015",
+      "section": "mathematics",
+      "topic": "Word problems: speed",
+      "difficulty": "medium",
+      "stem": "A man walks 7.5 km in 1.5 hours. What is his average speed?",
+      "options": [
+        "6 km/h",
+        "4 km/h",
+        "5 km/h",
+        "7.5 km/h"
+      ],
+      "correct": 2,
+      "explanation": "Speed = distance/time = 7.5/1.5 = 5 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-016",
+      "section": "mathematics",
+      "topic": "Geometry: right triangles",
+      "difficulty": "medium",
+      "stem": "A triangle has sides 6 cm, 8 cm and 10 cm. What is its area?",
+      "options": [
+        "48 cm^2",
+        "24 cm^2",
+        "30 cm^2",
+        "60 cm^2"
+      ],
+      "correct": 1,
+      "explanation": "6-8-10 is a right triangle (6^2 + 8^2 = 10^2), so area = 1/2 x 6 x 8 = 24 cm^2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-017",
+      "section": "mathematics",
+      "topic": "Percentages: change",
+      "difficulty": "medium",
+      "stem": "The price of an item rises from Rs 80 to Rs 100. What is the percentage increase?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "40%"
+      ],
+      "correct": 1,
+      "explanation": "Increase = 100 - 80 = 20; percentage increase = (20/80) x 100 = 25%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-018",
+      "section": "mathematics",
+      "topic": "Algebra: linear equations",
+      "difficulty": "medium",
+      "stem": "Solve for x: x/2 + 3 = 7.",
+      "options": [
+        "6",
+        "4",
+        "10",
+        "8"
+      ],
+      "correct": 3,
+      "explanation": "x/2 = 4, so x = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-019",
+      "section": "mathematics",
+      "topic": "Data interpretation: mean",
+      "difficulty": "medium",
+      "stem": "The monthly sales of a store were: January Rs 40,000, February Rs 35,000, March Rs 45,000 and April Rs 40,000. What was the average monthly sales?",
+      "options": [
+        "Rs 35,000",
+        "Rs 40,000",
+        "Rs 45,000",
+        "Rs 38,000"
+      ],
+      "correct": 1,
+      "explanation": "Average = (40000 + 35000 + 45000 + 40000)/4 = 160000/4 = Rs 40,000.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-020",
+      "section": "mathematics",
+      "topic": "Word problems: ages",
+      "difficulty": "medium",
+      "stem": "Ali is twice as old as his sister. The sum of their ages is 27. How old is Ali?",
+      "options": [
+        "9",
+        "12",
+        "18",
+        "15"
+      ],
+      "correct": 2,
+      "explanation": "Sister's age = x, Ali = 2x. Then 3x = 27, so x = 9 and Ali is 18.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-021",
+      "section": "mathematics",
+      "topic": "Data sufficiency",
+      "difficulty": "hard",
+      "stem": "What is the value of n? (1) n^2 = 25 (2) n is a prime number",
+      "options": [
+        "Statement (1) alone is sufficient",
+        "Statement (2) alone is sufficient",
+        "Both statements together are needed",
+        "The question cannot be answered even with both statements"
+      ],
+      "correct": 2,
+      "explanation": "From (1), n = 5 or n = -5. Statement (2) alone could be any prime. Together, the only prime value is 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-022",
+      "section": "mathematics",
+      "topic": "Geometry: similar triangles",
+      "difficulty": "hard",
+      "stem": "Two similar triangles have corresponding sides in the ratio 2 : 3. What is the ratio of their areas?",
+      "options": [
+        "2 : 3",
+        "4 : 6",
+        "4 : 9",
+        "8 : 27"
+      ],
+      "correct": 2,
+      "explanation": "Areas of similar figures scale with the square of the side ratio: 2^2 : 3^2 = 4 : 9.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-023",
+      "section": "mathematics",
+      "topic": "Word problems: consecutive integers",
+      "difficulty": "hard",
+      "stem": "The sum of three consecutive integers is 48. What is the largest of the three?",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "correct": 2,
+      "explanation": "n + (n+1) + (n+2) = 48, so 3n = 45 and n = 15. The integers are 15, 16, 17, so the largest is 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-024",
+      "section": "mathematics",
+      "topic": "Percentages: profit",
+      "difficulty": "hard",
+      "stem": "A merchant sells a shirt for Rs 600, making a profit of 20%. What was the cost price?",
+      "options": [
+        "Rs 480",
+        "Rs 500",
+        "Rs 520",
+        "Rs 540"
+      ],
+      "correct": 1,
+      "explanation": "Selling price = 120% of cost, so cost = 600/1.2 = Rs 500.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    },
+    {
+      "id": "iba-mathematics-025",
+      "section": "mathematics",
+      "topic": "Geometry: Pythagorean theorem",
+      "difficulty": "hard",
+      "stem": "In a right-angled triangle, the hypotenuse is 13 cm and one leg is 5 cm. What is the length of the other leg?",
+      "options": [
+        "8 cm",
+        "10 cm",
+        "12 cm",
+        "9 cm"
+      ],
+      "correct": 2,
+      "explanation": "Other leg = sqrt(13^2 - 5^2) = sqrt(169 - 25) = sqrt(144) = 12 cm.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://admissions.iba.edu.pk/"
+      ]
+    }
+  ]
+}

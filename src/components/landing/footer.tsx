@@ -16,6 +16,7 @@ const cols = [
     title: "Resources",
     links: [
       { label: "Reality check", href: "/#reality" },
+      { label: "Webinars", href: "/webinars" },
       { label: "World trends", href: "/trends" },
       { label: "Scholarships", href: "/money" },
       { label: "Short courses", href: "/career" },

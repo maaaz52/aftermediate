@@ -1,0 +1,145 @@
+{
+  "dataYear": 2026,
+  "webinars": [
+    {
+      "id": "bc-study-uk",
+      "title": "Study in the UK — Application & Visa Guide",
+      "host": "British Council Pakistan",
+      "date": "2026-09-15T15:00:00+05:00",
+      "description": "A step-by-step walkthrough of UK university applications, personal statements, student visa requirements, and the IELTS pathway. Includes a live Q&A with British Council officers.",
+      "categories": [
+        "Study Abroad",
+        "Test Prep"
+      ],
+      "registerUrl": "https://www.britishcouncil.pk/events",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "med-entry-guide",
+      "title": "Navigating Medical Admissions in Pakistan",
+      "host": "Edvolution Pakistan",
+      "date": "2026-09-28T16:00:00+05:00",
+      "description": "Comprehensive guide to MDCAT preparation, medical college applications, merit calculation, and alternative pathways including BDS and pharmacy. Panel includes current medical students.",
+      "categories": [
+        "Medical",
+        "Test Prep"
+      ],
+      "registerUrl": "https://edvolution.pk/webinars",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "hec-scholarships",
+      "title": "HEC Foreign Scholarships — How to Apply",
+      "host": "Higher Education Commission (HEC) Pakistan",
+      "date": "2026-10-05T11:00:00+05:00",
+      "description": "Detailed session on HEC's MS/MPhil and PhD foreign scholarship programmes, eligibility criteria, required documents, and the application portal. Past scholars share their experiences.",
+      "categories": [
+        "Scholarships",
+        "Study Abroad"
+      ],
+      "registerUrl": "https://www.hec.gov.pk/events",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "tech-careers-pasha",
+      "title": "Tech Careers Without a CS Degree",
+      "host": "P@SHA Pakistan",
+      "date": "2026-10-12T14:00:00+05:00",
+      "description": "Industry leaders discuss alternative routes into tech — coding bootcamps, freelancing, certifications, and self-study. Covers salary expectations, portfolio building, and demand trends for 2027.",
+      "categories": [
+        "Technology",
+        "Career Planning"
+      ],
+      "registerUrl": "https://pasha.org.pk/events/",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "ielts-prep-idp",
+      "title": "IELTS Masterclass — Tips from IDP Examiners",
+      "host": "IDP Education Pakistan",
+      "date": "2026-10-20T14:00:00+05:00",
+      "description": "Live IELTS preparation session led by former examiners. Covers Listening and Reading strategies, Writing Task 1 & 2 frameworks, and Speaking Part mock demonstrations. Free practice material included.",
+      "categories": [
+        "Test Prep",
+        "Study Abroad"
+      ],
+      "registerUrl": "https://ielts.idp.com/pakistan/prepare",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "fulbright-info",
+      "title": "Fulbright Scholarship — Info Session for Pakistani Students",
+      "host": "USEFP (United States Educational Foundation in Pakistan)",
+      "date": "2026-11-02T10:00:00+05:00",
+      "description": "Official information session covering the Fulbright MS/PhD and Fulbright Master's programmes, application timeline, GRE waiver policies, and selection criteria. USEFP advisors answer live questions.",
+      "categories": [
+        "Scholarships",
+        "Study Abroad"
+      ],
+      "registerUrl": "https://usefp.org/events/",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "daad-germany",
+      "title": "Study in Germany — Tuition-Free Universities & DAAD Scholarships",
+      "host": "DAAD Pakistan / Goethe-Institut Karachi",
+      "date": "2026-11-15T15:00:00+05:00",
+      "description": "Everything Pakistani students need to know about German public universities (no tuition fees), the blocked account, student visas, and DAAD scholarship opportunities. German language requirements explained.",
+      "categories": [
+        "Study Abroad",
+        "Scholarships"
+      ],
+      "registerUrl": "https://www.daad.pk/en/events/",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "business-careers",
+      "title": "Business & Finance Careers — From I.Com to Corporate Leadership",
+      "host": "IBA Karachi / ACCA Pakistan",
+      "date": "2026-11-25T16:00:00+05:00",
+      "description": "Joint session by IBA's Career Counselling Centre and ACCA Pakistan on business career paths: accounting, finance, marketing, and entrepreneurship. Covers IBA entry test, ACCA exemptions, and internship pipelines.",
+      "categories": [
+        "Business",
+        "Career Planning"
+      ],
+      "registerUrl": "https://www.iba.edu.pk/career-counselling",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "nust-engineering",
+      "title": "NUST Open House — Engineering & Computing Programmes",
+      "host": "National University of Sciences and Technology (NUST)",
+      "date": "2026-12-01T09:00:00+05:00",
+      "description": "Virtual open house with faculty from NUST's engineering and computing schools. Session covers NET preparation, programme curricula, research opportunities, and campus life. Lab demos included.",
+      "categories": [
+        "Engineering",
+        "Technology"
+      ],
+      "registerUrl": "https://www.nust.edu.pk/admissions/open-house",
+      "thumbnailUrl": null,
+      "manual": true
+    },
+    {
+      "id": "psychology-careers",
+      "title": "Beyond Medicine — Careers in Psychology & Social Sciences",
+      "host": "Lahore University of Management Sciences (LUMS)",
+      "date": "2026-12-10T15:00:00+05:00",
+      "description": "LUMS faculty explore psychology, sociology, economics, and humanities career paths. Session debunks the myth that 'only doctors and engineers succeed' and showcases social science alumni success stories.",
+      "categories": [
+        "Career Planning",
+        "Medical"
+      ],
+      "registerUrl": "https://lums.edu.pk/admissions/events",
+      "thumbnailUrl": null,
+      "manual": true
+    }
+  ]
+}

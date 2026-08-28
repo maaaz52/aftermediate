@@ -1,5 +1,6 @@
 {
   "dataYear": 2026,
+  "rateAsOf": "2026-08",
   "scholarships": [
     {
       "id": "hec-foreign-scholarships",
@@ -151,7 +152,7 @@
       "countries": ["usa"],
       "level": "phd",
       "coverage": "full",
-      "coverageDetail": "Funding of up to about USD 19,200 per year for up to five years of PhD study at top QS-ranked US universities, broadly the top 300",
+      "coverageDetail": "Monthly stipend of about USD 1,600 (roughly USD 19,200 per year) for up to five years of PhD study, with tuition funded separately, at top QS-ranked US universities, broadly the top 100",
       "eligibility": [
         "Pakistani nationals with eighteen years of education (MS/MPhil or equivalent) in the programme's priority subject areas",
         "Must secure admission to a PhD programme at an approved top QS-ranked US university",
@@ -164,7 +165,8 @@
       ],
       "sourceUrls": [
         "https://www.hec.gov.pk/english/scholarshipsgrants/us-pakcorridor/pages/default.aspx"
-      ]
+      ],
+      "ivyLeague": true
     },
     {
       "id": "irsip",
@@ -233,7 +235,8 @@
       ],
       "sourceUrls": [
         "https://usefp.org/scholarships/fulbright-degree.cfm"
-      ]
+      ],
+      "ivyLeague": true
     },
     {
       "id": "humphrey-fellowship-pakistan",
@@ -256,7 +259,8 @@
       ],
       "sourceUrls": [
         "https://www.usefp.org/scholarships/humphrey.cfm"
-      ]
+      ],
+      "ivyLeague": true
     },
     {
       "id": "chevening",
@@ -394,7 +398,7 @@
       ],
       "sourceUrls": [
         "https://www.studyinkorea.go.kr/",
-        "https://www.mofa.go.kr/rw-en/brd/m_9983/view.do?seq=758868"
+        "https://pk.mofa.go.kr/pk-en/brd/m_3150/list.do"
       ]
     },
     {
@@ -418,7 +422,7 @@
       ],
       "sourceUrls": [
         "https://www.studyinkorea.go.kr/",
-        "https://www.mofa.go.kr/kh-en/brd/m_25856/view.do?seq=66"
+        "https://pk.mofa.go.kr/pk-en/brd/m_3150/list.do"
       ]
     },
     {
@@ -1294,7 +1298,202 @@
       ],
       "sourceUrls": [
         "https://college.harvard.edu/financial-aid/how-aid-works"
-      ]
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "educationusa-opportunity-funds-pakistan",
+      "name": "EducationUSA Opportunity Funds Program (Pakistan)",
+      "funder": "U.S. Department of State (EducationUSA network), administered in Pakistan by USEFP",
+      "category": "need-based",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Awards cover the up-front costs of applying to U.S. colleges and universities — typically standardized test fees, application fees, and in some cases airfare and visa-related costs — for high-achieving Pakistani students likely to receive full financial aid from U.S. institutions; tuition itself is not covered",
+      "eligibility": [
+        "Pakistani students with strong academic records who are likely to qualify for full financial aid at U.S. colleges and universities but cannot afford the up-front application costs",
+        "Demonstrated financial need, since the program exists for students who lack the resources to pay testing, application, or airfare expenses",
+        "Applicants pass a selective review by the EducationUSA adviser in Pakistan, the regional manager (REAC), and the U.S. Embassy's Public Affairs Section"
+      ],
+      "deadline": "EducationUSA Pakistan opens the Opportunity Funds application annually; check usefp.org and educationusa.pk for the current cycle's application window (approx.)",
+      "howToApply": [
+        "Register for free EducationUSA advising through educationusa.pk and attend information sessions about the Opportunity Funds program",
+        "Submit the Opportunity Funds application during the window announced by USEFP, with academic records and financial documentation"
+      ],
+      "sourceUrls": [
+        "https://educationusa.state.gov/foreign-institutions-and-governments/special-programs",
+        "https://www.educationusa.pk/"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "knight-hennessy-scholars",
+      "name": "Knight-Hennessy Scholars at Stanford",
+      "funder": "Knight-Hennessy Scholars program at Stanford University",
+      "category": "university-specific",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Up to three years of full funding for any graduate degree at Stanford University, covering tuition and associated fees plus a stipend for living and academic expenses, with additional funding opportunities for longer degree programs",
+      "eligibility": [
+        "Citizens and residents of all countries, including Pakistan, may apply; there are no quotas by nationality",
+        "Must hold a bachelor's degree earned recently enough to meet the program's degree-conferral window (the 2027 cohort requires a degree completed in 2020 or later)",
+        "Candidates apply to Knight-Hennessy Scholars and separately apply to a full-time graduate degree programme in any of Stanford's seven schools"
+      ],
+      "deadline": "The Knight-Hennessy application for the 2027 cohort closes on 6 October 2026 at 1:00 PM Pacific Time, with the Stanford graduate degree application due by 1 December 2026 for the 2027 cycle (approx.)",
+      "howToApply": [
+        "Complete the Knight-Hennessy Scholars online application, including essays, a resume, and recommendation letters",
+        "Submit a separate application for admission to a Stanford graduate degree programme before that programme's own deadline"
+      ],
+      "sourceUrls": [
+        "https://knight-hennessy.stanford.edu/admission/before-you-apply/eligibility",
+        "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "akf-international-scholarship",
+      "name": "Aga Khan Foundation International Scholarship Programme",
+      "funder": "Aga Khan Foundation",
+      "category": "need-based",
+      "countries": ["multiple"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Awards are granted on a 50% grant and 50% loan basis, covering tuition fees and living costs for postgraduate study at institutions in any country, including the United States; the loan portion is interest-free and repaid after graduation over a period set by the Foundation",
+      "eligibility": [
+        "Pakistani nationals with excellent academic records holding a bachelor's degree or equivalent training or professional experience",
+        "Genuine financial need: candidates must show they have no other means of financing their postgraduate studies",
+        "Preference is given to master's-level candidates, with PhD applications considered mainly for outstanding students who lack alternative funding"
+      ],
+      "deadline": "The 2026-27 cycle closed on 31 March 2026; the Foundation runs an annual call with applications typically closing around 31 March each year (approx.)",
+      "howToApply": [
+        "Obtain the application form from the Aga Khan Foundation's national office in Pakistan or from the.akdn website when the annual call opens",
+        "Submit the pre-application and, if shortlisted, the full application with transcripts and financial information before the closing date"
+      ],
+      "sourceUrls": [
+        "https://the.akdn/en/international-scholarships"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "aauw-international-fellowships",
+      "name": "AAUW International Fellowships",
+      "funder": "American Association of University Women (AAUW)",
+      "category": "merit-based",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A stipend of USD 20,000 for a master's or first professional degree and USD 25,000 for a doctoral degree — about PKR 5.56 million and PKR 6.95 million respectively at the August 2026 rate (USD 1 = PKR 278) — paid to the fellow for study at an accredited U.S. institution",
+      "eligibility": [
+        "Self-identifying women who are not U.S. citizens or permanent residents, holding citizenship of a country outside the United States",
+        "Admission to or enrollment in a full-time master's, first professional, or doctoral programme at an accredited U.S. institution",
+        "An academic record plus a plan to use the degree to empower women and girls in the home country, evaluated by AAUW's selection panels"
+      ],
+      "deadline": "The application for the next academic year closes on 17 September 2026 at 5:00 PM Eastern Time; check AAUW's page for the current cycle's date (approx.)",
+      "howToApply": [
+        "Complete the online AAUW application during the annual window, including proof of admission to a U.S. institution",
+        "Upload transcripts, recommendation letters, and the required personal statements by the published deadline"
+      ],
+      "sourceUrls": [
+        "https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "rotary-global-grant-scholarships",
+      "name": "Rotary Foundation Global Grant Scholarships",
+      "funder": "The Rotary Foundation",
+      "category": "merit-based",
+      "countries": ["multiple"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Graduate study abroad of one to four years in one of Rotary's seven areas of focus, funded through global grants with a minimum budget of USD 30,000 (about PKR 8.34 million at the August 2026 rate, USD 1 = PKR 278) that can cover tuition, travel, and living costs",
+      "eligibility": [
+        "Graduate students studying outside their home country in one of Rotary's areas of focus — peace, disease prevention, water and sanitation, maternal and child health, education, economic development, or the environment",
+        "Applicants must be sponsored by a Rotary club or district, either in Pakistan or in the host country",
+        "Selection is conducted by the sponsoring Rotary district, with the grant application submitted to The Rotary Foundation for approval"
+      ],
+      "deadline": "Applications go through Rotary clubs and districts, which set their own timelines; many districts open scholarship calls in autumn for the following academic year (approx.)",
+      "howToApply": [
+        "Contact a Rotary club or district — for example in Pakistan — and ask about global grant scholarship sponsorship",
+        "Work with the sponsoring district to complete the global grant application, which the district submits to The Rotary Foundation"
+      ],
+      "sourceUrls": [
+        "https://www.rotary.org/en/our-programs/scholarships"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "penn-world-scholars",
+      "name": "Penn World Scholars Program",
+      "funder": "University of Pennsylvania",
+      "category": "university-specific",
+      "countries": ["usa"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "A signature initiative for exceptional undergraduate international students admitted to Penn; scholars receive need-based financial aid from the University to meet their demonstrated need for the bachelor's programme",
+      "eligibility": [
+        "Exceptional international undergraduate applicants, including Pakistanis, admitted to the University of Pennsylvania",
+        "Selection weighs academic achievement, leadership potential, financial need, and career plans; each year newly admitted students are invited into the program",
+        "No separate scholarship application exists — consideration happens through Penn's regular undergraduate admission and financial aid process"
+      ],
+      "deadline": "Follow Penn's undergraduate admission deadlines (early decision and regular decision) for the application cycle you are entering (approx.)",
+      "howToApply": [
+        "Apply for undergraduate admission to Penn through the Common Application or Coalition Application by the published deadline",
+        "Submit Penn's financial aid application materials, including the CSS Profile, so the University can assess demonstrated need"
+      ],
+      "sourceUrls": [
+        "https://global.upenn.edu/isss/penn-world-scholars/"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "mmeg-us-canada-grants",
+      "name": "Margaret McNamara Education Grants (US-Canada)",
+      "funder": "Margaret McNamara Education Grants (MMEG), a volunteer network founded by World Bank Group staff",
+      "category": "need-based",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Grants of up to USD 15,000 (about PKR 4.17 million at the August 2026 rate, USD 1 = PKR 278) in the US-Canada program for women from developing countries already enrolled at an accredited U.S. or Canadian university",
+      "eligibility": [
+        "Self-identifying women aged at least 25 at the application deadline who are nationals of a country on the MMEG eligibility list, which includes Pakistan",
+        "Already registered full-time at an accredited, in-person U.S. or Canadian university with a valid student visa, and not holding U.S. or Canadian citizenship or permanent residency",
+        "Plans to continue full-time study for at least one semester after the award and to graduate within three years, with a commitment to improving the lives of women and children in a developing country"
+      ],
+      "deadline": "The US-Canada program accepts applications from 15 September to 15 January each year, with results announced in April (approx.)",
+      "howToApply": [
+        "Complete the online MMEG application during the September-to-January window, selecting the US-Canada program",
+        "Submit the required essays, budget, transcripts, and references; finalists are interviewed in English"
+      ],
+      "sourceUrls": [
+        "https://www.mmeg.org/apply"
+      ],
+      "ivyLeague": true
+    },
+    {
+      "id": "peo-international-peace-scholarship",
+      "name": "P.E.O. International Peace Scholarship",
+      "funder": "P.E.O. International, through the P.E.O. International Peace Scholarship Fund",
+      "category": "merit-based",
+      "countries": ["usa"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "A scholarship of up to USD 12,500 (about PKR 3.48 million at the August 2026 rate, USD 1 = PKR 278) for one year of graduate study at an accredited U.S. or Canadian institution, with renewal subject to the fund's continuing-eligibility rules",
+      "eligibility": [
+        "Women from countries outside the United States and Canada, including Pakistan, who are seeking an advanced degree in the U.S. or Canada",
+        "Already enrolled in a full-time graduate programme with at least one full year of study remaining",
+        "A stated intention to return to the home country after completing the degree"
+      ],
+      "deadline": "For the 2027-28 academic year, eligibility forms are accepted from 15 September to 15 December 2026; the same window applies annually (approx.)",
+      "howToApply": [
+        "Submit the P.E.O. IPS eligibility form online between 15 September and 15 December",
+        "If eligibility is confirmed, complete the full application with academic records, financial documentation, and references by the given deadline"
+      ],
+      "sourceUrls": [
+        "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/eligibility-and-application-process/"
+      ],
+      "ivyLeague": true
     }
   ]
 }

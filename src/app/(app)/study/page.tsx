@@ -93,7 +93,7 @@ export default function StudyPage() {
         </div>
         <div>
           <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-            Ustaad <span className="text-info">· استاد</span>
+            Ustaad A.I <span className="text-info">· استاد</span>
           </h1>
           <p className="text-sm text-muted">Your FSc study tutor — concepts, past papers, revision plans.</p>
         </div>
