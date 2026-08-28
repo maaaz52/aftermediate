@@ -31,7 +31,8 @@ export async function middleware(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
-  const isPublicPage = pathname === "/" || pathname === "/login" || pathname === "/coming-soon";
+  const isPublicPage =
+    pathname === "/" || pathname === "/login" || pathname === "/coming-soon" || pathname === "/verify-email";
   const isApiRoute = pathname.startsWith("/api/");
 
   if (isApiRoute) {
