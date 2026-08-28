@@ -11,7 +11,6 @@ import { MarksheetStep } from "@/components/quiz/marksheet-step";
 import { useStudent } from "@/lib/store";
 import {
   QUIZ_SECTIONS,
-  entryTestTotalFor,
   firstIncompleteSection,
   setAnswer,
 } from "@/lib/quiz";
@@ -35,12 +34,7 @@ export default function OnboardPage() {
   const isLast = step === total - 1;
 
   function change(id: string, value: unknown) {
-    let next = setAnswer(profile, id, value);
-    // Entry-test totals are implied by the test, never asked.
-    if (id === "quiz.entryTest") {
-      next = setAnswer(next, "marks.entryTestTotal", entryTestTotalFor(value as string));
-      next = setAnswer(next, "marks.entryTestObtained", undefined);
-    }
+    const next = setAnswer(profile, id, value);
     update(next);
   }
 

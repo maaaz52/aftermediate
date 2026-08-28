@@ -83,13 +83,6 @@ function isAnsweredFor(q: Question, v: unknown): boolean {
 
 /* ---------- option sets ---------- */
 
-const ENTRY_TESTS: { value: string; label: string; sub: string; streams: string[] }[] = [
-  { value: "net", label: "NUST NET", sub: "200 marks · 75% of NUST merit", streams: ["pre-engineering", "ics", "icom", "alevel", "pre-medical"] },
-  { value: "mdcat", label: "MDCAT", sub: "200 MCQs · 50% of medical merit", streams: ["pre-medical"] },
-  { value: "ecat", label: "UET ECAT", sub: "400 marks · engineering", streams: ["pre-engineering"] },
-  { value: "none", label: "Not yet", sub: "Haven't taken one", streams: ["pre-engineering", "ics", "icom", "alevel", "pre-medical"] },
-];
-
 const BOARDS = [
   "Lahore", "Federal", "Karachi", "Peshawar", "Multan", "Rawalpindi",
   "Gujranwala", "Sargodha", "Faisalabad", "AJK", "Cambridge / other",
@@ -106,8 +99,6 @@ const INTERESTS = [
 ].map((i) => ({ value: i, label: i }));
 
 /* ---------- sections ---------- */
-
-const hasTest = (p: StudentProfile) => !!p.quiz.entryTest && p.quiz.entryTest !== "none";
 
 export const QUIZ_SECTIONS: QuizSection[] = [
   {
@@ -142,16 +133,6 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     questions: [
       { id: "quiz.board", kind: "single", label: "Which board?", options: BOARDS },
       { id: "quiz.examYear", kind: "number", label: "FSc exam year", min: 2015, max: 2030 },
-      {
-        id: "quiz.entryTest", kind: "single", label: "Which entry test?",
-        optionsFor: (p) =>
-          ENTRY_TESTS.filter((t) => !p.stream || t.streams.includes(p.stream))
-            .map(({ value, label, sub }) => ({ value, label, sub })),
-      },
-      {
-        id: "marks.entryTestObtained", kind: "number", label: "Your score", min: 0,
-        help: "Leave blank if you haven't got your result yet.", showIf: hasTest,
-      },
     ],
   },
   {
