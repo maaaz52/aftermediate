@@ -349,7 +349,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 space-y-4">
                   <a
-                    href="mailto:hello@aftermediate.com"
+                    href="mailto:hello@aftermediate.site"
                     className="flex items-center gap-3 text-ink transition-colors hover:text-accent"
                   >
                     <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-accent shadow-[2px_2px_0_0_var(--color-ink)]">
@@ -357,7 +357,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-mono text-xs text-faint uppercase">Email us</p>
-                      <p className="text-sm font-semibold">hello@aftermediate.com</p>
+                      <p className="text-sm font-semibold">hello@aftermediate.site</p>
                     </div>
                   </a>
                 </div>

@@ -407,7 +407,7 @@ async function fetchAllSources(): Promise<{ results: ScrapedWebinar[]; logs: Fet
         signal: controller.signal,
         headers: {
           "User-Agent":
-            "Mozilla/5.0 (compatible; AftermediateBot/1.0; +https://aftermediate.com/bot)",
+            "Mozilla/5.0 (compatible; AftermediateBot/1.0; +https://aftermediate.site/bot)",
           Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
           "Accept-Language": "en-PK,en;q=0.9,ur;q=0.8",
         },
