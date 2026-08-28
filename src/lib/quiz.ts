@@ -83,9 +83,6 @@ function isAnsweredFor(q: Question, v: unknown): boolean {
 
 /* ---------- option sets ---------- */
 
-const PROVINCES = ["Punjab", "Sindh", "KPK", "Balochistan", "Islamabad", "AJK", "Gilgit-Baltistan"]
-  .map((p) => ({ value: p, label: p }));
-
 const INTERESTS = [
   "Medicine & Healthcare", "Technology & Coding", "Engineering & Machines",
   "Business & Finance", "Design & Creativity", "Data & Numbers",
@@ -119,35 +116,6 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     subtitle: "Scan it or skip — you can always add marks later.",
     questions: [
       { id: "marks", kind: "marksheet", label: "Scan your marksheet" },
-    ],
-  },
-  {
-    id: "money",
-    title: "What can you afford?",
-    subtitle: "Money is a merit factor too. Nobody tells you that.",
-    questions: [
-      { id: "quiz.city", kind: "text", label: "Which city do you live in?" },
-      { id: "quiz.province", kind: "single", label: "Province", options: PROVINCES },
-      {
-        id: "quiz.budgetMonthly", kind: "number", label: "Family budget (PKR per month)",
-        min: 0, help: "A rough number is fine — it changes what we recommend.",
-      },
-      {
-        id: "quiz.canRelocate", kind: "single", label: "Can you move city to study?",
-        options: [
-          { value: "yes", label: "Yes, anywhere" },
-          { value: "in-province", label: "Only within my province" },
-          { value: "no", label: "No, I need to stay home" },
-        ],
-      },
-      {
-        id: "quiz.needsScholarship", kind: "single", label: "Do you need a scholarship?",
-        options: [
-          { value: "must", label: "Yes — I can't go without one" },
-          { value: "helpful", label: "It would help a lot" },
-          { value: "no", label: "No" },
-        ],
-      },
     ],
   },
   {
