@@ -13,7 +13,6 @@ import {
   QUIZ_SECTIONS,
   entryTestTotalFor,
   firstIncompleteSection,
-  isSectionComplete,
   setAnswer,
 } from "@/lib/quiz";
 
@@ -33,7 +32,6 @@ export default function OnboardPage() {
 
   const section = QUIZ_SECTIONS[step];
   const total = QUIZ_SECTIONS.length;
-  const canAdvance = isSectionComplete(section, profile);
   const isLast = step === total - 1;
 
   function change(id: string, value: unknown) {
@@ -105,22 +103,21 @@ export default function OnboardPage() {
             <ArrowLeft /> Back
           </Button>
 
-          {isLast ? (
-            <Button size="lg" className="gap-2" disabled={!canAdvance} onClick={finish}>
-              <Sparkles className="h-4 w-4" /> Build my map <ArrowRight />
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" onClick={() => go(step + 1)}>
+              Skip
             </Button>
-          ) : (
-            <Button size="lg" disabled={!canAdvance} onClick={() => go(step + 1)}>
-              Continue <ArrowRight />
-            </Button>
-          )}
+            {isLast ? (
+              <Button size="lg" className="gap-2" onClick={finish}>
+                <Sparkles className="h-4 w-4" /> Build my map <ArrowRight />
+              </Button>
+            ) : (
+              <Button size="lg" onClick={() => go(step + 1)}>
+                Continue <ArrowRight />
+              </Button>
+            )}
+          </div>
         </div>
-
-        {!canAdvance && (
-          <p className="mt-3 text-right font-mono text-[11px] text-faint">
-            answer the starred questions to continue
-          </p>
-        )}
       </main>
     </div>
   );

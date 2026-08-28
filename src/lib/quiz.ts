@@ -116,7 +116,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     subtitle: "This decides which doors we map for you.",
     questions: [
       {
-        id: "stream", kind: "stream", label: "Your stream", required: true,
+        id: "stream", kind: "stream", label: "Your stream",
         options: [
           { value: "pre-medical", label: "FSc Pre-Medical", sub: "Biology · Chemistry · Physics" },
           { value: "pre-engineering", label: "FSc Pre-Engineering", sub: "Math · Chemistry · Physics" },
@@ -130,21 +130,9 @@ export const QUIZ_SECTIONS: QuizSection[] = [
   {
     id: "marks",
     title: "Your marksheet",
-    subtitle: "Scan it or type it. We only need the totals.",
+    subtitle: "Scan it or skip — you can always add marks later.",
     questions: [
       { id: "marks", kind: "marksheet", label: "Scan your marksheet" },
-      { id: "marks.matricObtained", kind: "number", label: "Matric obtained", required: true, min: 1 },
-      { id: "marks.matricTotal", kind: "number", label: "Matric total", required: true, min: 1 },
-      { id: "marks.fscObtained", kind: "number", label: "FSc obtained", required: true, min: 1 },
-      { id: "marks.fscTotal", kind: "number", label: "FSc total", required: true, min: 1 },
-      {
-        id: "marks.fscPart1Obtained", kind: "number", label: "FSc Part-1 obtained", min: 0,
-        help: "NUST weighs Part-1 at 15%.", showIf: (p) => p.quiz.entryTest === "net",
-      },
-      {
-        id: "marks.fscPart1Total", kind: "number", label: "FSc Part-1 total", min: 1,
-        showIf: (p) => p.quiz.entryTest === "net",
-      },
     ],
   },
   {
@@ -155,7 +143,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
       { id: "quiz.board", kind: "single", label: "Which board?", options: BOARDS },
       { id: "quiz.examYear", kind: "number", label: "FSc exam year", min: 2015, max: 2030 },
       {
-        id: "quiz.entryTest", kind: "single", label: "Which entry test?", required: true,
+        id: "quiz.entryTest", kind: "single", label: "Which entry test?",
         optionsFor: (p) =>
           ENTRY_TESTS.filter((t) => !p.stream || t.streams.includes(p.stream))
             .map(({ value, label, sub }) => ({ value, label, sub })),
@@ -171,11 +159,11 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     title: "What can you afford?",
     subtitle: "Money is a merit factor too. Nobody tells you that.",
     questions: [
-      { id: "quiz.city", kind: "text", label: "Which city do you live in?", required: true },
+      { id: "quiz.city", kind: "text", label: "Which city do you live in?" },
       { id: "quiz.province", kind: "single", label: "Province", options: PROVINCES },
       {
         id: "quiz.budgetMonthly", kind: "number", label: "Family budget (PKR per month)",
-        required: true, min: 0, help: "A rough number is fine — it changes what we recommend.",
+        min: 0, help: "A rough number is fine — it changes what we recommend.",
       },
       {
         id: "quiz.canRelocate", kind: "single", label: "Can you move city to study?",
@@ -202,7 +190,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     questions: [
       { id: "quiz.dreamField", kind: "text", label: "If it were entirely your call, what would you study?" },
       {
-        id: "quiz.parentsExpect", kind: "single", label: "What do your parents expect?", required: true,
+        id: "quiz.parentsExpect", kind: "single", label: "What do your parents expect?",
         options: [
           { value: "doctor", label: "Doctor" },
           { value: "engineer", label: "Engineer" },
@@ -213,7 +201,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
         ],
       },
       {
-        id: "quiz.decisionMaker", kind: "single", label: "Who actually makes the final call?", required: true,
+        id: "quiz.decisionMaker", kind: "single", label: "Who actually makes the final call?",
         options: [
           { value: "me", label: "Me" },
           { value: "parents", label: "My parents" },
@@ -235,11 +223,11 @@ export const QUIZ_SECTIONS: QuizSection[] = [
       { id: "quiz.projects", kind: "number", label: "Projects built", min: 0, max: 20 },
       {
         id: "quiz.english", kind: "scale", label: "How comfortable is your English?",
-        required: true, min: 1, max: 5, help: "1 = struggling · 5 = fluent",
+        min: 1, max: 5, help: "1 = struggling · 5 = fluent",
       },
       {
         id: "quiz.consistency", kind: "scale", label: "How consistent is your study routine?",
-        required: true, min: 1, max: 5, help: "1 = all-nighters only · 5 = daily",
+        min: 1, max: 5, help: "1 = all-nighters only · 5 = daily",
       },
     ],
   },
@@ -248,7 +236,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     title: "What pulls you?",
     subtitle: "Pick everything that sounds interesting. We'll connect the dots.",
     questions: [
-      { id: "interests", kind: "multi", label: "Your interests", required: true, options: INTERESTS },
+      { id: "interests", kind: "multi", label: "Your interests", options: INTERESTS },
     ],
   },
 ];
