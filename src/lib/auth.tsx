@@ -21,6 +21,7 @@ interface AuthCtx {
   ) => Promise<{ error?: string; needsConfirm?: boolean }>;
   signInGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
+  resetPassword: (email: string) => Promise<{ error?: string }>;
 }
 
 const Ctx = React.createContext<AuthCtx | null>(null);
@@ -65,6 +66,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await supabase.auth.signOut();
   };
 
+  const resetPassword = async (email: string) => {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    return error ? { error: error.message } : {};
+  };
+
   const value = React.useMemo<AuthCtx>(
     () => ({
       user: session?.user ?? null,
@@ -74,6 +82,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       signUpEmail,
       signInGoogle,
       signOut,
+      resetPassword,
     }),
     [session, loading]
   );

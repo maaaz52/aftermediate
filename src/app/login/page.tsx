@@ -37,23 +37,29 @@ function PasswordField({
   onChange,
   autoComplete,
   hint,
+  hintHref,
 }: {
   label: string;
   value: string;
   onChange: (v: string) => void;
   autoComplete: string;
   hint?: string;
+  hintHref?: string;
 }) {
   const [show, setShow] = React.useState(false);
   return (
     <div>
       <div className="flex items-center justify-between">
         <span className="font-mono text-[11px] uppercase tracking-widest text-muted">{label}</span>
-        {hint && (
+        {hintHref ? (
+          <Link href={hintHref} className="font-mono text-[11px] text-faint transition-colors hover:text-accent">
+            forgot?
+          </Link>
+        ) : hint ? (
           <button type="button" className="font-mono text-[11px] text-faint transition-colors hover:text-accent">
             {hint}
           </button>
-        )}
+        ) : null}
       </div>
       <div className="relative mt-1.5">
         <input
@@ -232,7 +238,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={setPassword}
                 autoComplete={mode === "signin" ? "current-password" : "new-password"}
-                hint={mode === "signin" ? "forgot?" : undefined}
+                hintHref={mode === "signin" ? "/forgot-password" : undefined}
               />
 
               {mode === "signup" && (
