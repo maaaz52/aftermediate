@@ -83,11 +83,6 @@ function isAnsweredFor(q: Question, v: unknown): boolean {
 
 /* ---------- option sets ---------- */
 
-const BOARDS = [
-  "Lahore", "Federal", "Karachi", "Peshawar", "Multan", "Rawalpindi",
-  "Gujranwala", "Sargodha", "Faisalabad", "AJK", "Cambridge / other",
-].map((b) => ({ value: b, label: b }));
-
 const PROVINCES = ["Punjab", "Sindh", "KPK", "Balochistan", "Islamabad", "AJK", "Gilgit-Baltistan"]
   .map((p) => ({ value: p, label: p }));
 
@@ -124,15 +119,6 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     subtitle: "Scan it or skip — you can always add marks later.",
     questions: [
       { id: "marks", kind: "marksheet", label: "Scan your marksheet" },
-    ],
-  },
-  {
-    id: "merit",
-    title: "Your entry test",
-    subtitle: "This is the single biggest lever on your merit.",
-    questions: [
-      { id: "quiz.board", kind: "single", label: "Which board?", options: BOARDS },
-      { id: "quiz.examYear", kind: "number", label: "FSc exam year", min: 2015, max: 2030 },
     ],
   },
   {
