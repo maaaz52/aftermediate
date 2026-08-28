@@ -27,7 +27,7 @@ export function TopNav() {
             {user ? (
               <>
                 <span className="max-w-[200px] truncate text-sm text-muted">
-                  {user.email}
+                  {user.user_metadata?.full_name || user.email}
                 </span>
                 <Button variant="ghost" size="sm" onClick={signOut}>
                   <LogOut className="h-4 w-4" />

@@ -48,7 +48,7 @@ export function ProfileSync() {
 
         const remote: Partial<StudentProfile> | null = data
           ? {
-              name: data.name ?? "",
+              name: data.name || user.user_metadata?.full_name || "",
               avatar: data.avatar ?? "",
               bio: data.bio ?? "",
               stream: data.stream ?? null,

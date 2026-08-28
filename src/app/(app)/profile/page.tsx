@@ -288,7 +288,7 @@ export default function ProfilePage() {
             ) : (
               <>
                 <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
-                  {profile.name || "Your profile"}
+                  {profile.name || user?.user_metadata?.full_name || "Your profile"}
                   <span className="ml-2 inline-flex cursor-pointer align-middle text-muted transition-colors hover:text-saffron">
                     <button onClick={() => beginEdit("basic")} aria-label="Edit name and bio">
                       <Pencil className="h-4 w-4" />
