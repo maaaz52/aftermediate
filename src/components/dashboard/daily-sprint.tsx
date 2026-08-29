@@ -63,7 +63,7 @@ export function DailySprint() {
   const currentQ = questions[current];
 
   const startSprint = () => {
-    if (todayQuestions.length === 0) return;
+    if (todayQuestions.length < SPRINT_SIZE) return;
     setQuestions(todayQuestions);
     setAnswers({});
     setCurrent(0);
@@ -78,6 +78,7 @@ export function DailySprint() {
   };
 
   const next = () => {
+    if (phase !== "active") return;
     if (current < questions.length - 1) {
       setCurrent((c) => c + 1);
       return;
@@ -194,6 +195,7 @@ export function DailySprint() {
   // --- active --------------------------------------------------------------
   if (!currentQ) return null;
   const revealed = answers[currentQ.id] !== undefined;
+  const chosen = answers[currentQ.id];
   const sectionLabel =
     recipe.find((s) => s.id === canonicalSection(currentQ.section))?.label ?? currentQ.section;
   const progress = ((current + (revealed ? 1 : 0)) / questions.length) * 100;
@@ -225,7 +227,6 @@ export function DailySprint() {
 
       <div className="mt-3 flex flex-col gap-2">
         {currentQ.options.map((opt, i) => {
-          const chosen = answers[currentQ.id];
           const isCorrect = i === currentQ.correct;
           const isChosen = i === chosen;
           return (
@@ -246,6 +247,10 @@ export function DailySprint() {
           );
         })}
       </div>
+
+      <p aria-live="polite" className="mt-3 min-h-4 text-xs font-bold text-ink">
+        {revealed ? (chosen === currentQ.correct ? "Correct! ✓" : "Not quite") : ""}
+      </p>
 
       {revealed && (
         <>
