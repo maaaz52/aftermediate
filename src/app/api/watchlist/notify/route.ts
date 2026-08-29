@@ -46,7 +46,7 @@ export async function POST(req: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Merit Alerts <watchlist@aftermediate.vercel.app>",
+        from: "Merit Alerts <watchlist@aftermediate.site>",
         to: userEmail,
         subject: `🔔 Merit update: ${universityName} — ${programName}`,
         html: `
@@ -56,7 +56,7 @@ export async function POST(req: Request) {
             ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${previousMerit}%</td></tr>` : ""}
             <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${currentMerit}%</td></tr>
           </table>
-          <p><a href="https://aftermediate.vercel.app/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
+          <p><a href="https://aftermediate.site/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
         `,
       }),
     });
