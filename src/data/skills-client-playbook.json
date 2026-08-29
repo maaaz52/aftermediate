@@ -1,0 +1,186 @@
+{
+  "sections": [
+    {
+      "id": "kickoff",
+      "title": "Kickoff: Winning the First Impression",
+      "intro": "The first 48 hours with a new client set the tone for the entire project. Here\u2019s how to start strong.",
+      "cards": [
+        {
+          "id": "kickoff-discovery-questions",
+          "type": "template",
+          "title": "Discovery Questionnaire",
+          "body": "Copy these questions into your first message or brief form. They work for any service \u2014 design, dev, content, marketing. [Project name]: what is the single most important outcome you want from this? [Target audience]: who exactly is this for? Be specific \u2014 age, location, job title if relevant. [Current situation]: what have you tried so far? What is and isn\u2019t working? [Timeline]: when does this need to be live, and are there any hard deadlines (events, launches, seasons)? [Budget range]: what is your approximate budget for this deliverable? Knowing this upfront saves everyone time. [Reference examples]: share 2\u20133 links or files of work you love, and tell me what you like about each. [Success criteria]: how will we know this project is successful? Metrics, feedback, conversions, something else?",
+          "tags": ["discovery", "onboarding", "client-questions", "briefing"]
+        },
+        {
+          "id": "kickoff-kickoff-message",
+          "type": "script",
+          "title": "Kickoff Message Script",
+          "body": "Assalam-o-Alaikum [Client name], thank you for signing off on the proposal! I am excited to get started on [project name]. Here is what happens next: 1) I will send you a brief questionnaire (or we can hop on a 15-minute call) to nail down the specifics. 2) Within [X] days I will share the first draft / wireframe / outline for your feedback. 3) You will have [X] rounds of revisions included \u2014 any additional scope will be quoted separately. 4) Final delivery by [date]. A few things I need from you to start: [list deliverables from client \u2014 content, access, brand assets, etc.]. Please share these by [date] so we stay on track. Looking forward to creating something great together!",
+          "tags": ["kickoff", "onboarding", "client-communication", "expectations"]
+        },
+        {
+          "id": "kickoff-no-work-without-scope",
+          "type": "rule",
+          "title": "Never Start Before Scope Sign-Off",
+          "body": "No matter how excited a client is, or how much they say \u201cjust start and we\u2019ll figure it out later,\u201d do not write a single line of code or open a design tool until the scope of work is signed. Here\u2019s why: without a signed scope, there is no boundary. The client will keep adding \u201csmall things\u201d that turn into weeks of unpaid work, and when you push back they will say \u201cbut we discussed this.\u201d A signed scope protects both of you \u2014 it gives the client clarity on what they are paying for, and it gives you the authority to say no or quote extra. Send the scope document, wait for a written \u201capproved\u201d or a signature, and only then start the clock.",
+          "tags": ["scope-creep", "boundaries", "professionalism", "contracts"]
+        },
+        {
+          "id": "kickoff-onboarding-framework",
+          "type": "framework",
+          "title": "5-Step Onboarding Framework",
+          "body": "Step 1 \u2014 Discovery Call or Questionnaire: Learn the client\u2019s goals, audience, timeline, and budget. Do not skip this even for small projects. Step 2 \u2014 Written Brief: Summarise what you heard and send it back to the client for confirmation. This becomes the foundation of your scope. Step 3 \u2014 Proposal & Quote: Outline deliverables, timeline, price, payment terms, and revision limits. Attach your standard terms and conditions. Step 4 \u2014 Contract & Deposit: Send the agreement, collect the 50% deposit (via bank transfer, Payoneer, or Wise), and get a signed or written approval. Step 5 \u2014 Kickoff Message: Confirm receipt of deposit, restate the timeline, list what you need from the client to begin, and set the first milestone date. Do not proceed from Step 3 to Step 5 without the signed scope \u2014 that document is your shield against scope creep.",
+          "tags": ["onboarding", "workflow", "process", "client-management"]
+        }
+      ]
+    },
+    {
+      "id": "contracts",
+      "title": "Contracts: Protect Your Livelihood",
+      "intro": "A handshake deal is not a deal. These templates and tactics keep your income and IP safe.",
+      "cards": [
+        {
+          "id": "contracts-simple-agreement",
+          "type": "template",
+          "title": "Simple Freelance Agreement Template",
+          "body": "This agreement is between [Client Name / Company] and [Your Name / Business Name]. 1. Scope of Work: [Describe deliverables, page count, features, word count, or any measurable output]. 2. Timeline: Project starts [date] and final deliverable is due by [date]. Milestone 1 ([deliverable]) due [date], Milestone 2 ([deliverable]) due [date]. 3. Payment: Total fee [USD amount]. 50% deposit ([USD amount]) due upon signing. Remaining [USD amount] due upon [milestone or completion]. Payments via [Bank Transfer / Payoneer / Wise]. 4. Revisions: [Number] rounds of revisions included. Additional revision rounds will be billed at [hourly rate or per-round fee]. 5. Intellectual Property: Full ownership of final deliverables transfers to the client upon full payment. Concepts, rejected drafts, and source code remain with [Your Name] unless otherwise agreed. 6. Cancellation: Either party may cancel with [X] days notice. The deposit is non-refundable and covers work completed up to cancellation. 7. Late Payment: A [X]% late fee applies after [X] days past due. Work may be paused until payment is received.",
+          "tags": ["contract", "legal", "terms", "freelance-agreement"]
+        },
+        {
+          "id": "contracts-scope-creep-script",
+          "type": "script",
+          "title": "Scope Creep Response Script",
+          "body": "Thank you for the suggestion, [Client name]! I can see how [new request] would add value to the project. Just to clarify, this falls outside the scope we agreed on in our contract, which covers [original deliverables]. I am happy to add this to the project. Here is the revised estimate: additional cost of [USD amount] and an extended timeline of [X] additional days. Would you like me to proceed? If you prefer to keep things within the original budget for now, we can save this for a future phase. Let me know how you would like to proceed!",
+          "tags": ["scope-creep", "upselling", "boundaries", "professional"]
+        },
+        {
+          "id": "contracts-deposit-rule",
+          "type": "rule",
+          "title": "50% Upfront Deposit, No Exceptions",
+          "body": "You must collect at least 50% of the total project fee before starting any work. This is non-negotiable for several reasons. First, it filters out unserious clients \u2014 someone who won\u2019t pay a deposit will almost certainly be difficult about the final payment. Second, it covers your time if the project gets cancelled after you have already put in work. Third, it gives you cash flow to deliver quality work without worrying about when the next payment arrives. If a client pushes back, explain that this is standard practice for professional freelancers on Upwork, Fiverr, and direct contracts. Offer a smaller first milestone (e.g., 30% deposit, 30% at midpoint, 40% on delivery) if they really push, but never start at zero.",
+          "tags": ["deposit", "payment-terms", "risk-management", "cash-flow"]
+        },
+        {
+          "id": "contracts-milestone-framework",
+          "type": "framework",
+          "title": "3-Milestone Payment Framework",
+          "body": "Divide every project into three payment milestones that align with natural delivery points. Milestone 1 \u2014 Kickoff & Deposit (50%): Collect this upon signing. Work begins only after this clears. Deliver the brief, research, wireframes, or outline. Milestone 2 \u2014 Progress Review (25%): Collect this when you present the first complete draft, beta, or design concept. The client reviews and gives feedback during this phase. Do not hand over source files or production-ready assets until the payment clears. Milestone 3 \u2014 Final Delivery (25%): Collect this when the client approves the final version. Once payment clears, deliver all final files, source code, handover notes, and login credentials. For projects under USD 200, use 50% upfront and 50% on delivery. For projects over USD 2000, you can split into 4 milestones (25% each). The principle stays the same: never let the outstanding balance exceed the work you have already delivered.",
+          "tags": ["milestones", "payment-structure", "cash-flow", "risk-management"]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing: Charge What You Are Worth",
+      "intro": "Pakistani freelancers consistently underprice themselves. Here is how to set rates that reflect your skill, not your location.",
+      "cards": [
+        {
+          "id": "pricing-value-vs-hourly",
+          "type": "rule",
+          "title": "Price the Value, Not the Hour",
+          "body": "Charging by the hour caps your income and incentivises you to work slower. Instead, price based on the value the client receives. A logo that becomes a billion-rupee brand identity is worth the same whether it took you 2 hours or 20. For fixed-scope projects like websites, landing pages, and content packages, quote a flat project fee. For ongoing work like social media management or monthly SEO, quote a monthly retainer. Use hourly rates only for ad-hoc maintenance, consultations, or revisions beyond the included rounds. When a client asks for your hourly rate, avoid giving a number directly \u2014 instead say \u201cfor this project I would quote a flat fee of USD [X], which works out to roughly USD [Y] per hour based on estimated time.\u201d This keeps the conversation anchored to value, not time.",
+          "tags": ["value-pricing", "hourly-rates", "pricing-strategy", "positioning"]
+        },
+        {
+          "id": "pricing-rate-table",
+          "type": "template",
+          "title": "Pakistan Freelancer Rate Card",
+          "body": "Use these ranges as a baseline and adjust for your experience, portfolio, and client budget. All prices in USD with PKR conversions at approximately Rs 280\u2013300 per dollar. Logo Design: USD 100\u2013300 (approx. Rs 28,000\u201390,000). Website (5-page, responsive): USD 300\u2013800 (approx. Rs 84,000\u2013240,000). E-commerce Store (Shopify/WooCommerce): USD 500\u20131,500 (approx. Rs 140,000\u2013450,000). Content Writing per 1,000 words: USD 30\u201380 (approx. Rs 8,400\u201324,000). Social Media Graphics per set: USD 50\u2013200 (approx. Rs 14,000\u201360,000). Video Editing per minute: USD 40\u2013120 (approx. Rs 11,200\u201336,000). Mobile App Screen (UI): USD 25\u201360 each (approx. Rs 7,000\u201318,000). Monthly SEO Retainer: USD 200\u2013600 (approx. Rs 56,000\u2013180,000). These are professional rates for quality work. Do not drop below USD 100 for any project \u2014 at that point the administrative overhead eats your margin. For Pakistani clients, offer a 10\u201315% discount if they pay in PKR via bank transfer, which saves you the Payoneer or Wise conversion fee.",
+          "tags": ["pricing", "rates", "pakistan", "USD-to-PKR"]
+        },
+        {
+          "id": "pricing-deposit-milestone-framework",
+          "type": "framework",
+          "title": "Deposit & Milestone Pricing Framework",
+          "body": "Use this pricing structure for every project, regardless of size. For projects under USD 200: 50% upfront, 50% on delivery. Simple, no middle milestone. For projects USD 200\u20131000: 50% upfront, 25% at first draft/design review, 25% on final delivery. This keeps cash flowing through the project. For projects USD 1000\u20135000: 30% upfront, 30% at midpoint, 30% at final review, 10% on delivery and handover. The 10% retention gives you leverage for final sign-off. For projects over USD 5000: Custom milestone schedule negotiated in the contract, typically broken into 20% chunks tied to specific deliverables. Never offer net-30 or net-60 payment terms to first-time clients. Payment must clear before you deliver final assets. If a client insists on invoicing terms, check their payment history with trusted mutual contacts first.",
+          "tags": ["milestones", "payment-structure", "pricing", "cash-flow"]
+        },
+        {
+          "id": "pricing-price-increase-script",
+          "type": "script",
+          "title": "Price Increase Script for Existing Clients",
+          "body": "Subject: Update on my rates for [year]. Hi [Client name], I hope you are doing well! I wanted to give you a heads-up about a change coming next month. Over the past [time period], I have invested significantly in upskilling, better tools, and faster delivery processes, which has allowed me to deliver higher quality work for my clients. To reflect this, I will be updating my rates starting [date]. For ongoing projects, I am happy to lock in your current rate for one more project. After that, the new rate of [new USD amount] for [service] will apply. I value our working relationship and wanted to give you plenty of notice so there are no surprises. Let me know if you have any questions \u2014 I am happy to hop on a quick call to discuss.",
+          "tags": ["pricing", "increase-rates", "existing-clients", "communication"]
+        },
+        {
+          "id": "pricing-dont-compete-on-price",
+          "type": "rule",
+          "title": "Never Compete on Price Alone",
+          "body": "There will always be a freelancer on Fiverr willing to do a \u201cwhole website for $20.\u201d That is not your competition. When you compete on price, you enter a race to the bottom where the only winner is the platform taking their cut. Instead, compete on reliability, communication, speed, and quality. A Pakistani freelancer who responds within 2 hours, delivers on time, speaks professional English, and produces work that actually works is rare \u2014 and clients will pay a premium for that. When a prospect says \u201cI found someone cheaper,\u201d respond with \u201cI understand budget is important. What I offer is on-time delivery, unlimited revisions until you are happy, and a money-back guarantee if I miss the deadline. If those matter to you, I am happy to match or come close to their price for a smaller scope, and we can expand later.\u201d Never drop your price without reducing scope first.",
+          "tags": ["pricing", "competition", "positioning", "value"]
+        }
+      ]
+    },
+    {
+      "id": "difficult",
+      "title": "Difficult Clients: Keep Your Sanity",
+      "intro": "Not every client will be a dream. Here is how to handle the hard ones without burning bridges or your bank account.",
+      "cards": [
+        {
+          "id": "difficult-late-payment-script",
+          "type": "script",
+          "title": "Late Payment: Polite Nudge to Firm Reminder",
+          "body": "First nudge (3 days overdue): \u201cHi [Client name], just a gentle reminder that invoice #[number] for USD [amount] was due on [date]. Please let me know if there are any issues with the payment or if you need the bank details resent. Thanks!\u201d Second reminder (7 days overdue): \u201cHi [Client name], following up on the invoice below. The payment is now a week overdue. Please arrange the transfer at your earliest convenience. Let me know if you need updated bank details.\u201d Final notice (14 days overdue): \u201cHi [Client name], I have sent two reminders about invoice #[number] without a response. As per our agreement, I am pausing all work on this project until the outstanding balance of USD [amount] is cleared. Please remit payment within 3 working days to avoid any further escalation. I value our working relationship and hope we can resolve this smoothly.\u201d For payments via Payoneer, Wise, or direct bank transfer, always include the exact account details in every invoice to avoid \u201cI lost the details\u201d delays.",
+          "tags": ["late-payment", "invoicing", "collection", "communication"]
+        },
+        {
+          "id": "difficult-unreasonable-revisions-script",
+          "type": "script",
+          "title": "Unreasonable Revision Script",
+          "body": "I understand you want this to be perfect, [Client name], and I appreciate your attention to detail. However, we have now completed the [number] rounds of revisions included in our agreement. The changes you are requesting now go beyond the original scope and would require significant additional work. I can offer two options: Option 1 \u2014 I complete these changes at my revision rate of USD [amount] per round, which I estimate would take [X] hours. Option 2 \u2014 We finalise the project as-is, and you can loop me back in for a Phase 2 once you have more clarity on the remaining changes. Which would you prefer? I want to make sure you are happy with the final deliverable while also being fair about the work involved.",
+          "tags": ["revisions", "scope-creep", "boundaries", "professional"]
+        },
+        {
+          "id": "difficult-rework-offer-template",
+          "type": "template",
+          "title": "Rework Offer Message Template",
+          "body": "If a client is unhappy, your first instinct might be to refund just to make the problem go away. Do not do that. A refund means you worked for free, and the client walks away with nothing \u2014 no one wins. Instead, offer rework: \u201cI am sorry you are not happy with the deliverable. Let me fix it at no additional cost. Tell me exactly what needs to change and I will get it done within [X] days.\u201d This keeps the money in your account and shows the client you care about quality. The only exception is if you have fundamentally failed to deliver what was promised in the scope \u2014 for example, you built an e-commerce site and it doesn\u2019t process payments. In that case, offer a partial refund for the undelivered functionality, not the entire project. Genuine mistakes happen; fix them honestly. But for \u201cI changed my mind\u201d or \u201cmy budget got cut,\u201d the deposit is non-refundable and your terms back you up.",
+          "tags": ["refunds", "rework", "dispute-resolution", "client-satisfaction"]
+        },
+        {
+          "id": "difficult-firing-client-framework",
+          "type": "framework",
+          "title": "How to Fire a Client Professionally",
+          "body": "Sometimes a client is more trouble than they are worth \u2014 constant late payments, disrespectful communication, endless scope creep, or demands that violate your ethics. Step 1 \u2014 Review Your Contract: Check what you have already delivered against the scope. Calculate what they have paid vs. what you owe them in deliverables. Step 2 \u2014 Deliver Everything Paid For: Before you cut ties, hand over everything the client has already paid for. Close their milestones on Upwork, send final files, and clear your obligations. Step 3 \u2014 The Exit Message: \u201cDear [Client name], after careful consideration, I have decided that I will not be able to continue working on this project. I am delivering all completed work that has been paid for via [file link]. For the remaining scope, I am happy to help you find another freelancer if needed. Please settle any outstanding balance within [X] days.\u201d Step 4 \u2014 Archive & Move On: Block or mute if needed, leave an honest (not emotional) review on the platform, and treat it as a learning experience. Frame it as a fit issue, not a blame game. The Pakistani freelancer community is small; burning a client publicly hurts your reputation more than theirs.",
+          "tags": ["firing-client", "exit-strategy", "professionalism", "boundaries"]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery: End Strong, Get Referrals",
+      "intro": "How you deliver is how you are remembered. A great handover leads to repeat business and word-of-mouth growth.",
+      "cards": [
+        {
+          "id": "delivery-handover-script",
+          "type": "script",
+          "title": "Handover Message Script",
+          "body": "Assalam-o-Alaikum [Client name], I am pleased to share the final deliverables for [project name]! Here is everything included: [list key deliverable files or links]. I have also prepared a quick handover document that covers [usage instructions, login details, or maintenance tips]. Please take a look and let me know if everything looks good. Once you confirm and the final payment of USD [amount] clears, I will transfer full ownership / publish the site / hand over source files. If you need any minor tweaks or have questions about how to use the deliverables, I am happy to help. Thank you for trusting me with this project! If you know anyone who needs similar work, I would greatly appreciate a referral. And if you would like to leave a quick testimonial, I have attached a Google Form link below. Looking forward to working with you again!",
+          "tags": ["handover", "delivery", "testimonial", "referral"]
+        },
+        {
+          "id": "delivery-checklist",
+          "type": "template",
+          "title": "Deliverable Handover Checklist",
+          "body": "Use this checklist before sending any final deliverable to a client. [ ] All files are named consistently (e.g., ProjectName_Final_V2.ext). [ ] Source files are separate from production files. [ ] Spelling, grammar, and brand tone verified. [ ] Images compressed and links tested. [ ] Code minified or production-ready (no console.logs, no broken imports). [ ] Login credentials or access instructions are documented in a password-protected note. [ ] Usage guide or handover document is written in plain English, not technical jargon. [ ] Final payment invoice is attached or sent. [ ] Testimonial request is included (Google Form or direct message). [ ] Backup of all files saved to your own Google Drive or hard drive. If you check all ten boxes, you are ready to send. If you are missing any, do not hit send yet \u2014 a sloppy handover undoes weeks of good work.",
+          "tags": ["checklist", "delivery", "quality-assurance", "handover"]
+        },
+        {
+          "id": "delivery-final-polish-rule",
+          "type": "rule",
+          "title": "The 24\u201348 Hour Final Polish Rule",
+          "body": "Never deliver a project on the same day you finish working on it. Always give yourself 24 to 48 hours between \u201ccompletion\u201d and \u201cdelivery.\u201d This is not about doing more work \u2014 it is about seeing your work with fresh eyes. When you stare at something for days, you stop noticing typos, alignment issues, broken links, and confusing copy. Step away for a day, then do a final review. Read every line of text from the client\u2019s perspective. Click every button. Test the email link. Check the mobile layout. Ask yourself: if I paid for this, would I be thrilled? This buffer also gives you time to prepare the handover document, organise files, and write a professional delivery message. Delivering a day late but flawless is always better than delivering early with errors. Clients remember quality, not speed.",
+          "tags": ["quality", "delivery", "polish", "professionalism"]
+        },
+        {
+          "id": "delivery-post-project-framework",
+          "type": "framework",
+          "title": "Post-Project Review & Referral Framework",
+          "body": "Step 1 \u2014 Deliver and Confirm: Send the handover, wait for confirmation, collect final payment, transfer ownership. Step 2 \u2014 The 3-Day Follow-Up: Three days after delivery, message the client: \u201cHi [name], just checking in \u2014 is everything working well with [deliverable]? Any questions?\u201d This shows you care beyond the paycheck. Step 3 \u2014 Request a Testimonial: \u201cIf you are happy with the work, I would love a short testimonial. Even 2\u20133 sentences about your experience helps future clients trust me.\u201d Offer to write it for them if they are short on time \u2014 they can approve and send. Step 4 \u2014 Ask for a Referral: \u201cDo you know any colleagues, friends, or business owners who might need [your service]? I am currently taking on [X] more projects this month and offer a referral discount of 10% for both of you.\u201d Step 5 \u2014 Add to Portfolio: With permission, add the project to your portfolio, Behance, or Dribbble. Tag the client if appropriate (some prefer anonymity). Step 6 \u2014 CRM Update: Log the client\u2019s name, project value, niche, and quality rating in your own spreadsheet. This becomes your goldmine for future outreach and rate increases.",
+          "tags": ["referral", "testimonial", "follow-up", "client-retention"]
+        }
+      ]
+    }
+  ]
+}
