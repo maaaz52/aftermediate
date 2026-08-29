@@ -26,7 +26,10 @@ function loadHistory(): Msg[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed;
+    }
   } catch {
     /* ignore */
   }
@@ -62,7 +65,8 @@ export function EssayRater() {
     try {
       const raw = window.localStorage.getItem("aftermediate:essays:draft");
       if (raw) {
-        setDraftText(JSON.parse(raw) as string);
+        const parsed = JSON.parse(raw);
+        setDraftText(typeof parsed === "string" ? parsed : "");
         setLoadedNote("Loaded the draft from your writing guide.");
       } else {
         setLoadedNote("No draft saved in the writing guide yet — paste one here instead.");
@@ -195,11 +199,13 @@ export function EssayRater() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && send()}
                 placeholder="Paste your essay or ask about a section…"
+                aria-label="Chat message"
                 className="h-11 flex-1 rounded-lg border border-line bg-surface-2 px-3.5 text-sm text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-violet/50"
               />
               <button
                 onClick={() => send()}
                 disabled={streaming || !input.trim()}
+                aria-label="Send message"
                 className="grid h-11 w-11 place-items-center rounded-lg bg-violet text-background disabled:opacity-50"
               >
                 <Send className="h-4 w-4" />
