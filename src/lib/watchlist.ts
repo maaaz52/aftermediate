@@ -20,7 +20,7 @@ export interface AddEntryInput {
   universityId: string;
   programName: string;
   myMerit: number | null;
-  myStream: string | null;
+  myStream?: string | null;
 }
 
 let _counter = 0;

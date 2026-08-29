@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import type { Marks, PracticeAttempt, QuizAnswers, Stream } from "@/lib/types";
+import type { Marks, PracticeAttempt, QuizAnswers, Stream, WatchlistEntry } from "@/lib/types";
 
 export interface EducationEntry {
   id: string;
@@ -26,6 +26,7 @@ export interface StudentProfile {
   quizStep: number;
   quizCompletedAt: string | null;
   practice: PracticeAttempt[];
+  watchlist: WatchlistEntry[];
 }
 
 const defaultProfile: StudentProfile = {
@@ -48,6 +49,7 @@ const defaultProfile: StudentProfile = {
   quizStep: 0,
   quizCompletedAt: null,
   practice: [],
+  watchlist: [],
 };
 
 interface Store {

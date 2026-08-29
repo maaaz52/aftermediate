@@ -109,3 +109,6 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
+
+-- Migration for University Watchlist feature:
+alter table public.profiles add column if not exists watchlist jsonb default '[]'::jsonb;

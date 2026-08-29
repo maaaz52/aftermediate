@@ -348,3 +348,5 @@ export interface AbroadTest {
   };
   sourceUrls: string[];
 }
+
+export type { WatchlistEntry } from "./watchlist";

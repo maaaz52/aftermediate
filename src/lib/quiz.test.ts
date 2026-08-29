@@ -28,6 +28,7 @@ function blank(): StudentProfile {
     quizStep: 0,
     quizCompletedAt: null,
     practice: [],
+    watchlist: [],
   };
 }
 
