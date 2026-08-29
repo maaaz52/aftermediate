@@ -1,11 +1,13 @@
 import { describe, expect, it } from "vitest";
 import {
   buildPool,
+  CANONICAL_LABELS,
   canonicalSection,
   computeStreak,
   dailyPick,
   dayKey,
   dayNumber,
+  gradeSprint,
   isSprintDoneToday,
   recipeFor,
   sprintRecipes,
@@ -288,5 +290,82 @@ describe("computeStreak", () => {
   it("ignores non-sprint attempts", () => {
     const attempts = [sprintAttempt("2026-08-29", "quick"), sprintAttempt("2026-08-28", "full")];
     expect(computeStreak(attempts, noon("2026-08-29"))).toBe(0);
+  });
+});
+
+describe("gradeSprint", () => {
+  const sprintQs = [
+    q("p1", "physics", 1),
+    q("p2", "physics", 0),
+    q("m1", "math", 2),
+    q("m2", "mathematics", 3),
+    q("i1", "intelligence", 0),
+  ];
+
+  it("scores an all-correct sprint at 5/5 100%", () => {
+    const answers = { p1: 1, p2: 0, m1: 2, m2: 3, i1: 0 };
+    const attempt = gradeSprint(sprintQs, answers, 90);
+    expect(attempt.mode).toBe("sprint");
+    expect(attempt.testId).toBe("sprint");
+    expect(attempt.score).toBe(5);
+    expect(attempt.maxScore).toBe(5);
+    expect(attempt.percent).toBe(100);
+    expect(attempt.timeUsedSeconds).toBe(90);
+    expect(attempt.autoSubmitted).toBe(false);
+  });
+
+  it("counts correct/wrong/skipped per canonical section", () => {
+    const answers = { p1: 1, p2: 3, m1: 2 }; // m2 skipped, i1 skipped
+    const attempt = gradeSprint(sprintQs, answers, 60);
+    expect(attempt.score).toBe(2);
+    expect(attempt.percent).toBe(40);
+    expect(attempt.sections).toEqual([
+      { id: "physics", name: "Physics", correct: 1, wrong: 1, skipped: 0 },
+      { id: "mathematics", name: "Mathematics", correct: 1, wrong: 0, skipped: 1 },
+      { id: "intelligence", name: "Intelligence", correct: 0, wrong: 0, skipped: 1 },
+    ]);
+  });
+
+  it("uses canonical labels for aliased section ids", () => {
+    const attempt = gradeSprint([q("m1", "math", 0)], { m1: 0 }, 10);
+    expect(attempt.sections[0].name).toBe(CANONICAL_LABELS.mathematics);
+  });
+
+  it("floors timeUsedSeconds at 0", () => {
+    const attempt = gradeSprint([q("p1", "physics", 0)], { p1: 1 }, -5);
+    expect(attempt.timeUsedSeconds).toBe(0);
+  });
+});
+
+describe("computeStreak edge days", () => {
+  const noon = (day: string) => new Date(`${day}T15:00:00Z`); // 20:00 PKT
+
+  it("rolls over month and year boundaries", () => {
+    expect(
+      computeStreak(
+        ["2026-08-30", "2026-08-31", "2026-09-01"].map((day) => sprintAttempt(day)),
+        noon("2026-09-01")
+      )
+    ).toBe(3);
+    expect(
+      computeStreak(
+        ["2026-12-30", "2026-12-31", "2027-01-01"].map((day) => sprintAttempt(day)),
+        noon("2027-01-01")
+      )
+    ).toBe(3);
+  });
+
+  it("handles leap day", () => {
+    expect(
+      computeStreak(
+        ["2028-02-28", "2028-02-29", "2028-03-01"].map((day) => sprintAttempt(day)),
+        noon("2028-03-01")
+      )
+    ).toBe(3);
+  });
+
+  it("dedupes multiple attempts on the same day", () => {
+    const attempts = [sprintAttempt("2026-08-29"), sprintAttempt("2026-08-29"), sprintAttempt("2026-08-28")];
+    expect(computeStreak(attempts, noon("2026-08-29"))).toBe(2);
   });
 });

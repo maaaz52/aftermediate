@@ -249,3 +249,59 @@ export function computeStreak(attempts: PracticeAttempt[], now: Date): number {
   if (days.has(yesterday)) return countBack(days, yesterday);
   return 0;
 }
+
+// ---------------------------------------------------------------------------
+// Sprint grading
+// ---------------------------------------------------------------------------
+
+function makeId(): string {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
+  return `sprint-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
+/**
+ * Grades a 5-question sprint into a PracticeAttempt. Sprints are always
+ * 1 mark per correct answer with no negative marking, regardless of which
+ * banks the questions came from.
+ */
+export function gradeSprint(
+  questions: PracticeQuestion[],
+  answers: Record<string, number>,
+  timeUsedSeconds: number
+): PracticeAttempt {
+  const stats = new Map<CanonicalSection, { correct: number; wrong: number; skipped: number }>();
+  let correctCount = 0;
+  for (const question of questions) {
+    const chosen = Number.isInteger(answers[question.id]) ? answers[question.id] : null;
+    const isCorrect = chosen !== null && chosen === question.correct;
+    const bucket = stats.get(canonicalSection(question.section) ?? "english") ?? {
+      correct: 0,
+      wrong: 0,
+      skipped: 0,
+    };
+    if (chosen === null) bucket.skipped++;
+    else if (isCorrect) {
+      bucket.correct++;
+      correctCount++;
+    } else bucket.wrong++;
+    stats.set(canonicalSection(question.section) ?? "english", bucket);
+  }
+  const maxScore = questions.length;
+  const percent = maxScore > 0 ? Math.round((correctCount / maxScore) * 1000) / 10 : 0;
+  return {
+    id: makeId(),
+    testId: "sprint",
+    mode: "sprint" as const,
+    submittedAt: new Date().toISOString(),
+    autoSubmitted: false,
+    timeUsedSeconds: Math.max(0, Math.round(timeUsedSeconds)),
+    score: correctCount,
+    maxScore,
+    percent,
+    sections: [...stats.entries()].map(([id, s]) => ({
+      id,
+      name: CANONICAL_LABELS[id],
+      ...s,
+    })),
+  };
+}

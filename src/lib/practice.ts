@@ -302,6 +302,10 @@ export function pushAttempt(
   return [attempt, ...list].slice(0, ATTEMPT_CAP);
 }
 
+export function sprintAttempts(list: PracticeAttempt[]): PracticeAttempt[] {
+  return list.filter((a) => a.mode === "sprint");
+}
+
 export function attemptsFor(list: PracticeAttempt[], testId: string): PracticeAttempt[] {
   return list.filter((a) => a.testId === testId);
 }
