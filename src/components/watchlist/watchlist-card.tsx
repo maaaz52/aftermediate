@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { Badge } from "@/components/ui/badge";
 import { NotificationBadge } from "./notification-badge";
 import { computeGap } from "@/lib/watchlist";
@@ -10,7 +11,7 @@ interface WatchlistCardProps {
   currentMerit: number | null;
   currentYear: string | null;
   changed: boolean;
-  onRefresh: (id: string) => void;
+  onRefresh: () => void;
   onRemove: (id: string) => void;
   onToggleEmail: (id: string, enabled: boolean) => void;
   universityName: string;
@@ -41,15 +42,25 @@ export function WatchlistCard({
 
   const displayMerit = currentMerit ?? entry.lastKnownMerit;
 
-  const lastCheckedLabel = entry.lastCheckedAt
-    ? (() => {
-        const diff = Date.now() - new Date(entry.lastCheckedAt).getTime();
-        if (diff < 60_000) return "moments ago";
-        if (diff < 3_600_000) return `${Math.floor(diff / 60_000)}m ago`;
-        if (diff < 86_400_000) return `${Math.floor(diff / 3_600_000)}h ago`;
-        return `${Math.floor(diff / 86_400_000)}d ago`;
-      })()
-    : "never";
+  const [now, setNow] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setNow(Date.now()), 0);
+    const id = setInterval(() => setNow(Date.now()), 60_000);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(id);
+    };
+  }, []);
+
+  const lastCheckedLabel = React.useMemo(() => {
+    if (!entry.lastCheckedAt || now === 0) return "never";
+    const diff = now - new Date(entry.lastCheckedAt).getTime();
+    if (diff < 60_000) return "moments ago";
+    if (diff < 3_600_000) return `${Math.floor(diff / 60_000)}m ago`;
+    if (diff < 86_400_000) return `${Math.floor(diff / 3_600_000)}h ago`;
+    return `${Math.floor(diff / 86_400_000)}d ago`;
+  }, [entry.lastCheckedAt, now]);
 
   return (
     <div className="relative flex rounded-2xl border-2 border-ink bg-surface pixel-shadow">
@@ -111,7 +122,7 @@ export function WatchlistCard({
         <div className="flex items-center justify-between text-[11px] text-faint">
           <span>Updated {lastCheckedLabel}</span>
           <button
-            onClick={() => onRefresh(entry.id)}
+            onClick={() => onRefresh()}
             className="rounded-lg border border-line px-2.5 py-1 text-[11px] font-medium text-ink hover:bg-surface-2 transition-colors"
           >
             Refresh now

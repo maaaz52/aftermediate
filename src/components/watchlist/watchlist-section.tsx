@@ -25,7 +25,7 @@ function uniNameFor(id: string): string {
 
 export function WatchlistSection() {
   const { profile, update } = useStudent();
-  const watchlist = profile.watchlist ?? [];
+  const watchlist = React.useMemo(() => profile.watchlist ?? [], [profile.watchlist]);
   const [checkResults, setCheckResults] = React.useState<Map<string, CheckResult>>(new Map());
   const [syncing, setSyncing] = React.useState(false);
   const [showSearch, setShowSearch] = React.useState(false);
@@ -82,9 +82,10 @@ export function WatchlistSection() {
   }, [watchlist, update]);
 
   React.useEffect(() => {
-    doCheck();
+    const timer = setTimeout(() => doCheck(), 0);
     checkRef.current = setInterval(doCheck, 5 * 60 * 1000);
     return () => {
+      clearTimeout(timer);
       if (checkRef.current) clearInterval(checkRef.current);
     };
   }, [doCheck]);
@@ -122,7 +123,7 @@ export function WatchlistSection() {
     syncToServer(updated);
   }, [watchlist, update, syncToServer]);
 
-  const handleRefresh = React.useCallback((_id: string) => {
+  const handleRefresh = React.useCallback(() => {
     doCheck();
   }, [doCheck]);
 
@@ -144,12 +145,6 @@ export function WatchlistSection() {
     withGap.sort((a, b) => order(a.gap) - order(b.gap));
     return withGap;
   }, [watchlist, checkResults]);
-
-  const isTracked = React.useCallback(
-    (uniId: string, progName: string) =>
-      watchlist.some((e) => e.universityId === uniId && e.programName === progName),
-    [watchlist]
-  );
 
   return (
     <div className="card-glass rounded-2xl p-5">
