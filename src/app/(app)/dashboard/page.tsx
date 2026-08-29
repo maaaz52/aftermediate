@@ -9,6 +9,7 @@ import { ValuableCountries } from "@/components/dashboard/valuable-countries";
 import { StudyAbroadSummary } from "@/components/dashboard/study-abroad-summary";
 import { BestFields } from "@/components/dashboard/best-fields";
 import { RahbarBanner } from "@/components/dashboard/rahbar-banner";
+import { WatchlistSection } from "@/components/watchlist/watchlist-section";
 import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
@@ -65,6 +66,10 @@ export default function DashboardPage() {
 
       <div className="mt-4 animate-reveal" style={{ animationDelay: "420ms" }}>
         <RahbarBanner />
+      </div>
+
+      <div className="mt-4 animate-reveal" style={{ animationDelay: "480ms" }}>
+        <WatchlistSection />
       </div>
     </div>
   );
