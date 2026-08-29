@@ -107,7 +107,7 @@ profile.stream ──► sprint.ts (pure lib) ──► SprintQuestion set (5)
 | `alevel` | 2 × `mathematics`, 2 × `physics`, 1 × `intelligence` (fallback mix) |
 | `null` (no stream) | 2 × `mathematics`, 2 × `english`, 1 × `intelligence`; widget shows a "pick your stream" nudge linking to onboard |
 
-**Section id aliases:** banks use different section ids (`math` vs `mathematics`). `recipeFor` must resolve via a canonical alias map — a section matches if its id or name normalized matches the recipe slot.
+**Section id aliases:** banks use different section ids. A canonical map resolves bank section ids → recipe slots: `math`/`mathematics` → `mathematics`; `logic` (MDCAT Logical Reasoning) and `analytical` (FUNGAT Analytical Skills & IQ, NAT Analytical) → `intelligence`; direct matches for `physics`, `biology`, `chemistry`, `english`. Unmapped ids (`verbal`, `quantitative`, `subject`, `gk`, …) are excluded. This keeps the 2/2/1 structure fillable for every stream (pre-medical draws its Intelligence slot from MDCAT Logic + NAT Analytical).
 
 **Pool construction:**
 - `streamTests(stream)` → test ids from `entry-tests.json` where `streams.includes(stream)`.
