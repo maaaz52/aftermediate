@@ -506,7 +506,7 @@ describe("college-essays.json", () => {
   });
 
   it("every sourced block has at least one https source", () => {
-    const blocks: Sourced[] = [
+    const blocks: (Sourced & { id: string })[] = [
       ...data.explainer.sections,
       ...data.explainer.criteria,
       ...data.explainer.myths,
