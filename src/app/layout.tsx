@@ -12,6 +12,7 @@ import "./globals.css";
 import { StudentProvider } from "@/lib/store";
 import { AuthProvider } from "@/lib/auth";
 import { ProfileSync } from "@/components/profile-sync";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
@@ -40,6 +41,7 @@ export default function RootLayout({
             <ProfileSync />
           </StudentProvider>
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
