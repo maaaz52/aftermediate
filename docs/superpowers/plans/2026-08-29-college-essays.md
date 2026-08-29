@@ -583,7 +583,7 @@ git commit -m "test(college-essays): add data contract tests"
 {
   "explainer": {
     "sections": [{ "id": "what|role|audience|craft", "title": "", "body": "", "sources": [{}] }],      // 4, each 80-150 words
-    "criteria": [{ "id": "voice|specifics|growth|stakes|craft", "title": "", "weight": "high|medium", "detail": "", "sources": [{}] }], // exactly 5
+    "criteria": [{ "id": "voice|specifics|growth|stakes|structure", "title": "", "weight": "high|medium", "detail": "", "sources": [{}] }], // exactly 5 — note: "structure" not "craft" to avoid id collision with explainer.sections["craft"] (no-duplicate-ids contract test)
     "beforeAfter": {
       "weak": { "title": "Before", "paragraphs": ["", ""] },
       "strong": { "title": "After", "paragraphs": ["", ""] },
