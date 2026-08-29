@@ -24,33 +24,42 @@ function uniNameFor(id: string): string {
 }
 
 export function WatchlistSection() {
-  const { profile, update } = useStudent();
+  const { profile, update: storeUpdate } = useStudent();
   const watchlist = React.useMemo(() => profile.watchlist ?? [], [profile.watchlist]);
+
+  // Keep a ref so doCheck and handlers always read the latest watchlist
+  // without needing it in their dependency arrays (avoiding infinite cycles)
+  const watchlistRef = React.useRef(watchlist);
+  React.useEffect(() => {
+    watchlistRef.current = watchlist;
+  });
+
   const [checkResults, setCheckResults] = React.useState<Map<string, CheckResult>>(new Map());
   const [syncing, setSyncing] = React.useState(false);
   const [showSearch, setShowSearch] = React.useState(false);
-  const checkRef = React.useRef<ReturnType<typeof setInterval> | null>(null);
 
   const doCheck = React.useCallback(async () => {
-    if (watchlist.length === 0) return;
+    const current = watchlistRef.current;
+    if (current.length === 0) return;
     try {
-      const res = await fetch(`/api/watchlist/check?watchlist=${encodeURIComponent(JSON.stringify(watchlist))}`);
+      const res = await fetch(`/api/watchlist/check?watchlist=${encodeURIComponent(JSON.stringify(current))}`);
       if (!res.ok) return;
       const data = await res.json() as { entries: CheckResult[] };
       const map = new Map<string, CheckResult>();
       for (const e of data.entries) map.set(e.id, e);
       setCheckResults(map);
 
+      // Only update lastCheckedAt — stable identity, entries unchanged
       const now = new Date().toISOString();
-      const updated = watchlist.map((entry) => {
+      const updated = current.map((entry) => {
         const result = map.get(entry.id);
         return result
           ? { ...entry, lastKnownMerit: result.currentMerit ?? entry.lastKnownMerit, lastCheckedAt: now }
           : entry;
       });
-      update({ watchlist: updated });
+      storeUpdate({ watchlist: updated });
 
-      for (const entry of watchlist) {
+      for (const entry of current) {
         const result = map.get(entry.id);
         if (result?.meritChanged && entry.notifyEmail) {
           fetch("/api/watchlist/notify", {
@@ -67,10 +76,11 @@ export function WatchlistSection() {
           }).then((r) => {
             if (r.ok) r.json().then((d) => {
               if (d.sent) {
-                const patched = watchlist.map((e) =>
+                const current2 = watchlistRef.current;
+                const patched = current2.map((e) =>
                   e.id === entry.id ? { ...e, lastNotifiedAt: new Date().toISOString() } : e
                 );
-                update({ watchlist: patched });
+                storeUpdate({ watchlist: patched });
               }
             });
           }).catch(() => {});
@@ -79,14 +89,14 @@ export function WatchlistSection() {
     } catch {
       // check failure is non-blocking
     }
-  }, [watchlist, update]);
+  }, [storeUpdate]);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => doCheck(), 0);
-    checkRef.current = setInterval(doCheck, 5 * 60 * 1000);
+    const timer = setTimeout(() => doCheck(), 1000);
+    const id = setInterval(doCheck, 5 * 60 * 1000);
     return () => {
       clearTimeout(timer);
-      if (checkRef.current) clearInterval(checkRef.current);
+      clearInterval(id);
     };
   }, [doCheck]);
 
@@ -106,22 +116,25 @@ export function WatchlistSection() {
   }, []);
 
   const handleAdd = React.useCallback((added: WatchlistEntry) => {
-    const updated = [...watchlist, added];
-    update({ watchlist: updated });
+    const current = watchlistRef.current;
+    const updated = [...current, added];
+    storeUpdate({ watchlist: updated });
     syncToServer(updated);
-  }, [watchlist, update, syncToServer]);
+  }, [storeUpdate, syncToServer]);
 
   const handleRemove = React.useCallback((id: string) => {
-    const updated = removeEntry(watchlist, id);
-    update({ watchlist: updated });
+    const current = watchlistRef.current;
+    const updated = removeEntry(current, id);
+    storeUpdate({ watchlist: updated });
     syncToServer(updated);
-  }, [watchlist, update, syncToServer]);
+  }, [storeUpdate, syncToServer]);
 
   const handleToggleEmail = React.useCallback((id: string, enabled: boolean) => {
-    const updated = updateEntry(watchlist, id, { notifyEmail: enabled });
-    update({ watchlist: updated });
+    const current = watchlistRef.current;
+    const updated = updateEntry(current, id, { notifyEmail: enabled });
+    storeUpdate({ watchlist: updated });
     syncToServer(updated);
-  }, [watchlist, update, syncToServer]);
+  }, [storeUpdate, syncToServer]);
 
   const handleRefresh = React.useCallback(() => {
     doCheck();
