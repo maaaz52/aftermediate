@@ -76,7 +76,7 @@ export function EssayExplainer() {
   const [placed, setPlaced] = useLocalStorage<Record<string, string>>("aftermediate:essays:dragdrop", {});
   const [selectedItem, setSelectedItem] = React.useState<string | null>(null);
 
-  const score = explainer.quiz.filter((q) => answers[q.id] != null && q.options[answers[q.id]].correct).length;
+  const score = explainer.quiz.filter((q) => answers[q.id] != null && q.options[answers[q.id]]?.correct).length;
   const answered = Object.keys(answers).length;
   const placedCount = Object.keys(placed).length;
   const correctPlacements = explainer.dragDrop.items.filter((i) => placed[i.id] === i.zone).length;
@@ -100,7 +100,7 @@ export function EssayExplainer() {
         <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">What admissions officers look for</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {explainer.explainer.criteria.map((c) => (
-            <div key={c.id} className="rounded-2xl border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_#191f2c]">
+            <div key={c.id} className="rounded-2xl border-2 border-ink bg-surface p-5 pixel-shadow">
               <div className="flex items-center justify-between">
                 <p className="font-mono text-xs uppercase tracking-widest text-violet">{c.title}</p>
                 <Meter value={c.weight === "high" ? 5 : 3} />
@@ -175,7 +175,7 @@ export function EssayExplainer() {
         </p>
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {explainer.inspiration.map((e) => (
-            <div key={e.id} className="flex flex-col rounded-2xl border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_#191f2c]">
+            <div key={e.id} className="flex flex-col rounded-2xl border-2 border-ink bg-surface p-5 pixel-shadow">
               <p className="font-mono text-[11px] uppercase tracking-widest text-amber">{e.program}</p>
               <h3 className="mt-1 font-display text-base font-bold text-ink">{e.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -204,7 +204,7 @@ export function EssayExplainer() {
         <div className="flex items-center justify-between">
           <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">Strong vs. weak elements</h2>
           <span className="rounded-lg bg-violet/10 px-3 py-1.5 font-mono text-sm font-bold text-violet">
-            {answered}/5 · {score} correct
+            {answered}/{explainer.quiz.length} · {score} correct
           </span>
         </div>
         <div className="mt-4 space-y-4">
@@ -256,7 +256,7 @@ export function EssayExplainer() {
         <div className="flex items-center justify-between">
           <h2 className="font-display text-xl font-bold text-ink sm:text-2xl">Sort the hooks</h2>
           <span className="rounded-lg bg-violet/10 px-3 py-1.5 font-mono text-sm font-bold text-violet">
-            {placedCount}/6 · {correctPlacements} correct
+            {placedCount}/{explainer.dragDrop.items.length} · {correctPlacements} correct
           </span>
         </div>
         <p className="mt-1 text-sm text-muted">Drag each opening into the right zone — or tap an opening, then tap a zone.</p>
@@ -264,6 +264,8 @@ export function EssayExplainer() {
           {explainer.dragDrop.zones.map((z) => (
             <div
               key={z.id}
+              role="button"
+              tabIndex={0}
               onDragOver={(e) => e.preventDefault()}
               onDrop={(e) => {
                 e.preventDefault();
@@ -272,6 +274,12 @@ export function EssayExplainer() {
               }}
               onClick={() => {
                 if (selectedItem && !placed[selectedItem]) dropItem(selectedItem, z.id);
+              }}
+              onKeyDown={(e) => {
+                if ((e.key === "Enter" || e.key === " ") && selectedItem && !placed[selectedItem]) {
+                  e.preventDefault();
+                  dropItem(selectedItem, z.id);
+                }
               }}
               className={cn(
                 "min-h-40 rounded-2xl border-2 border-dashed p-4 transition-colors",

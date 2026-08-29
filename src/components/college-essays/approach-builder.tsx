@@ -34,6 +34,10 @@ function isStrategy(v: unknown): v is Strategy {
     (s.approach === "narrative" || s.approach === "analytical" || s.approach === "hybrid") &&
     typeof s.approachReason === "string" &&
     Array.isArray(s.themes) &&
+    s.themes.every(
+      (t) =>
+        typeof t === "object" && t !== null && typeof (t as { name?: unknown }).name === "string" && typeof (t as { why?: unknown }).why === "string"
+    ) &&
     (s.structureTemplateId === "narrative-arc" || s.structureTemplateId === "challenge-growth" || s.structureTemplateId === "topic-deep-dive") &&
     Array.isArray(s.prompts)
   );
