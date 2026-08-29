@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   ATTEMPT_CAP,
+  SPRINT_ATTEMPT_CAP,
   banks,
   bestPercent,
   buildCatalog,
@@ -232,6 +233,65 @@ describe("profile helpers", () => {
     for (let i = 1; i <= 60; i++) list = pushAttempt(list, attempt(i));
     expect(list.length).toBe(ATTEMPT_CAP);
     expect(list[0].percent).toBe(60); // newest first
+  });
+
+  it("keeps mock attempts at ATTEMPT_CAP while preserving all sprints", () => {
+    let list: PracticeAttempt[] = [];
+    // 50 mocks, oldest first — push order means index 0 is newest
+    for (let i = 1; i <= 50; i++)
+      list = pushAttempt(list, makeAttempt(`mock-${i}`, "full"));
+    // 2 sprints
+    list = pushAttempt(list, makeAttempt("sprint-1", "sprint"));
+    list = pushAttempt(list, makeAttempt("sprint-2", "sprint"));
+    // push one more mock — oldest mock evicted
+    list = pushAttempt(list, makeAttempt("mock-51", "full"));
+
+    expect(list.length).toBe(52);
+    // 50 mocks: mock-51 (newest) through mock-2 (mock-1 evicted)
+    const mocks = list.filter((a) => a.mode !== "sprint");
+    expect(mocks.length).toBe(ATTEMPT_CAP);
+    expect(mocks[0].id).toBe("mock-51");
+    expect(mocks[mocks.length - 1].id).toBe("mock-2");
+    // both sprints still present
+    const sprints = list.filter((a) => a.mode === "sprint");
+    expect(sprints.length).toBe(2);
+    expect(sprints.map((a) => a.id)).toEqual(["sprint-2", "sprint-1"]);
+  });
+
+  it("evicts only the oldest sprint past SPRINT_ATTEMPT_CAP", () => {
+    let list: PracticeAttempt[] = [];
+    for (let i = 1; i <= SPRINT_ATTEMPT_CAP; i++)
+      list = pushAttempt(list, makeAttempt(`sprint-${i}`, "sprint"));
+    // push one more sprint — oldest (sprint-1) evicted
+    list = pushAttempt(list, makeAttempt("sprint-366", "sprint"));
+
+    expect(list.length).toBe(SPRINT_ATTEMPT_CAP);
+    expect(list[0].id).toBe("sprint-366");
+    expect(list[list.length - 1].id).toBe("sprint-2");
+    // sprint-1 (oldest) should be gone
+    expect(list.find((a) => a.id === "sprint-1")).toBeUndefined();
+  });
+
+  it("preserves relative order after eviction", () => {
+    let list: PracticeAttempt[] = [];
+    // Fill up to ATTEMPT_CAP mocks plus some interleaved sprints
+    for (let i = 1; i <= ATTEMPT_CAP; i++)
+      list = pushAttempt(list, makeAttempt(`m${i}`, "full"));
+    list = pushAttempt(list, makeAttempt("s1", "sprint"));
+    list = pushAttempt(list, makeAttempt("s2", "sprint"));
+
+    const snapshot = list.map((a) => a.id);
+    // push one more mock — m1 (oldest mock) evicted
+    list = pushAttempt(list, makeAttempt("m51", "full"));
+
+    // surviving items should be in same relative order (minus evicted m1)
+    const surviving = snapshot.filter((id) => list.find((a) => a.id === id));
+    expect(surviving).toEqual(list.filter((a) => a.id !== "m51").map((a) => a.id));
+    // m1 evicted, m51 present, both sprints survive
+    expect(list.find((a) => a.id === "m1")).toBeUndefined();
+    expect(list.find((a) => a.id === "m51")).toBeTruthy();
+    expect(list.find((a) => a.id === "s1")).toBeTruthy();
+    expect(list.find((a) => a.id === "s2")).toBeTruthy();
   });
 
   it("bestPercent and latestAttempt filter by test", () => {

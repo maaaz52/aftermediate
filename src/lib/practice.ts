@@ -294,12 +294,25 @@ export function grade(
 // ---------------------------------------------------------------------------
 
 export const ATTEMPT_CAP = 50;
+export const SPRINT_ATTEMPT_CAP = 365; // a year of daily sprints — streak history must survive
 
 export function pushAttempt(
   list: PracticeAttempt[],
   attempt: PracticeAttempt
 ): PracticeAttempt[] {
-  return [attempt, ...list].slice(0, ATTEMPT_CAP);
+  const next = [attempt, ...list];
+  let mockCount = 0;
+  let sprintCount = 0;
+  // Per-mode caps keep sprint history (the streak) from being evicted by
+  // mock-test volume, while preserving the relative order of the list.
+  return next.filter((a) => {
+    if (a.mode === "sprint") {
+      sprintCount++;
+      return sprintCount <= SPRINT_ATTEMPT_CAP;
+    }
+    mockCount++;
+    return mockCount <= ATTEMPT_CAP;
+  });
 }
 
 export function sprintAttempts(list: PracticeAttempt[]): PracticeAttempt[] {
