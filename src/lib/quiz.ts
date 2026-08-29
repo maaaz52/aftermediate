@@ -100,6 +100,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     questions: [
       {
         id: "stream", kind: "stream", label: "Your stream",
+        required: true,
         options: [
           { value: "pre-medical", label: "FSc Pre-Medical", sub: "Biology · Chemistry · Physics" },
           { value: "pre-engineering", label: "FSc Pre-Engineering", sub: "Math · Chemistry · Physics" },
@@ -171,7 +172,7 @@ export const QUIZ_SECTIONS: QuizSection[] = [
     title: "What pulls you?",
     subtitle: "Pick everything that sounds interesting. We'll connect the dots.",
     questions: [
-      { id: "interests", kind: "multi", label: "Your interests", options: INTERESTS },
+      { id: "interests", kind: "multi", label: "Your interests", required: true, options: INTERESTS },
     ],
   },
 ];

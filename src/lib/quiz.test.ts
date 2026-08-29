@@ -75,45 +75,40 @@ describe("dotted-path answers", () => {
 });
 
 describe("sections", () => {
-  it("declares the seven sections in order", () => {
+  it("declares the five sections in order", () => {
     expect(QUIZ_SECTIONS.map((s) => s.id)).toEqual([
-      "stream", "marks", "merit", "money", "pressure", "readiness", "interests",
+      "stream", "marks", "pressure", "readiness", "interests",
     ]);
   });
 });
 
 describe("visibleQuestions", () => {
-  const merit = QUIZ_SECTIONS.find((s) => s.id === "merit")!;
-
-  it("hides the entry-test score when no test was taken", () => {
-    const p = { ...blank(), quiz: { entryTest: "none" as const } };
-    const ids = visibleQuestions(merit, p).map((q) => q.id);
-    expect(ids).not.toContain("marks.entryTestObtained");
+  it("returns all questions for a section without showIf/optionsFor", () => {
+    const pressure = QUIZ_SECTIONS.find((s) => s.id === "pressure")!;
+    expect(visibleQuestions(pressure, blank()).length).toBe(4);
   });
 
-  it("shows the entry-test score once a test is chosen", () => {
-    const p = { ...blank(), quiz: { entryTest: "net" as const } };
-    const ids = visibleQuestions(merit, p).map((q) => q.id);
-    expect(ids).toContain("marks.entryTestObtained");
+  it("returns the stream options as defined", () => {
+    const streamSec = QUIZ_SECTIONS.find((s) => s.id === "stream")!;
+    const qs = visibleQuestions(streamSec, blank());
+    expect(qs.map((q) => q.id)).toEqual(["stream"]);
+    expect(qs[0].options!.map((o) => o.value)).toEqual([
+      "pre-medical", "pre-engineering", "ics", "icom", "alevel",
+    ]);
   });
 
-  it("offers MDCAT only to pre-medical students", () => {
-    const med = { ...blank(), stream: "pre-medical" as const };
-    const eng = { ...blank(), stream: "pre-engineering" as const };
-    const opts = (p: StudentProfile) =>
-      visibleQuestions(merit, p).find((q) => q.id === "quiz.entryTest")!.options!.map((o) => o.value);
-    expect(opts(med)).toContain("mdcat");
-    expect(opts(med)).not.toContain("ecat");
-    expect(opts(eng)).toContain("ecat");
-    expect(opts(eng)).not.toContain("mdcat");
+  it("returns the interests section with all options", () => {
+    const interestsSec = QUIZ_SECTIONS.find((s) => s.id === "interests")!;
+    const qs = visibleQuestions(interestsSec, blank());
+    expect(qs.length).toBe(1);
+    expect(qs[0].options!.length).toBe(12);
   });
 
-  it("shows FSc Part-1 only for the NUST NET path", () => {
+  it("marks section has one marksheet question", () => {
     const marks = QUIZ_SECTIONS.find((s) => s.id === "marks")!;
-    const net = { ...blank(), quiz: { entryTest: "net" as const } };
-    const mdcat = { ...blank(), quiz: { entryTest: "mdcat" as const } };
-    expect(visibleQuestions(marks, net).map((q) => q.id)).toContain("marks.fscPart1Obtained");
-    expect(visibleQuestions(marks, mdcat).map((q) => q.id)).not.toContain("marks.fscPart1Obtained");
+    const qs = visibleQuestions(marks, blank());
+    expect(qs.length).toBe(1);
+    expect(qs[0].kind).toBe("marksheet");
   });
 });
 
@@ -127,16 +122,16 @@ describe("completeness", () => {
   });
 
   it("fails a section when one required answer is missing", () => {
-    const money = QUIZ_SECTIONS.find((s) => s.id === "money")!;
+    const streamSec = QUIZ_SECTIONS.find((s) => s.id === "stream")!;
     const p = filled();
-    expect(isSectionComplete(money, p)).toBe(true);
-    const missing = { ...p, quiz: { ...p.quiz, city: undefined } };
-    expect(isSectionComplete(money, missing)).toBe(false);
+    expect(isSectionComplete(streamSec, p)).toBe(true);
+    const missing = { ...p, stream: null };
+    expect(isSectionComplete(streamSec, missing)).toBe(false);
     expect(isQuizComplete(missing)).toBe(false);
   });
 
   it("does not count an empty string or empty array as answered", () => {
-    const p = { ...filled(), quiz: { ...filled().quiz, city: "   " } };
+    const p = { ...filled(), stream: "" } as unknown as StudentProfile;
     expect(isQuizComplete(p)).toBe(false);
     const q = { ...filled(), interests: [] };
     expect(isQuizComplete(q)).toBe(false);
@@ -174,34 +169,30 @@ describe("showIf interacts with required", () => {
 });
 
 describe("seeded marks defaults are not real answers", () => {
-  it("treats a brand-new profile's marks section as incomplete", () => {
+  it("marks section completes even with default marks", () => {
     const marks = QUIZ_SECTIONS.find((s) => s.id === "marks")!;
-    expect(isSectionComplete(marks, blank())).toBe(false);
+    // marks section is a marksheet upload with no required questions
+    expect(isSectionComplete(marks, blank())).toBe(true);
   });
 
-  it("does not admit a student who skipped the marksheet screen", () => {
+  it("completes a profile that skipped the marksheet but answered required fields", () => {
     const skipped = {
       ...blank(),
       stream: "pre-engineering" as const,
       interests: ["Technology & Coding"],
-      quiz: {
-        entryTest: "none" as const, city: "Lahore", budgetMonthly: 50000,
-        parentsExpect: "engineer" as const, decisionMaker: "together" as const,
-        english: 4, consistency: 3,
-      },
     };
-    expect(isQuizComplete(skipped)).toBe(false);
-    expect(firstIncompleteSection(skipped)).toBe(1); // the marks section
+    expect(isQuizComplete(skipped)).toBe(true);
+    expect(firstIncompleteSection(skipped)).toBe(QUIZ_SECTIONS.length);
   });
 });
 
 describe("stale answers are rejected once options change", () => {
-  it("drops an entry test that the student's stream no longer offers", () => {
-    const merit = QUIZ_SECTIONS.find((s) => s.id === "merit")!;
-    const med = { ...blank(), stream: "pre-medical" as const, quiz: { entryTest: "mdcat" as const } };
-    expect(isSectionComplete(merit, med)).toBe(true);
-    const switched = { ...med, stream: "pre-engineering" as const };
-    expect(isSectionComplete(merit, switched)).toBe(false);
+  it("rejects a stream value that is not in the options", () => {
+    const streamSec = QUIZ_SECTIONS.find((s) => s.id === "stream")!;
+    const valid = { ...blank(), stream: "pre-engineering" as const };
+    expect(isSectionComplete(streamSec, valid)).toBe(true);
+    const invalid = { ...blank(), stream: "invalid-stream" } as unknown as StudentProfile;
+    expect(isSectionComplete(streamSec, invalid)).toBe(false);
   });
 });
 
