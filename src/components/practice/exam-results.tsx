@@ -130,7 +130,7 @@ export function ExamResults({
           </div>
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 border-t border-line pt-3 text-xs">
-          <Badge variant="muted">{attempt.mode === "full" ? "Full" : "Quick"}</Badge>
+          <Badge variant="muted">{attempt.mode === "full" ? "Full" : attempt.mode === "quick" ? "Quick" : "Sprint"}</Badge>
           {attempt.autoSubmitted && <Badge variant="danger">Auto-submitted</Badge>}
           <span className="text-muted">{new Date(attempt.submittedAt).toLocaleDateString()}</span>
           <span className="text-faint">·</span>
@@ -292,7 +292,7 @@ export function ExamResults({
                 <span className="w-24 shrink-0 text-xs text-muted">
                   {new Date(a.submittedAt).toLocaleDateString()}
                 </span>
-                <Badge variant="muted">{a.mode === "full" ? "Full" : "Quick"}</Badge>
+                <Badge variant="muted">{a.mode === "full" ? "Full" : a.mode === "quick" ? "Quick" : "Sprint"}</Badge>
                 <span className="font-mono font-semibold text-ink">{a.percent.toFixed(1)}%</span>
                 <span className="ml-auto font-mono text-xs text-faint">
                   {a.score}/{a.maxScore}

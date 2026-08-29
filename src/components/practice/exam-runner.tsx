@@ -39,7 +39,7 @@ function findTest(testId: string): EntryTest | null {
 }
 
 function modeLabel(mode: PracticeMode): string {
-  return mode === "full" ? "Full" : "Quick";
+  return mode === "full" ? "Full" : mode === "quick" ? "Quick" : "Sprint";
 }
 
 function hostOf(url: string): string {

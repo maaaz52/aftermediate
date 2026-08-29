@@ -49,8 +49,9 @@ function ReadyCard({
   basePath: string;
 }) {
   const { profile } = useStudent();
-  const best = bestPercent(profile.practice, test.id);
-  const attempts = attemptsFor(profile.practice, test.id);
+  const mockAttempts = profile.practice.filter((a) => a.mode !== "sprint");
+  const best = bestPercent(mockAttempts, test.id);
+  const attempts = attemptsFor(mockAttempts, test.id);
   const hasNegative = bank.marking.negativeMarks > 0;
 
   return (
