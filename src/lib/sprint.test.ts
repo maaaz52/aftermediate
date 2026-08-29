@@ -1,10 +1,63 @@
 import { describe, expect, it } from "vitest";
 import {
+  buildPool,
   canonicalSection,
+  dailyPick,
   recipeFor,
   sprintRecipes,
+  SPRINT_SIZE,
   streamTests,
 } from "./sprint";
+import type { PracticeBank, PracticeQuestion } from "./practice";
+
+function q(id: string, section: string, correct = 0): PracticeQuestion {
+  return {
+    id,
+    section,
+    topic: "t",
+    difficulty: "easy",
+    stem: `stem ${id}`,
+    options: ["a", "b", "c", "d"],
+    correct,
+    explanation: "e",
+    provenance: "practice",
+    sourceUrls: [],
+  };
+}
+
+function bank(testId: string, sectionIds: string[], perSection = 3): PracticeBank {
+  const questions = sectionIds.flatMap((section) =>
+    Array.from({ length: perSection }, (_, i) =>
+      q(`${testId}-${section}-${i + 1}`, section)
+    )
+  );
+  return {
+    testId,
+    schemaVersion: 1,
+    provenance: { note: "test", sources: [] },
+    durationMinutes: 10,
+    marking: {
+      perQuestionMarks: 1,
+      correctMarks: 1,
+      negativeMarks: 0,
+      totalMarks: 5,
+      note: "test",
+    },
+    benchmarks: [],
+    sections: sectionIds.map((id) => ({ id, name: id, questionCount: perSection })),
+    questions,
+  };
+}
+
+const testBanks: Record<string, PracticeBank> = {
+  net: bank("net", ["math", "physics", "intelligence"]),
+  ecat: bank("ecat", ["mathematics", "physics", "english"]),
+  mdcat: bank("mdcat", ["biology", "chemistry", "logic"]),
+  aku: bank("aku", ["biology", "chemistry", "physics"]),
+  fungat: bank("fungat", ["advanced-math", "analytical", "english"]),
+};
+const preEngRecipe = recipeFor("pre-engineering");
+const preMedRecipe = recipeFor("pre-medical");
 
 describe("canonicalSection aliases", () => {
   it("maps direct and aliased ids to canonical slots", () => {
@@ -84,5 +137,78 @@ describe("streamTests", () => {
       { id: "y", streams: ["pre-engineering"] },
     ];
     expect(streamTests("pre-medical", fake as never)).toEqual(["x"]);
+  });
+});
+
+describe("buildPool", () => {
+  it("collects questions per canonical slot across matched banks", () => {
+    const pool = buildPool(testBanks, ["net", "ecat", "fungat"], preEngRecipe);
+    expect(Object.keys(pool).sort()).toEqual(["intelligence", "mathematics", "physics"]);
+    expect(pool.physics.map((p) => p.id)).toEqual([
+      "net-physics-1", "net-physics-2", "net-physics-3",
+      "ecat-physics-1", "ecat-physics-2", "ecat-physics-3",
+    ]);
+    expect(pool.mathematics.length).toBe(6); // net math + ecat mathematics
+    expect(pool.intelligence.length).toBe(6); // net intelligence + fungat analytical
+  });
+
+  it("aliases mdcat logic into the intelligence slot", () => {
+    const pool = buildPool(testBanks, ["mdcat"], preMedRecipe);
+    expect(pool.intelligence.map((p) => p.section)).toEqual(["logic", "logic", "logic"]);
+    expect(pool.biology.length).toBe(3);
+    expect(pool.chemistry.length).toBe(3);
+  });
+
+  it("dedupes repeated question ids", () => {
+    const dup = bank("dup", ["math"]);
+    dup.questions.push({ ...dup.questions[0] });
+    const pool = buildPool({ dup }, ["dup"], preEngRecipe);
+    expect(pool.mathematics.length).toBe(3);
+  });
+
+  it("ignores banks not in testIds and sections not in the recipe", () => {
+    const pool = buildPool(testBanks, ["aku"], preEngRecipe);
+    expect(pool.physics.length).toBe(3); // aku physics still matches pre-eng recipe
+    expect(pool.biology).toBeUndefined(); // biology not in pre-eng recipe
+  });
+});
+
+describe("dailyPick", () => {
+  it("is deterministic for the same day and returns 5 unique questions", () => {
+    const pool = buildPool(testBanks, ["net", "ecat", "fungat"], preEngRecipe);
+    const first = dailyPick(pool, preEngRecipe, 1000);
+    const second = dailyPick(pool, preEngRecipe, 1000);
+    expect(first).toEqual(second);
+    expect(first.length).toBe(SPRINT_SIZE);
+    expect(new Set(first.map((p) => p.id)).size).toBe(5);
+  });
+
+  it("rotates across days", () => {
+    const pool = buildPool(testBanks, ["net", "ecat", "fungat"], preEngRecipe);
+    const a = dailyPick(pool, preEngRecipe, 1000);
+    const b = dailyPick(pool, preEngRecipe, 1001);
+    expect(a.map((p) => p.id)).not.toEqual(b.map((p) => p.id));
+  });
+
+  it("respects the recipe composition", () => {
+    const pool = buildPool(testBanks, ["net", "ecat", "fungat"], preEngRecipe);
+    const picked = dailyPick(pool, preEngRecipe, 500);
+    const sections = picked.map((p) => canonicalSection(p.section));
+    expect(sections.filter((s) => s === "physics").length).toBe(2);
+    expect(sections.filter((s) => s === "mathematics").length).toBe(2);
+    expect(sections.filter((s) => s === "intelligence").length).toBe(1);
+  });
+
+  it("tops up from the fullest pool when a slot is empty", () => {
+    const pool = buildPool(testBanks, ["ecat"], preEngRecipe); // no intelligence in ecat
+    const picked = dailyPick(pool, preEngRecipe, 1000);
+    expect(picked.length).toBe(SPRINT_SIZE);
+    expect(picked.every((p) => ["physics", "mathematics"].includes(canonicalSection(p.section)!))).toBe(true);
+  });
+
+  it("returns fewer than 5 only when the whole pool is smaller", () => {
+    const pool = buildPool({ tiny: bank("tiny", ["math"], 2) }, ["tiny"], preEngRecipe);
+    const picked = dailyPick(pool, preEngRecipe, 1000);
+    expect(picked.length).toBe(2);
   });
 });

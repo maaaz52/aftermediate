@@ -110,3 +110,78 @@ export function streamTests(
   if (stream === null) return tests.map((t) => t.id);
   return tests.filter((t) => t.streams.includes(stream)).map((t) => t.id);
 }
+
+// ---------------------------------------------------------------------------
+// Pool construction & daily pick
+// ---------------------------------------------------------------------------
+
+export interface SprintPool {
+  [slot: string]: PracticeQuestion[];
+}
+
+/**
+ * Collects every question whose canonical section matches a recipe slot,
+ * across all stream-matched banks. Empty slots stay as [] — the top-up
+ * happens at pick time so pool sections always stay truthful.
+ */
+export function buildPool(
+  banks: Record<string, PracticeBank>,
+  testIds: string[],
+  recipe: SprintSlot[]
+): SprintPool {
+  const pool: SprintPool = {};
+  for (const slot of recipe) pool[slot.id] = [];
+  for (const testId of testIds) {
+    const bank = banks[testId];
+    if (!bank) continue;
+    for (const question of bank.questions) {
+      const canonical = canonicalSection(question.section);
+      if (!canonical) continue;
+      const list = pool[canonical];
+      if (!list) continue;
+      if (!list.some((existing) => existing.id === question.id)) list.push(question);
+    }
+  }
+  return pool;
+}
+
+/**
+ * Deterministic, date-seeded pick: rotates through each slot's candidates
+ * day over day, then tops up from the fullest pool if a slot came up short.
+ */
+export function dailyPick(
+  pool: SprintPool,
+  recipe: SprintSlot[],
+  dayNumber: number
+): PracticeQuestion[] {
+  const picked: PracticeQuestion[] = [];
+  const seen = new Set<string>();
+  let offset = 0;
+  for (const slot of recipe) {
+    const candidates = pool[slot.id] ?? [];
+    for (let k = 0; k < slot.count && candidates.length > 0; k++) {
+      const question = candidates[(dayNumber + offset + k) % candidates.length];
+      if (!seen.has(question.id)) {
+        picked.push(question);
+        seen.add(question.id);
+      }
+    }
+    offset += slot.count;
+  }
+  const fullest = recipe
+    .map((slot) => ({ slot, list: pool[slot.id] ?? [] }))
+    .filter((entry) => entry.list.length > 0)
+    .sort((a, b) => b.list.length - a.list.length)[0];
+  if (fullest && picked.length < SPRINT_SIZE) {
+    let i = 0;
+    while (picked.length < SPRINT_SIZE && i < fullest.list.length) {
+      const question = fullest.list[(dayNumber + i) % fullest.list.length];
+      if (!seen.has(question.id)) {
+        picked.push(question);
+        seen.add(question.id);
+      }
+      i++;
+    }
+  }
+  return picked;
+}
