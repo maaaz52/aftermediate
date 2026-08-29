@@ -272,21 +272,22 @@ export function gradeSprint(
   const stats = new Map<CanonicalSection, { correct: number; wrong: number; skipped: number }>();
   let correctCount = 0;
   for (const question of questions) {
+    const canonical = canonicalSection(question.section);
+    if (!canonical) continue; // unmapped sections are never in a sprint pool — skip defensively
     const chosen = Number.isInteger(answers[question.id]) ? answers[question.id] : null;
     const isCorrect = chosen !== null && chosen === question.correct;
-    const bucket = stats.get(canonicalSection(question.section) ?? "english") ?? {
-      correct: 0,
-      wrong: 0,
-      skipped: 0,
-    };
+    const bucket = stats.get(canonical) ?? { correct: 0, wrong: 0, skipped: 0 };
     if (chosen === null) bucket.skipped++;
     else if (isCorrect) {
       bucket.correct++;
       correctCount++;
     } else bucket.wrong++;
-    stats.set(canonicalSection(question.section) ?? "english", bucket);
+    stats.set(canonical, bucket);
   }
-  const maxScore = questions.length;
+  const maxScore = [...stats.values()].reduce(
+    (sum, s) => sum + s.correct + s.wrong + s.skipped,
+    0
+  );
   const percent = maxScore > 0 ? Math.round((correctCount / maxScore) * 1000) / 10 : 0;
   return {
     id: makeId(),

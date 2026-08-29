@@ -335,6 +335,16 @@ describe("gradeSprint", () => {
     const attempt = gradeSprint([q("p1", "physics", 0)], { p1: 1 }, -5);
     expect(attempt.timeUsedSeconds).toBe(0);
   });
+
+  it("skips unmapped sections instead of corrupting section stats", () => {
+    const attempt = gradeSprint([q("v1", "verbal", 0), q("p1", "physics", 1)], { v1: 0, p1: 1 }, 30);
+    expect(attempt.maxScore).toBe(1);
+    expect(attempt.score).toBe(1);
+    expect(attempt.percent).toBe(100);
+    expect(attempt.sections).toEqual([
+      { id: "physics", name: "Physics", correct: 1, wrong: 0, skipped: 0 },
+    ]);
+  });
 });
 
 describe("computeStreak edge days", () => {
