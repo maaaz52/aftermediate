@@ -387,7 +387,7 @@ export function collegeEssaysStrategy(input: StrategyInput): Strategy {
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `npx vitest run src/lib/college-essays.test.ts`
-Expected: PASS — 17 tests.
+Expected: PASS — 19 tests.
 
 - [ ] **Step 5: Commit**
 
@@ -2173,7 +2173,7 @@ git commit -m "feat(college-essays): add page route and sidebar group"
 - [ ] **Step 1: Run the new test suites**
 
 Run: `npx vitest run src/lib/college-essays.test.ts src/data/college-essays.test.ts`
-Expected: PASS — 17 lib tests + 10 contract tests, exit code 0.
+Expected: PASS — 19 lib tests + 10 contract tests, exit code 0.
 
 - [ ] **Step 2: Run the full test suite**
 
