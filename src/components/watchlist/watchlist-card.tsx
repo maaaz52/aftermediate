@@ -75,7 +75,7 @@ export function WatchlistCard({
               className="text-faint hover:text-danger transition-colors"
               aria-label={`Remove ${entry.programName} from watchlist`}
             >
-              \u2715
+              {'\u2715'}
             </button>
           </div>
         </div>
