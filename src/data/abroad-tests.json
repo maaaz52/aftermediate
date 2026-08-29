@@ -6,7 +6,7 @@
       "name": "IELTS Academic",
       "short": "IELTS",
       "kind": "english",
-      "countries": ["uk", "usa", "canada", "australia", "germany", "netherlands", "ireland", "new-zealand", "uae", "saudi-arabia", "japan", "south-korea", "france", "italy", "spain", "turkey", "china", "malaysia", "qatar", "kuwait", "bahrain", "oman", "poland", "czech-republic"],
+      "countries": ["uk", "usa", "canada", "germany", "netherlands", "ireland", "south-korea", "italy", "turkey", "china", "austria", "indonesia", "lithuania", "hungary"],
       "pattern": [
         { "section": "Listening", "content": "4 recordings, 40 questions", "duration": "30 min" },
         { "section": "Reading", "content": "3 passages, 40 questions", "duration": "60 min" },
@@ -37,7 +37,7 @@
       "name": "TOEFL iBT",
       "short": "TOEFL",
       "kind": "english",
-      "countries": ["usa", "canada", "uk", "australia", "germany", "japan", "south-korea", "france", "italy", "netherlands", "ireland", "new-zealand", "china", "malaysia", "turkey", "poland", "czech-republic"],
+      "countries": ["usa", "canada", "uk", "germany", "south-korea", "italy", "netherlands", "ireland", "china", "turkey", "lithuania", "hungary"],
       "pattern": [
         { "section": "Reading", "content": "3–4 passages, 30–40 questions", "duration": "54–72 min" },
         { "section": "Listening", "content": "3–4 lectures + 2–3 conversations", "duration": "41–57 min" },
@@ -68,7 +68,7 @@
       "name": "PTE Academic",
       "short": "PTE",
       "kind": "english",
-      "countries": ["uk", "australia", "new-zealand", "canada", "usa", "germany", "ireland"],
+      "countries": ["uk", "canada", "usa", "germany", "ireland"],
       "pattern": [
         { "section": "Speaking & Writing", "content": "Read aloud, repeat sentence, essay, summarize", "duration": "54–67 min" },
         { "section": "Reading", "content": "Fill in blanks, reorder paragraphs, multiple choice", "duration": "29–30 min" },
@@ -98,7 +98,7 @@
       "name": "Duolingo English Test",
       "short": "Duolingo",
       "kind": "english",
-      "countries": ["usa", "canada", "uk", "australia", "germany", "ireland", "netherlands", "japan", "south-korea", "france", "italy", "spain", "turkey", "china", "malaysia", "poland"],
+      "countries": ["usa", "canada", "uk", "germany", "ireland", "netherlands", "south-korea", "italy", "turkey", "china"],
       "pattern": [
         { "section": "Adaptive Test", "content": "Reading, writing, listening, speaking questions", "duration": "45 min" },
         { "section": "Video Interview", "content": "Record spoken responses to open-ended prompts", "duration": "5 min" },
@@ -128,7 +128,7 @@
       "name": "SAT",
       "short": "SAT",
       "kind": "aptitude",
-      "countries": ["usa", "canada", "uk", "australia", "germany", "netherlands", "japan", "south-korea", "singapore", "ireland", "new-zealand", "china", "malaysia", "turkey", "poland", "czech-republic", "france", "italy", "spain"],
+      "countries": ["usa", "canada", "uk", "germany", "netherlands", "south-korea", "ireland", "china", "turkey", "italy"],
       "pattern": [
         { "section": "Evidence-Based Reading & Writing", "content": "52 reading questions + 44 writing questions", "duration": "64 min" },
         { "section": "Math", "content": "58 questions (calculator + no-calculator)", "duration": "80 min" }
@@ -157,7 +157,7 @@
       "name": "ACT",
       "short": "ACT",
       "kind": "aptitude",
-      "countries": ["usa", "canada", "uk", "japan", "south-korea", "singapore", "china"],
+      "countries": ["usa", "canada", "uk", "south-korea", "china"],
       "pattern": [
         { "section": "English", "content": "75 grammar and rhetoric questions", "duration": "45 min" },
         { "section": "Math", "content": "60 questions (calculator allowed)", "duration": "60 min" },
@@ -188,7 +188,7 @@
       "name": "GRE General Test",
       "short": "GRE",
       "kind": "graduate",
-      "countries": ["usa", "canada", "uk", "germany", "australia", "netherlands", "japan", "south-korea", "france", "italy", "ireland", "new-zealand", "china", "turkey", "poland"],
+      "countries": ["usa", "canada", "uk", "germany", "netherlands", "south-korea", "italy", "ireland", "china", "turkey"],
       "pattern": [
         { "section": "Analytical Writing", "content": "1 Issue task + 1 Argument task", "duration": "60 min" },
         { "section": "Verbal Reasoning", "content": "2 sections, 27 questions each", "duration": "41 min per section" },
@@ -218,7 +218,7 @@
       "name": "GMAT Focus Edition",
       "short": "GMAT",
       "kind": "graduate",
-      "countries": ["usa", "uk", "canada", "australia", "germany", "netherlands", "singapore", "japan", "south-korea", "france", "italy", "ireland", "china", "uae"],
+      "countries": ["usa", "uk", "canada", "germany", "netherlands", "south-korea", "italy", "ireland", "china"],
       "pattern": [
         { "section": "Quantitative Reasoning", "content": "21 problem-solving questions", "duration": "45 min" },
         { "section": "Verbal Reasoning", "content": "23 reading comprehension + critical reasoning questions", "duration": "45 min" },
@@ -248,7 +248,7 @@
       "name": "TestDaF",
       "short": "TestDaF",
       "kind": "language",
-      "countries": ["germany", "austria", "switzerland"],
+      "countries": ["germany", "austria"],
       "pattern": [
         { "section": "Lesen (Reading)", "content": "3 reading tasks with comprehension questions", "duration": "65 min" },
         { "section": "Hören (Listening)", "content": "3 listening tasks with note-taking", "duration": "40 min" },
@@ -279,7 +279,7 @@
       "name": "Goethe-Zertifikat",
       "short": "Goethe",
       "kind": "language",
-      "countries": ["germany", "austria", "switzerland"],
+      "countries": ["germany", "austria"],
       "pattern": [
         { "section": "Lesen (Reading)", "content": "Multiple choice and matching tasks", "duration": "65 min" },
         { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
@@ -310,7 +310,7 @@
       "name": "ÖSD Zertifik",
       "short": "ÖSD",
       "kind": "language",
-      "countries": ["austria", "germany", "switzerland", "liechtenstein"],
+      "countries": ["austria", "germany"],
       "pattern": [
         { "section": "Lesen (Reading)", "content": "Multiple choice and open tasks", "duration": "60 min" },
         { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
@@ -463,7 +463,7 @@
       "id": "tr-yos",
       "name": "TR-YÖS (Yabancı Uyruklu Öğrenci Sınavı)",
       "short": "TR-YÖS",
-      "kind": "language",
+      "kind": "aptitude",
       "countries": ["turkey"],
       "pattern": [
         { "section": "Basic Learning Skills", "content": "Logic, mathematics, and abstract reasoning", "duration": "90 min" },
@@ -524,7 +524,7 @@
       "name": "NT2 (Nederlands als Tweede Taal)",
       "short": "NT2",
       "kind": "language",
-      "countries": ["netherlands", "belgium"],
+      "countries": ["netherlands"],
       "pattern": [
         { "section": "Lezen (Reading)", "content": "Multiple choice and open questions", "duration": "varies by level" },
         { "section": "Luisteren (Listening)", "content": "Audio comprehension questions", "duration": "varies by level" },
