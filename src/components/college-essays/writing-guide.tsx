@@ -62,9 +62,11 @@ export function WritingGuide() {
   const [newItem, setNewItem] = React.useState("");
   const [promptId, setPromptId] = React.useState<string | null>(null);
   const [lastCopied, setLastCopied] = React.useState<string | null>(null);
+  const toastRef = React.useRef<number | undefined>(undefined);
 
   const steps = guide.guide.steps;
-  const currentStep = steps[stepState.current];
+  const safeCurrent = Math.min(Math.max(0, stepState.current), steps.length - 1);
+  const currentStep = steps[safeCurrent];
   const analysis = React.useMemo(() => analyzeDraft(draft), [draft]);
   const currentPrompt = guide.guide.ideaPrompts.find((p) => p.id === promptId) ?? null;
 
@@ -88,14 +90,18 @@ export function WritingGuide() {
 
   function spinPrompt() {
     const pool = guide.guide.ideaPrompts.filter((p) => p.id !== promptId);
+    if (pool.length === 0) return;
     setPromptId(pool[Math.floor(Math.random() * pool.length)].id);
   }
 
   function appendStarter(text: string) {
+    window.clearTimeout(toastRef.current);
     setDraft((d) => (d ? `${d}\n\n${text}` : text));
     setLastCopied(text.slice(0, 60));
-    window.setTimeout(() => setLastCopied(null), 2000);
+    toastRef.current = window.setTimeout(() => setLastCopied(null), 2000);
   }
+
+  React.useEffect(() => () => window.clearTimeout(toastRef.current), []);
 
   return (
     <div className="space-y-6">
@@ -108,8 +114,11 @@ export function WritingGuide() {
               key={s.id}
               type="button"
               onClick={() => unlocked && setStepState((p) => ({ ...p, current: i }))}
+              aria-disabled={!unlocked}
+              aria-current={i === stepState.current ? "step" : undefined}
+              tabIndex={!unlocked ? -1 : 0}
               className={cn(
-                "rounded-xl border-2 px-3 py-3 text-left transition-colors",
+                "rounded-xl border-2 px-3 py-3 text-left transition-colors focus:outline-none focus:ring-2 focus:ring-violet/50",
                 i === stepState.current ? "border-violet bg-violet/10" : "border-line bg-surface",
                 !unlocked && "cursor-not-allowed opacity-40"
               )}
@@ -127,7 +136,7 @@ export function WritingGuide() {
         })}
       </div>
 
-      <div className="rounded-2xl border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_#191f2c]">
+      <div className="rounded-2xl border-2 border-ink bg-surface p-5 pixel-shadow">
         {currentStep.id === "brainstorm" && (
           <>
             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -152,6 +161,7 @@ export function WritingGuide() {
             <p className="mt-1 text-xs text-muted">List 3-5 concrete moments: a project, a failure, a habit, a place. These become your scenes.</p>
             <div className="mt-3 flex gap-2">
               <input
+                aria-label="Experience inventory item"
                 value={newItem}
                 onChange={(e) => setNewItem(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && addItem()}
@@ -189,7 +199,7 @@ export function WritingGuide() {
                   type="button"
                   onClick={() => setOutlineState({ templateId: t.id, slots: {} })}
                   className={cn(
-                    "rounded-xl border-2 p-4 text-left transition-colors",
+                    "rounded-xl border-2 p-4 text-left transition-colors focus:outline-none focus:ring-2 focus:ring-violet/50",
                     outlineState.templateId === t.id ? "border-violet bg-violet/10" : "border-line bg-surface-2 hover:border-violet/40"
                   )}
                 >
@@ -249,7 +259,7 @@ export function WritingGuide() {
                           key={s.id}
                           type="button"
                           onClick={() => appendStarter(s.text)}
-                          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-left text-sm text-muted transition-colors hover:border-violet/40 hover:text-ink"
+                          className="w-full rounded-lg border border-line bg-surface px-3 py-2 text-left text-sm text-muted transition-colors hover:border-violet/40 hover:text-ink focus:outline-none focus:ring-2 focus:ring-violet/50"
                         >
                           &ldquo;{s.text}&rdquo;
                         </button>
