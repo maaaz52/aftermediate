@@ -65,7 +65,8 @@ export function WritingGuide() {
   const toastRef = React.useRef<number | undefined>(undefined);
 
   const steps = guide.guide.steps;
-  const safeCurrent = Math.min(Math.max(0, stepState.current), steps.length - 1);
+  const rawCurrent = Number.isFinite(stepState.current) ? Math.floor(stepState.current) : 0;
+  const safeCurrent = Math.min(Math.max(0, rawCurrent), steps.length - 1);
   const currentStep = steps[safeCurrent];
   const analysis = React.useMemo(() => analyzeDraft(draft), [draft]);
   const currentPrompt = guide.guide.ideaPrompts.find((p) => p.id === promptId) ?? null;
