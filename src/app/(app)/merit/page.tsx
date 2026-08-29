@@ -11,6 +11,9 @@ import { useStudent } from "@/lib/store";
 import { data, getMajorsByStream, getUniversitiesForStream } from "@/lib/data";
 import { nustAggregate, fastAggregate, mdcatAggregate, mdcatPercentile } from "@/lib/aggregates";
 import type { Stream } from "@/lib/types";
+import universities from "@/data/universities.json";
+import type { University } from "@/lib/types";
+import { addEntry } from "@/lib/watchlist";
 
 function Gauge({ value, label }: { value: number; label: string }) {
   const clamped = Math.min(100, Math.max(0, value));
@@ -50,6 +53,9 @@ export default function MeritPage() {
   const percentile = isMed ? mdcatPercentile(results[0].value) : null;
   const majors = getMajorsByStream(stream).filter((m) => m.id !== "medicine");
   const unis = getUniversitiesForStream(stream);
+  const UNIS = universities as unknown as University[];
+  const watchlist = profile.watchlist ?? [];
+  const tracked = new Set(watchlist.map((e) => `${e.universityId}:${e.programName}`));
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -141,6 +147,7 @@ export default function MeritPage() {
                   <th className="py-3 pr-4">Program</th>
                   <th className="py-3 pr-4">Closing merit</th>
                   <th className="py-3">Your chance</th>
+                  <th className="py-3 pl-4"></th>
                 </tr>
               </thead>
               <tbody>
@@ -162,6 +169,41 @@ export default function MeritPage() {
                         ) : (
                           <Badge variant="danger">reach ({gap.toFixed(1)})</Badge>
                         )}
+                      </td>
+                      <td className="py-3 pl-4">
+                        {(() => {
+                          const key = `${u.id}:${p.name}`;
+                          if (tracked.has(key)) {
+                            return <span className="text-[11px] font-medium text-emerald">Tracking {'\u2713'}</span>;
+                          }
+                          return (
+                            <button
+                              onClick={() => {
+                                const result = addEntry(watchlist, {
+                                  universityId: u.id,
+                                  programName: p.name,
+                                  myMerit: results[0]?.value ?? null,
+                                  myStream: stream,
+                                }, UNIS);
+                                const added = result.find(
+                                  (e) => e.universityId === u.id && e.programName === p.name
+                                );
+                                if (added) {
+                                  const updated = [...watchlist, added];
+                                  update({ watchlist: updated });
+                                  fetch("/api/watchlist/sync", {
+                                    method: "POST",
+                                    headers: { "content-type": "application/json" },
+                                    body: JSON.stringify({ watchlist: updated }),
+                                  }).catch(() => {});
+                                }
+                              }}
+                              className="rounded-lg border border-violet/30 px-2 py-1 text-[11px] font-medium text-violet hover:bg-violet/10 transition-colors"
+                            >
+                              Track
+                            </button>
+                          );
+                        })()}
                       </td>
                     </tr>
                   );
