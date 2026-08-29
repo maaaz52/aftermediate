@@ -2,13 +2,17 @@ import { describe, expect, it } from "vitest";
 import {
   buildPool,
   canonicalSection,
+  computeStreak,
   dailyPick,
+  dayKey,
+  dayNumber,
+  isSprintDoneToday,
   recipeFor,
   sprintRecipes,
   SPRINT_SIZE,
   streamTests,
 } from "./sprint";
-import type { PracticeBank, PracticeQuestion } from "./practice";
+import type { PracticeAttempt, PracticeBank, PracticeQuestion } from "./practice";
 
 function q(id: string, section: string, correct = 0): PracticeQuestion {
   return {
@@ -210,5 +214,79 @@ describe("dailyPick", () => {
     const pool = buildPool({ tiny: bank("tiny", ["math"], 2) }, ["tiny"], preEngRecipe);
     const picked = dailyPick(pool, preEngRecipe, 1000);
     expect(picked.length).toBe(2);
+  });
+});
+
+function sprintAttempt(day: string, mode: PracticeAttempt["mode"] = "sprint"): PracticeAttempt {
+  return {
+    id: `a-${day}-${Math.random()}`,
+    testId: "sprint",
+    mode,
+    submittedAt: new Date(`${day}T12:00:00+05:00`).toISOString(),
+    autoSubmitted: false,
+    timeUsedSeconds: 90,
+    score: 3,
+    maxScore: 5,
+    percent: 60,
+    sections: [],
+  };
+}
+
+describe("dayKey / dayNumber", () => {
+  it("uses PKT boundaries", () => {
+    expect(dayKey(new Date("2026-08-29T10:00:00Z"))).toBe("2026-08-29"); // 15:00 PKT
+    expect(dayKey(new Date("2026-08-29T19:30:00Z"))).toBe("2026-08-30"); // 00:30 PKT next day
+  });
+
+  it("increments dayNumber across PKT days", () => {
+    const d1 = dayNumber(new Date("2026-08-29T10:00:00Z"));
+    const d2 = dayNumber(new Date("2026-08-30T10:00:00Z"));
+    expect(d2 - d1).toBe(1);
+  });
+});
+
+describe("isSprintDoneToday", () => {
+  it("is true only for a sprint attempt on the same PKT day", () => {
+    const now = new Date("2026-08-29T15:00:00Z"); // 20:00 PKT 2026-08-29
+    expect(isSprintDoneToday([sprintAttempt("2026-08-29")], now)).toBe(true);
+    expect(isSprintDoneToday([sprintAttempt("2026-08-28")], now)).toBe(false);
+    expect(isSprintDoneToday([sprintAttempt("2026-08-29", "quick")], now)).toBe(false);
+    expect(isSprintDoneToday([], now)).toBe(false);
+  });
+});
+
+describe("computeStreak", () => {
+  const noon = (day: string) => new Date(`${day}T15:00:00Z`); // 20:00 PKT
+
+  it("is 0 with no sprint attempts", () => {
+    expect(computeStreak([], noon("2026-08-29"))).toBe(0);
+  });
+
+  it("counts consecutive days ending today", () => {
+    const attempts = ["2026-08-29", "2026-08-28", "2026-08-27"].map((day) => sprintAttempt(day));
+    expect(computeStreak(attempts, noon("2026-08-29"))).toBe(3);
+  });
+
+  it("preserves a streak while today is still pending (yesterday counts)", () => {
+    const attempts = ["2026-08-28", "2026-08-27"].map((day) => sprintAttempt(day));
+    expect(computeStreak(attempts, noon("2026-08-29"))).toBe(2);
+  });
+
+  it("resets on a missed full day", () => {
+    const attempts = ["2026-08-29", "2026-08-27"].map((day) => sprintAttempt(day)); // skipped the 28th
+    expect(computeStreak(attempts, noon("2026-08-29"))).toBe(1);
+  });
+
+  it("returns 1 for a fresh start done today", () => {
+    expect(computeStreak([sprintAttempt("2026-08-29")], noon("2026-08-29"))).toBe(1);
+  });
+
+  it("is 0 when neither today nor yesterday has an attempt", () => {
+    expect(computeStreak([sprintAttempt("2026-08-25")], noon("2026-08-29"))).toBe(0);
+  });
+
+  it("ignores non-sprint attempts", () => {
+    const attempts = [sprintAttempt("2026-08-29", "quick"), sprintAttempt("2026-08-28", "full")];
+    expect(computeStreak(attempts, noon("2026-08-29"))).toBe(0);
   });
 });

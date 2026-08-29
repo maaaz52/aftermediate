@@ -185,3 +185,67 @@ export function dailyPick(
   }
   return picked;
 }
+
+// ---------------------------------------------------------------------------
+// PKT day keys & derived streak
+// ---------------------------------------------------------------------------
+
+const SPRINT_TZ = "Asia/Karachi";
+
+export function dayKey(date: Date, tz = SPRINT_TZ): string {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: tz,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "";
+  return `${get("year")}-${get("month")}-${get("day")}`;
+}
+
+export function dayNumber(date: Date, tz = SPRINT_TZ): number {
+  const [y, m, d] = dayKey(date, tz).split("-").map(Number);
+  return Math.floor(Date.UTC(y, m - 1, d) / 86_400_000);
+}
+
+function shiftDay(key: string, delta: number): string {
+  const [y, m, d] = key.split("-").map(Number);
+  const date = new Date(Date.UTC(y, m - 1, d + delta));
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${date.getUTCFullYear()}-${pad(date.getUTCMonth() + 1)}-${pad(date.getUTCDate())}`;
+}
+
+function countBack(days: Set<string>, start: string): number {
+  let cursor = start;
+  let count = 0;
+  while (days.has(cursor)) {
+    count++;
+    cursor = shiftDay(cursor, -1);
+  }
+  return count;
+}
+
+export function isSprintDoneToday(attempts: PracticeAttempt[], now: Date): boolean {
+  const today = dayKey(now);
+  return attempts.some(
+    (a) => a.mode === "sprint" && dayKey(new Date(a.submittedAt)) === today
+  );
+}
+
+/**
+ * Streak = consecutive PKT days with a sprint attempt, ending today (or
+ * yesterday while today is still pending — the streak survives until the
+ * day ends).
+ */
+export function computeStreak(attempts: PracticeAttempt[], now: Date): number {
+  const days = new Set(
+    attempts
+      .filter((a) => a.mode === "sprint")
+      .map((a) => dayKey(new Date(a.submittedAt)))
+  );
+  const today = dayKey(now);
+  if (days.has(today)) return countBack(days, today);
+  const yesterday = shiftDay(today, -1);
+  if (days.has(yesterday)) return countBack(days, yesterday);
+  return 0;
+}

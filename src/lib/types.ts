@@ -315,7 +315,7 @@ export interface AbroadScholarship {
 
 export type AbroadTestKind = "english" | "aptitude" | "graduate" | "language";
 
-export type PracticeMode = "full" | "quick";
+export type PracticeMode = "full" | "quick" | "sprint";
 
 export interface PracticeAttempt {
   id: string;
