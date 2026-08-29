@@ -18,7 +18,7 @@
 - Create: `src/lib/skills.test.ts`
 - Create: `src/lib/skills.ts`
 
-- [ ] **Step 1: Write `src/lib/skills.test.ts`** — tests for every helper below (TDD):
+- [x] **Step 1: Write `src/lib/skills.test.ts`** — tests for every helper below (TDD):
 
 ```ts
 import { describe, expect, it } from "vitest";
@@ -38,9 +38,9 @@ Test cases:
 - `readDays(300)` → 8; `readDays(0)` → 0 (40 pages/day, ceil).
 - `wizardScore({ skill: "design", experience: "none", budget: "small", payout: "payoneer" }, platforms)` returns sorted list, top result first, each with `id`, `score: number`, `reasons: string[]`; every platform gets a score ≥ 0; scores are deterministic (same input → same output).
 
-- [ ] **Step 2: Run test — verify it fails** (`npx vitest run src/lib/skills.test.ts`)
+- [x] **Step 2: Run test — verify it fails** (`npx vitest run src/lib/skills.test.ts`)
 
-- [ ] **Step 3: Write `src/lib/skills.ts`**
+- [x] **Step 3: Write `src/lib/skills.ts`**
 
 ```ts
 import * as React from "react";
@@ -165,8 +165,8 @@ export async function copyText(text: string): Promise<boolean> {
 }
 ```
 
-- [ ] **Step 4: Run tests — verify they pass** (`npx vitest run src/lib/skills.test.ts`)
-- [ ] **Step 5: Commit** — `feat(skills): add skills lib helpers with tests`
+- [x] **Step 4: Run tests — verify they pass** (`npx vitest run src/lib/skills.test.ts`)
+- [x] **Step 5: Commit** — `feat(skills): add skills lib helpers with tests`
 
 ---
 
@@ -179,7 +179,7 @@ export async function copyText(text: string): Promise<boolean> {
 - Create: `src/data/skills-platforms.test.ts`
 - Create: `src/data/skills-chatbot-knowledge.test.ts`
 
-- [ ] **Step 1: Write all 5 test files** (each imports its data file and validates structure). Shared patterns (adapt from `practice-banks.test.ts` / `abroad-scholarships.test.ts` style — `describe/it`, `expect`):
+- [x] **Step 1: Write all 5 test files** (each imports its data file and validates structure). Shared patterns (adapt from `practice-banks.test.ts` / `abroad-scholarships.test.ts` style — `describe/it`, `expect`):
 
 **skills-courses.test.ts** — imports `courses from "./skills-courses.json"` and `{ skillPaths, validatePaths, trackCounts } from "@/lib/skills"`:
 - ≥ 40 courses; unique ids; every field present with correct types
@@ -213,8 +213,8 @@ export async function copyText(text: string): Promise<boolean> {
 - every fact: text > 40 chars, source starts with https://
 - ≥ 3 topics per required area: pricing, getting-paid, portfolio
 
-- [ ] **Step 2: Run all 5 — verify they fail (missing data files)**
-- [ ] **Step 3: Commit** — `test(skills): add data contract tests for skills data files`
+- [x] **Step 2: Run all 5 — verify they fail (missing data files)**
+- [x] **Step 3: Commit** — `test(skills): add data contract tests for skills data files`
 
 ---
 
@@ -227,7 +227,7 @@ export async function copyText(text: string): Promise<boolean> {
 - Create: `src/data/skills-platforms.json` (12 platforms)
 - Create: `src/data/skills-chatbot-knowledge.ts` (~18 topics)
 
-- [ ] **Step 1: Dispatch 5 parallel GeneralPurpose agents** (dispatching-parallel-agents skill). Each agent gets: the exact schema from the spec, the contract-test requirements from Task 2, realistic real-world content, and strict JSON formatting rules (JSON files: valid JSON, 2-space indent, `"id"` keys matching `skills-courses` etc. patterns; the knowledge file: TypeScript module mirroring `abroad-chatbot-knowledge.ts` structure with the "edit this file to train the bot" header comment).
+- [x] **Step 1: Dispatch 5 parallel GeneralPurpose agents** (dispatching-parallel-agents skill). Each agent gets: the exact schema from the spec, the contract-test requirements from Task 2, realistic real-world content, and strict JSON formatting rules (JSON files: valid JSON, 2-space indent, `"id"` keys matching `skills-courses` etc. patterns; the knowledge file: TypeScript module mirroring `abroad-chatbot-knowledge.ts` structure with the "edit this file to train the bot" header comment).
 
   **Agent A — courses:** must include ALL course ids from `skillPaths` (Task 1) with accurate metadata (real providers: freeCodeCamp, JavaScript.info, CS50/edX, Scrimba, Frontend Mentor, Figma, Google/Coursera, Kaggle, Maven Analytics, DeepLearning.AI, HubSpot Academy, Zapier, etc.); remaining courses cover 8 tracks with ≥ 3 each; 15–20 free courses; ratings realistic (3.8–4.9); hours realistic (2–120).
 
@@ -239,8 +239,8 @@ export async function copyText(text: string): Promise<boolean> {
 
   **Agent E — knowledge base:** ~18 topics from the spec list; every fact must be practical, Pakistan-relevant (PKR amounts, FBR/NTN rules hedged, Payoneer/Wise/Elevate, DigiSkills/Bano Qabil), carry a real source URL (official docs, Payoneer help, FBR site, DigiSkills, etc.), and avoid invented specifics — hedge time-varying figures.
 
-- [ ] **Step 2: Run the 5 data test files** — fix any violations (schema mismatches, missing path ids, count shortfalls) directly in the data files.
-- [ ] **Step 3: Commit** — `feat(skills): add courses, books, playbook, platforms, and chatbot knowledge data`
+- [x] **Step 2: Run the 5 data test files** — fix any violations (schema mismatches, missing path ids, count shortfalls) directly in the data files.
+- [x] **Step 3: Commit** — `feat(skills): add courses, books, playbook, platforms, and chatbot knowledge data`
 
 ---
 
@@ -250,7 +250,7 @@ export async function copyText(text: string): Promise<boolean> {
 - Modify: `src/lib/ai.ts`
 - Modify: `src/app/api/chat/route.ts`
 
-- [ ] **Step 1: `src/lib/ai.ts`** — extend `ChatContext["persona"]` union: `"rahbar" | "study" | "essay" | "cv" | "safar" | "hunar"`. Import `skillsChatbotKnowledge` from `@/data/skills-chatbot-knowledge`; build `HUNAR_KNOWLEDGE` via the same `formatKnowledgeBase` pattern (generalize the existing function to accept a knowledge object). Add `PERSONA_PROMPTS.hunar`:
+- [x] **Step 1: `src/lib/ai.ts`** — extend `ChatContext["persona"]` union: `"rahbar" | "study" | "essay" | "cv" | "safar" | "hunar"`. Import `skillsChatbotKnowledge` from `@/data/skills-chatbot-knowledge`; build `HUNAR_KNOWLEDGE` via the same `formatKnowledgeBase` pattern (generalize the existing function to accept a knowledge object). Add `PERSONA_PROMPTS.hunar`:
 
 ```ts
 hunar: `You are "Hunar" (ہنر), the freelancing & side-hustle coach for aftermediate — a career platform for Pakistani students and fresh graduates. You help people build marketable skills, find clients, price their work, and get paid from Pakistan.
@@ -267,9 +267,9 @@ Grounding rules:
 - Always end with one concrete next step the user can take today.`,
 ```
 
-- [ ] **Step 2: `src/app/api/chat/route.ts`** — extend persona union: `(body.persona as "rahbar" | "study" | "essay" | "cv" | "safar" | "hunar")`.
-- [ ] **Step 3: Verify** — `npx tsc --noEmit` exit 0.
-- [ ] **Step 4: Commit** — `feat(skills): add Hunar A.I persona with freelancing knowledge base`
+- [x] **Step 2: `src/app/api/chat/route.ts`** — extend persona union: `(body.persona as "rahbar" | "study" | "essay" | "cv" | "safar" | "hunar")`.
+- [x] **Step 3: Verify** — `npx tsc --noEmit` exit 0.
+- [x] **Step 4: Commit** — `feat(skills): add Hunar A.I persona with freelancing knowledge base`
 
 ---
 
@@ -284,13 +284,13 @@ Grounding rules:
 
 All components: `"use client"`, `React.useState`/`useMemo`, lucide-react icons, Tailwind tokens from the design system (`bg-surface`, `border-line`, `pixel-border`, `text-ink/muted/faint`, `saffron`, `emerald`, `amber`, `danger`, `info`, `violet`), font-mono for data values.
 
-- [ ] **Step 1: `course-explorer.tsx`** — state: `track` (null|track), `level` (null|level), `freeOnly` (bool), `sort` ("rating"|"hours"|"cost"|"title"), `q` (string), `mode` ("list"|"paths"), `done` (Set<string> via useLocalStorage `aftermediate:skills:paths`). List view: chips with counts (`All 48`), segmented level control, free-only toggle, sort select, search input; filtered grid of pixel-border cards (track badge, level difficulty meter as 3 filled/empty segments, hours chip, cost chip `pkr(costUsd)` showing `$49 ≈ Rs 13,700` for paid, rating stars, certificate badge `Cert`, "why" line, `Open ↗` link). Empty-state with clear-filters button. Paths view: 5 path cards → expand to timeline (numbered steps, course title + provider + hours, checkbox → toggles `done`), progress bar + `x/y done`, "Show only these courses" button → switches to list view with the path's course ids pre-filtered (highlighted). Result count line.
-- [ ] **Step 2: `book-library.tsx`** — state: `genre`, `q`, `freeOnly`, `sort`, `open` (expanded card ids), `queue` (useLocalStorage `aftermediate:skills:queue`: `{ id, progress }[]`). Card: pixel cover header (two-letter initials on colored block per genre), title/author, rating stars, `pages · ~N days @40/day`, FREE (emerald) / Paid badge, expandable "Summary + Why read this", `Read ↗` link, `+ Queue` / `In queue (N%)` button. Queue strip (fixed bottom or right rail on the page): total books, total pages, weighted finish estimate `(100 - avg progress)`, per-book progress sliders (input range 0–100), remove button, clear-all. Progress persists.
-- [ ] **Step 3: `skills-chat.tsx`** — copy the /study chat pattern (streaming reader, localStorage history `aftermediate:skills:chat`), adapted: greeting "Salam! Main Hunar hoon — your freelancing & side-hustle coach. Ask me about skills, pricing, clients, or getting paid from Pakistan."; suggestion chips: "I have zero skills — where do I start?", "How do I price a logo design?", "Upwork vs Fiverr — which first?", "How do I get paid from Pakistan?"; posts `persona: "hunar"` to `/api/chat`.
-- [ ] **Step 4: `client-playbook.tsx`** — state: `section` (default "kickoff"), `q`, `type` (null|type), `open` (Set of card ids). Left rail: 5 section buttons with card counts. Header: search + type chips. Cards: accordion (click header to expand body), Copy button (`copyText(body)` → temporary "Copied ✓" state), type badge with color (template=saffron, script=violet, rule=emerald, framework=amber), tags as mono chips. **Quote Builder** panel (top or side): service select (logo 6h, website 20h, content article 3h, video edit 8h, dev hour 1h, other 10h — presets fill hours), hours number input, rate USD number input (default 15), complexity segmented (1× / 1.25× / 1.5×) → live: `Quote: $X (Rs Y) · Deposit 50%: $Z · Milestones: 50/50 (or 40/40/20 when > 8h)`; persists last inputs via useLocalStorage `aftermediate:skills:quote`.
-- [ ] **Step 5: `platform-war-room.tsx`** — state: `view` ("table"|"cards"|"wizard"), sort key/dir for table, filters (newcomer toggle, pkr toggle, niche select). Table: sortable column headers (Name, Fee %, Competition ●●●○○, Newcomer ●●●○○, Min payout $, Payout time). Cards: fee bar (width %), competition meter (5 dots), newcomer meter, payout method chips, niche tags, pros/cons (two columns), tips callout (`bg-amber/10 border-amber/30`), `Visit ↗`. Wizard: 4 steps (skill select: design/development/writing/data/video/other; experience: none/some/pro; budget: small/mid/premium; payout: payoneer/any) → `wizardScore` → top-3 cards with reasons + full ranked list (collapsible).
-- [ ] **Step 6: Quick render sanity** — `npx tsc --noEmit` exit 0.
-- [ ] **Step 7: Commit** — `feat(skills): add five interactive skill components`
+- [x] **Step 1: `course-explorer.tsx`** — state: `track` (null|track), `level` (null|level), `freeOnly` (bool), `sort` ("rating"|"hours"|"cost"|"title"), `q` (string), `mode` ("list"|"paths"), `done` (Set<string> via useLocalStorage `aftermediate:skills:paths`). List view: chips with counts (`All 48`), segmented level control, free-only toggle, sort select, search input; filtered grid of pixel-border cards (track badge, level difficulty meter as 3 filled/empty segments, hours chip, cost chip `pkr(costUsd)` showing `$49 ≈ Rs 13,700` for paid, rating stars, certificate badge `Cert`, "why" line, `Open ↗` link). Empty-state with clear-filters button. Paths view: 5 path cards → expand to timeline (numbered steps, course title + provider + hours, checkbox → toggles `done`), progress bar + `x/y done`, "Show only these courses" button → switches to list view with the path's course ids pre-filtered (highlighted). Result count line.
+- [x] **Step 2: `book-library.tsx`** — state: `genre`, `q`, `freeOnly`, `sort`, `open` (expanded card ids), `queue` (useLocalStorage `aftermediate:skills:queue`: `{ id, progress }[]`). Card: pixel cover header (two-letter initials on colored block per genre), title/author, rating stars, `pages · ~N days @40/day`, FREE (emerald) / Paid badge, expandable "Summary + Why read this", `Read ↗` link, `+ Queue` / `In queue (N%)` button. Queue strip (fixed bottom or right rail on the page): total books, total pages, weighted finish estimate `(100 - avg progress)`, per-book progress sliders (input range 0–100), remove button, clear-all. Progress persists.
+- [x] **Step 3: `skills-chat.tsx`** — copy the /study chat pattern (streaming reader, localStorage history `aftermediate:skills:chat`), adapted: greeting "Salam! Main Hunar hoon — your freelancing & side-hustle coach. Ask me about skills, pricing, clients, or getting paid from Pakistan."; suggestion chips: "I have zero skills — where do I start?", "How do I price a logo design?", "Upwork vs Fiverr — which first?", "How do I get paid from Pakistan?"; posts `persona: "hunar"` to `/api/chat`.
+- [x] **Step 4: `client-playbook.tsx`** — state: `section` (default "kickoff"), `q`, `type` (null|type), `open` (Set of card ids). Left rail: 5 section buttons with card counts. Header: search + type chips. Cards: accordion (click header to expand body), Copy button (`copyText(body)` → temporary "Copied ✓" state), type badge with color (template=saffron, script=violet, rule=emerald, framework=amber), tags as mono chips. **Quote Builder** panel (top or side): service select (logo 6h, website 20h, content article 3h, video edit 8h, dev hour 1h, other 10h — presets fill hours), hours number input, rate USD number input (default 15), complexity segmented (1× / 1.25× / 1.5×) → live: `Quote: $X (Rs Y) · Deposit 50%: $Z · Milestones: 50/50 (or 40/40/20 when > 8h)`; persists last inputs via useLocalStorage `aftermediate:skills:quote`.
+- [x] **Step 5: `platform-war-room.tsx`** — state: `view` ("table"|"cards"|"wizard"), sort key/dir for table, filters (newcomer toggle, pkr toggle, niche select). Table: sortable column headers (Name, Fee %, Competition ●●●○○, Newcomer ●●●○○, Min payout $, Payout time). Cards: fee bar (width %), competition meter (5 dots), newcomer meter, payout method chips, niche tags, pros/cons (two columns), tips callout (`bg-amber/10 border-amber/30`), `Visit ↗`. Wizard: 4 steps (skill select: design/development/writing/data/video/other; experience: none/some/pro; budget: small/mid/premium; payout: payoneer/any) → `wizardScore` → top-3 cards with reasons + full ranked list (collapsible).
+- [x] **Step 6: Quick render sanity** — `npx tsc --noEmit` exit 0.
+- [x] **Step 7: Commit** — `feat(skills): add five interactive skill components`
 
 ---
 
@@ -300,8 +300,8 @@ All components: `"use client"`, `React.useState`/`useMemo`, lucide-react icons, 
 - Create: `src/app/(app)/skills/courses/page.tsx`, `books/page.tsx`, `chat/page.tsx`, `clients/page.tsx`, `platforms/page.tsx`
 - Modify: `src/components/sidebar.tsx`
 
-- [ ] **Step 1: Pages** — each page: page header block (pixel icon tile + title + one-line description, matching study/page.tsx header pattern), then renders its component full-width (`mx-auto max-w-6xl px-4 py-6 sm:px-6`). Chat page mirrors study/page.tsx layout (`max-w-4xl h-[calc(100vh-4rem)]`).
-- [ ] **Step 2: Sidebar** — add group after "Education Abroad", before "Resources":
+- [x] **Step 1: Pages** — each page: page header block (pixel icon tile + title + one-line description, matching study/page.tsx header pattern), then renders its component full-width (`mx-auto max-w-6xl px-4 py-6 sm:px-6`). Chat page mirrors study/page.tsx layout (`max-w-4xl h-[calc(100vh-4rem)]`).
+- [x] **Step 2: Sidebar** — add group after "Education Abroad", before "Resources":
 
 ```tsx
 {
@@ -318,19 +318,19 @@ All components: `"use client"`, `React.useState`/`useMemo`, lucide-react icons, 
 
 Add the 5 icons to the lucide import list (verify names exist in lucide-react: `MonitorPlay`, `BookMarked`, `MessageSquareText`, `Handshake`, `Store`). Check whether any mobile nav component consumes `groups` (e.g., a drawer in the app layout) — if it does, it picks up the new group automatically; verify no hardcoded group lists elsewhere (`grep -rn "Education Abroad" src/`).
 
-- [ ] **Step 3: Verify** — `npx tsc --noEmit` exit 0; `npx eslint` on all changed files exit 0.
-- [ ] **Step 4: Commit** — `feat(skills): add skill pages and sidebar group`
+- [x] **Step 3: Verify** — `npx tsc --noEmit` exit 0; `npx eslint` on all changed files exit 0.
+- [x] **Step 4: Commit** — `feat(skills): add skill pages and sidebar group`
 
 ---
 
 ## Task 7: Full verification
 
-- [ ] **Step 1:** `npx vitest run` — all suites pass (existing 3 pre-existing failures in `abroad-tests.test.ts` are known/unrelated)
-- [ ] **Step 2:** `npx tsc --noEmit` — exit 0
-- [ ] **Step 3:** `npx eslint` on all created/modified files — exit 0
-- [ ] **Step 4:** `npx next build` — all 5 new routes in output; exit 0
-- [ ] **Step 5:** Spot-check interactivity in dev (`npx next dev` + browser agent): courses filters/paths mode, book queue, chat sends a message (may fail without API key locally — verify request shape), quote builder math, platform wizard recommendation.
-- [ ] **Step 6:** Commit — `chore(skills): verification pass`
+- [x] **Step 1:** `npx vitest run` — all suites pass (existing 3 pre-existing failures in `abroad-tests.test.ts` are known/unrelated)
+- [x] **Step 2:** `npx tsc --noEmit` — exit 0
+- [x] **Step 3:** `npx eslint` on all created/modified files — exit 0
+- [x] **Step 4:** `npx next build` — all 5 new routes in output; exit 0
+- [x] **Step 5:** Spot-check interactivity in dev (`npx next dev` + browser agent): courses filters/paths mode, book queue, chat sends a message (may fail without API key locally — verify request shape), quote builder math, platform wizard recommendation.
+- [x] **Step 6:** Commit — `chore(skills): verification pass`
 
 ---
 
