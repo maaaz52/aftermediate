@@ -14,6 +14,7 @@ import {
   ClipboardList,
   Compass,
   Eye,
+  Feather,
   FileText,
   Globe,
   GraduationCap,
@@ -80,6 +81,12 @@ export const groups: NavGroup[] = [
       { href: "/skills/chat", label: "Hunar A.I", icon: MessageSquareText },
       { href: "/skills/clients", label: "Clients", icon: Handshake },
       { href: "/skills/platforms", label: "Platforms", icon: Store },
+    ],
+  },
+  {
+    label: "College Essays",
+    links: [
+      { href: "/college-essays", label: "College Essays", icon: Feather },
     ],
   },
   {
