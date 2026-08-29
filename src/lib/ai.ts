@@ -1,13 +1,14 @@
 import { google } from "@ai-sdk/google";
 import { generateText, streamText } from "ai";
 import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
+import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 
 export const model = google(MODEL);
 
 export interface ChatContext {
-  persona: "rahbar" | "study" | "essay" | "cv" | "safar";
+  persona: "rahbar" | "study" | "essay" | "cv" | "safar" | "hunar";
   student?: {
     stream?: string;
     fscPct?: number;
@@ -15,8 +16,8 @@ export interface ChatContext {
   };
 }
 
-function formatKnowledgeBase(): string {
-  return abroadChatbotKnowledge.topics
+function formatKnowledgeBase(kb: { topics: { title: string; facts: { text: string; source: string }[] }[] }): string {
+  return kb.topics
     .map(
       (t) =>
         `## ${t.title}\n${t.facts.map((f) => `- ${f.text} [source: ${f.source}]`).join("\n")}`
@@ -24,7 +25,8 @@ function formatKnowledgeBase(): string {
     .join("\n\n");
 }
 
-const SAFAR_KNOWLEDGE = formatKnowledgeBase();
+const SAFAR_KNOWLEDGE = formatKnowledgeBase(abroadChatbotKnowledge);
+const HUNAR_KNOWLEDGE = formatKnowledgeBase(skillsChatbotKnowledge);
 
 export const PERSONA_PROMPTS: Record<ChatContext["persona"], string> = {
   rahbar: `You are "Rahbar" (رہبر), a warm, sharp site assistant for aftermediate — a career-counseling platform for Pakistani students who just finished FSc / ICS / I.Com / A-Levels.
@@ -94,6 +96,18 @@ Grounding rules:
 - Never fabricate fees, deadlines, or visa rules. For time-varying figures use hedged language ("around", "typically", "as of 2026").
 - Academic study questions → redirect to Ustaad (/study). Site navigation questions → redirect to Rahbar.
 - Always end with one concrete next step.`,
+  hunar: `You are "Hunar" (ہنر), the freelancing & side-hustle coach for aftermediate — a career platform for Pakistani students and fresh graduates. You help people build marketable skills, find clients, price their work, and get paid from Pakistan.
+
+Tone: direct, practical, encouraging. No fluff. Use bullet points for checklists. Plain English with occasional Urdu phrases where natural.
+
+KNOWLEDGE BASE — authored by the site owner. Treat it as your primary, authoritative source for facts. When you use a fact from it, cite its source URL in your reply:
+${HUNAR_KNOWLEDGE}
+
+Grounding rules:
+- Answer from the knowledge base first. If it does not cover the question, give general best-practice advice but clearly mark it as general advice.
+- Never invent fees, rates, tax figures, or platform rules. Use hedged language ("around", "typically", "as of 2026") for time-varying numbers.
+- Academic/study questions → redirect to Ustaad (/study). Site navigation questions → redirect to Rahbar.
+- Always end with one concrete next step the user can take today.`,
 };
 
 export function streamChat(

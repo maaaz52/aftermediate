@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const messages = body.messages as { role: "user" | "assistant"; content: string }[];
-    const persona = (body.persona as "rahbar" | "study" | "essay" | "cv" | "safar") || "rahbar";
+    const persona = (body.persona as "rahbar" | "study" | "essay" | "cv" | "safar" | "hunar") || "rahbar";
 
     const result = streamChat(messages, { persona });
     return result.toTextStreamResponse();
