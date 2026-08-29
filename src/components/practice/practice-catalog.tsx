@@ -13,6 +13,7 @@ import {
   catalog,
   bestPercent,
   attemptsFor,
+  mockAttempts,
 } from "@/lib/practice";
 import type { PracticeBank } from "@/lib/practice";
 import type { EntryTest, Stream } from "@/lib/types";
@@ -49,9 +50,9 @@ function ReadyCard({
   basePath: string;
 }) {
   const { profile } = useStudent();
-  const mockAttempts = profile.practice.filter((a) => a.mode !== "sprint");
-  const best = bestPercent(mockAttempts, test.id);
-  const attempts = attemptsFor(mockAttempts, test.id);
+  const mockHistory = mockAttempts(profile.practice);
+  const best = bestPercent(mockHistory, test.id);
+  const attempts = attemptsFor(mockHistory, test.id);
   const hasNegative = bank.marking.negativeMarks > 0;
 
   return (

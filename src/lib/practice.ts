@@ -306,6 +306,11 @@ export function sprintAttempts(list: PracticeAttempt[]): PracticeAttempt[] {
   return list.filter((a) => a.mode === "sprint");
 }
 
+/** Mock-test attempts only — sprints are habit practice, not readiness mocks. */
+export function mockAttempts(list: PracticeAttempt[]): PracticeAttempt[] {
+  return list.filter((a) => a.mode !== "sprint");
+}
+
 export function attemptsFor(list: PracticeAttempt[], testId: string): PracticeAttempt[] {
   return list.filter((a) => a.testId === testId);
 }

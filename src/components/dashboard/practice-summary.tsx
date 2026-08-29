@@ -2,15 +2,13 @@
 
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { bestPercent, catalog } from "@/lib/practice";
+import { bestPercent, catalog, mockAttempts } from "@/lib/practice";
 import { useStudent } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
 export function PracticeSummary() {
   const { profile } = useStudent();
-  // 5-question sprints are habit practice, not readiness mocks — keep the
-  // mock stats honest.
-  const practice = profile.practice.filter((a) => a.mode !== "sprint");
+  const practice = mockAttempts(profile.practice);
   const testById = new Map(catalog().map((c) => [c.test.id, c.test]));
   const testIds = [...new Set(practice.map((a) => a.testId))];
   const lastFive = practice.slice(0, 5);

@@ -11,11 +11,13 @@ import {
   getBank,
   grade,
   latestAttempt,
+  mockAttempts,
   orderFor,
   pushAttempt,
   quickMinutes,
   quickOrder,
   remainingSeconds,
+  sprintAttempts,
   entryTests,
 } from "./practice";
 import type { PracticeAttempt, PracticeBank } from "./practice";
@@ -61,6 +63,21 @@ function attempt(percent: number, testId = "mdcat"): PracticeAttempt {
     score: percent,
     maxScore: 100,
     percent,
+    sections: [],
+  };
+}
+
+function makeAttempt(id: string, mode: PracticeAttempt["mode"]): PracticeAttempt {
+  return {
+    id,
+    testId: "t",
+    mode,
+    submittedAt: "2025-01-01T00:00:00.000Z",
+    autoSubmitted: false,
+    timeUsedSeconds: 100,
+    score: 80,
+    maxScore: 100,
+    percent: 80,
     sections: [],
   };
 }
@@ -239,5 +256,25 @@ describe("clock helpers", () => {
     expect(formatClock(6425)).toBe("01:47:05");
     expect(formatClock(180 * 60)).toBe("03:00:00");
     expect(formatClock(-5)).toBe("00:00:00");
+  });
+});
+
+describe("sprintAttempts / mockAttempts", () => {
+  it("partitions attempts into exactly one of the two lists", () => {
+    const list: PracticeAttempt[] = [
+      makeAttempt("a", "full"),
+      makeAttempt("b", "quick"),
+      makeAttempt("c", "sprint"),
+      makeAttempt("d", "sprint"),
+    ];
+    expect(sprintAttempts(list).map((a) => a.id)).toEqual(["c", "d"]);
+    expect(mockAttempts(list).map((a) => a.id)).toEqual(["a", "b"]);
+    expect(sprintAttempts(list).length + mockAttempts(list).length).toBe(list.length);
+  });
+
+  it("preserves order", () => {
+    const list = [makeAttempt("a", "sprint"), makeAttempt("b", "full"), makeAttempt("c", "sprint")];
+    expect(mockAttempts(list).map((a) => a.id)).toEqual(["b"]);
+    expect(sprintAttempts(list).map((a) => a.id)).toEqual(["a", "c"]);
   });
 });
