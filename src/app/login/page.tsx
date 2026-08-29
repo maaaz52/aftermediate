@@ -181,7 +181,7 @@ export default function LoginPage() {
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               {mode === "signin"
-                ? "Your roadmap is waiting. Sign in and pick up where you left off."
+                ? "Your roadmap is waiting. Log in and pick up where you left off."
                 : "Free forever for students. Build your post-FSc roadmap in minutes."}
             </p>
 
@@ -194,7 +194,7 @@ export default function LoginPage() {
                   mode === "signin" ? "bg-accent text-white" : "text-muted hover:text-ink"
                 )}
               >
-                Sign in
+                Login
               </button>
               <button
                 type="button"
@@ -266,7 +266,7 @@ export default function LoginPage() {
 
               <PixelButton type="submit" size="lg" className="w-full" disabled={busy}>
                 {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-                {mode === "signin" ? "Sign in" : "Create account"}
+                {mode === "signin" ? "Login" : "Create account"}
               </PixelButton>
             </form>
 
@@ -291,7 +291,7 @@ export default function LoginPage() {
               onClick={() => switchMode(mode === "signin" ? "signup" : "signin")}
               className="mt-6 block w-full text-center font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
             >
-              {mode === "signin" ? "no account? sign up →" : "have an account? sign in →"}
+              {mode === "signin" ? "no account? sign up →" : "have an account? login →"}
             </button>
           </PixelCard>
 
