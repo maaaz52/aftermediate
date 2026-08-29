@@ -1,0 +1,623 @@
+{
+  "explainer": {
+    "sections": [
+      {
+        "id": "what",
+        "title": "What Is a Personal Essay?",
+        "body": "A personal essay is a 400–650-word narrative you write as part of your university application. Unlike a school English essay, it is not about a book or a historical event. It is about you. Common App, which more than 1,000 universities accept as of 2026, describes the personal essay as your chance to share something the rest of your application does not say. Where your transcript shows grades and your activities list shows commitments, the essay shows your voice, your way of thinking, and what matters to you. For a Pakistani student applying to LUMS, NUST, or GIKI on the local side, or to US/UK/Canadian universities through the Common App or UCAS, the personal essay can be the deciding factor between two candidates with similar marks.",
+        "sources": [
+          { "label": "Common App — Announcing the 2025–2026 Common App essay prompts", "url": "https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts/" },
+          { "label": "Common App — Announcing the 2026–2027 Common App essay prompts", "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts/" },
+          { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" }
+        ]
+      },
+      {
+        "id": "role",
+        "title": "Why It Matters in Your Application",
+        "body": "Admissions officers read thousands of applications. Most candidates have similar grades, similar test scores, and similar extracurricular lists. The essay is the one item that breaks that pattern. Harvard College's admissions blog advises that the personal essay is 'the only place in your entire application where the admissions officers have the ability to hear your own voice.' MIT's admissions office says the essay lets you 'connect with the selection committee on a human level, beyond all of the test scores and grades.' For competitive Pakistani programmes — an NUST entry test score is not enough if your essay reveals nothing about who you are — and for need-aware US admissions where fit matters, a strong essay can tip a borderline admit into an acceptance.",
+        "sources": [
+          { "label": "Harvard College — My Very Unofficial Tips on Writing Your College Essay", "url": "https://college.harvard.edu/student-life/student-stories/my-very-unofficial-tips-writing-your-college-essay" },
+          { "label": "MIT Admissions — Advice On The Essay", "url": "https://mitadmissions.org/blogs/entry/advice_on_the_essay/" },
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+        ]
+      },
+      {
+        "id": "audience",
+        "title": "Who Reads It and What They Look For",
+        "body": "Your audience is a trained admissions reader who spends 5–10 minutes per essay. They are not looking for a perfect vocabulary or a heroic life story. Stanford's admission office writes that 'the essays are your chance to tell us about yourself in your own words — there are no right or wrong answers.' UC Admissions asks applicants to 'show us your personality, just as you would in real life.' Most admissions officers, as confirmed by CollegeXpress interviews with directors from Duke, Johns Hopkins, and Michigan State, want to hear an authentic 17- or 18-year-old voice — not an essay polished by a tutor. For Pakistani FSc and A-Level students applying abroad alongside local applicants, writing in your natural voice signals confidence and self-awareness.",
+        "sources": [
+          { "label": "Stanford University — Application and Essays", "url": "https://admission.stanford.edu/apply/first-year/apply.html" },
+          { "label": "UC Admissions — Personal Insight Questions", "url": "https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-first-year/personal-insight-questions.html" },
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" }
+        ]
+      },
+      {
+        "id": "craft",
+        "title": "How to Craft One",
+        "body": "Start early — the summer before your final year is ideal according to BigFuture. Read the prompt carefully. Common App offers seven prompts for 2026–2027 including options to write about a belief you challenged, a time you overcame an obstacle, or a topic of your choice. Harvard Summer School's writing guide emphasizes four techniques: grab the reader from the start, focus on deeper themes rather than listing achievements, show instead of tell by using scenes and anecdotes, and end with a strong closing. Write multiple drafts, read your essay aloud, and get feedback from teachers or peers. For a Pakistani applicant, a well-crafted essay can demonstrate intellectual curiosity and emotional maturity that grades alone cannot capture.",
+        "sources": [
+          { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" },
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "Common App — Announcing the 2026–2027 Common App essay prompts", "url": "https://www.commonapp.org/blog/announcing-2026-2027-common-app-essay-prompts/" }
+        ]
+      }
+    ],
+    "criteria": [
+      {
+        "id": "voice",
+        "title": "Authentic Voice",
+        "weight": "high",
+        "detail": "The essay must sound like a real teenager wrote it — not a thesaurus or a parent. Harvard College admissions warns against 'overly flowery language that no one would ever use in conversation.' MIT's admissions staff says they can 'always tell when an essay has been edited to be something other than his or her true voice.' Write the way you speak. For a Pakistani student, this means not hiding natural phrases or cultural references — they make your story specific and believable.",
+        "sources": [
+          { "label": "Harvard College — My Very Unofficial Tips on Writing Your College Essay", "url": "https://college.harvard.edu/student-life/student-stories/my-very-unofficial-tips-writing-your-college-essay" },
+          { "label": "MIT Admissions — Advice On The Essay", "url": "https://mitadmissions.org/blogs/entry/advice_on_the_essay/" },
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+        ]
+      },
+      {
+        "id": "specifics",
+        "title": "Specific Detail Over General Claims",
+        "weight": "high",
+        "detail": "Harvard Summer School advises showing rather than telling — set scenes and provide anecdotes instead of listing accomplishments. Coursicle's essay guide puts it sharply: 'I learned the value of perseverance through cross country' could be written by 100,000 students, but 'I have run the same three-mile loop 600 times, and I can tell you exactly which driveway the dog lives at' belongs to one person. Vague adjectives are forgettable; precise, sensory details are memorable. Pakistani students should ground their essays in specific moments — a particular evening at a chai stall, a single difficult chemistry experiment, a specific conversation with an abbu.",
+        "sources": [
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "Coursicle — College Essay Topics: What to Write About and What to Skip", "url": "https://www.coursicle.com/blog/college-essay-topics/" },
+          { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" }
+        ]
+      },
+      {
+        "id": "growth",
+        "title": "Reflection and Growth",
+        "weight": "high",
+        "detail": "Admissions officers do not want to know what you did; they want to know what you learned. Harvard Summer School writes: 'They want to read about realizations you may have come to through adversity as well as your successes.' Johns Hopkins' Associate Director Calvin Wise, quoted by CollegeXpress, says the essay can be about something small — 'What does it mean to you? That is what we want to know.' The strongest essays show the writer thinking, questioning, or changing their mind over the course of 650 words. For FSc and A-Level students, growth can emerge from small moments: failing a test, navigating family expectations, or teaching yourself a skill without formal coaching.",
+        "sources": [
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" },
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "stakes",
+        "title": "Stakes and Vulnerability",
+        "weight": "medium",
+        "detail": "The essay needs stakes — something the writer stood to lose, or a question they genuinely did not have the answer to. Honesty about weaknesses can resonate more than a glib victory speech, Harvard Summer School notes. You do not need a tragedy; a small, honest risk — joining a robotics club when you had never coded, volunteering for a speech in front of your school — creates stakes without trauma. Duke's Dean of Undergraduate Admissions Christoph Guttentag, interviewed by CollegeXpress, said he wishes he saw 'more of a thoughtful voice of a 17-year-old' rather than sanitized, risk-free essays.",
+        "sources": [
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" },
+          { "label": "Coursicle — College Essay Topics: What to Write About and What to Skip", "url": "https://www.coursicle.com/blog/college-essay-topics/" }
+        ]
+      },
+      {
+        "id": "structure",
+        "title": "Structure and Momentum",
+        "weight": "medium",
+        "detail": "A strong essay has a clear arc. Harvard Summer School recommends a bold opening, logical transitions between paragraphs, and a 'kicker' — a final punchy line that brings everything together. Common App essays run around 650 words, which leaves room for roughly 4–5 short paragraphs. The essay should not repeat information found elsewhere in the application. BigFuture advises: 'Your essay should tell college admissions officers something new.' For Pakistani applicants completing both local and foreign applications, keeping the structure tight — one anecdote, one reflection, one growth moment — prevents the essay from becoming a checklist of achievements.",
+        "sources": [
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" },
+          { "label": "Common App — Announcing the 2025–2026 Common App essay prompts", "url": "https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts/" }
+        ]
+      }
+    ],
+    "beforeAfter": {
+      "weak": {
+        "title": "Before: A Generic Draft",
+        "paragraphs": [
+          "I have always been passionate about helping my community. In my neighborhood in Lahore, clean drinking water is a major problem. Many people do not have access to filtered water and this causes health issues. I decided to do something about it because I believe that everyone deserves clean water. I learned a lot from this experience and it made me a better person. This is why I want to study engineering at your university — so I can solve problems like this on a bigger scale.",
+          "My father owns a small business and he always taught me to work hard. My mother is a housewife who supported my education. I am grateful to my parents for everything they have done. I have also participated in several school activities like science exhibitions and debates. These experiences have shaped me into a hardworking and determined student. I believe I am a good candidate for your programme because of my strong academic record and my desire to make a difference."
+        ]
+      },
+      "strong": {
+        "title": "After: Showing the Same Story With Voice and Specificity",
+        "paragraphs": [
+          "The first time I tested the water from our street's hand pump, the kit turned dark red. 'Iron,' my chemistry teacher had said, handing me the kit. 'But also maybe arsenic.' I was fifteen and had no idea what arsenic did to a human body. I just knew that Amna, the four-year-old next door, had been to the hospital twice that year with stomach infections, and that her mother bought bottled water at 80 rupees a day — more than my father's chai stall earned in an hour. So I started reading. Not textbooks — real research papers I found on Google Scholar at 2 a.m., translating words like 'filtration flux' and 'reverse osmosis' into notes I could actually understand.",
+          "I built my first filter from a clay pot, sand, gravel, and activated charcoal bought from a shop in Anarkali. It took four attempts. The first one leaked. The second produced water that tasted like mud. The third one clogged within a week. But the fourth one worked, and when I tested the output, the colour was clear. I did not solve Lahore's water crisis. But I learned something I could not have learned from any textbook: that the gap between a diagram in a physics book and a filter that actually runs in a home with irregular electricity is enormous. That gap is where I want to spend my life."
+        ]
+      },
+      "notes": [
+        {
+          "label": "Generic passion replaced by specific action",
+          "detail": "The weak version says 'I am passionate about helping my community.' The strong version opens with a specific moment — testing water, seeing red, learning about arsenic. Readers trust actions over declarations."
+        },
+        {
+          "label": "Abstract benefit becomes concrete harm",
+          "detail": "The weak version says 'health issues.' The strong version names Amna, her hospital visits, and the 80-rupee-a-day bottled water cost. Specific numbers and names create stakes the reader can feel."
+        },
+        {
+          "label": "Passive learning transforms into active struggle",
+          "detail": "The weak version says 'I learned a lot.' The strong version describes four failed attempts, a leaking pot, muddy water, and the specific moment it finally worked. Struggle makes growth believable."
+        },
+        {
+          "label": "Generic ending becomes a specific thesis",
+          "detail": "The weak version says 'I want to solve problems.' The strong version defines the gap between textbook theory and real-world implementation — a specific intellectual interest that directly connects to studying engineering."
+        }
+      ]
+    },
+    "myths": [
+      {
+        "id": "myth-1",
+        "myth": "Your essay must be about a major trauma or hardship to stand out.",
+        "fact": "Admissions officers do not require a tragic story. Johns Hopkins Associate Director Calvin Wise, quoted by CollegeXpress, says the essay does not need 'some monumental experience' — it can be about an 'a-ha' moment or something small that defines who you are. Coursicle's guide to college essay topics agrees: 'A reader trusts the student writing carefully about washing dishes more than the one writing grandly about saving the world.' Pakistani students who think they lack a 'trauma topic' should know that a well-told story about fixing a motorcycle with their uncle or teaching a cousin math can outperform a poorly told story about hardship.",
+        "sources": [
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" },
+          { "label": "Coursicle — College Essay Topics: What to Write About and What to Skip", "url": "https://www.coursicle.com/blog/college-essay-topics/" },
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+        ]
+      },
+      {
+        "id": "myth-2",
+        "myth": "Using big, sophisticated vocabulary makes your essay more impressive.",
+        "fact": "Admissions readers do not expect you to sound like a college professor. Duke's Dean of Undergraduate Admissions Christoph Guttentag told CollegeXpress that by the time many essays arrive, 'they have gone through so many hands that the essays are sanitized.' Harvard College's admissions blog advises writing in your 'regular, everyday voice' and warns that your instinct to make the essay sound 'proper and elevated' is 'baloney.' For Pakistani students who write in Urdu-inflected English or use natural conversational phrasing, that voice is an asset, not a liability. Clarity and honesty matter more than syllable count.",
+        "sources": [
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" },
+          { "label": "Harvard College — My Very Unofficial Tips on Writing Your College Essay", "url": "https://college.harvard.edu/student-life/student-stories/my-very-unofficial-tips-writing-your-college-essay" },
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+        ]
+      },
+      {
+        "id": "myth-3",
+        "myth": "Stuffing your essay with thesaurus words makes you sound smarter.",
+        "fact": "Thesaurus padding is one of the fastest ways to lose a reader. Harvard Summer School warns that 'inauthenticity could mean the use of overly flowery language that no one would ever use in conversation.' MIT's admissions blog says the essay should not be 'some perfect piece of prose worthy of a magazine.' Replacing every simple word with a fancy synonym ('utilized' instead of 'used,' 'endeavored' instead of 'tried') makes the essay feel dishonest and robotic. BigFuture advises: 'Use your usual vocabulary. Avoid fancy language you would not use in real life.' A Pakistani student writing about 'mama making parathas before Fajr' is far more memorable than one writing about 'my maternal progenitor preparing culinary delights at dawn.'",
+        "sources": [
+          { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" },
+          { "label": "MIT Admissions — Advice On The Essay", "url": "https://mitadmissions.org/blogs/entry/advice_on_the_essay/" },
+          { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" }
+        ]
+      },
+      {
+        "id": "myth-4",
+        "myth": "You need to write about saving the world or solving a huge problem.",
+        "fact": "Impressive topics do not guarantee impressive essays. CollegeXpress cites Calvin Wise of Johns Hopkins: 'You are impressive, not the topic.' Coursicle's guide warns that an essay about a short service trip abroad 'often says more about privilege than perspective' and that 'a reader trusts the student writing carefully about washing dishes more than the one writing grandly about saving the world.' MIT's admissions office has said the essay can be about nearly anything — what matters is that the reader gets to know you. For a Pakistani applicant, an essay about learning to repair generators during load-shedding with his abbu can be far more compelling than an exaggerated claim about ending poverty.",
+        "sources": [
+          { "label": "CollegeXpress — 6 of the Worst Admission Essay Myths", "url": "https://www.collegexpress.com/articles-and-advice/admission/articles/application-essay-clinic/top-college-admission-essay-myths-debunked/" },
+          { "label": "Coursicle — College Essay Topics: What to Write About and What to Skip", "url": "https://www.coursicle.com/blog/college-essay-topics/" },
+          { "label": "MIT Admissions — Advice On The Essay", "url": "https://mitadmissions.org/blogs/entry/advice_on_the_essay/" }
+        ]
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which opening sentence is stronger for a personal essay?",
+      "options": [
+        { "label": "I am a very passionate and hardworking student who cares about the environment.", "correct": false },
+        { "label": "The first time I saw the canal behind my house turn orange, I was seven years old and thought someone had spilled Fanta into it.", "correct": true },
+        { "label": "One of my biggest qualities is my determination to succeed in everything I do.", "correct": false },
+        { "label": "The environment has always been an important issue for me since I was a child.", "correct": false }
+      ],
+      "explanation": "The second option uses a specific, sensory moment (seeing the canal turn orange, thinking it was Fanta) that immediately creates a scene. The other options use vague, generic statements ('passionate,' 'hardworking,' 'important issue') that could apply to any applicant and tell the reader nothing unique.",
+      "source": { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+    },
+    {
+      "id": "q2",
+      "question": "What is the main problem with this essay sentence: 'Through this experience, I learned the true value of teamwork, dedication, and perseverance.'",
+      "options": [
+        { "label": "It uses too many commas.", "correct": false },
+        { "label": "It tells the reader what was learned instead of showing the actual moment of learning.", "correct": true },
+        { "label": "The vocabulary is too simple for a college essay.", "correct": false },
+        { "label": "It mentions three qualities instead of focusing on one.", "correct": false }
+      ],
+      "explanation": "This sentence 'tells' abstract qualities (teamwork, dedication, perseverance) without showing the reader a specific scene where those qualities played out. Harvard Summer School advises showing through anecdotes — describe the moment the team met at 5 a.m., who said what, what almost went wrong. The abstract list tells nothing; the specific scene tells everything.",
+      "source": { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+    },
+    {
+      "id": "q3",
+      "question": "Which essay topic gives an admissions officer the best chance to learn something about you?",
+      "options": [
+        { "label": "How I won first place in the inter-school science competition.", "correct": false },
+        { "label": "What I learned about patience and repair from watching my father fix our generator every time load-shedding hit.", "correct": true },
+        { "label": "My volunteer trip to a village where I helped build a school.", "correct": false },
+        { "label": "Why I believe hard work is the most important value a person can have.", "correct": false }
+      ],
+      "explanation": "The generator topic is specific to the student's daily life in Pakistan, shows a real relationship with their father, and opens the door to reflection. The competition win simply repeats an achievement already on the application. The volunteer trip is a common topic that often says more about the reader's assumptions than the writer. The abstract values essay describes everyone and pictures no one.",
+      "source": { "label": "Coursicle — College Essay Topics: What to Write About and What to Skip", "url": "https://www.coursicle.com/blog/college-essay-topics/" }
+    },
+    {
+      "id": "q4",
+      "question": "What is wrong with this sentence: 'I utilized my exceptional analytical proficiencies to ascertain the optimal methodology for the experiment.'",
+      "options": [
+        { "label": "It is grammatically incorrect.", "correct": false },
+        { "label": "It uses unnatural, thesaurus-heavy language that no real teenager would use.", "correct": true },
+        { "label": "It does not include enough scientific terminology.", "correct": false },
+        { "label": "It is too short to describe an experiment properly.", "correct": false }
+      ],
+      "explanation": "This sentence is loaded with inflated vocabulary (utilized, proficiencies, ascertain, methodology) that makes it sound like a thesaurus wrote it. Harvard's blog advises writing in your everyday voice. BigFuture says to 'use your usual vocabulary. Avoid fancy language you would not use in real life.' A simpler version — 'I tried three different approaches before the experiment worked' — is more honest and more readable.",
+      "source": { "label": "BigFuture — Tips for Writing an Effective Application Essay", "url": "https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process/tips-for-writing-an-effective-application-essay" }
+    },
+    {
+      "id": "q5",
+      "question": "Which essay closing is more effective?",
+      "options": [
+        { "label": "In conclusion, this experience taught me many valuable lessons and I believe it has prepared me well for university.", "correct": false },
+        { "label": "I still do not know how to build a water filter that works without electricity. But I know the question I want to spend the next four years trying to answer.", "correct": true },
+        { "label": "I am confident that I have what it takes to succeed at your university and become a leader in my field.", "correct": false },
+        { "label": "This experience changed my life forever and I will never forget what it taught me.", "correct": false }
+      ],
+      "explanation": "The strong ending shows honest uncertainty paired with a forward-looking intellectual question — this is specific, reflective, and memorable. The other options are generic closings ('in conclusion,' 'changed my life forever,' 'what it takes to succeed') that could end any essay. Harvard Summer School recommends a 'kicker' — a final punchy line that brings everything together and leaves a lasting impression.",
+      "source": { "label": "Harvard Summer School — 12 Strategies to Writing the Perfect College Essay", "url": "https://summer.harvard.edu/blog/12-strategies-to-writing-the-perfect-college-essay/" }
+    }
+  ],
+  "dragDrop": {
+    "zones": [
+      { "id": "strong-hook", "label": "Strong hook" },
+      { "id": "weak-hook", "label": "Weak hook" }
+    ],
+    "items": [
+      {
+        "id": "dd1",
+        "text": "My father handed me a rusted wrench and said, 'If you can fix this generator, you can fix anything.' I was fourteen, and the generator had not started in three months.",
+        "zone": "strong-hook",
+        "explanation": "This hook works because it drops the reader into a specific moment with a real object (rusted wrench), dialogue, a time reference, and stakes (the generator hasn't run in three months). It immediately shows the father-son relationship, a Pakistani context, and a challenge without stating it abstractly."
+      },
+      {
+        "id": "dd2",
+        "text": "I have always been a hard worker. Since my childhood, I have believed that dedication is the key to success. This has guided me through every challenge in my life.",
+        "zone": "weak-hook",
+        "explanation": "This is entirely abstract. 'Hard worker,' 'dedication,' and 'success' are empty labels that tell the reader nothing specific. There is no scene, no sensory detail, no moment in time. The reader has learned nothing about this student that could not apply to thousands of others."
+      },
+      {
+        "id": "dd3",
+        "text": "Amna was four years old and had been to the hospital twice that year. The doctors said it was the water. That was the day I stopped assuming someone else would fix it.",
+        "zone": "strong-hook",
+        "explanation": "This opens with a specific person, a concrete problem (hospital visits), and a quiet emotional shift (stopped assuming someone else would fix it). The reader immediately cares about Amna and wants to know what happened next. The stakes are clear without being melodramatic."
+      },
+      {
+        "id": "dd4",
+        "text": "My name is Ahmed and I am applying for admission to your university because I believe it is the best place for my future career in engineering.",
+        "zone": "weak-hook",
+        "explanation": "This is a generic introduction that sounds like a cover letter, not a personal essay. It states facts the application already communicates (name, intended major) and offers the reader no reason to keep reading. Harvard recommends starting with a scene or bold statement, not an introduction."
+      },
+      {
+        "id": "dd5",
+        "text": "The chai stall opens at 5 a.m., and at 5 a.m. on a January morning in Rawalpindi, the steam rising from the kettle is the only warm thing within sight.",
+        "zone": "strong-hook",
+        "explanation": "This hook uses sensory details — the time (5 a.m.), the place (Rawalpindi, January), the steam, the cold — to create an immediate, vivid scene. It makes the reader curious about the student's relationship to this stall without giving away the whole story. Specificity and atmosphere draw the reader in."
+      },
+      {
+        "id": "dd6",
+        "text": "Webster's Dictionary defines leadership as 'the action of leading a group of people or organization.' I believe leadership means much more than that.",
+        "zone": "weak-hook",
+        "explanation": "Opening with a dictionary definition is one of the most common and most criticized openings. It tells the reader nothing about you and signals that you fell back on a cliché. MIT and Johns Hopkins admissions officers have specifically called out dictionary-definition openings as overused and ineffective."
+      }
+    ]
+  },
+  "inspiration": [
+    {
+      "id": "essay-1",
+      "title": "In the Belly of the Ship",
+      "program": "Johns Hopkins University",
+      "backstory": "Ruoyu X., a member of Johns Hopkins' Class of 2030, grew up in a coastal Chinese city where her father, a former cargo crewman, told tales of close-knit crews at sea. Her first internship aboard a cargo ship in 2024 flopped: heat, isolation, and a provincial dialect she could barely follow. She boarded again the next summer, volunteered for the crew's routine, and found community, a choice the admissions committee praised as determination and persistence.",
+      "excerpt": "I lay on the bamboo mat in a pool of my own sweat, swaying with the ship. A net around my cot attempted to keep out the mosquitos, and the room's thin walls leaked every crewman's cough. Yet as I looked outside the porthole, the greatest discomfort was my own shame.",
+      "whyItWorks": "It opens inside physical discomfort and earns its payoff through action: the student goes back. Sensory specifics (bamboo mat, leaking walls, provincial dialect) make an unfamiliar world vivid, and the growth is shown by the second voyage, never claimed.",
+      "sourceLabel": "Johns Hopkins Admissions — Essays That Worked (Hopkins Insider)",
+      "sourceUrl": "https://apply.jhu.edu/hopkins-insider/in-the-belly-of-the-ship/"
+    },
+    {
+      "id": "essay-2",
+      "title": "Clean Closet",
+      "program": "Johns Hopkins University",
+      "backstory": "Ruoni T., Class of 2030 at Johns Hopkins, turned an eighteen-year-old closet packed with toys, gymnastics leotards, cheerleading uniforms, and grandma-sewn dresses into a reflection on memory and identity. Featured in JHU's Essays That Worked series, the essay frames decluttering as learning to let go without losing what matters.",
+      "excerpt": "My closet is a time capsule going on eighteen years. It's packed with favorite toys, plush animals, retired gymnastics leotards, and grandma-sewn dresses that once decorated my childhood. Shelves are adorned with art projects I once was so proud to showcase and yearbooks scribbled with notes from teachers and friends.",
+      "whyItWorks": "An ordinary household task becomes a controlling metaphor for growth, grounded in objects the reader can picture (Littlest Pet Shop figures, Bob Ross canvases, trophies). Each short anecdote stands in for an activity-list entry, and the final line lands the arc with quiet wit.",
+      "sourceLabel": "Johns Hopkins Admissions — Essays That Worked (Hopkins Insider)",
+      "sourceUrl": "https://apply.jhu.edu/hopkins-insider/clean-closet/"
+    },
+    {
+      "id": "essay-3",
+      "title": "My MIT Admissions Essays (the smoothie essay)",
+      "program": "MIT",
+      "backstory": "Victor D., MIT Class of 2027, published his real MIT application essays on the official MIT Admissions blog as a retrospective. For the prompt about something he does simply for pleasure, he wrote about making smoothies, including reverse-engineering a Mango Lassi after the nearest Indian restaurant proved too far away.",
+      "excerpt": "I'm an avid Mango Lassi enthusiast and connoisseur. Unfortunately, the nearest Indian restaurant is a ways away. Whilst sipping Lassi one evening—perhaps pondering my next—I thought: Why not just make it?",
+      "whyItWorks": "It commits fully to a small, joyful topic and treats it with total seriousness, which is exactly how MIT-style curiosity reads on the page. The humor and precision (cardamom, Mom's cinnamon tip, consulting friends' recipes) make the voice unmistakable.",
+      "sourceLabel": "MIT Admissions Blog — my MIT admissions essays by Victor D. '27",
+      "sourceUrl": "https://mitadmissions.org/blogs/entry/my-mit-admissions-essays/"
+    },
+    {
+      "id": "essay-4",
+      "title": "Two Types of People: Tomato Lovers and Haters",
+      "program": "University of Chicago",
+      "backstory": "Laura Castelnuovo, a UChicago student from New York City, answered the Uncommon Essay prompt \"Everyone knows there are two types of people in the world. What are they?\" with a playful essay dividing humanity into tomato lovers and tomato haters. UChicago News featured the opening of her essay to illustrate the wit the Extended Essay invites.",
+      "excerpt": "For centuries, one thing has divided the human population like no other: the tomato. No, I don't mean the never-used alternate pronunciation or even the settled debate of fruit vs. vegetable, I mean that in my experiences I have encountered only two types of people: those who love tomatoes and those who hate them.",
+      "whyItWorks": "Playful over-analysis of a trivial question proves a mind that turns anything into a framework, a perfect match for UChicago's intellectual play. The mock-serious tone (\"Newtonian-ly equal and opposing groups,\" \"battle lines are drawn\") shows the applicant can be funny and rigorous at the same time.",
+      "sourceLabel": "UChicago News — An uncommon approach yields creative College essays",
+      "sourceUrl": "https://news.uchicago.edu/story/uncommon-approach-yields-creative-college-essays"
+    },
+    {
+      "id": "essay-5",
+      "title": "Identity Illustration",
+      "program": "Hamilton College",
+      "backstory": "Daniel \"Deni\" Galay, Hamilton College Class of 2026 from London, England, wrote about visiting his father's homeland in the Chechen mountains for the first time at age 14. His essay, featured on Hamilton's Essays that Worked page, weaves together landmine warnings from a local boy, the hostility his Jewish mother's Moscow relatives show toward Chechens, and his struggle to find a connection to his own heritage.",
+      "excerpt": "\"The difference between an anti-personnel and an anti-tank mine is not that complicated,\" I am told casually, in halting Russian, by a boy even younger than I am during a walk through the Chechen mountains. I am freshly 14 and visiting my father's homeland for the first time, unfamiliar with the harsh realities that kids half my age already know ironclad.",
+      "whyItWorks": "A geopolitical reality (war, landmines, ethnic conflict) is filtered through a teenager's personal shame and curiosity instead of slogans. The layering of languages—halting Russian, broken Russian, English—dramatizes the central tension, and the honesty about feeling like an intruder makes the eventual connection earned.",
+      "sourceLabel": "Hamilton College — Essays that Worked",
+      "sourceUrl": "https://www.hamilton.edu/admission/apply/college-essays-that-worked"
+    },
+    {
+      "id": "essay-6",
+      "title": "The Old Grey Minivan (QuestBridge Biographical Essay)",
+      "program": "QuestBridge (National College Match)",
+      "backstory": "A QuestBridge National College Match applicant from South Los Angeles wrote this biographical essay about the night his mother left for Utah to escape LA's rent crisis, the homelessness that shaped his childhood, and the sanctuary he found in school and computer science. College Essay Guy published and analyzed the essay in its QuestBridge guide as a model Narrative Structure response.",
+      "excerpt": "\"Mama, ¡por favor! Don't go!\" I cried, gently tugging on her brown leather jacket. Raindrops pummeled my bare face, making me squint to see her silhouette in the darkness of the cold night. One by one, she began reluctantly loading her belongings onto our old grey minivan.",
+      "whyItWorks": "The scene is immediate and cinematic (rain, brown leather jacket, engine roaring to life), then the essay zooms out to systemic stakes before zooming in on what the student did about them. Every hardship is tethered to a concrete detail—rent bills, empty stomachs, a jammed gun—so resilience never feels abstract.",
+      "sourceLabel": "College Essay Guy — How to Write the QuestBridge Essay + Examples",
+      "sourceUrl": "https://www.collegeessayguy.com/blog/questbridge-essay-examples"
+    }
+  ],
+  "guide": {
+    "steps": [
+      {
+        "id": "brainstorm",
+        "title": "Brainstorm — find the story only you can tell",
+        "summary": "Mine your own life before you think about prompts. Freewrite, map words, or journal for a few days; then look for the moments with the most energy and emotion. As of 2026, US applicants choose among seven Common App prompts, but the story comes first. A successful essay does not need a dramatic event — a small, ordinary moment can carry a whole story. Pick the topic only you could write.",
+        "tools": ["idea-generator", "inventory"],
+        "sources": [
+          { "label": "Purdue OWL — Advice for Writing Application Essays", "url": "https://owl.purdue.edu/owl/general_writing/undergraduate_applications/undergraduate_application_timeline/advice_for_writing_application_essays.html" },
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" },
+          { "label": "Harvard College — Application Tips: Advice to Hold Onto and Remember", "url": "https://college.harvard.edu/student-life/student-stories/application-tips-advice-hold-and-remember" },
+          { "label": "Common App — Announcing the 2025–2026 Common App essay prompts", "url": "https://www.commonapp.org/blog/announcing-2025-2026-common-app-essay-prompts/" }
+        ]
+      },
+      {
+        "id": "outline",
+        "title": "Outline — choose your structure before writing",
+        "summary": "Choose a structure before you write paragraphs. Most strong essays follow a narrative arc: an opening scene, a conflict or turning point, rising action, and a resolution that shows growth. UK personal statements work differently — answer why this subject, what you have done, and where you are going. Map your evidence to slots first.",
+        "tools": ["templates"],
+        "sources": [
+          { "label": "Collegiate Gateway — How to Write Your Personal Essay for College, Part II: Narrative Arcs", "url": "https://collegiategateway.com/the-personal-essay-for-college-part-ii-narrative-arcs/" },
+          { "label": "Complete University Guide — Tips for writing your personal statement", "url": "https://www.thecompleteuniversityguide.co.uk/student-advice/applying-to-uni/tips-for-writing-your-personal-statement" },
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" },
+          { "label": "UCAS — Writing your personal statement", "url": "https://www.ucas.com/undergraduate/applying-university/writing-your-personal-statement" }
+        ]
+      },
+      {
+        "id": "draft",
+        "title": "Draft — write it badly, on purpose",
+        "summary": "Write a rough draft quickly and badly on purpose. Do not edit as you go — editing early tricks you into thinking the essay is done. Start with a scene or an action, show rather than tell, and keep one sustained topic. Use the starters if you get stuck, then set the draft aside for a few days before you look at it again.",
+        "tools": ["starters"],
+        "sources": [
+          { "label": "Purdue OWL — Advice for Writing Application Essays", "url": "https://owl.purdue.edu/owl/general_writing/undergraduate_applications/undergraduate_application_timeline/advice_for_writing_application_essays.html" },
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "revise",
+        "title": "Revise — make it sound like you",
+        "summary": "Revising is where the essay actually gets good. Reread the prompt and check that you answer it, cut anything generic, and make sure it sounds like you, not a thesaurus. Read it aloud to catch awkward phrasing. Ask one or two trusted readers early, but keep the final voice yours. Fix spelling and grammar last.",
+        "tools": ["analyzer"],
+        "sources": [
+          { "label": "Purdue OWL — Advice for Writing Application Essays", "url": "https://owl.purdue.edu/owl/general_writing/undergraduate_applications/undergraduate_application_timeline/advice_for_writing_application_essays.html" },
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" },
+          { "label": "Purdue OWL — Statements of Purpose: Drafting Your Statement", "url": "https://owl.purdue.edu/owl/general_writing/graduate_school_applications/graduate_school_applications_statements_of_purpose/statements_of_purpose_drafting_your_statement.html" }
+        ]
+      }
+    ],
+    "starters": [
+      {
+        "id": "s1",
+        "part": "hook",
+        "text": "The UPS went dead at 8:47 pm, and the only light in the room was the blue glow of my laptop screen — I had eleven minutes of backup power left to finish the physics assignment.",
+        "sources": [
+          { "label": "Collegiate Gateway — How to Write Your Personal Essay for College, Part II: Narrative Arcs", "url": "https://collegiategateway.com/the-personal-essay-for-college-part-ii-narrative-arcs/" }
+        ]
+      },
+      {
+        "id": "s2",
+        "part": "hook",
+        "text": "Everyone on the bus was silent on result day; the boy next to me was crying, and I was not sure whether I was crying too.",
+        "sources": [
+          { "label": "Purdue OWL — Advice for Writing Application Essays", "url": "https://owl.purdue.edu/owl/general_writing/undergraduate_applications/undergraduate_application_timeline/advice_for_writing_application_essays.html" }
+        ]
+      },
+      {
+        "id": "s3",
+        "part": "hook",
+        "text": "My mother calls me by three different names, depending on how many times she has asked me to do something — the third one is always in Urdu, and it means the conversation is over.",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "s4",
+        "part": "transition",
+        "text": "Standing at the back of the auditorium holding the last medal I would win from this school, I realized the trophy was never really about debating — it was about being heard.",
+        "sources": [
+          { "label": "Collegiate Gateway — How to Write Your Personal Essay for College, Part II: Narrative Arcs", "url": "https://collegiategateway.com/the-personal-essay-for-college-part-ii-narrative-arcs/" }
+        ]
+      },
+      {
+        "id": "s5",
+        "part": "transition",
+        "text": "That evening on the rooftop, watching the city lights flicker back on one by one, I understood that my family's silence about money was not a secret — it was a lesson.",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "s6",
+        "part": "transition",
+        "text": "The code I had written at the summer camp finally ran on the third day, and in that moment I stopped asking what computer science could do for my career and started asking what I could build with it.",
+        "sources": [
+          { "label": "Purdue OWL — Advice for Writing Application Essays", "url": "https://owl.purdue.edu/owl/general_writing/undergraduate_applications/undergraduate_application_timeline/advice_for_writing_application_essays.html" }
+        ]
+      },
+      {
+        "id": "s7",
+        "part": "reflection",
+        "text": "I used to think of English and Urdu as two separate selves — one for the classroom and one for home — until I realized the switching itself was the skill.",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "s8",
+        "part": "reflection",
+        "text": "Looking back, the failure was not the FSc result itself; it was that I had let a single number define three years of who I was.",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "s9",
+        "part": "reflection",
+        "text": "What I learned from tutoring my younger cousins during the holidays was not that I could teach, but that I could listen long enough to understand how someone else learns.",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "s10",
+        "part": "closing",
+        "text": "I still keep a notebook of every idea that fails; one day, I want to fill a laboratory with the ones that do not.",
+        "sources": [
+          { "label": "Purdue OWL — Statements of Purpose: Drafting Your Statement", "url": "https://owl.purdue.edu/owl/general_writing/graduate_school_applications/graduate_school_applications_statements_of_purpose/statements_of_purpose_drafting_your_statement.html" }
+        ]
+      },
+      {
+        "id": "s11",
+        "part": "closing",
+        "text": "Wherever I study — Lahore or London — I want to be the person who makes the first move, the one who raises a hand, the one who builds the club that did not exist before.",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "s12",
+        "part": "closing",
+        "text": "If I have learned anything from the summers of load-shedding and the winters of exam season, it is that the light always comes back — and I intend to be ready for it.",
+        "sources": [
+          { "label": "Harvard College — Application Tips: Advice to Hold Onto and Remember", "url": "https://college.harvard.edu/student-life/student-stories/application-tips-advice-hold-and-remember" }
+        ]
+      }
+    ],
+    "templates": [
+      {
+        "id": "narrative-arc",
+        "name": "Narrative Arc",
+        "bestFor": "Best for a single, defining story with a clear before and after — a challenge you faced, a project that failed and was rebuilt, or a moment that changed how you see your future. Use it when one experience can carry the whole essay and you can show real change from the opening scene to the end.",
+        "skeleton": [
+          "Opening scene — sensory detail, you in action",
+          "The conflict — what was at stake or in the way",
+          "Rising action — what you tried, and what got harder",
+          "The turning point — the moment things shifted",
+          "Falling action — what changed because of it",
+          "So what? — the insight, and where it leads you"
+        ],
+        "sources": [
+          { "label": "Collegiate Gateway — How to Write Your Personal Essay for College, Part II: Narrative Arcs", "url": "https://collegiategateway.com/the-personal-essay-for-college-part-ii-narrative-arcs/" }
+        ]
+      },
+      {
+        "id": "challenge-growth",
+        "name": "Challenge → Growth",
+        "bestFor": "Best for essays built around a setback or failure — a failed entry test, a rejected project, a public-speaking disaster — where the growth, not the event, is the point. Admissions officers respond to honest struggle, and this structure makes sure you spend more words on what you learned than on what went wrong.",
+        "skeleton": [
+          "The challenge — set it up in one tight scene",
+          "The honest first reaction — how it actually affected you",
+          "What you tried — the effort, including missteps",
+          "The shift — the new understanding or skill",
+          "Growth made visible — evidence of it in your life today",
+          "The forward look — how it shapes your goals"
+        ],
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" },
+          { "label": "Complete University Guide — Tips for writing your personal statement", "url": "https://www.thecompleteuniversityguide.co.uk/student-advice/applying-to-uni/tips-for-writing-your-personal-statement" }
+        ]
+      },
+      {
+        "id": "topic-deep-dive",
+        "name": "Topic Deep-Dive",
+        "bestFor": "Best for essays about a passion or obsession that absorbs you — robotics, Urdu poetry, cricket statistics, anything you lose track of time in. Choose it when you do not have one big story but do have deep knowledge and enthusiasm; the essay shows how you think and what you care about rather than what you achieved.",
+        "skeleton": [
+          "Why this topic — the moment it first hooked you",
+          "What you dove into — the rabbit hole, in concrete detail",
+          "What you see that others miss — your insider perspective",
+          "How it connects to the bigger picture — school, society, the field",
+          "What it says about you — the trait the reader should remember"
+        ],
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" },
+          { "label": "InGenius Prep — A Guide to the UChicago Supplemental Essays", "url": "https://ingeniusprep.com/blog/a-guide-to-the-uchicago-supplemental-essays/" }
+        ]
+      }
+    ],
+    "ideaPrompts": [
+      {
+        "id": "ip1",
+        "text": "When did you feel most out of your depth — and what did you do in the next hour, the next day, the next week?",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "ip2",
+        "text": "What object in your room would a stranger find most surprising, and what story is hidden behind it?",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "ip3",
+        "text": "Describe a time you had to switch between Urdu, English, or another language to make yourself understood. What did the switching itself teach you?",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "ip4",
+        "text": "What belief held by your family, school, or society have you quietly questioned — and what happened when you acted on it?",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "ip5",
+        "text": "When did a failure — an exam, a competition, a rejected idea — turn out to be more useful to you than success?",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" },
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "ip6",
+        "text": "What do you do during load-shedding that you would never do with constant electricity, and what does that time look like?",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "ip7",
+        "text": "Who in your life has never had the chances you have, and how has watching them shape what you want to do with yours?",
+        "sources": [
+          { "label": "Harvard College — Application Tips", "url": "https://college.harvard.edu/guides/application-tips" }
+        ]
+      },
+      {
+        "id": "ip8",
+        "text": "What have you taught someone else — a sibling, a classmate, a cousin — and what did you learn while teaching them?",
+        "sources": [
+          { "label": "St. John's University — How to Write a Personal Essay that Moves Admissions", "url": "https://www.stjohns.edu/news-media/johnnies-blog/personal-essay-tips-for-college-admissions" }
+        ]
+      },
+      {
+        "id": "ip9",
+        "text": "Describe a scene from the bazaar, the cricket ground, the bus, or the chai dhaba that you cannot forget. Why does it stay with you?",
+        "sources": [
+          { "label": "Collegiate Gateway — How to Write Your Personal Essay for College, Part II: Narrative Arcs", "url": "https://collegiategateway.com/the-personal-essay-for-college-part-ii-narrative-arcs/" }
+        ]
+      },
+      {
+        "id": "ip10",
+        "text": "If you could fix one problem in your school, your neighborhood, or your city with your own skills, what would it be — and what would you build first?",
+        "sources": [
+          { "label": "InGenius Prep — A Guide to the UChicago Supplemental Essays", "url": "https://ingeniusprep.com/blog/a-guide-to-the-uchicago-supplemental-essays/" }
+        ]
+      }
+    ]
+  },
+  "builderPresets": {
+    "universities": ["LUMS", "NUST", "GIKI", "FAST", "Stanford", "MIT", "Harvard", "Oxford", "Toronto", "NYU Abu Dhabi"],
+    "majors": ["Computer Science", "Medicine", "Business", "Economics", "Mechanical Engineering", "Architecture", "Law", "Psychology", "Graphic Design", "Data Science"],
+    "extracurriculars": ["Debate", "MUN", "Volunteering", "Robotics club", "Sports team", "Coding projects", "School society leadership", "Content writing", "Art & illustration", "Science olympiad"]
+  }
+}
