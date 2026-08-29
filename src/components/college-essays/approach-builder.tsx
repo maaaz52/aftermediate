@@ -61,8 +61,9 @@ function ChipRow({
               key={item}
               type="button"
               onClick={() => onToggle(item)}
+              aria-pressed={active}
               className={cn(
-                "rounded-full border-2 px-3 py-1.5 text-sm transition-colors",
+                "rounded-full border-2 px-3 py-1.5 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-violet/50",
                 active ? "border-violet bg-violet/10 font-bold text-violet" : "border-line bg-surface-2 text-muted hover:text-ink"
               )}
             >
@@ -118,9 +119,10 @@ export function ApproachBuilder() {
   }
 
   async function copyPrompt(p: string) {
-    await copyText(p);
-    setCopied(p);
-    window.setTimeout(() => setCopied(null), 2000);
+    if (await copyText(p)) {
+      setCopied(p);
+      window.setTimeout(() => setCopied(null), 2000);
+    }
   }
 
   async function copyAll() {
@@ -134,9 +136,10 @@ export function ApproachBuilder() {
       "Prompts:",
       ...strategy.prompts.map((p, i) => `${i + 1}. ${p}`),
     ].join("\n");
-    await copyText(text);
-    setCopied("all");
-    window.setTimeout(() => setCopied(null), 2000);
+    if (await copyText(text)) {
+      setCopied("all");
+      window.setTimeout(() => setCopied(null), 2000);
+    }
   }
 
   return (
@@ -155,8 +158,9 @@ export function ApproachBuilder() {
                 key={o.id}
                 type="button"
                 onClick={() => setEssayType(o.id)}
+                aria-pressed={essayType === o.id}
                 className={cn(
-                  "rounded-xl border-2 p-3.5 text-left transition-colors",
+                  "rounded-xl border-2 p-3.5 text-left transition-colors focus:outline-none focus:ring-2 focus:ring-violet/50",
                   essayType === o.id ? "border-violet bg-violet/10" : "border-line bg-surface-2 hover:border-violet/40"
                 )}
               >
@@ -208,7 +212,7 @@ export function ApproachBuilder() {
       </div>
 
       {strategy && (
-        <div id="essay-strategy-output" className="rounded-2xl border-2 border-ink bg-surface p-5 pixel-shadow lg:col-span-3">
+        <div id="essay-strategy-output" className="rounded-2xl border-2 border-ink bg-surface p-5 pixel-shadow lg:col-span-3 scroll-mt-24">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <h3 className="flex items-center gap-2 font-display text-lg font-bold text-ink">
               <Quote className="h-5 w-5 text-violet" /> Your strategy
