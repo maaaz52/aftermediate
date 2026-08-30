@@ -148,3 +148,16 @@ body {
   background: rgba(47, 85, 212, 0.22);
   color: var(--color-ink);
 }
+
+/* CV Builder PDF capture — html2pdf clones the node while .pdf-invert is
+   applied, so dark silicon/glass templates capture as ink-friendly white
+   paper with dark text. background-image: none kills the glass gradient;
+   box-shadow: none keeps the capture clean. */
+.pdf-invert,
+.pdf-invert * {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #1a1a1a !important;
+  border-color: rgba(26, 26, 26, 0.15) !important;
+  box-shadow: none !important;
+}

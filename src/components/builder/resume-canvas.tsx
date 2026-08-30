@@ -1,6 +1,7 @@
 "use client";
 
 import { Hash, Sparkles } from "lucide-react";
+import type { Ref } from "react";
 import {
   makeQuantifiable,
   rewriteBullet,
@@ -15,6 +16,8 @@ export interface ResumeCanvasProps {
   template: TemplateId;
   mode: RecruiterMode;
   updateBullet: (index: number, bullet: string) => void;
+  /** Paper root node — consumed by the PDF capture in builder.tsx. */
+  ref?: Ref<HTMLDivElement>;
 }
 
 /** Paper surface per template — the A4-shaped preview card. */
@@ -73,7 +76,7 @@ const MUTED: Record<TemplateId, string> = {
   glass: "text-slate-400",
 };
 
-export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCanvasProps) {
+export function ResumeCanvas({ resume, template, mode, updateBullet, ref }: ResumeCanvasProps) {
   const { identity, experience, projects, skills } = resume;
   const heading = HEADING[template];
   const rule = RULE[template];
@@ -96,6 +99,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
 
   return (
     <div
+      ref={ref}
       data-template={template}
       role="region"
       aria-label="Resume preview"
@@ -178,7 +182,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
                     </span>
                     {bullet}
                   </p>
-                  <div className="absolute right-1 top-0 z-10 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 print:hidden">
+                  <div className="resume-overlay absolute right-1 top-0 z-10 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 print:hidden">
                     <button
                       type="button"
                       onClick={() => updateBullet(i, rewriteBullet(bullet))}

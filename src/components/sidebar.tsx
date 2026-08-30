@@ -82,6 +82,7 @@ export const groups: NavGroup[] = [
       { href: "/skills/chat", label: "Hunar A.I", icon: MessageSquareText },
       { href: "/skills/clients", label: "Clients", icon: Handshake },
       { href: "/skills/platforms", label: "Platforms", icon: Store },
+      { href: "/builder", label: "CV Builder", icon: FileText },
     ],
   },
   {

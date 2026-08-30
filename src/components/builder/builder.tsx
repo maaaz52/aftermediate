@@ -1,5 +1,6 @@
 "use client";
 
+import html2pdf from "html2pdf.js";
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { mockResume } from "@/data/resume-mock";
@@ -18,7 +19,7 @@ import { BuilderHeader } from "./builder-header";
 import { InputPanel, type AcademicEntry, type ProjectEntry } from "./input-panel";
 import { AtsPanel } from "./ats-panel";
 import { ResumeCanvas } from "./resume-canvas";
-import { ShareModal } from "./share-modal";
+import { ShareModal, slugify } from "./share-modal";
 
 /** Length of the "AI polishing…" animation before bullets land. */
 export const POLISH_DELAY_MS = 600;
@@ -77,6 +78,7 @@ export function Builder() {
   const [shareOpen, setShareOpen] = useState(false);
   const polishingRef = useRef(false);
   const polishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     return () => {
@@ -278,9 +280,34 @@ export function Builder() {
   );
 
   // ── Toolbar handlers ──────────────────────────────────────────────────
-  const handleDownload = useCallback(() => {
-    console.log("[builder] download clean PDF (wired in Task 4)");
-  }, []);
+  const handleDownload = useCallback(async () => {
+    const node = canvasRef.current;
+    if (!node) return;
+
+    // html2pdf.js clones the node while .pdf-invert is applied, so dark
+    // templates (silicon/glass) capture as white paper with dark text.
+    node.classList.add("pdf-invert");
+    // Hoisted (not inline) so the extra `pagebreak` key passes the literal
+    // excess-property check against html2pdf.js's Html2PdfOptions.
+    const options = {
+      margin: 10,
+      filename: `${slugify(resume.identity.name)}-resume.pdf`,
+      image: { type: "jpeg", quality: 0.98 } as const,
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#ffffff",
+        ignoreElements: (el: Element) => el.classList.contains("resume-overlay"),
+      },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" } as const,
+      pagebreak: { mode: ["avoid-all"] },
+    };
+    try {
+      await html2pdf().set(options).from(node).save();
+    } finally {
+      node.classList.remove("pdf-invert");
+    }
+  }, [resume.identity.name]);
 
   const handleShare = useCallback(() => {
     setShareOpen(true);
@@ -332,6 +359,7 @@ export function Builder() {
         {/* Center — live preview canvas (45%) */}
         <div className="col-span-12 xl:col-span-5">
           <ResumeCanvas
+            ref={canvasRef}
             resume={resume}
             template={template}
             mode={mode}

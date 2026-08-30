@@ -1,8 +1,13 @@
 // @vitest-environment jsdom
 import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import html2pdf from "html2pdf.js";
 import { afterEach, expect, it, vi } from "vitest";
 import { Builder } from "./builder";
+
+// html2pdf.js can't run under jsdom — the PDF tests drive the mock chain
+// (html2pdf → set → from → save) and assert on the captured options.
+vi.mock("html2pdf.js", () => ({ default: vi.fn() }));
 
 afterEach(() => {
   cleanup();
@@ -354,4 +359,48 @@ it("Copy Link writes the mock URL to the clipboard and confirms", async () => {
     expect(screen.getByRole("button", { name: "Copied!" })).toBeTruthy();
   });
   expect(writeText).toHaveBeenCalledWith("aftermediate.site/builder/view/hira-ahmed");
+});
+
+// ── PDF download (Task 4) ──────────────────────────────────────────────
+
+it("Download Clean PDF calls html2pdf with the resume element and a slug filename", async () => {
+  const save = vi.fn().mockResolvedValue(undefined);
+  const from = vi.fn((el: Element) => {
+    // Capture runs while the invert class is applied to the paper node
+    expect(el.classList.contains("pdf-invert")).toBe(true);
+    return { save };
+  });
+  let capturedOptions: unknown;
+  const set = vi.fn((options: unknown) => {
+    capturedOptions = options;
+    return { from };
+  });
+  vi.mocked(html2pdf).mockReturnValue({ set } as never);
+
+  const user = userEvent.setup();
+  render(<Builder />);
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+
+  await user.click(screen.getByRole("button", { name: "Download Clean PDF" }));
+
+  expect(html2pdf).toHaveBeenCalledTimes(1);
+  expect(from).toHaveBeenCalledWith(canvas);
+
+  const options = capturedOptions as {
+    filename: string;
+    html2canvas: { ignoreElements: (el: Element) => boolean };
+  };
+  expect(options.filename).toBe("hira-ahmed-resume.pdf");
+
+  // ignoreElements excludes the hover-to-rewrite overlay from the capture
+  expect(typeof options.html2canvas.ignoreElements).toBe("function");
+  const overlay = document.createElement("div");
+  overlay.classList.add("resume-overlay");
+  expect(options.html2canvas.ignoreElements(overlay)).toBe(true);
+  expect(options.html2canvas.ignoreElements(document.createElement("div"))).toBe(false);
+
+  // save() resolved immediately, so the finally already removed the class
+  await waitFor(() => {
+    expect(canvas.classList.contains("pdf-invert")).toBe(false);
+  });
 });
