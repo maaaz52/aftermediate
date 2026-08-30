@@ -88,7 +88,7 @@ interface BenchmarkCohort {
 | `kemc`, `aimc`, `dow`, `aku` | 0.50 | 200 | MDCAT |
 | `uet`, `comsats` | — | — | no hint (no confident formula) |
 
-`marksNeeded = gap / weight * total`, rounded to a whole number. Example: NUST gap 3.3 → 3.3 / 0.75 × 200 = 8.8 → "a 9-mark NET jump closes it."
+`marksNeeded = gap × total / (100 × weight)`, rounded to a whole number. Example: NUST gap 3.3 → 3.3 × 200 / (100 × 0.75) = 8.8 → "a 9-mark NET jump closes it."
 
 ## Component Design (where-you-stand.tsx)
 
