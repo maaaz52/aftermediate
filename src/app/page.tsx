@@ -42,7 +42,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 border-b-2 border-ink bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-          <Link href="/"><Brand /></Link>
+          <Link href="/"><Brand nav /></Link>
           <nav className="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
             <Link href="#how" className="hover:text-ink">How it works</Link>
             <Link href="#features" className="hover:text-ink">Features</Link>

@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Mytalte";
+  src: url("/fonts/Mytalte.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-background: #f4f2eb;
   --color-surface: #ffffff;
@@ -22,6 +30,7 @@
   --font-display: "Space Mono", ui-monospace, monospace;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-logo: "Mytalte", "Space Mono", sans-serif;
 
   --animate-reveal: reveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-rise: rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
