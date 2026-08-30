@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, cleanup } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { EntryTestHeatmap } from "./entry-test-heatmap";
@@ -87,6 +87,32 @@ it("clicking a chapter opens the detail panel", async () => {
   await userEvent.click(screen.getByText("Cell Biology"));
   // Detail panel shows counts
   expect(screen.getByText(/appearances/i)).toBeTruthy();
+});
+
+it("clicking a different chapter updates the detail panel", async () => {
+  mockProfile("pre-medical");
+  render(<EntryTestHeatmap />);
+  // Expand biology section
+  await userEvent.click(screen.getByText("Biology"));
+  // Click Cell Biology — before any panel is open there is only one match
+  await userEvent.click(screen.getByText("Cell Biology"));
+  expect(screen.getByText(/20 appearances in the last 3 years/)).toBeTruthy();
+  // Click Biological Molecules — only one match in the tree at this point
+  await userEvent.click(screen.getByText("Biological Molecules"));
+  expect(screen.getByText(/18 appearances in the last 3 years/)).toBeTruthy();
+  expect(screen.queryByText(/20 appearances in the last 3 years/)).toBeNull();
+});
+
+it("tiers render correct color dots for danger, amber, and emerald", async () => {
+  mockProfile("pre-medical");
+  const { container } = render(<EntryTestHeatmap />);
+  await userEvent.click(screen.getByText("Biology"));
+  expect(container.querySelector('[class*="bg-[#d63d3d]"]')).toBeTruthy(); // danger
+  expect(container.querySelector('[class*="bg-[#d99a2b]"]')).toBeTruthy(); // amber
+  expect(container.querySelector('[class*="bg-[#1c9e62]"]')).toBeTruthy(); // emerald
+  expect(screen.getByText("Rarely")).toBeTruthy();
+  expect(screen.getAllByText("Occasional").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Frequent").length).toBeGreaterThan(0);
 });
 
 // ── Chapter click toggles panel off ──

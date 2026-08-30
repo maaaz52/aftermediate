@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useStudent } from "@/lib/store";
 import { computeHeatmap, getStreamTest, type ComputedChapter, type ComputedSection } from "@/lib/heatmap-model";
 import heatmapData from "@/data/heatmap-mock.json";
@@ -43,7 +44,7 @@ function EmptyStateNoTest() {
         <span className="text-2xl">📋</span>
         <p className="text-[13px] text-ink">We don&apos;t have entry-test data for your stream yet</p>
         <p className="text-[11px] text-faint">In the meantime, explore practice questions to stay ahead.</p>
-        <a href="/app/practice" className="text-[13px] text-saffron underline">Practice questions →</a>
+        <Link href="/pakistan/self-assessment" className="text-[13px] text-saffron underline">Practice questions →</Link>
       </div>
       <p className="mt-6 text-[10px] text-faint">Illustrative sample · Based on 10 years of NUST NET, MDCAT, and ECAT question patterns · Predictive probabilities are estimates, not guarantees</p>
     </div>
@@ -91,9 +92,9 @@ function DetailPanel({ chapter, section, onClose }: {
         ⏱ Suggested: {studyPct}% of study time
       </p>
 
-      <p className="mt-2 text-[13px] text-saffron underline cursor-pointer">
+      <Link href="/pakistan/self-assessment" className="mt-2 inline-block text-[13px] text-saffron underline hover:text-saffron/80">
         📝 Practice questions →
-      </p>
+      </Link>
     </div>
   );
 }
@@ -183,20 +184,21 @@ export function EntryTestHeatmap() {
                   <span className={`text-[10px] text-faint transition-transform ${isOpen ? "rotate-90" : ""}`}>▶</span>
                   <span className="text-[13px] font-semibold text-ink">{section.name}</span>
                 </div>
-                <span className="text-[11px] text-faint">◎ {section.chapters.reduce((s, c) => s + c.appearances10yr, 0)}</span>
+                <span className="text-[11px] text-faint">◎ {section.totalQuestions} Qs</span>
               </button>
 
               {/* Chapter rows (collapsible) */}
               {isOpen && (
                 <div className="ml-3 border-l border-surface-2 pl-3">
-                  {section.chapters.map((chapter) => {
+                  {section.chapters.map((chapter, index) => {
                     const tierInfo = TIER_STYLES[chapter.tier as TierColor];
                     const isSelected = selectedChapter?.id === chapter.id;
                     return (
                       <button
                         key={chapter.id}
                         onClick={() => handleChapterClick(chapter, section)}
-                        className={`flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-left hover:bg-surface transition-colors ${
+                        style={{ animationDelay: `${index * 50}ms` }}
+                        className={`animate-reveal flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-left hover:bg-surface transition-colors ${
                           isSelected ? "bg-surface" : ""
                         }`}
                       >

@@ -103,7 +103,7 @@
           { "id": "bio-life-processes", "name": "Life Processes (Nutrition, Gaseous Exchange, Transport)", "appearances3yr": 24, "appearances5yr": 46, "appearances10yr": 95, "trend": "up" },
           { "id": "bio-diversity", "name": "Diversity of Life", "appearances3yr": 10, "appearances5yr": 22, "appearances10yr": 50, "trend": "down" },
           { "id": "bio-genetics", "name": "Genetics & Evolution", "appearances3yr": 22, "appearances5yr": 42, "appearances10yr": 85, "trend": "up" },
-          { "id": "bio-biotechnology", "name": "Biotechnology", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 32, "trend": "down" },
+          { "id": "bio-biotechnology", "name": "Biotechnology", "appearances3yr": 1, "appearances5yr": 3, "appearances10yr": 6, "trend": "down" },
           { "id": "bio-coordination", "name": "Coordination & Control", "appearances3yr": 16, "appearances5yr": 32, "appearances10yr": 68, "trend": "stable" },
           { "id": "bio-reproduction", "name": "Reproduction", "appearances3yr": 14, "appearances5yr": 28, "appearances10yr": 60, "trend": "stable" },
           { "id": "bio-ecology", "name": "Ecology", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 42, "trend": "down" }

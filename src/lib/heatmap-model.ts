@@ -36,6 +36,7 @@ export interface ComputedHeatmap {
 export interface ComputedSection {
   id: string;
   name: string;
+  totalQuestions: number;
   chapters: ComputedChapter[];
   sectionProbability: number;
 }
@@ -136,6 +137,7 @@ export function computeHeatmap(
     return {
       id: section.id,
       name: section.name,
+      totalQuestions: section.totalQuestions,
       chapters,
       sectionProbability,
     };
