@@ -2,6 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
+import {
+  AVAILABILITY_CONFIG,
+  FIELD_GRADIENTS,
+  PLATFORM_COLORS,
+  getInitials,
+} from "./mentor-utils";
 import { cn } from "@/lib/utils";
 import type { MentorProfile } from "./mentor-match-page";
 
@@ -18,38 +24,6 @@ const FIELD_BADGE_LABELS: Record<MentorProfile["field"], string> = {
   arts: "Arts",
   "civil-services": "Civil Services",
 };
-
-const FIELD_GRADIENTS: Record<MentorProfile["field"], string> = {
-  engineering: "linear-gradient(135deg, #d99a2b, #f59e0b)",
-  medical: "linear-gradient(135deg, #1c9e62, #10b981)",
-  tech: "linear-gradient(135deg, #2f55d4, #4a6cf0)",
-  business: "linear-gradient(135deg, #7a5bd4, #8b5cf6)",
-  arts: "linear-gradient(135deg, #e1306c, #f472b6)",
-  "civil-services": "linear-gradient(135deg, #566073, #8a93a6)",
-};
-
-const PLATFORM_COLORS: Record<string, string> = {
-  instagram: "#e1306c",
-  discord: "#5865f2",
-  whatsapp: "#25d366",
-};
-
-const AVAILABILITY_CONFIG: Record<
-  MentorProfile["availability"],
-  { dot: string; label: string }
-> = {
-  available: { dot: "bg-emerald", label: "Available this week" },
-  limited: { dot: "bg-amber", label: "1-2 slots open" },
-  booked: { dot: "bg-danger", label: "Fully booked — join waitlist" },
-};
-
-function getInitials(name: string) {
-  return name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
-    .slice(0, 2);
-}
 
 export function MentorDetailModal({ mentor, onClose }: MentorDetailModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);

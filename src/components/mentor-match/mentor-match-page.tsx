@@ -86,6 +86,8 @@ export function MentorMatchPage() {
     setSelectedMentor(mentor);
   };
 
+  const handleClose = React.useCallback(() => setSelectedMentor(null), []);
+
   return (
     <div>
       <HeroSection />
@@ -105,6 +107,7 @@ export function MentorMatchPage() {
           {FIELD_FILTERS.map((f) => (
             <button
               key={f.id}
+              type="button"
               onClick={() => setActiveField(f.id)}
               className={cn(
                 "rounded-full border px-4 py-2 text-sm font-medium transition-all",
@@ -158,7 +161,7 @@ export function MentorMatchPage() {
       {/* Detail modal */}
       <MentorDetailModal
         mentor={selectedMentor}
-        onClose={() => setSelectedMentor(null)}
+        onClose={handleClose}
       />
     </div>
   );

@@ -180,3 +180,13 @@ it("closes the modal when clicking the backdrop", async () => {
   await user.click(backdrop);
   expect(screen.queryByRole("dialog")).toBeNull();
 });
+
+it("closes the modal when pressing Escape", async () => {
+  render(<MentorMatchPage />);
+  const user = userEvent.setup();
+  await user.click(screen.getByText("Ahmed Raza"));
+  expect(screen.getByRole("dialog")).toBeTruthy();
+
+  await user.keyboard("{Escape}");
+  expect(screen.queryByRole("dialog")).toBeNull();
+});
