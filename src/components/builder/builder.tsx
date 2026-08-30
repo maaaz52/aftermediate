@@ -1,6 +1,5 @@
 "use client";
 
-import html2pdf from "html2pdf.js";
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { mockResume } from "@/data/resume-mock";
@@ -77,6 +76,7 @@ export function Builder() {
   const [polishing, setPolishing] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
   const polishingRef = useRef(false);
+  const downloadingRef = useRef(false);
   const polishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
 
@@ -281,8 +281,14 @@ export function Builder() {
 
   // ── Toolbar handlers ──────────────────────────────────────────────────
   const handleDownload = useCallback(async () => {
+    if (downloadingRef.current) return;
+    downloadingRef.current = true;
+
     const node = canvasRef.current;
-    if (!node) return;
+    if (!node) {
+      downloadingRef.current = false;
+      return;
+    }
 
     // html2pdf.js clones the node while .pdf-invert is applied, so dark
     // templates (silicon/glass) capture as white paper with dark text.
@@ -291,7 +297,7 @@ export function Builder() {
     // excess-property check against html2pdf.js's Html2PdfOptions.
     const options = {
       margin: 10,
-      filename: `${slugify(resume.identity.name)}-resume.pdf`,
+      filename: `${slugify(resume.identity.name) || "resume"}-resume.pdf`,
       image: { type: "jpeg", quality: 0.98 } as const,
       html2canvas: {
         scale: 2,
@@ -303,9 +309,13 @@ export function Builder() {
       pagebreak: { mode: ["avoid-all"] },
     };
     try {
+      // Lazy-load html2pdf.js (jspdf + html2canvas ~hundreds of KB) so the
+      // builder route's initial bundle doesn't pay for the PDF pipeline.
+      const { default: html2pdf } = await import("html2pdf.js");
       await html2pdf().set(options).from(node).save();
     } finally {
       node.classList.remove("pdf-invert");
+      downloadingRef.current = false;
     }
   }, [resume.identity.name]);
 

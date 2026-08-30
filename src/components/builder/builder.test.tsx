@@ -382,6 +382,8 @@ it("Download Clean PDF calls html2pdf with the resume element and a slug filenam
   const canvas = screen.getByRole("region", { name: "Resume preview" });
 
   await user.click(screen.getByRole("button", { name: "Download Clean PDF" }));
+  // The lazy import is async — settle it before asserting the pipeline ran
+  await vi.dynamicImportSettled();
 
   expect(html2pdf).toHaveBeenCalledTimes(1);
   expect(from).toHaveBeenCalledWith(canvas);
@@ -400,6 +402,86 @@ it("Download Clean PDF calls html2pdf with the resume element and a slug filenam
   expect(options.html2canvas.ignoreElements(document.createElement("div"))).toBe(false);
 
   // save() resolved immediately, so the finally already removed the class
+  await waitFor(() => {
+    expect(canvas.classList.contains("pdf-invert")).toBe(false);
+  });
+});
+
+it("Download Clean PDF removes pdf-invert and resets the guard when the capture fails", async () => {
+  const save = vi.fn().mockRejectedValue(new Error("capture failed"));
+  const from = vi.fn(() => ({ save }));
+  const set = vi.fn(() => ({ from }));
+  vi.mocked(html2pdf).mockClear();
+  vi.mocked(html2pdf).mockReturnValue({ set } as never);
+
+  // React doesn't await async onClick handlers, so the rejection would
+  // surface as an unhandled rejection. Observe it here (vitest skips
+  // reporting when a user listener is attached) to prove the error
+  // propagated out of the handler.
+  const onUnhandledRejection = vi.fn();
+  process.on("unhandledRejection", onUnhandledRejection);
+
+  try {
+    const user = userEvent.setup();
+    render(<Builder />);
+    const canvas = screen.getByRole("region", { name: "Resume preview" });
+    const download = screen.getByRole("button", { name: "Download Clean PDF" });
+
+    await user.click(download);
+    await waitFor(() => expect(save).toHaveBeenCalled());
+
+    // finally removed the invert class despite save() rejecting
+    await waitFor(() => {
+      expect(canvas.classList.contains("pdf-invert")).toBe(false);
+    });
+
+    // The guard reset in finally — a second click starts a fresh pipeline
+    await user.click(download);
+    await vi.dynamicImportSettled();
+    expect(html2pdf).toHaveBeenCalledTimes(2);
+
+    // The rejection propagated out of the async handler
+    await waitFor(() => {
+      expect(onUnhandledRejection).toHaveBeenCalledWith(
+        expect.objectContaining({ message: "capture failed" }),
+        expect.anything()
+      );
+    });
+  } finally {
+    process.off("unhandledRejection", onUnhandledRejection);
+  }
+});
+
+it("rapid double-click runs a single html2pdf pipeline while the first capture is in flight", async () => {
+  let resolveSave: () => void = () => {};
+  const save = vi.fn(
+    () =>
+      new Promise<void>((resolve) => {
+        resolveSave = resolve;
+      })
+  );
+  const from = vi.fn(() => ({ save }));
+  const set = vi.fn(() => ({ from }));
+  vi.mocked(html2pdf).mockClear();
+  vi.mocked(html2pdf).mockReturnValue({ set } as never);
+
+  const user = userEvent.setup();
+  render(<Builder />);
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+  const download = screen.getByRole("button", { name: "Download Clean PDF" });
+
+  await user.click(download);
+  await vi.dynamicImportSettled();
+  expect(html2pdf).toHaveBeenCalledTimes(1);
+
+  // Second click while the first capture is still in flight — the guard
+  // early-returns and no second pipeline starts.
+  await user.click(download);
+  await vi.dynamicImportSettled();
+  expect(html2pdf).toHaveBeenCalledTimes(1);
+
+  // First pipeline completes → the invert class is finally removed
+  resolveSave();
   await waitFor(() => {
     expect(canvas.classList.contains("pdf-invert")).toBe(false);
   });
