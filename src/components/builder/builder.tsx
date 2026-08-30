@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FileText, Gauge } from "lucide-react";
 import { mockResume } from "@/data/resume-mock";
 import {
   applyAutoFix as applyAutoFixEngine,
@@ -17,6 +16,9 @@ import {
 } from "@/lib/resume-model";
 import { BuilderHeader } from "./builder-header";
 import { InputPanel, type AcademicEntry, type ProjectEntry } from "./input-panel";
+import { AtsPanel } from "./ats-panel";
+import { ResumeCanvas } from "./resume-canvas";
+import { ShareModal } from "./share-modal";
 
 /** Length of the "AI polishing…" animation before bullets land. */
 export const POLISH_DELAY_MS = 600;
@@ -70,24 +72,13 @@ export interface BuilderState {
 const GRID_BG =
   "bg-[repeating-linear-gradient(0deg,transparent,transparent_24px,rgba(255,255,255,0.02)_25px),repeating-linear-gradient(90deg,transparent,transparent_24px,rgba(255,255,255,0.02)_25px)]";
 
-const PLACEHOLDER_TEXT: Record<string, { title: string; body: string }> = {
-  canvas: {
-    title: "Preview canvas",
-    body: "Coming in the next build step — a live, template-aware resume render with hover-to-rewrite.",
-  },
-  ats: {
-    title: "ATS recruiter simulator",
-    body: "Coming in the next build step — live impact score, recruiter roast and 1-click auto-fix.",
-  },
-};
-
 export function Builder() {
   const [resume, setResume] = useState<ResumeData>(mockResume);
   const [activeTab, setActiveTab] = useState<TabId>("identity");
   const [template, setTemplate] = useState<TemplateId>("academic");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- consumed by Task 3's ats-panel mode switcher
   const [mode, setMode] = useState<RecruiterMode>("startup");
   const [polishing, setPolishing] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
   const polishingRef = useRef(false);
   const polishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -98,9 +89,7 @@ export function Builder() {
   }, []);
 
   // ── Derived ────────────────────────────────────────────────────────────
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- consumed by Task 3's ATS panel (impact gauge)
   const ats = useMemo(() => computeAts(resume, mode), [resume, mode]);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- consumed by Task 3's ATS panel (feedback feed)
   const feedback = useMemo(() => generateFeedback(resume, mode), [resume, mode]);
 
   // ── Identity ───────────────────────────────────────────────────────────
@@ -284,8 +273,7 @@ export function Builder() {
     });
   }, []);
 
-  // ── Auto-fix (Task 3 ATS panel) ────────────────────────────────────────
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- consumed by Task 3's 1-click auto-fix buttons
+  // ── Auto-fix (ATS panel 1-click repair) ───────────────────────────────
   const applyAutoFix = useCallback(
     (item: FeedbackItem) => {
       setResume((r) => applyAutoFixEngine(r, item, mode));
@@ -293,13 +281,13 @@ export function Builder() {
     [mode]
   );
 
-  // ── Toolbar stubs (Task 3 = share modal, Task 4 = html2pdf) ───────────
+  // ── Toolbar handlers ──────────────────────────────────────────────────
   const handleDownload = useCallback(() => {
     console.log("[builder] download clean PDF (wired in Task 4)");
   }, []);
 
   const handleShare = useCallback(() => {
-    console.log("[builder] get live web link (wired in Task 3)");
+    setShareOpen(true);
   }, []);
 
   return (
@@ -341,36 +329,34 @@ export function Builder() {
           />
         </div>
 
-        {/* Center — live preview canvas (45%, Task 3) */}
+        {/* Center — live preview canvas (45%) */}
         <div className="col-span-12 xl:col-span-5">
-          <PlaceholderColumn icon={FileText} {...PLACEHOLDER_TEXT.canvas} />
+          <ResumeCanvas
+            resume={resume}
+            template={template}
+            mode={mode}
+            updateBullet={updateBullet}
+          />
         </div>
 
-        {/* Right — ATS recruiter simulator (25%, Task 3) */}
+        {/* Right — ATS recruiter simulator (25%) */}
         <div className="col-span-12 xl:col-span-3">
-          <PlaceholderColumn icon={Gauge} {...PLACEHOLDER_TEXT.ats} />
+          <AtsPanel
+            mode={mode}
+            setMode={setMode}
+            ats={ats}
+            feedback={feedback}
+            applyAutoFix={applyAutoFix}
+          />
         </div>
       </div>
-    </div>
-  );
-}
 
-function PlaceholderColumn({
-  icon: Icon,
-  title,
-  body,
-}: {
-  icon: typeof FileText;
-  title: string;
-  body: string;
-}) {
-  return (
-    <div className="flex min-h-[420px] flex-col items-center justify-center gap-3 rounded-xl border border-dashed border-[#2a2a38] bg-[#111118]/70 p-8 text-center">
-      <Icon className="h-8 w-8 text-[#3a3a4a]" />
-      <div>
-        <p className="text-sm font-semibold text-[#8a93a6]">{title}</p>
-        <p className="mt-1 max-w-xs text-xs leading-relaxed text-[#555d6e]">{body}</p>
-      </div>
+      <ShareModal
+        open={shareOpen}
+        onClose={() => setShareOpen(false)}
+        resume={resume}
+        template={template}
+      />
     </div>
   );
 }

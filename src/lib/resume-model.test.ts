@@ -5,6 +5,8 @@ import {
   generateFeedback,
   applyAutoFix,
   suggestSkills,
+  rewriteBullet,
+  makeQuantifiable,
   STRONG_ACTION_VERBS,
   CLICHE_WORDS,
   type ResumeData,
@@ -519,5 +521,45 @@ describe("suggestSkills", () => {
   it("matches via substring — 'pre-med research intern at hospital' matches pre-med research intern", () => {
     const suggestions = suggestSkills("pre-med research intern at hospital", []);
     expect(suggestions.length).toBeGreaterThan(0);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// rewriteBullet & makeQuantifiable — canvas hover-to-rewrite
+// ---------------------------------------------------------------------------
+
+describe("rewriteBullet", () => {
+  it("rewrites a weak-verb opener to a strong action verb", () => {
+    expect(rewriteBullet("was responsible for the sports day")).toBe("Owned the sports day");
+  });
+
+  it("replaces a cliché with its mapped concrete phrasing", () => {
+    expect(rewriteBullet("I am a hardworking student")).toBe(
+      "I am a consistently delivered student"
+    );
+  });
+
+  it("returns the input unchanged when there is nothing to improve", () => {
+    expect(rewriteBullet("Led a team of 12 people.")).toBe("Led a team of 12 people.");
+  });
+});
+
+describe("makeQuantifiable", () => {
+  it("appends a mode-appropriate outcome when a number already exists", () => {
+    expect(makeQuantifiable("Managed 200+ participants.", "startup")).toBe(
+      "Managed 200+ participants, driving measurable growth."
+    );
+  });
+
+  it("returns the input unchanged when the outcome phrasing is already present", () => {
+    expect(makeQuantifiable("Managed 200+ participants, driving measurable growth.", "startup")).toBe(
+      "Managed 200+ participants, driving measurable growth."
+    );
+  });
+
+  it("never fabricates numbers — no digit means no change", () => {
+    expect(makeQuantifiable("Attended school assembly.", "corporate")).toBe(
+      "Attended school assembly."
+    );
   });
 });

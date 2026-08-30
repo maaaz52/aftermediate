@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { cleanup, render, screen, waitFor } from "@testing-library/react";
+import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, expect, it, vi } from "vitest";
 import { Builder } from "./builder";
@@ -195,4 +195,163 @@ it("switching templates updates the active selection", async () => {
   await user.click(screen.getByRole("button", { name: "Silicon" }));
   expect(academic.getAttribute("aria-pressed")).toBe("false");
   expect(screen.getByRole("button", { name: "Silicon" }).getAttribute("aria-pressed")).toBe("true");
+});
+
+// ── Canvas preview (Task 3) ────────────────────────────────────────────
+
+it("canvas renders the mock resume — name, first bullet and a skill pill", () => {
+  render(<Builder />);
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+  expect(within(canvas).getByText(/hira ahmed/i)).toBeTruthy();
+  expect(within(canvas).getByText(/Coordinated logistics for school sports day/i)).toBeTruthy();
+  expect(within(canvas).getByText("Microsoft Office")).toBeTruthy();
+});
+
+it("typing a new name in the identity tab updates the canvas in real time", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  const name = screen.getByLabelText(/full name/i);
+  await user.clear(name);
+  await user.type(name, "Ali Khan");
+
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+  await waitFor(() => {
+    expect(within(canvas).getByText(/ali khan/i)).toBeTruthy();
+  });
+});
+
+it("template switcher updates the canvas data-template attribute", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  await user.click(screen.getByRole("button", { name: "Silicon" }));
+  await waitFor(() => {
+    expect(
+      screen.getByRole("region", { name: "Resume preview" }).getAttribute("data-template")
+    ).toBe("silicon");
+  });
+
+  await user.click(screen.getByRole("button", { name: "Glass" }));
+  await waitFor(() => {
+    expect(
+      screen.getByRole("region", { name: "Resume preview" }).getAttribute("data-template")
+    ).toBe("glass");
+  });
+});
+
+// ── ATS panel (Task 3) ─────────────────────────────────────────────────
+
+it("ATS gauge starts at 77 for the mock resume in startup mode", () => {
+  render(<Builder />);
+  const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
+  expect(gauge.getAttribute("aria-valuenow")).toBe("77");
+  expect(gauge.getAttribute("aria-valuemin")).toBe("0");
+  expect(gauge.getAttribute("aria-valuemax")).toBe("100");
+});
+
+it("switching to University Admissions reweights the gauge to 83", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  const universityButton = screen.getByRole("button", { name: "University Admissions" });
+  await user.click(universityButton);
+
+  await waitFor(() => {
+    const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
+    expect(gauge.getAttribute("aria-valuenow")).toBe("83");
+  });
+  expect(universityButton.getAttribute("aria-pressed")).toBe("true");
+});
+
+it("gauge drops when a bullet is weakened to a weak-verb opener", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  await user.click(screen.getByRole("tab", { name: "Experience" }));
+  const bullet = screen.getAllByLabelText(/polished bullet/i)[0];
+  await user.clear(bullet);
+  await user.type(bullet, "was responsible for the sports day");
+
+  await waitFor(() => {
+    const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
+    expect(Number(gauge.getAttribute("aria-valuenow"))).toBeLessThan(77);
+  });
+});
+
+it("1-click auto-fix adds the missing keyword pill to the canvas skills", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  const fixButton = screen.getByRole("button", { name: "Auto-Fix: Add keyword pill" });
+  await user.click(fixButton);
+
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+  await waitFor(() => {
+    expect(within(canvas).getByText("Research")).toBeTruthy();
+  });
+});
+
+it("hovering a bullet reveals the rewrite action and rewrites it in place", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  // Weaken bullet 0 first so the engine actually has something to rewrite
+  await user.click(screen.getByRole("tab", { name: "Experience" }));
+  const bullet = screen.getAllByLabelText(/polished bullet/i)[0];
+  await user.clear(bullet);
+  await user.type(bullet, "was responsible for the sports day");
+
+  const canvas = screen.getByRole("region", { name: "Resume preview" });
+  const bulletText = within(canvas).getByText(/was responsible for/i);
+  await user.hover(bulletText);
+
+  const group = bulletText.closest("div");
+  expect(group).not.toBeNull();
+  const rewriteButton = within(group as HTMLElement).getByRole("button", {
+    name: "Rewrite with AI",
+  });
+  await user.click(rewriteButton);
+
+  await waitFor(() => {
+    expect(within(canvas).queryByText(/was responsible for/i)).toBeNull();
+    expect(within(canvas).getByText(/owned the sports day/i)).toBeTruthy();
+  });
+});
+
+// ── Share modal (Task 3) ───────────────────────────────────────────────
+
+it("Get Live Web Link opens the dialog with the slugged URL and Escape closes it", async () => {
+  render(<Builder />);
+  const user = userEvent.setup();
+
+  await user.click(screen.getByRole("button", { name: "Get Live Web Link" }));
+  const dialog = screen.getByRole("dialog");
+  expect(within(dialog).getByText(/aftermediate\.site\/builder\/view\/hira-ahmed/)).toBeTruthy();
+
+  await user.keyboard("{Escape}");
+  await waitFor(() => {
+    expect(screen.queryByRole("dialog")).toBeNull();
+  });
+});
+
+it("Copy Link writes the mock URL to the clipboard and confirms", async () => {
+  const user = userEvent.setup();
+  const writeText = vi.fn();
+  // userEvent.setup() installs its own clipboard stub — redefine navigator.clipboard
+  // AFTER setup() so the component's writeText call lands on our mock.
+  Object.defineProperty(navigator, "clipboard", {
+    configurable: true,
+    value: { writeText },
+  });
+
+  render(<Builder />);
+
+  await user.click(screen.getByRole("button", { name: "Get Live Web Link" }));
+  await user.click(screen.getByRole("button", { name: "Copy Link" }));
+
+  await waitFor(() => {
+    expect(screen.getByRole("button", { name: "Copied!" })).toBeTruthy();
+  });
+  expect(writeText).toHaveBeenCalledWith("aftermediate.site/builder/view/hira-ahmed");
 });

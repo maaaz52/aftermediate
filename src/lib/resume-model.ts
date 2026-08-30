@@ -653,6 +653,16 @@ const CLICHE_REPLACEMENTS: Record<string, string> = {
   "fast learner": "quickly mastered",
 };
 
+/**
+ * Mode-appropriate outcome framing. Honesty rule: only ever appended to a
+ * bullet that ALREADY contains a number — never fabricated on its own.
+ */
+const OUTCOME_SUFFIXES: Record<RecruiterMode, string> = {
+  startup: "driving measurable growth",
+  university: "demonstrating strong commitment",
+  corporate: "supporting business outcomes",
+};
+
 /** Cliché fix: rewrite bullets/rawNotes AND scrub the cliché pill from skills. */
 function fixCliche(result: ResumeData): ResumeData {
   const allText = [
@@ -725,12 +735,7 @@ function fixKeywords(result: ResumeData): ResumeData {
  * outcome to the first bullet that has a real number but no outcome framing.
  */
 function fixMetrics(result: ResumeData, mode: RecruiterMode): ResumeData {
-  const outcomes: Record<RecruiterMode, string> = {
-    startup: "driving measurable growth",
-    university: "demonstrating strong commitment",
-    corporate: "supporting business outcomes",
-  };
-  const suffix = outcomes[mode];
+  const suffix = OUTCOME_SUFFIXES[mode];
   for (let i = 0; i < result.experience.bullets.length; i++) {
     const bullet = result.experience.bullets[i].trim();
     if (!bullet) continue;
@@ -786,6 +791,44 @@ export function applyAutoFix(
     default:
       return result;
   }
+}
+
+// ---------------------------------------------------------------------------
+// rewriteBullet & makeQuantifiable — canvas hover-to-rewrite (Task 3)
+// ---------------------------------------------------------------------------
+
+/**
+ * Single-bullet AI rewrite: replace clichés, then fix a weak-verb opener.
+ * Honesty rules: never invents content (clichés are replaced with mapped
+ * phrasing, weak verbs with the same rewrites as the polish engine) and the
+ * output is deterministic. Returns the input unchanged when there is nothing
+ * to improve.
+ */
+export function rewriteBullet(bullet: string): string {
+  const lower = bullet.toLowerCase();
+  const found = CLICHE_WORDS.find((c) => lower.includes(c));
+  let result = bullet;
+  if (found) {
+    const replacement = CLICHE_REPLACEMENTS[found] ?? "delivered measurable results";
+    const escaped = found.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    result = result.replace(new RegExp(escaped, "gi"), replacement);
+  }
+  const rewritten = rewriteWeakVerb(result);
+  if (rewritten !== null) result = rewritten;
+  return result === bullet ? bullet : result;
+}
+
+/**
+ * Single-bullet quantifier: appends a mode-appropriate outcome ONLY when the
+ * bullet already contains a number and lacks the outcome phrasing. Returns
+ * the input unchanged otherwise — numbers are framed, never fabricated.
+ */
+export function makeQuantifiable(bullet: string, mode: RecruiterMode): string {
+  const trimmed = bullet.trim();
+  if (!/\d/.test(trimmed)) return bullet;
+  const suffix = OUTCOME_SUFFIXES[mode];
+  if (trimmed.includes(suffix)) return bullet;
+  return `${trimmed.replace(/\.$/, "")}, ${suffix}.`;
 }
 
 // ---------------------------------------------------------------------------
