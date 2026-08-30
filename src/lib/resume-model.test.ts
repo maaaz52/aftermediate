@@ -370,16 +370,32 @@ describe("applyAutoFix", () => {
     expect(fixed.experience.bullets.some((b) => b.toLowerCase().includes("hardworking"))).toBe(false);
   });
 
-  it("keyword fix adds a missing keyword to skills.tech", () => {
+  it("cliché fix consumes 'passionate about' as a phrase — no orphaned 'about'", () => {
     const resume = makeResume({
-      identity: { name: "Test", email: "t@t.com", phone: "", location: "", github: "", linkedin: "", targetRole: "web developer" },
-      skills: { tech: ["Canva"], soft: [] },
+      experience: { rawNotes: "", bullets: ["I am passionate about science."], polished: false },
     });
-    const feedback = generateFeedback(resume, "startup");
+    const feedback = generateFeedback(resume, "corporate");
+    const clichéItem = findFix(feedback, "cliche");
+    expect(clichéItem).toBeDefined();
+    const fixed = applyAutoFix(resume, clichéItem!, "corporate");
+    expect(fixed.experience.bullets[0]).toBe("I am deeply committed to science.");
+    expect(fixed.experience.bullets[0]).not.toContain("about");
+  });
+
+  it("keyword fix adds the first keyword the feedback tip suggests — Data Analysis for the mock resume", () => {
+    const feedback = generateFeedback(mockResume, "startup");
     const kwItem = findFix(feedback, "keywords");
     expect(kwItem).toBeDefined();
-    const fixed = applyAutoFix(resume, kwItem!, "startup");
-    expect(fixed.skills.tech.length).toBeGreaterThan(resume.skills.tech.length);
+    expect(kwItem!.message).toContain("Data Analysis");
+    expect(kwItem!.message).toContain("Scientific Writing");
+    const fixed = applyAutoFix(mockResume, kwItem!, "startup");
+    // First keyword absent from the resume TEXT (not just the skill list):
+    // "Research" and "Lab" already match the text, so the pill added is the
+    // first one the tip message actually suggested.
+    expect(fixed.skills.tech).toEqual([...mockResume.skills.tech, "Data Analysis"]);
+    expect(fixed.skills.tech).not.toContain("Research");
+    // Keyword density rises 33% → 50% on a single click
+    expect(computeAts(fixed, "startup").breakdown.keywords).toBe(50);
   });
 
   it("GitHub fix sets identity.github to a URL", () => {
@@ -537,6 +553,12 @@ describe("rewriteBullet", () => {
     expect(rewriteBullet("I am a hardworking student")).toBe(
       "I am a consistently delivered student"
     );
+  });
+
+  it("rewrites the full 'passionate about' phrase — no orphaned 'about'", () => {
+    const result = rewriteBullet("passionate about science and hardworking");
+    expect(result).toBe("Deeply committed to science and hardworking");
+    expect(result).not.toContain("about");
   });
 
   it("returns the input unchanged when there is nothing to improve", () => {

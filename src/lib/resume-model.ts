@@ -419,6 +419,9 @@ function getResumeText(resume: ResumeData): string {
     ...resume.skills.tech,
     ...resume.skills.soft,
     ...resume.projects.entries.map((e) => e.description),
+    // Certificates and leadership entries are intentionally excluded from
+    // keyword scanning — the scoring model keys on bullets + skills, so a
+    // certificate text could satisfy a keyword without the skill being listed.
   ];
   return parts.join(" ").toLowerCase();
 }
@@ -654,6 +657,24 @@ const CLICHE_REPLACEMENTS: Record<string, string> = {
 };
 
 /**
+ * First cliché in the text plus its mapped replacement. "passionate" is
+ * phrase-aware: "passionate about X" is consumed as a whole phrase so the
+ * replacement ("deeply committed to") never orphans the trailing "about" —
+ * the same grammar bug class the polish engine fixes via
+ * stripTrailingPrepositions. Returns null when the text has no cliché.
+ */
+function findClicheReplacement(
+  text: string
+): { match: string; replacement: string } | null {
+  if (/\bpassionate\s+about\b/i.test(text)) {
+    return { match: "passionate about", replacement: CLICHE_REPLACEMENTS.passionate };
+  }
+  const found = CLICHE_WORDS.find((c) => text.includes(c));
+  if (!found) return null;
+  return { match: found, replacement: CLICHE_REPLACEMENTS[found] ?? "delivered measurable results" };
+}
+
+/**
  * Mode-appropriate outcome framing. Honesty rule: only ever appended to a
  * bullet that ALREADY contains a number — never fabricated on its own.
  */
@@ -674,13 +695,14 @@ function fixCliche(result: ResumeData): ResumeData {
     .filter(Boolean)
     .join("\n")
     .toLowerCase();
-  const found = CLICHE_WORDS.find((c) => allText.includes(c));
-  if (!found) return result;
-  const replacement = CLICHE_REPLACEMENTS[found] ?? "delivered measurable results";
-  const esc = found.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pair = findClicheReplacement(allText);
+  if (!pair) return result;
+  const esc = pair.match.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const re = new RegExp(esc, "gi");
-  result.experience.bullets = result.experience.bullets.map((b) => b.replace(re, replacement));
-  result.experience.rawNotes = result.experience.rawNotes.replace(re, replacement);
+  result.experience.bullets = result.experience.bullets.map((b) =>
+    b.replace(re, pair.replacement)
+  );
+  result.experience.rawNotes = result.experience.rawNotes.replace(re, pair.replacement);
   const scrubSkill = (s: string) => s.replace(re, "").replace(/^\s+|\s+$/g, "");
   result.skills.tech = result.skills.tech.map(scrubSkill).filter(Boolean);
   result.skills.soft = result.skills.soft.map(scrubSkill).filter(Boolean);
@@ -722,8 +744,10 @@ function fixActionVerbs(result: ResumeData): ResumeData {
 
 function fixKeywords(result: ResumeData): ResumeData {
   const keywords = findRoleKeywords(result.identity.targetRole);
-  const current = new Set(result.skills.tech.map((s) => s.toLowerCase()));
-  const missing = keywords.find((kw) => !current.has(kw.toLowerCase()));
+  const text = getResumeText(result).toLowerCase();
+  // Same criterion as the kw-tip message: pick the first keyword absent from
+  // the resume TEXT, so the added pill is the first one the card suggested.
+  const missing = keywords.find((kw) => !keywordMatches(text, kw));
   if (missing) {
     result.skills.tech.push(missing);
   }
@@ -806,12 +830,11 @@ export function applyAutoFix(
  */
 export function rewriteBullet(bullet: string): string {
   const lower = bullet.toLowerCase();
-  const found = CLICHE_WORDS.find((c) => lower.includes(c));
+  const pair = findClicheReplacement(lower);
   let result = bullet;
-  if (found) {
-    const replacement = CLICHE_REPLACEMENTS[found] ?? "delivered measurable results";
-    const escaped = found.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    result = result.replace(new RegExp(escaped, "gi"), replacement);
+  if (pair) {
+    const escaped = pair.match.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    result = result.replace(new RegExp(escaped, "gi"), pair.replacement);
   }
   const rewritten = rewriteWeakVerb(result);
   if (rewritten !== null) result = rewritten;

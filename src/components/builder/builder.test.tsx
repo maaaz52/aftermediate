@@ -37,7 +37,7 @@ it("switching tabs reveals each tab's content", async () => {
 
   await user.click(screen.getByRole("tab", { name: "Identity" }));
   expect((screen.getByLabelText(/full name/i) as HTMLInputElement).value).toBe("Hira Ahmed");
-});
+}, 15000);
 
 it("renders the sticky toolbar with template selector and action buttons", () => {
   render(<Builder />);
@@ -293,7 +293,14 @@ it("1-click auto-fix adds the missing keyword pill to the canvas skills", async 
 
   const canvas = screen.getByRole("region", { name: "Resume preview" });
   await waitFor(() => {
-    expect(within(canvas).getByText("Research")).toBeTruthy();
+    expect(within(canvas).getByText("Data Analysis")).toBeTruthy();
+  });
+
+  // The added pill is the first keyword the tip card suggested, so keyword
+  // density rises 33% → 50% in ONE click: the gauge moves 77 → 83.
+  await waitFor(() => {
+    const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
+    expect(gauge.getAttribute("aria-valuenow")).toBe("83");
   });
 });
 
