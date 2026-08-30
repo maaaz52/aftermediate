@@ -254,7 +254,7 @@ it("switching to University Admissions reweights the gauge to 83", async () => {
   render(<Builder />);
   const user = userEvent.setup();
 
-  const universityButton = screen.getByRole("button", { name: "University Admissions" });
+  const universityButton = screen.getByRole("button", { name: /University Admissions Officer/ });
   await user.click(universityButton);
 
   await waitFor(() => {

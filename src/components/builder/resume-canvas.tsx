@@ -31,6 +31,13 @@ const RULE: Record<TemplateId, string> = {
   glass: "border-b border-white/10",
 };
 
+/** Section container per template — glass renders each section as a translucent card. */
+const SECTION: Record<TemplateId, string> = {
+  academic: "",
+  silicon: "",
+  glass: "rounded-2xl border border-white/10 bg-white/5 p-4",
+};
+
 /** Small-caps section heading style per template. */
 const HEADING: Record<TemplateId, string> = {
   academic: "text-xs font-semibold uppercase tracking-[0.15em] text-[#1a1a1a]",
@@ -156,10 +163,10 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
           </header>
         )}
 
-        <div className={cn("mt-4", rule)} />
+        {template !== "glass" && <div className={cn("mt-4", rule)} />}
 
         {/* ── Experience (hover-to-rewrite) ───────────────────────────── */}
-        <div className="mt-4">
+        <div className={cn("mt-4", SECTION[template])}>
           <h2 className={heading}>Experience</h2>
           {experience.bullets.length > 0 ? (
             <div className="mt-2 space-y-2">
@@ -202,8 +209,8 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
         {/* ── Projects ────────────────────────────────────────────────── */}
         {projectEntries.length > 0 && (
           <>
-            <div className={cn("mt-4", rule)} />
-            <div className="mt-4">
+            {template !== "glass" && <div className={cn("mt-4", rule)} />}
+            <div className={cn("mt-4", SECTION[template])}>
               <h2 className={heading}>Projects</h2>
               <div className="mt-2 space-y-2.5">
                 {projectEntries.map((entry, i) => (
@@ -231,8 +238,8 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
         {/* ── Academics ───────────────────────────────────────────────── */}
         {academicEntries.length > 0 && (
           <>
-            <div className={cn("mt-4", rule)} />
-            <div className="mt-4">
+            {template !== "glass" && <div className={cn("mt-4", rule)} />}
+            <div className={cn("mt-4", SECTION[template])}>
               <h2 className={heading}>Academics</h2>
               <div className="mt-2 space-y-2">
                 {academicEntries.map((a, i) => (
@@ -254,8 +261,8 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
         {/* ── Certificates ────────────────────────────────────────────── */}
         {certificates.length > 0 && (
           <>
-            <div className={cn("mt-4", rule)} />
-            <div className="mt-4">
+            {template !== "glass" && <div className={cn("mt-4", rule)} />}
+            <div className={cn("mt-4", SECTION[template])}>
               <h2 className={heading}>Certificates</h2>
               <div className="mt-2 space-y-1.5">
                 {certificates.map((c, i) => (
@@ -274,8 +281,8 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
         {/* ── Leadership ──────────────────────────────────────────────── */}
         {leadership.length > 0 && (
           <>
-            <div className={cn("mt-4", rule)} />
-            <div className="mt-4">
+            {template !== "glass" && <div className={cn("mt-4", rule)} />}
+            <div className={cn("mt-4", SECTION[template])}>
               <h2 className={heading}>Leadership</h2>
               <div className="mt-2 space-y-1.5">
                 {leadership.map((l, i) => (
@@ -294,8 +301,8 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
         {/* ── Skills ──────────────────────────────────────────────────── */}
         {skillCount > 0 && (
           <>
-            <div className={cn("mt-4", rule)} />
-            <div className="mt-4">
+            {template !== "glass" && <div className={cn("mt-4", rule)} />}
+            <div className={cn("mt-4", SECTION[template])}>
               <h2 className={heading}>Skills</h2>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {[...skills.tech, ...skills.soft].map((skill) => (

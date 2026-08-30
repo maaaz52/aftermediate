@@ -23,7 +23,7 @@ export interface AtsPanelProps {
 const MODES: { id: RecruiterMode; label: string; icon: LucideIcon }[] = [
   { id: "startup", label: "Startup Founder", icon: Rocket },
   { id: "corporate", label: "Corporate HR", icon: Building2 },
-  { id: "university", label: "University Admissions", icon: GraduationCap },
+  { id: "university", label: "University Admissions Officer", icon: GraduationCap },
 ];
 
 /** Mode-flavored tagline under the empty-state check. */
