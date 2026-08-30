@@ -90,10 +90,12 @@ export function MentorMatchPage() {
 
   return (
     <div>
-      <HeroSection />
+      <div className="animate-reveal">
+        <HeroSection />
+      </div>
 
       {/* Search + Filters */}
-      <div className="mt-8">
+      <div className="mt-8 animate-reveal" style={{ animationDelay: "80ms" }}>
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-faint" />
           <Input
@@ -108,7 +110,10 @@ export function MentorMatchPage() {
             <button
               key={f.id}
               type="button"
-              onClick={() => setActiveField(f.id)}
+              onClick={() => {
+                setActiveField(f.id);
+                setSearchQuery("");
+              }}
               className={cn(
                 "rounded-full border px-4 py-2 text-sm font-medium transition-all",
                 activeField === f.id
@@ -127,15 +132,34 @@ export function MentorMatchPage() {
         id="mentor-grid"
         className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {filtered.map((mentor) => (
-          <MentorCard key={mentor.id} mentor={mentor} onSelect={handleSelect} />
+        {filtered.map((mentor, index) => (
+          <div
+            key={mentor.id}
+            className="animate-reveal"
+            style={{ animationDelay: `${Math.min(index * 40, 400)}ms` }}
+          >
+            <MentorCard mentor={mentor} onSelect={handleSelect} />
+          </div>
         ))}
       </div>
 
       {/* Empty state */}
       {filtered.length === 0 && (
         <div className="mt-16 text-center">
-          <p className="text-muted">No mentors match this filter. Check back soon.</p>
+          <p className="text-muted">
+            {searchQuery.trim() !== ""
+              ? "No mentors match your search. Try a different keyword."
+              : "No mentors in this category yet. Check back soon."}
+          </p>
+          {searchQuery.trim() === "" && (
+            <button
+              type="button"
+              onClick={() => setActiveField("all")}
+              className="mt-4 inline-flex rounded-full border border-saffron/40 px-4 py-2 text-sm font-medium text-saffron transition-all hover:bg-saffron/10"
+            >
+              Browse all
+            </button>
+          )}
         </div>
       )}
 

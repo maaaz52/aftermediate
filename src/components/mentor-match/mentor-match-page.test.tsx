@@ -115,7 +115,7 @@ it("empty state renders when searching 'zzzzz'", async () => {
   const searchInput = screen.getByPlaceholderText("Search by name, institution, or topic...");
   await user.type(searchInput, "zzzzz");
 
-  expect(screen.getByText("No mentors match this filter. Check back soon.")).toBeTruthy();
+  expect(screen.getByText("No mentors match your search. Try a different keyword.")).toBeTruthy();
 });
 
 it("single-mentor card shows full-width social button", () => {
@@ -189,4 +189,21 @@ it("closes the modal when pressing Escape", async () => {
 
   await user.keyboard("{Escape}");
   expect(screen.queryByRole("dialog")).toBeNull();
+});
+
+it("switching category after search clears the search input and shows category mentors", async () => {
+  render(<MentorMatchPage />);
+  const user = userEvent.setup();
+  const searchInput = screen.getByPlaceholderText("Search by name, institution, or topic...");
+
+  await user.type(searchInput, "zzzzz");
+  expect(screen.getByText("No mentors match your search. Try a different keyword.")).toBeTruthy();
+
+  await user.click(screen.getByText("Engineering"));
+  expect((searchInput as HTMLInputElement).value).toBe("");
+
+  const engineeringMentors = mentors.filter((m) => m.field === "engineering");
+  engineeringMentors.forEach((m) => {
+    expect(screen.getByText(m.name)).toBeTruthy();
+  });
 });
