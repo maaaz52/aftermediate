@@ -56,3 +56,37 @@ export function programCohort(closingMerit: number | null): BenchmarkBin[] {
 export function streamCohort(): BenchmarkBin[] {
   return normalBins(STREAM_MEAN, STREAM_SD);
 }
+
+// Share of the pool below userValue (0..1). Linear interpolation inside the
+// user's bin; values outside [BIN_START, BIN_END] clamp to 0/1.
+export function cohortPercentile(userValue: number, bins: BenchmarkBin[]): number {
+  if (userValue < BIN_START) return 0;
+  if (userValue >= BIN_END) return 1;
+  let below = 0;
+  for (const bin of bins) {
+    if (userValue > bin.hi) {
+      below += bin.share;
+    } else if (userValue >= bin.lo) {
+      below += bin.share * ((userValue - bin.lo) / BIN_SIZE);
+      break;
+    }
+  }
+  return below;
+}
+
+export function gapToClosing(userValue: number, closingMerit: number): number {
+  return userValue - closingMerit;
+}
+
+// Whole entry-test marks needed to close a gap measured in aggregate
+// percentage points. Each test mark is worth weight × 100 / total points of
+// aggregate, so marks = gap × total / (100 × weight). Null when the gap is
+// missing, non-negative (nothing to close), or the formula is degenerate.
+export function marksToClose(
+  gap: number | null,
+  weight: number,
+  total: number
+): number | null {
+  if (gap === null || gap >= 0 || weight <= 0 || total <= 0) return null;
+  return Math.round((Math.abs(gap) * total) / (100 * weight));
+}
