@@ -189,6 +189,31 @@ function lowerFirst(text: string): string {
   return text.charAt(0).toLowerCase() + text.slice(1);
 }
 
+/** Bare trailing preposition left dangling after a count phrase is removed. */
+const DANGLING_PREPOSITIONS = /\s+(?:for|by|at|in|with)\s*$/i;
+/** Preposition stranded right before another prepositional phrase ("for in 2023"). */
+const PREPOSITION_BEFORE_PREPOSITION = /\s+(?:for|by|at|in|with)(?=\s+(?:for|by|at|in|with)\b)/i;
+
+/**
+ * Strip prepositions stranded when a count phrase is carved out of the middle
+ * of a clause ("organized an event for 200 students in 2023" → "an event in 2023"):
+ * - a bare trailing preposition ("event for" → "event")
+ * - a preposition stranded right before another preposition ("for in 2023" → "in 2023")
+ * The loop handles chains ("for with in 2023").
+ */
+function stripTrailingPrepositions(text: string): string {
+  let result = text.trim();
+  let previous: string;
+  do {
+    previous = result;
+    result = result
+      .replace(PREPOSITION_BEFORE_PREPOSITION, "")
+      .replace(DANGLING_PREPOSITIONS, "")
+      .trim();
+  } while (result !== previous && result.length > 0);
+  return result;
+}
+
 // ---------------------------------------------------------------------------
 // Weak-verb rewrites (shared by polishNotes and applyAutoFix)
 // ---------------------------------------------------------------------------
@@ -228,7 +253,7 @@ function rewriteWeakVerb(text: string): string | null {
 
   for (const [pattern, strong] of WEAK_PHRASE_REWRITES) {
     if (pattern.test(lower)) {
-      const rest = trimmed.replace(pattern, "").trim();
+      const rest = stripTrailingPrepositions(trimmed.replace(pattern, ""));
       return `${strong} ${lowerFirst(rest)}`;
     }
   }
@@ -236,7 +261,7 @@ function rewriteWeakVerb(text: string): string | null {
   const firstWord = trimmed.split(/\s+/)[0]?.toLowerCase() ?? "";
   const strong = WEAK_VERB_REWRITES[firstWord];
   if (strong) {
-    const rest = trimmed.replace(new RegExp(`^${firstWord}\\s*`, "i"), "").trim();
+    const rest = stripTrailingPrepositions(trimmed.replace(new RegExp(`^${firstWord}\\s*`, "i"), ""));
     return `${strong} ${lowerFirst(rest)}`;
   }
   return null;
@@ -262,7 +287,7 @@ function forceStrongVerbStart(text: string): string {
   ) {
     remainder = lowerFirst(remainder.slice(firstWord.length).trim());
   }
-  return `${verb} ${remainder}`;
+  return `${verb} ${stripTrailingPrepositions(remainder)}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -276,13 +301,27 @@ const COUNT_PATTERN =
 /**
  * Split raw notes into clauses without corrupting numbers:
  * - sentence boundaries only on ". " (so "2.5K" survives)
- * - commas only when NOT between digits (so "1,000" survives)
+ * - all commas split, then adjacent fragments are re-joined when the boundary
+ *   sits between digits (so "1,000" and "raising 1,000 rupees" survive,
+ *   but "2023, I organized" splits cleanly)
  */
 function splitClauses(rawNotes: string): string[] {
   return rawNotes
     .split(/\n/)
     .flatMap((line) => line.split(/\.\s+/))
-    .flatMap((part) => part.split(/(?<!\d)\s*,\s*(?!\d)|\s+and\s+/i))
+    .flatMap((part) => {
+      const fragments = part.split(/,\s*|\s+and\s+/i);
+      const joined: string[] = [];
+      for (const fragment of fragments) {
+        const prev = joined[joined.length - 1];
+        if (prev !== undefined && /\d$/.test(prev) && /^\d/.test(fragment)) {
+          joined[joined.length - 1] = `${prev},${fragment}`;
+        } else {
+          joined.push(fragment);
+        }
+      }
+      return joined;
+    })
     .map((c) => c.replace(/^[\s,]+|[\s,]+$/g, "").replace(/\.+$/, "").trim())
     .filter((c) => c.length > 0);
 }
@@ -294,15 +333,26 @@ function splitClauses(rawNotes: string): string[] {
 function rewriteOrganized(rest: string): string {
   const count = COUNT_PATTERN.exec(rest);
   if (count) {
-    const cleanRest = rest
-      .replace(count[0], "")
-      .replace(/\s+/g, " ")
-      .replace(/\s+(?:for|with|of|to|at|in)\s*$/i, "")
-      .trim();
+    const cleanRest = stripTrailingPrepositions(rest.replace(count[0], "").replace(/\s+/g, " "));
     const subject = cleanRest || "the event";
     return `Coordinated logistics for ${subject}, managing ${count[1]}+ participants.`;
   }
-  return `Coordinated logistics for ${rest}.`;
+  return `Coordinated logistics for ${stripTrailingPrepositions(rest)}.`;
+}
+
+/** "edited N videos" → "Produced and edited N videos." */
+function rewriteEdited(rest: string): string {
+  return `Produced and edited ${stripTrailingPrepositions(rest)}.`;
+}
+
+/** "got N% in X" → "Achieved N% in X." */
+function rewriteGot(rest: string): string {
+  return `Achieved ${stripTrailingPrepositions(rest)}.`;
+}
+
+/** "helped with X" → "Supported delivery of X." */
+function rewriteHelped(rest: string): string {
+  return `Supported delivery of ${stripTrailingPrepositions(rest)}.`;
 }
 
 export function polishNotes(rawNotes: string): string[] {
@@ -319,17 +369,17 @@ export function polishNotes(rawNotes: string): string[] {
       bullet = rewriteOrganized(clause.replace(/^organi[sz]ed\s+/i, ""));
     } else if (/^(?:edited|made)\s+/.test(lower)) {
       // "edited N videos" → "Produced and edited N videos."
-      bullet = `Produced and edited ${clause.replace(/^(?:edited|made)\s+/i, "")}.`;
+      bullet = rewriteEdited(clause.replace(/^(?:edited|made)\s+/i, ""));
     } else if (/^(?:got|scored|achieved)\s+\d+%/.test(lower)) {
       // "got 88% in X" → "Achieved 88% in X."
-      bullet = `Achieved ${clause.replace(/^(?:got|scored|achieved)\s+/i, "")}.`;
+      bullet = rewriteGot(clause.replace(/^(?:got|scored|achieved)\s+/i, ""));
     } else if (/^helped\s+/.test(lower)) {
       // "helped organize X" → organized rewrite; "helped with X" → "Supported delivery of X."
       const afterHelped = clause.replace(/^helped\s+/i, "");
       if (/^(?:to\s+)?organi[sz]e\s+/i.test(afterHelped)) {
         bullet = rewriteOrganized(afterHelped.replace(/^(?:to\s+)?organi[sz]e\s+/i, ""));
       } else {
-        bullet = `Supported delivery of ${afterHelped.replace(/^with\s+/i, "")}.`;
+        bullet = rewriteHelped(afterHelped.replace(/^with\s+/i, ""));
       }
     } else {
       // Default: rewrite a weak opening, otherwise prepend a strong verb
