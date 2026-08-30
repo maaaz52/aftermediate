@@ -114,7 +114,7 @@ export function MentorDetailModal({ mentor, onClose }: MentorDetailModalProps) {
           </div>
           <div className="min-w-0">
             <h2 className="text-xl font-bold text-ink">{mentor.name}</h2>
-            <p className="text-sm font-semibold text-[#2f55d4]">
+            <p className="text-sm font-semibold text-saffron">
               {mentor.institution} · {mentor.degree}
             </p>
             <div className="mt-1 flex flex-wrap items-center gap-2">

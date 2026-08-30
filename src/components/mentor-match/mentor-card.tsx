@@ -42,10 +42,17 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
   const { dot, label } = AVAILABILITY_CONFIG[mentor.availability];
 
   return (
-    <button
-      type="button"
+    <div
+      role="button"
+      tabIndex={0}
       onClick={() => onSelect(mentor.id)}
-      className="card-glass rounded-2xl p-5 w-full text-left transition-all hover:-translate-y-0.5 cursor-pointer"
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onSelect(mentor.id);
+        }
+      }}
+      className="card-glass w-full cursor-pointer rounded-2xl p-5 text-left outline-none transition-all hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-saffron/40"
     >
       {/* Header row */}
       <div className="flex items-center gap-3">
@@ -57,7 +64,7 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
         </div>
         <div className="min-w-0">
           <h3 className="text-lg font-bold text-ink">{mentor.name}</h3>
-          <p className="text-[13px] font-semibold text-[#2f55d4]">
+          <p className="text-sm font-semibold text-saffron">
             {mentor.institution} · {mentor.degree}
           </p>
         </div>
@@ -108,6 +115,6 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
           </a>
         ))}
       </div>
-    </button>
+    </div>
   );
 }

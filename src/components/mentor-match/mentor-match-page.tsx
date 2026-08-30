@@ -122,7 +122,7 @@ export function MentorMatchPage() {
       {/* Grid */}
       <div
         id="mentor-grid"
-        className="mt-8 grid gap-5 sm:grid-cols-2"
+        className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
         {filtered.map((mentor) => (
           <MentorCard key={mentor.id} mentor={mentor} onSelect={handleSelect} />
@@ -135,6 +135,11 @@ export function MentorMatchPage() {
           <p className="text-muted">No mentors match this filter. Check back soon.</p>
         </div>
       )}
+
+      {/* Footer note */}
+      <p className="mt-8 text-center text-xs text-faint">
+        Profiles are illustrative samples. Mentor availability and response times may vary.
+      </p>
 
       {/* Become a mentor CTA */}
       <div className="mt-12 rounded-2xl border border-saffron/20 bg-saffron/5 p-8 text-center">

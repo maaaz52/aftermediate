@@ -122,8 +122,8 @@ it("single-mentor card shows full-width social button", () => {
   render(<MentorMatchPage />);
   // Fatima Khan has only 1 social (whatsapp)
   const fatimaName = screen.getByText("Fatima Khan");
-  // The card button is a parent containing the name
-  const card = fatimaName.closest("button")!;
+  // The card (role="button") is a parent containing the name
+  const card = fatimaName.closest('[role="button"]') as HTMLElement;
   // Within that card, find the "Reach out on WhatsApp" link
   const socialLink = within(card).getByText("Reach out on WhatsApp");
   expect(socialLink).toBeTruthy();
@@ -136,11 +136,47 @@ it("card with 2 socials shows flex layout", () => {
   render(<MentorMatchPage />);
   // Ahmed Raza has 2 socials
   const ahmedName = screen.getByText("Ahmed Raza");
-  const card = ahmedName.closest("button")!;
+  const card = ahmedName.closest('[role="button"]') as HTMLElement;
   // Within that card, both socials should be rendered
   expect(within(card).getByText("Connect on Instagram")).toBeTruthy();
   expect(within(card).getByText("Join Discord")).toBeTruthy();
   // Social links should have flex-1 class (the a tags)
   const instaLink = within(card).getByText("Connect on Instagram").closest("a")!;
   expect(instaLink.className).toContain("flex-1");
+});
+
+it("clicking a mentor card opens the detail modal with the full profile", async () => {
+  render(<MentorMatchPage />);
+  const user = userEvent.setup();
+  await user.click(screen.getByText("Ahmed Raza"));
+
+  const dialog = screen.getByRole("dialog");
+  expect(dialog.getAttribute("aria-label")).toBe("Ahmed Raza profile");
+  expect(within(dialog).getByText("Ahmed Raza")).toBeTruthy();
+  expect(within(dialog).getByText("NED University · Software Engineering")).toBeTruthy();
+  expect(within(dialog).getByText("Available this week")).toBeTruthy();
+  expect(within(dialog).getByText(/Self-studied for NET/)).toBeTruthy();
+  expect(within(dialog).getByRole("link", { name: "Connect on Instagram" })).toBeTruthy();
+  expect(within(dialog).getByRole("link", { name: "Join Discord" })).toBeTruthy();
+});
+
+it("closes the modal when clicking the X button", async () => {
+  render(<MentorMatchPage />);
+  const user = userEvent.setup();
+  await user.click(screen.getByText("Ahmed Raza"));
+  expect(screen.getByRole("dialog")).toBeTruthy();
+
+  await user.click(screen.getByLabelText("Close"));
+  expect(screen.queryByRole("dialog")).toBeNull();
+});
+
+it("closes the modal when clicking the backdrop", async () => {
+  render(<MentorMatchPage />);
+  const user = userEvent.setup();
+  await user.click(screen.getByText("Ahmed Raza"));
+  const dialog = screen.getByRole("dialog");
+
+  const backdrop = dialog.parentElement!.querySelector(".bg-black\\/40") as HTMLElement;
+  await user.click(backdrop);
+  expect(screen.queryByRole("dialog")).toBeNull();
 });
