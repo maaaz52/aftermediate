@@ -30,6 +30,7 @@ import {
   Target,
   TrendingUp,
   User,
+  Users,
   Video,
   Wallet,
 } from "lucide-react";
@@ -94,6 +95,12 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/#reality", label: "Reality Check", icon: Eye },
       { href: "/webinars", label: "Webinars", icon: Video },
+    ],
+  },
+  {
+    label: "Community",
+    links: [
+      { href: "/mentors", label: "Mentor Match", icon: Users },
     ],
   },
   {
