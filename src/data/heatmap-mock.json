@@ -1,0 +1,231 @@
+{
+  "net": {
+    "id": "net",
+    "name": "NET — NUST Entry Test",
+    "shortName": "NET",
+    "totalQuestionsPerYear": 200,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "math",
+        "name": "Mathematics",
+        "totalQuestions": 80,
+        "chapters": [
+          { "id": "math-number-systems", "name": "Number Systems", "appearances3yr": 10, "appearances5yr": 22, "appearances10yr": 50, "trend": "down" },
+          { "id": "math-sets-functions", "name": "Sets, Functions & Groups", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 42, "trend": "down" },
+          { "id": "math-matrices", "name": "Matrices & Determinants", "appearances3yr": 18, "appearances5yr": 35, "appearances10yr": 60, "trend": "up" },
+          { "id": "math-quadratics", "name": "Quadratic Equations", "appearances3yr": 15, "appearances5yr": 30, "appearances10yr": 55, "trend": "up" },
+          { "id": "math-partial-fractions", "name": "Partial Fractions", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 35, "trend": "down" },
+          { "id": "math-sequences", "name": "Sequences & Series", "appearances3yr": 20, "appearances5yr": 38, "appearances10yr": 70, "trend": "up" },
+          { "id": "math-trigonometry", "name": "Trigonometry", "appearances3yr": 22, "appearances5yr": 40, "appearances10yr": 78, "trend": "up" },
+          { "id": "math-probability", "name": "Permutation, Combination & Probability", "appearances3yr": 12, "appearances5yr": 26, "appearances10yr": 55, "trend": "down" },
+          { "id": "math-analytic-geometry", "name": "Analytical Geometry", "appearances3yr": 14, "appearances5yr": 28, "appearances10yr": 60, "trend": "stable" },
+          { "id": "math-calculus", "name": "Fundamentals of Calculus", "appearances3yr": 25, "appearances5yr": 45, "appearances10yr": 85, "trend": "up" }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "totalQuestions": 60,
+        "chapters": [
+          { "id": "physics-measurements", "name": "Measurements", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 40, "trend": "down" },
+          { "id": "physics-vectors", "name": "Vectors & Scalars", "appearances3yr": 6, "appearances5yr": 15, "appearances10yr": 35, "trend": "down" },
+          { "id": "physics-motion-force", "name": "Motion & Force", "appearances3yr": 18, "appearances5yr": 32, "appearances10yr": 60, "trend": "up" },
+          { "id": "physics-work-energy", "name": "Work, Energy & Power", "appearances3yr": 12, "appearances5yr": 25, "appearances10yr": 50, "trend": "stable" },
+          { "id": "physics-circular-motion", "name": "Circular Motion", "appearances3yr": 15, "appearances5yr": 28, "appearances10yr": 55, "trend": "up" },
+          { "id": "physics-oscillations", "name": "Oscillations", "appearances3yr": 5, "appearances5yr": 14, "appearances10yr": 32, "trend": "down" },
+          { "id": "physics-waves", "name": "Waves", "appearances3yr": 10, "appearances5yr": 22, "appearances10yr": 45, "trend": "stable" },
+          { "id": "physics-optics", "name": "Physical Optics", "appearances3yr": 4, "appearances5yr": 12, "appearances10yr": 30, "trend": "down" },
+          { "id": "physics-thermodynamics", "name": "Heat & Thermodynamics", "appearances3yr": 14, "appearances5yr": 26, "appearances10yr": 52, "trend": "up" },
+          { "id": "physics-electromagnetism", "name": "Electromagnetism", "appearances3yr": 20, "appearances5yr": 38, "appearances10yr": 70, "trend": "up" },
+          { "id": "physics-electronics", "name": "Electronics", "appearances3yr": 8, "appearances5yr": 20, "appearances10yr": 45, "trend": "stable" },
+          { "id": "physics-modern", "name": "Modern Physics", "appearances3yr": 10, "appearances5yr": 22, "appearances10yr": 48, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "totalQuestions": 30,
+        "chapters": [
+          { "id": "chem-fundamental", "name": "Fundamental Concepts", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 32, "trend": "stable" },
+          { "id": "chem-atomic-structure", "name": "Atomic Structure", "appearances3yr": 10, "appearances5yr": 20, "appearances10yr": 42, "trend": "up" },
+          { "id": "chem-bonding", "name": "Chemical Bonding", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 38, "trend": "up" },
+          { "id": "chem-thermochemistry", "name": "Thermochemistry", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 25, "trend": "down" },
+          { "id": "chem-equilibrium", "name": "Chemical Equilibrium", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 28, "trend": "stable" },
+          { "id": "chem-electrochemistry", "name": "Electrochemistry", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 35, "trend": "up" },
+          { "id": "chem-organic", "name": "Organic Chemistry", "appearances3yr": 12, "appearances5yr": 24, "appearances10yr": 50, "trend": "up" },
+          { "id": "chem-solutions", "name": "Solutions", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 28, "trend": "down" },
+          { "id": "chem-kinetics", "name": "Reaction Kinetics", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 20, "trend": "down" },
+          { "id": "chem-environmental", "name": "Environmental Chemistry", "appearances3yr": 2, "appearances5yr": 6, "appearances10yr": 15, "trend": "down" }
+        ]
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "totalQuestions": 20,
+        "chapters": [
+          { "id": "eng-vocabulary", "name": "Vocabulary", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 35, "trend": "up" },
+          { "id": "eng-grammar", "name": "Grammar & Usage", "appearances3yr": 12, "appearances5yr": 22, "appearances10yr": 45, "trend": "up" },
+          { "id": "eng-comprehension", "name": "Reading Comprehension", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 30, "trend": "stable" },
+          { "id": "eng-punctuation", "name": "Punctuation & Mechanics", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 22, "trend": "down" },
+          { "id": "eng-paragraph", "name": "Paragraph Organization", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 18, "trend": "down" }
+        ]
+      },
+      {
+        "id": "intelligence",
+        "name": "Intelligence",
+        "totalQuestions": 10,
+        "chapters": [
+          { "id": "iq-analytical", "name": "Analytical Reasoning", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 25, "trend": "up" },
+          { "id": "iq-logical", "name": "Logical Reasoning", "appearances3yr": 8, "appearances5yr": 14, "appearances10yr": 30, "trend": "up" },
+          { "id": "iq-patterns", "name": "Pattern Recognition", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 22, "trend": "down" },
+          { "id": "iq-data-sufficiency", "name": "Data Sufficiency", "appearances3yr": 2, "appearances5yr": 6, "appearances10yr": 15, "trend": "down" }
+        ]
+      }
+    ]
+  },
+  "mdcat": {
+    "id": "mdcat",
+    "name": "MDCAT — Medical & Dental College Admission Test",
+    "shortName": "MDCAT",
+    "totalQuestionsPerYear": 180,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "biology",
+        "name": "Biology",
+        "totalQuestions": 81,
+        "chapters": [
+          { "id": "bio-cell-biology", "name": "Cell Biology", "appearances3yr": 20, "appearances5yr": 40, "appearances10yr": 85, "trend": "stable" },
+          { "id": "bio-molecules", "name": "Biological Molecules", "appearances3yr": 18, "appearances5yr": 36, "appearances10yr": 75, "trend": "stable" },
+          { "id": "bio-enzymes", "name": "Enzymes", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 40, "trend": "down" },
+          { "id": "bio-bioenergetics", "name": "Bioenergetics", "appearances3yr": 14, "appearances5yr": 28, "appearances10yr": 60, "trend": "stable" },
+          { "id": "bio-life-processes", "name": "Life Processes (Nutrition, Gaseous Exchange, Transport)", "appearances3yr": 24, "appearances5yr": 46, "appearances10yr": 95, "trend": "up" },
+          { "id": "bio-diversity", "name": "Diversity of Life", "appearances3yr": 10, "appearances5yr": 22, "appearances10yr": 50, "trend": "down" },
+          { "id": "bio-genetics", "name": "Genetics & Evolution", "appearances3yr": 22, "appearances5yr": 42, "appearances10yr": 85, "trend": "up" },
+          { "id": "bio-biotechnology", "name": "Biotechnology", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 32, "trend": "down" },
+          { "id": "bio-coordination", "name": "Coordination & Control", "appearances3yr": 16, "appearances5yr": 32, "appearances10yr": 68, "trend": "stable" },
+          { "id": "bio-reproduction", "name": "Reproduction", "appearances3yr": 14, "appearances5yr": 28, "appearances10yr": 60, "trend": "stable" },
+          { "id": "bio-ecology", "name": "Ecology", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 42, "trend": "down" }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "totalQuestions": 45,
+        "chapters": [
+          { "id": "chem-fundamental", "name": "Fundamental Concepts", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 42, "trend": "stable" },
+          { "id": "chem-atomic-structure", "name": "Atomic Structure", "appearances3yr": 12, "appearances5yr": 24, "appearances10yr": 50, "trend": "up" },
+          { "id": "chem-bonding", "name": "Chemical Bonding", "appearances3yr": 10, "appearances5yr": 20, "appearances10yr": 45, "trend": "stable" },
+          { "id": "chem-organic", "name": "Organic Chemistry", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 60, "trend": "up" },
+          { "id": "chem-equilibrium", "name": "Chemical Equilibrium", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 32, "trend": "down" },
+          { "id": "chem-electrochemistry", "name": "Electrochemistry", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 38, "trend": "stable" },
+          { "id": "chem-solutions", "name": "Solutions", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 28, "trend": "down" },
+          { "id": "chem-kinetics", "name": "Reaction Kinetics", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 25, "trend": "down" },
+          { "id": "chem-thermochemistry", "name": "Thermochemistry", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 30, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "totalQuestions": 36,
+        "chapters": [
+          { "id": "physics-measurements", "name": "Measurements", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 28, "trend": "down" },
+          { "id": "physics-motion-force", "name": "Motion & Force", "appearances3yr": 10, "appearances5yr": 20, "appearances10yr": 42, "trend": "up" },
+          { "id": "physics-work-energy", "name": "Work, Energy & Power", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 32, "trend": "stable" },
+          { "id": "physics-circular-motion", "name": "Circular Motion", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 35, "trend": "up" },
+          { "id": "physics-optics", "name": "Physical Optics", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 20, "trend": "down" },
+          { "id": "physics-thermodynamics", "name": "Heat & Thermodynamics", "appearances3yr": 7, "appearances5yr": 14, "appearances10yr": 30, "trend": "stable" },
+          { "id": "physics-electromagnetism", "name": "Electromagnetism", "appearances3yr": 12, "appearances5yr": 22, "appearances10yr": 45, "trend": "up" },
+          { "id": "physics-waves", "name": "Waves & Oscillations", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 24, "trend": "down" },
+          { "id": "physics-electronics", "name": "Electronics", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 28, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "totalQuestions": 9,
+        "chapters": [
+          { "id": "eng-vocabulary", "name": "Vocabulary", "appearances3yr": 4, "appearances5yr": 8, "appearances10yr": 18, "trend": "up" },
+          { "id": "eng-grammar", "name": "Grammar & Usage", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 25, "trend": "up" },
+          { "id": "eng-comprehension", "name": "Reading Comprehension", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 16, "trend": "stable" },
+          { "id": "eng-punctuation", "name": "Punctuation & Mechanics", "appearances3yr": 2, "appearances5yr": 5, "appearances10yr": 12, "trend": "down" }
+        ]
+      },
+      {
+        "id": "logical-reasoning",
+        "name": "Logical Reasoning",
+        "totalQuestions": 9,
+        "chapters": [
+          { "id": "lr-analytical", "name": "Analytical Reasoning", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 22, "trend": "stable" },
+          { "id": "lr-logical", "name": "Logical Reasoning", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 25, "trend": "up" },
+          { "id": "lr-data-sufficiency", "name": "Data Sufficiency", "appearances3yr": 2, "appearances5yr": 6, "appearances10yr": 14, "trend": "down" }
+        ]
+      }
+    ]
+  },
+  "ecat": {
+    "id": "ecat",
+    "name": "ECAT — Engineering College Admission Test",
+    "shortName": "ECAT",
+    "totalQuestionsPerYear": 100,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "totalQuestions": 30,
+        "chapters": [
+          { "id": "math-number-systems", "name": "Number Systems", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 24, "trend": "down" },
+          { "id": "math-matrices", "name": "Matrices & Determinants", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 30, "trend": "up" },
+          { "id": "math-quadratics", "name": "Quadratic Equations", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 34, "trend": "up" },
+          { "id": "math-sequences", "name": "Sequences & Series", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 28, "trend": "stable" },
+          { "id": "math-trigonometry", "name": "Trigonometry", "appearances3yr": 10, "appearances5yr": 20, "appearances10yr": 40, "trend": "up" },
+          { "id": "math-calculus", "name": "Differential Calculus", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 35, "trend": "stable" },
+          { "id": "math-analytic-geometry", "name": "Analytical Geometry", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 22, "trend": "down" },
+          { "id": "math-probability", "name": "Probability & Statistics", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 28, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "totalQuestions": 30,
+        "chapters": [
+          { "id": "physics-measurements", "name": "Measurements", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 20, "trend": "down" },
+          { "id": "physics-motion-force", "name": "Motion & Force", "appearances3yr": 8, "appearances5yr": 18, "appearances10yr": 38, "trend": "up" },
+          { "id": "physics-work-energy", "name": "Work, Energy & Power", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 30, "trend": "stable" },
+          { "id": "physics-circular-motion", "name": "Circular Motion", "appearances3yr": 7, "appearances5yr": 14, "appearances10yr": 30, "trend": "up" },
+          { "id": "physics-thermodynamics", "name": "Heat & Thermodynamics", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 26, "trend": "stable" },
+          { "id": "physics-electromagnetism", "name": "Electromagnetism", "appearances3yr": 10, "appearances5yr": 20, "appearances10yr": 40, "trend": "up" },
+          { "id": "physics-optics", "name": "Optics & Waves", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 22, "trend": "down" },
+          { "id": "physics-modern", "name": "Modern Physics", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 26, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "totalQuestions": 30,
+        "chapters": [
+          { "id": "chem-fundamental", "name": "Fundamental Concepts", "appearances3yr": 5, "appearances5yr": 12, "appearances10yr": 28, "trend": "stable" },
+          { "id": "chem-atomic-structure", "name": "Atomic Structure", "appearances3yr": 8, "appearances5yr": 16, "appearances10yr": 34, "trend": "up" },
+          { "id": "chem-bonding", "name": "Chemical Bonding", "appearances3yr": 6, "appearances5yr": 14, "appearances10yr": 30, "trend": "stable" },
+          { "id": "chem-organic", "name": "Organic Chemistry", "appearances3yr": 10, "appearances5yr": 18, "appearances10yr": 38, "trend": "up" },
+          { "id": "chem-electrochemistry", "name": "Electrochemistry", "appearances3yr": 4, "appearances5yr": 10, "appearances10yr": 24, "trend": "down" },
+          { "id": "chem-equilibrium", "name": "Chemical Equilibrium", "appearances3yr": 5, "appearances5yr": 10, "appearances10yr": 22, "trend": "stable" },
+          { "id": "chem-solutions", "name": "Solutions", "appearances3yr": 4, "appearances5yr": 8, "appearances10yr": 20, "trend": "down" },
+          { "id": "chem-kinetics", "name": "Reaction Kinetics", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 18, "trend": "down" }
+        ]
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "totalQuestions": 10,
+        "chapters": [
+          { "id": "eng-vocabulary", "name": "Vocabulary", "appearances3yr": 4, "appearances5yr": 8, "appearances10yr": 18, "trend": "up" },
+          { "id": "eng-grammar", "name": "Grammar & Usage", "appearances3yr": 6, "appearances5yr": 12, "appearances10yr": 25, "trend": "up" },
+          { "id": "eng-comprehension", "name": "Reading Comprehension", "appearances3yr": 3, "appearances5yr": 8, "appearances10yr": 16, "trend": "stable" }
+        ]
+      }
+    ]
+  }
+}
