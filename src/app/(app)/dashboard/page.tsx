@@ -12,6 +12,7 @@ import { RahbarBanner } from "@/components/dashboard/rahbar-banner";
 import { WatchlistSection } from "@/components/watchlist/watchlist-section";
 import { DailySprint } from "@/components/dashboard/daily-sprint";
 import { WhereYouStand } from "@/components/dashboard/where-you-stand";
+import { EntryTestHeatmap } from "@/components/dashboard/entry-test-heatmap";
 import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
@@ -59,6 +60,10 @@ export default function DashboardPage() {
 
       <div className="mt-4 animate-reveal" style={{ animationDelay: "220ms" }}>
         <WhereYouStand />
+      </div>
+
+      <div className="mt-4 animate-reveal" style={{ animationDelay: "280ms" }}>
+        <EntryTestHeatmap />
       </div>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
