@@ -29,14 +29,15 @@ const STATIC_SKILLS = [
 
 /** Role-keyword suggestions + curated list, deduped and minus already-selected skills. */
 function buildSuggestions(targetRole: string, selected: string[], query: string): string[] {
-  const combined: string[] = [];
+  const selectedLower = new Set(selected.map((s) => s.toLowerCase()));
+  const merged = [...suggestSkills(targetRole, selected), ...STATIC_SKILLS];
   const seen = new Set<string>();
-  for (const skill of [...suggestSkills(targetRole, selected), ...STATIC_SKILLS]) {
+  const combined: string[] = [];
+  for (const skill of merged) {
     const key = skill.toLowerCase();
-    if (!seen.has(key) && !selected.some((s) => s.toLowerCase() === key)) {
-      seen.add(key);
-      combined.push(skill);
-    }
+    if (seen.has(key) || selectedLower.has(key)) continue;
+    seen.add(key);
+    combined.push(skill);
   }
   const q = query.trim().toLowerCase();
   return q ? combined.filter((s) => s.toLowerCase().includes(q)) : combined;
@@ -90,13 +91,23 @@ function SkillGroup({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setOpen(true)}
-          onBlur={() => setOpen(false)}
+          onBlur={(e) => {
+            // Keep the dropdown open if focus moved into the suggestions list
+            const list = e.currentTarget.parentElement?.querySelector(
+              "[data-suggestions]"
+            );
+            if (list && list.contains(e.relatedTarget as Node)) return;
+            setOpen(false);
+          }}
           aria-label={`Search ${type} skills`}
           placeholder="Type to search skills…"
           className={DARK_INPUT}
         />
         {open && suggestions.length > 0 && (
-          <div className="absolute left-0 right-0 z-10 mt-1.5 max-h-44 overflow-y-auto rounded-lg border border-[#333] bg-[#15151f] p-1.5 shadow-2xl">
+          <div
+            data-suggestions
+            className="absolute left-0 right-0 z-10 mt-1.5 max-h-44 overflow-y-auto rounded-lg border border-[#333] bg-[#15151f] p-1.5 shadow-2xl"
+          >
             <p className="px-2 pb-1 pt-1 text-[10px] font-medium uppercase tracking-wider text-[#555d6e]">
               {targetRole ? `Suggested for "${targetRole}"` : "Common skills"}
             </p>

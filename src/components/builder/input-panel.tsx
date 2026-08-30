@@ -88,9 +88,11 @@ export function InputPanel({
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
             key={id}
+            id={`tab-${id}`}
             role="tab"
             type="button"
             aria-selected={activeTab === id}
+            aria-controls={`panel-${id}`}
             onClick={() => onTabChange(id)}
             className={cn(
               "flex items-center justify-center gap-1.5 rounded-md px-1.5 py-2 text-xs font-semibold transition-colors",
@@ -106,7 +108,13 @@ export function InputPanel({
       </div>
 
       {/* key-based remount gives the fade-in transition on tab switch */}
-      <div key={activeTab} className="animate-reveal mt-4">
+      <div
+        key={activeTab}
+        id={`panel-${activeTab}`}
+        role="tabpanel"
+        aria-labelledby={`tab-${activeTab}`}
+        className="animate-reveal mt-4"
+      >
         {activeTab === "identity" && (
           <IdentityTab
             identity={resume.identity}
