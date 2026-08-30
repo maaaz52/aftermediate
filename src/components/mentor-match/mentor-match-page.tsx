@@ -1,0 +1,160 @@
+"use client";
+
+import * as React from "react";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+import { HeroSection } from "./hero-section";
+import { MentorCard } from "./mentor-card";
+import { MentorDetailModal } from "./mentor-detail-modal";
+import data from "@/data/mentors.json";
+
+// ── Types ──
+
+export type MentorField =
+  | "engineering"
+  | "medical"
+  | "tech"
+  | "business"
+  | "arts"
+  | "civil-services";
+
+export type Availability = "available" | "limited" | "booked";
+
+export interface SocialLink {
+  platform: "instagram" | "discord" | "whatsapp";
+  label: string;
+  url: string;
+}
+
+export interface MentorProfile {
+  id: string;
+  name: string;
+  institution: string;
+  degree: string;
+  field: MentorField;
+  bio: string;
+  topics: string[];
+  socials: SocialLink[];
+  achievements: string[];
+  availability: Availability;
+}
+
+// ── Data ──
+
+const mentors: MentorProfile[] = (data as { mentors: MentorProfile[] }).mentors;
+
+const FIELD_FILTERS: { id: MentorField | "all"; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "engineering", label: "Engineering" },
+  { id: "medical", label: "Medical" },
+  { id: "tech", label: "Tech" },
+  { id: "business", label: "Business" },
+  { id: "arts", label: "Arts" },
+  { id: "civil-services", label: "Civil Services" },
+];
+
+// ── Component ──
+
+export function MentorMatchPage() {
+  const [searchQuery, setSearchQuery] = React.useState("");
+  const [activeField, setActiveField] = React.useState<MentorField | "all">("all");
+  const [selectedMentor, setSelectedMentor] = React.useState<MentorProfile | null>(null);
+
+  const filtered = React.useMemo(() => {
+    let result = mentors;
+
+    if (activeField !== "all") {
+      result = result.filter((m) => m.field === activeField);
+    }
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.trim().toLowerCase();
+      result = result.filter(
+        (m) =>
+          m.name.toLowerCase().includes(q) ||
+          m.institution.toLowerCase().includes(q) ||
+          m.topics.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+
+    return result;
+  }, [activeField, searchQuery]);
+
+  const handleSelect = (id: string) => {
+    const mentor = mentors.find((m) => m.id === id) ?? null;
+    setSelectedMentor(mentor);
+  };
+
+  return (
+    <div>
+      <HeroSection />
+
+      {/* Search + Filters */}
+      <div className="mt-8">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-faint" />
+          <Input
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search by name, institution, or topic..."
+            className="pl-9"
+          />
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {FIELD_FILTERS.map((f) => (
+            <button
+              key={f.id}
+              onClick={() => setActiveField(f.id)}
+              className={cn(
+                "rounded-full border px-4 py-2 text-sm font-medium transition-all",
+                activeField === f.id
+                  ? "border-saffron/40 bg-saffron/10 text-saffron"
+                  : "border-line bg-surface text-muted hover:text-ink"
+              )}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Grid */}
+      <div
+        id="mentor-grid"
+        className="mt-8 grid gap-5 sm:grid-cols-2"
+      >
+        {filtered.map((mentor) => (
+          <MentorCard key={mentor.id} mentor={mentor} onSelect={handleSelect} />
+        ))}
+      </div>
+
+      {/* Empty state */}
+      {filtered.length === 0 && (
+        <div className="mt-16 text-center">
+          <p className="text-muted">No mentors match this filter. Check back soon.</p>
+        </div>
+      )}
+
+      {/* Become a mentor CTA */}
+      <div className="mt-12 rounded-2xl border border-saffron/20 bg-saffron/5 p-8 text-center">
+        <h2 className="text-xl font-bold text-ink">Want to help others find their path?</h2>
+        <p className="mt-1 text-sm text-muted">
+          Share your journey and guide the next generation of students.
+        </p>
+        <a
+          href="/mentors/become"
+          className="mt-4 inline-flex items-center gap-2 rounded-lg bg-saffron px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+        >
+          Become a mentor
+        </a>
+      </div>
+
+      {/* Detail modal */}
+      <MentorDetailModal
+        mentor={selectedMentor}
+        onClose={() => setSelectedMentor(null)}
+      />
+    </div>
+  );
+}
