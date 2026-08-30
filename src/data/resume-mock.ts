@@ -14,9 +14,9 @@ export const mockResume: ResumeData = {
     rawNotes:
       "organised school sports day for 200 students, edited 15 videos for my YouTube channel, got 88% in FSc Physics lab",
     bullets: [
-      "Coordinated logistics for a school sports day, managing 200+ participants.",
-      "Produced and edited 15 videos for my YouTube channel, growing reach to 2.5K+ views.",
-      "Assisted with FSc Physics lab experiments, achieving 88% accuracy.",
+      "Coordinated logistics for school sports day, managing 200+ participants.",
+      "Produced and edited 15 videos for my YouTube channel.",
+      "Achieved 88% in FSc Physics lab.",
     ],
     polished: true,
   },

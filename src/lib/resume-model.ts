@@ -44,11 +44,23 @@ export interface AtsResult {
   breakdown: AtsBreakdown;
 }
 
+export type FixType =
+  | "cliche"
+  | "weakverb"
+  | "keywords"
+  | "github"
+  | "metrics"
+  | "formatting"
+  | "academics"
+  | "actionverbs";
+
 export interface FeedbackItem {
   id: string;
   kind: "warning" | "tip";
   message: string;
   fixLabel: string;
+  /** Machine-readable fix kind — applyAutoFix dispatches on this, not on fixLabel text */
+  fixType: FixType;
 }
 
 // ---------------------------------------------------------------------------
@@ -82,6 +94,11 @@ export const STRONG_ACTION_VERBS = [
   "filmed",
   "taught",
   "wrote",
+  // Rewrite outputs of the weak-verb auto-fixes (kept strong so re-fixes are no-ops)
+  "owned",
+  "executed",
+  "contributed",
+  "supported",
 ] as const;
 
 export const WEAK_VERBS = [
@@ -140,6 +157,7 @@ function findRoleKeywords(targetRole: string): string[] {
 function pickStrongVerb(clause: string): string {
   const lower = clause.toLowerCase();
   if (/research|study/i.test(lower)) return "Researched";
+  if (/organi[sz]e/i.test(lower)) return "Coordinated";
   if (/write|blog|doc/i.test(lower)) return "Wrote";
   if (/creat|design|develop/i.test(lower)) return "Developed";
   if (/teach|mentor|train|guide/i.test(lower)) return "Mentored";
@@ -151,66 +169,172 @@ function pickStrongVerb(clause: string): string {
   return "Developed";
 }
 
+/** Whether a word matches one of pickStrongVerb's content cues (i.e. it is verb-like). */
+function matchesVerbCue(word: string): boolean {
+  return /research|study|organi[sz]e|write|blog|doc|creat|design|develop|teach|mentor|train|guide|lead|manage|supervis|head|volunteer|present|demo|launch|start|found|build|implement/i.test(
+    word
+  );
+}
+
+/** True when a word is (or inflects to) a strong action verb, incl. UK "organised". */
+function isStrongVerb(word: string): boolean {
+  const cleaned = word
+    .toLowerCase()
+    .replace(/[^a-z]/g, "")
+    .replace(/organi[sz]ed/, "organized");
+  return STRONG_ACTION_VERBS.some((v) => cleaned === v || cleaned.startsWith(v));
+}
+
+function lowerFirst(text: string): string {
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
+// ---------------------------------------------------------------------------
+// Weak-verb rewrites (shared by polishNotes and applyAutoFix)
+// ---------------------------------------------------------------------------
+
+/** Explicit weak phrases are matched before the single-verb map. */
+const WEAK_PHRASE_REWRITES: ReadonlyArray<readonly [RegExp, string]> = [
+  [/^was\s+responsible\s+for\s+/i, "Owned"],
+  [/^were\s+responsible\s+for\s+/i, "Owned"],
+  [/^was\s+in\s+charge\s+of\s+/i, "Led"],
+  [/^were\s+in\s+charge\s+of\s+/i, "Led"],
+  [/^was\s+tasked\s+with\s+/i, "Owned"],
+  [/^were\s+tasked\s+with\s+/i, "Owned"],
+  [/^helped\s+with\s+/i, "Supported delivery of"],
+  [/^assisted\s+with\s+/i, "Supported"],
+  [/^did\s+some\s+/i, "Executed"],
+];
+
+const WEAK_VERB_REWRITES: Record<string, string> = {
+  was: "Led",
+  were: "Led",
+  did: "Executed",
+  helped: "Supported",
+  worked: "Contributed",
+  made: "Created",
+  got: "Achieved",
+  assisted: "Supported",
+};
+
+/**
+ * Rewrite text that starts with a weak verb/phrase to a strong-verb lead.
+ * Returns null when no weak verb is found at the start.
+ */
+function rewriteWeakVerb(text: string): string | null {
+  const trimmed = text.trim();
+  if (!trimmed) return null;
+  const lower = trimmed.toLowerCase();
+
+  for (const [pattern, strong] of WEAK_PHRASE_REWRITES) {
+    if (pattern.test(lower)) {
+      const rest = trimmed.replace(pattern, "").trim();
+      return `${strong} ${lowerFirst(rest)}`;
+    }
+  }
+
+  const firstWord = trimmed.split(/\s+/)[0]?.toLowerCase() ?? "";
+  const strong = WEAK_VERB_REWRITES[firstWord];
+  if (strong) {
+    const rest = trimmed.replace(new RegExp(`^${firstWord}\\s*`, "i"), "").trim();
+    return `${strong} ${lowerFirst(rest)}`;
+  }
+  return null;
+}
+
+/**
+ * Make a clause/bullet start with a strong action verb without duplicating the
+ * clause's own verb ("managed a team" → "Led a team", never "Led managed a team").
+ */
+function forceStrongVerbStart(text: string): string {
+  const trimmed = text.trim();
+  if (!trimmed) return text;
+  const firstWord = trimmed.split(/\s+/)[0] ?? "";
+  if (firstWord && isStrongVerb(firstWord)) {
+    return trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
+  }
+  const verb = pickStrongVerb(trimmed);
+  let remainder = lowerFirst(trimmed);
+  const firstLower = firstWord.toLowerCase();
+  if (
+    (WEAK_VERBS as readonly string[]).includes(firstLower) ||
+    (matchesVerbCue(firstWord) && pickStrongVerb(firstWord) === verb)
+  ) {
+    remainder = lowerFirst(remainder.slice(firstWord.length).trim());
+  }
+  return `${verb} ${remainder}`;
+}
+
 // ---------------------------------------------------------------------------
 // polishNotes — rule-based AI polish engine
 // ---------------------------------------------------------------------------
 
-export function polishNotes(rawNotes: string): string[] {
-  const clauses = rawNotes
-    .split(/[,.\n]|\s+and\s+/i)
-    .map((c) => c.replace(/^[,\s]+|[,\s]+$/g, ""))
-    .filter((c) => c.length > 0);
+/** Real participant/impact counts — never years, percentages, or bare numbers. */
+const COUNT_PATTERN =
+  /(\d+)\s*(?:students|people|members|participants|kids|attendees|teams|videos|subscribers|views|projects|events)\b/i;
 
+/**
+ * Split raw notes into clauses without corrupting numbers:
+ * - sentence boundaries only on ". " (so "2.5K" survives)
+ * - commas only when NOT between digits (so "1,000" survives)
+ */
+function splitClauses(rawNotes: string): string[] {
+  return rawNotes
+    .split(/\n/)
+    .flatMap((line) => line.split(/\.\s+/))
+    .flatMap((part) => part.split(/(?<!\d)\s*,\s*(?!\d)|\s+and\s+/i))
+    .map((c) => c.replace(/^[\s,]+|[\s,]+$/g, "").replace(/\.+$/, "").trim())
+    .filter((c) => c.length > 0);
+}
+
+/**
+ * "organized X for N students" → "Coordinated logistics for X, managing N+ participants."
+ * The count phrase is removed from the subject so prepositions are never duplicated.
+ */
+function rewriteOrganized(rest: string): string {
+  const count = COUNT_PATTERN.exec(rest);
+  if (count) {
+    const cleanRest = rest
+      .replace(count[0], "")
+      .replace(/\s+/g, " ")
+      .replace(/\s+(?:for|with|of|to|at|in)\s*$/i, "")
+      .trim();
+    const subject = cleanRest || "the event";
+    return `Coordinated logistics for ${subject}, managing ${count[1]}+ participants.`;
+  }
+  return `Coordinated logistics for ${rest}.`;
+}
+
+export function polishNotes(rawNotes: string): string[] {
+  const clauses = splitClauses(rawNotes);
   const bullets: string[] = [];
 
   for (let i = 0; i < clauses.length && bullets.length < 3; i++) {
-    const clause = clauses[i];
+    // Strip leading first-person pronouns before routing
+    const clause = clauses[i].replace(/^(?:i|we|they|my)\s+/i, "");
     const lower = clause.toLowerCase().trim();
     let bullet: string;
 
     if (/^organi[sz]ed\s+/.test(lower)) {
-      // "organized/organised X" → "Coordinated logistics for X"
-      const rest = clause.replace(/^[Oo]rgani[sz]ed\s+/, "");
-      const num = rest.match(/(\d+)/);
-      if (num) {
-        bullet = `Coordinated logistics for ${rest}, managing ${num[1]}+ participants.`;
-      } else {
-        bullet = `Coordinated logistics for ${rest}.`;
-      }
-    } else if (/^edited\s+/.test(lower) || /^made\s+/.test(lower)) {
-      // "edited X videos" / "made videos" → "Produced and edited N videos, growing…"
-      const num = clause.match(/(\d+)/);
-      if (num) {
-        const rest = clause.replace(/^(edited|made)\s+/i, "");
-        bullet = `Produced and edited ${rest}, growing reach to 2.5K+ views.`;
-      } else {
-        bullet = `Produced and edited videos, growing reach to 2.5K+ views.`;
-      }
-    } else if (/^got\s+\d+%/.test(lower) || /^achieved\s+\d+%/.test(lower)) {
-      // "got X% in Y" → "Achieved X% in Y, ranking among the top students"
-      const rest = clause.replace(/^(got|achieved)\s+/i, "");
-      bullet = `Achieved ${rest}, ranking among the top students.`;
+      bullet = rewriteOrganized(clause.replace(/^organi[sz]ed\s+/i, ""));
+    } else if (/^(?:edited|made)\s+/.test(lower)) {
+      // "edited N videos" → "Produced and edited N videos."
+      bullet = `Produced and edited ${clause.replace(/^(?:edited|made)\s+/i, "")}.`;
+    } else if (/^(?:got|scored|achieved)\s+\d+%/.test(lower)) {
+      // "got 88% in X" → "Achieved 88% in X."
+      bullet = `Achieved ${clause.replace(/^(?:got|scored|achieved)\s+/i, "")}.`;
     } else if (/^helped\s+/.test(lower)) {
-      const rest = clause.replace(/^[Hh]elped\s+/, "");
-      bullet = `Supported delivery of ${rest}.`;
+      // "helped organize X" → organized rewrite; "helped with X" → "Supported delivery of X."
+      const afterHelped = clause.replace(/^helped\s+/i, "");
+      if (/^(?:to\s+)?organi[sz]e\s+/i.test(afterHelped)) {
+        bullet = rewriteOrganized(afterHelped.replace(/^(?:to\s+)?organi[sz]e\s+/i, ""));
+      } else {
+        bullet = `Supported delivery of ${afterHelped.replace(/^with\s+/i, "")}.`;
+      }
     } else {
-      // Default: prepend a strong verb
-      const verb = pickStrongVerb(clause);
-      const remainder = clause.charAt(0).toLowerCase() + clause.slice(1);
-      bullet = `${verb} ${remainder}.`;
-    }
-
-    // Ensure period
-    if (!bullet.endsWith(".")) bullet += ".";
-
-    // Add metrics if the clause has a number but the bullet doesn't yet include a metric
-    const alreadyHasMetric =
-      /managing|growing|reaching|impact|\+participants|\+members|\+people|%|K\+/.test(
-        bullet.toLowerCase()
-      );
-    if (/\d/.test(clause) && !alreadyHasMetric) {
-      // Append a generic measurable outcome
-      bullet = bullet.replace(/\.$/, ", impacting 100+ people.");
+      // Default: rewrite a weak opening, otherwise prepend a strong verb
+      const rewrite = rewriteWeakVerb(clause);
+      bullet = rewrite !== null ? `${rewrite}.` : `${forceStrongVerbStart(clause)}.`;
     }
 
     bullets.push(bullet);
@@ -252,12 +376,8 @@ function getResumeText(resume: ResumeData): string {
 function computeActionVerbScore(bullets: string[]): number {
   if (bullets.length === 0) return 0;
   const strongCount = bullets.filter((b) => {
-    const firstWord = b.trim().split(/\s+/)[0]?.toLowerCase() ?? "";
-    return STRONG_ACTION_VERBS.some((v) => {
-      // Check if the first word starts with the strong verb
-      const cleaned = firstWord.replace(/[^a-z]/g, "");
-      return cleaned === v || cleaned.startsWith(v);
-    });
+    const firstWord = b.trim().split(/\s+/)[0] ?? "";
+    return isStrongVerb(firstWord);
   }).length;
   return Math.round((strongCount / bullets.length) * 100);
 }
@@ -267,11 +387,17 @@ function computeFormattingScore(resume: ResumeData): number {
   if (!resume.identity.name) score -= 15;
   if (!resume.identity.email) score -= 10;
   if (resume.experience.bullets.length === 0) score -= 10;
-  if (resume.experience.bullets.some((b) => b.split(/\s+/).length > 35)) score -= 10;
+  if (resume.experience.bullets.some((b) => b.split(/\s+/).length > 30)) score -= 10;
   if (resume.experience.bullets.some((b) => !b.trim().endsWith("."))) score -= 10;
   if (resume.skills.tech.length === 0) score -= 10;
   if (resume.projects.academics.length === 0) score -= 5;
   return Math.max(0, Math.min(100, score));
+}
+
+/** Whole-token/phrase matching — "Git" must not match "digital", but "Data Visualization" matches as a phrase. */
+function keywordMatches(text: string, keyword: string): boolean {
+  const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\b${escaped}\\b`, "i").test(text);
 }
 
 function computeKeywordScore(resume: ResumeData): number {
@@ -279,7 +405,7 @@ function computeKeywordScore(resume: ResumeData): number {
   const targetRole = resume.identity.targetRole.toLowerCase();
   const keywords = findRoleKeywords(targetRole);
   if (keywords.length === 0) return 0;
-  const matched = keywords.filter((kw) => text.includes(kw.toLowerCase())).length;
+  const matched = keywords.filter((kw) => keywordMatches(text, kw)).length;
   return Math.round((matched / keywords.length) * 100);
 }
 
@@ -347,18 +473,20 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       kind: "warning",
       message: `"${foundCliché}" is a cliché. Replace with a concrete achievement.`,
       fixLabel: "Auto-Fix: Replace cliché",
+      fixType: "cliche",
     });
   }
 
   // --- Weak verb warning ---
   for (const bullet of resume.experience.bullets) {
     const firstWord = bullet.trim().split(/\s+/)[0]?.toLowerCase() ?? "";
-    if (WEAK_VERBS.some((w) => firstWord === w || firstWord.startsWith(w))) {
+    if ((WEAK_VERBS as readonly string[]).includes(firstWord)) {
       items.push({
         id: `${prefix}-weakverb-${firstWord}`,
         kind: "warning",
         message: `Start bullet with a strong action verb: 'led', 'built', 'designed'...`,
         fixLabel: "Auto-Fix: Strengthen verb",
+        fixType: "weakverb",
       });
       break; // one warning is enough
     }
@@ -377,6 +505,7 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       kind: "tip",
       message: messages[mode],
       fixLabel: "Auto-Fix: Strengthen verbs",
+      fixType: "actionverbs",
     });
   }
 
@@ -386,13 +515,14 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
     const targetRole = resume.identity.targetRole;
     const keywords = findRoleKeywords(targetRole);
     const text = getResumeText(resume);
-    const missing = keywords.filter((kw) => !text.includes(kw.toLowerCase())).slice(0, 2);
+    const missing = keywords.filter((kw) => !keywordMatches(text, kw)).slice(0, 2);
     if (missing.length > 0) {
       items.push({
         id: `${prefix}-kw-tip`,
         kind: "tip",
         message: `You haven't listed skills recruiters expect for ${targetRole}. Consider adding: ${missing.join(", ")}`,
         fixLabel: "Auto-Fix: Add keyword pill",
+        fixType: "keywords",
       });
     }
   }
@@ -408,6 +538,7 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       kind: "tip",
       message: `No GitHub link detected for a ${resume.identity.targetRole} target. Add one to showcase your work.`,
       fixLabel: "Auto-Fix: Add GitHub link",
+      fixType: "github",
     });
   }
 
@@ -426,6 +557,7 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       kind: "tip",
       message: messages[mode],
       fixLabel: "Auto-Fix: Improve formatting",
+      fixType: "formatting",
     });
   }
 
@@ -438,6 +570,7 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       message:
         "No numbers found in your bullets. Quantify: 'managed 200+ students', 'grew channel to 1K subscribers'",
       fixLabel: "Auto-Fix: Add metric",
+      fixType: "metrics",
     });
   }
 
@@ -449,6 +582,7 @@ export function generateFeedback(resume: ResumeData, mode: RecruiterMode): Feedb
       message:
         "Admissions officers look for academics — add your FSc/A-Level scores.",
       fixLabel: "Auto-Fix: Add academic entry",
+      fixType: "academics",
     });
   }
 
@@ -469,121 +603,139 @@ const CLICHE_REPLACEMENTS: Record<string, string> = {
   "fast learner": "quickly mastered",
 };
 
-const WEAK_TO_STRONG: Record<string, string> = {
-  was: "Led",
-  were: "Led",
-  did: "Executed",
-  helped: "Supported",
-  worked: "Contributed",
-  made: "Created",
-  got: "Achieved",
-  "did some": "Executed",
-  assisted: "Supported",
-};
+/** Cliché fix: rewrite bullets/rawNotes AND scrub the cliché pill from skills. */
+function fixCliche(result: ResumeData): ResumeData {
+  const allText = [
+    result.experience.bullets.join("\n"),
+    result.experience.rawNotes,
+    ...result.skills.tech,
+    ...result.skills.soft,
+  ]
+    .filter(Boolean)
+    .join("\n")
+    .toLowerCase();
+  const found = CLICHE_WORDS.find((c) => allText.includes(c));
+  if (!found) return result;
+  const replacement = CLICHE_REPLACEMENTS[found] ?? "delivered measurable results";
+  const esc = found.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(esc, "gi");
+  result.experience.bullets = result.experience.bullets.map((b) => b.replace(re, replacement));
+  result.experience.rawNotes = result.experience.rawNotes.replace(re, replacement);
+  const scrubSkill = (s: string) => s.replace(re, "").replace(/^\s+|\s+$/g, "");
+  result.skills.tech = result.skills.tech.map(scrubSkill).filter(Boolean);
+  result.skills.soft = result.skills.soft.map(scrubSkill).filter(Boolean);
+  return result;
+}
+
+/** Weak-verb fix: rewrite the first bullet that opens with a weak verb/phrase. */
+function fixWeakVerb(result: ResumeData): ResumeData {
+  for (let i = 0; i < result.experience.bullets.length; i++) {
+    const rewritten = rewriteWeakVerb(result.experience.bullets[i]);
+    if (rewritten !== null) {
+      result.experience.bullets[i] = rewritten;
+      break;
+    }
+  }
+  return result;
+}
+
+/** Action-verb fix: same weak-verb rewrite first; otherwise force a strong-verb opener. */
+function fixActionVerbs(result: ResumeData): ResumeData {
+  for (let i = 0; i < result.experience.bullets.length; i++) {
+    const rewritten = rewriteWeakVerb(result.experience.bullets[i]);
+    if (rewritten !== null) {
+      result.experience.bullets[i] = rewritten;
+      return result;
+    }
+  }
+  for (let i = 0; i < result.experience.bullets.length; i++) {
+    const bullet = result.experience.bullets[i].trim();
+    if (!bullet) continue;
+    const firstWord = bullet.split(/\s+/)[0] ?? "";
+    if (!isStrongVerb(firstWord)) {
+      result.experience.bullets[i] = `${forceStrongVerbStart(bullet)}.`;
+      break;
+    }
+  }
+  return result;
+}
+
+function fixKeywords(result: ResumeData): ResumeData {
+  const keywords = findRoleKeywords(result.identity.targetRole);
+  const current = new Set(result.skills.tech.map((s) => s.toLowerCase()));
+  const missing = keywords.find((kw) => !current.has(kw.toLowerCase()));
+  if (missing) {
+    result.skills.tech.push(missing);
+  }
+  return result;
+}
+
+/**
+ * Metrics fix: only frame numbers that already exist — append a mode-appropriate
+ * outcome to the first bullet that has a real number but no outcome framing.
+ */
+function fixMetrics(result: ResumeData, mode: RecruiterMode): ResumeData {
+  const outcomes: Record<RecruiterMode, string> = {
+    startup: "driving measurable growth",
+    university: "demonstrating strong commitment",
+    corporate: "supporting business outcomes",
+  };
+  const suffix = outcomes[mode];
+  for (let i = 0; i < result.experience.bullets.length; i++) {
+    const bullet = result.experience.bullets[i].trim();
+    if (!bullet) continue;
+    if (/\d/.test(bullet) && !bullet.includes(suffix)) {
+      result.experience.bullets[i] = `${bullet.replace(/\.$/, "")}, ${suffix}.`;
+      break;
+    }
+  }
+  return result;
+}
 
 export function applyAutoFix(
   resume: ResumeData,
   feedback: FeedbackItem,
   mode: RecruiterMode
 ): ResumeData {
-  void mode; // mode-aware future use
   const result: ResumeData = JSON.parse(JSON.stringify(resume));
-  const label = feedback.fixLabel.toLowerCase();
 
-  // --- Cliché fix ---
-  if (label.includes("clich")) {
-    const allText = [
-      result.experience.bullets.join("\n"),
-      result.experience.rawNotes,
-    ]
-      .filter(Boolean)
-      .join("\n")
-      .toLowerCase();
-    const foundCliché = CLICHE_WORDS.find((c) => allText.includes(c));
-    if (foundCliché) {
-      const replacement = CLICHE_REPLACEMENTS[foundCliché] ?? "delivered measurable results";
-      const esc = foundCliché.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      const re = new RegExp(esc, "gi");
-      result.experience.bullets = result.experience.bullets.map((b) =>
-        b.replace(re, replacement)
-      );
-      result.experience.rawNotes = result.experience.rawNotes.replace(re, replacement);
-    }
-    return result;
-  }
-
-  // --- Weak verb fix ---
-  if (label.includes("verb")) {
-    for (let i = 0; i < result.experience.bullets.length; i++) {
-      const bullet = result.experience.bullets[i].trim();
-      const firstWord = bullet.split(/\s+/)[0]?.toLowerCase() ?? "";
-      const weakVerb = WEAK_VERBS.find((w) => firstWord === w || firstWord.startsWith(w));
-      if (weakVerb) {
-        const replacement = WEAK_TO_STRONG[weakVerb] ?? "Led";
-        result.experience.bullets[i] = bullet.replace(
-          new RegExp(`^${weakVerb}\\s*`, "i"),
-          `${replacement} `
-        );
-        break;
+  switch (feedback.fixType) {
+    case "cliche":
+      return fixCliche(result);
+    case "weakverb":
+      return fixWeakVerb(result);
+    case "actionverbs":
+      return fixActionVerbs(result);
+    case "keywords":
+      return fixKeywords(result);
+    case "github":
+      result.identity.github = "https://github.com/your-handle";
+      return result;
+    case "metrics":
+      return fixMetrics(result, mode);
+    case "formatting":
+      result.experience.bullets = result.experience.bullets.map((b) => {
+        const words = b.split(/\s+/);
+        return words.length > 30 ? words.slice(0, 30).join(" ") + "..." : b;
+      });
+      return result;
+    case "academics":
+      if (
+        !result.projects.academics.some(
+          (a) => a.degree === "FSc Pre-Medical" && a.institution === "Your College"
+        )
+      ) {
+        result.projects.academics.push({
+          degree: "FSc Pre-Medical",
+          institution: "Your College",
+          score: "85%",
+          years: "2024-2026",
+        });
       }
-    }
-    return result;
+      return result;
+    default:
+      return result;
   }
-
-  // --- Keyword fix ---
-  if (label.includes("keyword")) {
-    const targetRole = result.identity.targetRole;
-    const keywords = findRoleKeywords(targetRole);
-    const current = new Set(result.skills.tech.map((s) => s.toLowerCase()));
-    const missing = keywords.find((kw) => !current.has(kw.toLowerCase()));
-    if (missing) {
-      result.skills.tech.push(missing);
-    }
-    return result;
-  }
-
-  // --- GitHub fix ---
-  if (label.includes("github")) {
-    result.identity.github = "https://github.com/your-handle";
-    return result;
-  }
-
-  // --- Metrics fix ---
-  if (label.includes("metric") || label.includes("quantif")) {
-    for (let i = 0; i < result.experience.bullets.length; i++) {
-      if (!/\d/.test(result.experience.bullets[i])) {
-        result.experience.bullets[i] =
-          result.experience.bullets[i].replace(/\.$/, "") + " — reaching 100+ people.";
-        break;
-      }
-    }
-    return result;
-  }
-
-  // --- Formatting fix ---
-  if (label.includes("format")) {
-    result.experience.bullets = result.experience.bullets.map((b) => {
-      const words = b.split(/\s+/);
-      if (words.length > 35) {
-        return words.slice(0, 35).join(" ") + "...";
-      }
-      return b;
-    });
-    return result;
-  }
-
-  // --- Academics fix ---
-  if (label.includes("academic")) {
-    result.projects.academics.push({
-      degree: "FSc Pre-Medical",
-      institution: "Your College",
-      score: "85%",
-      years: "2024-2026",
-    });
-    return result;
-  }
-
-  return result;
 }
 
 // ---------------------------------------------------------------------------
