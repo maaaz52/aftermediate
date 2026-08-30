@@ -30,7 +30,13 @@ export function WhereYouStand() {
   // Start the cycle on the first target that has the student's aggregate.
   const preferredIdx = watchlist.findIndex((e) => e.myMerit !== null);
   const [idx, setIdx] = React.useState(() => (preferredIdx >= 0 ? preferredIdx : 0));
-  const safeIdx = watchlist.length === 0 ? 0 : Math.min(idx, watchlist.length - 1);
+  // Watchlist edits can leave the stored index out of range — re-pick the
+  // preferred target rather than clamping onto a neighboring entry.
+  let effectiveIdx = idx;
+  if (effectiveIdx >= watchlist.length) {
+    effectiveIdx = preferredIdx >= 0 ? preferredIdx : 0;
+  }
+  const safeIdx = watchlist.length === 0 ? 0 : Math.min(effectiveIdx, watchlist.length - 1);
   const target = watchlist.length > 0 ? watchlist[safeIdx] : undefined;
 
   const cohort = React.useMemo(
