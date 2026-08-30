@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { X, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { useAuth } from "@/lib/auth";
 
 export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const router = useRouter();
   const { signInEmail, signUpEmail, signInGoogle } = useAuth();
   const [mode, setMode] = React.useState<"signin" | "signup">("signin");
   const [email, setEmail] = React.useState("");
@@ -29,7 +31,10 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
       const r = await signUpEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
       else if (r.needsConfirm) setMessage({ type: "ok", text: "Check your email to confirm your account." });
-      else onClose();
+      else {
+        onClose();
+        router.push("/onboard");
+      }
     }
     setBusy(false);
   }

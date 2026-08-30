@@ -10,7 +10,7 @@ export function Brand({ className, compact = false }: { className?: string; comp
         <Illustration name="compass" scale={2} />
       </div>
       {!compact && (
-        <span className="font-display text-xl leading-none tracking-wide text-ink">
+        <span className="font-display font-bold text-xl leading-none tracking-wide text-ink">
           after<span className="text-accent">mediate</span>
         </span>
       )}

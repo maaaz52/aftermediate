@@ -100,8 +100,8 @@ export default function LoginPage() {
   const [message, setMessage] = React.useState<{ type: "ok" | "err"; text: string } | null>(null);
 
   React.useEffect(() => {
-    if (user) router.push("/dashboard");
-  }, [user, router]);
+    if (user) router.push(mode === "signup" ? "/onboard" : "/dashboard");
+  }, [user, router, mode]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -124,7 +124,7 @@ export default function LoginPage() {
           type: "ok",
           text: "Check your email to confirm your account. Then come back and sign in.",
         });
-      else router.push("/dashboard");
+      else router.push("/onboard");
     }
     setBusy(false);
   }

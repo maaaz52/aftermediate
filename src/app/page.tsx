@@ -71,7 +71,7 @@ export default function Home() {
                 <span className="h-2 w-2 bg-emerald" />
                 For Pakistani FSc · ICS · I.Com · A-Level
               </div>
-                <h1 className="mt-6 font-display text-3xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                <h1 className="mt-6 font-display font-bold uppercase text-3xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                 Finished FSc.
                 <br />
                 <span className="text-accent">Not sure what&apos;s next?</span>
@@ -117,7 +117,7 @@ export default function Home() {
         {/* REALITY CHECK */}
         <section id="reality" className="border-y-2 border-ink bg-surface-2">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-            <h2 className="max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+            <h2 className="max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl uppercase">
               The reality nobody tells you:
               <span className="text-danger"> the plan decides, not the marks.</span>
             </h2>
@@ -137,7 +137,7 @@ export default function Home() {
         <section id="momentum" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
             <div>
-              <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl">
+              <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl uppercase">
                 The clock is <span className="text-danger">already running.</span>
               </h2>
               <p className="mt-4 max-w-md text-muted">
@@ -234,7 +234,7 @@ export default function Home() {
 
         {/* HOW IT WORKS */}
         <section id="how" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Three steps. Zero confusion.</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Three steps. Zero confusion.</h2>
           <p className="mt-3 max-w-lg text-muted">
             From sign-up to action — here&apos;s how it works.
           </p>
@@ -248,7 +248,7 @@ export default function Home() {
                   <div className={`relative grid h-14 w-14 place-items-center border-2 border-ink ${s.bgClass}`}>
                     <Illustration name={s.icon} scale={2} />
                   </div>
-                  <h3 className="relative mt-5 text-xl font-bold text-ink">{s.title}</h3>
+                  <h3 className="relative mt-5 text-xl font-bold text-ink uppercase">{s.title}</h3>
                   <p className="relative mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
                 </div>
                 {i < steps.length - 1 && (
@@ -264,7 +264,7 @@ export default function Home() {
         {/* FEATURES */}
         <section id="features" className="border-y-2 border-ink bg-surface-2">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-            <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Everything after the result.</h2>
+            <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Everything after the result.</h2>
             <p className="mt-3 max-w-lg text-muted">
               Four things every student actually needs — in one place, in plain words.
             </p>
@@ -278,7 +278,7 @@ export default function Home() {
                       </div>
                       <ArrowRight className="h-5 w-5 text-faint transition-transform group-hover:translate-x-1 group-hover:text-accent" />
                     </div>
-                    <h3 className="mt-5 text-xl font-bold text-ink">{f.title}</h3>
+                    <h3 className="mt-5 text-xl font-bold text-ink uppercase">{f.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
                   </PixelCard>
                 </Link>
@@ -294,7 +294,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
                 <span className="h-2 w-2 bg-accent" /> try it now
               </span>
-              <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">
+              <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">
                 Pick your stream. See what opens up.
               </h2>
               <p className="mt-3 max-w-md text-muted">
@@ -310,7 +310,7 @@ export default function Home() {
         <section id="sources" className="border-t-2 border-ink bg-surface-2">
           <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-20 sm:px-6 md:flex-row md:items-center">
             <div>
-              <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Every number is sourced.</h2>
+              <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Every number is sourced.</h2>
               <p className="mt-3 max-w-md text-muted">
                 No made-up stats. Every claim links to the official source, so you — and your
                 parents — can verify it.
@@ -343,7 +343,7 @@ export default function Home() {
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
             <div className="grid items-start gap-10 lg:grid-cols-2">
               <div>
-                <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl">Get in touch.</h2>
+                <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Get in touch.</h2>
                 <p className="mt-3 max-w-md text-muted">
                   Questions? Feedback? Want to collaborate? Drop us a message — we read every one.
                 </p>
@@ -372,7 +372,7 @@ export default function Home() {
         <section className="border-t-2 border-ink bg-accent">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 sm:py-20">
             <Illustration name="compass" scale={4} />
-            <h2 className="max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+            <h2 className="max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl uppercase">
               Your marksheet isn&apos;t the end. It&apos;s the start.
             </h2>
             <Link

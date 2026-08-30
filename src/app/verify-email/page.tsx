@@ -17,7 +17,7 @@ export default function VerifyEmailPage() {
   React.useEffect(() => {
     if (user) {
       // Give the success state a moment to show before redirecting.
-      const t = setTimeout(() => router.push("/dashboard"), 2500);
+      const t = setTimeout(() => router.push("/onboard"), 2500);
       return () => clearTimeout(t);
     }
   }, [user, router]);
@@ -68,16 +68,16 @@ export default function VerifyEmailPage() {
                 </div>
 
                 <p className="mt-6 text-sm leading-relaxed text-muted">
-                  Your account is confirmed. Your roadmap is one click away — we&apos;re taking you
-                  to your dashboard now.
+                  Your account is confirmed. Let&apos;s set up your roadmap — we&apos;re taking you
+                  to onboarding now.
                 </p>
 
                 <PixelButton
                   size="lg"
                   className="mt-7 w-full"
-                  onClick={() => router.push("/dashboard")}
+                  onClick={() => router.push("/onboard")}
                 >
-                  Go to dashboard <ArrowRight />
+                  Start onboarding <ArrowRight />
                 </PixelButton>
               </>
             ) : (

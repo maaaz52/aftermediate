@@ -19,7 +19,7 @@
   --color-info: #1790b0;
   --color-violet: #7a5bd4;
 
-  --font-display: "Silkscreen", "Plus Jakarta Sans", sans-serif;
+  --font-display: "Space Mono", ui-monospace, monospace;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
 

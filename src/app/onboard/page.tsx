@@ -12,6 +12,7 @@ import { useStudent } from "@/lib/store";
 import {
   QUIZ_SECTIONS,
   firstIncompleteSection,
+  isQuizComplete,
   setAnswer,
 } from "@/lib/quiz";
 
@@ -23,11 +24,17 @@ export default function OnboardPage() {
   const started = React.useRef(false);
 
   // Open at the earliest unfinished section; never trust a stale saved index.
+  // If the quiz is already complete (returning user), skip onboarding entirely.
   React.useEffect(() => {
-    if (!hydrated || started.current) return;
+    if (!hydrated) return;
+    if (isQuizComplete(profile)) {
+      router.replace("/dashboard");
+      return;
+    }
+    if (started.current) return;
     started.current = true;
     setStep(Math.min(profile.quizStep, firstIncompleteSection(profile)));
-  }, [hydrated, profile]);
+  }, [hydrated, profile, router]);
 
   const section = QUIZ_SECTIONS[step];
   const total = QUIZ_SECTIONS.length;

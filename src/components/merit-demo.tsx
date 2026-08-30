@@ -90,7 +90,7 @@ export function MeritDemo() {
         <div className="flex items-end justify-between">
           <div>
             <p className="font-mono text-[11px] uppercase tracking-widest text-muted">Your aggregate</p>
-            <p className="font-display text-4xl leading-none text-ink">{agg.toFixed(1)}%</p>
+            <p className="font-display font-bold text-4xl leading-none text-ink">{agg.toFixed(1)}%</p>
             <p className="mt-1 font-mono text-[11px] text-faint">{inst.note}</p>
           </div>
           <span className={cn("border-2 border-ink px-2 py-1 font-mono text-[11px] uppercase", chance.cls)}>
