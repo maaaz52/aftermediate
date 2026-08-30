@@ -542,6 +542,12 @@ describe("rewriteBullet", () => {
   it("returns the input unchanged when there is nothing to improve", () => {
     expect(rewriteBullet("Led a team of 12 people.")).toBe("Led a team of 12 people.");
   });
+
+  it("capitalizes a cliché-first rewrite so the result never starts lowercase", () => {
+    expect(rewriteBullet("hardworking student who organised an event")).toBe(
+      "Consistently delivered student who organised an event"
+    );
+  });
 });
 
 describe("makeQuantifiable", () => {

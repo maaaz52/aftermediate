@@ -815,7 +815,9 @@ export function rewriteBullet(bullet: string): string {
   }
   const rewritten = rewriteWeakVerb(result);
   if (rewritten !== null) result = rewritten;
-  return result === bullet ? bullet : result;
+  if (result === bullet) return bullet;
+  // Mirror polishNotes capitalization when the rewrite changed the text
+  return result.charAt(0).toUpperCase() + result.slice(1);
 }
 
 /**

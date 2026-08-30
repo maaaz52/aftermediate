@@ -186,14 +186,46 @@ ${body}
 export function ShareModal({ open, onClose, resume, template }: ShareModalProps) {
   const [copied, setCopied] = useState(false);
   const copiedTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   const url = `aftermediate.site/builder/view/${slugify(resume.identity.name)}`;
 
-  // Escape key closes the dialog
+  // Move focus into the dialog on open; restore it to the trigger on close
+  useEffect(() => {
+    if (!open) return;
+    const trigger = document.activeElement as HTMLElement | null;
+    panelRef.current?.focus();
+    return () => trigger?.focus();
+  }, [open]);
+
+  // Escape closes the dialog; Tab is trapped inside the panel
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key === "Tab") {
+        const panel = panelRef.current;
+        if (!panel) return;
+        const focusable = panel.querySelectorAll<HTMLElement>(
+          'button, [href], input, [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) {
+          event.preventDefault();
+          return;
+        }
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -209,8 +241,9 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
   if (!open) return null;
 
   const handleCopy = async () => {
+    if (!navigator.clipboard) return;
     try {
-      await navigator.clipboard?.writeText(url);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
       if (copiedTimer.current) clearTimeout(copiedTimer.current);
       copiedTimer.current = setTimeout(() => setCopied(false), 2000);
@@ -237,11 +270,13 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
       onClick={onClose}
     >
       <div
+        ref={panelRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="share-modal-title"
+        tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-2xl border border-[#222] bg-[#111118] p-6 shadow-2xl"
+        className="w-full max-w-md rounded-2xl border border-[#222] bg-[#111118] p-6 shadow-2xl outline-none"
       >
         <h2 id="share-modal-title" className="text-lg font-bold text-white">
           Your Live Web Link

@@ -178,7 +178,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet }: ResumeCan
                     </span>
                     {bullet}
                   </p>
-                  <div className="absolute right-1 top-0 z-10 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100 print:hidden">
+                  <div className="absolute right-1 top-0 z-10 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 print:hidden">
                     <button
                       type="button"
                       onClick={() => updateBullet(i, rewriteBullet(bullet))}

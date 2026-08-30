@@ -27,13 +27,9 @@ export const POLISH_DELAY_MS = 600;
  * Full state + handler surface owned by the Builder orchestrator.
  *
  * Task 3 consumers (resume-canvas.tsx, ats-panel.tsx) are rendered by Builder
- * and receive slices of this interface — signatures below are stable:
- * - canvas: resume, template, mode, setTemplate, updateIdentity, updateBullet,
- *   removeBullet, addProject, removeProject, updateProject, addAcademic,
- *   removeAcademic, updateAcademic, addCertificate, removeCertificate,
- *   updateCertificate, addLeadership, removeLeadership, updateLeadership,
- *   toggleSkill
- * - ats panel: mode, setMode, ats, feedback, applyAutoFix, resume
+ * and receive slices of this interface:
+ * - canvas: resume, template, mode, updateBullet
+ * - ats panel: mode, setMode, ats, feedback, applyAutoFix
  */
 export interface BuilderState {
   resume: ResumeData;
@@ -290,6 +286,10 @@ export function Builder() {
     setShareOpen(true);
   }, []);
 
+  const closeShare = useCallback(() => {
+    setShareOpen(false);
+  }, []);
+
   return (
     <div className={`mt-6 rounded-2xl bg-[#09090B] ${GRID_BG} p-4 sm:p-6`}>
       <BuilderHeader
@@ -353,7 +353,7 @@ export function Builder() {
 
       <ShareModal
         open={shareOpen}
-        onClose={() => setShareOpen(false)}
+        onClose={closeShare}
         resume={resume}
         template={template}
       />
