@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight, Mail, ExternalLink } from "lucide-react";
 import { ContactForm } from "@/components/landing/contact-form";
 import { Brand } from "@/components/brand";
-import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
 import { MeritDemo } from "@/components/merit-demo";
 import { RealityCard } from "@/components/reality-card";
@@ -13,6 +12,7 @@ import { NustMeritBar } from "@/components/nust-merit-bar";
 import { ExportsBars } from "@/components/exports-bars";
 import { CountUp } from "@/components/count-up";
 import { SiteFooter } from "@/components/landing/footer";
+import { HowItWorksSection } from "@/components/how-it-works-section";
 import { data } from "@/lib/data";
 
 const rc = data.realities;
@@ -20,19 +20,6 @@ const mdcat = rc.find((r) => r.id === "mdcat-ratio")!;
 const nust = rc.find((r) => r.id === "nust-aggregate")!;
 const jobs = rc.find((r) => r.id === "youth-unemployment")!;
 const it = rc.find((r) => r.id === "it-exports")!;
-
-const steps = [
-  { icon: "compass" as const, title: "Sign up", desc: "Create your account in 30 seconds. No credit card, no waiting — just get in.", bgClass: "bg-emerald" },
-  { icon: "magnifier" as const, title: "Get the picture", desc: "Discover what's actually available — your real merit, the right universities, careers that pay, and scholarships you qualify for.", bgClass: "bg-accent" },
-  { icon: "rocket" as const, title: "Act on it", desc: "Your personalised roadmap is ready. Execute it — with data, not guesswork.", bgClass: "bg-amber" },
-];
-
-const features = [
-  { icon: "chart" as const, title: "Know your number", desc: "Aggregate engines for NUST, FAST, UET and MDCAT. No coaching-academy guesses.", href: "/login?mode=signup" },
-  { icon: "rocket" as const, title: "Find your Plan B", desc: "Pharm-D, DPT, CS, AI and more — with real salaries, demand and entry routes.", href: "/login?mode=signup" },
-  { icon: "wallet" as const, title: "Plan the money", desc: "A budget agent, scholarships and study-abroad routes with real costs.", href: "/login?mode=signup" },
-  { icon: "family" as const, title: "Convince your parents", desc: "A printable, bilingual report that makes the case with data, not arguments.", href: "/login?mode=signup" },
-];
 
 const ctaLink =
   "inline-flex items-center gap-2 border-2 border-ink px-6 py-3 font-sans text-sm font-semibold transition-all active:translate-x-[3px] active:translate-y-[3px] active:shadow-none";
@@ -45,7 +32,6 @@ export default function Home() {
           <Link href="/"><Brand nav /></Link>
           <nav className="hidden items-center gap-6 text-sm font-medium text-muted md:flex">
             <Link href="#how" className="hover:text-ink">How it works</Link>
-            <Link href="#features" className="hover:text-ink">Features</Link>
             <Link href="#reality" className="hover:text-ink">Reality</Link>
             <Link href="#sources" className="hover:text-ink">Sources</Link>
             <Link href="#contact" className="hover:text-ink">Contact</Link>
@@ -233,59 +219,7 @@ export default function Home() {
         </section>
 
         {/* HOW IT WORKS */}
-        <section id="how" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Three steps. Zero confusion.</h2>
-          <p className="mt-3 max-w-lg text-muted">
-            From sign-up to action — here&apos;s how it works.
-          </p>
-          <div className="mt-10 flex flex-col items-stretch gap-6 md:flex-row md:items-center md:gap-0">
-            {steps.map((s, i) => (
-              <div key={s.title} className="contents">
-                <div className="relative flex-1 overflow-hidden border-2 border-ink bg-surface p-6 shadow-[4px_4px_0_0_var(--color-ink)]">
-                  <span className="absolute -right-4 -top-8 font-display text-[100px] leading-none text-line">
-                    0{i + 1}
-                  </span>
-                  <div className={`relative grid h-14 w-14 place-items-center border-2 border-ink ${s.bgClass}`}>
-                    <Illustration name={s.icon} scale={2} />
-                  </div>
-                  <h3 className="relative mt-5 text-xl font-bold text-ink uppercase">{s.title}</h3>
-                  <p className="relative mt-2 text-sm leading-relaxed text-muted">{s.desc}</p>
-                </div>
-                {i < steps.length - 1 && (
-                  <div className="hidden shrink-0 items-center justify-center px-4 md:flex">
-                    <ArrowRight className="h-6 w-6 text-faint" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* FEATURES */}
-        <section id="features" className="border-y-2 border-ink bg-surface-2">
-          <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
-            <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">Everything after the result.</h2>
-            <p className="mt-3 max-w-lg text-muted">
-              Four things every student actually needs — in one place, in plain words.
-            </p>
-            <div className="mt-6 sm:mt-10 grid gap-6 sm:grid-cols-2">
-              {features.map((f) => (
-                <Link key={f.title} href={f.href} className="group">
-                  <PixelCard className="h-full p-6 transition-all hover:-translate-y-1">
-                    <div className="flex items-start justify-between">
-                      <div className="border-2 border-ink bg-surface-2 p-2.5 group-hover:bg-accent/10">
-                        <Illustration name={f.icon} scale={2} />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-faint transition-transform group-hover:translate-x-1 group-hover:text-accent" />
-                    </div>
-                    <h3 className="mt-5 text-xl font-bold text-ink uppercase">{f.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">{f.desc}</p>
-                  </PixelCard>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        <HowItWorksSection />
 
         {/* STREAM EXPLORER */}
         <section id="explore" className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
