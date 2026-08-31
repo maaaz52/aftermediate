@@ -161,3 +161,116 @@ body {
   border-color: rgba(26, 26, 26, 0.15) !important;
   box-shadow: none !important;
 }
+
+/* Guided tour -- driver.js popover + spotlight theming (popoverClass: tour-popover) */
+.tour-popover.driver-popover {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(25, 31, 44, 0.18);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  max-width: 320px;
+  padding: 16px 18px;
+  position: relative;
+}
+
+.tour-popover .driver-popover-title {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--color-ink);
+}
+
+.tour-popover .driver-popover-description {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.tour-popover .tour-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-saffron);
+  margin: 0 0 4px;
+}
+
+.tour-popover .tour-counter {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-faint);
+}
+
+.tour-popover .tour-progress {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.tour-popover .tour-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--color-saffron);
+}
+
+.tour-popover .driver-popover-footer {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tour-popover .driver-popover-close-btn {
+  display: none;
+}
+
+.tour-popover .driver-popover-progress-text {
+  display: none;
+}
+
+.tour-popover .driver-popover-prev-btn,
+.tour-popover .driver-popover-next-btn,
+.tour-popover .tour-exit-btn {
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  min-height: 40px;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+.tour-popover .driver-popover-prev-btn {
+  background: transparent;
+  border: 1px solid var(--color-line);
+  color: var(--color-muted);
+}
+
+.tour-popover .driver-popover-next-btn {
+  background: var(--color-saffron);
+  border: none;
+  color: var(--color-background);
+}
+
+.tour-popover .tour-exit-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-faint);
+  margin-right: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-tour-pill].animate-pulse-ring {
+    animation: none;
+  }
+}
