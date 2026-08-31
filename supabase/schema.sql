@@ -112,3 +112,102 @@ create trigger on_auth_user_created
 
 -- Migration for University Watchlist feature:
 alter table public.profiles add column if not exists watchlist jsonb default '[]'::jsonb;
+
+-- ============================================================
+-- Your Voice — feedback & feature wishlist
+-- ============================================================
+create table if not exists public.reviews (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete cascade,
+  tone text not null check (tone in ('loved','liked','meh','disappointed','frustrated')),
+  rating smallint not null check (rating between 0 and 10),
+  review_text text default '',
+  surprised text default '',
+  mindset text default '',
+  recommend_to text[] default '{}',
+  sentiment_tag text check (sentiment_tag in ('highly-positive','positive','constructive','critical')),
+  sentiment_score smallint check (sentiment_score between 0 and 100),
+  status text not null default 'pending' check (status in ('pending','published','hidden')),
+  created_at timestamptz default now()
+);
+
+create table if not exists public.review_media (
+  id uuid primary key default gen_random_uuid(),
+  review_id uuid references public.reviews(id) on delete cascade,
+  url text not null,
+  media_type text not null check (media_type in ('image','video','audio')),
+  file_name text not null,
+  file_size integer not null,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.feature_requests (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete cascade,
+  name text not null,
+  description text default '',
+  use_case text default '',
+  priority text not null default 'p1' check (priority in ('p0','p1','p2')),
+  status text not null default 'open' check (status in ('open','planning','shipped')),
+  votes_count integer not null default 0,
+  created_at timestamptz default now()
+);
+
+create table if not exists public.feature_votes (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete cascade,
+  feature_id uuid references public.feature_requests(id) on delete cascade,
+  created_at timestamptz default now(),
+  unique (user_id, feature_id)
+);
+
+-- votes counter
+create or replace function public.bump_votes_count() returns trigger as $$
+begin
+  if tg_op = 'INSERT' then
+    update public.feature_requests set votes_count = votes_count + 1 where id = new.feature_id;
+  elsif tg_op = 'DELETE' then
+    update public.feature_requests set votes_count = greatest(0, votes_count - 1) where id = old.feature_id;
+  end if;
+  return coalesce(new, old);
+end; $$ language plpgsql security definer;
+
+drop trigger if exists feature_votes_bump on public.feature_votes;
+create trigger feature_votes_bump after insert or delete on public.feature_votes
+  for each row execute function public.bump_votes_count();
+
+-- RLS
+alter table public.reviews enable row level security;
+alter table public.review_media enable row level security;
+alter table public.feature_requests enable row level security;
+alter table public.feature_votes enable row level security;
+
+create policy "reviews_select" on public.reviews for select using (auth.uid() = user_id or status = 'published');
+create policy "reviews_insert_own" on public.reviews for insert with check (auth.uid() = user_id);
+create policy "reviews_update_own" on public.reviews for update using (auth.uid() = user_id);
+create policy "reviews_delete_own" on public.reviews for delete using (auth.uid() = user_id);
+
+create policy "review_media_select" on public.review_media for select using (
+  exists (select 1 from public.reviews r where r.id = review_id and (r.user_id = auth.uid() or r.status = 'published'))
+);
+create policy "review_media_insert_own" on public.review_media for insert with check (
+  exists (select 1 from public.reviews r where r.id = review_id and r.user_id = auth.uid())
+);
+
+create policy "feature_requests_select" on public.feature_requests for select using (auth.role() = 'authenticated');
+create policy "feature_requests_insert_own" on public.feature_requests for insert with check (auth.uid() = user_id);
+create policy "feature_requests_update_own" on public.feature_requests for update using (auth.uid() = user_id);
+
+create policy "feature_votes_select_own" on public.feature_votes for select using (auth.uid() = user_id);
+create policy "feature_votes_insert_own" on public.feature_votes for insert with check (auth.uid() = user_id);
+create policy "feature_votes_delete_own" on public.feature_votes for delete using (auth.uid() = user_id);
+
+-- Storage bucket for review media
+insert into storage.buckets (id, name, public)
+values ('review-media', 'review-media', true)
+on conflict (id) do nothing;
+
+create policy "review_media_upload_own" on storage.objects
+  for insert with check (bucket_id = 'review-media' and auth.uid()::text = (storage.foldername(name))[1]);
+create policy "review_media_delete_own" on storage.objects
+  for delete using (bucket_id = 'review-media' and auth.uid()::text = (storage.foldername(name))[1]);
