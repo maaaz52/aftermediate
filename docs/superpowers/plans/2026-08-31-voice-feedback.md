@@ -220,9 +220,11 @@ export type MediaKind = keyof typeof MEDIA_RULES;
 
 export function mediaKindFor(file: Pick<File, "type">): MediaKind | null {
   const t = file.type;
-  if (MEDIA_RULES.image.types.includes(t)) return "image";
-  if (MEDIA_RULES.video.types.includes(t)) return "video";
-  if (MEDIA_RULES.audio.types.includes(t)) return "audio";
+  // MEDIA_RULES is `as const`, so .types is a literal tuple — cast to readonly string[]
+  // or tsc strict fails with TS2345 on .includes(t)
+  if ((MEDIA_RULES.image.types as readonly string[]).includes(t)) return "image";
+  if ((MEDIA_RULES.video.types as readonly string[]).includes(t)) return "video";
+  if ((MEDIA_RULES.audio.types as readonly string[]).includes(t)) return "audio";
   return null;
 }
 
