@@ -6,6 +6,7 @@ import * as React from "react";
 import { TourProvider, useTour } from "./tour-provider";
 import { chapters } from "@/lib/tour";
 import * as store from "@/lib/store";
+import type { Config, DriverHook, PopoverDOM } from "driver.js";
 
 const mockUseStudent = vi.fn();
 vi.spyOn(store, "useStudent").mockImplementation(() => mockUseStudent());
@@ -13,7 +14,7 @@ vi.spyOn(store, "useStudent").mockImplementation(() => mockUseStudent());
 const mocks = vi.hoisted(() => {
   const destroy = vi.fn();
   const drive = vi.fn();
-  const driver = vi.fn(() => ({ destroy, drive }));
+  const driver = vi.fn((_config: Config) => ({ destroy, drive }));
   return { destroy, drive, driver };
 });
 vi.mock("driver.js", () => ({ driver: mocks.driver }));
@@ -47,6 +48,7 @@ function Probe() {
     <div>
       <span data-testid="running">{String(t.running)}</span>
       <span data-testid="chapter">{t.activeChapter ?? "none"}</span>
+      <span data-testid="hub">{String(t.hubOpen)}</span>
       <span data-testid="prompt">{String(t.promptVisible)}</span>
       <span data-testid="completed">{String(t.completedCount)}</span>
       <button type="button" data-testid="start" onClick={() => t.startChapter("getting-around")}>
@@ -79,8 +81,17 @@ beforeEach(() => {
 
 afterEach(() => {
   cleanup();
+  vi.useRealTimers();
   mocks.driver.mockImplementation(() => ({ destroy: mocks.destroy, drive: mocks.drive }));
 });
+
+// driver.js hooks are typed (element, step, opts) — none of the provider's
+// callbacks use those arguments, so fire them with dummy values.
+function callHook(hook: DriverHook | undefined): void {
+  if (hook) {
+    hook(undefined, undefined as never, {} as never);
+  }
+}
 
 // ── Starting & driving steps ──
 
@@ -97,9 +108,9 @@ it("starts a chapter at step 0 and drives the first step", async () => {
 
   await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
   const config = mocks.driver.mock.calls[0][0];
-  expect(config.steps[0].element).toBe(chapters[0].steps[0].target);
-  expect(config.steps[0].popover.title).toBe(chapters[0].steps[0].title);
-  expect(config.steps[0].popover.nextBtnText).toBe("Next");
+  expect(config.steps![0].element).toBe(chapters[0].steps[0].target);
+  expect(config.steps![0].popover!.title).toBe(chapters[0].steps[0].title);
+  expect(config.steps![0].popover!.nextBtnText).toBe("Next");
   expect(mocks.drive).toHaveBeenCalled();
   expect(screen.getByTestId("chapter").textContent).toBe("getting-around");
 });
@@ -116,12 +127,12 @@ it("advances steps through the driver next callback", async () => {
   await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
 
   const firstConfig = mocks.driver.mock.calls[0][0];
-  await act(async () => firstConfig.onNextClick());
+  await act(async () => callHook(firstConfig.onNextClick));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(2));
 
   const secondConfig = mocks.driver.mock.calls[1][0];
-  expect(secondConfig.steps[0].popover.title).toBe(chapters[0].steps[1].title);
-  expect(secondConfig.steps[0].popover.showButtons).toEqual(["previous", "next"]);
+  expect(secondConfig.steps![0].popover!.title).toBe(chapters[0].steps[1].title);
+  expect(secondConfig.steps![0].popover!.showButtons).toEqual(["previous", "next"]);
   expect(mocks.destroy).toHaveBeenCalled();
 });
 
@@ -139,7 +150,7 @@ it("marks the chapter complete after the final step and persists it", async () =
   const stepCount = chapters[0].steps.length;
   for (let i = 0; i < stepCount; i += 1) {
     const config = mocks.driver.mock.calls[mocks.driver.mock.calls.length - 1][0];
-    await act(async () => config.onNextClick());
+    await act(async () => callHook(config.onNextClick));
     if (i < stepCount - 1) {
       await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(i + 2));
     } else {
@@ -165,9 +176,9 @@ it("exiting mid-chapter saves the resume point", async () => {
   await user.click(screen.getByTestId("start"));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
 
-  await act(async () => mocks.driver.mock.calls[0][0].onNextClick());
+  await act(async () => callHook(mocks.driver.mock.calls[0][0].onNextClick));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(2));
-  await act(async () => mocks.driver.mock.calls[1][0].onNextClick());
+  await act(async () => callHook(mocks.driver.mock.calls[1][0].onNextClick));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(3));
 
   await user.click(screen.getByTestId("exit"));
@@ -190,7 +201,7 @@ it("resumes a chapter from a saved step", async () => {
 
   await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
   const config = mocks.driver.mock.calls[0][0];
-  expect(config.steps[0].popover.title).toBe(chapters[0].steps[2].title);
+  expect(config.steps![0].popover!.title).toBe(chapters[0].steps[2].title);
 });
 
 it("exits and saves when the user navigates away mid-tour", async () => {
@@ -203,7 +214,7 @@ it("exits and saves when the user navigates away mid-tour", async () => {
   );
   await user.click(screen.getByTestId("start"));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
-  await act(async () => mocks.driver.mock.calls[0][0].onNextClick());
+  await act(async () => callHook(mocks.driver.mock.calls[0][0].onNextClick));
   await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(2));
 
   nav.pathname = "/merit";
@@ -318,4 +329,127 @@ it("fails gracefully when the driver cannot be created", async () => {
   await waitFor(() => expect(screen.getByTestId("running").textContent).toBe("false"));
   expect(warn).toHaveBeenCalled();
   warn.mockRestore();
+});
+
+// ── Popover decoration & lifecycle regressions ──
+
+it("decorates the popover DOM on render (aria, kicker, counter, progress, exit)", async () => {
+  seedTourTargets();
+  const user = userEvent.setup();
+  render(
+    <TourProvider>
+      <Probe />
+    </TourProvider>
+  );
+  await user.click(screen.getByTestId("start"));
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
+
+  const config = mocks.driver.mock.calls[0][0];
+  const wrapper = document.createElement("div");
+  const title = document.createElement("h4");
+  const footer = document.createElement("footer");
+  const footerButtons = document.createElement("span");
+  wrapper.appendChild(title);
+  wrapper.appendChild(footer);
+  footer.appendChild(footerButtons);
+  const fakePopover = { wrapper, title, footer, footerButtons } as unknown as PopoverDOM;
+
+  await act(async () => {
+    config.onPopoverRender!(fakePopover, {} as never);
+  });
+
+  expect(wrapper.getAttribute("aria-modal")).toBe("true");
+  expect(wrapper.getAttribute("role")).toBe("dialog");
+  expect(wrapper.querySelector(".tour-kicker")?.textContent).toBe(chapters[0].name);
+  expect(wrapper.querySelector(".tour-counter")?.textContent).toBe("1/5");
+  expect(wrapper.querySelector<HTMLElement>(".tour-progress span")?.style.width).toContain("20%");
+  expect(footerButtons.querySelector(".tour-exit-btn")).not.toBeNull();
+
+  footerButtons.querySelector<HTMLButtonElement>(".tour-exit-btn")!.click();
+  await waitFor(() => expect(screen.getByTestId("running").textContent).toBe("false"));
+});
+
+it("exits and saves when the user destroys the driver", async () => {
+  seedTourTargets();
+  const user = userEvent.setup();
+  render(
+    <TourProvider>
+      <Probe />
+    </TourProvider>
+  );
+  await user.click(screen.getByTestId("start"));
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
+
+  await act(async () => {
+    callHook(mocks.driver.mock.calls[0][0].onDestroyed);
+  });
+
+  expect(screen.getByTestId("running").textContent).toBe("false");
+  const saved = JSON.parse(window.localStorage.getItem("aftermediate:tour")!);
+  expect(saved.chapters["getting-around"].lastStep).toBe(0);
+  expect(saved.chapters["getting-around"].completed).toBe(false);
+});
+
+it("skips a step whose target never appears and renders the next one", async () => {
+  // Seed targets for steps 1-4 only; step 0's target never appears.
+  for (const name of ["sidebar-nav", "top-nav", "daily-sprint", "rahbar-button"]) {
+    const el = document.createElement("div");
+    el.setAttribute("data-tour", name);
+    document.body.appendChild(el);
+  }
+  vi.useFakeTimers();
+  render(
+    <TourProvider>
+      <Probe />
+    </TourProvider>
+  );
+  // Note: no userEvent here — under fake timers @testing-library/react's
+  // asyncWrapper drains microtasks with a setTimeout(0) that never fires.
+  act(() => {
+    screen.getByTestId("start").click();
+  });
+  await act(async () => {
+    vi.advanceTimersByTime(5600);
+  });
+
+  expect(mocks.driver).toHaveBeenCalled();
+  expect(mocks.driver.mock.calls[0][0].steps![0].popover!.title).toBe(chapters[0].steps[1].title);
+  vi.useRealTimers();
+});
+
+it("exits the tour on Escape and reopens the hub", async () => {
+  seedTourTargets();
+  const user = userEvent.setup();
+  render(
+    <TourProvider>
+      <Probe />
+    </TourProvider>
+  );
+  await user.click(screen.getByTestId("start"));
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
+
+  await user.keyboard("{Escape}");
+
+  expect(screen.getByTestId("running").textContent).toBe("false");
+  expect(screen.getByTestId("hub").textContent).toBe("true");
+});
+
+it("navigates steps with arrow keys", async () => {
+  seedTourTargets();
+  const user = userEvent.setup();
+  render(
+    <TourProvider>
+      <Probe />
+    </TourProvider>
+  );
+  await user.click(screen.getByTestId("start"));
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalled());
+
+  await user.keyboard("{ArrowRight}");
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(2));
+  expect(mocks.driver.mock.calls[1][0].steps![0].popover!.title).toBe(chapters[0].steps[1].title);
+
+  await user.keyboard("{ArrowLeft}");
+  await waitFor(() => expect(mocks.driver).toHaveBeenCalledTimes(3));
+  expect(mocks.driver.mock.calls[2][0].steps![0].popover!.title).toBe(chapters[0].steps[0].title);
 });

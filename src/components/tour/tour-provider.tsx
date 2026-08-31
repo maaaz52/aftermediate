@@ -24,6 +24,25 @@ interface PersistedTourState {
 
 const DEFAULT_STATE: PersistedTourState = { promptDismissed: false, chapters: {} };
 
+/** Keep only well-formed chapter entries, coercing each field to safe values. */
+function sanitizeChapters(chapters: unknown): Record<string, ChapterProgress> {
+  const out: Record<string, ChapterProgress> = {};
+  if (!chapters || typeof chapters !== "object" || Array.isArray(chapters)) return out;
+  for (const [key, entry] of Object.entries(chapters)) {
+    if (entry === null || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const candidate = entry as { completed?: unknown; lastStep?: unknown };
+    const lastStep = candidate.lastStep;
+    out[key] = {
+      completed: Boolean(candidate.completed),
+      lastStep:
+        typeof lastStep === "number" && Number.isFinite(lastStep) && lastStep >= 0
+          ? Math.floor(lastStep)
+          : 0,
+    };
+  }
+  return out;
+}
+
 function loadState(): PersistedTourState {
   if (typeof window === "undefined") return DEFAULT_STATE;
   try {
@@ -32,58 +51,65 @@ function loadState(): PersistedTourState {
     const parsed = JSON.parse(raw) as Partial<PersistedTourState>;
     return {
       promptDismissed: Boolean(parsed.promptDismissed),
-      chapters:
-        parsed.chapters && typeof parsed.chapters === "object" && !Array.isArray(parsed.chapters)
-          ? (parsed.chapters as PersistedTourState["chapters"])
-          : {},
+      chapters: sanitizeChapters(parsed.chapters),
     };
   } catch {
     return DEFAULT_STATE;
   }
 }
 
+/** The slice of driver.js 1.8.0's PopoverDOM that decoratePopover touches. */
+interface PopoverDom {
+  wrapper: HTMLElement;
+  title: HTMLElement;
+  footer: HTMLElement;
+  footerButtons: HTMLElement;
+}
+
 function decoratePopover(
-  popover: HTMLElement,
+  popover: PopoverDom,
   chapterName: string,
   index: number,
   total: number,
   onExit: () => void
 ) {
-  popover.setAttribute("role", "dialog");
-  popover.setAttribute("aria-modal", "true");
-  const title = popover.querySelector<HTMLElement>(".driver-popover-title");
-  if (title) {
+  const { wrapper, title, footerButtons } = popover;
+
+  wrapper.setAttribute("aria-modal", "true");
+  if (!wrapper.hasAttribute("role")) {
+    wrapper.setAttribute("role", "dialog");
+  }
+  // driver.js 1.8.0 already gives the title element the id "driver-popover-title"
+  // and wires the wrapper's aria-labelledby to it; only fall back to our own
+  // wiring when a title element has no id.
+  if (!title.hasAttribute("id")) {
     title.id = "tour-popover-title";
-    popover.setAttribute("aria-labelledby", "tour-popover-title");
+    wrapper.setAttribute("aria-labelledby", "tour-popover-title");
   }
 
   const kicker = document.createElement("p");
   kicker.className = "tour-kicker";
   kicker.textContent = chapterName;
-  popover.prepend(kicker);
+  wrapper.prepend(kicker);
 
   const counter = document.createElement("span");
   counter.className = "tour-counter";
   counter.textContent = `${index + 1}/${total}`;
-  popover.appendChild(counter);
+  wrapper.appendChild(counter);
 
   const progress = document.createElement("div");
   progress.className = "tour-progress";
   const fill = document.createElement("span");
   fill.style.width = `${((index + 1) / total) * 100}%`;
   progress.appendChild(fill);
-  popover.appendChild(progress);
+  wrapper.appendChild(progress);
 
-  const footer = popover.querySelector<HTMLElement>(".driver-popover-footer");
-  if (footer) {
-    const exitBtn = document.createElement("button");
-    exitBtn.type = "button";
-    exitBtn.className = "tour-exit-btn";
-    exitBtn.textContent = "Exit";
-    exitBtn.addEventListener("click", onExit);
-    const btns = footer.querySelector<HTMLElement>(".driver-popover-footer-btns") ?? footer;
-    btns.prepend(exitBtn);
-  }
+  const exitBtn = document.createElement("button");
+  exitBtn.type = "button";
+  exitBtn.className = "tour-exit-btn";
+  exitBtn.textContent = "Exit";
+  exitBtn.addEventListener("click", onExit);
+  footerButtons.prepend(exitBtn);
 }
 
 interface TourContextValue {
@@ -133,9 +159,11 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
   const stepIndexRef = React.useRef(0);
   const expectedRouteRef = React.useRef<string | null>(null);
   const prevPathnameRef = React.useRef(pathname);
+  const rahbarOpenRef = React.useRef(false);
 
   activeChapterRef.current = activeChapter;
   stepIndexRef.current = stepIndex;
+  rahbarOpenRef.current = rahbarOpen;
 
   const running = activeChapter !== null;
 
@@ -167,18 +195,15 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const patchChapter = React.useCallback(
-    (id: TourChapterId, patch: Partial<ChapterProgress>) => {
-      setState((prev) => ({
+  const patchChapter = React.useCallback((id: TourChapterId, patch: Partial<ChapterProgress>) => {
+    setState((prev) => {
+      const base = prev.chapters[id] ?? { completed: false, lastStep: 0 };
+      return {
         ...prev,
-        chapters: {
-          ...prev.chapters,
-          [id]: { completed: false, lastStep: 0, ...prev.chapters?.[id], ...patch },
-        },
-      }));
-    },
-    []
-  );
+        chapters: { ...prev.chapters, [id]: { ...base, ...patch } },
+      };
+    });
+  }, []);
 
   const focusPill = React.useCallback(() => {
     window.setTimeout(() => {
@@ -221,10 +246,12 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     setActiveChapter(null);
     setStepIndex(0);
     setHubOpen(true);
-    try {
-      document.dispatchEvent(new CustomEvent("close-rahbar"));
-    } catch {
-      /* ignore */
+    if (rahbarOpenRef.current) {
+      try {
+        document.dispatchEvent(new CustomEvent("close-rahbar"));
+      } catch {
+        /* ignore */
+      }
     }
     focusPill();
   }, [patchChapter, stopPolling, focusPill]);
@@ -250,19 +277,23 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     setStepIndex(Math.max(0, nextIndex));
   }, []);
 
-  // Core step runner: navigate → dispatch onEnter → poll for the target →
+  // Core step runner: navigate → poll for the target → dispatch onEnter →
   // render the driver instance for this single step.
   React.useEffect(() => {
     if (!activeChapter) return;
     const chapter = getChapter(activeChapter);
     if (!chapter) return;
 
-    if (stepIndex >= chapter.steps.length) {
+    const steps = chapter.steps;
+    const chapterName = chapter.name;
+    const total = steps.length;
+
+    if (stepIndex >= steps.length) {
       finishChapter(activeChapter);
       return;
     }
 
-    const step = chapter.steps[stepIndex];
+    const step = steps[stepIndex];
     const token = ++runTokenRef.current;
     expectedRouteRef.current = step.route ?? pathname;
     let cancelled = false;
@@ -270,12 +301,6 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     async function run() {
       try {
         if (step.route && step.route !== pathname) router.push(step.route);
-
-        if (step.onEnter === "open-rahbar") {
-          document.dispatchEvent(new CustomEvent("open-rahbar"));
-        } else if (step.onEnter === "close-rahbar") {
-          document.dispatchEvent(new CustomEvent("close-rahbar"));
-        }
 
         const el = await new Promise<HTMLElement | null>((resolve) => {
           const hit = document.querySelector<HTMLElement>(step.target);
@@ -306,13 +331,20 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
           return;
         }
 
+        // Dispatch after the target poll and cancellation check so a
+        // route+onEnter step fires exactly once, from the final
+        // post-navigation run.
+        if (step.onEnter === "open-rahbar") {
+          document.dispatchEvent(new CustomEvent("open-rahbar"));
+        } else if (step.onEnter === "close-rahbar") {
+          document.dispatchEvent(new CustomEvent("close-rahbar"));
+        }
+
         const { driver } = await import("driver.js");
         if (cancelled || token !== runTokenRef.current) return;
 
-        const isLast = stepIndex === chapter.steps.length - 1;
+        const isLast = stepIndex === total - 1;
         const isFirst = stepIndex === 0;
-        const chapterName = chapter.name;
-        const total = chapter.steps.length;
 
         transitionRef.current = true;
         driverRef.current?.destroy();
@@ -324,9 +356,11 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
           stageRadius: 10,
           animate: !reducedMotion,
           allowClose: true,
-          allowKeyboardControl: true,
+          // driver.js's own Tab trap and arrow handling would fight the
+          // provider's keydown control — keep them off.
+          allowKeyboardControl: false,
           popoverClass: "tour-popover",
-          onPopoverRender: (popover: HTMLElement) => {
+          onPopoverRender: (popover: PopoverDom) => {
             decoratePopover(popover, chapterName, stepIndex, total, () => exitTour());
           },
           onNextClick: () => transitionTo(stepIndex + 1),
@@ -357,6 +391,13 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         window.setTimeout(() => {
           const popover = document.querySelector<HTMLElement>(".tour-popover");
           if (!popover) return;
+          // Land initial focus on the primary action, not the prepended Exit
+          // button; fall back to the first focusable.
+          const primary = popover.querySelector<HTMLElement>(".driver-popover-next-btn");
+          if (primary) {
+            primary.focus();
+            return;
+          }
           const focusable = popover.querySelectorAll<HTMLElement>(
             'button, [href], [tabindex]:not([tabindex="-1"])'
           );
@@ -376,13 +417,27 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     };
   }, [activeChapter, stepIndex, pathname, router, reducedMotion, finishChapter, exitTour]);
 
-  // Escape exits; Tab is trapped inside the active popover.
+  // Escape exits; Tab is trapped inside the active popover; arrows navigate.
   React.useEffect(() => {
     if (!activeChapter) return;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
         exitTour();
+        return;
+      }
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        const chapter = activeChapterRef.current
+          ? getChapter(activeChapterRef.current)
+          : undefined;
+        if (!chapter) return;
+        if (event.key === "ArrowRight" && stepIndexRef.current < chapter.steps.length) {
+          event.preventDefault();
+          transitionTo(stepIndexRef.current + 1);
+        } else if (event.key === "ArrowLeft" && stepIndexRef.current > 0) {
+          event.preventDefault();
+          transitionTo(stepIndexRef.current - 1);
+        }
         return;
       }
       if (event.key !== "Tab") return;
@@ -407,7 +462,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [activeChapter, exitTour]);
+  }, [activeChapter, exitTour, transitionTo]);
 
   // User navigating away mid-tour (e.g. sidebar link) ends the chapter cleanly.
   React.useEffect(() => {
