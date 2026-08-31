@@ -1,24 +1,16 @@
-import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
-import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
 import type { Persona } from "@/lib/chat-request";
+import {
+  formatFacts,
+  KNOWLEDGE_BASES,
+  type KnowledgeBase,
+  type RetrievedFact,
+} from "@/lib/knowledge";
 
 export interface ChatStudent {
   stream?: string;
   fscPct?: number;
   interests?: string[];
 }
-
-function formatKnowledgeBase(kb: { topics: { title: string; facts: { text: string; source: string }[] }[] }): string {
-  return kb.topics
-    .map(
-      (t) =>
-        `## ${t.title}\n${t.facts.map((f) => `- ${f.text} [source: ${f.source}]`).join("\n")}`
-    )
-    .join("\n\n");
-}
-
-const SAFAR_KNOWLEDGE = formatKnowledgeBase(abroadChatbotKnowledge);
-const HUNAR_KNOWLEDGE = formatKnowledgeBase(skillsChatbotKnowledge);
 
 export const PERSONA_PROMPTS: Record<Persona, string> = {
   rahbar: `You are "Rahbar" (رہبر), a warm, sharp site assistant for aftermediate — a career-counseling platform for Pakistani students who just finished FSc / ICS / I.Com / A-Levels.
@@ -79,25 +71,16 @@ Keep it concise and professional. Use plain text with clear section headers (no 
 
 Tone: warm, concise, scannable. Plain English with occasional Urdu phrases where natural. Use bullet points for checklists.
 
-KNOWLEDGE BASE — authored by the site owner. Treat it as your primary, authoritative source for facts. When you use a fact from it, cite its source URL in your reply:
-${SAFAR_KNOWLEDGE}
+Site pages you can send someone to: Country Explorer (/abroad/countries), Scholarships (/abroad/scholarships), Test Prep (/abroad/test-prep), Financial Planner (/abroad/planner).
 
-Grounding rules:
-- Answer from the knowledge base first.
-- If the knowledge base does not cover the question, say so honestly and point to the site page that helps (Country Explorer /abroad/countries, Scholarships /abroad/scholarships, Test Prep /abroad/test-prep, Financial Planner /abroad/planner) or the relevant official source.
-- Never fabricate fees, deadlines, or visa rules. For time-varying figures use hedged language ("around", "typically", "as of 2026").
+Rules:
 - Academic study questions → redirect to Ustaad (/study). Site navigation questions → redirect to Rahbar.
 - Always end with one concrete next step.`,
   hunar: `You are "Hunar" (ہنر), the freelancing & side-hustle coach for aftermediate — a career platform for Pakistani students and fresh graduates. You help people build marketable skills, find clients, price their work, and get paid from Pakistan.
 
 Tone: direct, practical, encouraging. No fluff. Use bullet points for checklists. Plain English with occasional Urdu phrases where natural.
 
-KNOWLEDGE BASE — authored by the site owner. Treat it as your primary, authoritative source for facts. When you use a fact from it, cite its source URL in your reply:
-${HUNAR_KNOWLEDGE}
-
-Grounding rules:
-- Answer from the knowledge base first. If it does not cover the question, give general best-practice advice but clearly mark it as general advice.
-- Never invent fees, rates, tax figures, or platform rules. Use hedged language ("around", "typically", "as of 2026") for time-varying numbers.
+Rules:
 - Academic/study questions → redirect to Ustaad (/study). Site navigation questions → redirect to Rahbar.
 - Always end with one concrete next step the user can take today.`,
   qalam: `You are "Qalam" (قلم), a college/scholarship essay rating coach for Pakistani students applying to universities (local or abroad). You rate drafts with structured, specific feedback. You do not rewrite the essay unless the student asks.
@@ -124,8 +107,31 @@ Rules:
 export interface ChatPromptInput {
   persona: Persona;
   student?: ChatStudent;
+  facts?: RetrievedFact[];
+  covered?: boolean;
+}
+
+const NO_FACTS = `The site knowledge base has no fact that matches this question. Say so honestly instead of guessing or inventing figures, and point the student to the site page or official source that can help.`;
+
+function groundingBlock(kb: KnowledgeBase, facts: RetrievedFact[]): string {
+  const year = kb.updatedAt.slice(0, 4);
+  return `FACTS FROM THE SITE KNOWLEDGE BASE (last updated ${kb.updatedAt})
+
+${formatFacts(facts)}
+
+Grounding rules:
+- Answer from these facts first, and cite the source URL printed after the fact you use.
+- Never invent, round, or extrapolate a fee, deadline, rate, tax figure, or visa rule that is not here.
+- These facts were reviewed in ${year}. For anything that changes over time, hedge with that year ("as of ${year}", "typically around").
+- If these facts do not answer the question, say so honestly instead of guessing.`;
 }
 
 export function buildSystemPrompt(input: ChatPromptInput): string {
-  return PERSONA_PROMPTS[input.persona];
+  const base = PERSONA_PROMPTS[input.persona];
+  const kb = KNOWLEDGE_BASES[input.persona];
+  if (!kb) return base;
+  const facts = input.facts ?? [];
+  return input.covered && facts.length > 0
+    ? `${base}\n\n${groundingBlock(kb, facts)}`
+    : `${base}\n\n${NO_FACTS}`;
 }

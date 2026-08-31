@@ -6,6 +6,15 @@ describe("abroad-chatbot-knowledge.ts", () => {
     expect(abroadChatbotKnowledge.updatedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 
+  it("has an updatedAt recent enough to quote to students", () => {
+    // Retrieval prints this date into Safar's prompt so he can date his
+    // hedges — a forgotten bump makes every hedge sound fresher than it is.
+    const days =
+      (Date.now() - Date.parse(`${abroadChatbotKnowledge.updatedAt}T00:00:00Z`)) / 86_400_000;
+    expect(days, "re-review the facts and bump updatedAt").toBeLessThan(120);
+    expect(days).toBeGreaterThan(-1);
+  });
+
   it("has at least 8 topics with unique ids", () => {
     expect(abroadChatbotKnowledge.topics.length).toBeGreaterThanOrEqual(8);
     const ids = abroadChatbotKnowledge.topics.map((t) => t.id);

@@ -1,16 +1,13 @@
 import { google } from "@ai-sdk/google";
 import { generateText, streamText } from "ai";
-import { buildSystemPrompt, type ChatStudent } from "@/lib/chat-prompt";
-import { isPersona, type Persona } from "@/lib/chat-request";
+import { buildSystemPrompt, type ChatPromptInput } from "@/lib/chat-prompt";
+import { isPersona } from "@/lib/chat-request";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 
 export const model = google(MODEL);
 
-export interface ChatContext {
-  persona: Persona;
-  student?: ChatStudent;
-}
+export type ChatContext = ChatPromptInput;
 
 export function streamChat(
   messages: { role: "user" | "assistant"; content: string }[],

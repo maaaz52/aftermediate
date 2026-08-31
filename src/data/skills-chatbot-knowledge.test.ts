@@ -6,6 +6,15 @@ describe("skills-chatbot-knowledge.ts", () => {
     expect(skillsChatbotKnowledge.updatedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 
+  it("has an updatedAt recent enough to quote to students", () => {
+    // Retrieval prints this date into Hunar's prompt so he can date his
+    // hedges — a forgotten bump makes every hedge sound fresher than it is.
+    const days =
+      (Date.now() - Date.parse(`${skillsChatbotKnowledge.updatedAt}T00:00:00Z`)) / 86_400_000;
+    expect(days, "re-review the facts and bump updatedAt").toBeLessThan(120);
+    expect(days).toBeGreaterThan(-1);
+  });
+
   it("has at least 15 topics with unique ids and titles", () => {
     expect(skillsChatbotKnowledge.topics.length).toBeGreaterThanOrEqual(15);
     const ids = skillsChatbotKnowledge.topics.map((t) => t.id);

@@ -3,18 +3,32 @@
  *  SAFAR'S KNOWLEDGE BASE — EDIT THIS FILE TO TRAIN THE BOT
  * ============================================================
  *  HOW IT WORKS:
- *  - Every chat request injects this entire file into Safar's
- *    system prompt (see src/lib/ai.ts). Safar answers from it
- *    and cites each fact's `source` URL.
+ *  - This file is a searchable corpus, not a prompt. On each
+ *    chat request the facts are scored with BM25 and only the
+ *    handful that match the question go into Safar's system
+ *    prompt, each with its `source` URL to cite. See
+ *    src/lib/knowledge.ts (retrieval) and src/lib/chat-prompt.ts
+ *    (how the facts are rendered).
  *  - To teach Safar something new: add a fact object
  *    `{ text: "...", source: "https://..." }` inside a topic,
- *    or add a whole new topic.
+ *    or add a whole new topic. The index is built from this
+ *    file on the first request and cached per process, so there
+ *    is nothing to rebuild.
+ *  - If Safar keeps missing a question you care about, do not
+ *    reword the fact — add the student's vocabulary to ALIAS in
+ *    src/lib/knowledge.ts under this topic's id. That is the
+ *    second place you can train this bot.
+ *  - Facts in a topic tend to be retrieved together, so group by
+ *    what a student asks about, not by country.
  *  - Keep facts short and factual. Every fact MUST carry the
  *    URL it came from — Safar cites it in its answers.
- *  - After editing, restart `next dev` (the prompt is built at
- *    server start) and run `npx vitest run src/data/abroad-chatbot-knowledge.test.ts`.
- *  - DO NOT put secrets or personal data here — it is sent to
- *    the AI model with every chat message.
+ *  - Bump `updatedAt` when you review the facts: Safar's prompt
+ *    prints it so he can date his own hedges, and a test fails
+ *    once the date goes stale.
+ *  - After editing, restart `next dev` and run
+ *    `npx vitest run src/data/abroad-chatbot-knowledge.test.ts src/lib/knowledge.test.ts`.
+ *  - DO NOT put secrets or personal data here — retrieved facts
+ *    are sent to the AI model with every chat message.
  * ============================================================
  */
 

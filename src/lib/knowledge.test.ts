@@ -8,6 +8,7 @@ import {
   buildRetrievalQuery,
   formatFacts,
   retrieveFacts,
+  retrieveForMessages,
   tokenize,
   type RetrievedFact,
 } from "@/lib/knowledge";
@@ -205,6 +206,41 @@ describe("alias table", () => {
   it("reaches a fact through vocabulary the fact never uses", () => {
     const { facts } = retrieveFacts("safar", "how much cash do I park for the german residence paper");
     expect(facts.slice(0, 3).some((f) => f.topicId === "bank-statements")).toBe(true);
+  });
+});
+
+describe("retrieveForMessages", () => {
+  const turn = (role: "user" | "assistant", content: string) => ({ role, content });
+
+  it("grounds a persona on the question it was actually asked", () => {
+    const { facts, covered } = retrieveForMessages(
+      "safar",
+      [turn("user", "Hello"), turn("assistant", "Hi! Ask me about studying abroad."), turn("user", "How much money do I have to park in a blocked account for Germany?")]
+    );
+    expect(covered).toBe(true);
+    expect(facts.slice(0, 3).map((f) => f.topicId)).toContain("bank-statements");
+  });
+
+  it("hands different questions different facts", () => {
+    const money = retrieveForMessages("safar", [turn("user", "How much money do I have to park in a blocked account for Germany?")]);
+    const funding = retrieveForMessages("safar", [turn("user", "When does the Fulbright application close for Pakistani students?")]);
+    const topOf = (r: { facts: RetrievedFact[] }) => new Set(r.facts.slice(0, 3).map((f) => f.topicId));
+    const moneyTopics = topOf(money);
+    const fundingTopics = topOf(funding);
+    expect([...fundingTopics].some((t) => !moneyTopics.has(t))).toBe(true);
+    expect(funding.facts.some((f) => f.topicId === "scholarships")).toBe(true);
+    expect(money.facts.some((f) => f.topicId === "scholarships")).toBe(false);
+  });
+
+  it("returns nothing for a persona with no knowledge base", () => {
+    const out = retrieveForMessages("essay", [
+      turn("user", "How much money do I have to park in a blocked account for Germany?"),
+    ]);
+    expect(out).toEqual({ facts: [], covered: false });
+  });
+
+  it("returns nothing when the thread has no user turn", () => {
+    expect(retrieveForMessages("safar", [])).toEqual({ facts: [], covered: false });
   });
 });
 

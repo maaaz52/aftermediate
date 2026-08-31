@@ -93,7 +93,12 @@ const ID_BOOST = 2;
 const DEFAULT_K = 8;
 const DEFAULT_MIN_SCORE = 0.5;
 
-const KNOWLEDGE_BASES: Partial<Record<Persona, { topics: KnowledgeTopic[] }>> = {
+export interface KnowledgeBase {
+  updatedAt: string;
+  topics: KnowledgeTopic[];
+}
+
+export const KNOWLEDGE_BASES: Partial<Record<Persona, KnowledgeBase>> = {
   safar: abroadChatbotKnowledge,
   hunar: skillsChatbotKnowledge,
 };
@@ -232,6 +237,14 @@ export function buildRetrievalQuery(
     .slice(-3)
     .map((m) => m.content)
     .join(" ");
+}
+
+export function retrieveForMessages(
+  persona: Persona,
+  messages: { role: "user" | "assistant"; content: string }[]
+): { facts: RetrievedFact[]; covered: boolean } {
+  if (!KNOWLEDGE_BASES[persona]) return { facts: [], covered: false };
+  return retrieveFacts(persona, buildRetrievalQuery(messages));
 }
 
 export function formatFacts(facts: RetrievedFact[]): string {

@@ -1,5 +1,6 @@
 import { streamChat } from "@/lib/ai";
 import { isPersona } from "@/lib/chat-request";
+import { retrieveForMessages } from "@/lib/knowledge";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -16,7 +17,8 @@ export async function POST(req: Request) {
       });
     }
 
-    const result = streamChat(messages, { persona });
+    const { facts, covered } = retrieveForMessages(persona, messages);
+    const result = streamChat(messages, { persona, facts, covered });
     return result.toTextStreamResponse();
   } catch (err) {
     console.error("chat error", err);
