@@ -21,6 +21,7 @@ import {
   Handshake,
   Landmark,
   Medal,
+  MessageSquareHeart,
   MessageSquareText,
   MonitorPlay,
   PenLine,
@@ -102,6 +103,7 @@ export const groups: NavGroup[] = [
     label: "Community",
     links: [
       { href: "/mentors", label: "Mentor Match", icon: Users },
+      { href: "/feedback", label: "Your Voice", icon: MessageSquareHeart },
     ],
   },
   {
