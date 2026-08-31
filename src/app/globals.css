@@ -170,9 +170,23 @@ body {
   box-shadow: 0 12px 40px rgba(25, 31, 44, 0.18);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  max-width: 320px;
+  max-width: min(320px, calc(100vw - 32px));
   padding: 16px 18px;
-  position: relative;
+  /* Float the popover at the top of every page. driver.js writes inline
+     top/bottom/left per highlighted element, so !important is required to
+     keep it pinned (its per-element placement landed it off-screen for
+     full-height anchors like the dashboard wrapper and sidebar nav). */
+  position: fixed !important;
+  top: 76px !important;
+  left: 50% !important;
+  bottom: auto !important;
+  transform: translateX(-50%) !important;
+}
+
+/* The arrow points at the highlighted element; with a fixed top popover it
+   would point at nothing, so hide it. */
+.tour-popover .driver-popover-arrow {
+  display: none;
 }
 
 .tour-popover .driver-popover-title {
@@ -259,7 +273,8 @@ body {
 .tour-popover .driver-popover-next-btn {
   background: var(--color-saffron);
   border: none;
-  color: var(--color-background);
+  color: #fff;
+  font-weight: 700;
 }
 
 .tour-popover .tour-exit-btn {
