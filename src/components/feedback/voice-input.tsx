@@ -1,7 +1,7 @@
 "use client";
 
 import { Mic } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type SpeechRecognitionLike = {
   start(): void;
@@ -22,6 +22,10 @@ export function VoiceInput({ onResult, disabled }: { onResult: (text: string) =>
   const [supported] = useState(() => getSpeechRecognition() !== null);
   const [listening, setListening] = useState(false);
   const recRef = useRef<SpeechRecognitionLike | null>(null);
+
+  useEffect(() => {
+    return () => recRef.current?.stop();
+  }, []);
 
   if (!supported) return null;
 

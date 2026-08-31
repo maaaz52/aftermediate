@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { FileUp, X } from "lucide-react";
 import { mediaKindFor, validateMedia, type MediaKind } from "@/lib/feedback-model";
 
@@ -14,29 +14,24 @@ export function MediaUploader({
   onChange: (items: MediaItem[]) => void;
 }) {
   const [error, setError] = useState<string | null>(null);
-  const urlsRef = useRef<string[]>([]);
-
-  useEffect(() => {
-    const urls = urlsRef.current;
-    return () => urls.forEach((u) => URL.revokeObjectURL(u));
-  }, []);
 
   const addFiles = (files: FileList | null) => {
     if (!files) return;
+    let sawError = false;
     const next: MediaItem[] = [];
     for (const f of Array.from(files)) {
       const v = validateMedia(f);
       if (!v.ok) {
+        sawError = true;
         setError(v.error);
         continue;
       }
       const kind = mediaKindFor(f)!;
       const url = URL.createObjectURL(f);
-      urlsRef.current.push(url);
       next.push({ file: f, kind, url });
     }
     if (next.length) {
-      setError(null);
+      if (!sawError) setError(null);
       onChange([...items, ...next]);
     }
   };
@@ -48,7 +43,7 @@ export function MediaUploader({
 
   return (
     <div>
-      <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-[#333] bg-[#111118] px-4 py-6 text-center transition-colors hover:border-blue-500/50">
+      <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-[#333] bg-[#111118] px-4 py-6 text-center transition-colors hover:border-blue-500/50 focus-within:border-blue-500/50">
         <FileUp className="h-6 w-6 text-faint" aria-hidden />
         <span className="text-sm font-medium text-[#a1a1b5]">Attach a screenshot, clip, or voice note</span>
         <span className="font-mono text-xs text-faint">images ≤ 5MB · video/audio ≤ 25MB</span>
@@ -76,6 +71,7 @@ export function MediaUploader({
           {items.map((item) => (
             <li key={item.url} className="flex items-center gap-3 rounded-lg border border-[#222] bg-[#111118] p-3">
               {item.kind === "image" && (
+                // eslint-disable-next-line @next/next/no-img-element -- blob: URLs are transient, next/image provides no benefit
                 <img src={item.url} alt="" className="h-14 w-14 rounded object-cover" />
               )}
               {item.kind === "video" && (

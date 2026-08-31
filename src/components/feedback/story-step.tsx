@@ -29,7 +29,11 @@ export function StoryStep({
   const [voiceTarget, setVoiceTarget] = useState<"surprised" | "mindset">("surprised");
 
   const toggleCard = (card: "surprised" | "mindset") =>
-    setOpenCard((c) => (c === card ? null : card));
+    setOpenCard((c) => {
+      const next = c === card ? null : card;
+      if (next) setVoiceTarget(next);
+      return next;
+    });
 
   const handleVoice = (text: string) => {
     if (voiceTarget === "surprised") onSurprised(`${surprised} ${text}`.trim());
