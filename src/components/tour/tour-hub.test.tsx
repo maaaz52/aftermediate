@@ -167,3 +167,22 @@ it("resumes a mid-chapter tour from the saved step", async () => {
   expect(config.steps![0].popover!.title).toBe(chapters[1].steps[3].title);
   expect(nav.router.push).toHaveBeenCalledWith("/pakistan/scholarships");
 });
+
+it("hides the pill while the Rahbar drawer is open", () => {
+  render(
+    <TourProvider>
+      <TourHub />
+    </TourProvider>
+  );
+  expect(screen.getByRole("button", { name: /guided tour/i })).toBeTruthy();
+
+  act(() => {
+    document.dispatchEvent(new CustomEvent("rahbar-open"));
+  });
+  expect(screen.queryByRole("button", { name: /guided tour/i })).toBeNull();
+
+  act(() => {
+    document.dispatchEvent(new CustomEvent("rahbar-closed"));
+  });
+  expect(screen.getByRole("button", { name: /guided tour/i })).toBeTruthy();
+});

@@ -42,10 +42,19 @@ export function RahbarDrawer() {
   const bottomRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    const handler = () => setOpen(true);
-    document.addEventListener("open-rahbar", handler);
-    return () => document.removeEventListener("open-rahbar", handler);
+    const open = () => setOpen(true);
+    const close = () => setOpen(false);
+    document.addEventListener("open-rahbar", open);
+    document.addEventListener("close-rahbar", close);
+    return () => {
+      document.removeEventListener("open-rahbar", open);
+      document.removeEventListener("close-rahbar", close);
+    };
   }, []);
+
+  React.useEffect(() => {
+    document.dispatchEvent(new CustomEvent(open ? "rahbar-open" : "rahbar-closed"));
+  }, [open]);
 
   React.useEffect(() => {
     try {
