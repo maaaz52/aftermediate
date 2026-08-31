@@ -270,10 +270,15 @@ body {
   color: var(--color-muted);
 }
 
-.tour-popover .driver-popover-next-btn {
-  background: var(--color-saffron);
+.tour-popover .driver-popover-next-btn,
+.tour-popover .driver-popover-next-btn:hover,
+.tour-popover .driver-popover-next-btn:focus {
+  /* !important + explicit states: driver.css's .driver-popover-footer-btn:hover
+     loads later and would otherwise flip the button to a light bg with light
+     text, making it invisible at click time. */
+  background: #2f55d4 !important;
+  color: #fff !important;
   border: none;
-  color: #fff;
   font-weight: 700;
 }
 
