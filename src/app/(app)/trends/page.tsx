@@ -27,7 +27,7 @@ export default function TrendsPage() {
   const incomeData = data.jobs.avgIncome.map((d) => ({ year: d.year, value: d.value / 1000 }));
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="trends" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="info">Trends</Badge>
         <span className="font-mono text-xs text-faint">live market signal · sourced</span>

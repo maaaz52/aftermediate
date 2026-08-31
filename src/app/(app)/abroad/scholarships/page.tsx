@@ -5,7 +5,7 @@ import { AbroadScholarshipsExplorer } from "@/components/abroad/abroad-scholarsh
 
 export default function AbroadScholarshipsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="abroad-scholarships" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Education Abroad</Badge>
         <span className="font-mono text-xs text-faint">funding your degree</span>

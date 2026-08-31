@@ -94,7 +94,7 @@ export default function ConvincePage() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="convince" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="danger">Convince</Badge>
         <span className="font-mono text-xs text-faint">worth · parents · writing</span>

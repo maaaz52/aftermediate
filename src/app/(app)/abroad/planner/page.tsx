@@ -5,7 +5,7 @@ import { FinancialPlanner } from "@/components/abroad/financial-planner";
 
 export default function AbroadPlannerPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="planner" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Education Abroad</Badge>
         <span className="font-mono text-xs text-faint">know your numbers</span>

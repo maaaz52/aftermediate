@@ -103,7 +103,7 @@ export function DailySprint() {
     }, {});
     const canStart = now !== 0 && todayQuestions.length >= SPRINT_SIZE;
     return (
-      <div className="card-glass rounded-2xl p-5">
+      <div className="card-glass rounded-2xl p-5" data-tour="daily-sprint">
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-base font-bold text-ink">⚡ Daily Sprint</p>

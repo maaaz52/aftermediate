@@ -25,7 +25,7 @@ export default function CareerPage() {
     filter === "all" ? data.majors : getMajorsByStream(filter);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="career" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="violet">Career</Badge>
         <span className="font-mono text-xs text-faint">discover · simulate · skill up</span>

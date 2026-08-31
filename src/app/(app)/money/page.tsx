@@ -28,7 +28,7 @@ export default function MoneyPage() {
   const aff = affordability(budget);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="money" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="emerald">Money</Badge>
         <span className="font-mono text-xs text-faint">budget · abroad · scholarships</span>

@@ -86,7 +86,10 @@ export default function StudyPage() {
   }
 
   return (
-    <div className="mx-auto flex h-[calc(100vh-4rem)] max-w-4xl flex-col px-4 py-6 sm:px-6">
+    <div
+      data-tour="ustaad-ai"
+      className="mx-auto flex h-[calc(100vh-4rem)] max-w-4xl flex-col px-4 py-6 sm:px-6"
+    >
       <div className="flex items-center gap-3">
         <div className="grid h-12 w-12 place-items-center rounded-2xl bg-info/10 text-info">
           <BookOpen className="h-6 w-6" />

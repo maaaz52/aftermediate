@@ -5,7 +5,7 @@ import { SafarAssistant } from "@/components/abroad/safar-assistant";
 
 export default function AbroadAssistantPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="safar-ai" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Education Abroad</Badge>
         <span className="font-mono text-xs text-faint">ask anything</span>

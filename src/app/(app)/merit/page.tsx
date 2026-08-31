@@ -58,7 +58,7 @@ export default function MeritPage() {
   const tracked = new Set(watchlist.map((e) => `${e.universityId}:${e.programName}`));
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="merit" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="saffron">Merit</Badge>
         <span className="font-mono text-xs text-faint">the trust core</span>

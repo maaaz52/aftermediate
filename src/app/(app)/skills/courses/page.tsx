@@ -3,7 +3,7 @@ import { CourseExplorer } from "@/components/skills/course-explorer";
 
 export default function SkillsCoursesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
+    <div data-tour="courses" className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
       <div className="flex items-center gap-3">
         <div className="grid h-12 w-12 place-items-center rounded-2xl bg-accent/10 text-accent">
           <MonitorPlay className="h-6 w-6" />

@@ -18,7 +18,10 @@ export function TopNav() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 h-16 shrink-0 border-b border-line bg-background/90 backdrop-blur-md">
+      <header
+        className="sticky top-0 z-40 h-16 shrink-0 border-b border-line bg-background/90 backdrop-blur-md"
+        data-tour="top-nav"
+      >
         <div className="flex h-full items-center justify-between gap-4 px-6">
           <Link href="/">
             <Brand />

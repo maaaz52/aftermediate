@@ -24,7 +24,7 @@ export default function DashboardPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <div className="animate-reveal">
+      <div className="animate-reveal" data-tour="dashboard-welcome">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="saffron">{STREAM_LABEL[stream]}</Badge>
           {fscPct > 0 && <Badge variant="emerald" className="font-mono">{fscPct.toFixed(1)}%</Badge>}

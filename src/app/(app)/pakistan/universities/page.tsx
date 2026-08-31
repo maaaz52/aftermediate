@@ -5,7 +5,7 @@ import { UniversitiesExplorer } from "@/components/pakistan/universities-explore
 
 export default function PakistanUniversitiesPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="universities" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Pakistan</Badge>
         <span className="font-mono text-xs text-faint">education at home</span>

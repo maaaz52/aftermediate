@@ -118,7 +118,7 @@ export function Sidebar() {
 
   return (
     <aside className="fixed inset-y-0 left-0 z-40 flex w-72 flex-col border-r border-line bg-surface max-lg:hidden">
-      <nav className="flex-1 overflow-y-auto px-3 py-4">
+      <nav className="flex-1 overflow-y-auto px-3 py-4" data-tour="sidebar-nav">
         {groups.map((group) => (
           <div key={group.label ?? "core"} className={group.label ? "mt-6" : ""}>
             {group.label && (
@@ -151,6 +151,7 @@ export function Sidebar() {
 
         <button
           type="button"
+          data-tour="rahbar-button"
           onClick={() => document.dispatchEvent(new CustomEvent("open-rahbar"))}
           className="mt-1 flex w-full items-center gap-3 rounded-lg border border-saffron/30 bg-saffron/5 px-3 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/10"
         >

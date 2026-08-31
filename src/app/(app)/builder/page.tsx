@@ -5,7 +5,7 @@ import { Builder } from "@/components/builder/builder";
 
 export default function BuilderPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div data-tour="cv-builder" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="violet">CV Builder</Badge>
         <span className="font-mono text-xs text-faint">polish · quantify · impress</span>
