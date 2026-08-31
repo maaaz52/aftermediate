@@ -2,13 +2,14 @@ import { google } from "@ai-sdk/google";
 import { generateText, streamText } from "ai";
 import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
 import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
+import { isPersona, type Persona } from "@/lib/chat-request";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 
 export const model = google(MODEL);
 
 export interface ChatContext {
-  persona: "rahbar" | "study" | "essay" | "cv" | "safar" | "hunar" | "qalam";
+  persona: Persona;
   student?: {
     stream?: string;
     fscPct?: number;
@@ -133,6 +134,9 @@ export function streamChat(
   messages: { role: "user" | "assistant"; content: string }[],
   context: ChatContext
 ) {
+  if (!isPersona(context.persona)) {
+    throw new Error(`Unknown persona: ${String(context.persona)}`);
+  }
   return streamText({
     model,
     system: PERSONA_PROMPTS[context.persona],
