@@ -57,3 +57,52 @@ describe("FeedbackJourney", () => {
     expect(screen.queryByText(/thank you/i)).not.toBeInTheDocument();
   });
 });
+
+describe("FeedbackJourney — full path", () => {
+  it("walks through all steps and lands on the celebration with a personalized greeting", async () => {
+    const user = userEvent.setup();
+    submitReview.mockClear();
+    submitReview.mockResolvedValue({ ok: true, id: "r1" });
+    render(<FeedbackJourney />);
+    await user.click(screen.getByRole("button", { name: /loved it/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    const slider = screen.getByRole("slider", { name: /rating/i });
+    await user.click(slider);
+    await user.keyboard("{ArrowRight}{ArrowRight}");
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /next/i })); // story (empty) → step 4
+    await user.click(screen.getByRole("button", { name: /send your voice/i }));
+    await waitFor(() => expect(screen.getByText(/thank you, hira/i)).toBeInTheDocument());
+    expect(confetti).toHaveBeenCalled();
+    expect(submitReview).toHaveBeenCalledTimes(1);
+  });
+
+  it("shows sentiment badges and tone-matched closing on the celebration", async () => {
+    const user = userEvent.setup();
+    submitReview.mockClear();
+    submitReview.mockResolvedValue({ ok: true, id: "r1" });
+    render(<FeedbackJourney />);
+    await user.click(screen.getByRole("button", { name: /frustrated/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /send your voice/i }));
+    await waitFor(() => expect(screen.getAllByText(/we hear you/i).length).toBeGreaterThan(0));
+    expect(screen.getByText(/critical/i)).toBeInTheDocument();
+  });
+
+  it("shows a moderation note on the celebration when media was attached", async () => {
+    const user = userEvent.setup();
+    submitReview.mockClear();
+    submitReview.mockResolvedValue({ ok: true, id: "r1" });
+    render(<FeedbackJourney />);
+    await user.click(screen.getByRole("button", { name: /loved it/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    const input = screen.getByLabelText(/attach media/i);
+    await user.upload(input, new File(["x"], "shot.png", { type: "image/png" }));
+    await user.click(screen.getByRole("button", { name: /next/i }));
+    await user.click(screen.getByRole("button", { name: /send your voice/i }));
+    await waitFor(() => expect(screen.getByText(/media is in review/i)).toBeInTheDocument());
+  });
+});
