@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { PERSONAS, isPersona } from "@/lib/chat-request";
-import { PERSONA_PROMPTS, streamChat } from "@/lib/ai";
+import { PERSONA_PROMPTS } from "@/lib/chat-prompt";
+import { streamChat } from "@/lib/ai";
 
 describe("isPersona", () => {
   it("accepts every allowlisted persona", () => {
