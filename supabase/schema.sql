@@ -184,7 +184,7 @@ alter table public.feature_requests enable row level security;
 alter table public.feature_votes enable row level security;
 
 create policy "reviews_select" on public.reviews for select using (auth.uid() = user_id or status = 'published');
-create policy "reviews_insert_own" on public.reviews for insert with check (auth.uid() = user_id);
+create policy "reviews_insert_own" on public.reviews for insert with check (auth.uid() = user_id and status = 'pending');
 create policy "reviews_update_own" on public.reviews for update using (auth.uid() = user_id);
 create policy "reviews_delete_own" on public.reviews for delete using (auth.uid() = user_id);
 
@@ -196,7 +196,7 @@ create policy "review_media_insert_own" on public.review_media for insert with c
 );
 
 create policy "feature_requests_select" on public.feature_requests for select using (auth.role() = 'authenticated');
-create policy "feature_requests_insert_own" on public.feature_requests for insert with check (auth.uid() = user_id);
+create policy "feature_requests_insert_own" on public.feature_requests for insert with check (auth.uid() = user_id and status = 'open' and votes_count = 0);
 create policy "feature_requests_update_own" on public.feature_requests for update using (auth.uid() = user_id);
 
 create policy "feature_votes_select_own" on public.feature_votes for select using (auth.uid() = user_id);
