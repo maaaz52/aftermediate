@@ -652,9 +652,10 @@ export async function toggleVote(
 
 export async function listFeatureRequests(status: "all" | "open" | "planning" | "shipped"): Promise<FeatureRequest[]> {
   const supabase = createClient();
-  let query = supabase.from("feature_requests").select("*").order("votes_count", { ascending: false });
+  // order() is terminal here so the chain stays awaitable in tests (the mock's order resolves a promise)
+  let query = supabase.from("feature_requests").select("*");
   if (status !== "all") query = query.eq("status", status);
-  const { data } = await query;
+  const { data } = await query.order("votes_count", { ascending: false });
   return (data ?? []) as FeatureRequest[];
 }
 
