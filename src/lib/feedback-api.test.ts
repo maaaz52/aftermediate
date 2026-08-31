@@ -16,6 +16,12 @@ const s = vi.hoisted(() => ({
   insertError: null as null | { message: string },
   requestRows: [] as Record<string, unknown>[],
   chain: [] as string[],
+  lastInsert: null as unknown,
+  lastEq: null as [string, unknown] | null,
+  reviewInsertError: null as null | { message: string },
+  mediaInsertError: null as null | { message: string },
+  voteInsertError: null as null | { message: string },
+  voteDeleteError: null as null | { message: string },
 }));
 
 vi.mock("@/lib/supabase/client", () => ({
@@ -31,8 +37,11 @@ vi.mock("@/lib/supabase/client", () => ({
     from: vi.fn((table: string) => {
       s.chain.push(`from:${table}`);
       const q = {
-        insert: vi.fn(() => {
+        insert: vi.fn((row?: unknown) => {
           s.chain.push("insert");
+          s.lastInsert = row;
+          if (table === "review_media" && s.mediaInsertError) return { error: s.mediaInsertError };
+          if (table === "feature_votes" && s.voteInsertError) return { error: s.voteInsertError };
           return q;
         }),
         select: vi.fn(() => {
@@ -47,8 +56,10 @@ vi.mock("@/lib/supabase/client", () => ({
           s.chain.push("maybeSingle");
           return { data: s.voteRow, error: null };
         }),
-        eq: vi.fn(() => {
+        eq: vi.fn((col: string, val: unknown) => {
           s.chain.push("eq");
+          s.lastEq = [col, val];
+          if (col === "id" && s.voteDeleteError) return { error: s.voteDeleteError };
           return q;
         }),
         delete: vi.fn(() => {
@@ -73,6 +84,13 @@ beforeEach(() => {
   s.uploadError = null;
   s.insertError = null;
   s.requestRows = [{ id: "f1", name: "Dark mode", votes_count: 4, status: "open" }];
+  s.lastInsert = null;
+  s.lastEq = null;
+  s.reviewInsertError = null;
+  s.mediaInsertError = null;
+  s.voteInsertError = null;
+  s.voteDeleteError = null;
+  s.chain = [];
 });
 
 describe("submitReview", () => {
@@ -99,12 +117,24 @@ describe("submitReview", () => {
     expect(s.chain).toContain("insert");
     expect(s.chain).toContain("select");
     expect(s.chain).toContain("single");
+    expect(s.lastInsert).toEqual({
+      user_id: "u1",
+      tone: "loved",
+      rating: 9,
+      review_text: "Great",
+      surprised: "",
+      mindset: "",
+      recommend_to: ["students"],
+      sentiment_tag: "highly-positive",
+      sentiment_score: 92,
+    });
   });
 
   it("uploads media and inserts media rows after the review", async () => {
     const file = new File(["x"], "shot.png", { type: "image/png" });
     await submitReview(payload, [{ file, kind: "image" as MediaKind }]);
     expect(s.chain.filter((c) => c === "from:review_media").length).toBe(1);
+    expect(s.lastInsert).toMatchObject({ review_id: "r1", media_type: "image", file_name: "shot.png" });
   });
 
   it("returns upload errors", async () => {
@@ -113,6 +143,21 @@ describe("submitReview", () => {
     const r = await submitReview(payload, [{ file, kind: "image" as MediaKind }]);
     expect(r.ok).toBe(false);
     if (!r.ok) expect(r.error).toContain("quota exceeded");
+  });
+
+  it("returns review insert errors", async () => {
+    s.reviewResult = { error: { message: "db down" }, data: null };
+    const r = await submitReview(payload, []);
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(r.error).toContain("db down");
+  });
+
+  it("returns media row insert errors", async () => {
+    s.mediaInsertError = { message: "row failed" };
+    const file = new File(["x"], "shot.png", { type: "image/png" });
+    const r = await submitReview(payload, [{ file, kind: "image" as MediaKind }]);
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(r.error).toContain("row failed");
   });
 });
 
@@ -137,12 +182,28 @@ describe("toggleVote", () => {
     s.user = null;
     expect((await toggleVote("f1")).ok).toBe(false);
   });
+
+  it("returns vote insert errors", async () => {
+    s.voteInsertError = { message: "duplicate" };
+    const r = await toggleVote("f1");
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(r.error).toContain("duplicate");
+  });
+
+  it("returns vote delete errors", async () => {
+    s.voteRow = { id: "v1" };
+    s.voteDeleteError = { message: "forbidden" };
+    const r = await toggleVote("f1");
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(r.error).toContain("forbidden");
+  });
 });
 
 describe("listFeatureRequests", () => {
   it("filters by status", async () => {
     await listFeatureRequests("open");
     expect(s.chain).toContain("order");
+    expect(s.lastEq).toEqual(["status", "open"]);
   });
 });
 

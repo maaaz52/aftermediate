@@ -162,7 +162,8 @@ create table if not exists public.feature_votes (
 );
 
 -- votes counter
-create or replace function public.bump_votes_count() returns trigger as $$
+create or replace function public.bump_votes_count() returns trigger
+  set search_path = public as $$
 begin
   if tg_op = 'INSERT' then
     update public.feature_requests set votes_count = votes_count + 1 where id = new.feature_id;
@@ -201,6 +202,12 @@ create policy "feature_requests_update_own" on public.feature_requests for updat
 create policy "feature_votes_select_own" on public.feature_votes for select using (auth.uid() = user_id);
 create policy "feature_votes_insert_own" on public.feature_votes for insert with check (auth.uid() = user_id);
 create policy "feature_votes_delete_own" on public.feature_votes for delete using (auth.uid() = user_id);
+
+-- users may update only their own rows' editable columns — never server-controlled ones
+revoke update on public.reviews from anon, authenticated;
+grant update (review_text, surprised, mindset, recommend_to, tone, rating) on public.reviews to authenticated;
+revoke update on public.feature_requests from anon, authenticated;
+grant update (name, description, use_case, priority) on public.feature_requests to authenticated;
 
 -- Storage bucket for review media
 insert into storage.buckets (id, name, public)
