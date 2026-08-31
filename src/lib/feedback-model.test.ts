@@ -69,6 +69,10 @@ describe("analyzeSentiment", () => {
     expect(analyzeSentiment("liked", 5).score).toBe(70);
     expect(analyzeSentiment("meh", 5).score).toBe(50);
     expect(analyzeSentiment("disappointed", 5).score).toBe(30);
+    expect(analyzeSentiment("loved", 5).tag).toBe("highly-positive");
+    expect(analyzeSentiment("liked", 5).tag).toBe("positive");
+    expect(analyzeSentiment("meh", 5).tag).toBe("constructive");
+    expect(analyzeSentiment("disappointed", 5).tag).toBe("critical");
   });
 
   it("summarizes with rating extremes first", () => {

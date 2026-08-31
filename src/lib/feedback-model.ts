@@ -26,8 +26,8 @@ export type PriorityId = (typeof PRIORITIES)[number]["id"];
 export type SentimentTag = "highly-positive" | "positive" | "constructive" | "critical";
 export type SentimentResult = { tag: SentimentTag; score: number; summary: string };
 
-const POSITIVE_WORDS = ["amazing", "awesome", "great", "love", "loved", "excellent", "fantastic", "incredible", "helpful", "best"];
-const NEGATIVE_WORDS = ["bad", "terrible", "awful", "worst", "hate", "broke", "broken", "confusing", "useless", "disappointing"];
+const POSITIVE_WORDS = ["amazing", "awesome", "great", "love", "excellent", "fantastic", "incredible", "helpful", "best"];
+const NEGATIVE_WORDS = ["bad", "terrible", "awful", "worst", "hate", "broke", "confusing", "useless", "disappointing"];
 const CONSTRUCTIVE_CUES = ["could improve", "suggestion", "maybe", "but", "however", "would be better"];
 
 const TONE_BASE: Record<ToneId, number> = {
