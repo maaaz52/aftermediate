@@ -15,7 +15,7 @@ import {
   attemptsFor,
   mockAttempts,
 } from "@/lib/practice";
-import type { PracticeBank } from "@/lib/practice";
+import type { CatalogVariant, PracticeBank } from "@/lib/practice";
 import type { EntryTest, Stream } from "@/lib/types";
 
 // ---------------------------------------------------------------------------
@@ -43,17 +43,41 @@ const CATEGORY_LABEL: Record<string, string> = {
 function ReadyCard({
   test,
   bank,
+  variants,
   basePath,
 }: {
   test: EntryTest;
-  bank: PracticeBank;
+  bank: PracticeBank | null;
+  variants: CatalogVariant[];
   basePath: string;
 }) {
   const { profile } = useStudent();
   const mockHistory = mockAttempts(profile.practice);
   const best = bestPercent(mockHistory, test.id);
   const attempts = attemptsFor(mockHistory, test.id);
-  const hasNegative = bank.marking.negativeMarks > 0;
+  const hasNegative = bank ? bank.marking.negativeMarks > 0 : false;
+  const [open, setOpen] = React.useState(false);
+  const pickerRef = React.useRef<HTMLDivElement>(null);
+
+  // Multi-paper tests (e.g. NUMS Test 1–4) show a numbered picker: the parent
+  // bank first (if any), then every variant — labelled only "Test N".
+  const papers = [
+    ...(bank ? [{ testId: test.id }] : []),
+    ...variants.map((v) => ({ testId: v.testId })),
+  ].map((p, i) => ({ testId: p.testId, label: `Test ${i + 1}` }));
+  const hasPicker = papers.length > 1;
+
+  // Close the picker on outside click.
+  React.useEffect(() => {
+    if (!open) return;
+    function onDocClick(e: MouseEvent) {
+      if (pickerRef.current && !pickerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, [open]);
 
   return (
     <div className="card-glass rounded-2xl p-5">
@@ -66,15 +90,17 @@ function ReadyCard({
             ? `${test.pattern.length} sections`
             : "—"}
         </Badge>
-        <span className="text-xs text-muted">{bank.questions.length} questions</span>
-        <span className="text-xs text-muted">{bank.durationMinutes} min</span>
+        <span className="text-xs text-muted">{papers.length > 1 ? `${papers.length} papers` : `${bank?.questions.length ?? 0} questions`}</span>
+        <span className="text-xs text-muted">{bank?.durationMinutes ?? 0} min</span>
       </div>
 
       <div className="mt-2">
         {hasNegative ? (
           <Badge variant="danger">Negative marking</Badge>
-        ) : (
+        ) : bank ? (
           <p className="line-clamp-2 text-xs text-muted">{bank.marking.note}</p>
+        ) : (
+          <p className="line-clamp-2 text-xs text-muted">{test.note}</p>
         )}
       </div>
 
@@ -86,11 +112,33 @@ function ReadyCard({
       )}
 
       <div className="mt-4">
-        <Link href={`${basePath}/${test.id}`}>
-          <Button type="button" variant="default" size="sm">
-            Start test &rarr;
-          </Button>
-        </Link>
+        {hasPicker ? (
+          <div ref={pickerRef} className="relative inline-block">
+            <Button type="button" variant="default" size="sm" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
+              Start test {open ? "▴" : "▾"}
+            </Button>
+            {open && (
+              <div className="absolute left-0 z-20 mt-2 w-40 rounded-xl border border-line bg-surface p-1.5 shadow-xl">
+                {papers.map((p) => (
+                  <Link
+                    key={p.testId}
+                    href={`${basePath}/${p.testId}`}
+                    onClick={() => setOpen(false)}
+                    className="block rounded-lg px-3 py-2 text-sm font-medium text-ink transition-colors hover:bg-surface-2"
+                  >
+                    {p.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <Link href={`${basePath}/${test.id}`}>
+            <Button type="button" variant="default" size="sm">
+              Start test &rarr;
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -143,7 +191,10 @@ export function PracticeCatalog({
   const ready = items.filter((i) => i.status === "ready");
   const inPrep = items.filter((i) => i.status === "preparation");
   const totalQs = ready.reduce(
-    (sum, i) => sum + (i.bank?.questions.length ?? 0),
+    (sum, i) =>
+      sum +
+      (i.bank?.questions.length ?? 0) +
+      i.variants.reduce((s, v) => s + v.questionCount, 0),
     0,
   );
 
@@ -254,7 +305,8 @@ export function PracticeCatalog({
             <ReadyCard
               key={item.test.id}
               test={item.test}
-              bank={item.bank!}
+              bank={item.bank}
+              variants={item.variants}
               basePath={basePath}
             />
           ) : (

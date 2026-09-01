@@ -454,6 +454,45 @@
         "https://www.hec.gov.pk/"
       ],
       "note": "100-mark paper: 75 MCQs plus essay (15 marks) and personal statement (10 marks); passing mark is 50. Pattern per the HEC LAT notification; HEC states the LAT result is valid for two years."
+    },
+    {
+      "id": "nums",
+      "name": "NUMS — National University of Medical Sciences Entry Test",
+      "short": "NUMS",
+      "streams": ["pre-medical", "alevel"],
+      "conductingBody": "National University of Medical Sciences (NUMS)",
+      "acceptedBy": [
+        "NUMS constituent and affiliated medical and dental colleges",
+        "Public-sector medical colleges that admit through the NUMS entry test"
+      ],
+      "fee": "Announced per cycle (approx. PKR 4,500–6,500 for local candidates)",
+      "frequency": "Once a year (summer test window)",
+      "validity": "Valid for the admission cycle in which it is taken",
+      "pattern": [
+        { "section": "Biology", "questions": 55, "marks": 55, "time": "3 hours (180 minutes, whole paper)" },
+        { "section": "Chemistry", "questions": 40, "marks": 40 },
+        { "section": "Physics", "questions": 40, "marks": 40 },
+        { "section": "English", "questions": 15, "marks": 15 },
+        { "section": "Psychological", "questions": 50, "marks": 50 }
+      ],
+      "syllabus": [
+        { "subject": "Biology", "topics": ["Cell biology and biological molecules", "Human physiology: circulation, respiration, digestion, homeostasis", "Coordination, reproduction, inheritance and evolution", "Biotechnology and diversity"] },
+        { "subject": "Chemistry", "topics": ["Stoichiometry, atomic structure and bonding", "Physical chemistry: gases, equilibrium, kinetics, thermochemistry", "Organic chemistry and functional groups", "Electrochemistry and industrial chemistry"] },
+        { "subject": "Physics", "topics": ["Force, motion, work and energy", "Waves, sound and fluid dynamics", "Electrostatics, current electricity and electromagnetism", "Modern physics"] },
+        { "subject": "English", "topics": ["Reading comprehension and vocabulary", "Grammar and sentence structure", "Punctuation and usage"] },
+        { "subject": "Psychological", "topics": ["Logical reasoning", "Analogy and pattern recognition", "Critical thinking"] }
+      ],
+      "howToApply": [
+        "Register online on the official NUMS admission portal when the cycle opens",
+        "Fill the application form and choose your preferred test city",
+        "Upload your photograph and required documents",
+        "Pay the registration fee and download your admit card"
+      ],
+      "sourceUrls": [
+        "https://www.numspak.edu.pk/",
+        "https://nmdctests.com/"
+      ],
+      "note": "200 MCQs — 150 academic (Biology 55, Chemistry 40, Physics 40, English 15) plus 50 psychological questions, 3 hours, no negative marking. Multiple past papers are offered as separate practice tests."
     }
   ]
 }

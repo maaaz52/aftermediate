@@ -1,0 +1,3107 @@
+{
+  "testId": "mdcat-test-2",
+  "paperLabel": "Test 2",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "MDCAT practice test paper.",
+    "sources": []
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 180,
+    "note": "1 mark per correct answer, no negative marking."
+  },
+  "benchmarks": [],
+  "sections": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "questionCount": 81
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 45
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 36
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 9
+    },
+    {
+      "id": "logical-reasoning",
+      "name": "Logical Reasoning",
+      "questionCount": 9
+    }
+  ],
+  "questions": [
+    {
+      "id": "mdcat-test-2-q001",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Enterochromaffin-like cells of stomach secrete:",
+      "options": [
+        "Histamine",
+        "Serotonin",
+        "Intrinsic factor",
+        "Gastrin"
+      ],
+      "correct": 0,
+      "explanation": "Enterochromaffin-like cells secrete histamine.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q002",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Lingual lipase plays a role in the digestion of fats and is secreted by _____:",
+      "options": [
+        "Salivary gland",
+        "Pancreas",
+        "Liver",
+        "Ebner's gland"
+      ],
+      "correct": 3,
+      "explanation": "Lingual lipase is secreted by Ebner's glands of the tongue.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q003",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The site of B12 absorption in intestine is:",
+      "options": [
+        "Duodenum",
+        "Jejunum",
+        "Ileum",
+        "Cecum"
+      ],
+      "correct": 2,
+      "explanation": "Vitamin B12 is absorbed in the ileum.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q004",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Face of Golgi bodies towards the nucleus is called:",
+      "options": [
+        "Trans-face",
+        "Cis-face",
+        "Mature face",
+        "Distal face"
+      ],
+      "correct": 1,
+      "explanation": "The cis-face of the Golgi faces the nucleus.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q005",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Most cells of alveolar walls are:",
+      "options": [
+        "Kupffer cells",
+        "Cuboidal cells",
+        "Alveolar macrophages",
+        "Squamous cells"
+      ],
+      "correct": 3,
+      "explanation": "Squamous (type I) cells line most of the alveolar walls.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q006",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The base plate of bacteriophage is made of:",
+      "options": [
+        "Glycoprotein",
+        "Lipid",
+        "Protein",
+        "None of these"
+      ],
+      "correct": 2,
+      "explanation": "The base plate of a bacteriophage is made of protein.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q007",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following represents a saturated fatty acid?",
+      "options": [
+        "Palmitic acid",
+        "Stearic acid",
+        "Linoleic acid",
+        "Both a and b"
+      ],
+      "correct": 3,
+      "explanation": "Palmitic and stearic acids are both saturated fatty acids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q008",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The most abundant biomolecules on the earth is:",
+      "options": [
+        "Nucleic acid",
+        "Carbohydrate",
+        "Protein",
+        "Lipid"
+      ],
+      "correct": 1,
+      "explanation": "Carbohydrates are the most abundant biomolecules on Earth.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q009",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In chlorophyll molecules, the functional group is attached to 2nd pyrrole at carbon no:",
+      "options": [
+        "C-1",
+        "C-2",
+        "C-3",
+        "C-4"
+      ],
+      "correct": 2,
+      "explanation": "The functional group attaches to the 2nd pyrrole at carbon 3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q010",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Myoglobin combines with:",
+      "options": [
+        "Four oxygen molecules",
+        "Three oxygen molecules",
+        "Two oxygen molecules",
+        "One oxygen molecule"
+      ],
+      "correct": 3,
+      "explanation": "Myoglobin binds a single oxygen molecule.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q011",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one is not found in fatty acid of acylglycerol?",
+      "options": [
+        "C-20",
+        "C-25",
+        "C-26",
+        "C-30"
+      ],
+      "correct": 1,
+      "explanation": "Fatty acids of acylglycerols normally have even carbon chains; C-25 is not found.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q012",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Who proved that O2 comes from water and not from CO2 in photosynthesis?",
+      "options": [
+        "Van Neil",
+        "Robin Hills",
+        "Samuel Robin",
+        "None of these"
+      ],
+      "correct": 0,
+      "explanation": "Van Niel proved that O2 comes from water in photosynthesis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q013",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which of the following stages of swallowing is voluntary?",
+      "options": [
+        "Oral",
+        "Oesophageal",
+        "Pharyngeal",
+        "None of them"
+      ],
+      "correct": 0,
+      "explanation": "The oral stage of swallowing is voluntary.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q014",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "HIV destroys which of the following immune cells?",
+      "options": [
+        "Cytotoxic T-cell",
+        "NK cells",
+        "Helper T-cells",
+        "B-cells"
+      ],
+      "correct": 2,
+      "explanation": "HIV destroys helper T-cells.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q015",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which part of enzyme is denatured by heat?",
+      "options": [
+        "Co-enzymes",
+        "Apo enzymes",
+        "Holo enzyme",
+        "None of these"
+      ],
+      "correct": 1,
+      "explanation": "The apoenzyme (protein part) is denatured by heat.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q016",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Defects in CFTR gene cause _____ disease:",
+      "options": [
+        "Diabetes mellitus",
+        "Cystic fibrosis",
+        "Leukemia",
+        "Sickle cell anemia"
+      ],
+      "correct": 1,
+      "explanation": "CFTR defects cause cystic fibrosis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q017",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Each molecule of NADH entering in electron transport chain produces:",
+      "options": [
+        "Four ATP",
+        "Two ATP",
+        "One ATP",
+        "Three ATP"
+      ],
+      "correct": 3,
+      "explanation": "Each NADH in the ETC produces 3 ATP.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q018",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Intrinsic factor in stomach is secreted by:",
+      "options": [
+        "Chief cells",
+        "Parietal cells",
+        "G-cells",
+        "D-cells"
+      ],
+      "correct": 1,
+      "explanation": "Intrinsic factor is secreted by the parietal cells.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q019",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Teeth adapted for cutting are:",
+      "options": [
+        "Canines",
+        "Incisors",
+        "Molars",
+        "Premolars"
+      ],
+      "correct": 1,
+      "explanation": "Incisors are adapted for cutting.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q020",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Bone forming cells are known as:",
+      "options": [
+        "Osteoclasts",
+        "Osteocytes",
+        "Osteoblasts",
+        "Chondrocytes"
+      ],
+      "correct": 2,
+      "explanation": "Osteoblasts are the bone-forming cells.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q021",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Phospholipid with unsaturated fatty acid tail makes membranes:",
+      "options": [
+        "More fluid",
+        "Less fluid",
+        "Remain same",
+        "The statement is incomplete"
+      ],
+      "correct": 0,
+      "explanation": "Unsaturated tails make membranes more fluid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q022",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Micro villi are also called:",
+      "options": [
+        "Cristae",
+        "Cisternae",
+        "Midribs",
+        "Villi"
+      ],
+      "correct": 3,
+      "explanation": "Microvilli are also called villi (of the brush border).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q023",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The genes for all of the following characters are linked except:",
+      "options": [
+        "Albinism",
+        "Leukemia",
+        "Drepanocytosis",
+        "Phenylketonuria"
+      ],
+      "correct": 3,
+      "explanation": "Phenylketonuria is not part of the same linkage group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q024",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Syphilis is caused by a spirochete called:",
+      "options": [
+        "Treponema pallidum",
+        "Candida albicans",
+        "Neisseria gonorrhea",
+        "HIV"
+      ],
+      "correct": 0,
+      "explanation": "Syphilis is caused by Treponema pallidum.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q025",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Total NADH2 formed by one glucose molecule during Krebs cycle are:",
+      "options": [
+        "6",
+        "8",
+        "4",
+        "3"
+      ],
+      "correct": 0,
+      "explanation": "Krebs cycle yields 6 NADH2 per glucose.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q026",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Churning action of stomach helps in ______ digestion.",
+      "options": [
+        "Chemical",
+        "Mechanical",
+        "Both a and b",
+        "None"
+      ],
+      "correct": 1,
+      "explanation": "Churning is mechanical digestion.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q027",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The cartilage present in trachea is:",
+      "options": [
+        "Fibrous",
+        "Hyaline",
+        "Elastic",
+        "Neurotic"
+      ],
+      "correct": 1,
+      "explanation": "Tracheal rings are hyaline cartilage.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q028",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Artificial heart pacemaker is implanted near the:",
+      "options": [
+        "SA node",
+        "AV node",
+        "Bundle of His",
+        "None of these"
+      ],
+      "correct": 0,
+      "explanation": "Artificial pacemakers are placed near the SA node.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q029",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All are the functions of antibody except:",
+      "options": [
+        "Neutralization",
+        "Opsonization",
+        "Cell lysis",
+        "Chemotaxis"
+      ],
+      "correct": 3,
+      "explanation": "Chemotaxis is not a function of antibodies.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q030",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All of the following are properties of water except:",
+      "options": [
+        "Generally good solvent",
+        "High specific heat",
+        "Molecules exhibit polarity",
+        "Maximum density at 0 C"
+      ],
+      "correct": 3,
+      "explanation": "Water has maximum density at 4 C, not 0 C.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q031",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following has thick fibers and more cytoplasm?",
+      "options": [
+        "Dendrites",
+        "Axons",
+        "Neurofibrils",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Dendrites have thick fibres and more cytoplasm.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q032",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Mandible is the bone of _______.",
+      "options": [
+        "Upper jaw",
+        "Lower jaw",
+        "Nose",
+        "Neck"
+      ],
+      "correct": 1,
+      "explanation": "The mandible is the lower jaw bone.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q033",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The lymph capillary of small intestine is:",
+      "options": [
+        "Node",
+        "Left thoracic duct",
+        "Right thoracic duct",
+        "Lacteal"
+      ],
+      "correct": 3,
+      "explanation": "The lymph capillary of the small intestine is the lacteal.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q034",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If father of a baby is normal and mother is haemophilic then chances of the male baby in inheriting the",
+      "options": [
+        "0%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "correct": 3,
+      "explanation": "All sons inherit Xh from the haemophilic mother, so 100% are affected.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q035",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Salient feature of Darwin-Wallace theory is:",
+      "options": [
+        "Variation",
+        "Natural selection",
+        "Speciation",
+        "All of these"
+      ],
+      "correct": 3,
+      "explanation": "Variation, natural selection and speciation are all salient features.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q036",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All or None phenomenon is seen in:",
+      "options": [
+        "Muscle",
+        "Single muscle fiber",
+        "Microglia",
+        "Schwann cell"
+      ],
+      "correct": 1,
+      "explanation": "All-or-none phenomenon is seen in a single muscle fibre.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q037",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The primary nitrogenous waste is:",
+      "options": [
+        "Uric acid",
+        "Urea",
+        "Ammonia",
+        "Creatinine"
+      ],
+      "correct": 2,
+      "explanation": "Ammonia is the primary nitrogenous waste.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q038",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The inhibitors which make strong covalent bond with active site is called:",
+      "options": [
+        "Irreversible inhibitors",
+        "Reversible inhibitors",
+        "Competitive inhibitors",
+        "Non-competitive inhibitors"
+      ],
+      "correct": 0,
+      "explanation": "Inhibitors forming a strong covalent bond are irreversible.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q039",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The cellular immune response occurs in ______ phase:",
+      "options": [
+        "Activation and maturation",
+        "Maturation and killing",
+        "Activation and memorization",
+        "Activation and effector"
+      ],
+      "correct": 3,
+      "explanation": "Cellular immune response occurs in activation and effector phases.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q040",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The mammalian enzymes are more active at temperature of:",
+      "options": [
+        "30 C",
+        "40 C",
+        "20 C",
+        "45 C"
+      ],
+      "correct": 1,
+      "explanation": "Mammalian enzymes are most active near 40 C.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q041",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The portion of the circulatory bed having largest cross sectional area is:",
+      "options": [
+        "Large arteries",
+        "Large veins",
+        "Capillaries",
+        "Arteries"
+      ],
+      "correct": 2,
+      "explanation": "Capillaries have the largest total cross-sectional area.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q042",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Saliva is bactericidal because of presence of:",
+      "options": [
+        "Amylase",
+        "Lysozymes",
+        "Hyaluronidase",
+        "Ptyalin"
+      ],
+      "correct": 1,
+      "explanation": "Saliva is bactericidal because of lysozymes.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q043",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Percentage of CO2 carried by plasma?",
+      "options": [
+        "5%",
+        "6%",
+        "7%",
+        "8%"
+      ],
+      "correct": 2,
+      "explanation": "About 7% of CO2 is carried dissolved in plasma.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q044",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Valves are present in:",
+      "options": [
+        "Abdominal veins",
+        "Coronary artery",
+        "Renal artery",
+        "Pulmonary artery"
+      ],
+      "correct": 0,
+      "explanation": "Valves are present in abdominal veins.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q045",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Peptide bond is a:",
+      "options": [
+        "C-N link",
+        "C-O link",
+        "C-H link",
+        "N-H link"
+      ],
+      "correct": 0,
+      "explanation": "A peptide bond is a C-N link.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q046",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "RNA retroviruses have special enzymes that:",
+      "options": [
+        "Disintegrate host DNA",
+        "Polymerizes host DNA",
+        "Transcribe viral RNA to DNA",
+        "Translates host DNA"
+      ],
+      "correct": 2,
+      "explanation": "Retroviruses carry reverse transcriptase, which transcribes viral RNA to DNA.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q047",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Dub sound of heart is produced by:",
+      "options": [
+        "Contraction of ventricle",
+        "Relaxation of ventricle",
+        "Contraction of atria",
+        "All of these"
+      ],
+      "correct": 1,
+      "explanation": "The dub sound comes from closure of the semilunar valves during ventricular relaxation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q048",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Who gave this statement about the earth that it has 'No vestige of a beginning, no prospect of an end'?",
+      "options": [
+        "Hutton and Cuvier",
+        "Hutton and Lyell",
+        "Lamarck and Darwin",
+        "Darwin and Wallace"
+      ],
+      "correct": 1,
+      "explanation": "Hutton and Lyell stated the earth has no vestige of a beginning.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q049",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The SER is the major site of synthesis of:",
+      "options": [
+        "Lipid",
+        "Protein",
+        "Lipid and protein",
+        "All of these"
+      ],
+      "correct": 0,
+      "explanation": "The SER is the major site of lipid synthesis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q050",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "CD receptors on T-Lymphocytes are in nature:",
+      "options": [
+        "Glycoprotein",
+        "Glycolipid",
+        "Cholesterol",
+        "All of these"
+      ],
+      "correct": 0,
+      "explanation": "CD receptors on T-lymphocytes are glycoproteins.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q051",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Fatigue free muscles are:",
+      "options": [
+        "Skeletal",
+        "Unstriped",
+        "Cardiac",
+        "Triceps"
+      ],
+      "correct": 2,
+      "explanation": "Cardiac muscle is fatigue-free.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q052",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which of the following ions play important role in the transport of carbon dioxide?",
+      "options": [
+        "Sodium",
+        "Potassium",
+        "Bicarbonate",
+        "Chloride"
+      ],
+      "correct": 3,
+      "explanation": "Chloride ions drive the chloride shift in CO2 transport.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q053",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following is called milk sugar?",
+      "options": [
+        "Lactose",
+        "Maltose",
+        "Sucrose",
+        "Fructose"
+      ],
+      "correct": 0,
+      "explanation": "Lactose is milk sugar.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q054",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Tailed bacteriophage is:",
+      "options": [
+        "Motile in water",
+        "Non-motile",
+        "Motile on the surface of bacteria",
+        "Motile on the surface of plants"
+      ],
+      "correct": 1,
+      "explanation": "Tailed bacteriophages are non-motile.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q055",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The temporary storage and ability to swim of sperm occurs in:",
+      "options": [
+        "Epididymis",
+        "Testes",
+        "Vasa differentia",
+        "Leydig cells"
+      ],
+      "correct": 0,
+      "explanation": "Sperm are temporarily stored in the epididymis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q056",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The brain contains:",
+      "options": [
+        "Glycolipid",
+        "Cerebroside",
+        "Glycoprotein",
+        "Both a and b"
+      ],
+      "correct": 3,
+      "explanation": "The brain contains glycolipids and cerebrosides.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q057",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A pea plant heterozygous for pod color is self-pollinated, which one of the following is true for green color",
+      "options": [
+        "1/2",
+        "3/4",
+        "1/4",
+        "All"
+      ],
+      "correct": 2,
+      "explanation": "Green pod colour is recessive, so 1/4 of the offspring are green.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q058",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Ribosomal RNA is actively synthesized in:",
+      "options": [
+        "Nucleoplasm",
+        "Ribosome",
+        "Lysosomes",
+        "Nucleolus"
+      ],
+      "correct": 3,
+      "explanation": "rRNA is synthesized in the nucleolus.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q059",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In drosophila, a white eyed female will be produced by crossing:",
+      "options": [
+        "White eyed male with red-eyed carrier female",
+        "White eyed male with red-eyed female",
+        "Red eyed male with red-eyed female",
+        "Red eyed male with red-eyed carrier female"
+      ],
+      "correct": 0,
+      "explanation": "A white-eyed male crossed with a red-eyed carrier female can produce white-eyed females.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q060",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If medulla oblongata of a person brain is damaged, which of the following processes will be disturbed?",
+      "options": [
+        "Thinking",
+        "Sleep",
+        "Thirst",
+        "Swallowing"
+      ],
+      "correct": 3,
+      "explanation": "The medulla controls swallowing, so its damage disturbs it.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q061",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Cells involved with protection, support and nourishment with the nervous system are called _______:",
+      "options": [
+        "Neurons",
+        "Glial cells",
+        "Impulse conducting cells",
+        "Nerves"
+      ],
+      "correct": 1,
+      "explanation": "Glial cells support and nourish neurons.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q062",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Vessel of the vessels is known as:",
+      "options": [
+        "Vasa vasorum",
+        "Tunica media",
+        "Tunica externa",
+        "None of them"
+      ],
+      "correct": 0,
+      "explanation": "The vessel of vessels is the vasa vasorum.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q063",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Lymph is returned to blood circulatory system in:",
+      "options": [
+        "Lymph nodes",
+        "Sub-clavian veins",
+        "Lacteal",
+        "Hepatic portal vein"
+      ],
+      "correct": 1,
+      "explanation": "Lymph returns to blood through the subclavian veins.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q064",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The second largest portion of human brain is:",
+      "options": [
+        "Cerebrum",
+        "Cerebellum",
+        "Diencephalon",
+        "Medulla oblongata"
+      ],
+      "correct": 1,
+      "explanation": "The cerebellum is the second largest part of the brain.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q065",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Trioses with keto group is:",
+      "options": [
+        "Erythrose",
+        "Glyceraldehyde",
+        "Dihydroxyacetone",
+        "All of these"
+      ],
+      "correct": 2,
+      "explanation": "Dihydroxyacetone is a triose with a keto group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q066",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Hybridoma cell is cultured in which medium?",
+      "options": [
+        "HAT",
+        "MS",
+        "LS",
+        "All of the above"
+      ],
+      "correct": 0,
+      "explanation": "Hybridoma cells are cultured in HAT medium.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q067",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Example of fibrous proteins are all except:",
+      "options": [
+        "Nails",
+        "Silk",
+        "Myosin",
+        "Albumin"
+      ],
+      "correct": 3,
+      "explanation": "Albumin is a globular protein, not fibrous.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q068",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Of 100 ml of arterial blood, oxygen provided to the tissues is:",
+      "options": [
+        "2 ml",
+        "3 ml",
+        "4 ml",
+        "5 ml"
+      ],
+      "correct": 3,
+      "explanation": "About 5 ml of O2 per 100 ml blood is delivered to tissues.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q069",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Enzymes involved in cellular respiration are found in:",
+      "options": [
+        "Cytoplasm",
+        "Endoplasmic reticulum",
+        "Mitochondria",
+        "Nucleus"
+      ],
+      "correct": 2,
+      "explanation": "Respiratory enzymes are found in the mitochondria.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q070",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Darwin observed how many different types of finches in Galapagos?",
+      "options": [
+        "5",
+        "13",
+        "30",
+        "51"
+      ],
+      "correct": 1,
+      "explanation": "Darwin observed 13 types of finches in Galapagos.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q071",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The amount of DNA in bacterial cell is:",
+      "options": [
+        "1%",
+        "2%",
+        "3%",
+        "5%"
+      ],
+      "correct": 2,
+      "explanation": "Bacterial DNA is about 3% of the cell.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q072",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following is not true for skeletal muscles?",
+      "options": [
+        "Striation",
+        "Multinucleated",
+        "One mitochondria",
+        "Peripheral nucleus"
+      ],
+      "correct": 2,
+      "explanation": "Skeletal muscle has many mitochondria, not one.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q073",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Normally each 100 ml blood contains ___ ml of O2 dissolved in plasma when PO2 is 95 mmHg:",
+      "options": [
+        "0.12",
+        "0.29",
+        "0.31",
+        "0.42"
+      ],
+      "correct": 1,
+      "explanation": "About 0.29 ml O2 is dissolved in 100 ml plasma at PO2 95 mmHg.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q074",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Main function of Golgi body is:",
+      "options": [
+        "Fermentation",
+        "Glycosylation",
+        "Photosynthesis",
+        "Translation"
+      ],
+      "correct": 1,
+      "explanation": "The Golgi's main function is glycosylation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q075",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Gonorrhea is a sex disease caused by:",
+      "options": [
+        "Bacteria",
+        "Virus",
+        "Parasite",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Gonorrhoea is caused by bacteria.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q076",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The strongest chamber in human heart is:",
+      "options": [
+        "Left auricle",
+        "Right auricle",
+        "Left ventricle",
+        "Right ventricle"
+      ],
+      "correct": 2,
+      "explanation": "The left ventricle is the strongest heart chamber.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q077",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "True carbohydrates are:",
+      "options": [
+        "Monosaccharides",
+        "Disaccharides",
+        "Oligosaccharides",
+        "Polysaccharides"
+      ],
+      "correct": 0,
+      "explanation": "Monosaccharides are the true (simple) carbohydrates.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q078",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Enzymatic activities in saliva are increased by which one of the following ions?",
+      "options": [
+        "Sodium",
+        "Potassium",
+        "Zinc",
+        "Chloride"
+      ],
+      "correct": 3,
+      "explanation": "Chloride ions increase salivary enzyme activity.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q079",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Hamburger's phenomenon is also called:",
+      "options": [
+        "Hydrogen shift",
+        "Bicarbonate shift",
+        "Chloride shift",
+        "Sodium shift"
+      ],
+      "correct": 2,
+      "explanation": "Hamburger's phenomenon is the chloride shift.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q080",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "One of the following terms includes all others is:",
+      "options": [
+        "Oxidation",
+        "Respiration",
+        "Metabolism",
+        "Catabolism"
+      ],
+      "correct": 2,
+      "explanation": "Metabolism includes oxidation, respiration and catabolism.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q081",
+      "section": "biology",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The joints where no movements occur relative to each other are called ______:",
+      "options": [
+        "Fixed joints",
+        "Amphiarthrosis",
+        "Diarthrosis",
+        "Arthrosis CHEMISTRY (45 MCQs)"
+      ],
+      "correct": 0,
+      "explanation": "Fixed (fibrous) joints allow no movement.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q082",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "2,4,6-trinitrophenol is commercially called as:",
+      "options": [
+        "TNT",
+        "Picric acid",
+        "Carbolic acid",
+        "None"
+      ],
+      "correct": 1,
+      "explanation": "2,4,6-trinitrophenol is picric acid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q083",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All of the following give positive response to Fehling reagent except:",
+      "options": [
+        "Formic acid",
+        "Acetaldehyde",
+        "Benzaldehyde",
+        "Alpha hydroxy ketone"
+      ],
+      "correct": 2,
+      "explanation": "Benzaldehyde does not reduce Fehling's solution.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q084",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The rate of E1 reaction depends on:",
+      "options": [
+        "The concentration of substrate",
+        "The concentration of base",
+        "Both",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "E1 rate depends on the concentration of the substrate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q085",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "How many oxygen atoms are present in 278 g of FeSO4.7H2O?",
+      "options": [
+        "11 x NA",
+        "278 x NA",
+        "6 x NA",
+        "All"
+      ],
+      "correct": 0,
+      "explanation": "278 g FeSO4.7H2O is one mole containing 11 O atoms, i.e. 11 x NA.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q086",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which is not used to calculate lattice energy of crystalline solids?",
+      "options": [
+        "Haber process",
+        "Born-Haber cycle",
+        "Hess's law",
+        "Enthalpy changes"
+      ],
+      "correct": 0,
+      "explanation": "The Haber process is not used to calculate lattice energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q087",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The general electronic configuration of d-block transition metals is (n-1)d1-10 ns1-2. The value of 'n' is:",
+      "options": [
+        "1 to infinity",
+        "1 to 7",
+        "2 to 7",
+        "4 to 7"
+      ],
+      "correct": 3,
+      "explanation": "For d-block elements n ranges from 4 to 7.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q088",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Coinage metals are actually:",
+      "options": [
+        "Halogens",
+        "Alkali metals",
+        "Alkaline earth metals",
+        "Transition metals"
+      ],
+      "correct": 3,
+      "explanation": "Coinage metals are transition metals.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q089",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All of the following are basic except:",
+      "options": [
+        "CaO",
+        "K2O",
+        "Na2O",
+        "BeO"
+      ],
+      "correct": 3,
+      "explanation": "BeO is amphoteric, not basic.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q090",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The carbonates of alkali metals are not affected by heat except:",
+      "options": [
+        "Li2CO3",
+        "Na2CO3",
+        "K2CO3",
+        "Rb2CO3"
+      ],
+      "correct": 0,
+      "explanation": "Li2CO3 decomposes on heating; other alkali carbonates are stable.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q091",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The unit of Boyle's constant K is:",
+      "options": [
+        "Joule",
+        "S-1",
+        "ms-1",
+        "N.m2"
+      ],
+      "correct": 0,
+      "explanation": "Boyle's constant K = PV, whose unit is the joule.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q092",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "How many atoms are present in one BCC unit cell?",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "1"
+      ],
+      "correct": 1,
+      "explanation": "A body-centred cubic unit cell contains 2 atoms.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q093",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Ice in water is in equilibrium, by increasing the pressure, equilibrium will shift:",
+      "options": [
+        "Forward",
+        "Reverse",
+        "To all system at equilibrium",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Higher pressure melts ice (volume decreases), shifting the equilibrium forward.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q094",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The isomer of a substance must have:",
+      "options": [
+        "Same chemical properties",
+        "Same structure",
+        "Same functional group",
+        "Same molecular mass"
+      ],
+      "correct": 3,
+      "explanation": "Isomers must have the same molecular mass.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q095",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The formation of 1,3-butadiene always takes place through:",
+      "options": [
+        "SP2 hybridization",
+        "SP3",
+        "dSP3",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "1,3-butadiene forms through sp2 hybridization.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q096",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The electrophile in aromatic sulphonation is:",
+      "options": [
+        "HSO3",
+        "HSO4",
+        "SO3H",
+        "SO2"
+      ],
+      "correct": 0,
+      "explanation": "The electrophile in aromatic sulphonation is HSO3+.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q097",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which of these processes involve weakening of the attraction between particles?",
+      "options": [
+        "Condensation",
+        "Freezing",
+        "Crystallization",
+        "Evaporation"
+      ],
+      "correct": 3,
+      "explanation": "Evaporation weakens attraction between particles.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q098",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one is the least reactive derivative of carboxylic acid?",
+      "options": [
+        "Acid halide",
+        "Amide",
+        "Ester",
+        "Acid anhydride"
+      ],
+      "correct": 1,
+      "explanation": "Amides are the least reactive carboxylic acid derivatives.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q099",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In a certain reaction the concentration is increased two times, and the rate is increased 8 times, the order",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 2,
+      "explanation": "Rate x8 with concentration x2 means order 3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q100",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one is not endothermic?",
+      "options": [
+        "Atomization of I2",
+        "Electrolysis of water",
+        "Condensation of vapours",
+        "Evaporation"
+      ],
+      "correct": 2,
+      "explanation": "Condensation of vapours releases heat, so it is not endothermic.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q101",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The 1st ionization energy is higher for:",
+      "options": [
+        "Halogens",
+        "Alkali metals",
+        "Group IIA",
+        "Noble gases"
+      ],
+      "correct": 3,
+      "explanation": "Noble gases have the highest first ionisation energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q102",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The compound of Mn with zero reducing power is:",
+      "options": [
+        "KMnO4",
+        "MnO2",
+        "MnCl2",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "KMnO4 is in its highest oxidation state and has no reducing power.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q103",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The sigma bond formed between carbon and oxygen atoms in aldehydes and ketones is due to overlap",
+      "options": [
+        "Sp2 - Sp2",
+        "Sp2 - Sp3",
+        "SP3 - SP3",
+        "Sp - Sp"
+      ],
+      "correct": 0,
+      "explanation": "The C-O sigma bond in aldehydes/ketones is sp2-sp2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q104",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Considering magnetic quantum number, which one is correct?",
+      "options": [
+        "m = ±l",
+        "m = l",
+        "m = l+1",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "The magnetic quantum number m ranges from -l to +l.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q105",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one has maximum number of unpaired electrons?",
+      "options": [
+        "Fe26",
+        "Cr24",
+        "Na11",
+        "Ni28"
+      ],
+      "correct": 1,
+      "explanation": "Cr (atomic 24) has the maximum unpaired electrons.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q106",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "For which mechanism, the 1st step involved is the same?",
+      "options": [
+        "E1 and E2",
+        "E1 and SN1",
+        "SN1 and SN2",
+        "E2 and SN2"
+      ],
+      "correct": 1,
+      "explanation": "E1 and SN1 both begin with formation of a carbocation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q107",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Acidic hydrogen is present in:",
+      "options": [
+        "Acetylene",
+        "Ethyne",
+        "Ethane",
+        "Both a and b"
+      ],
+      "correct": 3,
+      "explanation": "Acetylene (ethyne) has acidic hydrogen - both a and b.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q108",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the aromatic one:",
+      "options": [
+        "Pyridine",
+        "Thiophene",
+        "Furan",
+        "All of them"
+      ],
+      "correct": 3,
+      "explanation": "Pyridine, thiophene and furan are all aromatic.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q109",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In nucleoproteins the prosthetic group is:",
+      "options": [
+        "DNA",
+        "RNA",
+        "Both",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "Nucleoproteins have DNA or RNA as the prosthetic group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q110",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "What is the oxidizing agent in the following reaction? Zn + Cu2+ → Zn2+ + Cu",
+      "options": [
+        "Cu2+",
+        "Zn",
+        "Zn2+",
+        "Cu"
+      ],
+      "correct": 0,
+      "explanation": "Cu2+ is reduced, so it is the oxidizing agent.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q111",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Oxides and hydroxides of group IA are:",
+      "options": [
+        "Acidic",
+        "Alkaline",
+        "Neutral",
+        "Amphoteric"
+      ],
+      "correct": 1,
+      "explanation": "Group IA oxides and hydroxides are strongly alkaline.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q112",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Phenol is more acidic than alcohol. Which statement is correct?",
+      "options": [
+        "Phenol turns blue litmus paper red",
+        "Alcohol liberates CO2 with carbonate solution",
+        "Phenoxide ion is stabilized due to resonance",
+        "Alkoxide ion is stabilized due to resonance"
+      ],
+      "correct": 2,
+      "explanation": "Phenol is more acidic because the phenoxide ion is resonance-stabilized.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q113",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Aldehydes are the oxidation product of:",
+      "options": [
+        "Primary alcohol",
+        "Secondary alcohol",
+        "Tertiary alcohol",
+        "All of them"
+      ],
+      "correct": 0,
+      "explanation": "Aldehydes are the oxidation product of primary alcohols.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q114",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The fourth phase in the creation of a protein represents:",
+      "options": [
+        "Primary structure",
+        "Secondary structure",
+        "Tertiary structure",
+        "None structure"
+      ],
+      "correct": 3,
+      "explanation": "The fourth phase of protein structure is quaternary, listed as 'None' here.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q115",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Benzene cannot undergo:",
+      "options": [
+        "Oxidation",
+        "Addition",
+        "Substitution",
+        "Elimination"
+      ],
+      "correct": 1,
+      "explanation": "Benzene cannot readily undergo addition reactions.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q116",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The complexes having coordination number = 4 have geometry:",
+      "options": [
+        "Tetrahedral",
+        "Square planar",
+        "Linear",
+        "May be tetrahedral or square planar"
+      ],
+      "correct": 3,
+      "explanation": "Coordination number 4 gives tetrahedral or square planar geometry.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q117",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Magnetic moment of an atom or ion is the measure of its number of unpaired:",
+      "options": [
+        "Electrons",
+        "Protons",
+        "Neutrons",
+        "Nucleons"
+      ],
+      "correct": 0,
+      "explanation": "Magnetic moment measures the number of unpaired electrons.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q118",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Shape of benzene molecule is:",
+      "options": [
+        "Pyramidal",
+        "Linear",
+        "Trigonal",
+        "Hexagonal planar"
+      ],
+      "correct": 3,
+      "explanation": "Benzene is a hexagonal planar molecule.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q119",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which gas occupies the largest volume at STP?",
+      "options": [
+        "16 g of CH4",
+        "32 g of O2",
+        "28 g of N2",
+        "4 g of H2"
+      ],
+      "correct": 3,
+      "explanation": "4 g of H2 is 2 moles, the largest number of moles (largest volume).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q120",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In organic compounds carbon atoms form:",
+      "options": [
+        "Ionic bond",
+        "Metallic bond",
+        "Covalent bond",
+        "None of these"
+      ],
+      "correct": 2,
+      "explanation": "Carbon atoms in organic compounds form covalent bonds.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q121",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which are repelled by strong magnetic field?",
+      "options": [
+        "Paramagnetic",
+        "Ferromagnetic",
+        "Diamagnetic",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "Diamagnetic substances are repelled by a strong magnetic field.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q122",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "How many moles of product will be produced if one mole of CH4 is burnt completely?",
+      "options": [
+        "3",
+        "6",
+        "4",
+        "8"
+      ],
+      "correct": 0,
+      "explanation": "1 mole CH4 gives 1 CO2 + 2 H2O = 3 moles of products.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q123",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one is not anisotropic behavior?",
+      "options": [
+        "Cleavage",
+        "Conductivity",
+        "Coefficient of thermal expansion",
+        "None"
+      ],
+      "correct": 3,
+      "explanation": "Cleavage, conductivity and thermal expansion are all anisotropic; none is exempt.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q124",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In free fall motion normal force is:",
+      "options": [
+        "Zero",
+        "mg",
+        "Net force",
+        "Friction"
+      ],
+      "correct": 0,
+      "explanation": "In free fall the normal force is zero.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q125",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "When one mole of each of the following is completely burnt in oxygen, which will give the largest mass",
+      "options": [
+        "CO",
+        "Diamond",
+        "Ethane",
+        "Methane"
+      ],
+      "correct": 2,
+      "explanation": "One mole of ethane gives the largest mass of CO2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q126",
+      "section": "chemistry",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one has maximum number of moles?",
+      "options": [
+        "48 g NaOH",
+        "48 g O2",
+        "48 g O3",
+        "48 g H2SO4 PHYSICS (36 MCQs)"
+      ],
+      "correct": 1,
+      "explanation": "48 g O2 = 1.5 mol, the most moles among the choices.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q127",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In free fall motion normal force is:",
+      "options": [
+        "Zero",
+        "mg",
+        "Net force",
+        "Friction"
+      ],
+      "correct": 0,
+      "explanation": "In free fall the normal force is zero.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q128",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If the velocity of an object is 50i + 100j then how long will it remain in air? Take g = 10 m/s2:",
+      "options": [
+        "20 sec",
+        "10 sec",
+        "5 sec",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Time of flight = 2vy/g = 2 x 100/10 = 20 s.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q129",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The unit of grad V is _____:",
+      "options": [
+        "J/C",
+        "Farad",
+        "N/C",
+        "Watt"
+      ],
+      "correct": 2,
+      "explanation": "grad V is the electric field, whose unit is N/C.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q130",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Photoelectric effect was discovered by:",
+      "options": [
+        "Hertz",
+        "Hallwachs",
+        "Lenard",
+        "Millikan"
+      ],
+      "correct": 0,
+      "explanation": "Hertz discovered the photoelectric effect.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q131",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In photoelectric effect the number of electrons increases with increase in ______:",
+      "options": [
+        "Frequency",
+        "K.E",
+        "Intensity",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "The number of photoelectrons increases with light intensity.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q132",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The slope of charging of capacitor vs time graph is:",
+      "options": [
+        "q/C",
+        "Rq",
+        "Rq/C",
+        "C/q"
+      ],
+      "correct": 0,
+      "explanation": "The slope of the charging curve is q/C.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q133",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The ratio of weber and second gives:",
+      "options": [
+        "Ohm",
+        "Volt",
+        "Tesla",
+        "Henry"
+      ],
+      "correct": 1,
+      "explanation": "Weber/second is the volt.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q134",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A spring with spring constant k is cut into three equal pieces; if these pieces are connected in parallel",
+      "options": [
+        "k/3",
+        "k/9",
+        "3k",
+        "9k"
+      ],
+      "correct": 3,
+      "explanation": "Each piece has k' = 3k; three in parallel give 9k.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q135",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Weber/m2 = ______:",
+      "options": [
+        "Tesla",
+        "Henry",
+        "Farad",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Weber/m2 is the tesla.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q136",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A soap bubble is given a charge then its radius is _______:",
+      "options": [
+        "Decrease",
+        "Increase",
+        "Remain same",
+        "Change but information is insufficient that it may increase or decrease"
+      ],
+      "correct": 1,
+      "explanation": "Charging a soap bubble makes its radius increase.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q137",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Two projectiles are fired from the same point with the same speed at angles of projection 60 and 30",
+      "options": [
+        "Their maximum height will be same",
+        "Their range will be same",
+        "Their vertical velocity will be same",
+        "Their time of flight will be same"
+      ],
+      "correct": 1,
+      "explanation": "Projectiles at 60 and 30 have the same range.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q138",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Laminar flow is characterized by:",
+      "options": [
+        "Low viscosity",
+        "Low velocity",
+        "Chaotic",
+        "All"
+      ],
+      "correct": 1,
+      "explanation": "Laminar flow occurs at low velocity.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q139",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A stone projected vertically upwards reaches a maximum height of h. When it is at a height 3h/4, the",
+      "options": [
+        "3 : 4",
+        "1 : 3",
+        "4 : 3",
+        "3 : 1"
+      ],
+      "correct": 1,
+      "explanation": "At 3h/4, PE:KE = 3:1, so KE:PE = 1:3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q140",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The work done will be negative when the angle between force and displacement vectors is:",
+      "options": [
+        "theta <= 180",
+        "90 <= theta <= 180",
+        "90 < theta <= 180",
+        "0 <= theta <= 90"
+      ],
+      "correct": 2,
+      "explanation": "Work is negative when 90 < theta <= 180.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q141",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A charged particle of mass m and charge q is released from rest in an electric field E, the velocity of",
+      "options": [
+        "Er/mq",
+        "Eq/2r",
+        "Eqt/m",
+        "Eqm/2t"
+      ],
+      "correct": 2,
+      "explanation": "v = Eqt/m for a particle in an electric field.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q142",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "In hydrogen spectrum the infinite value of higher orbit (n = infinity) for all series corresponds to _______:",
+      "options": [
+        "Series limit",
+        "Short wavelength",
+        "Both a and b",
+        "Long wavelength"
+      ],
+      "correct": 0,
+      "explanation": "The n = infinity limit is the series limit.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q143",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A radioactive sample decays 15/16 of original sample in 20 minutes, the half life of the sample is _____:",
+      "options": [
+        "10 min",
+        "4 min",
+        "5 min",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "Remaining 1/16 means 4 half-lives in 20 min, so 5 min each.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q144",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If the radius of the wire becomes half by stretching, then the new resistance will be (if initial resistance",
+      "options": [
+        "4R",
+        "16R",
+        "64R",
+        "256R"
+      ],
+      "correct": 1,
+      "explanation": "Radius halved (area /4, length x4) makes resistance 16R.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q145",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The unit of inductive reactance is?",
+      "options": [
+        "Ohm",
+        "Henry",
+        "Oersted",
+        "No unit"
+      ],
+      "correct": 0,
+      "explanation": "Inductive reactance is measured in ohms.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q146",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If the fundamental frequency f of a string fixed at both ends is 200 rps, the frequency of fifth harmonic",
+      "options": [
+        "44 rps",
+        "55 rps",
+        "1000 rps",
+        "440 rps"
+      ],
+      "correct": 2,
+      "explanation": "The 5th harmonic = 5 x 200 = 1000 rps.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q147",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which of the following allows current only in a single direction ______:",
+      "options": [
+        "Conductor",
+        "Superconductor",
+        "Semi-conductor",
+        "Insulator"
+      ],
+      "correct": 2,
+      "explanation": "A semi-conductor (diode) allows current in a single direction.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q148",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Cross product of vectors gives:",
+      "options": [
+        "Rotatory effect",
+        "Area of plane",
+        "Vector quantity",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Cross product gives rotation, area and a vector.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q149",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which one is decreasing in charging of capacitor?",
+      "options": [
+        "V",
+        "Q",
+        "I",
+        "R"
+      ],
+      "correct": 2,
+      "explanation": "The charging current I decreases over time.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q150",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "An automobile travelling with speed of 60 km/hr is stopped in 20 m. If the car is going with speed 120",
+      "options": [
+        "20 m",
+        "80 m",
+        "60 m",
+        "40 m"
+      ],
+      "correct": 1,
+      "explanation": "Doubling speed quadruples stopping distance: 80 m.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q151",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A hollow metal sphere is charged to a potential V. The potential at its center is:",
+      "options": [
+        "V",
+        "0",
+        "-V",
+        "2V"
+      ],
+      "correct": 0,
+      "explanation": "The potential at the centre of a charged hollow sphere equals V.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q152",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "For standing waves in a string whose both ends are closed, the number of nodes is ______ the number",
+      "options": [
+        "Greater than",
+        "Less than",
+        "Equal",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "With both ends fixed, nodes exceed antinodes by one.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q153",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If a bomb dropped from an airplane explodes in mid-air:",
+      "options": [
+        "Its K.E increases",
+        "Its total energy increases",
+        "Its total energy decreases",
+        "Its total momentum decreases"
+      ],
+      "correct": 0,
+      "explanation": "After mid-air explosion the kinetic energy increases.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q154",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Square root of (mu0 epsilon0) gives:",
+      "options": [
+        "B/E",
+        "E/B",
+        "EB",
+        "Velocity"
+      ],
+      "correct": 0,
+      "explanation": "sqrt(mu0 eps0) = 1/c = B/E.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q155",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The K.E of a charge particle changes when it passes through ______:",
+      "options": [
+        "Electric field only",
+        "Magnetic field only",
+        "Both",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Only an electric field changes a charged particle's kinetic energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q156",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "By increasing pressure and temperature radioactivity _____:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains constant",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "Radioactivity is unaffected by pressure and temperature.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q157",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "The wind is blowing from south at 10 m/s but to a cyclist it appears to be blowing from east at 10 m/s,",
+      "options": [
+        "20 m/s towards N-W",
+        "10 sqrt(2) m/s towards N-E",
+        "20 m/s towards N-E",
+        "10 sqrt(2) m/s towards N-E"
+      ],
+      "correct": 1,
+      "explanation": "The cyclist moves at 10 sqrt(2) m/s towards the north-east.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q158",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which statement is correct for a metallic conductor under electrostatic conditions?",
+      "options": [
+        "E is zero inside the conductor",
+        "Potential is constant inside the conductor",
+        "E is perpendicular to the surface of the conductor",
+        "All are correct"
+      ],
+      "correct": 3,
+      "explanation": "E is zero inside, potential is constant, and E is normal to the surface.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q159",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "If A represents ampere and R represents volt, then A/V, V/A and VA represent ______ respectively:",
+      "options": [
+        "Resistance, capacitance, reactance",
+        "Power, resistance, conductance",
+        "Conductance, resistance, power",
+        "None"
+      ],
+      "correct": 2,
+      "explanation": "A/V = conductance, V/A = resistance, VA = power.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q160",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "At the top of the trajectory of a projectile, the directions of its velocity and acceleration are:",
+      "options": [
+        "Parallel to each other",
+        "Perpendicular to each other",
+        "Always same direction throughout motion",
+        "Antiparallel to each other"
+      ],
+      "correct": 1,
+      "explanation": "At the top, velocity and acceleration are perpendicular.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q161",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "A particle of mass m and charge q enters a magnetic field B perpendicularly with velocity v. The radius",
+      "options": [
+        "Bq/mv",
+        "mq/Bv",
+        "mB/qv",
+        "mv/Bq"
+      ],
+      "correct": 3,
+      "explanation": "Radius r = mv/Bq.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q162",
+      "section": "physics",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Electromagnetic waves propagate along the X-axis and their electric field vibrates along the Y-axis, then",
+      "options": [
+        "Along X-axis",
+        "In XY-plane",
+        "Along Z-axis",
+        "None ENGLISH (9 MCQs)"
+      ],
+      "correct": 2,
+      "explanation": "The magnetic field vibrates along the Z-axis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q163",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Which is a compound sentence?",
+      "options": [
+        "He studied hard because he wanted to pass.",
+        "She was late, but she still finished the exam.",
+        "If it rains, we will cancel the trip.",
+        "Although he is old, he is very active."
+      ],
+      "correct": 1,
+      "explanation": "A compound sentence joins two clauses with 'but'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q164",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence:",
+      "options": [
+        "He is good in mathematics.",
+        "He is good at mathematics.",
+        "He is good on mathematics.",
+        "He is good with mathematics."
+      ],
+      "correct": 1,
+      "explanation": "The correct phrase is 'good at mathematics'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q165",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence.",
+      "options": [
+        "She sang yesterday beautifully at the concert.",
+        "She sang beautifully at the concert yesterday.",
+        "She sang at the concert yesterday beautifully.",
+        "She beautifully sang yesterday at the concert."
+      ],
+      "correct": 1,
+      "explanation": "Adverb of manner before place and time: sang beautifully at the concert yesterday.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q166",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "I ___ to the market yesterday.",
+      "options": [
+        "go",
+        "have gone",
+        "went",
+        "will go"
+      ],
+      "correct": 2,
+      "explanation": "The past tense 'went' fits the time marker 'yesterday'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q167",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence.",
+      "options": [
+        "He goes to school always.",
+        "He always goes to school.",
+        "Always he goes to school.",
+        "He goes always to school."
+      ],
+      "correct": 1,
+      "explanation": "The adverb of frequency goes before the main verb.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q168",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "They are watching a movie.",
+      "options": [
+        "A movie is watched by them.",
+        "A movie is being watched by them.",
+        "A movie has been watched by them.",
+        "A movie was watched by them."
+      ],
+      "correct": 1,
+      "explanation": "Present continuous passive: 'A movie is being watched by them.'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q169",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the simple sentence:",
+      "options": [
+        "He reads books and she writes stories.",
+        "I opened the window to let in some fresh air.",
+        "Although he was sick, he went to school.",
+        "She cooked dinner while he cleaned the room."
+      ],
+      "correct": 1,
+      "explanation": "The only simple sentence has a single clause.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q170",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct sentence.",
+      "options": [
+        "Where are you, going?",
+        "Where are, you going?",
+        "Where, are you going?",
+        "Where are you going?"
+      ],
+      "correct": 3,
+      "explanation": "No comma is needed: 'Where are you going?'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q171",
+      "section": "english",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "She said, 'I am very tired today.'",
+      "options": [
+        "She said that she is very tired today.",
+        "She said that she was very tired that day.",
+        "She says that she was very tired today.",
+        "She said that I was very tired that day. LOGICAL REASONING (9 MCQs)"
+      ],
+      "correct": 1,
+      "explanation": "Reported speech shifts to past: 'she was very tired that day'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q172",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "What is the common ratio in the geometric progression 5, 15, 45, 135, ...?",
+      "options": [
+        "3",
+        "5",
+        "10",
+        "2"
+      ],
+      "correct": 0,
+      "explanation": "Each term is multiplied by 3, so the common ratio is 3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q173",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Series: A, E, I, M, Q, ?",
+      "options": [
+        "T",
+        "U",
+        "V",
+        "W"
+      ],
+      "correct": 1,
+      "explanation": "Letters advance by 4: A, E, I, M, Q, U.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q174",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "All athletes are fit. Some fit people are not disciplined. Conclusions: I. Some athletes are not disciplined.",
+      "options": [
+        "Only I",
+        "Only II",
+        "Only III",
+        "I and III"
+      ],
+      "correct": 1,
+      "explanation": "From the premises, only conclusion II follows.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q175",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Complete the series: 3, 4, 7, 11, 18, 29, 47, ?",
+      "options": [
+        "72",
+        "74",
+        "75",
+        "76"
+      ],
+      "correct": 3,
+      "explanation": "Differences follow Fibonacci: next term is 47 + 29 = 76.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q176",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Series: K, J, L, I, M, H, N, ?",
+      "options": [
+        "F, O",
+        "O, G",
+        "G, O",
+        "O, F"
+      ],
+      "correct": 2,
+      "explanation": "The pattern gives G then O after N.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q177",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "What is the next term in the sequence: A, @, B, #, C, $, ______?",
+      "options": [
+        "D, %",
+        "D, @",
+        "D, #",
+        "D, $"
+      ],
+      "correct": 0,
+      "explanation": "Letters and symbols alternate: D, %.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q178",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Some mathematicians are philosophers. No philosopher is careless. Conclusions: I. Some",
+      "options": [
+        "Only I",
+        "I and II",
+        "I and III",
+        "Only II"
+      ],
+      "correct": 0,
+      "explanation": "Only conclusion I (some mathematicians are not careless) follows.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q179",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Complete the series: 2, 5, 10, 17, 26, 37, 50, ?",
+      "options": [
+        "61",
+        "63",
+        "65",
+        "67"
+      ],
+      "correct": 2,
+      "explanation": "Differences are odd numbers: next is 50 + 15 = 65.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "mdcat-test-2-q180",
+      "section": "logical-reasoning",
+      "topic": "MDCAT practice",
+      "difficulty": "medium",
+      "stem": "Statement I: The government banned the use of plastic bags. Statement II: People shifted to cloth and",
+      "options": [
+        "Statement I is the cause and Statement II is its effect.",
+        "Statement II is the cause and Statement I is its effect.",
+        "Both Statements I and II are independent causes.",
+        "Both Statements I and II are effects of independent causes."
+      ],
+      "correct": 0,
+      "explanation": "The ban (I) caused the shift to cloth bags (II).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    }
+  ]
+}

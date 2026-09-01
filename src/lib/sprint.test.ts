@@ -115,10 +115,11 @@ describe("recipeFor", () => {
 describe("streamTests", () => {
   it("returns every local test id when stream is null", () => {
     const ids = streamTests(null);
-    expect(ids.length).toBe(12);
+    expect(ids.length).toBe(13);
     expect(ids).toContain("mdcat");
     expect(ids).toContain("net");
     expect(ids).toContain("lat");
+    expect(ids).toContain("nums");
   });
 
   it("pre-medical tests include mdcat/aku but exclude ecat/net", () => {

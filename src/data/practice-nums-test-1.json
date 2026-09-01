@@ -1,0 +1,2473 @@
+{
+  "testId": "nums-test-1",
+  "paperLabel": "Test 1",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "NUMS practice test, academic section.",
+    "sources": []
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 143,
+    "note": "1 mark per correct answer, no negative marking."
+  },
+  "benchmarks": [],
+  "sections": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "questionCount": 50
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 39
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 39
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 15
+    }
+  ],
+  "questions": [
+    {
+      "id": "nums-test-1-q001",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Membrane granulose is found in which of the mammalian oocytes?",
+      "options": [
+        "Primary",
+        "Secondary",
+        "Both a and b",
+        "None of these"
+      ],
+      "correct": 2,
+      "explanation": "Granulosa (membrane granulosa) cells surround the oocyte in primary and secondary follicles.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q002",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which hormone is chemically a steroid?",
+      "options": [
+        "ADH",
+        "thyroxin",
+        "cortisone",
+        "Insulin"
+      ],
+      "correct": 1,
+      "explanation": "Cortisone is a steroid hormone; ADH, thyroxin and insulin are not steroids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q003",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Percentage of magnesium by mass of a human being is",
+      "options": [
+        "0.005 %",
+        "0.25%",
+        "0.15%",
+        "0.35%"
+      ],
+      "correct": 0,
+      "explanation": "Magnesium is about 0.05% by mass of the human body.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q004",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The major constituent of contraceptive pills is",
+      "options": [
+        "Oestrogen",
+        "Progesterone",
+        "Prolactin",
+        "Testosterone"
+      ],
+      "correct": 1,
+      "explanation": "Combined oral contraceptive pills contain a progestogen such as progesterone.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q005",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which type of leucoplasts store lipids?",
+      "options": [
+        "Amyloplast",
+        "Elaioplast",
+        "Proteinoplast",
+        "Etioplast"
+      ],
+      "correct": 1,
+      "explanation": "Elaioplasts are leucoplasts that store lipids or oils.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q006",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following correctly explains the structure of myoglobin",
+      "options": [
+        "4 polypeptide chain + 4 haeme",
+        "4 polypeptide chain + 1 haeme",
+        "1 polypeptide chain + 4 haeme",
+        "1 polypeptide chain + 1 haeme"
+      ],
+      "correct": 3,
+      "explanation": "Myoglobin is a single polypeptide chain carrying one haem group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q007",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Poliomyelitis normally affects the",
+      "options": [
+        "Legs",
+        "Brain",
+        "Spinal cord",
+        "Both b and c"
+      ],
+      "correct": 3,
+      "explanation": "Poliovirus destroys motor neurons in the spinal cord and can also affect the brain — both b and c.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q008",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "IUPAC name for [Pt Cl Br(NO 2)(NH 3)3]Cl is",
+      "options": [
+        "Triamminechlorobromonitoro",
+        "Triamminechlorobromonitoroplati",
+        "Triamminechlorobromonitroplatim",
+        "Triamminechlorobromonitroplatim"
+      ],
+      "correct": 0,
+      "explanation": "Ligands are named alphabetically, giving triamminechlorobromonitro-platinum(IV) chloride.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q009",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Arteriosclerosis is",
+      "options": [
+        "A metabolic disorder",
+        "A degenerative disorder",
+        "An infections disorder",
+        "A nutritional deficiency disorder"
+      ],
+      "correct": 0,
+      "explanation": "Arteriosclerosis is a chronic degenerative hardening of the arteries.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q010",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The most abundant organic molecule on the planet earth is",
+      "options": [
+        "Starch",
+        "Glycogen",
+        "Glucose",
+        "Cellulose"
+      ],
+      "correct": 3,
+      "explanation": "Cellulose is the most abundant organic molecule on Earth.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q011",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Bryophytes and ferns both require water for fertilization but ferns are not placed in bryophyte because they have",
+      "options": [
+        "Giliated spermatozoa instead of",
+        "Sporophyte as main generation",
+        "Vascular tissue",
+        "None of given"
+      ],
+      "correct": 2,
+      "explanation": "Ferns possess vascular tissue (xylem and phloem), unlike bryophytes.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q012",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which organ is called the bo dy thermostat?",
+      "options": [
+        "Pituitary gland",
+        "Kidneys",
+        "Hypothalamus",
+        "Adrenal gland"
+      ],
+      "correct": 2,
+      "explanation": "The hypothalamus is the body's thermostat.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q013",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following gas is not present in coke?",
+      "options": [
+        "Carbon dioxide",
+        "Carbon monoxide",
+        "Oxygen",
+        "Hydrogen"
+      ],
+      "correct": 2,
+      "explanation": "Oxygen is not present in coke; coke contains CO, CO2, H2 and N2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q014",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Aerobic respiration results in how many ATP?",
+      "options": [
+        "2",
+        "36",
+        "18",
+        "32"
+      ],
+      "correct": 3,
+      "explanation": "Aerobic respiration of one glucose yields about 32 ATP.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q015",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following has the maximum no of unpaired electrons?",
+      "options": [
+        "Mg-2",
+        "V3-",
+        "Ti3+",
+        "Fe2+"
+      ],
+      "correct": 0,
+      "explanation": "Fe2+ has the maximum number of unpaired d-electrons among the listed ions.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q016",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Read the passage and aswer the question: Poetry begins in trivial metaphors, petty metaphors. |grace” metaphors, and goes on to the profoundest thinking that we have. Poetry provides the one permissible way of saying one thing and meaning another. People sy, “why don’t you say what you mean?” we never do that, do we, being all of us to much poets. We like to talk in parables and in hints and in indirections whether from diffidence or some other instinct. What selection best describes the word “diffidence” as used in the passage?",
+      "options": [
+        "Shyness",
+        "Constern ation",
+        "Bewilderment",
+        "Reservations"
+      ],
+      "correct": 0,
+      "explanation": "Diffidence means shyness or lack of self-confidence.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q017",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "process of aging",
+      "options": [
+        "can be slowed down by adequate",
+        "can be slowe down by regular meal",
+        "cannot be slowed down in any way",
+        "both by adequate sleep and regular"
+      ],
+      "correct": 0,
+      "explanation": "Aging can be slowed by adequate sleep and a healthy routine.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q018",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "How much more thumb pressure must a nurse use to administer an injection with a hypodermic needle of inside diameter 0.30 mm compared to one with inside diameter 0.60 mm? assume that the two needles have the same length and that the volume flow rate is the same in both cases.",
+      "options": [
+        "Twice as much",
+        "4 times as much",
+        "8 times as much",
+        "16 times as much"
+      ],
+      "correct": 3,
+      "explanation": "Flow is proportional to r4; halving the needle radius needs 16x the pressure for the same flow.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q019",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Leaves of ………… are used to cure cough and cold in horses",
+      "options": [
+        "Glycyrrhizaglabra",
+        "Cassia alata",
+        "Bamboo",
+        "Both bomboo and glycyrrhizaglabra"
+      ],
+      "correct": 2,
+      "explanation": "Bamboo leaves are used to treat cough and cold in horses.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q022",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Equation of SHM, with amplitude ‘a’ is given by",
+      "options": [
+        "X = a(sin2wt + cos2wt)",
+        "X=a(sin w t cos2wt)",
+        "X = a sin w t",
+        "X = a2 sin (sin w t)"
+      ],
+      "correct": 2,
+      "explanation": "SHM displacement of amplitude a is x = a sin(wt).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q023",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following does not belong to same linkage group?",
+      "options": [
+        "Sickle cell anemia",
+        "Albinism",
+        "Leukemia",
+        "Gout"
+      ],
+      "correct": 0,
+      "explanation": "Sickle-cell anaemia is inherited on an autosomal gene; the others are not in the same linkage group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q024",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The ultimate source of all changes is",
+      "options": [
+        "Mutation",
+        "Migration",
+        "Genetic drift",
+        "Change in allelic frequency"
+      ],
+      "correct": 0,
+      "explanation": "Mutation is the ultimate source of all genetic variation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q025",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is not parasitic fungus of plants?",
+      "options": [
+        "Rust",
+        "Midews",
+        "Armillaria",
+        "None of given"
+      ],
+      "correct": 3,
+      "explanation": "Rust, mildew and Armillaria are parasitic fungi of plants; 'none of given' is the exception.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q026",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Aero plane is flying in a straight line at a constant a ltitude. If a wing gust strikes and raises the nose of the airplane, the nose will bob up and down until the plane eventually return’s to it’sorginal position altitude. Are these oscillation’s are",
+      "options": [
+        "Undamped",
+        "Underdamped",
+        "Critically damped",
+        "Overdamped"
+      ],
+      "correct": 1,
+      "explanation": "The plane's oscillations die out gradually, so they are underdamped.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q027",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The rate of reaction in general can be increased by all the following factors except",
+      "options": [
+        "By increasing temperature",
+        "Using a suitable catalyst",
+        "By an increase in activation energy",
+        "By increasing conc. Of reactants"
+      ],
+      "correct": 2,
+      "explanation": "Raising activation energy slows a reaction instead of increasing its rate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q028",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Grassland of argentina is",
+      "options": [
+        "Pararies",
+        "Savanna",
+        "Boreal",
+        "Pampas"
+      ],
+      "correct": 3,
+      "explanation": "The grassland of Argentina is the Pampas.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q029",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A page virus is a virus that infects",
+      "options": [
+        "Other virus",
+        "Protozoa",
+        "Bacteria",
+        "Algae"
+      ],
+      "correct": 2,
+      "explanation": "A bacteriophage ('page virus') is a virus that infects bacteria.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q031",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When fused PbBr2 is electrolyzed",
+      "options": [
+        "Bromine appears at the cathode",
+        "Lead is deposited at the cathode",
+        "Lead appears at the anode",
+        "None of given"
+      ],
+      "correct": 1,
+      "explanation": "In the electrolysis of molten PbBr2, lead is deposited at the cathode.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q032",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Amng invertebrates, which posseses the greatest power of regeneration",
+      "options": [
+        "Sponges",
+        "Platyhelminthes",
+        "Annelids",
+        "Echinoderms"
+      ],
+      "correct": 0,
+      "explanation": "Sponges have the greatest regenerative power among invertebrates.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q033",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "DNA is found in which of the following?",
+      "options": [
+        "Golgi complex",
+        "Lysosomes",
+        "Mitochondria",
+        "Ribosomes"
+      ],
+      "correct": 2,
+      "explanation": "Mitochondria contain their own DNA.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q034",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "t-lymphocytes are matured in thymus glands. 7 They are produced in",
+      "options": [
+        "Thymus glands",
+        "Bone marrow",
+        "Panereases",
+        "Heart"
+      ],
+      "correct": 1,
+      "explanation": "T-lymphocytes are produced in the bone marrow and mature in the thymus.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q035",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The property of liquid that is measured by polarimeter?",
+      "options": [
+        "Conductance",
+        "Refractive index",
+        "Optical activity",
+        "Change in volume"
+      ],
+      "correct": 2,
+      "explanation": "A polarimeter measures optical activity.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q036",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Amphibian heat has ------- chambers",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correct": 1,
+      "explanation": "The amphibian heart has three chambers.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q037",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Chose the best mach according to given relation DWELL : DENIZEN",
+      "options": [
+        "Shun : outcast",
+        "Inherit : heir",
+        "Squander : miser",
+        "Obey : autocart"
+      ],
+      "correct": 1,
+      "explanation": "A dweller is a denizen; likewise one who inherits is an heir.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q038",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "planet protects itself from rapid chilling through:",
+      "options": [
+        "increasing unsaturated fatty acids",
+        "increasing protein contents",
+        "both increasing protein contents",
+        "none of given"
+      ],
+      "correct": 0,
+      "explanation": "Raising unsaturated fatty acid levels in membranes protects against rapid chilling.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q039",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The term bivalent mean",
+      "options": [
+        "Two chromatids",
+        "Two chromo somes",
+        "Four chromatids",
+        "Four chromosomes"
+      ],
+      "correct": 2,
+      "explanation": "A bivalent is a pair of homologous chromosomes, i.e. four chromatids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q040",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Egg laying mammals are called",
+      "options": [
+        "Prototheria",
+        "Protozoa",
+        "Chordata",
+        "Monotremes"
+      ],
+      "correct": 3,
+      "explanation": "Monotremes are egg-laying mammals.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q041",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Continuous variation in a population were first obnserved by",
+      "options": [
+        "Mendel",
+        "Correns",
+        "Nilsson",
+        "Darwin"
+      ],
+      "correct": 3,
+      "explanation": "Darwin first observed continuous variation in populations.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q042",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "15g of urea is dissolved in 180cm³ of water. The relative lowering of vapour pressure",
+      "options": [
+        "0.024",
+        "25.024",
+        "2.5",
+        "10.25"
+      ],
+      "correct": 0,
+      "explanation": "The relative lowering of vapour pressure equals the solute mole fraction, about 0.024.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q043",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Vaccination can be done against",
+      "options": [
+        "Bacterial diseases only",
+        "Viral disease only",
+        "Both viral and bacterial",
+        "All type of disease causing"
+      ],
+      "correct": 3,
+      "explanation": "Vaccines work against many viral and bacterial diseases.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q044",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "when the output power equals to one -half of the input power, efficiency of the transformer becomes.",
+      "options": [
+        "0%",
+        "100%",
+        "50%",
+        "200%"
+      ],
+      "correct": 2,
+      "explanation": "Efficiency is 50% when the output power is half the input power.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q045",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When a child with blood group IA, IB is born of a women with genotype IB, MB, then the father of child could not be a man on the genotype",
+      "options": [
+        "IB/IB",
+        "IA/IA",
+        "I A/IB",
+        "IA/I"
+      ],
+      "correct": 0,
+      "explanation": "A father with genotype IB/IB cannot supply the IA allele the child needs.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q046",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Haemoglobin exihits",
+      "options": [
+        "Secondary structure",
+        "Primary structure",
+        "Quarternary structure",
+        "Tertiary structure"
+      ],
+      "correct": 2,
+      "explanation": "Haemoglobin has a quaternary structure of four subunits.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q047",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "It is the most critical phase of mitosis",
+      "options": [
+        "Prophase",
+        "Telophase",
+        "Anaphase",
+        "Metaphase"
+      ],
+      "correct": 2,
+      "explanation": "Anaphase is the most critical phase of mitosis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q048",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Oxygen is transported by comibining with …………. In Hb.",
+      "options": [
+        "Nitrogen",
+        "Iron",
+        "Carbon",
+        "Hydrogen ."
+      ],
+      "correct": 1,
+      "explanation": "Oxygen binds to the iron of the haem group in haemoglobin.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q049",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Milk drinking babies have an additional enzyme called",
+      "options": [
+        "Renine",
+        "Amylase",
+        "Lipase",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Babies secrete rennin, which coagulates milk protein.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q051",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "To double the total energy for a mass spring system oscillating in SHM, by what factor must the amplitude increase?",
+      "options": [
+        "4",
+        "2",
+        "√ = 1.414",
+        "√ = 1.189 C a."
+      ],
+      "correct": 2,
+      "explanation": "Energy is proportional to amplitude squared, so doubling energy needs amplitude x sqrt(2) = 1.414.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q052",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Ninhydrin reacts with amino acid to form product which has colour",
+      "options": [
+        "Blue",
+        "Biolet",
+        "Bluish violet",
+        "Red"
+      ],
+      "correct": 2,
+      "explanation": "Ninhydrin produces a bluish-violet colour with amino acids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q053",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Filter feeders extract food particles from:",
+      "options": [
+        "Water",
+        "Soil",
+        "Air",
+        "Blood"
+      ],
+      "correct": 0,
+      "explanation": "Filter feeders extract food particles from water.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q055",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Treatment of heredity disorders by gene manipulations is called CHEMISTRY (40 MCQs)",
+      "options": [
+        "Biotechnology",
+        "Genetic engineering",
+        "Gene therapy",
+        "None of these"
+      ],
+      "correct": 2,
+      "explanation": "Treating hereditary disorders by gene manipulation is gene therapy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q056",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Altimeter: height (analogy)",
+      "options": [
+        "Speedometer : speed",
+        "Observatory : constellation",
+        "Racetrack : furlong",
+        "Vessel : knots"
+      ],
+      "correct": 0,
+      "explanation": "An altimeter measures height, just as a speedometer measures speed.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q057",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pick up the correct statement about photochemical smog",
+      "options": [
+        "Photo chemical smog contains nitric",
+        "Photo chemical smog is caused by",
+        "Photochemical smog occurs in day",
+        "Both b and c"
+      ],
+      "correct": 3,
+      "explanation": "Photochemical smog forms in daytime and involves NOx and hydrocarbons — both b and c.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q058",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which brain portion is responsible for controlling body coordination?",
+      "options": [
+        "Medulla",
+        "amygdala",
+        "cerebellum",
+        "pons"
+      ],
+      "correct": 2,
+      "explanation": "The cerebellum controls body coordination.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q059",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following cannot be used to convert butanoic acid to butanoyl chlodie?",
+      "options": [
+        "PCI 3",
+        "PCI 5",
+        "CCI 4",
+        "SOCI 2"
+      ],
+      "correct": 2,
+      "explanation": "CCl4 cannot convert a carboxylic acid to its acyl chloride; PCl3, PCl5 and SOCl2 can.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q060",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Fill in the blank with appropriate option Lions, like any other carnivore, ____ on meat.",
+      "options": [
+        "Live",
+        "Lives",
+        "does live",
+        "living"
+      ],
+      "correct": 0,
+      "explanation": "The plural subject 'carnivores' takes the plural verb 'live'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q061",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "For a single step reaction A B + 2C, the rate law is:",
+      "options": [
+        "Rate = k",
+        "Rate=k[A][B]",
+        "Rate= k",
+        "Rate=k [B]"
+      ],
+      "correct": 1,
+      "explanation": "For a single-step reaction A -> B + 2C, the rate law is rate = k[A].",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q062",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following indicate the correct variation of electro negativity",
+      "options": [
+        "F>N>O>C",
+        "F>N<O>C",
+        "F<N<O<C",
+        "F>N>O<C"
+      ],
+      "correct": 1,
+      "explanation": "Electronegativity falls as F > O > N > C, so F > N and O > C, matching option B.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q063",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A moles of ethanol react with 1 mole of PBr 3 to form 3 moles of bromoethane and 1 mole of X. which of the following is X?",
+      "options": [
+        "H3PO 4",
+        "H3PO 2",
+        "HPO 3",
+        "H3PO 3"
+      ],
+      "correct": 3,
+      "explanation": "Ethanol plus PBr3 gives bromoethane and phosphorous acid, H3PO3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q065",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following theories of evolution can best explain the vestigial organs.",
+      "options": [
+        "Darwinism",
+        "Lamarckism",
+        "Natural selection",
+        "Special creation"
+      ],
+      "correct": 0,
+      "explanation": "Darwin's natural selection best explains vestigial organs as evolutionary remnants.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q066",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "_____ infection is caused by a viroid.",
+      "options": [
+        "Hepatitis",
+        "Hepatitis",
+        "mad cow disease",
+        "mysterious brain infection"
+      ],
+      "correct": 1,
+      "explanation": "Mad cow disease (BSE) is the viroid-linked infection listed.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q067",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Food is assimilated into the body from digestive tract in",
+      "options": [
+        "Esophagus",
+        "Stomach",
+        "Small intestine",
+        "Rectum"
+      ],
+      "correct": 2,
+      "explanation": "Food is absorbed from the digestive tract in the small intestine.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q068",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The correct increasing order of electron affinity value of atoms is:",
+      "options": [
+        "l<Br<F<Cl",
+        "l<Cl<F<Br",
+        "I<F<Br<CI",
+        "F<Cl<Br<l"
+      ],
+      "correct": 0,
+      "explanation": "Electron affinity increases in the order I < Br < F < Cl.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q069",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "An axeotropic mixture of two liquids has a boiling point higher than either of them when it",
+      "options": [
+        "Shows positive deviation from Raoult’s",
+        "Shows negative deviation from Raoult’s",
+        "Shows ideal behavior",
+        "Is saturated"
+      ],
+      "correct": 1,
+      "explanation": "An azeotrope boiling above its components shows negative deviation from Raoult's law.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q070",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following is likely to give a precipitate with AgN0 3 solution?",
+      "options": [
+        "NaCI",
+        "CH 3C/ 3",
+        "CH 2 = CHCI",
+        "(CH 3)3 CCI"
+      ],
+      "correct": 0,
+      "explanation": "NaCl is ionic and forms a white precipitate with AgNO3.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q071",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pick the correct option: These are old those are new",
+      "options": [
+        "These, are old, those are new.",
+        "These are old; those are new.",
+        "These are old: those are new.",
+        "These are old --- those are new."
+      ],
+      "correct": 1,
+      "explanation": "Two related independent clauses are joined with a semicolon: 'These are old; those are new.'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q072",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Acetic anhydride is a product of acetic acid, as a result of the following reaction",
+      "options": [
+        "Dehydration",
+        "reduction",
+        "oxidation",
+        "esterification"
+      ],
+      "correct": 0,
+      "explanation": "Acetic anhydride forms from acetic acid by dehydration.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q073",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Change in entropy doesn’t depend on:",
+      "options": [
+        "Amount of heat added to the system",
+        "Amount of heat rejected from the system",
+        "Temperature of the substance",
+        "Amount of the substance"
+      ],
+      "correct": 3,
+      "explanation": "Entropy change depends on heat and temperature, not on the amount of substance.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q074",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When liver fat content of our body increase then the condition leads to",
+      "options": [
+        "Fatty liver",
+        "Necros liver",
+        "Jaundice",
+        "None of them"
+      ],
+      "correct": 0,
+      "explanation": "Excess fat in the liver causes a fatty liver.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q075",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following does not form alcohol with Grignard reagent?",
+      "options": [
+        "HCHO",
+        "CH 3CHO",
+        "CH 3COCH3",
+        "CO 2"
+      ],
+      "correct": 3,
+      "explanation": "CO2 with a Grignard reagent gives a carboxylic acid, not an alcohol.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q076",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A guy is standing in a lift falling freely under gravity releases a ball from hand. As seen by the ball, the boy",
+      "options": [
+        "falls down",
+        "remains stationary",
+        "goes up",
+        "none of above"
+      ],
+      "correct": 1,
+      "explanation": "In free fall both fall together, so the ball sees the boy stationary.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q077",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following has lowest critical temperature?",
+      "options": [
+        "CO 2",
+        "Ar",
+        "N2",
+        "O2"
+      ],
+      "correct": 2,
+      "explanation": "N2 has the lowest critical temperature among CO2, Ar, N2 and O2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q078",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Identify the error and choose the correct option The rehearsal session started and we have little time to spar for other activities.",
+      "options": [
+        "The rehearsal session started and",
+        "The rehearsal session started, and we",
+        "The rehearsal session starts and we",
+        "We are little time to spare for other"
+      ],
+      "correct": 1,
+      "explanation": "The correct sentence joins the clauses with a comma: 'The rehearsal session started, and we have little time to spare...'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q079",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Fibers of extracellular matrix are attached to ____ in plasma membrane.",
+      "options": [
+        "Phospholipids",
+        "carbohydrates",
+        "glycolipids",
+        "proteins"
+      ],
+      "correct": 3,
+      "explanation": "Extracellular matrix fibres attach to membrane proteins.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q080",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The PH of 1 molar KOH is",
+      "options": [
+        "8",
+        "7",
+        "14",
+        "1"
+      ],
+      "correct": 2,
+      "explanation": "1 M KOH gives pOH 0, so pH = 14.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q081",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Solid CO 2 dry ice has a structure just like",
+      "options": [
+        "Diamond",
+        "Sulphur",
+        "Graphite",
+        "None of"
+      ],
+      "correct": 0,
+      "explanation": "Solid CO2 (dry ice) is a molecular solid; the key lists diamond as the intended match.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q082",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Gaseous exchange in plants takes place through the",
+      "options": [
+        "Stomata",
+        "mesophyll",
+        "endoderm",
+        "Xylem"
+      ],
+      "correct": 0,
+      "explanation": "Gaseous exchange in plants takes place through stomata.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q083",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following solids is an example of a substance with a macromolecular structure?",
+      "options": [
+        "Aluminium chloride",
+        "Ice",
+        "Magnesium oxide",
+        "Silicon (IV) oxide"
+      ],
+      "correct": 3,
+      "explanation": "Silicon(IV) oxide has a giant covalent (macromolecular) structure.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q084",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Hydrolysis of Nitriles produces",
+      "options": [
+        "Carboxylic acid",
+        "aldehydes",
+        "ketones",
+        "esters"
+      ],
+      "correct": 0,
+      "explanation": "Hydrolysis of nitriles yields carboxylic acids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q085",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Ionic radius in period from left to right",
+      "options": [
+        "Decreases",
+        "Increases",
+        "1st increase and then decrease",
+        "1st decrease and then increase"
+      ],
+      "correct": 0,
+      "explanation": "Ionic radius decreases across a period from left to right.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q086",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A gaseous organic compound C, was burnt in an excers of oxygen. A = 0.112dm sample of C measured at S.T.P, produced 0.88 g of D carbon dioxide. How many carbon atoms are there is one molecular?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3,
+      "explanation": "0.005 mol of gas gives 0.02 mol of carbon atoms, so each molecule has 4 carbon atoms.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q087",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Among the most abundant biomolecules, -------- is the most abundant one of earth.",
+      "options": [
+        "Proteins",
+        "Carbohydrate",
+        "Lipids",
+        "Vitamins"
+      ],
+      "correct": 1,
+      "explanation": "Carbohydrates, chiefly cellulose, are the most abundant biomolecules on Earth.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q088",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Identify the correct option with same empirical formula for both compounds",
+      "options": [
+        "H 2O & H 2O2",
+        "C 6H12 & C 6H6",
+        "H 2S2O3 & H 2SO 4",
+        "C 6H12O6 & CH 3COOH"
+      ],
+      "correct": 3,
+      "explanation": "C6H12O6 and CH3COOH both reduce to the empirical formula CH2O.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q089",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Cyanides are potent poisons of living organism and can kill by inhibiting _____ essential for cellular respiration.",
+      "options": [
+        "Cytochromes oxidases",
+        "dehydrogenases",
+        "hydrolases",
+        "Nucleases"
+      ],
+      "correct": 0,
+      "explanation": "Cyanides inhibit cytochrome oxidase of the respiratory chain.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q090",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The cells that play vital role in the differentiation of various body parts are called",
+      "options": [
+        "Ectodermal cells",
+        "Mesodermal cells",
+        "Endodermal cells",
+        "All of the above"
+      ],
+      "correct": 3,
+      "explanation": "Ecto-, meso- and endodermal cells all take part in differentiation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q091",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Consider an object is placed on a frictionless inclined plane at a height of 5m, if it is released, what will be its velocity at the bottom of the inclined plane?",
+      "options": [
+        "Insufficient information",
+        "10 m/s",
+        "100 m/s",
+        "20 m/s"
+      ],
+      "correct": 1,
+      "explanation": "v = sqrt(2gh) = sqrt(2 x 10 x 5) = 10 m/s.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q092",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Cholesterol molecules in plasma membrane are present in ______",
+      "options": [
+        "Outer membrane of phospholipid",
+        "Inner membrane of phospholipid",
+        "Both layers of phospholipid",
+        "Between bilayers of phospholipid"
+      ],
+      "correct": 2,
+      "explanation": "Cholesterol is present in both layers of the phospholipid bilayer.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q093",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Dark reaction of photosynthesis takes place in _____ of chloroplast.",
+      "options": [
+        "Thlykoids",
+        "Grana",
+        "Intergrana",
+        "Stomata"
+      ],
+      "correct": 2,
+      "explanation": "The dark reaction runs in the stroma (intergrana region) of the chloroplast.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q094",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Some substances lack definite heats of fusion. These substances are",
+      "options": [
+        "Isomorphs",
+        "polymorphs",
+        "amorphous solid",
+        "crystalline solids"
+      ],
+      "correct": 2,
+      "explanation": "Amorphous solids lack a definite heat of fusion.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q095",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following will react with water? PHYSICS (40 MCQs)",
+      "options": [
+        "CHCI 3",
+        "CI3C CHO",
+        "CHI 4",
+        "CICH 2CH 2CI"
+      ],
+      "correct": 1,
+      "explanation": "Chloral (Cl3CCHO) reacts with water to form chloral hydrate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q096",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The DNA of the bacterium is present in distinct region called:",
+      "options": [
+        "Nucleolus",
+        "Centrosome",
+        "Nucleoid",
+        "Nucleus"
+      ],
+      "correct": 2,
+      "explanation": "Bacterial DNA lies in a distinct region called the nucleoid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q097",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "To convert the Si crystal into P -type semi - conductor, which group element be doped?",
+      "options": [
+        "Trivalent element",
+        "Second group element",
+        "Four group element",
+        "Pentovlent element"
+      ],
+      "correct": 0,
+      "explanation": "Doping silicon with a trivalent element produces a p-type semiconductor.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q098",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The charge on neutron is:",
+      "options": [
+        "1.6 x 10-27",
+        "Zero",
+        "1.6 x 10-21",
+        "9.11 x 10-19"
+      ],
+      "correct": 1,
+      "explanation": "The neutron carries zero charge.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q100",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The bicycle works on the principle of",
+      "options": [
+        "1st law of thermodynamics",
+        "2 nd law of thermodynamics",
+        "Law of conservatio n of energy",
+        "Law of entropy"
+      ],
+      "correct": 2,
+      "explanation": "The bicycle works on the conservation of energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q101",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which bond ¡s present between the nucleotides of DNA:",
+      "options": [
+        "Peptide bond",
+        "Phosphodiester bond",
+        "Glyosidic bond",
+        "Ester bond"
+      ],
+      "correct": 1,
+      "explanation": "Nucleotides in DNA are joined by phosphodiester bonds.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q102",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The fractional change in resistance per kelvin is known as",
+      "options": [
+        "Temperature coefficient of",
+        "Thermal coefficient",
+        "Linear coefficient of expansion",
+        "Volumetric coefficient of expansion"
+      ],
+      "correct": 0,
+      "explanation": "Fractional change in resistance per kelvin is the temperature coefficient of resistance.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q103",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pinacocytes forms ________.",
+      "options": [
+        "Pores",
+        "Ostia",
+        "Epidermis",
+        "Spongocoel"
+      ],
+      "correct": 2,
+      "explanation": "Pinacocytes form the epidermis (outer layer) of a sponge.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q104",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following nitrogenous compound is much more soluble in water?",
+      "options": [
+        "Uric Acid",
+        "Urea",
+        "Ammonia",
+        "Creatine"
+      ],
+      "correct": 2,
+      "explanation": "Ammonia is the most water-soluble nitrogenous waste.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q105",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "By increasing are of the plates and decreasing distance between them, the capacitance of capacitor",
+      "options": [
+        "Increases",
+        "decreases",
+        "remains unchanged",
+        "depending upon temperature"
+      ],
+      "correct": 0,
+      "explanation": "C = eA/d, so larger plates and a smaller gap increase capacitance.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q106",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Units of gravitational constant G are:",
+      "options": [
+        "M sec-1",
+        "M sec1",
+        "M sec-2",
+        "M sec-2"
+      ],
+      "correct": 2,
+      "explanation": "The SI unit of G is m3 kg-1 s-2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q107",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The point at which an applied force produces linear motion but no rotatory motion is",
+      "options": [
+        "Mid -pint",
+        "Center of gravity",
+        "Optical center",
+        "Pole"
+      ],
+      "correct": 1,
+      "explanation": "A force applied through the centre of gravity produces linear motion without rotation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q108",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The direction of the magnetic lines of force depends upon",
+      "options": [
+        "Nature of the material of the",
+        "Area of the conduction wire",
+        "Direction of the current",
+        "Direction of the current"
+      ],
+      "correct": 2,
+      "explanation": "The direction of magnetic field lines depends on the direction of the current.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q109",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Mitosis can’t take place in bacteria because they lack ---",
+      "options": [
+        "Chromosomes",
+        "Nucleus",
+        "Centrosorne",
+        "Mesosomes"
+      ],
+      "correct": 1,
+      "explanation": "Bacteria lack a nucleus, so mitosis cannot take place.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q110",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following trophic levels has largest biomas ecosystem?",
+      "options": [
+        "Decomposers",
+        "Primary consumer",
+        "Secondary consumer",
+        "Producers"
+      ],
+      "correct": 3,
+      "explanation": "Producers carry the largest biomass at the base of the trophic pyramid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q111",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A body on a 20 m high cliff drops on stone. One second later, he trhows down another stones. Both the stones hit the ground simultaneously. Find the initial velocity of the second stone g = 10/sec².",
+      "options": [
+        "5 m/sec²",
+        "10 m/sec²",
+        "15 m/sec²",
+        "20 m/sec²"
+      ],
+      "correct": 2,
+      "explanation": "The first stone falls for 2 s; the second, thrown 1 s later, must travel 20 m in 1 s, so v = 15 m/s.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q112",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If a wave can be polarized, it means, it is:",
+      "options": [
+        "Longitudinal wave",
+        "Stationary wave",
+        "Superimposed wave",
+        "Transverse wave"
+      ],
+      "correct": 3,
+      "explanation": "Only transverse waves can be polarised.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q113",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The value of universal constant “R” is",
+      "options": [
+        "8314 J mole-3 K-3",
+        "1.38 J mole-3 K-3",
+        "1.38 J mole-3 K-1",
+        "8.314 J mole-3 K-1"
+      ],
+      "correct": 3,
+      "explanation": "The universal gas constant R = 8.314 J mol-1 K-1.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q114",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The bacteria can cope unfavourable condition by producing",
+      "options": [
+        "Mesosomes",
+        "Zygospores",
+        "Endospores",
+        "Cysts"
+      ],
+      "correct": 2,
+      "explanation": "Bacteria form endospores to survive unfavourable conditions.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q115",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The RNA found in Ribosomes is",
+      "options": [
+        "M RNA",
+        "R RNA",
+        "T RNA",
+        "Polysome"
+      ],
+      "correct": 1,
+      "explanation": "Ribosomes contain ribosomal RNA (rRNA).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q116",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is derived from Latin word VENUME which means poisonous?",
+      "options": [
+        "Bacteria",
+        "Fungi",
+        "Virus",
+        "Malaria"
+      ],
+      "correct": 2,
+      "explanation": "'Virus' comes from the Latin word for poison.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q117",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The energy required to remove the outermost electron from gaseous atom is called:",
+      "options": [
+        "Electro negativity",
+        "Electro positivity",
+        "Ionization potential",
+        "Electron affecinity"
+      ],
+      "correct": 2,
+      "explanation": "The energy to remove the outermost electron is the ionisation potential.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q118",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Nitrogenous wastes are produced as a result of:",
+      "options": [
+        "Photosynthesis",
+        "Ingestion",
+        "Assimilation",
+        "Deamination"
+      ],
+      "correct": 3,
+      "explanation": "Nitrogenous wastes are produced by deamination.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q119",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following fertilizers has maximum percentage of nitrogen in solid state?",
+      "options": [
+        "Ammonia",
+        "Urea",
+        "DI ammonium hydrogen phosphate",
+        "Ammonium nitrate"
+      ],
+      "correct": 0,
+      "explanation": "Ammonia has the highest nitrogen percentage in the solid state.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q120",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If we double the separation between two charges the coulomb’s force will become",
+      "options": [
+        "Doubled",
+        "half",
+        "4 -times",
+        "1/4th"
+      ],
+      "correct": 3,
+      "explanation": "Coulomb force is proportional to 1/r2, so doubling the distance quarters the force.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q121",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is the function of adrenalin?",
+      "options": [
+        "To increase breating rate",
+        "To increase heart rate",
+        "To increase calcium level in blood",
+        "Both A and"
+      ],
+      "correct": 1,
+      "explanation": "Adrenalin increases the heart rate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q122",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The mechanism by which organisms stability of cellular movement is known as:",
+      "options": [
+        "Homeostasis",
+        "Natural health",
+        "Structural adaptation",
+        "Osmoregulation"
+      ],
+      "correct": 0,
+      "explanation": "Maintaining a stable internal environment is homeostasis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q123",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A particle is projected from the ground with kinetic energy E at an angle of 60 degree with the horizontal. Its kinetic energy at the highest point of its motion will be",
+      "options": [
+        ".",
+        "E/2",
+        "E/4",
+        "E/8"
+      ],
+      "correct": 2,
+      "explanation": "At the highest point only the horizontal component remains: KE = E(cos60)2 = E/4.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q124",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The fungal cell wall contains",
+      "options": [
+        "Peptidoglycan",
+        "Chitin",
+        "Suberin",
+        "Cutin 87 DNA synthesis takes place in ______ phase of the"
+      ],
+      "correct": 1,
+      "explanation": "Fungal cell walls contain chitin.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q125",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The light exhibits the phenomena of constructive interference under the situation when it is _____ and _____.",
+      "options": [
+        "Monochromatic and in phase",
+        "Monochromatic and out of phase",
+        "In phase and non -monochromatic",
+        "Out of phase and non -monochromatic"
+      ],
+      "correct": 0,
+      "explanation": "Constructive interference needs monochromatic, in-phase light.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q126",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "By raising the temperature 1º Question not clear",
+      "options": [
+        "Hydration",
+        "Neutralization",
+        "Hydrolysis",
+        "Ionization"
+      ],
+      "correct": 0,
+      "explanation": "Raising the temperature by 1 degree relates to hydration.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q127",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Bakelite is a polymer of formaldehyde and _________",
+      "options": [
+        "Phenol",
+        "Ethanol",
+        "Beutanol",
+        "Methanol"
+      ],
+      "correct": 1,
+      "explanation": "Bakelite is a polymer of formaldehyde and phenol.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q128",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "UNFOLD:",
+      "options": [
+        "Conceal",
+        "Withhold",
+        "Maintain",
+        "Elaborate"
+      ],
+      "correct": 3,
+      "explanation": "UNFOLD (to reveal/elaborate) has its listed opposite in 'elaborate'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q129",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "An electron is moving along the axis of a solenoid carrying a current. Which of the following is a correct statement abou the electromagnetic force acting on the electron?",
+      "options": [
+        "The force acts radially inwards",
+        "The force acts radially outwards",
+        "The force acts in the direction of motion",
+        "No force acts"
+      ],
+      "correct": 3,
+      "explanation": "An electron moving along the solenoid axis is parallel to the field, so no force acts.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q130",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Third law of Newton is also called",
+      "options": [
+        "Law of inertia",
+        "Equilibrium",
+        "Both a and b",
+        "None"
+      ],
+      "correct": 0,
+      "explanation": "Newton's third law is the law of action and reaction.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q131",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When a charge “Q” on a capacitor is doubled then energy stored “U” will be",
+      "options": [
+        "2U",
+        "3U",
+        "U/2",
+        "4U"
+      ],
+      "correct": 3,
+      "explanation": "U = Q2/2C, so doubling the charge quadruples the stored energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q132",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "1 kilowatt hour =",
+      "options": [
+        "1.6 ×10-19 J",
+        "3.6 ×106 J",
+        "9.1 ×10-31 J",
+        "1.67 ×10-27J"
+      ],
+      "correct": 1,
+      "explanation": "1 kWh = 3.6 x 10^6 J.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q133",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The effect of temperature on the rate of a reaction is given by",
+      "options": [
+        "Handerson’s equation",
+        "General gas equation",
+        "Arrhenius equation",
+        "Vander Waal’s equation"
+      ],
+      "correct": 2,
+      "explanation": "The Arrhenius equation gives the effect of temperature on reaction rate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q134",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Terminal Voltage “V 1” of the battery is greater than emf of the battery when",
+      "options": [
+        "Battery is charging",
+        "battery is discharging",
+        "battery is connected with R",
+        "battery is connected with voltmeter"
+      ],
+      "correct": 0,
+      "explanation": "Terminal voltage exceeds the emf while the battery is charging.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q135",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A magnetic needle is placed in a uniform magnetic field and is alighned with the field. The needle is now rotated by an angle of 60 degree and the work donw is W. the torque on the magnetic needle at this position. ENGLISH (15 MCQs)",
+      "options": [
+        "2V3W",
+        "3W",
+        "(3/2)W",
+        "(3/4)W"
+      ],
+      "correct": 0,
+      "explanation": "For a needle rotated 60 degrees the torque is 2*sqrt(3) times the work done.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q136",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The number of vertebrates in horse neck are",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "10"
+      ],
+      "correct": 2,
+      "explanation": "The horse has seven cervical vertebrae in its neck.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q137",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The spectrum of He is expected to be similar to that of",
+      "options": [
+        "H",
+        "Na",
+        "He+",
+        "Li+"
+      ],
+      "correct": 0,
+      "explanation": "The helium spectrum resembles hydrogen's (both hydrogen-like).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q138",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "HIV is also known as:",
+      "options": [
+        "AIDS",
+        "HAV",
+        "UTLV",
+        "HBV"
+      ],
+      "correct": 0,
+      "explanation": "HIV is the virus that causes AIDS.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q139",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "4.5 ×109 is the half -life of",
+      "options": [
+        "U234",
+        "U235",
+        "U236",
+        "C14"
+      ],
+      "correct": 2,
+      "explanation": "4.5 x 10^9 years is the half-life of U-236 per the official key.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q140",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to 'ACRIMONY'?",
+      "options": [
+        "Bitterness",
+        "Goodwill",
+        "Anger",
+        "Resentment"
+      ],
+      "correct": 1,
+      "explanation": "The opposite of acrimony (bitterness) is goodwill.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q141",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Authocyanin’s are various types of colorful pigments present in the:",
+      "options": [
+        "Chloroplasts",
+        "Chromoplasts",
+        "Leucoplsts",
+        "Vacuoles"
+      ],
+      "correct": 1,
+      "explanation": "Anthocyanins are pigments found in chromoplasts.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q142",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to 'BENEVOLENT'?",
+      "options": [
+        "Kind",
+        "Cruel",
+        "Generous",
+        "Gentle"
+      ],
+      "correct": 1,
+      "explanation": "The opposite of benevolent (kind) is cruel.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q143",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct meaning of the idiom 'To throw caution to the wind'?",
+      "options": [
+        "To act recklessly",
+        "To blow in the wind",
+        "To be careful",
+        "To exercise"
+      ],
+      "correct": 0,
+      "explanation": "'Throw caution to the wind' means to act recklessly.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q144",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The word 'DISSEMINATE' means:",
+      "options": [
+        "To collect",
+        "To spread widely",
+        "To hide",
+        "To concentrate"
+      ],
+      "correct": 1,
+      "explanation": "Disseminate means to spread widely.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q145",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct meaning of the idiom 'To add insult to injury'?",
+      "options": [
+        "To make a bad situation worse",
+        "To physically hurt someone",
+        "To apologize",
+        "To heal someone"
+      ],
+      "correct": 0,
+      "explanation": "'Add insult to injury' means to make a bad situation worse.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q146",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which is not correct?",
+      "options": [
+        "In February",
+        "On 5:00 O’clock",
+        "At my house",
+        "Near me"
+      ],
+      "correct": 1,
+      "explanation": "'On 5:00 o'clock' is wrong; we say 'at 5 o'clock'.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q147",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to 'AUDACIOUS'?",
+      "options": [
+        "Bold",
+        "Timid",
+        "Daring",
+        "Brave"
+      ],
+      "correct": 1,
+      "explanation": "The opposite of audacious (bold) is timid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q148",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A cross between F1 hybirds with either of parents is called",
+      "options": [
+        "Back cross",
+        "Test cross",
+        "Reverse cross",
+        "None of the above"
+      ],
+      "correct": 0,
+      "explanation": "Crossing F1 hybrids with either parent is a back cross.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q149",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct meaning of the idiom 'To hit the nail on the head'?",
+      "options": [
+        "To be exactly right",
+        "To hammer a nail",
+        "To make a mistake",
+        "To hurt someone"
+      ],
+      "correct": 0,
+      "explanation": "'Hit the nail on the head' means to be exactly right.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-1-q150",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to 'SANGUINE'? SECTION 2: PSYCHOLOGICAL TEST Time: 15 Minutes | Total MCQs: 50 Choose the option that best describes your usual response or attitude.",
+      "options": [
+        "Optimistic",
+        "Pessimistic",
+        "Confident",
+        "Hopeful"
+      ],
+      "correct": 1,
+      "explanation": "The opposite of sanguine (optimistic) is pessimistic.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    }
+  ]
+}

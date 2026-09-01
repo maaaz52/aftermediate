@@ -11,6 +11,11 @@ import ntsNatJson from "@/data/practice-nts-nat.json";
 import pieasJson from "@/data/practice-pieas.json";
 import akuJson from "@/data/practice-aku.json";
 import latJson from "@/data/practice-lat.json";
+import numsT1Json from "@/data/practice-nums-test-1.json";
+import numsT2Json from "@/data/practice-nums-test-2.json";
+import numsT3Json from "@/data/practice-nums-test-3.json";
+import numsT4Json from "@/data/practice-nums-test-4.json";
+import mdcatTest2Json from "@/data/practice-mdcat-test-2.json";
 import ieltsJson from "@/data/practice-ielts.json";
 import satJson from "@/data/practice-sat.json";
 import toeflJson from "@/data/practice-toefl.json";
@@ -65,6 +70,8 @@ export interface PracticeBenchmark {
 
 export interface PracticeBank {
   testId: string;
+  /** Human label for a specific paper within a multi-paper test, e.g. "Test 1". */
+  paperLabel?: string;
   schemaVersion: number;
   provenance: { note: string; sources: string[] };
   durationMinutes: number;
@@ -88,7 +95,47 @@ export interface GradeOutcome {
 export interface CatalogItem {
   test: EntryTest;
   bank: PracticeBank | null;
+  variants: CatalogVariant[];
   status: "ready" | "preparation";
+}
+
+export interface CatalogVariant {
+  testId: string;
+  label: string;
+  questionCount: number;
+  durationMinutes: number;
+}
+
+/**
+ * Extra papers grouped under a parent entry test. Each value is a bank testId
+ * (a PracticeBank with a paperLabel). The parent test's own bank, if any, is
+ * always offered first as the "standard" paper.
+ */
+export const variantGroups: Record<string, string[]> = {
+  nums: ["nums-test-1", "nums-test-2", "nums-test-3", "nums-test-4"],
+  mdcat: [
+    "mdcat-test-2",
+    "mdcat-qca-04-08-2024",
+    "mdcat-qca-07-07-2024",
+    "mdcat-qca-11-08-2024",
+    "mdcat-qca-14-07-2024",
+  ],
+};
+
+/** Parent entry-test id for a variant bank testId, or undefined. */
+export function variantParent(testId: string): string | undefined {
+  for (const [parent, vids] of Object.entries(variantGroups)) {
+    if (vids.includes(testId)) return parent;
+  }
+  return undefined;
+}
+
+/** The parent testId and every variant testId that currently has a bank. */
+export function paperIdsFor(parentTestId: string): string[] {
+  const variants = (variantGroups[parentTestId] ?? []).filter(
+    (vid) => banks[vid] != null
+  );
+  return banks[parentTestId] ? [parentTestId, ...variants] : variants;
 }
 
 /** In-progress attempt persisted across refreshes. Never synced. */
@@ -127,6 +174,11 @@ const ntsNatBank = ntsNatJson as unknown as PracticeBank;
 const pieasBank = pieasJson as unknown as PracticeBank;
 const akuBank = akuJson as unknown as PracticeBank;
 const latBank = latJson as unknown as PracticeBank;
+const numsT1Bank = numsT1Json as unknown as PracticeBank;
+const numsT2Bank = numsT2Json as unknown as PracticeBank;
+const numsT3Bank = numsT3Json as unknown as PracticeBank;
+const numsT4Bank = numsT4Json as unknown as PracticeBank;
+const mdcatTest2Bank = mdcatTest2Json as unknown as PracticeBank;
 const ieltsBank = ieltsJson as unknown as PracticeBank;
 const satBank = satJson as unknown as PracticeBank;
 const toeflBank = toeflJson as unknown as PracticeBank;
@@ -149,6 +201,11 @@ export const banks: Record<string, PracticeBank> = {
   pieas: pieasBank,
   aku: akuBank,
   lat: latBank,
+  "nums-test-1": numsT1Bank,
+  "nums-test-2": numsT2Bank,
+  "nums-test-3": numsT3Bank,
+  "nums-test-4": numsT4Bank,
+  "mdcat-test-2": mdcatTest2Bank,
   ielts: ieltsBank,
   sat: satBank,
   toefl: toeflBank,
@@ -173,7 +230,17 @@ export function buildCatalog(
 ): CatalogItem[] {
   return tests.map((test) => {
     const bank = bankMap[test.id] ?? null;
-    return { test, bank, status: bank ? "ready" : "preparation" };
+    const variants: CatalogVariant[] = (variantGroups[test.id] ?? [])
+      .map((vid) => bankMap[vid])
+      .filter((b): b is PracticeBank => Boolean(b))
+      .map((b) => ({
+        testId: b.testId,
+        label: b.paperLabel ?? b.testId,
+        questionCount: b.questions.length,
+        durationMinutes: b.durationMinutes,
+      }));
+    const status = bank || variants.length > 0 ? "ready" : "preparation";
+    return { test, bank, variants, status };
   });
 }
 

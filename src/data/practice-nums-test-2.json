@@ -1,0 +1,2490 @@
+{
+  "testId": "nums-test-2",
+  "paperLabel": "Test 2",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "NUMS practice test, academic section.",
+    "sources": []
+  },
+  "durationMinutes": 180,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 144,
+    "note": "1 mark per correct answer, no negative marking."
+  },
+  "benchmarks": [],
+  "sections": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "questionCount": 52
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "questionCount": 38
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "questionCount": 39
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "questionCount": 15
+    }
+  ],
+  "questions": [
+    {
+      "id": "nums-test-2-q001",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The gymnosperms are called “Naked seeds” plants because they bear naked:",
+      "options": [
+        "Anthridia",
+        "Ovules",
+        "Frui ts",
+        "Archegonia"
+      ],
+      "correct": 3,
+      "explanation": "Gymnosperms bear naked ovules (not enclosed in a fruit).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q002",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pick the opposite working pair",
+      "options": [
+        "RBC and platelet",
+        "Neutrophil and monocytes",
+        "Basophils and eosinophil’s",
+        "Lymphocytes and monocytes"
+      ],
+      "correct": 2,
+      "explanation": "Basophils and eosinophils are the working pair that fight allergens; the rest are 'opposite' pairs.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q003",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Mitigate means",
+      "options": [
+        "Aggravate",
+        "Attenuate",
+        "Contemplate",
+        "Virulent"
+      ],
+      "correct": 1,
+      "explanation": "Mitigate means to lessen or attenuate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q004",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one is not relted with evaporation?",
+      "options": [
+        "Continuous",
+        "Endothermic",
+        "Exothermic",
+        "Spontaneous"
+      ],
+      "correct": 2,
+      "explanation": "Evaporation is endothermic and spontaneous; exothermic is not related.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q005",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Amylase is not produced by following type of salivary land:",
+      "options": [
+        "Parotid",
+        "Submandibular",
+        "Sublingual",
+        "None of given"
+      ],
+      "correct": 2,
+      "explanation": "The sublingual gland produces little amylase; parotid and submandibular do.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q006",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In maxam -gilbert method, DNA threads are",
+      "options": [
+        "Chemically synthesized",
+        "Synthesized from mRNA",
+        "Synthesized by using terminating",
+        "Chemically cut into pieces"
+      ],
+      "correct": 3,
+      "explanation": "In the Maxam-Gilbert method DNA is chemically cut into pieces.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q007",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The multinucleated mass of the bone forming cells is called",
+      "options": [
+        "Osteoclasts",
+        "osteoblasts",
+        "osteogenics",
+        "osteocytes"
+      ],
+      "correct": 1,
+      "explanation": "A multinucleated mass of bone-forming cells is osteoblasts.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q008",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The active site of an enzyme is formed by a few of the enzyme:",
+      "options": [
+        "R-groups of amino acids",
+        "NH 2 groups of amino acids",
+        "–COOH groups of amin o acids",
+        "Exposed disulphide bodns"
+      ],
+      "correct": 0,
+      "explanation": "The active site is formed by R-groups of a few amino acids.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q009",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is not component of extra -cellular matrix in bacteria?",
+      "options": [
+        "Cell wall",
+        "Slime",
+        "Capsule",
+        "Cell membrane"
+      ],
+      "correct": 3,
+      "explanation": "The cell membrane is not part of the bacterial extracellular matrix.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q010",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "------------ are more common in human moles than females",
+      "options": [
+        "X-linked dominant traits",
+        "X-linked recessive traits",
+        "Y-linked dominant traits",
+        "Autosomal linked recessive traits"
+      ],
+      "correct": 1,
+      "explanation": "X-linked recessive traits are more common in males.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q011",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Number of bones in skull",
+      "options": [
+        "22",
+        "26",
+        "24",
+        "28"
+      ],
+      "correct": 0,
+      "explanation": "The adult human skull has 22 bones.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q012",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pectoral fins are enlarged in",
+      "options": [
+        "Whale",
+        "Shark",
+        "Skates",
+        "Plaice"
+      ],
+      "correct": 2,
+      "explanation": "Pectoral fins are enlarged in skates.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q013",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Flame cells are commonly found in",
+      "options": [
+        "Plathelminthes",
+        "Annelida",
+        "Coelenterate",
+        "All of above"
+      ],
+      "correct": 0,
+      "explanation": "Flame cells (protonephridia) are found in platyhelminthes.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q014",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which process takes place during the movement of glucose from body fluid to blood?",
+      "options": [
+        "Endosmois",
+        "Osmosis",
+        "Active transport",
+        "Facilitated diffusion"
+      ],
+      "correct": 3,
+      "explanation": "Glucose moves from body fluid to blood by facilitated diffusion.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q015",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Voracious means …………..",
+      "options": [
+        "Excitable",
+        "Honest",
+        "Greedy",
+        "Circular"
+      ],
+      "correct": 2,
+      "explanation": "Voracious means greedy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q016",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Cloning is a form of",
+      "options": [
+        "Parthenogenesis",
+        "Apomixes",
+        "Sexual reproduction",
+        "Asexual reproduction"
+      ],
+      "correct": 1,
+      "explanation": "Cloning is a form of apomixis (asexual seed production).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q017",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Founder of cell biology is",
+      "options": [
+        "Schielden&schwann",
+        "Galileo",
+        "Robert Hooke",
+        "Robert Brown"
+      ],
+      "correct": 0,
+      "explanation": "Cell biology was founded by Schleiden and Schwann.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q018",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Almost all of the fresh water animals and most ofthe marine vertebrates are",
+      "options": [
+        "Osmoconformers",
+        "osmoregulators",
+        "Isotonic to environment",
+        "at dynamic equilibrium to"
+      ],
+      "correct": 1,
+      "explanation": "Freshwater animals are mostly osmoregulators.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q020",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The vapour pressure of water at room teprature is 23.8 mm Hg. The vapour pressure of an aqueous solution of sucrose with mole fraction 0.2 is equal to",
+      "options": [
+        "19.04 mm Hg",
+        "24.2 mm of Hg",
+        "21.42 mm of Hg",
+        "21.4 mm of Hg"
+      ],
+      "correct": 0,
+      "explanation": "Vapour pressure = 23.8 x (1 - 0.2) = 19.04 mm Hg.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q022",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "J. Seiler in 1914 discovered which type of sex determination in months?",
+      "options": [
+        "XO-XX",
+        "XY-XX",
+        "ZZ-ZW",
+        "Noen of these"
+      ],
+      "correct": 2,
+      "explanation": "J. Seiler discovered ZZ-ZW sex determination in moths.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q023",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "According to Einstein bodies and light rays follow",
+      "options": [
+        "rectilinear path",
+        "Circular path",
+        "Geodesics",
+        "Parabolic"
+      ],
+      "correct": 2,
+      "explanation": "According to Einstein, bodies and light follow geodesics.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q025",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The productivity of aquatic ecosystem determined by",
+      "options": [
+        "Water",
+        "Light and nutrients",
+        "Light",
+        "Nutrients"
+      ],
+      "correct": 1,
+      "explanation": "Aquatic productivity is determined by light and nutrients.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q026",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "DNA fingerprintingis basically done for",
+      "options": [
+        "DNA cloning",
+        "DNA analysis",
+        "DNA sequencing",
+        "DNA slicing"
+      ],
+      "correct": 1,
+      "explanation": "DNA fingerprinting is done for DNA analysis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q027",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following animals possesses on open circulatory system:",
+      "options": [
+        "Amoeba",
+        "Earth worm",
+        "Grass hopper",
+        "Man"
+      ],
+      "correct": 2,
+      "explanation": "The grasshopper has an open circulatory system.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q028",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following feature is not related to vexillium in pea family?",
+      "options": [
+        "Large",
+        "Single",
+        "Outermost",
+        "Anterior"
+      ],
+      "correct": 3,
+      "explanation": "The vexillum is large, single and outermost; 'anterior' is not true.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q029",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The six strings of a guitar are the same length under nearly the same tension, but they have diference thickness. On which string do waves travel the fastest?",
+      "options": [
+        "The thickest string",
+        "The thinnest string",
+        "The wave speed is the same on all",
+        "None of the above"
+      ],
+      "correct": 1,
+      "explanation": "Wave speed v = sqrt(T/mu); the thinnest string (lowest mu) has the highest speed.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q030",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which component enters into mitochondria after glycol sis?",
+      "options": [
+        "Pyruvate",
+        "Acetate",
+        "Oxaloacetate",
+        "Acetyl -CoA"
+      ],
+      "correct": 0,
+      "explanation": "Pyruvate enters the mitochondria after glycolysis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q031",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is not the function of cerebrum?",
+      "options": [
+        "Volunteer digestion",
+        "Thinking",
+        "Intelligenece",
+        "Skeletal muscles"
+      ],
+      "correct": 0,
+      "explanation": "Voluntary digestion is not a function of the cerebrum.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q032",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Drosophilia sperm cell contains",
+      "options": [
+        "4 chromosomes",
+        "8 chromosomes",
+        "8 pair of chromosomes",
+        "3 chromosomes"
+      ],
+      "correct": 0,
+      "explanation": "Drosophila sperm is haploid with 4 chromosomes.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q033",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Fundography is relevant to",
+      "options": [
+        "Heart",
+        "Liver",
+        "Stomach",
+        "Eyes"
+      ],
+      "correct": 3,
+      "explanation": "Fundography (fundoscopy) relates to the eye.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q034",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following has maximum hydration power?",
+      "options": [
+        "Na+",
+        "K+",
+        "Mg+",
+        "Ca+2"
+      ],
+      "correct": 2,
+      "explanation": "Mg2+ has the greatest hydration power due to its small size and high charge density.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q035",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Generous antonym",
+      "options": [
+        "Cruel",
+        "Noble",
+        "Selfish",
+        "Lavish"
+      ],
+      "correct": 2,
+      "explanation": "The antonym of generous is selfish.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q036",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The first simplest oxygen producing organism",
+      "options": [
+        "Methanogens",
+        "Cyaobacteria",
+        "Euglena",
+        "Spirogyra"
+      ],
+      "correct": 1,
+      "explanation": "Cyanobacteria were the first oxygen-producing organisms.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q037",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Lamark is best known for his theory of",
+      "options": [
+        "Inheritance",
+        "Dominance",
+        "Inheritance of acquired characteristics",
+        "All of the above"
+      ],
+      "correct": 2,
+      "explanation": "Lamarck is known for the inheritance of acquired characteristics.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q038",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In the course of glycolysis",
+      "options": [
+        "NADH is reduced to NAD+",
+        "NAD+ is oxidized to NADH",
+        "Glucose is degraded into two",
+        "Both A and B"
+      ],
+      "correct": 2,
+      "explanation": "In glycolysis glucose is degraded into two pyruvates.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q039",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct pathway for the flow of blood.",
+      "options": [
+        "Arterioles ---- metarterioles ----",
+        "Arterioles ---- thoroughfare channel ---",
+        "Thoroughfare channel ----- arterioles --",
+        "Metarterioles ----arterioles ----"
+      ],
+      "correct": 0,
+      "explanation": "Blood flows arterioles to metarterioles to thoroughfare channels.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q040",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The essential condition for optically activity of an organic -compound is",
+      "options": [
+        "Dextrorotatory",
+        "Levorotatory",
+        "Presence a -symmetric carbon",
+        "Molecular dy -symmetry"
+      ],
+      "correct": 2,
+      "explanation": "Optical activity requires an asymmetric (chiral) carbon.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q041",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Etioplasts found in plants are actually one of the type of",
+      "options": [
+        "Choloroplasts",
+        "Chromoplasts",
+        "Leucoplastas",
+        "Noen of given"
+      ],
+      "correct": 0,
+      "explanation": "Etioplasts are a type of chloroplast (immature, in the dark).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q042",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which ofne of proper use of preposition?",
+      "options": [
+        "“if I am laying, the course of Allah be",
+        "“if I am lyaing, the course of Allah be",
+        "“if I may laying, the course of Allah",
+        "“if I am lying, the course of Allah be"
+      ],
+      "correct": 3,
+      "explanation": "The correct phrase uses 'lying': 'If I am lying, the course of Allah be...'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q043",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Thyroid gland requires high amount of",
+      "options": [
+        "Phosphate",
+        "Calcium",
+        "Iodine",
+        "Sodium"
+      ],
+      "correct": 2,
+      "explanation": "The thyroid gland requires iodine in high amounts.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q044",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Only one ovary is functional at a time in",
+      "options": [
+        "Human",
+        "Eagle",
+        "Pigeon",
+        "Pigeon and human"
+      ],
+      "correct": 2,
+      "explanation": "Only one ovary is functional at a time in pigeons.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q045",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "What is the mass of same no of potassium as are present in 11.5 grams of sodium?",
+      "options": [
+        "19g",
+        "19.5g",
+        "39g",
+        "78g"
+      ],
+      "correct": 1,
+      "explanation": "11.5 g sodium = 0.5 mol; 0.5 mol potassium = 19.5 g.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q046",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "What will be the approximate length of DNA strand having 500 nucleotides?",
+      "options": [
+        "100 nm",
+        "130 nm",
+        "170 nm",
+        "150 nm"
+      ],
+      "correct": 2,
+      "explanation": "500 nucleotides give roughly 170 nm of DNA (about 0.34 nm per base pair).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q047",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "ptyalin can convert startch into",
+      "options": [
+        "monosaccharide form",
+        "oligosaccharide form",
+        "polysaccharide form",
+        "all given options"
+      ],
+      "correct": 1,
+      "explanation": "Ptyalin converts starch into oligosaccharides.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q048",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Commereial method of producing million of seedlings in limited time?",
+      "options": [
+        "Parthenogenesis",
+        "Parthenocarpy",
+        "Cutting",
+        "Grafting"
+      ],
+      "correct": 2,
+      "explanation": "Commercial mass seedling production uses cuttings.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q049",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "At which of the following places, motion of simple pendulum becomes slowest",
+      "options": [
+        "Murree",
+        "Karachi",
+        "K-2",
+        "Peshawar"
+      ],
+      "correct": 2,
+      "explanation": "A pendulum is slowest at K-2 (higher altitude, weaker gravity).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q050",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Sod-benzoate on reacting with soda lime forms",
+      "options": [
+        "Benzoic acid",
+        "Benzene",
+        "Toluene",
+        "Benzaladehyde"
+      ],
+      "correct": 1,
+      "explanation": "Sodium benzoate with soda lime forms benzene.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q051",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The boy was incorrigible and a constant source of trouble to his mother",
+      "options": [
+        "Truant",
+        "Bad beyond correction",
+        "Rash",
+        "Dishonest"
+      ],
+      "correct": 1,
+      "explanation": "Incorrigible means bad beyond correction.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q052",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Diameter of an artery can be changed by",
+      "options": [
+        "Nervous stimulation",
+        "Chemical stimulation",
+        "Both chemical and Nervous",
+        "None of given"
+      ],
+      "correct": 2,
+      "explanation": "Artery diameter is changed by both nervous and chemical stimulation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q053",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Annually …………% of fruit is lost due to fungi",
+      "options": [
+        "15-20%",
+        "35-70%",
+        "25-35%",
+        "15-50%"
+      ],
+      "correct": 3,
+      "explanation": "Annually about 15-50% of fruit is lost to fungi.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q054",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Genetic recombination in bacteria can occur thorugh",
+      "options": [
+        "Conjugation",
+        "Transformation",
+        "Transduction",
+        "All given"
+      ],
+      "correct": 3,
+      "explanation": "Conjugation, transformation and transduction all cause genetic recombination in bacteria.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q055",
+      "section": "biology",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Identify correct one CHEMISTRY (40 MCQs)",
+      "options": [
+        "Now observe it’s effect on a human",
+        "Now observe its effect on a human",
+        "Now observe its affect on a human",
+        "Now observe it effect on a human"
+      ],
+      "correct": 1,
+      "explanation": "'Its' is possessive: 'Now observe its effect on a human.'",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q056",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "CO 2 and Oz diffuse in the ratio of 0.58:0.55 what is the mass of Oz:",
+      "options": [
+        "2.44",
+        "23.2",
+        "48.93",
+        "2.32"
+      ],
+      "correct": 2,
+      "explanation": "Using Graham's law the oxygen mass works out to 48.93.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q057",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one is different with respect to the modes of locomotion?",
+      "options": [
+        "Amoeba",
+        "paramecium",
+        "forms",
+        "radiolarians"
+      ],
+      "correct": 1,
+      "explanation": "Paramecium differs from the others in its mode of locomotion.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q058",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "“the sum of all the exponents to which the molar concentration in terms in the rate equation are raised” defines”",
+      "options": [
+        "Rate of reaction",
+        "Order of reaction",
+        "Type of reaction",
+        "Product of reaction"
+      ],
+      "correct": 1,
+      "explanation": "The definition describes the order of a reaction.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q059",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The gametophyte of Ulva is:",
+      "options": [
+        "Haploid",
+        "Diploid",
+        "Triploid",
+        "Polyploid"
+      ],
+      "correct": 0,
+      "explanation": "The gametophyte of Ulva is haploid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q060",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If another molecule, having a shape very similar to the enzyme’s substrate, binds to its active site, it would then _____ the enzyme’s function.",
+      "options": [
+        "Fasten",
+        "inhibit",
+        "reverse",
+        "decrease"
+      ],
+      "correct": 1,
+      "explanation": "A similar-shaped molecule binds the active site and inhibits the enzyme.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q061",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Synaptonemal complex helps in",
+      "options": [
+        "Gemete formation",
+        "Recombination during cell division",
+        "Production of enzymes during cell",
+        "Chromosomal movement towards"
+      ],
+      "correct": 1,
+      "explanation": "The synaptonemal complex assists recombination during cell division.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q062",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The social organization of howling monkeys was studied by",
+      "options": [
+        "Allen",
+        "Thorpe",
+        "Schjeldeupebbe",
+        "Carpenter"
+      ],
+      "correct": 3,
+      "explanation": "Carpenter studied the social organization of howling monkeys.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q063",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "An ester is prepared by",
+      "options": [
+        "Two alcohols",
+        "Carboxylic acid and alcohol",
+        "Ketone and alcohol",
+        "Aldehyde and alcohol"
+      ],
+      "correct": 1,
+      "explanation": "Esters are made from a carboxylic acid and an alcohol.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q064",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which orbital has lowest energy?",
+      "options": [
+        "3d",
+        "4s",
+        "3p",
+        "4f"
+      ],
+      "correct": 1,
+      "explanation": "4s has lower energy than 3d and fills first.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q065",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Dissociation of solute does not depend on",
+      "options": [
+        "Size of solvent",
+        "Temperature",
+        "Nature of solute",
+        "Concentration of solute"
+      ],
+      "correct": 3,
+      "explanation": "Dissociation does not depend on the concentration of solute.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q066",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A frictionless heat engine can be 100% efficient if:",
+      "options": [
+        "The temperature of the sink is 0°C",
+        "The temperature of the sink is O°K",
+        "The temperature of the source is O°K",
+        "The temperature of the sink is equal to the"
+      ],
+      "correct": 1,
+      "explanation": "A 100% efficient engine needs the sink at absolute zero (0 K).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q067",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Shape of the orbital is given by:",
+      "options": [
+        "Principle quantum number",
+        "Azimuthal quantum number",
+        "Magnetic quantum number",
+        "Spin quantum number"
+      ],
+      "correct": 1,
+      "explanation": "Orbital shape is given by the azimuthal quantum number.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q068",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Alpha, Beta and Gamma radiations are emitted from a radioactive substance:",
+      "options": [
+        "When it is heated",
+        "When it is subjected to high pressure",
+        "When it interacts with another particle",
+        "Spontaneously"
+      ],
+      "correct": 3,
+      "explanation": "Radioactive decay emits alpha, beta and gamma radiations spontaneously.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q070",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Formalin is an aqueous solution of:",
+      "options": [
+        "Formic acid",
+        "Formaldehyde",
+        "Furfurabldehyde",
+        "Acetone"
+      ],
+      "correct": 1,
+      "explanation": "Formalin is an aqueous solution of formaldehyde.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q071",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Genetic mutations occur in",
+      "options": [
+        "RNA",
+        "Protein",
+        "DNA",
+        "All of the above"
+      ],
+      "correct": 2,
+      "explanation": "Genetic mutations occur in DNA.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q073",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Phenyl methyl ketone can be converted into ethyl benzene in one step by using:",
+      "options": [
+        "LiAIH 4",
+        "Zn(Hg) – HCI",
+        "NaBH 4",
+        "CH 3 Mgl"
+      ],
+      "correct": 1,
+      "explanation": "Clemmensen reduction (Zn/Hg + HCl) converts phenyl methyl ketone to ethyl benzene.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q074",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "All of the following are bacterial diseases except.",
+      "options": [
+        "Cholera",
+        "Tuberculosis",
+        "Typhoid",
+        "Poliomyelitis viral"
+      ],
+      "correct": 3,
+      "explanation": "Poliomyelitis is a viral disease, not bacterial.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q075",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When inhibitor binds to enzyme other than active site and alters its structure, then it is called",
+      "options": [
+        "Competitive inhibitor",
+        "Non -competitive inhibitor",
+        "reversible inhibitor",
+        "irreversible inhibitor"
+      ],
+      "correct": 1,
+      "explanation": "Binding away from the active site that alters the enzyme is non-competitive inhibition.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q076",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The estrogen hormone secretion during the oogenesis is stim ulated by",
+      "options": [
+        "LH hormone",
+        "inhibition hormone",
+        "FSH hormone",
+        "testosterone hormone"
+      ],
+      "correct": 2,
+      "explanation": "FSH stimulates oestrogen secretion during oogenesis.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q077",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is neurotransmitter?",
+      "options": [
+        "Dopamine",
+        "hydroc hloric acid",
+        "sodium ions",
+        "calcium ions"
+      ],
+      "correct": 0,
+      "explanation": "Dopamine is a neurotransmitter.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q078",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Electrical energy is converted into chemical energy by",
+      "options": [
+        "Electrical cell",
+        "Electrolytic cell",
+        "Galvanic cell",
+        "Daniel cell"
+      ],
+      "correct": 1,
+      "explanation": "An electrolytic cell converts electrical energy into chemical energy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q079",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Chlorine upon reaction with NaOH in cold yields",
+      "options": [
+        "NaCI, NaCIO, H 2O",
+        "NaCI, NaCIO3, H 2O",
+        "NaCIO, NaCIO 3, H 2O",
+        "NaCI, H 2O"
+      ],
+      "correct": 0,
+      "explanation": "Cold NaOH with chlorine gives NaCl, NaClO and water.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q080",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Silicon is found in nature in form of",
+      "options": [
+        "Isolated or free silicon",
+        "Sulphides",
+        "Silica or silicates",
+        "Only silicates"
+      ],
+      "correct": 2,
+      "explanation": "Silicon occurs naturally as silica or silicates.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q081",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which metal is used generally for the filament of electric bulbs?",
+      "options": [
+        "Pt",
+        "Fe",
+        "Cu",
+        "W"
+      ],
+      "correct": 3,
+      "explanation": "Tungsten (W) is used for bulb filaments.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q082",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A miture of camphor and benzide acid can be separated by",
+      "options": [
+        "Fractional crystallization",
+        "Sublimation",
+        "Chemi cal method",
+        "Extraction with solvent"
+      ],
+      "correct": 1,
+      "explanation": "Camphor and benzoic acid are separated by sublimation.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q083",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Archaeopteryx is an connecting link between",
+      "options": [
+        "Amphibians and reptiles",
+        "Reptiles and birds",
+        "Birds and mammals",
+        "None of these"
+      ],
+      "correct": 1,
+      "explanation": "Archaeopteryx links reptiles and birds.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q084",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "During cellular respiration NADH2 produces:",
+      "options": [
+        "2 ATP",
+        "3 ATP",
+        "4ATP",
+        "5ATP"
+      ],
+      "correct": 1,
+      "explanation": "NADH2 produces 3 ATP during cellular respiration.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q085",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "so-Butyl alcohol has following carbon attached to hydroxy group",
+      "options": [
+        "Tertiary",
+        "secondary",
+        "Quaternary",
+        "primary"
+      ],
+      "correct": 3,
+      "explanation": "In isobutyl alcohol the -OH is attached to a primary carbon.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q086",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Maximum ionization potential is of",
+      "options": [
+        "Ca",
+        "Na",
+        "Be",
+        "Mg"
+      ],
+      "correct": 2,
+      "explanation": "Beryllium (Be) has the maximum ionization potential.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q087",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "According to the Guass’s law, electric field intensity between two oppositely charged parallel plates is",
+      "options": [
+        "O",
+        "-",
+        "",
+        "B"
+      ],
+      "correct": 1,
+      "explanation": "Between two oppositely charged parallel plates the field is uniform (constant).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q088",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following enzyme is raised in rickets?",
+      "options": [
+        "Lactic dehydrogenase",
+        "LDH -I",
+        "Phosphatase",
+        "Alkaline phosphatase"
+      ],
+      "correct": 3,
+      "explanation": "Alkaline phosphatase is raised in rickets.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q089",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following statements is true?",
+      "options": [
+        "Alkali metal hydroxides are stable to",
+        "CaOH is a stronger base than NaOH",
+        "When NaOH is made the gas",
+        "NaOH is named as caustic soda"
+      ],
+      "correct": 3,
+      "explanation": "NaOH is named caustic soda.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q090",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Catharisis synonyms",
+      "options": [
+        "Sudden",
+        "Outlet of strong emotions",
+        "Anti -climax",
+        "Informal discussion"
+      ],
+      "correct": 1,
+      "explanation": "Catharsis means an outlet for strong emotions.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q091",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In SP3d hydridization, the o orbital that participates in hybridization is:",
+      "options": [
+        "Dx2 – y2",
+        "Dz²",
+        "Dxy",
+        "Dxz"
+      ],
+      "correct": 1,
+      "explanation": "The dz2 orbital participates in sp3d hybridization.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q092",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Commercial hydrogen can be obtained by the action of a steam on:",
+      "options": [
+        "Marsh gas",
+        "Coal gas",
+        "Producer gas",
+        "None of these"
+      ],
+      "correct": 0,
+      "explanation": "Commercial hydrogen is made by the action of steam on marsh gas (methane).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q093",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A force F = 0.12 N is applied on a spring and spring elongates by 3cm. specific constant of D the spring is?",
+      "options": [
+        "0.4 Nm -2",
+        "40 Nm -1",
+        "400 Nm -1",
+        "4 Nm -1"
+      ],
+      "correct": 3,
+      "explanation": "k = F/x = 0.12/0.03 = 4 N/m.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q094",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following carboxylic acids will be the most acidic?",
+      "options": [
+        "CH 3 CHCICH 2 COOH",
+        "CH 3 CH 2CCI 2COOH",
+        "CH 3CH 2CHCICOOH",
+        "CH 3CH 2CH 2COOH"
+      ],
+      "correct": 1,
+      "explanation": "CH3CH2CCl2COOH is most acidic because two Cl atoms near the -COOH group.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q095",
+      "section": "chemistry",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following fertilizers has maximum percentage of nitrogen in solid state? PHYSICS (40 MCQs)",
+      "options": [
+        "Ammonia",
+        "Urea",
+        "DI ammonium hydrogen phosphate",
+        "Ammonium nitrate"
+      ],
+      "correct": 0,
+      "explanation": "Ammonia has the maximum nitrogen percentage in the solid state (per the key).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q096",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In many bacteria cell wall is enclosed within a slime capsule made up of:",
+      "options": [
+        "Polysaccharides",
+        "Cellulose",
+        "Amino Acids",
+        "Proteins"
+      ],
+      "correct": 0,
+      "explanation": "Bacterial slime capsules are made of polysaccharides.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q097",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following is called animal starch?",
+      "options": [
+        "Amylose",
+        "Cellulose",
+        "Glycogen",
+        "Glycine"
+      ],
+      "correct": 2,
+      "explanation": "Animal starch is glycogen.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q098",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A mass has constant acceleration, what is true about force applied on it?",
+      "options": [
+        "Constantly increasing",
+        "Constant but not zero",
+        "Is direct ly proportional to square of",
+        "Is diretly proportional to velocity"
+      ],
+      "correct": 1,
+      "explanation": "Constant acceleration means a constant, non-zero force.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q099",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "High level of ______ and _____ in the bblood, contributing factors in the formation of kidney stones.",
+      "options": [
+        "Calcium, oxalate",
+        "Calcium, magnesium",
+        "Calcium, sodium",
+        "Sodium, sulphate"
+      ],
+      "correct": 0,
+      "explanation": "High calcium and oxalate in blood contribute to kidney stones.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q100",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following blood vessels have the highest pressure of blood?",
+      "options": [
+        "Aorta",
+        "Pulmonary arteries",
+        "Pulmonary veins",
+        "Vena Cava"
+      ],
+      "correct": 0,
+      "explanation": "The aorta has the highest blood pressure.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q101",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Two positive point charges are placed 2m apart. The electric potential at mid -point due to these two charges will be",
+      "options": [
+        "Added to double",
+        "Reduced to half",
+        "Remains same (no effect)",
+        "Cancel each other effect"
+      ],
+      "correct": 0,
+      "explanation": "At the midpoint the two potentials add (double).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q102",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "He invited and Zia to dinner.",
+      "options": [
+        "we",
+        "you",
+        "us",
+        "them"
+      ],
+      "correct": 1,
+      "explanation": "'He invited you and Zia to dinner' is the correct sentence.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q103",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "What happends to the pressure of a sample of helium gas if the temperature is increased from 200K to 300 K, with no change volume?",
+      "options": [
+        "Pressure increases by a factor of 4",
+        "Pressure decreases by a factor of 4",
+        "Pressure decreases by a factor of 2",
+        "Pressure increases by a factor of 2"
+      ],
+      "correct": 3,
+      "explanation": "P is proportional to T at constant volume, so 300/200 = 1.5x; the closest option is a factor of 2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q104",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If the body is rotating with uniform angular velocity, then its torque is:",
+      "options": [
+        "Zero",
+        "90°",
+        "1",
+        "-1"
+      ],
+      "correct": 0,
+      "explanation": "Uniform angular velocity means zero net torque.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q105",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Role of lysosomes are:",
+      "options": [
+        "Hydrolytic enzymes",
+        "Autophagy",
+        "Destruction of cell",
+        "All of above"
+      ],
+      "correct": 3,
+      "explanation": "Lysosomes do all three: hydrolytic enzymes, autophagy and cell destruction.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q106",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In human, cell ________ is responsible for producing hydrogen peroxides",
+      "options": [
+        "Lysosomes",
+        "Mitochondria",
+        "Peroxisomes",
+        "Glyoxisomes"
+      ],
+      "correct": 2,
+      "explanation": "Peroxisomes produce hydrogen peroxide.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q107",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Brassica and rose plant belong to the group of plants:",
+      "options": [
+        "Hydrophytes",
+        "Mesophytes",
+        "Xerophytes",
+        "Succulant"
+      ],
+      "correct": 1,
+      "explanation": "Brassica and rose are mesophytes.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q108",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "When fluid is imcopressible, it means",
+      "options": [
+        "No internal frictional force",
+        "Independent of coordinates",
+        "Independent of time",
+        "Its density remains constant"
+      ],
+      "correct": 3,
+      "explanation": "An incompressible fluid has constant density.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q109",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Maximum ____ electrons can be placed in oneorbital.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "explanation": "An orbital holds a maximum of 2 electrons.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q110",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The simplest form in kingdom Animalia belongs to",
+      "options": [
+        "Eumetazoa",
+        "Bilateria",
+        "Parazoa",
+        "Protostomia"
+      ],
+      "correct": 2,
+      "explanation": "Parazoa are the simplest animals (sponges).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q111",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Hypothalamus initiates the release of hormones, by their releasing factors, whilte _____ is directly released by is.",
+      "options": [
+        "TSH",
+        "Oxytocin",
+        "ACTH",
+        "FSH"
+      ],
+      "correct": 1,
+      "explanation": "Oxytocin is released directly by the hypothalamus (posterior pituitary).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q112",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Weber ampere per meter is equal to",
+      "options": [
+        "Joule",
+        "Watt",
+        "Newton",
+        "Henry"
+      ],
+      "correct": 2,
+      "explanation": "Weber per ampere-metre equals the newton.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q113",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If amplitude is 200, intensity is 300. When amplitude is increased to 800 then what will be intensity?",
+      "options": [
+        "1200",
+        "1400",
+        "1600",
+        "1800"
+      ],
+      "correct": 0,
+      "explanation": "Intensity is proportional to amplitude: 300 x (800/200) = 1200.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q115",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In reversible reaction, catalyst low ers the activation energy of the",
+      "options": [
+        "Forward reaction",
+        "reverse reaction",
+        "forward as well as reverse reaction",
+        "forward reaction but increases that of"
+      ],
+      "correct": 2,
+      "explanation": "A catalyst lowers activation energy for both the forward and reverse reactions.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q116",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "If the value of Kc is very large then it shows that ______ completed.",
+      "options": [
+        "Forward reaction",
+        "Reverse reaction",
+        "Equilibrium is maintained",
+        "Kc is moderate"
+      ],
+      "correct": 0,
+      "explanation": "A very large Kc shows the forward reaction is nearly complete.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q117",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Goiter ¡s one of the abnormalities due to the deficiency of hormone:",
+      "options": [
+        "Adrenaline",
+        "Thyroxin",
+        "Oxytocin",
+        "Parathormone"
+      ],
+      "correct": 1,
+      "explanation": "Goitre is due to thyroxin deficiency.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q118",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Electronic configuration of k is",
+      "options": [
+        "[Ar] 4s²",
+        "[Ar] 4s1",
+        "[Kr] 4s1",
+        "[He] 4S1"
+      ],
+      "correct": 1,
+      "explanation": "Potassium's configuration is [Ar] 4s1.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q119",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "ANXIETY:",
+      "options": [
+        "Problem",
+        "Worry",
+        "Relaxed",
+        "Nervous"
+      ],
+      "correct": 1,
+      "explanation": "Anxiety means worry.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q120",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The entropy of the universe always",
+      "options": [
+        "Decreases",
+        "Increases",
+        "Remains the same",
+        "Both A and B"
+      ],
+      "correct": 1,
+      "explanation": "The entropy of the universe always increases.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q121",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In certain process, 400J of heat energy is supplied to a system and at the same time 150J of work is done by the system. The increase in internal energy of the system is",
+      "options": [
+        "150J",
+        "300J",
+        "250J",
+        "500J"
+      ],
+      "correct": 2,
+      "explanation": "deltaU = Q - W = 400 - 150 = 250 J.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q122",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "In composition of natural gas 0.17% is constituted by:",
+      "options": [
+        "Methane",
+        "Ethane",
+        "Butan e",
+        "Nitrogen"
+      ],
+      "correct": 3,
+      "explanation": "About 0.17% of natural gas is nitrogen.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q123",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "A ball is brown vertically upward with a velocity of 98 m/s. how high does the ball rise? G = 9.8 m/sec².",
+      "options": [
+        "360m",
+        "380m",
+        "490m",
+        "510m"
+      ],
+      "correct": 2,
+      "explanation": "h = v2/2g = 98^2/(2 x 9.8) = 490 m.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q124",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Equation of continuity is expressed as",
+      "options": [
+        "A1V2 = A2V1",
+        "A1V1 = A2V2",
+        "A1H2=A2H1",
+        "A1H1=A2H2"
+      ],
+      "correct": 1,
+      "explanation": "The continuity equation is A1V1 = A2V2.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q125",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "By fermentation process of starch and by the catalytic a enzyme ______ is produced.",
+      "options": [
+        "Methyl alcohol",
+        "Ethyl alcohol",
+        "Acethyl alcohol",
+        "Methanol"
+      ],
+      "correct": 1,
+      "explanation": "Fermentation of starch produces ethyl alcohol.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q126",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Pulmonary veins supply blood to heart chamber",
+      "options": [
+        "Right atrium",
+        "Left atrium",
+        "Right ventricle",
+        "Left Ventricle"
+      ],
+      "correct": 1,
+      "explanation": "Pulmonary veins supply the left atrium.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q127",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Half atmospheric pressure is",
+      "options": [
+        "400 torr",
+        "50622 Pa",
+        "101.3 Pa",
+        "8.5 pounds"
+      ],
+      "correct": 1,
+      "explanation": "Half atmospheric pressure is about 50662 Pa.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q128",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The distance between two consecutive antinodes is equal to",
+      "options": [
+        "/ 8",
+        "/6",
+        "/4",
+        "/2"
+      ],
+      "correct": 3,
+      "explanation": "Consecutive antinodes are lambda/2 apart.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q129",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "HCOOH is the structure of",
+      "options": [
+        "Acetic acid",
+        "Formic acid",
+        "Valeric acid",
+        "Caproic acid"
+      ],
+      "correct": 1,
+      "explanation": "HCOOH is formic acid.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q130",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The physical quantity which produces angular acceleration in the body is",
+      "options": [
+        "Force",
+        "Moment of inertia",
+        "Impulse",
+        "Torque"
+      ],
+      "correct": 3,
+      "explanation": "Torque produces angular acceleration.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q131",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Transfer of heat from hot surrounding to cold refrigerator is an example of",
+      "options": [
+        "Spontaneous reaction",
+        "Non spontaneous reaction",
+        "First law of thermodynamics",
+        "All of above"
+      ],
+      "correct": 1,
+      "explanation": "Heat flowing from a hot body to a cold refrigerator is non-spontaneous.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q132",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The amount of energy associated with quantum of radiation is directly proportional to",
+      "options": [
+        "Photon",
+        "wavelength",
+        "frequency",
+        "velocity"
+      ],
+      "correct": 2,
+      "explanation": "Quantum energy is directly proportional to frequency.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q133",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Uncontrolled production of WBCs results ¡n a disorder called:",
+      "options": [
+        "Leucaemia",
+        "Oedema",
+        "Thalassaemia",
+        "Atherosclerosis"
+      ],
+      "correct": 0,
+      "explanation": "Uncontrolled WBC production causes leukaemia.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q134",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Ejection of electrons from metal surface due to heating effect is:",
+      "options": [
+        "Thermonic emission",
+        "Photoelectric effect",
+        "Population inversion",
+        "Cathode expulsions"
+      ],
+      "correct": 0,
+      "explanation": "Ejection of electrons by heating is thermionic emission.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q135",
+      "section": "physics",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following elements does not belong to elements? ENGLISH (15 MCQs)",
+      "options": [
+        "Uranium",
+        "Samarium",
+        "Thorium",
+        "Osmium"
+      ],
+      "correct": 3,
+      "explanation": "Osmium is a d-block metal; uranium, samarium and thorium are f-block.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q136",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Intrinsic factor is secreted by",
+      "options": [
+        "Pancreas",
+        "Liver",
+        "stomach",
+        "duodenum"
+      ],
+      "correct": 2,
+      "explanation": "Intrinsic factor is secreted by the stomach.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q137",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "What are the Avogadro’s number of particles in 0.25 moles of CO 2?",
+      "options": [
+        "6.022 × 107",
+        "1.505 × 1023",
+        "2.00 × 1023",
+        "1.505 × 1015"
+      ],
+      "correct": 1,
+      "explanation": "0.25 mol x 6.022e23 = 1.505 x 10^23 particles.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q138",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The word 'EPISTEMOLOGY' means:",
+      "options": [
+        "The study of sounds",
+        "The study of knowledge",
+        "The study of history",
+        "The study of numbers"
+      ],
+      "correct": 1,
+      "explanation": "Epistemology is the study of knowledge.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q139",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most similar in meaning to 'INEFFABLE'?",
+      "options": [
+        "Describable",
+        "Indescribable",
+        "Simple",
+        "Common"
+      ],
+      "correct": 1,
+      "explanation": "Ineffable means indescribable.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q140",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "He was ------------ of theft in the court.",
+      "options": [
+        "Charged",
+        "Reported",
+        "Blamed",
+        "Acused"
+      ],
+      "correct": 3,
+      "explanation": "He was accused of theft in court.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q141",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which of the following is the most stable metal carbonate?",
+      "options": [
+        "BaCO 3",
+        "MgCO 3",
+        "CaCO 3",
+        "SrCO 3"
+      ],
+      "correct": 0,
+      "explanation": "BaCO3 is the most stable metal carbonate.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q142",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most similar in meaning to 'PRAGMATIC':",
+      "options": [
+        "Idealistic",
+        "Practical",
+        "Theoretical",
+        "Romantic"
+      ],
+      "correct": 1,
+      "explanation": "Pragmatic means practical.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q143",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most similar in meaning to 'TRUCULENT'?",
+      "options": [
+        "Gentle",
+        "Aggressive",
+        "Peaceful",
+        "Timid"
+      ],
+      "correct": 1,
+      "explanation": "Truculent means aggressive.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q144",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Who experimented with dissected leg of a frog?",
+      "options": [
+        "Volta",
+        "Jenner",
+        "Salk",
+        "Galvanic"
+      ],
+      "correct": 3,
+      "explanation": "Galvani experimented with a dissected frog leg.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q145",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct meaning of the idiom 'To kill two birds with one stone'?",
+      "options": [
+        "To solve two problems at once",
+        "To hunt birds",
+        "To waste time",
+        "To make a mess"
+      ],
+      "correct": 0,
+      "explanation": "To kill two birds with one stone is to solve two problems at once.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q146",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "The word 'ACRIMONY' means:",
+      "options": [
+        "Friendliness",
+        "Bitterness or ill feeling",
+        "Happiness",
+        "Calmness"
+      ],
+      "correct": 1,
+      "explanation": "Acrimony means bitterness or ill feeling.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q147",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Select the right sentence.",
+      "options": [
+        "He opened the square red wooden box.",
+        "He opened the red square wooden",
+        "He opened the wooden red square box.",
+        "He opened the red wooden square box."
+      ],
+      "correct": 0,
+      "explanation": "'He opened the square red wooden box' follows the correct adjective order (shape, colour, material).",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q148",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the word most opposite in meaning to 'PEREGRINATION'?",
+      "options": [
+        "Journey",
+        "Stay",
+        "Travel",
+        "Trip"
+      ],
+      "correct": 1,
+      "explanation": "The opposite of peregrination (journey) is stay.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q149",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Choose the correct meaning of the idiom 'To be on cloud nine'?",
+      "options": [
+        "To be extremely happy",
+        "To be on a plane",
+        "To be confused",
+        "To be sad"
+      ],
+      "correct": 0,
+      "explanation": "To be on cloud nine is to be extremely happy.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    },
+    {
+      "id": "nums-test-2-q150",
+      "section": "english",
+      "topic": "NUMS practice",
+      "difficulty": "medium",
+      "stem": "Which one of the following is not an isotope of hydrogen SECTION 2: PSYCHOLOGICAL TEST Time: 15 Minutes | Total MCQs: 50 Choose the option that best describes your usual response or attitude.",
+      "options": [
+        "Deuterium",
+        "Tritium",
+        "Ortho hydrogen",
+        "None of these"
+      ],
+      "correct": 2,
+      "explanation": "Ortho-hydrogen is not an isotope of hydrogen; deuterium and tritium are.",
+      "provenance": "past-paper",
+      "sourceUrls": []
+    }
+  ]
+}

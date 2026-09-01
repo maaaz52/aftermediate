@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import * as React from "react";
+import { ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CountUp } from "@/components/count-up";
@@ -9,7 +10,9 @@ import { useAuth } from "@/lib/auth";
 import {
   attemptsFor,
   getBank,
+  type GradedQuestion,
   type PracticeBenchmark,
+  type PracticeQuestion,
   type StoredResult,
 } from "@/lib/practice";
 import { useStudent } from "@/lib/store";
@@ -57,6 +60,110 @@ function formatTimeUsed(totalSeconds: number): string {
   return h > 0 ? `${h}:${mm}:${ss}` : `${m}:${ss}`;
 }
 
+function optionLetter(index: number): string {
+  return String.fromCharCode(65 + index);
+}
+
+/**
+ * One reviewed question as a collapsible dropdown. The closed header shows the
+ * verdict (✓ / ✗ / skipped) plus your answer vs. the correct one; opening it
+ * reveals the full question, the option comparison and a to-the-point reason.
+ */
+function ReviewQuestion({ q, pq }: { q: PracticeQuestion; pq: GradedQuestion }) {
+  const [open, setOpen] = React.useState(false);
+  const isCorrect = pq.correct;
+  const isSkipped = pq.chosen === null;
+
+  return (
+    <article className="rounded-xl border border-line bg-surface">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-3 px-4 py-3 text-left"
+      >
+        <span
+          className={cn(
+            "grid h-6 w-6 shrink-0 place-items-center rounded-md font-mono text-xs font-bold",
+            isSkipped
+              ? "bg-surface-2 text-faint"
+              : isCorrect
+                ? "bg-emerald text-white"
+                : "bg-danger text-white",
+          )}
+        >
+          {isSkipped ? "—" : isCorrect ? "✓" : "✗"}
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block truncate text-sm font-medium text-ink">{q.stem}</span>
+          <span className="mt-0.5 block text-xs text-faint">
+            {isSkipped ? (
+              "Skipped"
+            ) : (
+              <>
+                Your answer: {optionLetter(pq.chosen!)} · Correct: {optionLetter(q.correct)}
+              </>
+            )}
+          </span>
+        </span>
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 shrink-0 text-faint transition-transform",
+            open && "rotate-180",
+          )}
+        />
+      </button>
+
+      {open && (
+        <div className="border-t border-line px-4 pb-4 pt-3">
+          <p className="text-sm font-medium text-ink">{q.stem}</p>
+          <div className="mt-2.5 space-y-1.5">
+            {q.options.map((opt, i) => {
+              const isOptCorrect = i === q.correct;
+              const isChosen = pq.chosen === i;
+              return (
+                <div
+                  key={i}
+                  className={cn(
+                    "flex items-center gap-2.5 rounded-lg border px-3 py-2 text-sm",
+                    isOptCorrect
+                      ? "border-emerald/40 bg-emerald/10 text-ink"
+                      : isChosen
+                        ? "border-danger/40 bg-danger/10 text-ink"
+                        : "border-line bg-surface-2/50 text-muted",
+                  )}
+                >
+                  <span
+                    className={cn(
+                      "font-mono text-[10px] font-bold",
+                      isOptCorrect ? "text-emerald" : isChosen ? "text-danger" : "text-faint",
+                    )}
+                  >
+                    {optionLetter(i)}
+                  </span>
+                  <span className="flex-1">{opt}</span>
+                  {isOptCorrect ? (
+                    <span className="text-xs font-bold text-emerald">✓ correct</span>
+                  ) : isChosen ? (
+                    <span className="text-xs font-bold text-danger">✗ your pick</span>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
+          {q.explanation && (
+            <div className="mt-3 rounded-lg bg-surface-2 px-3 py-2.5 text-sm text-muted">
+              <span className="font-semibold text-ink">Why: </span>
+              {q.explanation}
+            </div>
+          )}
+          <div className="mt-2 text-xs text-faint">{q.topic}</div>
+        </div>
+      )}
+    </article>
+  );
+}
+
 export function ExamResults({
   result,
   test,
@@ -71,7 +178,7 @@ export function ExamResults({
   const bank = getBank(result.testId);
   const attempt = result.attempt;
   const band = bandFor(attempt.percent, bank?.benchmarks ?? []);
-  const history = attemptsFor(profile.practice, test.id).slice(0, 10);
+  const history = attemptsFor(profile.practice, bank?.testId ?? test.id).slice(0, 10);
   const [filter, setFilter] = React.useState<ReviewFilter>("all");
 
   const visible = result.perQuestion.filter((pq) => {
@@ -202,80 +309,7 @@ export function ExamResults({
             {visible.map((pq) => {
               const q = bank.questions.find((bq) => bq.id === pq.id);
               if (!q) return null;
-              const difficultyTone =
-                q.difficulty === "easy"
-                  ? "border-emerald/30 bg-emerald/10 text-emerald"
-                  : q.difficulty === "medium"
-                    ? "border-amber/30 bg-amber/10 text-amber"
-                    : "border-danger/30 bg-danger/10 text-danger";
-              const provenance =
-                q.provenance === "official-sample"
-                  ? { label: "Official sample", variant: "info" as const }
-                  : q.provenance === "past-paper"
-                    ? { label: "Past paper", variant: "saffron" as const }
-                    : { label: "Practice", variant: "default" as const };
-              return (
-                <article key={pq.id} className="rounded-xl border border-line bg-surface p-4">
-                  <p className="text-sm font-medium text-ink">{q.stem}</p>
-                  <div className="mt-2.5 space-y-1.5">
-                    {q.options.map((opt, i) => {
-                      const isCorrect = i === q.correct;
-                      const isChosen = pq.chosen === i;
-                      return (
-                        <div
-                          key={i}
-                          className={cn(
-                            "flex items-center gap-2.5 rounded-lg border px-3 py-2 text-sm",
-                            isCorrect
-                              ? "border-emerald/40 bg-emerald/10 text-ink"
-                              : isChosen
-                                ? "border-danger/40 bg-danger/10 text-ink"
-                                : "border-line bg-surface-2/50 text-muted"
-                          )}
-                        >
-                          <span
-                            className={cn(
-                              "font-mono text-[10px] font-bold",
-                              isCorrect ? "text-emerald" : isChosen ? "text-danger" : "text-faint"
-                            )}
-                          >
-                            {String.fromCharCode(65 + i)}
-                          </span>
-                          <span className="flex-1">{opt}</span>
-                          {isCorrect ? (
-                            <span className="text-xs font-bold text-emerald">✓</span>
-                          ) : isChosen ? (
-                            <span className="text-xs font-bold text-danger">✗</span>
-                          ) : null}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="mt-3 rounded-lg bg-surface-2 px-3 py-2.5 text-sm text-muted">
-                    <span className="font-semibold text-ink">Why: </span>
-                    {q.explanation}
-                  </div>
-                  <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs">
-                    <span className="text-faint">{q.topic}</span>
-                    <Badge variant="default" className={cn("normal-case tracking-normal", difficultyTone)}>
-                      {q.difficulty}
-                    </Badge>
-                    <Badge variant={provenance.variant} className="normal-case tracking-normal">
-                      {provenance.label}
-                    </Badge>
-                    {q.sourceUrls[0] && (
-                      <a
-                        href={q.sourceUrls[0]}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="ml-auto text-saffron hover:underline"
-                      >
-                        Source ↗
-                      </a>
-                    )}
-                  </div>
-                </article>
-              );
+              return <ReviewQuestion key={pq.id} q={q} pq={pq} />;
             })}
           </div>
         )}

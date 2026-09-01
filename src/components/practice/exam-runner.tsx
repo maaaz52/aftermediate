@@ -22,6 +22,7 @@ import {
   remainingSeconds,
   saveActive,
   saveLastResult,
+  variantParent,
   type ActiveExam,
   type PracticeBank,
   type PracticeMode,
@@ -34,7 +35,8 @@ import { ExamResults } from "@/components/practice/exam-results";
 // ---- helpers ----
 
 function findTest(testId: string): EntryTest | null {
-  const found = catalog().find((item) => item.test.id === testId);
+  const parentId = variantParent(testId) ?? testId;
+  const found = catalog().find((item) => item.test.id === parentId);
   return found ? found.test : null;
 }
 
@@ -187,7 +189,7 @@ function IntroPhase({
   isAbroad: boolean;
 }) {
   const { profile } = useStudent();
-  const best = bestPercent(profile.practice, test.id);
+  const best = bank ? bestPercent(profile.practice, bank.testId) : null;
   const sameTestActive = active !== null && active.testId === test.id;
   // Snapshot for the resume banner's remaining clock — lazy initializer (the
   // only place an impure call is allowed during render); the live countdown
@@ -206,6 +208,11 @@ function IntroPhase({
       >
         {test.short}
       </h1>
+      {bank?.paperLabel && (
+        <Badge variant="info" className="animate-reveal mt-3 normal-case tracking-normal">
+          {bank.paperLabel}
+        </Badge>
+      )}
       <p
         className="animate-reveal mt-2 max-w-xl text-muted"
         style={{ animationDelay: "120ms" }}
@@ -692,6 +699,9 @@ export function ExamRunner({ testId, test: testProp }: { testId: string; test?: 
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
             <div className="flex min-w-0 items-center gap-2">
               <span className="truncate font-bold text-ink">{test.short}</span>
+              {bank.paperLabel && (
+                <span className="hidden truncate text-xs text-faint sm:inline">· {bank.paperLabel}</span>
+              )}
               <Badge variant={mode === "full" ? "saffron" : "info"}>
                 {modeLabel(mode)}
               </Badge>

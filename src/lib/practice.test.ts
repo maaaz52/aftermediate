@@ -91,10 +91,10 @@ describe("getBank / catalog", () => {
     expect(getBank("nonexistent")).toBeNull();
   });
 
-  it("builds statuses for all 12 entry tests", () => {
+  it("builds statuses for all 13 entry tests", () => {
     const items = catalog();
     expect(items.length).toBe(entryTests.length);
-    expect(items.length).toBe(12);
+    expect(items.length).toBe(13);
     expect(items.filter((i) => i.status === "ready").map((i) => i.test.id).sort()).toEqual([
       "aku",
       "comsats",
@@ -107,9 +107,10 @@ describe("getBank / catalog", () => {
       "mdcat",
       "net",
       "nts-nat",
+      "nums",
       "pieas",
     ]);
-    expect(items.every((i) => i.bank !== null)).toBe(true);
+    expect(items.every((i) => i.bank !== null || i.variants.length > 0)).toBe(true);
   });
 
   it("builds ready statuses for all 8 abroad tests", () => {

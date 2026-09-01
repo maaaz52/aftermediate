@@ -7,8 +7,8 @@ const STREAMS: Stream[] = ["pre-medical", "pre-engineering", "ics", "icom", "ale
 const CORE = ["mdcat", "ecat", "net", "fungat", "lcat", "lat"] as const;
 
 describe("entry-tests.json", () => {
-  it("has exactly 12 tests", () => {
-    expect(data.tests).toHaveLength(12);
+it("has exactly 13 tests", () => {
+  expect(data.tests).toHaveLength(13);
   });
 
   it("has a numeric dataYear of 2026", () => {
