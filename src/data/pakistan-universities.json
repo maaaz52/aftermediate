@@ -756,6 +756,670 @@
         "https://www.aku.edu/admissions/bscn/Pages/home.aspx",
         "https://www.aku.edu/admissions/fees-and-funding/Pages/home.aspx"
       ]
+    },
+    {
+      "id": "kemu",
+      "name": "King Edward Medical University",
+      "short": "KEMU",
+      "city": "Lahore",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Pakistan's oldest medical university (est. 1860) · Punjab's top open-merit MBBS (2025 ~94.9%)",
+        "sourceUrl": "https://kemu.edu.pk/"
+      },
+      "entryTest": "UHS-MDCAT (Punjab)",
+      "intro": "Founded in 1860 and affiliated with Mayo Hospital, KEMU is Pakistan's oldest and most prestigious public medical university. It consistently sets the highest MBBS closing merit in Punjab and its graduates form much of the country's senior medical leadership.",
+      "admissionSteps": [
+        { "title": "Register for UHS-MDCAT", "detail": "Apply on the UHS admissions portal and sit the provincial MDCAT (Punjab)." },
+        { "title": "Apply via central portal", "detail": "Submit the MBBS application on the UHS central admissions system." },
+        { "title": "Submit documents", "detail": "Upload FSc/HSSC, Matric, MDCAT, domicile and CNIC documents." },
+        { "title": "Merit list", "detail": "Selection is on aggregate: Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat & fee", "detail": "Pay the first-year dues to secure the offered seat." }
+      ],
+      "fees": {
+        "summary": "Public-sector tuition ≈ PKR 40,000/year (open merit), excluding hostel and other charges",
+        "programFees": [
+          { "program": "MBBS", "perYear": 40000, "note": "Approximate open-merit tuition; PM&DC fee cap applies" }
+        ],
+        "sourceUrl": "https://kemu.edu.pk/fee-structure/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Flagship program with the highest closing merit in Punjab and unmatched clinical exposure at Mayo Hospital." },
+        { "field": "Surgery", "why": "Strong surgical training and FCPS output through its teaching hospital." },
+        { "field": "Medical Education & Research", "why": "Legacy of producing senior consultants and researchers across Pakistan." }
+      ],
+      "sourceUrls": [
+        "https://kemu.edu.pk/",
+        "https://kemu.edu.pk/fee-structure/",
+        "https://www.uhs.edu.pk/"
+      ]
+    },
+    {
+      "id": "aimc",
+      "name": "Allama Iqbal Medical College",
+      "short": "AIMC",
+      "city": "Lahore",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Top public medical college in Punjab · 2025 open merit ~94.5%",
+        "sourceUrl": "https://aimc.edu.pk/"
+      },
+      "entryTest": "UHS-MDCAT (Punjab)",
+      "intro": "Established in 1975 and affiliated with Jinnah Hospital, AIMC is one of Lahore's leading public medical colleges. It consistently ranks among Punjab's top MBBS seats and combines strong academics with active student life.",
+      "admissionSteps": [
+        { "title": "Register for UHS-MDCAT", "detail": "Apply on the UHS portal and sit the Punjab MDCAT." },
+        { "title": "Apply via central portal", "detail": "File the MBBS application on the UHS central admissions system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year fee to accept the seat." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 25,000–45,000/year (open merit), excluding hostel",
+        "programFees": [
+          { "program": "MBBS", "perYear": 40000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://aimc.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "High closing merit and clinical training at Jinnah Hospital." },
+        { "field": "Surgery", "why": "Strong surgical rotations and postgraduate output." },
+        { "field": "Community Health", "why": "Active outreach and public-health programs in Lahore." }
+      ],
+      "sourceUrls": [
+        "https://aimc.edu.pk/",
+        "https://www.uhs.edu.pk/"
+      ]
+    },
+    {
+      "id": "fjmu",
+      "name": "Fatima Jinnah Medical University (for Women)",
+      "short": "FJMU",
+      "city": "Lahore",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Pakistan's only public women-only medical university · 2025 open merit ~93.8%",
+        "sourceUrl": "https://www.fjmu.edu.pk/"
+      },
+      "entryTest": "UHS-MDCAT (Punjab)",
+      "intro": "Founded in 1948 and attached to Sir Ganga Ram Hospital, FJMU is Pakistan's only public university dedicated exclusively to women's medical education. It is among Punjab's most competitive MBBS seats and a major centre for female medical specialists.",
+      "admissionSteps": [
+        { "title": "Register for UHS-MDCAT", "detail": "Apply on the UHS portal and sit the Punjab MDCAT." },
+        { "title": "Apply via central portal", "detail": "Submit the MBBS application through the UHS admissions system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year dues to confirm admission." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 24,000–45,000/year (open merit), excluding hostel",
+        "programFees": [
+          { "program": "MBBS", "perYear": 40000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://www.fjmu.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Flagship program with high Punjab merit and Sir Ganga Ram Hospital clinical training." },
+        { "field": "Obstetrics & Gynaecology", "why": "Leading postgraduate output in women's health specialties." },
+        { "field": "Paediatrics", "why": "Strong paediatric training and community outreach." }
+      ],
+      "sourceUrls": [
+        "https://www.fjmu.edu.pk/",
+        "https://www.fjmu.edu.pk/admissions/",
+        "https://www.uhs.edu.pk/"
+      ]
+    },
+    {
+      "id": "nmu",
+      "name": "Nishtar Medical University",
+      "short": "NMU",
+      "city": "Multan",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Largest medical university in South Punjab · 2025 open merit ~94.2%",
+        "sourceUrl": "https://nmu.edu.pk/"
+      },
+      "entryTest": "UHS-MDCAT (Punjab)",
+      "intro": "Established in 1951 and affiliated with Nishtar Hospital, one of South Punjab's largest tertiary hospitals, Nishtar Medical University is the region's flagship public medical institution and a major referral and teaching centre.",
+      "admissionSteps": [
+        { "title": "Register for UHS-MDCAT", "detail": "Apply on the UHS portal and sit the Punjab MDCAT." },
+        { "title": "Apply via central portal", "detail": "Submit the MBBS application through the UHS admissions system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year fee to accept the seat." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 35,000–40,000/year (open merit), excluding hostel",
+        "programFees": [
+          { "program": "MBBS", "perYear": 38000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://nmu.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "South Punjab's top public MBBS seat with vast hospital exposure." },
+        { "field": "Surgery", "why": "High-volume surgical training at Nishtar Hospital." },
+        { "field": "Cardiology", "why": "Strong cardiac services and referral load from the region." }
+      ],
+      "sourceUrls": [
+        "https://nmu.edu.pk/",
+        "https://www.uhs.edu.pk/"
+      ]
+    },
+    {
+      "id": "rmu",
+      "name": "Rawalpindi Medical University",
+      "short": "RMU",
+      "city": "Rawalpindi",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized · 2025 open merit ~93.9% · three teaching hospitals",
+        "sourceUrl": "https://rmur.edu.pk/"
+      },
+      "entryTest": "UHS-MDCAT (Punjab)",
+      "intro": "Upgraded from Rawalpindi Medical College (est. 1974) to a university in 2017, RMU serves the twin cities through Holy Family, Benazir Bhutto and DHQ hospitals. It is one of Punjab's most competitive public medical universities.",
+      "admissionSteps": [
+        { "title": "Register for UHS-MDCAT", "detail": "Apply on the UHS portal and sit the Punjab MDCAT." },
+        { "title": "Apply via central portal", "detail": "Submit the MBBS application through the UHS admissions system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year dues to confirm admission." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 25,000–45,000/year (open merit), excluding hostel",
+        "programFees": [
+          { "program": "MBBS", "perYear": 40000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://rmur.edu.pk/fee-structure/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Top twin-cities MBBS seat with three large teaching hospitals." },
+        { "field": "Surgery", "why": "Extensive surgical volume across Holy Family and Benazir Bhutto hospitals." },
+        { "field": "Medical Education", "why": "Known for structured teaching and research output." }
+      ],
+      "sourceUrls": [
+        "https://rmur.edu.pk/",
+        "https://rmur.edu.pk/admission-page",
+        "https://www.uhs.edu.pk/"
+      ]
+    },
+    {
+      "id": "duhs",
+      "name": "Dow University of Health Sciences (Dow Medical College)",
+      "short": "DUHS",
+      "city": "Karachi",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "One of Pakistan's largest health-sciences universities · top Sindh public seat",
+        "sourceUrl": "https://www.duhs.edu.pk/"
+      },
+      "entryTest": "Sindh MDCAT (SAC)",
+      "intro": "Established in 1945 as Dow Medical College and expanded into a health-sciences university, DUHS is Sindh's premier public medical institution. Its Dow Medical College is affiliated with the huge Civil Hospital Karachi and is the most sought-after public MBBS seat in the province.",
+      "admissionSteps": [
+        { "title": "Register for MDCAT", "detail": "Sit the Sindh MDCAT administered by the Sindh Admission Committee (SAC)." },
+        { "title": "Apply via SAC", "detail": "Submit the MBBS application on the Sindh Admissions Committee portal." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year fee to accept the seat." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 48,000/year (open merit, Sindh), excluding other charges",
+        "programFees": [
+          { "program": "MBBS", "perYear": 48000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://www.duhs.edu.pk/dow-medical-college/mbbs/mbbs-admission/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Sindh's top public MBBS seat with Civil Hospital clinical exposure." },
+        { "field": "Surgery", "why": "High-volume surgical training at Civil Hospital Karachi." },
+        { "field": "Public Health", "why": "Broad health-sciences faculties and community programs." }
+      ],
+      "sourceUrls": [
+        "https://www.duhs.edu.pk/",
+        "https://www.duhs.edu.pk/dow-medical-college/"
+      ]
+    },
+    {
+      "id": "jsmu",
+      "name": "Jinnah Sindh Medical University",
+      "short": "JSMU",
+      "city": "Karachi",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized · major Sindh public university",
+        "sourceUrl": "https://jsmu.edu.pk/"
+      },
+      "entryTest": "Sindh MDCAT (SAC)",
+      "intro": "Chartered in 2017 from the historic Jinnah Medical & Dental College (est. 1973), JSMU is a public health-sciences university in Karachi with several affiliated medical and dental colleges. It offers strong clinical training and a growing research base.",
+      "admissionSteps": [
+        { "title": "Register for MDCAT", "detail": "Sit the Sindh MDCAT administered by the Sindh Admission Committee (SAC)." },
+        { "title": "Apply via SAC", "detail": "Submit the MBBS application on the Sindh Admissions Committee portal." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year dues to confirm admission." }
+      ],
+      "fees": {
+        "summary": "Public tuition (Sindh) — among the lowest, open-merit rate",
+        "programFees": [
+          { "program": "MBBS", "perYear": 50000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://jsmu.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Established Karachi MBBS seat with affiliated teaching hospitals." },
+        { "field": "Dentistry (BDS)", "why": "Strong dental program through its affiliated colleges." },
+        { "field": "Health Sciences", "why": "Multiple allied-health faculties under one public university." }
+      ],
+      "sourceUrls": [
+        "https://jsmu.edu.pk/"
+      ]
+    },
+    {
+      "id": "kmc",
+      "name": "Khyber Medical College (Khyber Medical University)",
+      "short": "KMC",
+      "city": "Peshawar",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Oldest medical college in Khyber Pakhtunkhwa (est. 1954) · KPK's top public seat",
+        "sourceUrl": "https://kmc.edu.pk/"
+      },
+      "entryTest": "KMU-MDCAT (Khyber Pakhtunkhwa)",
+      "intro": "Established in 1954, Khyber Medical College is the oldest and most prestigious public medical college in Khyber Pakhtunkhwa, affiliated with the Khyber Teaching Hospital and Khyber Medical University. It is the province's most competitive MBBS seat.",
+      "admissionSteps": [
+        { "title": "Register for KMU-MDCAT", "detail": "Apply and sit the KPK MDCAT administered by Khyber Medical University." },
+        { "title": "Apply via KMU portal", "detail": "Submit the MBBS application on the KMU central admission system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year dues to accept the seat." }
+      ],
+      "fees": {
+        "summary": "Public tuition ≈ PKR 50,000–60,000/year (open merit, KPK)",
+        "programFees": [
+          { "program": "MBBS", "perYear": 55000, "note": "Approximate open-merit tuition" }
+        ],
+        "sourceUrl": "https://kmc.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "KPK's most competitive public MBBS seat with Khyber Teaching Hospital exposure." },
+        { "field": "Surgery", "why": "High surgical volume in one of the region's largest hospitals." },
+        { "field": "Community Medicine", "why": "Strong public-health and outreach programs across the province." }
+      ],
+      "sourceUrls": [
+        "https://kmc.edu.pk/",
+        "https://www.kmu.edu.pk/"
+      ]
+    },
+    {
+      "id": "amc-abbottabad",
+      "name": "Ayub Medical College",
+      "short": "AMC",
+      "city": "Abbottabad",
+      "type": "public",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized · largest MBBS seat capacity in KP (~270 seats)",
+        "sourceUrl": "https://ayubmed.edu.pk/"
+      },
+      "entryTest": "KMU-MDCAT (Khyber Pakhtunkhwa)",
+      "intro": "Established in 1979 and affiliated with the Ayub Teaching Hospital, Ayub Medical College is one of Khyber Pakhtunkhwa's premier public medical colleges and carries the largest MBBS seat capacity in the province.",
+      "admissionSteps": [
+        { "title": "Register for KMU-MDCAT", "detail": "Apply and sit the KPK MDCAT administered by Khyber Medical University." },
+        { "title": "Apply via KMU portal", "detail": "Submit the MBBS application on the KMU central admission system." },
+        { "title": "Upload documents", "detail": "Provide FSc, Matric, MDCAT, domicile and CNIC." },
+        { "title": "Merit list", "detail": "Aggregate = Matric 10% + FSc 40% + MDCAT 50%." },
+        { "title": "Confirm seat", "detail": "Pay the first-year dues to accept the seat." }
+      ],
+      "fees": {
+        "summary": "Public 1st-year open-merit ≈ PKR 102,000 total (KMU fee schedule, KMC/KGMC/AMC tier)",
+        "programFees": [
+          { "program": "MBBS", "perYear": 102000, "note": "First-year open-merit total per KMU schedule" }
+        ],
+        "sourceUrl": "https://cas.kmu.edu.pk/sitedocuments/Admission-Policy-Public-2025-26.pdf"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Large seat capacity and strong clinical exposure at Ayub Teaching Hospital." },
+        { "field": "Surgery", "why": "Broad surgical training across a major tertiary hospital." },
+        { "field": "Medical Research", "why": "Active faculty research and digital library resources." }
+      ],
+      "sourceUrls": [
+        "https://ayubmed.edu.pk/",
+        "https://ayubmed.edu.pk/admissions/",
+        "https://www.kmu.edu.pk/"
+      ]
+    },
+    {
+      "id": "aku-medical",
+      "name": "Aga Khan University Medical College",
+      "short": "AKU",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Pakistan's highest-ranked medical institution globally · own admission test (AKAT)",
+        "sourceUrl": "https://www.aku.edu/"
+      },
+      "entryTest": "AKAT (Aga Khan Admission Test) + MDCAT",
+      "intro": "Established in 1983, AKU's Medical College is Pakistan's top-ranked medical school, offering an integrated curriculum and clinical training at the Aga Khan University Hospital. It uses its own AKAT admission test alongside the MDCAT.",
+      "admissionSteps": [
+        { "title": "Register for AKAT", "detail": "Apply online and sit the Aga Khan Admission Test (AKAT) for medicine." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are invited for an admission interview." },
+        { "title": "Submit documents", "detail": "Provide HSSC/A-level equivalence, MDCAT and supporting documents." },
+        { "title": "Admission offer", "detail": "Admission is merit-based and needs-blind, announced after evaluation." },
+        { "title": "Financial assistance & fee", "detail": "Apply for financial assistance if needed, then pay fees to enroll." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 1.7M/year (2027) plus university fee; needs-blind financial aid available",
+        "programFees": [
+          { "program": "MBBS", "perYear": 1704000, "note": "Approximate annual tuition, Academic Year 2027" }
+        ],
+        "sourceUrl": "https://www.aku.edu/admissions/fees-and-funding/Pages/fee-structure-mc-pk.aspx"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Pakistan's premier medical degree with a modern integrated curriculum." },
+        { "field": "Research", "why": "Strong research output and international collaborations." },
+        { "field": "Clinical Training", "why": "Direct training at the flagship Aga Khan University Hospital." }
+      ],
+      "sourceUrls": [
+        "https://www.aku.edu/",
+        "https://www.aku.edu/admissions/fees-and-funding/Pages/fee-structure-mc-pk.aspx"
+      ]
+    },
+    {
+      "id": "shifa-medical",
+      "name": "Shifa College of Medicine (Shifa Tameer-e-Millat University)",
+      "short": "Shifa",
+      "city": "Islamabad",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Leading private medical college in Islamabad · PM&DC recognized",
+        "sourceUrl": "https://stmu.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Shifa College of Medicine is part of Shifa Tameer-e-Millat University in Islamabad, known for its strong MBBS program and affiliation with the Shifa International Hospital, a major private tertiary-care facility.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT as per PM&DC rules (55%+ for MBBS)." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the STMU admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 1.9M/year (year 1) rising each year; ~2.5M/year in later years",
+        "programFees": [
+          { "program": "MBBS", "perYear": 1920000, "note": "Approximate first-year tuition" }
+        ],
+        "sourceUrl": "https://stmu.edu.pk/admissions/financial-assistance/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Well-regarded private MBBS with clinical training at Shifa International Hospital." },
+        { "field": "Research", "why": "Active undergraduate research culture." },
+        { "field": "Cardiology & Tertiary Care", "why": "Strong exposure to a leading private hospital." }
+      ],
+      "sourceUrls": [
+        "https://stmu.edu.pk/",
+        "https://stmu.edu.pk/admissions/"
+      ]
+    },
+    {
+      "id": "cmh-lahore",
+      "name": "CMH Lahore Medical College & Institute of Dentistry",
+      "short": "CMH",
+      "city": "Lahore",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Army-affiliated private medical college · PM&DC recognized",
+        "sourceUrl": "https://cmhlahore.edu.pk/"
+      },
+      "entryTest": "NUMS / CMH MDCAT",
+      "intro": "Established in 2006 in Lahore Cantonment, CMH Lahore Medical College is a private, Army-affiliated college offering MBBS and BDS. It combines disciplined training with strong clinical rotations at CMH Lahore.",
+      "admissionSteps": [
+        { "title": "Qualify the entry test", "detail": "Pass the NUMS/CMH MDCAT entry test as per PM&DC rules." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the CMH Lahore admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates appear for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 2M+/year (MBBS); check the official 2025-26 fee schedule",
+        "programFees": [
+          { "program": "MBBS", "perYear": 2000000, "note": "Approximate first-year tuition" }
+        ],
+        "sourceUrl": "https://cmhlahore.edu.pk/fee-structure/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Army-affiliated discipline with strong clinical training." },
+        { "field": "Dentistry (BDS)", "why": "Integrated institute of dentistry with dedicated faculty." },
+        { "field": "Surgery", "why": "High-quality rotations at CMH Lahore." }
+      ],
+      "sourceUrls": [
+        "https://cmhlahore.edu.pk/",
+        "https://cmhlahore.edu.pk/fee-structure/"
+      ]
+    },
+    {
+      "id": "ziauddin-medical",
+      "name": "Ziauddin University (Medical College)",
+      "short": "Ziauddin",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized private university in Karachi",
+        "sourceUrl": "https://zu.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Ziauddin University in Karachi is a well-established private university whose Medical College offers MBBS with clinical training across its own network of teaching hospitals. It admits through the national MDCAT.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT as per PM&DC rules (55%+ for MBBS)." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the Ziauddin admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 2.6M/year (total annual charges)",
+        "programFees": [
+          { "program": "MBBS", "perYear": 2600000, "note": "Approximate annual tuition" }
+        ],
+        "sourceUrl": "https://zu.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Clinical training across its own teaching hospital network." },
+        { "field": "Dentistry", "why": "Established dental program." },
+        { "field": "Health Sciences", "why": "Multiple allied-health faculties." }
+      ],
+      "sourceUrls": [
+        "https://zu.edu.pk/"
+      ]
+    },
+    {
+      "id": "liaquat-national",
+      "name": "Liaquat National Medical College",
+      "short": "LNMC",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Major private medical college in Karachi · PM&DC recognized",
+        "sourceUrl": "https://lnmdc.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Liaquat National Medical College is a leading private medical college in Karachi, attached to the Liaquat National Hospital, one of Pakistan's largest private tertiary-care hospitals. It offers strong clinical training across all specialties.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT as per PM&DC rules (55%+ for MBBS)." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the LNMC admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 1.7M–2.6M/year (first-year toward the higher end)",
+        "programFees": [
+          { "program": "MBBS", "perYear": 2300000, "note": "Approximate annual tuition" }
+        ],
+        "sourceUrl": "https://lnmdc.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Clinical training at the large Liaquat National Hospital." },
+        { "field": "Surgery", "why": "High surgical volume across a major private hospital." },
+        { "field": "Oncology", "why": "Strong oncology services within the hospital group." }
+      ],
+      "sourceUrls": [
+        "https://lnmdc.edu.pk/"
+      ]
+    },
+    {
+      "id": "bahria-medical",
+      "name": "Bahria University Medical & Dental College",
+      "short": "BUMDC",
+      "city": "Karachi",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Navy-affiliated · PM&DC recognized private college",
+        "sourceUrl": "https://bumdc.bahria.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Bahria University Medical & Dental College in Karachi is a Navy-affiliated private medical college offering MBBS and BDS, with clinical training at PNS Shifa Hospital and disciplined, structured teaching.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT as per PM&DC rules (55%+ for MBBS)." },
+        { "title": "Apply online", "detail": "Submit the application on the Bahria University admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private tuition ≈ PKR 2.1M/year (annual)",
+        "programFees": [
+          { "program": "MBBS", "perYear": 2100000, "note": "Approximate annual tuition" }
+        ],
+        "sourceUrl": "https://bumdc.bahria.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Navy-affiliated discipline with clinical training at PNS Shifa." },
+        { "field": "Dentistry (BDS)", "why": "Integrated dental program." },
+        { "field": "Medical Research", "why": "Growing research output under Bahria University." }
+      ],
+      "sourceUrls": [
+        "https://bumdc.bahria.edu.pk/"
+      ]
+    },
+    {
+      "id": "rmi-peshawar",
+      "name": "Rehman Medical College (Rehman Medical Institute)",
+      "short": "RMI",
+      "city": "Peshawar",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "Top private medical college in Khyber Pakhtunkhwa · PM&DC recognized",
+        "sourceUrl": "https://rmc.rmi.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Rehman Medical College is the flagship college of the Rehman Medical Institute (RMI) in Hayatabad, Peshawar, one of KPK's leading private medical institutions. It offers MBBS with clinical training at the Rehman Medical Institute hospital.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT with 55%+ as per PM&DC rules." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the RMC/RMI admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit (FSc 40% + Matric 10% + MDCAT 50%); confirm by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private first-year tuition ≈ PKR 1.3M, rising ~7.5% annually; 5-year total ≈ PKR 7.3M–11M",
+        "programFees": [
+          { "program": "MBBS", "perYear": 1300000, "note": "Approximate first-year tuition" }
+        ],
+        "sourceUrl": "https://rmc.rmi.edu.pk/bachelor-of-medicine-bachelor-of-surgery-mbbs/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "KPK's leading private MBBS with RMI hospital training." },
+        { "field": "Cardiology & Tertiary Care", "why": "Strong hospital-based clinical exposure." },
+        { "field": "Medical Research", "why": "Active research under the Rehman Medical Institute." }
+      ],
+      "sourceUrls": [
+        "https://rmc.rmi.edu.pk/",
+        "https://admissions.rmi.edu.pk/"
+      ]
+    },
+    {
+      "id": "northwest-peshawar",
+      "name": "Northwest School of Medicine",
+      "short": "NWSM",
+      "city": "Peshawar",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized private medical school in Peshawar",
+        "sourceUrl": "https://nwsm.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Northwest School of Medicine in Peshawar is a PM&DC-recognized private medical college offering MBBS with modern facilities and clinical training in its affiliated teaching hospital.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT with 55%+ as per PM&DC rules." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the NWSM admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private first-year tuition ≈ PKR 1.34M; 5-year total ≈ PKR 7.2M",
+        "programFees": [
+          { "program": "MBBS", "perYear": 1340000, "note": "Approximate first-year tuition" }
+        ],
+        "sourceUrl": "https://nwsm.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Modern private MBBS in Peshawar with hospital training." },
+        { "field": "Dentistry", "why": "Allied dental teaching." },
+        { "field": "Clinical Sciences", "why": "Structured clinical rotations in affiliated hospitals." }
+      ],
+      "sourceUrls": [
+        "https://nwsm.edu.pk/"
+      ]
+    },
+    {
+      "id": "jinnah-peshawar",
+      "name": "Jinnah Medical College",
+      "short": "JMC",
+      "city": "Peshawar",
+      "type": "private",
+      "streams": ["pre-medical", "alevel"],
+      "ranking": {
+        "label": "PM&DC recognized private medical college in Peshawar",
+        "sourceUrl": "https://jmcp.edu.pk/"
+      },
+      "entryTest": "MDCAT",
+      "intro": "Jinnah Medical College is a private medical college in Peshawar offering MBBS with clinical training at its affiliated teaching hospital. It admits students through the national MDCAT.",
+      "admissionSteps": [
+        { "title": "Pass the MDCAT", "detail": "Qualify the national MDCAT with 55%+ as per PM&DC rules." },
+        { "title": "Apply online", "detail": "Submit the MBBS application on the JMC admissions portal." },
+        { "title": "Attend the interview", "detail": "Shortlisted candidates are called for an interview." },
+        { "title": "Admission offer", "detail": "Selection is on merit; confirm the offer by the deadline." },
+        { "title": "Pay fees", "detail": "Deposit the first-year tuition to secure the seat." }
+      ],
+      "fees": {
+        "summary": "Private first-year tuition ≈ PKR 850,000",
+        "programFees": [
+          { "program": "MBBS", "perYear": 850000, "note": "Approximate first-year tuition" }
+        ],
+        "sourceUrl": "https://jmcp.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Medicine (MBBS)", "why": "Affordable private MBBS in Peshawar." },
+        { "field": "Dentistry", "why": "Allied dental teaching." },
+        { "field": "Clinical Training", "why": "Hospital-based clinical rotations." }
+      ],
+      "sourceUrls": [
+        "https://jmcp.edu.pk/"
+      ]
     }
   ]
 }
