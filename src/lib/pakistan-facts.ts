@@ -22,6 +22,7 @@
 import type { KnowledgeFact, KnowledgeTopic } from "@/data/abroad-chatbot-knowledge";
 import universitiesJson from "@/data/pakistan-universities.json";
 import entryTestsJson from "@/data/entry-tests.json";
+import scholarshipsJson from "@/data/pakistan-scholarships.json";
 
 interface ProgramFee {
   program: string;
@@ -140,5 +141,52 @@ export function deriveEntryTestTopics(): KnowledgeTopic[] {
     id: `test-${test.id}`,
     title: `${test.short} — ${test.name}`,
     facts: entryTestFacts(test),
+  }));
+}
+
+interface ScholarshipRecord {
+  id: string;
+  name: string;
+  category: string;
+  funder: string;
+  level: string;
+  coverage: string;
+  eligibility: string[];
+  deadline: string;
+  sourceUrl: string;
+  note?: string; // absent on 14 of 24 records
+}
+
+const scholarships = (scholarshipsJson as { scholarships: ScholarshipRecord[] }).scholarships;
+
+const CATEGORY_TITLES: Record<string, string> = {
+  "need-based": "Need-Based Scholarships in Pakistan",
+  hec: "HEC Scholarships",
+  "merit-based": "Merit-Based Scholarships in Pakistan",
+  "university-specific": "University-Specific Scholarships",
+  provincial: "Provincial Government Scholarships",
+};
+
+function scholarshipFact(s: ScholarshipRecord): KnowledgeFact {
+  const tail = s.note ? ` ${s.note}.` : "";
+  return {
+    // `deadline` is copied verbatim: most read "Cycle-based (announced by
+    // HEC each year)" and must never be sharpened into a concrete date.
+    text: `${s.name} — funded by ${s.funder} for ${s.level} students. Covers: ${s.coverage}. Eligibility: ${s.eligibility.join("; ")}. Deadline: ${s.deadline}.${tail}`,
+    source: s.sourceUrl,
+  };
+}
+
+export function deriveScholarshipTopics(): KnowledgeTopic[] {
+  const byCategory = new Map<string, KnowledgeFact[]>();
+  for (const s of scholarships) {
+    const facts = byCategory.get(s.category) ?? [];
+    facts.push(scholarshipFact(s));
+    byCategory.set(s.category, facts);
+  }
+  return [...byCategory].map(([category, facts]) => ({
+    id: `scholarships-${category}`,
+    title: CATEGORY_TITLES[category] ?? `${category} scholarships in Pakistan`,
+    facts,
   }));
 }
