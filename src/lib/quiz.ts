@@ -199,3 +199,10 @@ export function firstIncompleteSection(p: StudentProfile): number {
   const i = QUIZ_SECTIONS.findIndex((s) => !isSectionComplete(s, p));
   return i === -1 ? QUIZ_SECTIONS.length : i;
 }
+
+/** Values a question accepts, so callers validate against the quiz rather than copying its lists. */
+export function optionValues(sectionId: string, questionId: string): string[] {
+  const section = QUIZ_SECTIONS.find((s) => s.id === sectionId);
+  const question = section?.questions.find((q) => q.id === questionId);
+  return (question?.options ?? []).map((o) => o.value);
+}
