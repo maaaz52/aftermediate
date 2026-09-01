@@ -1,5 +1,5 @@
 import { streamChat } from "@/lib/ai";
-import { isPersona } from "@/lib/chat-request";
+import { MAX_BODY_BYTES, parseChatRequest } from "@/lib/chat-request";
 import { retrieveForMessages } from "@/lib/knowledge";
 import { buildStudentContext, type ProfileRow } from "@/lib/student-context";
 import { createClient } from "@/lib/supabase/server";
@@ -52,10 +52,26 @@ export async function POST(req: Request) {
     } = await supabase.auth.getUser();
     if (!user) return jsonError("Sign in to chat", 401);
 
-    const body = await req.json();
-    const messages = body.messages as { role: "user" | "assistant"; content: string }[];
-    const persona = body.persona ?? "rahbar";
-    if (!isPersona(persona)) return jsonError("Invalid persona", 400);
+    // The declared length is the cheap refusal: a body this big is never read.
+    const declared = Number(req.headers.get("content-length"));
+    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
+      return jsonError("Request body is too large", 413);
+
+    // Content-Length is the client's word, so the size is measured again on the
+    // text actually handed to the JSON parser.
+    const text = await req.text();
+    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
+
+    let body: unknown;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      return jsonError("Request body is not valid JSON", 400);
+    }
+
+    const parsed = parseChatRequest(body);
+    if (!parsed.ok) return jsonError(parsed.error, parsed.status);
+    const { persona, messages } = parsed.value;
 
     // The student is whatever our records say, taken from the token. A
     // "student" field in this request body is never read.

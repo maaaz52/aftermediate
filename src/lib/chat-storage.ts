@@ -19,11 +19,9 @@
 
 import * as React from "react";
 import { useAuth } from "@/lib/auth";
+import type { ChatMessage } from "@/lib/chat-request";
 
-export interface ChatMessage {
-  role: "user" | "assistant";
-  content: string;
-}
+export type { ChatMessage };
 
 export const RATER_CHAT_BASE = "aftermediate:essays:rater-chat";
 export const ESSAY_DRAFT_BASE = "aftermediate:essays:draft";
