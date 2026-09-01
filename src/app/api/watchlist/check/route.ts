@@ -1,34 +1,33 @@
-import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { requireUser } from "@/lib/require-user";
 import { findProgram } from "@/lib/watchlist";
 import universities from "@/data/universities.json";
 import type { University } from "@/lib/types";
+import { jsonError, jsonOk } from "@/lib/api-response";
 
 export const runtime = "nodejs";
 
 export async function GET(req: Request) {
   try {
     const supabase = await createClient();
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session?.user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const user = await requireUser(supabase);
+    if (!user) return jsonError("Unauthorized", 401);
 
     const url = new URL(req.url);
     const watchlistParam = url.searchParams.get("watchlist");
     if (!watchlistParam) {
-      return NextResponse.json({ error: "watchlist query param required" }, { status: 400 });
+      return jsonError("watchlist query param required", 400);
     }
 
     let watchlist: unknown[];
     try {
       watchlist = JSON.parse(watchlistParam);
     } catch {
-      return NextResponse.json({ error: "watchlist must be valid JSON array" }, { status: 400 });
+      return jsonError("watchlist must be valid JSON array", 400);
     }
 
     if (!Array.isArray(watchlist)) {
-      return NextResponse.json({ error: "watchlist must be an array" }, { status: 400 });
+      return jsonError("watchlist must be an array", 400);
     }
 
     const unis = universities as unknown as University[];
@@ -44,9 +43,9 @@ export async function GET(req: Request) {
       };
     });
 
-    return NextResponse.json({ entries });
+    return jsonOk({ entries });
   } catch (err) {
     console.error("watchlist check error", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return jsonError("Internal server error", 500);
   }
 }

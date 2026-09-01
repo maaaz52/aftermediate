@@ -1,8 +1,16 @@
 import { generateText } from "ai";
 import { model } from "@/lib/ai";
+import { createClient } from "@/lib/supabase/server";
+import { requireUser } from "@/lib/require-user";
+import { jsonError, jsonOk } from "@/lib/api-response";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
+
+/** Refuse bodies bigger than this before reading them. */
+const MAX_BODY_BYTES = 6 * 1024 * 1024;
+/** A marksheet image data-URL should stay far below this. */
+const MAX_IMAGE_CHARS = 5 * 1024 * 1024;
 
 const SYSTEM = `You are an expert at reading Pakistani FSc / intermediate marksheets.
 Extract the student's marks into clean JSON. Return ONLY valid JSON, no markdown.
@@ -28,16 +36,33 @@ Rules:
 
 export async function POST(req: Request) {
   try {
-    const { image } = (await req.json()) as { image: string };
+    const supabase = await createClient();
+    const user = await requireUser(supabase);
+    if (!user) return jsonError("Sign in to scan a marksheet", 401);
 
-    if (!image) {
-      return new Response(JSON.stringify({ error: "No image provided" }), {
-        status: 400,
-        headers: { "content-type": "application/json" },
-      });
+    const declared = Number(req.headers.get("content-length"));
+    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
+      return jsonError("Request body is too large", 413);
+
+    const text = await req.text();
+    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
+
+    let body: unknown;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      return jsonError("Request body is not valid JSON", 400);
     }
 
-    const { text } = await generateText({
+    const { image } = (body ?? {}) as { image?: unknown };
+    if (typeof image !== "string" || !image) {
+      return jsonError("No image provided", 400);
+    }
+    if (image.length > MAX_IMAGE_CHARS) {
+      return jsonError("Image is too large", 413);
+    }
+
+    const { text: extracted } = await generateText({
       model,
       system: SYSTEM,
       messages: [
@@ -51,20 +76,14 @@ export async function POST(req: Request) {
       ],
     });
 
-    const cleaned = text.replace(/```json|```/g, "").trim();
+    const cleaned = extracted.replace(/```json|```/g, "").trim();
     const start = cleaned.indexOf("{");
     const end = cleaned.lastIndexOf("}");
     const data = JSON.parse(cleaned.slice(start, end + 1));
 
-    return new Response(JSON.stringify(data), {
-      status: 200,
-      headers: { "content-type": "application/json" },
-    });
+    return jsonOk(data);
   } catch (err) {
     console.error("ocr error", err);
-    return new Response(JSON.stringify({ error: "OCR failed" }), {
-      status: 500,
-      headers: { "content-type": "application/json" },
-    });
+    return jsonError("OCR failed", 500);
   }
 }

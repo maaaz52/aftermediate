@@ -1,42 +1,57 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { requireUser } from "@/lib/require-user";
+import { getServerEnv } from "@/lib/server-env";
+import { jsonError } from "@/lib/api-response";
+import type { WatchlistEntry } from "@/lib/watchlist";
 
 export const runtime = "nodejs";
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const NOTIFY_COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 hours per program
 
 function isRateLimited(lastNotifiedAt: string | null): boolean {
   if (!lastNotifiedAt) return false;
-  const cooldown = 24 * 60 * 60 * 1000; // 24 hours
-  return Date.now() - new Date(lastNotifiedAt).getTime() < cooldown;
+  return Date.now() - new Date(lastNotifiedAt).getTime() < NOTIFY_COOLDOWN_MS;
 }
 
 export async function POST(req: Request) {
   try {
     const supabase = await createClient();
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session?.user) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
+    const user = await requireUser(supabase);
+    if (!user) return jsonError("Unauthorized", 401);
+
+    const env = getServerEnv();
+    const RESEND_API_KEY = env.resendApiKey;
 
     if (!RESEND_API_KEY) {
       return NextResponse.json({ sent: false, reason: "email-not-configured" });
     }
 
     const body = await req.json();
-    const { entryId, currentMerit, previousMerit, programName, universityName, lastNotifiedAt } = body;
+    const { entryId, currentMerit, previousMerit, programName, universityName } = body;
 
-    if (!entryId || !programName || !universityName) {
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    if (typeof entryId !== "string" || !entryId || typeof programName !== "string" || !programName || typeof universityName !== "string" || !universityName) {
+      return jsonError("Missing required fields", 400);
     }
 
-    if (isRateLimited(lastNotifiedAt)) {
-      return NextResponse.json({ sent: false, reason: "rate-limited" });
-    }
-
-    const userEmail = session.user.email;
+    const userEmail = user.email;
     if (!userEmail) {
-      return NextResponse.json({ error: "User has no email" }, { status: 400 });
+      return jsonError("User has no email", 400);
+    }
+
+    // Rate limit is enforced from the server's copy of the watchlist, never the
+    // client's: a stale or edited `lastNotifiedAt` in the request cannot bypass it.
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("watchlist")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    const watchlist = Array.isArray(profile?.watchlist) ? (profile.watchlist as WatchlistEntry[]) : [];
+    const entry = watchlist.find((e) => e.id === entryId);
+
+    if (entry && isRateLimited(entry.lastNotifiedAt)) {
+      return NextResponse.json({ sent: false, reason: "rate-limited" });
     }
 
     const resendRes = await fetch("https://api.resend.com/emails", {
@@ -65,6 +80,13 @@ export async function POST(req: Request) {
       const errText = await resendRes.text();
       console.error("resend error", errText);
       return NextResponse.json({ sent: false, reason: "email-failed" });
+    }
+
+    // Record when we last notified so the next request is checked against this.
+    if (entry) {
+      const now = new Date().toISOString();
+      const updated = watchlist.map((e) => (e.id === entryId ? { ...e, lastNotifiedAt: now } : e));
+      await supabase.from("profiles").update({ watchlist: updated }).eq("id", user.id);
     }
 
     return NextResponse.json({ sent: true });

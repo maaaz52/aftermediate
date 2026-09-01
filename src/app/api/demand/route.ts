@@ -1,5 +1,8 @@
 import { generateStructured } from "@/lib/ai";
 import type { Stream } from "@/lib/types";
+import { createClient } from "@/lib/supabase/server";
+import { requireUser } from "@/lib/require-user";
+import { jsonError, jsonOk } from "@/lib/api-response";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -11,36 +14,45 @@ Return strict JSON only: {"insights":[{"country":"...","insight":"..."}]}. No ma
 
 const VALID_STREAMS = ["pre-medical", "pre-engineering", "ics", "icom", "alevel"] as const;
 
+const MAX_BODY_BYTES = 64 * 1024;
+const MAX_INTERESTS = 20;
+const MAX_COUNTRIES = 20;
+
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const stream = body.stream as Stream;
+    const supabase = await createClient();
+    const user = await requireUser(supabase);
+    if (!user) return jsonError("Sign in to see demand insights", 401);
 
-    if (!stream) {
-      return new Response(JSON.stringify({ error: "stream is required" }), {
-        status: 400,
-        headers: { "content-type": "application/json" },
-      });
+    const declared = Number(req.headers.get("content-length"));
+    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
+      return jsonError("Request body is too large", 413);
+
+    const text = await req.text();
+    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
+
+    let body: unknown;
+    try {
+      body = JSON.parse(text);
+    } catch {
+      return jsonError("Request body is not valid JSON", 400);
     }
+
+    const stream = (body as { stream?: unknown })?.stream as Stream | undefined;
+    if (!stream) return jsonError("stream is required", 400);
     if (!VALID_STREAMS.includes(stream as (typeof VALID_STREAMS)[number])) {
-      return new Response(JSON.stringify({ error: "Invalid stream value" }), {
-        status: 400,
-        headers: { "content-type": "application/json" },
-      });
+      return jsonError("Invalid stream value", 400);
     }
 
-    const interests = Array.isArray(body.interests)
-      ? body.interests.filter((i: unknown): i is string => typeof i === "string")
+    const interests = Array.isArray((body as { interests?: unknown })?.interests)
+      ? ((body as { interests: unknown[] }).interests.filter((i: unknown): i is string => typeof i === "string")).slice(0, MAX_INTERESTS)
       : [];
-    const countries = Array.isArray(body.countries)
-      ? body.countries.filter((c: unknown): c is string => typeof c === "string")
+    const countries = Array.isArray((body as { countries?: unknown })?.countries)
+      ? ((body as { countries: unknown[] }).countries.filter((c: unknown): c is string => typeof c === "string")).slice(0, MAX_COUNTRIES)
       : [];
 
-    if (!Array.isArray(body.countries) || countries.length === 0) {
-      return new Response(JSON.stringify({ error: "countries must be a non-empty array" }), {
-        status: 400,
-        headers: { "content-type": "application/json" },
-      });
+    if (countries.length === 0) {
+      return jsonError("countries must be a non-empty array", 400);
     }
 
     const result = await generateStructured<{ insights: { country: string; insight: string }[] }>(
@@ -48,15 +60,9 @@ export async function POST(req: Request) {
       SYSTEM
     );
 
-    return new Response(JSON.stringify(result), {
-      status: 200,
-      headers: { "content-type": "application/json" },
-    });
+    return jsonOk(result);
   } catch (err) {
     console.error("demand insight error", err);
-    return new Response(JSON.stringify({ error: "Failed to generate insights" }), {
-      status: 500,
-      headers: { "content-type": "application/json" },
-    });
+    return jsonError("Failed to generate insights", 500);
   }
 }

@@ -1,9 +1,15 @@
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import { getServerEnv } from "@/lib/server-env";
 
+/**
+ * Service-role Supabase client for server-only routes.
+ *
+ * Throws if the service role key is missing, so a misconfigured environment
+ * fails at request time rather than returning confusing auth errors.
+ */
 export function createAdminClient() {
-  return createSupabaseClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { autoRefreshToken: false, persistSession: false } }
-  );
+  const env = getServerEnv();
+  return createSupabaseClient(env.supabaseUrl, env.supabaseServiceRoleKey, {
+    auth: { autoRefreshToken: false, persistSession: false },
+  });
 }

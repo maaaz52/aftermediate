@@ -1,20 +1,17 @@
-import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import { createHash, randomInt } from "node:crypto";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { assertServerEnv } from "@/lib/server-env";
+import { jsonError, jsonOk } from "@/lib/api-response";
 
 export const runtime = "nodejs";
-
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const OTP_SECRET = process.env.OTP_HMAC_SECRET || "aftermediate-otp";
 
 const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
 const RESEND_COOLDOWN_MS = 60 * 1000; // 60s between sends per email
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function hashCode(email: string, code: string): string {
-  return createHash("sha256").update(`${OTP_SECRET}:${email.toLowerCase()}:${code}`).digest("hex");
+function hashCode(email: string, code: string, secret: string): string {
+  return createHash("sha256").update(`${secret}:${email.toLowerCase()}:${code}`).digest("hex");
 }
 
 function generateCode(): string {
@@ -23,9 +20,10 @@ function generateCode(): string {
 
 export async function POST(req: Request) {
   try {
-    if (!SERVICE_ROLE_KEY) {
-      return NextResponse.json({ error: "Server not configured" }, { status: 500 });
-    }
+    const env = assertServerEnv();
+    const OTP_SECRET = env.otpHmacSecret as string;
+    const SERVICE_ROLE_KEY = env.supabaseServiceRoleKey;
+    const RESEND_API_KEY = env.resendApiKey;
 
     const body = await req.json().catch(() => null);
     const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
@@ -33,30 +31,26 @@ export async function POST(req: Request) {
     const name = typeof body?.name === "string" ? body.name.trim() : "";
 
     if (!EMAIL_RE.test(email)) {
-      return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
+      return jsonError("Enter a valid email address.", 400);
     }
     if (!password || password.length < 6) {
-      return NextResponse.json({ error: "Password must be at least 6 characters." }, { status: 400 });
+      return jsonError("Password must be at least 6 characters.", 400);
     }
     if (!RESEND_API_KEY) {
-      return NextResponse.json({ error: "Email service not configured." }, { status: 500 });
+      return jsonError("Email service not configured.", 500);
     }
 
-    const admin = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      SERVICE_ROLE_KEY,
-      { auth: { autoRefreshToken: false, persistSession: false } }
-    );
+    const admin = createAdminClient();
+    const authUrl = env.supabaseUrl;
 
     // Does a user already exist for this email? (GoTrue admin API supports ?filter=)
-    const authUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
     const userRes = await fetch(
       `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
       { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
     );
     if (!userRes.ok) {
       console.error("otp send: admin users lookup", userRes.status, await userRes.text());
-      return NextResponse.json({ error: "Could not check that email." }, { status: 500 });
+      return jsonError("Could not check that email.", 500);
     }
     const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null; user_metadata?: Record<string, unknown> }[] };
     // Match by exact email (filter does a substring search, so pick the exact row).
@@ -67,7 +61,7 @@ export async function POST(req: Request) {
       // If any confirmed account exists, tell the user to log in instead.
       const confirmed = matches.find((u) => u.email_confirmed_at);
       if (confirmed) {
-        return NextResponse.json({ error: "That email is already registered. Log in instead." }, { status: 400 });
+        return jsonError("That email is already registered. Log in instead.", 400);
       }
       // Reuse the first unconfirmed account so the OTP confirms the same one login will use.
       userId = matches[0].id;
@@ -78,7 +72,7 @@ export async function POST(req: Request) {
       });
       if (pwError) {
         console.error("otp send: password reset error", pwError.message);
-        return NextResponse.json({ error: "Could not set up your account. Try again." }, { status: 500 });
+        return jsonError("Could not set up your account. Try again.", 500);
       }
       // Keep the public profile in sync when the user types a new name at signup.
       if (name) {
@@ -95,7 +89,7 @@ export async function POST(req: Request) {
       });
       if (createError) {
         console.error("otp send: createUser error", createError.message);
-        return NextResponse.json({ error: "Could not create your account. Try again." }, { status: 500 });
+        return jsonError("Could not create your account. Try again.", 500);
       }
       userId = created.user?.id ?? null;
     }
@@ -108,11 +102,11 @@ export async function POST(req: Request) {
       .order("created_at", { ascending: false })
       .limit(1);
     if (recent?.[0] && Date.now() - new Date(recent[0].created_at).getTime() < RESEND_COOLDOWN_MS) {
-      return NextResponse.json(
-        { error: "Wait a moment before requesting another code." },
-        { status: 429 }
-      );
+      return jsonError("Wait a moment before requesting another code.", 429);
     }
+
+    // Drop any stale rows for this address so old codes can't pile up.
+    await admin.from("otp_codes").delete().eq("email", email);
 
     const code = generateCode();
     const expiresAt = new Date(Date.now() + OTP_TTL_MS).toISOString();
@@ -120,13 +114,13 @@ export async function POST(req: Request) {
     const { error: insertError } = await admin.from("otp_codes").insert({
       email,
       user_id: userId,
-      code_hash: hashCode(email, code),
+      code_hash: hashCode(email, code, OTP_SECRET),
       attempts: 0,
       expires_at: expiresAt,
     });
     if (insertError) {
       console.error("otp send: insert error", insertError.message);
-      return NextResponse.json({ error: "Could not store the code." }, { status: 500 });
+      return jsonError("Could not store the code.", 500);
     }
 
     // Email the code via Resend
@@ -153,12 +147,12 @@ export async function POST(req: Request) {
     if (!resendRes.ok) {
       const errText = await resendRes.text();
       console.error("otp send: resend error", errText);
-      return NextResponse.json({ error: "Could not send the email. Try again." }, { status: 500 });
+      return jsonError("Could not send the email. Try again.", 500);
     }
 
-    return NextResponse.json({ sent: true });
+    return jsonOk({ sent: true });
   } catch (err) {
     console.error("otp send error", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return jsonError("Internal server error", 500);
   }
 }
