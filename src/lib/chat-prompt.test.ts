@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { buildSystemPrompt } from "@/lib/chat-prompt";
 import { PERSONAS } from "@/lib/chat-request";
 import { retrieveFacts, type RetrievedFact } from "@/lib/knowledge";
+import type { StudentContext } from "@/lib/student-context";
 
 const MARKERS: Record<string, string> = {
   rahbar: "Rahbar",
@@ -101,5 +102,58 @@ describe("grounding block", () => {
     const hunar = buildSystemPrompt({ persona: "hunar", facts: [], covered: false });
     expect(hunar).toContain("/study");
     expect(hunar).not.toContain("Country Explorer");
+  });
+});
+
+describe("student block", () => {
+  const STUDENT: StudentContext = {
+    name: "Ayesha",
+    stream: "pre-medical",
+    fscPct: 87.3,
+    city: "Lahore",
+    budgetMonthly: 50000,
+    interests: ["Medicine & Healthcare"],
+  };
+
+  it("tells the bot who it is talking to when the profile is known", () => {
+    const prompt = buildSystemPrompt({ persona: "safar", student: STUDENT });
+
+    expect(prompt).toContain("WHO YOU ARE TALKING TO");
+    expect(prompt).toContain("Name: Ayesha");
+    expect(prompt).toContain("FSc: 87.3%");
+    expect(prompt).toContain("PKR 50,000");
+  });
+
+  it("says where the profile data came from so the bot trusts the right copy", () => {
+    expect(buildSystemPrompt({ persona: "study", student: { stream: "ics" } })).toContain(
+      "own profile"
+    );
+  });
+
+  it("renders no student block at all when nobody is signed in", () => {
+    for (const persona of PERSONAS) {
+      expect(buildSystemPrompt({ persona }), persona).not.toContain("WHO YOU ARE TALKING TO");
+      expect(buildSystemPrompt({ persona, student: null }), persona).not.toContain(
+        "WHO YOU ARE TALKING TO"
+      );
+    }
+  });
+
+  it("personalises before it grounds", () => {
+    const facts = factsFor("How much money do I park in a blocked account for Germany?", "safar");
+    const prompt = buildSystemPrompt({ persona: "safar", student: STUDENT, facts, covered: true });
+
+    expect(prompt.indexOf("WHO YOU ARE TALKING TO")).toBeGreaterThan(-1);
+    expect(prompt.indexOf("WHO YOU ARE TALKING TO")).toBeLessThan(
+      prompt.indexOf("FACTS FROM THE SITE KNOWLEDGE BASE")
+    );
+  });
+
+  it("stays cheaper than the old inlined knowledge base even with a student block", () => {
+    const facts = factsFor("How much does it cost to study in the UK versus Germany?", "safar");
+
+    expect(buildSystemPrompt({ persona: "safar", student: STUDENT, facts, covered: true }).length).toBeLessThan(
+      4500
+    );
   });
 });

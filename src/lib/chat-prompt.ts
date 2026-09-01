@@ -5,12 +5,7 @@ import {
   type KnowledgeBase,
   type RetrievedFact,
 } from "@/lib/knowledge";
-
-export interface ChatStudent {
-  stream?: string;
-  fscPct?: number;
-  interests?: string[];
-}
+import { formatStudentContext, type StudentContext } from "@/lib/student-context";
 
 export const PERSONA_PROMPTS: Record<Persona, string> = {
   rahbar: `You are "Rahbar" (رہبر), a warm, sharp site assistant for aftermediate — a career-counseling platform for Pakistani students who just finished FSc / ICS / I.Com / A-Levels.
@@ -106,12 +101,22 @@ Rules:
 
 export interface ChatPromptInput {
   persona: Persona;
-  student?: ChatStudent;
+  student?: StudentContext | null;
   facts?: RetrievedFact[];
   covered?: boolean;
 }
 
 const NO_FACTS = `The site knowledge base has no fact that matches this question. Say so honestly instead of guessing or inventing figures, and point the student to the site page or official source that can help.`;
+
+export const STUDENT_HEADER =
+  "WHO YOU ARE TALKING TO — taken from this student's own profile, not from this conversation";
+
+const STUDENT_RULES = `Use this to make your answer specific to them. Treat these values as the records, so if the chat contradicts one, ask which is current instead of assuming. Never invent a figure for a field that is missing, and do not quote their marks or budget back unless they are asking about themselves.`;
+
+function studentBlock(student: StudentContext | null | undefined): string {
+  const lines = formatStudentContext(student ?? null);
+  return lines ? `${STUDENT_HEADER}\n${lines}\n\n${STUDENT_RULES}` : "";
+}
 
 function groundingBlock(kb: KnowledgeBase, facts: RetrievedFact[]): string {
   const year = kb.updatedAt.slice(0, 4);
@@ -127,11 +132,16 @@ Grounding rules:
 }
 
 export function buildSystemPrompt(input: ChatPromptInput): string {
-  const base = PERSONA_PROMPTS[input.persona];
+  const parts = [PERSONA_PROMPTS[input.persona]];
+
+  const student = studentBlock(input.student);
+  if (student) parts.push(student);
+
   const kb = KNOWLEDGE_BASES[input.persona];
-  if (!kb) return base;
-  const facts = input.facts ?? [];
-  return input.covered && facts.length > 0
-    ? `${base}\n\n${groundingBlock(kb, facts)}`
-    : `${base}\n\n${NO_FACTS}`;
+  if (kb) {
+    const facts = input.facts ?? [];
+    parts.push(input.covered && facts.length > 0 ? groundingBlock(kb, facts) : NO_FACTS);
+  }
+
+  return parts.join("\n\n");
 }
