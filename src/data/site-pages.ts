@@ -164,6 +164,11 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Mentor cards searchable by field. The profiles shown are illustrative samples, not real people.",
   },
   {
+    href: "/feedback",
+    label: "Your Voice",
+    purpose: "Share feedback, story or wishlist for the roadmap; vote and see what students want.",
+  },
+  {
     href: "/abroad/assistant",
     label: "Safar A.I",
     purpose: "Safar, the study-abroad bot, answering from cited fees, deadlines, documents and visa rules.",
