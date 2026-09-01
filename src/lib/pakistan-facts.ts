@@ -21,6 +21,7 @@
 
 import type { KnowledgeFact, KnowledgeTopic } from "@/data/abroad-chatbot-knowledge";
 import universitiesJson from "@/data/pakistan-universities.json";
+import entryTestsJson from "@/data/entry-tests.json";
 
 interface ProgramFee {
   program: string;
@@ -88,5 +89,56 @@ export function deriveUniversityTopics(): KnowledgeTopic[] {
     id: `uni-${uni.id}`,
     title: `${uni.short} — ${uni.name}, ${uni.city}`,
     facts: universityFacts(uni),
+  }));
+}
+
+interface EntryTestRecord {
+  id: string;
+  name: string;
+  short: string;
+  conductingBody: string;
+  acceptedBy: string[];
+  fee: string;
+  frequency: string;
+  validity: string;
+  pattern: { section: string; questions: number; marks: number; time: string }[];
+  howToApply: string[];
+  sourceUrls: string[];
+  note: string;
+}
+
+const entryTests = (entryTestsJson as { tests: EntryTestRecord[] }).tests;
+
+function entryTestFacts(test: EntryTestRecord): KnowledgeFact[] {
+  const src = test.sourceUrls[0];
+  return [
+    {
+      text: `${test.short} (${test.name}) is conducted by ${test.conductingBody}. Accepted by: ${test.acceptedBy.join("; ")}.`,
+      source: src,
+    },
+    {
+      // fee, frequency and validity are copied verbatim — several are
+      // deliberately cycle-based and must not be sharpened into dates.
+      text: `${test.short} fee: ${test.fee}. Frequency: ${test.frequency}. Score validity: ${test.validity}.`,
+      source: src,
+    },
+    {
+      text: `${test.short} paper pattern — ${test.pattern
+        .map((p) => `${p.section}: ${p.questions} questions, ${p.marks} marks`)
+        .join("; ")}. ${test.note}`,
+      source: src,
+    },
+    {
+      text: `How to apply for ${test.short}: ${test.howToApply.join(" ")}`,
+      source: test.sourceUrls[test.sourceUrls.length - 1],
+    },
+  ];
+}
+
+export function deriveEntryTestTopics(): KnowledgeTopic[] {
+  return entryTests.map((test) => ({
+    id: `test-${test.id}`,
+    title: `${test.short} — ${test.name}`,
+    facts: entryTestFacts(test),
   }));
 }

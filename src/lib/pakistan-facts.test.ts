@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { deriveUniversityTopics } from "@/lib/pakistan-facts";
+import { deriveEntryTestTopics, deriveUniversityTopics } from "@/lib/pakistan-facts";
 import universitiesJson from "@/data/pakistan-universities.json";
+import entryTestsJson from "@/data/entry-tests.json";
 
 const universities = universitiesJson.universities;
+const tests = entryTestsJson.tests;
 
 describe("deriveUniversityTopics", () => {
   const topics = deriveUniversityTopics();
@@ -53,5 +55,46 @@ describe("deriveUniversityTopics", () => {
         expect(fact.text.length, `${topic.id}: ${fact.text.slice(0, 40)}`).toBeLessThan(900);
       }
     }
+  });
+});
+
+describe("deriveEntryTestTopics", () => {
+  const topics = deriveEntryTestTopics();
+
+  it("produces one topic per entry test", () => {
+    expect(topics).toHaveLength(tests.length);
+    expect(topics.map((t) => t.id)).toContain("test-mdcat");
+  });
+
+  it("names its subject in every fact", () => {
+    for (const test of tests) {
+      const topic = topics.find((t) => t.id === `test-${test.id}`);
+      expect(topic, test.id).toBeDefined();
+      for (const fact of topic!.facts) {
+        expect(fact.text, `${test.id}: "${fact.text.slice(0, 60)}…"`).toContain(test.short);
+      }
+    }
+  });
+
+  it("carries an https source on every fact", () => {
+    for (const topic of topics) {
+      for (const fact of topic.facts) {
+        expect(fact.source, topic.id).toMatch(/^https:\/\//);
+      }
+    }
+  });
+
+  it("copies a cycle-based fee verbatim instead of inventing a number", () => {
+    const mdcat = topics.find((t) => t.id === "test-mdcat")!;
+    const all = mdcat.facts.map((f) => f.text).join(" ");
+    expect(all).toContain("Announced per cycle");
+    expect(all).toContain("Biology");
+  });
+
+  it("leaves syllabus topics to Ustaad", () => {
+    // Manzil covers test logistics; concept teaching belongs to /study.
+    const mdcat = topics.find((t) => t.id === "test-mdcat")!;
+    const all = mdcat.facts.map((f) => f.text).join(" ");
+    expect(all).not.toContain("Cell structure and biological molecules");
   });
 });
