@@ -80,6 +80,7 @@ export const ALIAS: Record<string, string[]> = {
   "merit-strategy": ["aggregate", "closing merit", "merit list", "did not get admission", "missed merit", "repeat", "second list"],
   "scholarship-strategy": ["how to get scholarship", "financial aid office", "income certificate", "documents", "rejected", "stipend"],
   "admission-safety": ["recognised", "hec verified", "fake university", "agent", "scam", "attestation", "affiliated"],
+  "test-ecat": ["who conducts", "conducting body", "registration", "how to register", "engineering entrance test", "admission test"],
 };
 
 const STOPWORDS = new Set([
