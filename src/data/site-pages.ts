@@ -169,6 +169,11 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Share feedback, story or wishlist for the roadmap; vote and see what students want.",
   },
   {
+    href: "/pakistan/assistant",
+    label: "Manzil A.I",
+    purpose: "Manzil, the study-in-Pakistan bot, answering on institutes, admissions, merit and scholarships.",
+  },
+  {
     href: "/abroad/assistant",
     label: "Safar A.I",
     purpose: "Safar, the study-abroad bot, answering from cited fees, deadlines, documents and visa rules.",

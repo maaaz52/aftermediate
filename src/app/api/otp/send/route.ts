@@ -58,24 +58,16 @@ export async function POST(req: Request) {
 
     let userId: string | null = null;
     if (matches.length > 0) {
-      // If any confirmed account exists, tell the user to log in instead.
-      const confirmed = matches.find((u) => u.email_confirmed_at);
-      if (confirmed) {
-        return jsonError("That email is already registered. Log in instead.", 400);
-      }
-      // Reuse the first unconfirmed account so the OTP confirms the same one login will use.
+      // Email already exists (confirmed or not). We still send an OTP: verifying it
+      // proves ownership, and the verify step sets the password the user typed, so
+      // signup doubles as an OTP-backed password reset for existing accounts.
       userId = matches[0].id;
-      // Reset its password to the one the user just entered, so login works after confirmation.
-      const { error: pwError } = await admin.auth.admin.updateUserById(userId, {
-        password,
-        ...(name ? { user_metadata: { ...(matches[0].user_metadata || {}), full_name: name } } : {}),
-      });
-      if (pwError) {
-        console.error("otp send: password reset error", pwError.message);
-        return jsonError("Could not set up your account. Try again.", 500);
-      }
-      // Keep the public profile in sync when the user types a new name at signup.
+      // Keep the profile name in sync when the user types a new one at signup.
       if (name) {
+        const { error: metaError } = await admin.auth.admin.updateUserById(userId, {
+          user_metadata: { ...(matches[0].user_metadata || {}), full_name: name },
+        });
+        if (metaError) console.error("otp send: metadata name update error", metaError.message);
         const { error: profileError } = await admin.from("profiles").update({ name }).eq("id", userId);
         if (profileError) console.error("otp send: profile name update error", profileError.message);
       }

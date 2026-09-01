@@ -24,6 +24,7 @@ import {
   MessageSquareHeart,
   MessageSquareText,
   MonitorPlay,
+  Navigation,
   PenLine,
   Rocket,
   Sparkles,
@@ -109,6 +110,7 @@ export const groups: NavGroup[] = [
   {
     label: "A.I Assistants",
     links: [
+      { href: "/pakistan/assistant", label: "Manzil A.I", icon: Navigation },
       { href: "/abroad/assistant", label: "Safar A.I", icon: Bot },
       { href: "/study", label: "Ustaad A.I", icon: BookOpen },
     ],

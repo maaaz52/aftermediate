@@ -59,11 +59,22 @@ function VerifyEmailForm() {
     if (busy || code.length !== 6) return;
     setBusy(true);
     setError(null);
+
+    // The password the user typed at signup. Sent to /api/otp/verify so the
+    // account's password is set to it after the code is confirmed (this also
+    // lets signup double as a reset for an already-registered email).
+    let pending: { email?: string; password?: string } | null = null;
+    try {
+      pending = JSON.parse(sessionStorage.getItem("otp_pending") || "null");
+    } catch {
+      pending = null;
+    }
+
     try {
       const res = await fetch("/api/otp/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, code }),
+        body: JSON.stringify({ email, code, password: pending?.password || undefined }),
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -73,14 +84,6 @@ function VerifyEmailForm() {
         return;
       }
       setVerified(true);
-
-      // Auto-login with the password carried from the signup form, then go to onboarding.
-      let pending: { email?: string; password?: string } | null = null;
-      try {
-        pending = JSON.parse(sessionStorage.getItem("otp_pending") || "null");
-      } catch {
-        pending = null;
-      }
       sessionStorage.removeItem("otp_pending");
 
       if (pending?.password) {

@@ -20,6 +20,7 @@ export async function POST(req: Request) {
     const body = await req.json().catch(() => null);
     const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
     const code = typeof body?.code === "string" ? body.code.trim() : "";
+    const password = typeof body?.password === "string" ? body.password : "";
 
     if (!email || !/^\d{6}$/.test(code)) {
       return jsonError("Enter the 6-digit code from your email.", 400);
@@ -87,9 +88,12 @@ export async function POST(req: Request) {
       return jsonError("Account not found. Sign up again.", 400);
     }
 
-    const { data: confirmedUser, error: confirmError } = await admin.auth.admin.updateUserById(userId, {
-      email_confirm: true,
-    });
+    // Confirm the email; for an existing account this also lets signup set the
+    // password the user just typed (OTP proves they own the inbox).
+    const updates: Record<string, unknown> = { email_confirm: true };
+    if (password && password.length >= 6) updates.password = password;
+
+    const { data: confirmedUser, error: confirmError } = await admin.auth.admin.updateUserById(userId, updates);
     if (confirmError || !confirmedUser.user?.email_confirmed_at) {
       console.error("otp verify: confirm error", confirmError?.message ?? "email not confirmed after update");
       return jsonError("Could not verify your account. Try again.", 500);
