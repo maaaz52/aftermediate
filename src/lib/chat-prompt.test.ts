@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { buildSystemPrompt } from "@/lib/chat-prompt";
+import { groups } from "@/components/sidebar";
+import { SITE_PAGES } from "@/data/site-pages";
+import { buildSystemPrompt, PERSONA_PROMPTS } from "@/lib/chat-prompt";
 import { PERSONAS } from "@/lib/chat-request";
 import { retrieveFacts, type RetrievedFact } from "@/lib/knowledge";
+import { QUIZ_SECTIONS } from "@/lib/quiz";
 import type { StudentContext } from "@/lib/student-context";
 
 const MARKERS: Record<string, string> = {
@@ -155,5 +158,34 @@ describe("student block", () => {
     expect(buildSystemPrompt({ persona: "safar", student: STUDENT, facts, covered: true }).length).toBeLessThan(
       4500
     );
+  });
+});
+
+describe("rahbar's site map", () => {
+  const rahbar = PERSONA_PROMPTS.rahbar;
+
+  it("names every route the sidebar offers", () => {
+    for (const group of groups)
+      for (const link of group.links) expect(rahbar, link.href).toContain(link.href);
+  });
+
+  it("takes each page's purpose from the data instead of hand-copied prose", () => {
+    for (const page of SITE_PAGES) expect(rahbar, page.href).toContain(page.purpose);
+  });
+
+  it("counts the quiz the way quiz.ts counts it", () => {
+    expect(QUIZ_SECTIONS).toHaveLength(5);
+    expect(rahbar).toContain(`${QUIZ_SECTIONS.length}-section quiz`);
+    expect(rahbar).toContain(QUIZ_SECTIONS.map((section) => section.id).join(", "));
+  });
+
+  it("never repeats the claims it shipped with, which were wrong", () => {
+    expect(rahbar).not.toMatch(/7-section/);
+    expect(rahbar).not.toContain("entry test, money & budget");
+  });
+
+  it("fits the whole site map inside one message", () => {
+    const prompt = buildSystemPrompt({ persona: "rahbar", student: { city: "Lahore" } });
+    expect(prompt.length).toBeLessThan(6_000);
   });
 });
