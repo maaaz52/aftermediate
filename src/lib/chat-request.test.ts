@@ -55,11 +55,12 @@ describe("isPersona", () => {
     }
   });
 
-  it("allows exactly the 7 shipped personas, no more", () => {
+  it("allows exactly the 8 shipped personas, no more", () => {
     expect([...PERSONAS].sort()).toEqual([
       "cv",
       "essay",
       "hunar",
+      "manzil",
       "qalam",
       "rahbar",
       "safar",

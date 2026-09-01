@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
+import { pakistanChatbotKnowledge } from "@/data/pakistan-chatbot-knowledge";
 import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
 import type { Persona } from "@/lib/chat-request";
 import {
@@ -196,7 +197,11 @@ describe("formatFacts", () => {
 
 describe("alias table", () => {
   it("each alias topic id exists in its knowledge base", () => {
-    const known = [...topicIds(abroadChatbotKnowledge), ...topicIds(skillsChatbotKnowledge)];
+    const known = [
+      ...topicIds(abroadChatbotKnowledge),
+      ...topicIds(skillsChatbotKnowledge),
+      ...topicIds(pakistanChatbotKnowledge),
+    ];
     for (const id of Object.keys(ALIAS)) {
       expect(known, `ALIAS key "${id}" is not a real topic id`).toContain(id);
       expect(ALIAS[id].length).toBeGreaterThan(0);

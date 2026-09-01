@@ -18,6 +18,7 @@ import {
   abroadChatbotKnowledge,
   type KnowledgeTopic,
 } from "@/data/abroad-chatbot-knowledge";
+import { pakistanChatbotKnowledge } from "@/data/pakistan-chatbot-knowledge";
 import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
 import type { Persona } from "@/lib/chat-request";
 
@@ -74,6 +75,11 @@ export const ALIAS: Record<string, string[]> = {
   "difficult-clients": ["not paying", "late payment", "ghosting", "dispute", "unpaid invoice", "creep"],
   "scams-to-avoid": ["fake client", "registration fee", "scam", "advance fee", "phishing", "otp"],
   "time-management": ["balance studies", "exam season", "schedule", "burnout", "study and work", "hours"],
+  // study in pakistan
+  "choosing-where-to-apply": ["public or private", "which university", "shortlist", "hostel", "worth the fee", "government university"],
+  "merit-strategy": ["aggregate", "closing merit", "merit list", "did not get admission", "missed merit", "repeat", "second list"],
+  "scholarship-strategy": ["how to get scholarship", "financial aid office", "income certificate", "documents", "rejected", "stipend"],
+  "admission-safety": ["recognised", "hec verified", "fake university", "agent", "scam", "attestation", "affiliated"],
 };
 
 const STOPWORDS = new Set([
@@ -101,6 +107,7 @@ export interface KnowledgeBase {
 export const KNOWLEDGE_BASES: Partial<Record<Persona, KnowledgeBase>> = {
   safar: abroadChatbotKnowledge,
   hunar: skillsChatbotKnowledge,
+  manzil: pakistanChatbotKnowledge,
 };
 
 function stem(word: string): string {
