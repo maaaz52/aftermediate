@@ -59,14 +59,27 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Could not check that email." }, { status: 500 });
     }
     const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null }[] };
-    const existing = userData.users?.find((u) => u.email === email);
-    if (existing) {
-      if (existing.email_confirmed_at) {
+    // Match by exact email (filter does a substring search, so pick the exact row).
+    const matches = (userData.users || []).filter((u) => u.email.toLowerCase() === email);
+
+    let userId: string | null = null;
+    if (matches.length > 0) {
+      // If any confirmed account exists, tell the user to log in instead.
+      const confirmed = matches.find((u) => u.email_confirmed_at);
+      if (confirmed) {
         return NextResponse.json({ error: "That email is already registered. Log in instead." }, { status: 400 });
+      }
+      // Reuse the first unconfirmed account so the OTP confirms the same one login will use.
+      userId = matches[0].id;
+      // Reset its password to the one the user just entered, so login works after confirmation.
+      const { error: pwError } = await admin.auth.admin.updateUserById(userId, { password });
+      if (pwError) {
+        console.error("otp send: password reset error", pwError.message);
+        return NextResponse.json({ error: "Could not set up your account. Try again." }, { status: 500 });
       }
     } else {
       // Create the user (unconfirmed) so we can confirm them after OTP check.
-      const { error: createError } = await admin.auth.admin.createUser({
+      const { data: created, error: createError } = await admin.auth.admin.createUser({
         email,
         password,
         email_confirm: false,
@@ -76,6 +89,7 @@ export async function POST(req: Request) {
         console.error("otp send: createUser error", createError.message);
         return NextResponse.json({ error: "Could not create your account. Try again." }, { status: 500 });
       }
+      userId = created.user?.id ?? null;
     }
 
     // Rate limit: don't spam the same address
@@ -97,6 +111,7 @@ export async function POST(req: Request) {
 
     const { error: insertError } = await admin.from("otp_codes").insert({
       email,
+      user_id: userId,
       code_hash: hashCode(email, code),
       attempts: 0,
       expires_at: expiresAt,

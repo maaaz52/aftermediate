@@ -35,7 +35,7 @@ export async function POST(req: Request) {
 
     const { data: rows, error: fetchError } = await admin
       .from("otp_codes")
-      .select("id, code_hash, attempts, expires_at")
+      .select("id, user_id, code_hash, attempts, expires_at")
       .eq("email", email)
       .order("created_at", { ascending: false })
       .limit(1);
@@ -69,27 +69,32 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "That code isn't right. Try again." }, { status: 400 });
     }
 
-    // Code is correct — confirm the user's email
-    const authUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const userRes = await fetch(
-      `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
-      { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
-    );
-    if (!userRes.ok) {
-      console.error("otp verify: admin users lookup", userRes.status, await userRes.text());
-      return NextResponse.json({ error: "Account not found. Sign up again." }, { status: 400 });
+    // Code is correct — confirm the user's email. Prefer the exact user_id captured
+    // at send time; fall back to a live lookup only if it wasn't stored.
+    let userId: string | undefined = record.user_id ?? undefined;
+    if (!userId) {
+      const authUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+      const userRes = await fetch(
+        `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
+        { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
+      );
+      if (!userRes.ok) {
+        console.error("otp verify: admin users lookup", userRes.status, await userRes.text());
+        return NextResponse.json({ error: "Account not found. Sign up again." }, { status: 400 });
+      }
+      const userData = (await userRes.json()) as { users?: { id: string; email: string }[] };
+      const match = (userData.users || []).find((u) => u.email.toLowerCase() === email);
+      userId = match?.id;
     }
-    const userData = (await userRes.json()) as { users?: { id: string; email: string }[] };
-    const existing = userData.users?.find((u) => u.email === email);
-    if (!existing) {
+    if (!userId) {
       return NextResponse.json({ error: "Account not found. Sign up again." }, { status: 400 });
     }
 
-    const { error: confirmError } = await admin.auth.admin.updateUserById(existing.id, {
+    const { data: confirmedUser, error: confirmError } = await admin.auth.admin.updateUserById(userId, {
       email_confirm: true,
     });
-    if (confirmError) {
-      console.error("otp verify: confirm error", confirmError.message);
+    if (confirmError || !confirmedUser.user?.email_confirmed_at) {
+      console.error("otp verify: confirm error", confirmError?.message ?? "email not confirmed after update");
       return NextResponse.json({ error: "Could not verify your account. Try again." }, { status: 500 });
     }
 
