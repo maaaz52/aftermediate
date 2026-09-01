@@ -4,6 +4,7 @@ import * as React from "react";
 import { Check, Dices, ListChecks, PenLine, RefreshCw, Wand2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLocalStorage } from "@/lib/skills";
+import { ESSAY_DRAFT_BASE, usePersonalString } from "@/lib/chat-storage";
 import { analyzeDraft } from "@/lib/college-essays";
 import data from "@/data/college-essays.json";
 
@@ -57,7 +58,7 @@ export function WritingGuide() {
   const [stepState, setStepState] = useLocalStorage<GuideStepState>("aftermediate:essays:guide-step", { current: 0, done: [] });
   const [inventory, setInventory] = useLocalStorage<string[]>("aftermediate:essays:inventory", []);
   const [outlineState, setOutlineState] = useLocalStorage<OutlineState>("aftermediate:essays:outline", { templateId: null, slots: {} });
-  const [draft, setDraft] = useLocalStorage<string>("aftermediate:essays:draft", "");
+  const [draft, setDraft] = usePersonalString(ESSAY_DRAFT_BASE, "");
 
   const [newItem, setNewItem] = React.useState("");
   const [promptId, setPromptId] = React.useState<string | null>(null);

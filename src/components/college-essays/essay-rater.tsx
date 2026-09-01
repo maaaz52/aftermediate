@@ -4,13 +4,15 @@ import * as React from "react";
 import { ClipboardPaste, Loader2, Send, Sparkles, Wand2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { analyzeDraft } from "@/lib/college-essays";
+import {
+  ESSAY_DRAFT_BASE,
+  RATER_CHAT_BASE,
+  useChatHistory,
+  usePersonalKey,
+  type ChatMessage,
+} from "@/lib/chat-storage";
 
-interface Msg {
-  role: "user" | "assistant";
-  content: string;
-}
-
-const STORAGE_KEY = "aftermediate:essays:rater-chat";
+type Msg = ChatMessage;
 
 const GREETING =
   "Salam! Main Qalam (قلم) hoon — your college essay rating coach. Paste your draft on the left and send it here, or click \"Load my draft\" to pull in the draft from the writing guide. I will rate it with strengths, weaknesses, and one concrete next step.";
@@ -22,25 +24,9 @@ const SUGGESTIONS = [
   "Is my essay too cliché?",
 ];
 
-function loadHistory(): Msg[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) return parsed.filter((m) => m && typeof m === "object" && typeof (m as { role?: unknown }).role === "string" && typeof (m as { content?: unknown }).content === "string") as Msg[];
-    }
-  } catch {
-    /* ignore */
-  }
-  return [];
-}
-
 export function EssayRater() {
-  const [messages, setMessages] = React.useState<Msg[]>(() => {
-    const h = loadHistory();
-    return h.length > 0 ? h : [{ role: "assistant", content: GREETING }];
-  });
+  const [messages, setMessages] = useChatHistory(RATER_CHAT_BASE, GREETING);
+  const draftKey = usePersonalKey(ESSAY_DRAFT_BASE);
   const [input, setInput] = React.useState("");
   const [streaming, setStreaming] = React.useState(false);
   const [draftText, setDraftText] = React.useState("");
@@ -50,20 +36,12 @@ export function EssayRater() {
   const analysis = React.useMemo(() => analyzeDraft(draftText), [draftText]);
 
   React.useEffect(() => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
-    } catch {
-      /* ignore */
-    }
-  }, [messages]);
-
-  React.useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
 
   function loadDraft() {
     try {
-      const raw = window.localStorage.getItem("aftermediate:essays:draft");
+      const raw = draftKey ? window.localStorage.getItem(draftKey) : null;
       if (raw) {
         const parsed = JSON.parse(raw);
         setDraftText(typeof parsed === "string" ? parsed : "");

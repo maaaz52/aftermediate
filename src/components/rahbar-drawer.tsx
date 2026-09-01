@@ -3,27 +3,14 @@
 import * as React from "react";
 import { X, Send, Sparkles, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
 
-interface Msg {
-  role: "user" | "assistant";
-  content: string;
-}
+type Msg = ChatMessage;
 
 const GREETING =
   "Salam! I'm Rahbar 🧭 — your guide to aftermediate. Ask me how to use any page, what a feature does, or how to fix something on the site. For study help, try Ustaad.";
 
 const STORAGE_KEY = "aftermediate:rahbar-chat";
-
-function loadHistory(): Msg[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch {
-    /* ignore */
-  }
-  return [];
-}
 
 const SUGGESTIONS = [
   "What can I do on this site?",
@@ -34,9 +21,7 @@ const SUGGESTIONS = [
 
 export function RahbarDrawer() {
   const [open, setOpen] = React.useState(false);
-  const [messages, setMessages] = React.useState<Msg[]>(() =>
-    loadHistory().length > 0 ? loadHistory() : [{ role: "assistant", content: GREETING }]
-  );
+  const [messages, setMessages] = useChatHistory(STORAGE_KEY, GREETING);
   const [input, setInput] = React.useState("");
   const [streaming, setStreaming] = React.useState(false);
   const bottomRef = React.useRef<HTMLDivElement>(null);
@@ -55,14 +40,6 @@ export function RahbarDrawer() {
   React.useEffect(() => {
     document.dispatchEvent(new CustomEvent(open ? "rahbar-open" : "rahbar-closed"));
   }, [open]);
-
-  React.useEffect(() => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
-    } catch {
-      /* ignore */
-    }
-  }, [messages]);
 
   React.useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });

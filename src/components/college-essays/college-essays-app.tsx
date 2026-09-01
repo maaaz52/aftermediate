@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Eye, Feather, MessageSquareText, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { RATER_CHAT_BASE, usePersonalKey } from "@/lib/chat-storage";
 import { EssayExplainer } from "./essay-explainer";
 import { WritingGuide } from "./writing-guide";
 import { EssayRater } from "./essay-rater";
@@ -17,10 +18,10 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]["id"];
 
-const COMPLETION_KEYS: Record<TabId, string> = {
+const COMPLETION_BASES: Record<TabId, string> = {
   what: "aftermediate:essays:quiz",
   "how-to": "aftermediate:essays:guide-step",
-  rating: "aftermediate:essays:rater-chat",
+  rating: RATER_CHAT_BASE,
   builder: "aftermediate:essays:strategy",
 };
 
@@ -33,10 +34,13 @@ function readKey(key: string): unknown {
   }
 }
 
-function computeDone(): Record<TabId, boolean> {
+function computeDone(raterKey: string | null): Record<TabId, boolean> {
   if (typeof window === "undefined") return { what: false, "how-to": false, rating: false, builder: false };
   const next = {} as Record<TabId, boolean>;
-  for (const t of TABS) next[t.id] = isDone(t.id, readKey(COMPLETION_KEYS[t.id]));
+  for (const t of TABS) {
+    const key = t.id === "rating" ? raterKey : COMPLETION_BASES[t.id];
+    next[t.id] = key ? isDone(t.id, readKey(key)) : false;
+  }
   return next;
 }
 
@@ -63,7 +67,8 @@ export function CollegeEssaysApp() {
     const hash = window.location.hash.replace("#", "");
     return (TABS.some((t) => t.id === hash) ? hash : "what") as TabId;
   });
-  const done = computeDone();
+  const raterKey = usePersonalKey(RATER_CHAT_BASE);
+  const done = computeDone(raterKey);
 
   React.useEffect(() => {
     window.history.replaceState(null, "", `#${tab}`);

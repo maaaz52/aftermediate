@@ -3,27 +3,14 @@
 import * as React from "react";
 import { BookOpen, Send, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
 
-interface Msg {
-  role: "user" | "assistant";
-  content: string;
-}
+type Msg = ChatMessage;
 
 const GREETING =
   "Salam! Main Ustaad hoon — your FSc study assistant. 🤓 Ask me to explain a concept, break down an MDCAT/NET/ECAT topic, or make you a revision plan. Let's get you exam-ready.";
 
 const STORAGE_KEY = "aftermediate:study-chat";
-
-function loadHistory(): Msg[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch {
-    /* ignore */
-  }
-  return [];
-}
 
 const SUGGESTIONS = [
   "Explain biological magnification like I'm 15",
@@ -33,20 +20,10 @@ const SUGGESTIONS = [
 ];
 
 export default function StudyPage() {
-  const [messages, setMessages] = React.useState<Msg[]>(() =>
-    loadHistory().length > 0 ? loadHistory() : [{ role: "assistant", content: GREETING }]
-  );
+  const [messages, setMessages] = useChatHistory(STORAGE_KEY, GREETING);
   const [input, setInput] = React.useState("");
   const [streaming, setStreaming] = React.useState(false);
   const bottomRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
-    } catch {
-      /* ignore */
-    }
-  }, [messages]);
 
   React.useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
