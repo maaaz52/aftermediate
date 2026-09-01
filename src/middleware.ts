@@ -34,9 +34,11 @@ export async function middleware(request: NextRequest) {
   const isPublicPage =
     pathname === "/" || pathname === "/login" || pathname === "/coming-soon" || pathname === "/verify-email";
   const isApiRoute = pathname.startsWith("/api/");
+  // OTP signup/verify must work for unauthenticated users (no session yet at signup time)
+  const isPublicApiRoute = pathname.startsWith("/api/otp/");
 
   if (isApiRoute) {
-    if (!user) {
+    if (!isPublicApiRoute && !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
     return supabaseResponse;

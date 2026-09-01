@@ -119,12 +119,11 @@ export default function LoginPage() {
       }
       const r = await signUpEmail(email, password, { name: name.trim() || undefined });
       if (r.error) setMessage({ type: "err", text: r.error });
-      else if (r.needsConfirm)
-        setMessage({
-          type: "ok",
-          text: "Check your email to confirm your account. Then come back and sign in.",
-        });
-      else router.push("/onboard");
+      else if (r.needsConfirm) {
+        // Carry email + password to the verify page so we can auto-login after the OTP check.
+        sessionStorage.setItem("otp_pending", JSON.stringify({ email: r.email, password }));
+        router.push(`/verify-email?email=${encodeURIComponent(r.email || email)}`);
+      } else router.push("/onboard");
     }
     setBusy(false);
   }

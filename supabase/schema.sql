@@ -78,6 +78,23 @@ create policy "chats_update_own" on public.chat_sessions
   for update using (auth.uid() = user_id);
 
 -- ============================================================
+-- Email OTP verification — replaces the Supabase confirmation link
+-- ============================================================
+create table if not exists public.otp_codes (
+  id uuid primary key default gen_random_uuid(),
+  email text not null,
+  code_hash text not null,
+  attempts smallint not null default 0,
+  expires_at timestamptz not null,
+  created_at timestamptz default now()
+);
+
+create index if not exists otp_codes_email_idx on public.otp_codes (email, created_at desc);
+
+-- RLS: only the service role (server) touches this table; clients never read/write it
+alter table public.otp_codes enable row level security;
+
+-- ============================================================
 -- Storage bucket for marksheet scans (optional)
 -- ============================================================
 insert into storage.buckets (id, name, public)

@@ -18,7 +18,7 @@ interface AuthCtx {
     email: string,
     password: string,
     data?: SignUpData
-  ) => Promise<{ error?: string; needsConfirm?: boolean }>;
+  ) => Promise<{ error?: string; needsConfirm?: boolean; email?: string }>;
   signInGoogle: () => Promise<void>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error?: string }>;
@@ -46,13 +46,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signUpEmail = async (email: string, password: string, data?: SignUpData) => {
-    const { data: result, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: data?.name || data?.stream ? { data: { full_name: data.name, stream: data.stream } } : undefined,
+    // Custom OTP flow: the server creates the (unconfirmed) user and emails a 6-digit code.
+    const res = await fetch("/api/otp/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password, name: data?.name }),
     });
-    if (error) return { error: error.message };
-    return { needsConfirm: !result.session };
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok) return { error: json.error || "Could not start sign-up. Try again." };
+    return { needsConfirm: true, email };
   };
 
   const signInGoogle = async () => {
