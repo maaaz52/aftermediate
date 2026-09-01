@@ -58,7 +58,7 @@ export async function POST(req: Request) {
       console.error("otp send: admin users lookup", userRes.status, await userRes.text());
       return NextResponse.json({ error: "Could not check that email." }, { status: 500 });
     }
-    const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null }[] };
+    const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null; user_metadata?: Record<string, unknown> }[] };
     // Match by exact email (filter does a substring search, so pick the exact row).
     const matches = (userData.users || []).filter((u) => u.email.toLowerCase() === email);
 
@@ -72,10 +72,18 @@ export async function POST(req: Request) {
       // Reuse the first unconfirmed account so the OTP confirms the same one login will use.
       userId = matches[0].id;
       // Reset its password to the one the user just entered, so login works after confirmation.
-      const { error: pwError } = await admin.auth.admin.updateUserById(userId, { password });
+      const { error: pwError } = await admin.auth.admin.updateUserById(userId, {
+        password,
+        ...(name ? { user_metadata: { ...(matches[0].user_metadata || {}), full_name: name } } : {}),
+      });
       if (pwError) {
         console.error("otp send: password reset error", pwError.message);
         return NextResponse.json({ error: "Could not set up your account. Try again." }, { status: 500 });
+      }
+      // Keep the public profile in sync when the user types a new name at signup.
+      if (name) {
+        const { error: profileError } = await admin.from("profiles").update({ name }).eq("id", userId);
+        if (profileError) console.error("otp send: profile name update error", profileError.message);
       }
     } else {
       // Create the user (unconfirmed) so we can confirm them after OTP check.
