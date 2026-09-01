@@ -48,20 +48,21 @@ export async function POST(req: Request) {
       { auth: { autoRefreshToken: false, persistSession: false } }
     );
 
-    // Does a user already exist for this email?
-    const { data: existing, error: lookupError } = await admin
-      .from("auth.users")
-      .select("id, email_confirmed_at")
-      .eq("email", email)
-      .maybeSingle();
-    if (lookupError) {
-      console.error("otp send: getUserByEmail error", lookupError.message);
+    // Does a user already exist for this email? (GoTrue admin API supports ?filter=)
+    const authUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+    const userRes = await fetch(
+      `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
+      { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
+    );
+    if (!userRes.ok) {
+      console.error("otp send: admin users lookup", userRes.status, await userRes.text());
       return NextResponse.json({ error: "Could not check that email." }, { status: 500 });
     }
-
+    const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null }[] };
+    const existing = userData.users?.find((u) => u.email === email);
     if (existing) {
       if (existing.email_confirmed_at) {
-        return NextResponse.json({ error: "That email is already verified. Just log in." }, { status: 400 });
+        return NextResponse.json({ error: "That email is already registered. Log in instead." }, { status: 400 });
       }
     } else {
       // Create the user (unconfirmed) so we can confirm them after OTP check.

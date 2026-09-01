@@ -70,13 +70,18 @@ export async function POST(req: Request) {
     }
 
     // Code is correct — confirm the user's email
-    const { data: existing, error: lookupError } = await admin
-      .from("auth.users")
-      .select("id")
-      .eq("email", email)
-      .maybeSingle();
-    if (lookupError || !existing) {
-      console.error("otp verify: user lookup error", lookupError?.message);
+    const authUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+    const userRes = await fetch(
+      `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
+      { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
+    );
+    if (!userRes.ok) {
+      console.error("otp verify: admin users lookup", userRes.status, await userRes.text());
+      return NextResponse.json({ error: "Account not found. Sign up again." }, { status: 400 });
+    }
+    const userData = (await userRes.json()) as { users?: { id: string; email: string }[] };
+    const existing = userData.users?.find((u) => u.email === email);
+    if (!existing) {
       return NextResponse.json({ error: "Account not found. Sign up again." }, { status: 400 });
     }
 
