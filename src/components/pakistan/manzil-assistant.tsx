@@ -20,42 +20,6 @@ const SUGGESTIONS = [
   "Which private universities are cheapest for engineering?",
 ];
 
-/**
- * Design preview only. The chat shell, streaming feel and empty states are
- * final; the answers below are placeholders so the page can be reviewed
- * before a `manzil` persona and its knowledge base exist server-side.
- * Swapping in the real endpoint means replacing `mockReply` with the same
- * `fetch("/api/chat")` reader Safar uses — nothing else here changes.
- */
-const MOCK_REPLIES: { match: RegExp; reply: string }[] = [
-  {
-    match: /scholarship|funding|financial aid|hec|need.?based|fee concession/i,
-    reply:
-      "Studying inside Pakistan has three main funding routes:\n\n• HEC need-based scholarships — applied for through your university's financial aid office once you have an admission offer. Covers tuition plus a living stipend at participating universities.\n• University merit scholarships — automatic at most public sector universities above a set aggregate; private universities usually run their own scaled fee concessions.\n• Provincial programmes — Punjab, Sindh, KP and Balochistan each run separate endowment funds with their own eligibility and deadlines.\n\nSee the Scholarships page for the full list with official links and current deadlines.",
-  },
-  {
-    match: /nust|net\b|fast|giki|comsats|admission|apply|application/i,
-    reply:
-      "Admission to most Pakistani universities follows the same shape:\n\n1. Register online on the university's own admission portal and pay the processing fee.\n2. Sit the required entry test — NET for NUST, ECAT for UET, MDCAT for medical, or the university's own paper.\n3. Wait for the merit list, which weighs your FSc marks and test score together.\n4. Confirm your seat by paying the first semester dues before the deadline, or it moves to the next candidate.\n\nTell me which university you have in mind and I can walk through its specific steps, fees and faculties.",
-  },
-  {
-    match: /merit|aggregate|percentage|marks|cut.?off|mdcat|ecat/i,
-    reply:
-      "Merit is an aggregate, not just your FSc percentage. A typical weighting looks like:\n\n• Entry test — 50%\n• FSc / HSSC — 40%\n• Matric — 10%\n\nThe exact split changes by university and by programme, and the closing merit moves every year with the applicant pool. The Merit page lets you enter your own marks and see where you would have landed against previous years' closing merit.",
-  },
-  {
-    match: /fee|cost|expensive|cheap|afford|budget/i,
-    reply:
-      "Fees split sharply between sectors:\n\n• Public sector universities — the lowest tuition, with the trade-off of much tighter merit.\n• Semi-government and chartered institutes — mid-range, often with strong industry links.\n• Private universities — the highest tuition, but usually more seats and scaled scholarships.\n\nThe Universities page lists the real, current fee ranges per programme with official links, so you can filter by what you can actually carry.",
-  },
-];
-
-function mockReply(question: string): string {
-  const hit = MOCK_REPLIES.find((r) => r.match.test(question));
-  if (hit) return hit.reply;
-  return "This is a design preview, so I only have a few sample answers wired up for now. Try one of the suggested questions about universities, admissions, merit, fees or scholarships to see how a real answer will look.";
-}
-
 export function ManzilAssistant() {
   const [messages, setMessages] = useChatHistory(STORAGE_KEY, GREETING);
   const [input, setInput] = React.useState("");
@@ -75,15 +39,37 @@ export function ManzilAssistant() {
     setStreaming(true);
     setMessages([...next, { role: "assistant", content: "" }]);
 
-    // Typed out in chunks so the layout is reviewed under the same reflow a
-    // streamed answer causes, rather than appearing all at once.
-    const full = mockReply(text);
-    for (let i = 0; i < full.length; i += 3) {
-      await new Promise((r) => setTimeout(r, 12));
-      setMessages([...next, { role: "assistant", content: full.slice(0, i + 3) }]);
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          persona: "manzil",
+          messages: next.map((m) => ({ role: m.role, content: m.content })),
+        }),
+      });
+      if (!res.ok || !res.body) throw new Error("failed");
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let acc = "";
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        acc += decoder.decode(value, { stream: true });
+        setMessages([...next, { role: "assistant", content: acc }]);
+      }
+    } catch {
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content:
+            "Sorry, I hit a snag. Try again in a moment — or check the pages on the left while you wait.",
+        },
+      ]);
+    } finally {
+      setStreaming(false);
     }
-    setMessages([...next, { role: "assistant", content: full }]);
-    setStreaming(false);
   }
 
   return (
@@ -151,7 +137,7 @@ export function ManzilAssistant() {
           </button>
         </div>
         <p className="mt-2 text-center text-[11px] text-faint">
-          Design preview — answers are samples, not live yet. Always double-check on official pages.
+          Manzil answers from a curated knowledge base and cites sources. Always double-check on official pages.
         </p>
       </div>
     </div>
