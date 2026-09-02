@@ -3,7 +3,7 @@ import { groups } from "@/components/sidebar";
 import { SITE_PAGES } from "@/data/site-pages";
 import { buildSystemPrompt, PERSONA_PROMPTS } from "@/lib/chat-prompt";
 import { PERSONAS } from "@/lib/chat-request";
-import { retrieveFacts, type RetrievedFact } from "@/lib/knowledge";
+import { KNOWLEDGE_BASES, retrieveFacts, type RetrievedFact } from "@/lib/knowledge";
 import { QUIZ_SECTIONS } from "@/lib/quiz";
 import type { StudentContext } from "@/lib/student-context";
 
@@ -15,6 +15,7 @@ const MARKERS: Record<string, string> = {
   safar: "Safar",
   hunar: "Hunar",
   qalam: "Qalam",
+  manzil: "Manzil",
 };
 
 const factsFor = (query: string, persona: "safar" | "hunar"): RetrievedFact[] =>
@@ -158,6 +159,32 @@ describe("student block", () => {
     expect(buildSystemPrompt({ persona: "safar", student: STUDENT, facts, covered: true }).length).toBeLessThan(
       4500
     );
+  });
+});
+
+describe("Manzil's prompt", () => {
+  it("is registered as a persona with a knowledge base", () => {
+    expect(PERSONAS).toContain("manzil");
+    expect(KNOWLEDGE_BASES.manzil).toBeDefined();
+  });
+
+  it("names the bots it must defer to, so the four do not overlap", () => {
+    const prompt = PERSONA_PROMPTS.manzil;
+    expect(prompt).toContain("Ustaad");
+    expect(prompt).toContain("Safar");
+    expect(prompt).toContain("Rahbar");
+  });
+
+  it("stays under the prompt size ceiling", () => {
+    expect(PERSONA_PROMPTS.manzil.length).toBeLessThan(4000);
+  });
+
+  it("is reachable from Rahbar, the panel that appears on every page", () => {
+    // Rahbar has no knowledge base of its own, so a local university question
+    // answered there is ungrounded — it must hand off instead.
+    const rahbar = PERSONA_PROMPTS.rahbar;
+    expect(rahbar).toContain("Manzil");
+    expect(rahbar).toContain("/pakistan/assistant");
   });
 });
 

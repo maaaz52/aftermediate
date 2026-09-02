@@ -30,6 +30,7 @@ export const ESSAY_DRAFT_BASE = "aftermediate:essays:draft";
 export const LEGACY_SHARED_KEYS: string[] = [
   "aftermediate:rahbar-chat",
   "aftermediate:safar-chat",
+  "aftermediate:manzil-chat",
   "aftermediate:skills:chat",
   "aftermediate:study-chat",
   RATER_CHAT_BASE,
