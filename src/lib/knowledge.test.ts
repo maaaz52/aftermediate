@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { abroadChatbotKnowledge } from "@/data/abroad-chatbot-knowledge";
+import { pakistanChatbotKnowledge } from "@/data/pakistan-chatbot-knowledge";
 import { skillsChatbotKnowledge } from "@/data/skills-chatbot-knowledge";
 import type { Persona } from "@/lib/chat-request";
 import {
@@ -196,7 +197,11 @@ describe("formatFacts", () => {
 
 describe("alias table", () => {
   it("each alias topic id exists in its knowledge base", () => {
-    const known = [...topicIds(abroadChatbotKnowledge), ...topicIds(skillsChatbotKnowledge)];
+    const known = [
+      ...topicIds(abroadChatbotKnowledge),
+      ...topicIds(skillsChatbotKnowledge),
+      ...topicIds(pakistanChatbotKnowledge),
+    ];
     for (const id of Object.keys(ALIAS)) {
       expect(known, `ALIAS key "${id}" is not a real topic id`).toContain(id);
       expect(ALIAS[id].length).toBeGreaterThan(0);
@@ -273,8 +278,34 @@ const HARNESS: HarnessCase[] = [
   { persona: "hunar", query: "My client has not paid for two weeks — what do I do about late payment?", expectTopicId: "difficult-clients" },
   { persona: "hunar", query: "How do I write an Upwork proposal that actually gets a reply?", expectTopicId: "client-acquisition" },
   { persona: "hunar", query: "How do I keep freelancing going while my exams approach without burning out?", expectTopicId: "time-management" },
+  { persona: "manzil", query: "What does NUST charge per semester for a computing degree?", expectTopicId: "uni-nust" },
+  { persona: "manzil", query: "How do I apply to NUST and what is the aggregate formula?", expectTopicId: "uni-nust" },
+  { persona: "manzil", query: "Is GIKI a public or a private university and what is it known for?", expectTopicId: "uni-giki" },
+  { persona: "manzil", query: "What is the MDCAT paper pattern and how many biology questions are there?", expectTopicId: "test-mdcat" },
+  { persona: "manzil", query: "How much does MDCAT registration cost and how often is it held?", expectTopicId: "test-mdcat" },
+  { persona: "manzil", query: "How do I register for the ECAT and who conducts it?", expectTopicId: "test-ecat" },
+  { persona: "manzil", query: "Which need-based scholarship covers tuition plus a monthly stipend?", expectTopicId: "scholarships-need-based" },
+  { persona: "manzil", query: "What HEC scholarships can I get for an undergraduate degree in Pakistan?", expectTopicId: "scholarships-hec" },
+  { persona: "manzil", query: "Are there provincial government scholarships for students from Sindh?", expectTopicId: "scholarships-provincial" },
+  { persona: "manzil", query: "Should I go to a government university or pay for a private one?", expectTopicId: "choosing-where-to-apply" },
+  { persona: "manzil", query: "I have to move city for university — what should I budget for hostel?", expectTopicId: "choosing-where-to-apply" },
+  { persona: "manzil", query: "I missed the closing merit everywhere — what do I do now?", expectTopicId: "merit-strategy" },
+  { persona: "manzil", query: "Should I repeat my entry test next year to improve my aggregate?", expectTopicId: "merit-strategy" },
+  { persona: "manzil", query: "What documents do I need for a need-based financial aid application?", expectTopicId: "scholarship-strategy" },
+  { persona: "manzil", query: "Can I hold two scholarships at the same time?", expectTopicId: "scholarship-strategy" },
+  { persona: "manzil", query: "How do I check whether a university is actually recognised by HEC?", expectTopicId: "admission-safety" },
+  { persona: "manzil", query: "An agent says he can guarantee me a seat in a medical college for a fee", expectTopicId: "admission-safety" },
+  { persona: "manzil", query: "The institute asked me to transfer the fee to a personal account — is that normal?", expectTopicId: "admission-safety" },
+  // The five suggestion chips on /pakistan/assistant — the first queries most
+  // students ever send, so they are held to the same recall bar as the rest.
+  { persona: "manzil", query: "Which universities offer merit scholarships?", expectTopicId: "scholarships-merit-based" },
+  { persona: "manzil", query: "How do I apply to NUST?", expectTopicId: "uni-nust" },
+  { persona: "manzil", query: "What is the HEC need-based scholarship process?", expectTopicId: "scholarships-hec" },
+  { persona: "manzil", query: "What's on the MDCAT paper?", expectTopicId: "test-mdcat" },
+  { persona: "manzil", query: "How much does LUMS cost per year?", expectTopicId: "uni-lums" },
   { persona: "safar", query: "Which cricket team will win the world cup final?" },
   { persona: "hunar", query: "How long should I proof a sourdough loaf before baking it?" },
+  { persona: "manzil", query: "How much money do I park in a German blocked account for a student visa?" },
 ];
 
 describe("recall harness", () => {
@@ -290,7 +321,7 @@ describe("recall harness", () => {
     });
   }
 
-  it("scores at least 22 of 24", () => {
+  it("scores at least 90% of the harness", () => {
     const misses: string[] = [];
     for (const c of HARNESS) {
       const { facts, covered } = retrieveFacts(c.persona, c.query);
@@ -301,6 +332,10 @@ describe("recall harness", () => {
     }
     console.log(`RETRIEVAL HARNESS SCORE ${HARNESS.length - misses.length}/${HARNESS.length}`);
     for (const m of misses) console.log(`  MISS ${m}`);
-    expect(misses.length).toBeLessThanOrEqual(HARNESS.length - 22);
+    // Proportional, not a fixed count: a fixed "HARNESS.length - 22" gate
+    // loosens every time a case is added, which would let a longer harness
+    // pass with most of its new cases failing.
+    const rate = (HARNESS.length - misses.length) / HARNESS.length;
+    expect(rate, `misses:\n${misses.join("\n")}`).toBeGreaterThanOrEqual(0.9);
   });
 });

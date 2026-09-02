@@ -6,6 +6,7 @@ export const PERSONAS = [
   "safar",
   "hunar",
   "qalam",
+  "manzil",
 ] as const;
 
 export type Persona = (typeof PERSONAS)[number];
