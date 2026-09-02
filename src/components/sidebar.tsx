@@ -96,7 +96,7 @@ export const groups: NavGroup[] = [
   {
     label: "Resources",
     links: [
-      { href: "/#reality", label: "Reality Check", icon: Eye },
+      { href: "/reality-check", label: "Reality Check", icon: Eye },
       { href: "/webinars", label: "Webinars", icon: Video },
     ],
   },
