@@ -7,8 +7,8 @@ const STREAMS: Stream[] = ["pre-medical", "pre-engineering", "ics", "icom", "ale
 const REQUIRED = ["nust", "fast", "lums", "giki", "iba", "comsats"] as const;
 
 describe("pakistan-universities.json", () => {
-  it("has exactly 12 universities", () => {
-    expect(data.universities).toHaveLength(12);
+  it("has exactly 30 universities", () => {
+    expect(data.universities).toHaveLength(30);
   });
 
   it("has a numeric dataYear of 2026", () => {
