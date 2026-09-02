@@ -45,3 +45,6 @@ next-env.d.ts
 
 # vercel deploy temp scripts
 .vercel-tmp/
+
+# Sentry Config File
+.env.sentry-build-plugin
