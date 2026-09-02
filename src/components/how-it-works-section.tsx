@@ -123,7 +123,7 @@ export function HowItWorksSection() {
         {/* Desktop: 2-col grid, row 1 = heading + card01, row 2 = card03 + card02 */}
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-12">
           {/* Row 1 left: heading */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:self-start">
             <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">
               How it works.
             </h2>

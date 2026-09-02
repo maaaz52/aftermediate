@@ -6,6 +6,7 @@ import { Illustration } from "@/components/pixel/illustrations";
 import { MeritDemo } from "@/components/merit-demo";
 import { RealityFan } from "@/components/reality-fan";
 import { StreamExplorer } from "@/components/stream-explorer";
+import { FeaturePanels } from "@/components/feature-panels";
 import { UrgencyTicker } from "@/components/urgency-ticker";
 import { PixelSeats } from "@/components/pixel-seats";
 import { NustMeritBar } from "@/components/nust-merit-bar";
@@ -237,6 +238,22 @@ export default function Home() {
               </p>
             </div>
             <StreamExplorer />
+          </div>
+        </section>
+
+        {/* FEATURES */}
+        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
+          <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
+            <span className="h-2 w-2 bg-accent" /> everything you need
+          </span>
+          <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink sm:text-4xl uppercase">
+            What aftermediate offers.
+          </h2>
+          <p className="mt-3 max-w-md text-muted">
+            Hover a panel to explore. One platform, every angle — merit, practice, careers, abroad.
+          </p>
+          <div className="mt-8">
+            <FeaturePanels />
           </div>
         </section>
 
