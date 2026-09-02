@@ -66,6 +66,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = async () => {
     await supabase.auth.signOut();
+    // Never leave the previous student's local profile behind for the next
+    // person on this device.
+    try {
+      window.localStorage.removeItem("aftermediate:profile");
+      window.localStorage.removeItem("aftermediate:profile:updatedAt");
+    } catch {
+      /* ignore */
+    }
+    // Force a full navigation to the public landing page so the session is
+    // cleared and no protected UI or client state lingers. Works from any route.
+    window.location.assign("/");
   };
 
   const resetPassword = async (email: string) => {
