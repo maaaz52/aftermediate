@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/landing/contact-form";
 import { Brand } from "@/components/brand";
 import { Illustration } from "@/components/pixel/illustrations";
 import { MeritDemo } from "@/components/merit-demo";
-import { RealityCard } from "@/components/reality-card";
+import { RealityFan } from "@/components/reality-fan";
 import { StreamExplorer } from "@/components/stream-explorer";
 import { UrgencyTicker } from "@/components/urgency-ticker";
 import { PixelSeats } from "@/components/pixel-seats";
@@ -17,7 +17,6 @@ import { data } from "@/lib/data";
 
 const rc = data.realities;
 const mdcat = rc.find((r) => r.id === "mdcat-ratio")!;
-const nust = rc.find((r) => r.id === "nust-aggregate")!;
 const jobs = rc.find((r) => r.id === "youth-unemployment")!;
 const it = rc.find((r) => r.id === "it-exports")!;
 
@@ -108,14 +107,15 @@ export default function Home() {
               <span className="text-danger"> the plan decides, not the marks.</span>
             </h2>
             <p className="mt-3 max-w-lg text-muted">
-              One hard truth for every stream — medical, engineering, IT. Tap a card to flip it.
+              One hard truth for every stream — medical, IT, and the job market. Tap a card to flip it.
             </p>
-            <div className="mt-6 sm:mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              <RealityCard item={mdcat} value={mdcat.stat.value} label="Medical · candidates vs seats" />
-              <RealityCard item={nust} value={nust.stat.value} label="Engineering · NUST formula" />
-              <RealityCard item={it} value={it.stat.value} label="IT · fastest-growing export" />
-              <RealityCard item={jobs} value={jobs.stat.value} label="Jobs · youth unemployment" />
-            </div>
+            <RealityFan
+              cards={[
+                { item: mdcat, value: mdcat.stat.value, label: "Medical · candidates vs seats" },
+                { item: it, value: it.stat.value, label: "IT · fastest-growing export" },
+                { item: jobs, value: jobs.stat.value, label: "Jobs · youth unemployment" },
+              ]}
+            />
           </div>
         </section>
 

@@ -136,9 +136,7 @@ export function HowItWorksSection() {
           <StepCard s={card01} />
 
           {/* Row 2 left: card 03 — parallel to card 02 */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
-            <StepCard s={card03} />
-          </div>
+          <StepCard s={card03} />
 
           {/* Row 2 right: card 02 */}
           <StepCard s={card02} />

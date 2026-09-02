@@ -292,3 +292,67 @@ body {
   }
   .animate-step-in { animation: none; }
 }
+
+/* Reality fan — 3D flippable card fan (cards.html animation) */
+.reality-fan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  perspective: 1400px;
+}
+
+.reality-fan-card {
+  width: 240px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.38s cubic-bezier(0.2, 0.7, 0.2, 1.1);
+}
+
+.reality-fan-card.left   { transform: rotateY(18deg); }
+.reality-fan-card.centre { transform: rotateY(0deg); }
+.reality-fan-card.right  { transform: rotateY(-18deg); }
+
+.reality-fan-card:hover { z-index: 3; }
+.reality-fan-card.left:hover   { transform: rotateY(4deg) translateY(-12px); }
+.reality-fan-card.centre:hover { transform: translateY(-12px) scale(1.04); }
+.reality-fan-card.right:hover  { transform: rotateY(-4deg) translateY(-12px); }
+
+.reality-fan-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1.1);
+}
+
+.reality-fan-card.flipped .reality-fan-inner {
+  transform: rotateY(180deg);
+}
+
+.reality-fan-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.reality-fan-back {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 1024px) {
+  .reality-fan { gap: 16px; }
+  .reality-fan-card { width: 200px; height: 270px; }
+}
+
+@media (max-width: 640px) {
+  .reality-fan { gap: 10px; width: max-content; margin-inline: auto; }
+  .reality-fan-card { width: 150px; height: 230px; }
+  .reality-fan-card .reality-fan-face { padding: 0.75rem; }
+  .reality-fan-card .reality-fan-face p.text-2xl { font-size: 1.1rem; }
+}
