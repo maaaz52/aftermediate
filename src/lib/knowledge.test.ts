@@ -296,6 +296,13 @@ const HARNESS: HarnessCase[] = [
   { persona: "manzil", query: "How do I check whether a university is actually recognised by HEC?", expectTopicId: "admission-safety" },
   { persona: "manzil", query: "An agent says he can guarantee me a seat in a medical college for a fee", expectTopicId: "admission-safety" },
   { persona: "manzil", query: "The institute asked me to transfer the fee to a personal account — is that normal?", expectTopicId: "admission-safety" },
+  // The five suggestion chips on /pakistan/assistant — the first queries most
+  // students ever send, so they are held to the same recall bar as the rest.
+  { persona: "manzil", query: "Which universities offer merit scholarships?", expectTopicId: "scholarships-merit-based" },
+  { persona: "manzil", query: "How do I apply to NUST?", expectTopicId: "uni-nust" },
+  { persona: "manzil", query: "What is the HEC need-based scholarship process?", expectTopicId: "scholarships-hec" },
+  { persona: "manzil", query: "What's on the MDCAT paper?", expectTopicId: "test-mdcat" },
+  { persona: "manzil", query: "How much does LUMS cost per year?", expectTopicId: "uni-lums" },
   { persona: "safar", query: "Which cricket team will win the world cup final?" },
   { persona: "hunar", query: "How long should I proof a sourdough loaf before baking it?" },
   { persona: "manzil", query: "How much money do I park in a German blocked account for a student visa?" },

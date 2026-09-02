@@ -8,6 +8,23 @@ const universities = universitiesJson.universities;
 const tests = entryTestsJson.tests;
 const scholarships = scholarshipsJson.scholarships;
 
+describe("the derived corpus as a whole", () => {
+  const topics = [...deriveUniversityTopics(), ...deriveEntryTestTopics(), ...deriveScholarshipTopics()];
+
+  it("never renders a missing JSON field as the word 'undefined'", () => {
+    // These strings are pasted verbatim into the model's prompt as sourced
+    // facts. An optional field that goes missing must drop out of the sentence,
+    // never surface as "undefined questions, undefined marks".
+    for (const topic of topics) {
+      expect(topic.title, topic.id).not.toMatch(/\bundefined\b/);
+      for (const fact of topic.facts) {
+        expect(fact.text, `${topic.id}: ${fact.text.slice(0, 120)}`).not.toMatch(/\bundefined\b/);
+        expect(fact.source, topic.id).not.toMatch(/\bundefined\b/);
+      }
+    }
+  });
+});
+
 describe("deriveUniversityTopics", () => {
   const topics = deriveUniversityTopics();
 
@@ -47,6 +64,10 @@ describe("deriveUniversityTopics", () => {
     const nust = topics.find((t) => t.id === "uni-nust")!;
     const all = nust.facts.map((f) => f.text).join(" ");
     expect(all).toContain("216,750");
+    // 433,500 is the NUST programFees perYear value and reaches fact text only
+    // through programLines — asserting on the summary figure alone would let
+    // the whole per-programme block be deleted with the test still green.
+    expect(all).toContain("433,500");
     expect(all).toContain("NET");
     expect(all).toContain("SEECS");
   });
@@ -82,6 +103,17 @@ describe("deriveEntryTestTopics", () => {
     for (const topic of topics) {
       for (const fact of topic.facts) {
         expect(fact.source, topic.id).toMatch(/^https:\/\//);
+      }
+    }
+  });
+
+  it("does not repeat the short name when the full name already opens with it", () => {
+    const mdcat = topics.find((t) => t.id === "test-mdcat")!;
+    expect(mdcat.title).toBe("MDCAT — Medical & Dental College Admission Test");
+    for (const topic of topics) {
+      expect(topic.title, topic.id).not.toMatch(/^(\S+) — \1\b/);
+      for (const fact of topic.facts) {
+        expect(fact.text, topic.id).not.toMatch(/^(\S+) \(\1\b/);
       }
     }
   });

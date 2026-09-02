@@ -37,19 +37,19 @@ const authoredTopics: KnowledgeTopic[] = [
     title: "Choosing Where to Apply — Public vs Private",
     facts: [
       {
-        text: "Public sector universities charge far lower tuition than private ones but close at much higher merit, so a realistic list mixes both: one or two aspirational public options, a mid-tier public option, and a private option you could actually afford if merit does not land.",
+        text: "Public sector does not automatically mean cheap, and private does not automatically mean easy to enter. Some public universities are heavily subsidised while others charge fees comparable to private ones, and several of the hardest admissions in the country are at private universities. Compare the fee record and the entry requirements of the specific universities on your list rather than sorting them by sector.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "Apply to several universities, not one. Entry tests and merit lists run on different calendars, so applying widely costs application fees but protects against a single closing merit moving against you in one bad year.",
+        text: "As general guidance rather than an official rule, apply to several universities, not one. Entry tests and merit lists run on different calendars, so applying widely costs application fees but protects against a single closing merit moving against you in one bad year.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "For students moving city, hostel availability and cost belong in the budget from the start: hostel, mess and travel home can add substantially to the advertised tuition, and universities do not guarantee on-campus hostel seats to every admitted student.",
+        text: "This is practical advice, not a published policy — for students moving city, hostel availability and cost belong in the budget from the start: hostel, mess and travel home can add substantially to the advertised tuition, and universities do not guarantee on-campus hostel seats to every admitted student.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "A degree's value depends more on the department than the university's overall name. Check which faculties a university is actually known for before paying a premium for the brand.",
+        text: "As general guidance rather than an official rule, a degree's value depends more on the department than the university's overall name. Check which faculties a university is actually known for before paying a premium for the brand.",
         source: HEC_RECOGNISED,
       },
     ],
@@ -59,19 +59,23 @@ const authoredTopics: KnowledgeTopic[] = [
     title: "Merit, Aggregates and What to Do If You Miss",
     facts: [
       {
-        text: "Merit in Pakistan is an aggregate, not your FSc percentage alone. Universities weigh the entry test heavily — NUST computes NET 75% + FSc 15% + Matric 10% — so a strong test score can outweigh an average FSc, and a weak test score is rarely rescued by good marks.",
-        source: "https://ugadmissions.nust.edu.pk/",
-      },
-      {
-        text: "Closing merit moves every year with the applicant pool and paper difficulty. Treat last year's closing merit as a guide with a margin, not a threshold to hit exactly.",
+        // No weighting numbers here on purpose: each university's split lives in
+        // pakistan-universities.json and reaches Manzil through the derived
+        // uni-* facts. A hand-copied percentage would go stale against the JSON
+        // and hand the model two contradictory answers to the same question.
+        text: "As general guidance rather than an official rule, merit in Pakistan is an aggregate, not your FSc percentage alone. The entry test typically carries far more weight in that aggregate than FSc marks do, so a strong test score can outweigh an average FSc while a weak test score is rarely rescued by good marks. The exact weighting differs by university and each one publishes its own formula, so check the aggregate formula of the universities on your list.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "Missing merit at one university is not the end of the cycle. Second and third merit lists move as admitted students confirm seats elsewhere, so keep checking the portal and keep the fee ready before the confirmation deadline.",
+        text: "This is practical advice, not a published policy — closing merit moves every year with the applicant pool and paper difficulty. Treat last year's closing merit as a guide with a margin, not a threshold to hit exactly.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "If no list moves far enough, the realistic options are a related programme at the same university, the same programme at a less competitive university, or repeating the entry test next cycle. Repeating only helps where the test — not the FSc marks — was the weak half of the aggregate, since FSc marks are fixed.",
+        text: "As general guidance rather than an official rule, missing merit at one university is not the end of the cycle. Second and third merit lists move as admitted students confirm seats elsewhere, so keep checking the portal and keep the fee ready before the confirmation deadline.",
+        source: HEC_RECOGNISED,
+      },
+      {
+        text: "As general guidance rather than an official rule, if no list moves far enough the realistic options are a related programme at the same university, the same programme at a less competitive university, or repeating the entry test next cycle. Repeating only helps where the test — not the FSc marks — was the weak half of the aggregate, since FSc marks are fixed.",
         source: HEC_RECOGNISED,
       },
     ],
@@ -81,15 +85,15 @@ const authoredTopics: KnowledgeTopic[] = [
     title: "Actually Winning a Scholarship, Not Just Finding One",
     facts: [
       {
-        text: "Most need-based scholarships in Pakistan are applied for after you hold an admission offer, through the university's own financial aid office rather than directly to the funder. Securing admission comes first; the funding application follows it.",
+        text: "Scholarship routes differ, so check the specific programme rather than assuming one path. Some — Ehsaas and the HEC Need-Based Scholarship among them — are applied for through your university's financial aid office once you hold an admission offer. Others, including the provincial endowment funds and most private foundations, take applications directly on their own portals, and some of those windows can close before university merit lists are announced.",
         source: HEC_SCHOLARSHIPS,
       },
       {
-        text: "Need-based applications are decided largely on documented family income, so the paperwork is the application: CNICs, income certificates or salary slips, utility bills and bank statements. Applications are commonly rejected for incomplete documents rather than for insufficient need.",
+        text: "This is practical advice, not a published policy — need-based applications are decided largely on documented family income, so the paperwork is the application: CNICs, income certificates or salary slips, utility bills and bank statements. Applications are commonly rejected for incomplete documents rather than for insufficient need.",
         source: HEC_SCHOLARSHIPS,
       },
       {
-        text: "Most programmes bar holding two awards at once, so read the stacking rules before accepting the first offer — a smaller scholarship accepted early can disqualify you from a larger one later in the cycle.",
+        text: "As general guidance rather than an official rule, most programmes bar holding two awards at once, so read the stacking rules before accepting the first offer — a smaller scholarship accepted early can disqualify you from a larger one later in the cycle.",
         source: HEC_SCHOLARSHIPS,
       },
       {
@@ -107,11 +111,11 @@ const authoredTopics: KnowledgeTopic[] = [
         source: HEC_RECOGNISED,
       },
       {
-        text: "No agent can guarantee admission or a scholarship. Universities admit on published merit and funders award on published criteria, so a guaranteed seat in exchange for a fee is a scam regardless of the paperwork shown.",
+        text: "As general guidance rather than an official rule, no agent can guarantee admission or a scholarship. Universities admit on published merit and funders award on published criteria, so a guaranteed seat in exchange for a fee is a scam regardless of the paperwork shown.",
         source: HEC_RECOGNISED,
       },
       {
-        text: "Pay fees only into the university's official bank account through its own challan or portal, never into a personal account, and keep the receipt. Verify a fee demand on the university's official website or admissions office before transferring.",
+        text: "This is practical advice, not a published policy — pay fees only into the university's official bank account through its own challan or portal, never into a personal account, and keep the receipt. Verify a fee demand on the university's official website or admissions office before transferring.",
         source: HEC_RECOGNISED,
       },
       {

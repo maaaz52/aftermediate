@@ -80,6 +80,7 @@ export const ALIAS: Record<string, string[]> = {
   "merit-strategy": ["aggregate", "closing merit", "merit list", "did not get admission", "missed merit", "repeat", "second list"],
   "scholarship-strategy": ["how to get scholarship", "financial aid office", "income certificate", "documents", "rejected", "stipend"],
   "admission-safety": ["recognised", "hec verified", "fake university", "agent", "scam", "attestation", "affiliated"],
+  "scholarships-merit-based": ["merit scholarship", "which universities offer", "top position", "high achiever", "award for good marks", "talent scholarship"],
   "test-ecat": ["who conducts", "conducting body", "registration", "how to register", "engineering entrance test", "admission test"],
 };
 

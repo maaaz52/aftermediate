@@ -102,7 +102,10 @@ interface EntryTestRecord {
   fee: string;
   frequency: string;
   validity: string;
-  pattern: { section: string; questions: number; marks: number; time: string }[];
+  // Several records give a section name only, or marks with no question count
+  // (LAT's essay, GIKI's papers). Optional here so the fact template can omit
+  // what the dataset does not state instead of printing "undefined".
+  pattern: { section: string; questions?: number; marks?: number; time?: string }[];
   howToApply: string[];
   sourceUrls: string[];
   note: string;
@@ -110,11 +113,33 @@ interface EntryTestRecord {
 
 const entryTests = (entryTestsJson as { tests: EntryTestRecord[] }).tests;
 
+/**
+ * "MDCAT — Medical & Dental College Admission Test", not
+ * "MDCAT (MDCAT — Medical & Dental College Admission Test)": most `name`
+ * values already open with the short name, and the stutter also skews the
+ * title index, which carries a 3x boost.
+ */
+function testLabel(test: EntryTestRecord): string {
+  return test.name.startsWith(test.short) ? test.name : `${test.short} (${test.name})`;
+}
+
+function testTitle(test: EntryTestRecord): string {
+  return test.name.startsWith(test.short) ? test.name : `${test.short} — ${test.name}`;
+}
+
+/** Emits only the counts the dataset actually carries. */
+function patternRow(p: EntryTestRecord["pattern"][number]): string {
+  const parts: string[] = [];
+  if (typeof p.questions === "number") parts.push(`${p.questions} questions`);
+  if (typeof p.marks === "number") parts.push(`${p.marks} marks`);
+  return parts.length ? `${p.section}: ${parts.join(", ")}` : p.section;
+}
+
 function entryTestFacts(test: EntryTestRecord): KnowledgeFact[] {
   const src = test.sourceUrls[0];
   return [
     {
-      text: `${test.short} (${test.name}) is conducted by ${test.conductingBody}. Accepted by: ${test.acceptedBy.join("; ")}.`,
+      text: `${testLabel(test)} is conducted by ${test.conductingBody}. Accepted by: ${test.acceptedBy.join("; ")}.`,
       source: src,
     },
     {
@@ -124,14 +149,12 @@ function entryTestFacts(test: EntryTestRecord): KnowledgeFact[] {
       source: src,
     },
     {
-      text: `${test.short} paper pattern — ${test.pattern
-        .map((p) => `${p.section}: ${p.questions} questions, ${p.marks} marks`)
-        .join("; ")}. ${test.note}`,
+      text: `${test.short} paper pattern — ${test.pattern.map(patternRow).join("; ")}. ${test.note}`,
       source: src,
     },
     {
       text: `How to apply for ${test.short}: ${test.howToApply.join(" ")}`,
-      source: test.sourceUrls[test.sourceUrls.length - 1],
+      source: src,
     },
   ];
 }
@@ -139,7 +162,7 @@ function entryTestFacts(test: EntryTestRecord): KnowledgeFact[] {
 export function deriveEntryTestTopics(): KnowledgeTopic[] {
   return entryTests.map((test) => ({
     id: `test-${test.id}`,
-    title: `${test.short} — ${test.name}`,
+    title: testTitle(test),
     facts: entryTestFacts(test),
   }));
 }

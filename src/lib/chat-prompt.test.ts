@@ -178,6 +178,14 @@ describe("Manzil's prompt", () => {
   it("stays under the prompt size ceiling", () => {
     expect(PERSONA_PROMPTS.manzil.length).toBeLessThan(4000);
   });
+
+  it("is reachable from Rahbar, the panel that appears on every page", () => {
+    // Rahbar has no knowledge base of its own, so a local university question
+    // answered there is ungrounded — it must hand off instead.
+    const rahbar = PERSONA_PROMPTS.rahbar;
+    expect(rahbar).toContain("Manzil");
+    expect(rahbar).toContain("/pakistan/assistant");
+  });
 });
 
 describe("rahbar's site map", () => {

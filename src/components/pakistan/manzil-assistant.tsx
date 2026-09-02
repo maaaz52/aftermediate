@@ -16,8 +16,8 @@ const SUGGESTIONS = [
   "Which universities offer merit scholarships?",
   "How do I apply to NUST?",
   "What is the HEC need-based scholarship process?",
-  "What aggregate do I need for MBBS in Punjab?",
-  "Which private universities are cheapest for engineering?",
+  "What's on the MDCAT paper?",
+  "How much does LUMS cost per year?",
 ];
 
 export function ManzilAssistant() {
