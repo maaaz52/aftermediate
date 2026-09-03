@@ -58,8 +58,6 @@ export function FeedbackJourney({ onFeatureAdded }: { onFeatureAdded?: () => voi
         surprised,
         mindset,
         recommendTo,
-        sentimentTag: sentiment.tag,
-        sentimentScore: sentiment.score,
       },
       media
     );

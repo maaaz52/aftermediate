@@ -23,7 +23,7 @@ export async function GET(req: Request) {
       return jsonError("path query param required", 400);
     }
     // Only objects inside the review-media bucket's user folder are allowed.
-    if (!path.startsWith(`${user.id}/`)) {
+    if (!path.startsWith(`${user.id}/`) || path.includes("..")) {
       return jsonError("Forbidden", 403);
     }
 

@@ -51,7 +51,11 @@ export async function POST(req: Request) {
     const watchlist = Array.isArray(profile?.watchlist) ? (profile.watchlist as WatchlistEntry[]) : [];
     const entry = watchlist.find((e) => e.id === entryId);
 
-    if (entry && isRateLimited(entry.lastNotifiedAt)) {
+    if (!entry) {
+      return jsonError("Watchlist entry not found", 404);
+    }
+
+    if (isRateLimited(entry.lastNotifiedAt)) {
       return NextResponse.json({ sent: false, reason: "rate-limited" });
     }
 

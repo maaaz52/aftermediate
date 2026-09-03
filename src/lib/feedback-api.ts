@@ -8,8 +8,6 @@ export type ReviewPayload = {
   surprised: string;
   mindset: string;
   recommendTo: string[];
-  sentimentTag: string;
-  sentimentScore: number;
 };
 
 export type ReviewFile = { file: File; kind: MediaKind };
@@ -52,8 +50,6 @@ export async function submitReview(
       surprised: payload.surprised,
       mindset: payload.mindset,
       recommend_to: payload.recommendTo,
-      sentiment_tag: payload.sentimentTag,
-      sentiment_score: payload.sentimentScore,
     })
     .select("id")
     .single();

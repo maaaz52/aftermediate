@@ -9,32 +9,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SourceTag } from "@/components/stat";
+import { MiniLineChart } from "@/components/mini-charts";
 import { useStudent } from "@/lib/store";
 import { data } from "@/lib/data";
 import { worthScore, pct } from "@/lib/aggregates";
 
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-
 function ConvinceChart() {
   const d = [
-    { year: "FY24", exports: 3.2 },
-    { year: "FY25", exports: 3.8 },
-    { year: "FY26", exports: 4.6 },
+    { year: "FY24", value: 3.2 },
+    { year: "FY25", value: 3.8 },
+    { year: "FY26", value: 4.6 },
   ];
-  return (
-    <ResponsiveContainer width="100%" height={180}>
-      <LineChart data={d} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-        <CartesianGrid stroke="rgba(255,255,255,0.06)" />
-        <XAxis dataKey="year" stroke="var(--color-faint)" fontSize={11} />
-        <YAxis stroke="var(--color-faint)" fontSize={11} unit="B" />
-        <Tooltip
-          contentStyle={{ background: "#0f0f17", border: "1px solid #23232f", borderRadius: 8, fontSize: 12 }}
-          labelStyle={{ color: "#ececf1" }}
-        />
-        <Line type="monotone" dataKey="exports" stroke="var(--color-emerald)" strokeWidth={2.5} dot={{ r: 4 }} />
-      </LineChart>
-    </ResponsiveContainer>
-  );
+  return <MiniLineChart points={d} color="var(--color-emerald)" />;
 }
 
 export default function ConvincePage() {

@@ -27,31 +27,10 @@ create table if not exists public.profiles (
 -- Migration for databases created before the Self Assessment feature:
 -- alter table public.profiles add column if not exists practice jsonb default '[]'::jsonb;
 
--- Saved plans (roadmaps a user saves)
-create table if not exists public.saved_plans (
-  id uuid primary key default gen_random_uuid(),
-  user_id uuid references auth.users(id) on delete cascade,
-  type text not null,
-  payload jsonb default '{}'::jsonb,
-  created_at timestamptz default now()
-);
-
--- Chat history (optional)
-create table if not exists public.chat_sessions (
-  id uuid primary key default gen_random_uuid(),
-  user_id uuid references auth.users(id) on delete cascade,
-  persona text not null default 'rahbar',
-  messages jsonb default '[]'::jsonb,
-  created_at timestamptz default now(),
-  updated_at timestamptz default now()
-);
-
 -- ============================================================
 -- Row Level Security
 -- ============================================================
 alter table public.profiles enable row level security;
-alter table public.saved_plans enable row level security;
-alter table public.chat_sessions enable row level security;
 
 -- Profiles: user can read/update their own row
 create policy "profiles_select_own" on public.profiles
@@ -60,22 +39,6 @@ create policy "profiles_insert_own" on public.profiles
   for insert with check (auth.uid() = id);
 create policy "profiles_update_own" on public.profiles
   for update using (auth.uid() = id);
-
--- Saved plans
-create policy "plans_select_own" on public.saved_plans
-  for select using (auth.uid() = user_id);
-create policy "plans_insert_own" on public.saved_plans
-  for insert with check (auth.uid() = user_id);
-create policy "plans_delete_own" on public.saved_plans
-  for delete using (auth.uid() = user_id);
-
--- Chat sessions
-create policy "chats_select_own" on public.chat_sessions
-  for select using (auth.uid() = user_id);
-create policy "chats_insert_own" on public.chat_sessions
-  for insert with check (auth.uid() = user_id);
-create policy "chats_update_own" on public.chat_sessions
-  for update using (auth.uid() = user_id);
 
 -- ============================================================
 -- Email OTP verification — replaces the Supabase confirmation link
@@ -209,6 +172,10 @@ create policy "reviews_insert_own" on public.reviews for insert with check (auth
 create policy "reviews_update_own" on public.reviews for update using (auth.uid() = user_id);
 create policy "reviews_delete_own" on public.reviews for delete using (auth.uid() = user_id);
 
+-- sentiment fields are server-computed; users must not set them on insert
+revoke insert on public.reviews from anon, authenticated;
+grant insert (user_id, tone, rating, review_text, surprised, mindset, recommend_to) on public.reviews to authenticated;
+
 create policy "review_media_select" on public.review_media for select using (
   exists (select 1 from public.reviews r where r.id = review_id and (r.user_id = auth.uid() or r.status = 'published'))
 );
@@ -228,7 +195,7 @@ create policy "feature_votes_delete_own" on public.feature_votes for delete usin
 revoke update on public.reviews from anon, authenticated;
 grant update (review_text, surprised, mindset, recommend_to, tone, rating) on public.reviews to authenticated;
 revoke update on public.feature_requests from anon, authenticated;
-grant update (name, description, use_case, priority) on public.feature_requests to authenticated;
+grant update (name, description, use_case) on public.feature_requests to authenticated;
 
 -- Storage bucket for review media (private — media is served via signed URLs
 -- from /api/review-media/url after checking review ownership/status)

@@ -1,20 +1,11 @@
 "use client";
 
 import { TrendingUp, Zap, Radio } from "lucide-react";
-import {
-  LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid,
-} from "recharts";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { SourceTag } from "@/components/stat";
+import { MiniLineChart, MiniBarChart } from "@/components/mini-charts";
 import { data } from "@/lib/data";
-
-const tooltipStyle = {
-  background: "#0f0f17",
-  border: "1px solid #23232f",
-  borderRadius: 8,
-  fontSize: 12,
-};
 
 const fieldTone: Record<string, string> = {
   high: "border-emerald/30 bg-emerald/10 text-emerald",
@@ -24,7 +15,7 @@ const fieldTone: Record<string, string> = {
 export default function TrendsPage() {
   const exportsData = data.industry.itExports.map((d) => ({ year: d.year, value: d.value }));
   const unemploymentData = data.jobs.youthUnemployment;
-  const incomeData = data.jobs.avgIncome.map((d) => ({ year: d.year, value: d.value / 1000 }));
+  const incomeData = data.jobs.avgIncome.map((d) => ({ year: d.year, value: Math.round(d.value / 1000) }));
 
   return (
     <div data-tour="trends" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -62,15 +53,7 @@ export default function TrendsPage() {
               <TrendingUp className="h-5 w-5 text-emerald" /> IT exports (US$B)
             </h2>
           </div>
-          <ResponsiveContainer width="100%" height={220}>
-            <LineChart data={exportsData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.06)" />
-              <XAxis dataKey="year" stroke="var(--color-faint)" fontSize={11} />
-              <YAxis stroke="var(--color-faint)" fontSize={11} unit="B" />
-              <Tooltip contentStyle={tooltipStyle} labelStyle={{ color: "#ececf1" }} />
-              <Line type="monotone" dataKey="value" stroke="var(--color-emerald)" strokeWidth={2.5} dot={{ r: 4 }} />
-            </LineChart>
-          </ResponsiveContainer>
+          <MiniLineChart points={exportsData} color="var(--color-emerald)" />
           <div className="mt-3"><SourceTag stat={{ value: data.industry.itExports.at(-1)?.value.toString() ?? "", year: data.industry.itExports.at(-1)?.year ?? "", source: data.industry.source, source_url: data.industry.source_url }} /></div>
         </Card>
 
@@ -80,15 +63,7 @@ export default function TrendsPage() {
               <Zap className="h-5 w-5 text-danger" /> Youth unemployment (%)
             </h2>
           </div>
-          <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={unemploymentData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.06)" />
-              <XAxis dataKey="year" stroke="var(--color-faint)" fontSize={11} />
-              <YAxis stroke="var(--color-faint)" fontSize={11} unit="%" />
-              <Tooltip contentStyle={tooltipStyle} labelStyle={{ color: "#ececf1" }} />
-              <Bar dataKey="value" fill="var(--color-danger)" radius={[6, 6, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          <MiniBarChart points={unemploymentData} color="var(--color-danger)" />
           <div className="mt-3"><SourceTag stat={{ value: "LFS 2024-25", year: "2025", source: data.jobs.source, source_url: data.jobs.source_url }} /></div>
         </Card>
       </div>
@@ -116,17 +91,7 @@ export default function TrendsPage() {
       <Card className="mt-8 p-6">
         <h2 className="text-lg font-bold text-ink sm:text-xl">Average monthly income</h2>
         <p className="mt-1 text-sm text-muted">Why field choice is a financial decision.</p>
-        <div className="mt-4 h-[200px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={incomeData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
-              <CartesianGrid stroke="rgba(255,255,255,0.06)" />
-              <XAxis dataKey="year" stroke="var(--color-faint)" fontSize={11} />
-              <YAxis stroke="var(--color-faint)" fontSize={11} unit="k" />
-              <Tooltip contentStyle={tooltipStyle} labelStyle={{ color: "#ececf1" }} />
-              <Line type="monotone" dataKey="value" stroke="var(--color-saffron)" strokeWidth={2.5} dot={{ r: 4 }} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <MiniLineChart points={incomeData} color="var(--color-saffron)" />
         <div className="mt-2"><SourceTag stat={{ value: "Rs 39,042 avg", year: "2024-25", source: data.jobs.source, source_url: data.jobs.source_url }} /></div>
       </Card>
     </div>

@@ -101,8 +101,6 @@ describe("submitReview", () => {
     surprised: "",
     mindset: "",
     recommendTo: ["students"],
-    sentimentTag: "highly-positive",
-    sentimentScore: 92,
   };
 
   it("rejects when signed out", async () => {
@@ -125,8 +123,6 @@ describe("submitReview", () => {
       surprised: "",
       mindset: "",
       recommend_to: ["students"],
-      sentiment_tag: "highly-positive",
-      sentiment_score: 92,
     });
   });
 
