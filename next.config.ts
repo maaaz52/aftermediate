@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
               "connect-src 'self' https://*.supabase.co https://*.google.com https://accounts.google.com https://*.sentry.io wss:",
-              "frame-src https://accounts.google.com",
+              "frame-src 'self' https://accounts.google.com https://www.youtube.com https://www.youtube-nocookie.com",
               "worker-src 'self' blob:",
               "base-uri 'self'",
               "form-action 'self'",
