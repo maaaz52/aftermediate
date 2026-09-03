@@ -74,20 +74,28 @@ export function HowItWorksSection() {
     const cards = section.querySelectorAll<HTMLElement>(".step-card");
     cards.forEach((card) => card.classList.add("step-card-enter"));
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        }
-      },
-      { rootMargin: "0px 0px -15% 0px" }
+    // Wait two frames after collapsing so the browser paints the hidden state
+    // before observing. Otherwise a card already in view gets both classes in
+    // one paint and the expand transition never animates.
+    let observer: IntersectionObserver | null = null;
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer?.unobserve(entry.target);
+              }
+            }
+          },
+          { rootMargin: "0px 0px -15% 0px" }
+        );
+        cards.forEach((card) => observer?.observe(card));
+      })
     );
-    cards.forEach((card) => observer.observe(card));
 
-    return () => observer.disconnect();
+    return () => observer?.disconnect();
   }, []);
 
   return (
