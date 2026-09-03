@@ -80,7 +80,7 @@ function ReadyCard({
   }, [open]);
 
   return (
-    <div className="card-glass rounded-2xl p-5">
+    <div className="card-glass flex flex-col rounded-2xl p-5">
       <h3 className="font-semibold text-ink">{test.short}</h3>
       <p className="mt-0.5 text-xs text-faint">{test.conductingBody}</p>
 
@@ -111,7 +111,7 @@ function ReadyCard({
         </p>
       )}
 
-      <div className="mt-4">
+      <div className="mt-auto pt-4">
         {hasPicker ? (
           <div ref={pickerRef} className="relative inline-block">
             <Button type="button" variant="default" size="sm" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
@@ -146,7 +146,7 @@ function ReadyCard({
 
 function PreparationCard({ test }: { test: EntryTest }) {
   return (
-    <div className="card-glass rounded-2xl bg-surface-2 p-5 opacity-60">
+    <div className="card-glass flex flex-col rounded-2xl bg-surface-2 p-5 opacity-60">
       <h3 className="font-semibold text-ink">{test.short}</h3>
       <p className="mt-0.5 text-xs text-faint">{test.conductingBody}</p>
 
@@ -158,7 +158,7 @@ function PreparationCard({ test }: { test: EntryTest }) {
         Pattern listed in Entry Tests &middot; questions being authored
       </p>
 
-      <div className="mt-4">
+      <div className="mt-auto pt-4">
         <span className="inline-flex cursor-default items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-line bg-transparent px-3 py-2 text-sm font-semibold text-ink opacity-50">
           Start test
         </span>
@@ -189,14 +189,6 @@ export function PracticeCatalog({
   );
 
   const ready = items.filter((i) => i.status === "ready");
-  const inPrep = items.filter((i) => i.status === "preparation");
-  const totalQs = ready.reduce(
-    (sum, i) =>
-      sum +
-      (i.bank?.questions.length ?? 0) +
-      i.variants.reduce((s, v) => s + v.questionCount, 0),
-    0,
-  );
 
   const filtered = React.useMemo(() => {
     if (testsProp) {
@@ -213,25 +205,6 @@ export function PracticeCatalog({
 
   return (
     <div>
-      {/* Stat chips */}
-      <div
-        className="animate-reveal mb-6 flex flex-wrap gap-3"
-        style={{ animationDelay: "0ms" }}
-      >
-        <div className="rounded-lg border border-line bg-surface-2 px-3 py-1.5">
-          <span className="text-sm font-semibold text-ink">{ready.length}</span>
-          <span className="ml-1.5 text-xs text-muted">tests ready</span>
-        </div>
-        <div className="rounded-lg border border-line bg-surface-2 px-3 py-1.5">
-          <span className="text-sm font-semibold text-ink">{totalQs}</span>
-          <span className="ml-1.5 text-xs text-muted">questions</span>
-        </div>
-        <div className="rounded-lg border border-line bg-surface-2 px-3 py-1.5">
-          <span className="text-sm font-semibold text-ink">{inPrep.length}</span>
-          <span className="ml-1.5 text-xs text-muted">in preparation</span>
-        </div>
-      </div>
-
       {/* Stream filter chips (Pakistan) */}
       {!testsProp && (
         <div

@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Wallet, Plane, Award, ExternalLink } from "lucide-react";
+import { Wallet, Plane, Award, ExternalLink, Calculator } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { SourceTag } from "@/components/stat";
+import { FinancialPlanner } from "@/components/abroad/financial-planner";
 import { data } from "@/lib/data";
 import { useStudent } from "@/lib/store";
 
@@ -31,13 +32,14 @@ export default function MoneyPage() {
     <div data-tour="money" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="emerald">Money</Badge>
-        <span className="font-mono text-xs text-faint">budget · abroad · scholarships</span>
+        <span className="font-mono text-xs text-faint">budget · costs · scholarships</span>
       </div>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Money is a merit factor too.</h1>
       <p className="mt-2 max-w-xl text-muted">
-        The part nobody talks about: what you can actually afford, and how to afford more.
+        The part nobody talks about: what you can actually afford, what it actually costs, and how to afford more.
       </p>
 
+      {/* Budget Agent + Stats */}
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         <Card className="p-6">
           <div className="flex items-center gap-2">
@@ -83,6 +85,21 @@ export default function MoneyPage() {
         </div>
       </div>
 
+      {/* Cost Calculator */}
+      <section className="mt-12">
+        <div className="flex items-center gap-2">
+          <Calculator className="h-5 w-5 text-saffron" />
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">What studying abroad actually costs</h2>
+        </div>
+        <p className="mt-2 max-w-xl text-muted">
+          Pick a country, degree level, and lifestyle — see the first-year breakdown, 4-year projection, monthly budget, and savings timeline.
+        </p>
+        <div className="mt-6">
+          <FinancialPlanner />
+        </div>
+      </section>
+
+      {/* Study abroad destinations */}
       <section className="mt-12">
         <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">Study abroad, by the numbers</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -104,6 +121,7 @@ export default function MoneyPage() {
         </div>
       </section>
 
+      {/* Scholarships */}
       <section className="mt-12">
         <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">Scholarships worth your time</h2>
         <div className="grid gap-4 sm:grid-cols-2">

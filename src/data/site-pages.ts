@@ -74,6 +74,11 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Market charts: IT exports, company counts, youth unemployment and average income.",
   },
   {
+    href: "/pakistan/assistant",
+    label: "Manzil A.I",
+    purpose: "Manzil, the study-in-Pakistan bot, answering on institutes, admissions, merit and scholarships.",
+  },
+  {
     href: "/abroad/countries",
     label: "Countries",
     purpose: "Study destinations compared on tuition, living cost, visa rules and the full pathway.",
@@ -99,19 +104,19 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Eight US Ivies: acceptance rates, testing policy, financial aid and the Pakistani route in.",
   },
   {
-    href: "/abroad/planner",
-    label: "Planner",
-    purpose: "First-year and four-year cost of one destination, and how long saving at your budget takes.",
-  },
-  {
     href: "/money",
     label: "Money",
-    purpose: "Affordability tiers built from the monthly budget on the profile, plus destination cost cards.",
+    purpose: "Affordability tiers, a cost calculator for studying abroad, destination stats, and scholarship listings.",
   },
   {
     href: "/convince",
     label: "Convince",
     purpose: "A printable bilingual report for parents, a Career Credit Score and an AI essay/CV desk.",
+  },
+  {
+    href: "/abroad/assistant",
+    label: "Safar A.I",
+    purpose: "Safar, the study-abroad bot, answering from cited fees, deadlines, documents and visa rules.",
   },
   {
     href: "/skills/courses",
@@ -124,11 +129,6 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Hand-picked books by skill area, with free copies, read-time estimates and a queue.",
   },
   {
-    href: "/skills/chat",
-    label: "Hunar A.I",
-    purpose: "Hunar, the freelancing bot: skills, pricing, clients and getting paid from Pakistan.",
-  },
-  {
     href: "/skills/clients",
     label: "Clients",
     purpose: "How to find, price and keep clients, with scripts, templates and a quote builder.",
@@ -139,14 +139,19 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Upwork, Fiverr, Toptal and others compared on fees, competition and payouts.",
   },
   {
-    href: "/builder",
-    label: "CV Builder",
-    purpose: "Turns rough notes into recruiter-ready bullets, scores ATS as you type and exports a PDF.",
+    href: "/skills/chat",
+    label: "Hunar A.I",
+    purpose: "Hunar, the freelancing bot: skills, pricing, clients and getting paid from Pakistan.",
   },
   {
     href: "/college-essays",
     label: "College Essays",
     purpose: "Essay guides, a step-by-step drafting workspace, and Qalam, the essay-rating bot.",
+  },
+  {
+    href: "/builder",
+    label: "CV Builder",
+    purpose: "Turns rough notes into recruiter-ready bullets, scores ATS as you type and exports a PDF.",
   },
   {
     href: "/reality-check",
@@ -159,6 +164,11 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Upcoming and recorded university, scholarship and career sessions, each linking out.",
   },
   {
+    href: "/study",
+    label: "Ustaad A.I",
+    purpose: "Ustaad, the study tutor for FSc, MDCAT, ECAT and NET concepts and revision plans.",
+  },
+  {
     href: "/mentors",
     label: "Mentor Match",
     purpose: "Mentor cards searchable by field. The profiles shown are illustrative samples, not real people.",
@@ -167,20 +177,5 @@ export const SITE_PAGES: SitePage[] = [
     href: "/feedback",
     label: "Your Voice",
     purpose: "Share feedback, story or wishlist for the roadmap; vote and see what students want.",
-  },
-  {
-    href: "/pakistan/assistant",
-    label: "Manzil A.I",
-    purpose: "Manzil, the study-in-Pakistan bot, answering on institutes, admissions, merit and scholarships.",
-  },
-  {
-    href: "/abroad/assistant",
-    label: "Safar A.I",
-    purpose: "Safar, the study-abroad bot, answering from cited fees, deadlines, documents and visa rules.",
-  },
-  {
-    href: "/study",
-    label: "Ustaad A.I",
-    purpose: "Ustaad, the study tutor for FSc, MDCAT, ECAT and NET concepts and revision plans.",
   },
 ];

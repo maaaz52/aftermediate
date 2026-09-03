@@ -41,7 +41,7 @@ describe("tour data integrity", () => {
     expect(new Set(targets).size).toBe(targets.length);
   });
 
-  it("has 24 steps across all chapters", () => {
-    expect(chapters.reduce((n, c) => n + c.steps.length, 0)).toBe(24);
+  it("has 23 steps across all chapters", () => {
+    expect(chapters.reduce((n, c) => n + c.steps.length, 0)).toBe(23);
   });
 });

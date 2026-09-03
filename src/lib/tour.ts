@@ -123,16 +123,10 @@ export const chapters: TourChapter[] = [
         body: "The funding Pakistani students actually win — with deadlines and eligibility in plain words.",
       },
       {
-        target: '[data-tour="planner"]',
-        route: "/abroad/planner",
-        title: "The real cost, planned",
-        body: "Budget tuition, rent and flights for any destination so money never kills a plan late.",
-      },
-      {
         target: '[data-tour="money"]',
         route: "/money",
         title: "Money is a merit factor",
-        body: "Guides for education loans, part-time rules and funding strategies for Pakistani families.",
+        body: "Budget, cost calculator, scholarships — everything you need to plan the money side.",
       },
       {
         target: '[data-tour="convince"]',
