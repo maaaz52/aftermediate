@@ -104,12 +104,12 @@ export default function Home() {
         <section id="reality" className="border-y-2 border-ink bg-surface-2">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-20">
             <h2 className="max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl uppercase">
-              The reality nobody tells you:
-              <span className="text-danger"> the plan decides, not the marks.</span>
+              The reality nobody tells you
             </h2>
-            <p className="mt-3 max-w-lg text-muted">
-              One hard truth for every stream — medical, IT, and the job market. Tap a card to flip it.
-            </p>
+            <div className="mt-4 flex items-center gap-2 text-sm text-muted">
+              <span className="inline-block h-5 w-5 rounded-full border-2 border-ink bg-accent text-center text-[11px] font-bold leading-5 text-white">1</span>
+              Tap any card to reveal the truth
+            </div>
             <RealityFan
               cards={[
                 { item: mdcat, value: mdcat.stat.value, label: "Medical · candidates vs seats" },
