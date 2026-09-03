@@ -20,6 +20,7 @@ export function streamChat(
     model,
     system: buildSystemPrompt(context),
     messages,
+    abortSignal: AbortSignal.timeout(60_000),
   });
 }
 

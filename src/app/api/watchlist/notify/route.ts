@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { requireUser } from "@/lib/require-user";
 import { getServerEnv } from "@/lib/server-env";
 import { jsonError } from "@/lib/api-response";
+import { escapeHtml } from "@/lib/escape-html";
 import type { WatchlistEntry } from "@/lib/watchlist";
 
 export const runtime = "nodejs";
@@ -67,9 +68,9 @@ export async function POST(req: Request) {
         html: `
           <p>Your watchlist program has a new merit list:</p>
           <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;">
-            <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${universityName} — ${programName}</td></tr>
-            ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${previousMerit}%</td></tr>` : ""}
-            <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${currentMerit}%</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${escapeHtml(universityName)} — ${escapeHtml(programName)}</td></tr>
+            ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${escapeHtml(previousMerit)}%</td></tr>` : ""}
+            <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${escapeHtml(currentMerit)}%</td></tr>
           </table>
           <p><a href="https://aftermediate.site/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
         `,

@@ -62,12 +62,21 @@ interface Store {
 
 const Ctx = React.createContext<Store | null>(null);
 
+/** Guard against a corrupt or oversized local profile blob. */
+const PROFILE_MAX_CHARS = 1_000_000;
+
+function isUsableProfile(raw: unknown): raw is Partial<StudentProfile> {
+  return !!raw && typeof raw === "object" && !Array.isArray(raw);
+}
+
 export function StudentProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfile] = React.useState<StudentProfile>(() => {
     if (typeof window === "undefined") return defaultProfile;
     try {
       const raw = window.localStorage.getItem("aftermediate:profile");
-      return raw ? { ...defaultProfile, ...JSON.parse(raw) } : defaultProfile;
+      if (!raw || raw.length > PROFILE_MAX_CHARS) return defaultProfile;
+      const parsed: unknown = JSON.parse(raw);
+      return isUsableProfile(parsed) ? { ...defaultProfile, ...parsed } : defaultProfile;
     } catch {
       return defaultProfile;
     }
@@ -76,7 +85,7 @@ export function StudentProvider({ children }: { children: React.ReactNode }) {
   const update = React.useCallback((patch: Partial<StudentProfile>) => {
     setProfile((prev) => {
       const next = { ...prev, ...patch };
-      if (typeof window !== "undefined") {
+      if (typeof window !== "undefined" && JSON.stringify(next).length <= PROFILE_MAX_CHARS) {
         window.localStorage.setItem("aftermediate:profile", JSON.stringify(next));
       }
       return next;
@@ -95,7 +104,7 @@ export function StudentProvider({ children }: { children: React.ReactNode }) {
   const hydrate = React.useCallback((remote: Partial<StudentProfile>) => {
     setProfile((prev) => {
       const next = { ...prev, ...remote };
-      if (typeof window !== "undefined") {
+      if (typeof window !== "undefined" && JSON.stringify(next).length <= PROFILE_MAX_CHARS) {
         window.localStorage.setItem("aftermediate:profile", JSON.stringify(next));
       }
       return next;

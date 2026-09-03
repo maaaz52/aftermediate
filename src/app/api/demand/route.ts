@@ -3,6 +3,7 @@ import type { Stream } from "@/lib/types";
 import { createClient } from "@/lib/supabase/server";
 import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -18,11 +19,19 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_INTERESTS = 20;
 const MAX_COUNTRIES = 20;
 
+/** Allow 15 demand lookups per user per minute. */
+const RATE_MAX = 15;
+const RATE_WINDOW_MS = 60 * 1000;
+
 export async function POST(req: Request) {
   try {
     const supabase = await createClient();
     const user = await requireUser(supabase);
     if (!user) return jsonError("Sign in to see demand insights", 401);
+
+    if (!checkRateLimit(`demand:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+      return jsonError("Too many requests. Try again in a moment.", 429);
+    }
 
     const declared = Number(req.headers.get("content-length"));
     if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)

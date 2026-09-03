@@ -3,9 +3,14 @@ import { MAX_BODY_BYTES, parseChatRequest } from "@/lib/chat-request";
 import { retrieveForMessages } from "@/lib/knowledge";
 import { buildStudentContext, type ProfileRow } from "@/lib/student-context";
 import { createClient } from "@/lib/supabase/server";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
+
+/** Allow 30 chat turns per user per minute — comfortable for a conversation. */
+const RATE_MAX = 30;
+const RATE_WINDOW_MS = 60 * 1000;
 
 /**
  * Everything the bots are allowed to know about a student. Deliberately not
@@ -51,6 +56,10 @@ export async function POST(req: Request) {
       data: { user },
     } = await supabase.auth.getUser();
     if (!user) return jsonError("Sign in to chat", 401);
+
+    if (!checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+      return jsonError("Too many messages. Try again in a moment.", 429);
+    }
 
     // The declared length is the cheap refusal: a body this big is never read.
     const declared = Number(req.headers.get("content-length"));

@@ -3,6 +3,7 @@ import { model } from "@/lib/ai";
 import { createClient } from "@/lib/supabase/server";
 import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -11,6 +12,10 @@ export const maxDuration = 60;
 const MAX_BODY_BYTES = 6 * 1024 * 1024;
 /** A marksheet image data-URL should stay far below this. */
 const MAX_IMAGE_CHARS = 5 * 1024 * 1024;
+
+/** Allow 10 scans per user per minute — plenty for real use, too slow for abuse. */
+const RATE_MAX = 10;
+const RATE_WINDOW_MS = 60 * 1000;
 
 const SYSTEM = `You are an expert at reading Pakistani FSc / intermediate marksheets.
 Extract the student's marks into clean JSON. Return ONLY valid JSON, no markdown.
@@ -39,6 +44,10 @@ export async function POST(req: Request) {
     const supabase = await createClient();
     const user = await requireUser(supabase);
     if (!user) return jsonError("Sign in to scan a marksheet", 401);
+
+    if (!checkRateLimit(`ocr:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+      return jsonError("Too many scans. Try again in a moment.", 429);
+    }
 
     const declared = Number(req.headers.get("content-length"));
     if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)

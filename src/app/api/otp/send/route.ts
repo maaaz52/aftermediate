@@ -22,7 +22,6 @@ export async function POST(req: Request) {
   try {
     const env = assertServerEnv();
     const OTP_SECRET = env.otpHmacSecret as string;
-    const SERVICE_ROLE_KEY = env.supabaseServiceRoleKey;
     const RESEND_API_KEY = env.resendApiKey;
 
     const body = await req.json().catch(() => null);
@@ -41,50 +40,12 @@ export async function POST(req: Request) {
     }
 
     const admin = createAdminClient();
-    const authUrl = env.supabaseUrl;
 
-    // Does a user already exist for this email? (GoTrue admin API supports ?filter=)
-    const userRes = await fetch(
-      `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
-      { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
-    );
-    if (!userRes.ok) {
-      console.error("otp send: admin users lookup", userRes.status, await userRes.text());
-      return jsonError("Could not check that email.", 500);
-    }
-    const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null; user_metadata?: Record<string, unknown> }[] };
-    // Match by exact email (filter does a substring search, so pick the exact row).
-    const matches = (userData.users || []).filter((u) => u.email.toLowerCase() === email);
-
-    let userId: string | null = null;
-    if (matches.length > 0) {
-      // Email already exists (confirmed or not). We still send an OTP: verifying it
-      // proves ownership, and the verify step sets the password the user typed, so
-      // signup doubles as an OTP-backed password reset for existing accounts.
-      userId = matches[0].id;
-      // Keep the profile name in sync when the user types a new one at signup.
-      if (name) {
-        const { error: metaError } = await admin.auth.admin.updateUserById(userId, {
-          user_metadata: { ...(matches[0].user_metadata || {}), full_name: name },
-        });
-        if (metaError) console.error("otp send: metadata name update error", metaError.message);
-        const { error: profileError } = await admin.from("profiles").update({ name }).eq("id", userId);
-        if (profileError) console.error("otp send: profile name update error", profileError.message);
-      }
-    } else {
-      // Create the user (unconfirmed) so we can confirm them after OTP check.
-      const { data: created, error: createError } = await admin.auth.admin.createUser({
-        email,
-        password,
-        email_confirm: false,
-        user_metadata: name ? { full_name: name } : undefined,
-      });
-      if (createError) {
-        console.error("otp send: createUser error", createError.message);
-        return jsonError("Could not create your account. Try again.", 500);
-      }
-      userId = created.user?.id ?? null;
-    }
+    // No user is created or touched here: for a new email AND an existing one
+    // this route does exactly the same work (issue + email a code). That keeps
+    // the endpoint timing-uniform, so an observer cannot tell whether an email
+    // is already registered. Account provisioning happens at /api/otp/verify
+    // after the code proves ownership of the inbox.
 
     // Rate limit: don't spam the same address
     const { data: recent } = await admin
@@ -105,7 +66,6 @@ export async function POST(req: Request) {
 
     const { error: insertError } = await admin.from("otp_codes").insert({
       email,
-      user_id: userId,
       code_hash: hashCode(email, code, OTP_SECRET),
       attempts: 0,
       expires_at: expiresAt,

@@ -230,9 +230,10 @@ grant update (review_text, surprised, mindset, recommend_to, tone, rating) on pu
 revoke update on public.feature_requests from anon, authenticated;
 grant update (name, description, use_case, priority) on public.feature_requests to authenticated;
 
--- Storage bucket for review media
+-- Storage bucket for review media (private — media is served via signed URLs
+-- from /api/review-media/url after checking review ownership/status)
 insert into storage.buckets (id, name, public)
-values ('review-media', 'review-media', true)
+values ('review-media', 'review-media', false)
 on conflict (id) do nothing;
 
 create policy "review_media_upload_own" on storage.objects
