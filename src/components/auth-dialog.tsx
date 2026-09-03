@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { X, Loader2, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,6 +16,7 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
   const [mode, setMode] = React.useState<"signin" | "signup">("signin");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [agreed, setAgreed] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [googleBusy, setGoogleBusy] = React.useState(false);
   const [message, setMessage] = React.useState<{ type: "ok" | "err"; text: string } | null>(null);
@@ -25,6 +27,11 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
     e.preventDefault();
     setBusy(true);
     setMessage(null);
+    if (!agreed) {
+      setMessage({ type: "err", text: "Please accept the terms and privacy policy to continue." });
+      setBusy(false);
+      return;
+    }
     if (mode === "signin") {
       const r = await signInEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
@@ -44,6 +51,11 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
   async function handleGoogleCredential(idToken: string) {
     setGoogleBusy(true);
     setMessage(null);
+    if (!agreed) {
+      setMessage({ type: "err", text: "Please accept the terms and privacy policy to continue." });
+      setGoogleBusy(false);
+      return;
+    }
     const r = await signInGoogle(idToken);
     if (r.error) {
       setMessage({ type: "err", text: r.error });
@@ -82,6 +94,24 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
           {message && (
             <p className={message.type === "err" ? "text-sm text-danger" : "text-sm text-emerald"}>{message.text}</p>
           )}
+          <label className="flex items-start gap-2.5">
+            <input
+              type="checkbox"
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[var(--color-accent)]"
+            />
+            <span className="text-xs leading-relaxed text-muted">
+              I agree to the{" "}
+              <Link href="/terms" className="font-medium text-ink underline underline-offset-2 hover:text-accent">
+                Terms &amp; Conditions
+              </Link>{" "}
+              and{" "}
+              <Link href="/privacy" className="font-medium text-ink underline underline-offset-2 hover:text-accent">
+                Privacy Policy
+              </Link>.
+            </span>
+          </label>
           <Button type="submit" className="w-full" disabled={busy}>
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <LogIn className="h-4 w-4" />}
             {mode === "signin" ? "Sign in" : "Sign up"}
