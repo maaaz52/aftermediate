@@ -106,10 +106,9 @@ export default function Home() {
             <h2 className="max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-4xl uppercase">
               The reality nobody tells you
             </h2>
-            <div className="mt-4 flex items-center gap-2 text-sm text-muted">
-              <span className="inline-block h-5 w-5 rounded-full border-2 border-ink bg-accent text-center text-[11px] font-bold leading-5 text-white">1</span>
-              Tap any card to reveal the truth
-            </div>
+            <p className="mt-4 flex items-center gap-2 text-lg font-bold text-ink">
+              👇 Tap any card to reveal the truth
+            </p>
             <RealityFan
               cards={[
                 { item: mdcat, value: mdcat.stat.value, label: "Medical · candidates vs seats" },

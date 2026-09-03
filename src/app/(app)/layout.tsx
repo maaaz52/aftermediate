@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/sidebar";
 import { TopNav } from "@/components/top-nav";
 import { RahbarDrawer } from "@/components/rahbar-drawer";
@@ -9,8 +10,27 @@ import { TourHub } from "@/components/tour/tour-hub";
 import { TourPrompt } from "@/components/tour/tour-prompt";
 import { useAuth } from "@/lib/auth";
 
+const PUBLIC_PATHS = new Set(["/", "/login", "/coming-soon", "/verify-email"]);
+
 export default function AppLayout({ children }: { children: React.ReactNode }) {
-  const { loading } = useAuth();
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  // Prevent browser back from reaching public pages once inside the dashboard.
+  React.useEffect(() => {
+    if (!user) return;
+    // Replace the current history entry so the first back press doesn't leave.
+    history.replaceState(null, "", window.location.href);
+
+    const onPop = () => {
+      if (PUBLIC_PATHS.has(window.location.pathname)) {
+        history.pushState(null, "", "/dashboard");
+        router.replace("/dashboard");
+      }
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [user, router]);
 
   if (loading) {
     return (

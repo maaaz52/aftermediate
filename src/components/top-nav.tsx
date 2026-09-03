@@ -15,6 +15,7 @@ export function TopNav() {
   const { user, signOut } = useAuth();
   const [authOpen, setAuthOpen] = React.useState(false);
   const pathname = usePathname();
+  const logoHref = user ? "/dashboard" : "/";
 
   return (
     <>
@@ -23,7 +24,7 @@ export function TopNav() {
         data-tour="top-nav"
       >
         <div className="flex h-full items-center justify-between gap-4 px-6">
-          <Link href="/">
+          <Link href={logoHref}>
             <Brand />
           </Link>
           <div className="flex items-center gap-3">
