@@ -157,7 +157,7 @@ export default function LoginPage() {
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-1 items-center justify-center px-4 pb-24 sm:px-6">
-        <div className="relative w-full max-w-md">
+        <div className="relative w-full max-w-sm">
           <div className="absolute -top-9 -left-4 z-10 hidden animate-float sm:block">
             <div className="border-2 border-ink bg-emerald p-2 shadow-[3px_3px_0_0_var(--color-ink)]">
               <Illustration name="grad" scale={2} />
@@ -169,13 +169,13 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <PixelCard className="relative p-7 sm:p-9" shadow="ink">
+          <PixelCard className="relative p-6 sm:p-7" shadow="ink">
             <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface-2 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
               <span className="h-2 w-2 animate-pulse bg-accent" />
               {mode === "signin" ? "// welcome back" : "// start free"}
             </span>
 
-            <h1 className="mt-6 font-display text-3xl leading-[1.1] tracking-tight text-ink sm:text-4xl">
+            <h1 className="mt-5 font-display text-2xl leading-[1.1] tracking-tight text-ink sm:text-3xl">
               {mode === "signin" ? "Welcome back." : "Make your plan."}
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-muted">

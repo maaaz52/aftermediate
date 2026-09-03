@@ -3,16 +3,6 @@ import { Brand } from "@/components/brand";
 
 const cols = [
   {
-    title: "Product",
-    links: [
-      { label: "Start now", href: "/login?mode=signup" },
-      { label: "Merit engine", href: "/login?mode=signup" },
-      { label: "Career fields", href: "/login?mode=signup" },
-      { label: "Money & abroad", href: "/login?mode=signup" },
-      { label: "Parent report", href: "/login?mode=signup" },
-    ],
-  },
-  {
     title: "Resources",
     links: [
       { label: "Reality check", href: "/#reality" },
@@ -23,13 +13,15 @@ const cols = [
     ],
   },
   {
-    title: "Data sources",
+    title: "Legal",
     links: [
-      { label: "PMDC", href: "https://pmdc.pk/" },
-      { label: "HEC", href: "https://www.hec.gov.pk/" },
-      { label: "PBS", href: "https://www.pbs.gov.pk/" },
-      { label: "P@SHA", href: "https://pasha.org.pk/" },
-      { label: "SBP", href: "https://www.sbp.org.pk/" },
+      { label: "Terms & Conditions", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Data Deletion", href: "/data-deletion" },
+      { label: "Disclaimer", href: "/disclaimer" },
+      { label: "Cookie Policy", href: "/cookies" },
+      { label: "Refund Policy", href: "/refund-policy" },
+      { label: "Community Policy", href: "/community-policy" },
     ],
   },
 ];
@@ -37,7 +29,7 @@ const cols = [
 export function SiteFooter() {
   return (
     <footer className="border-t-2 border-ink bg-surface-2">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4 sm:px-6">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3 sm:px-6">
         <div className="space-y-4">
           <Brand />
           <p className="max-w-xs text-sm leading-relaxed text-muted">
@@ -71,7 +63,6 @@ export function SiteFooter() {
       <div className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-faint sm:flex-row sm:px-6">
           <span>© {new Date().getFullYear()} aftermediate. Every number on this site is sourced.</span>
-          <span className="font-mono">PMDC · HEC · PBS · P@SHA · SBP</span>
         </div>
       </div>
     </footer>

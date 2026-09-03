@@ -31,8 +31,22 @@ export async function proxy(request: NextRequest) {
 
   const pathname = request.nextUrl.pathname;
 
-  const isPublicPage =
-    pathname === "/" || pathname === "/login" || pathname === "/coming-soon" || pathname === "/verify-email";
+  const publicPages = [
+    "/",
+    "/login",
+    "/coming-soon",
+    "/verify-email",
+    "/forgot-password",
+    "/reset-password",
+    "/terms",
+    "/privacy",
+    "/data-deletion",
+    "/disclaimer",
+    "/cookies",
+    "/refund-policy",
+    "/community-policy",
+  ];
+  const isPublicPage = publicPages.includes(pathname);
   const isApiRoute = pathname.startsWith("/api/");
   // OTP signup/verify must work for unauthenticated users (no session yet at signup time)
   const isPublicApiRoute = pathname.startsWith("/api/otp/");
