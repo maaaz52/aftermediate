@@ -19,7 +19,7 @@ interface AuthCtx {
     password: string,
     data?: SignUpData
   ) => Promise<{ error?: string; needsConfirm?: boolean; email?: string }>;
-  signInGoogle: () => Promise<void>;
+  signInGoogle: (idToken: string) => Promise<{ error?: string }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error?: string }>;
 }
@@ -57,15 +57,29 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return { needsConfirm: true, email };
   };
 
-  const signInGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
+  const signInGoogle = async (idToken: string) => {
+    // Direct Google sign-in: Google (via GIS) already verified the ID token, so
+    // Supabase only issues a session from it — no Supabase OAuth redirect page.
+    const { error } = await supabase.auth.signInWithIdToken({
       provider: "google",
-      options: { redirectTo: window.location.origin + "/onboard" },
+      token: idToken,
     });
+    return error ? { error: error.message } : {};
   };
 
   const signOut = async () => {
     await supabase.auth.signOut();
+    // Never leave the previous student's local profile behind for the next
+    // person on this device.
+    try {
+      window.localStorage.removeItem("aftermediate:profile");
+      window.localStorage.removeItem("aftermediate:profile:updatedAt");
+    } catch {
+      /* ignore */
+    }
+    // Force a full navigation to the public landing page so the session is
+    // cleared and no protected UI or client state lingers. Works from any route.
+    window.location.assign("/");
   };
 
   const resetPassword = async (email: string) => {

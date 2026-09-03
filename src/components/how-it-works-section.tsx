@@ -1,10 +1,6 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 function StepIllustration({ icon }: { icon: string }) {
   if (icon === "chart") {
@@ -38,10 +34,11 @@ function StepIllustration({ icon }: { icon: string }) {
   );
 }
 
-function StepCard({ s }: { s: { num: string; title: string; desc: string; color: string; icon: string } }) {
+function StepCard({ s, index }: { s: { num: string; title: string; desc: string; color: string; icon: string }; index: number }) {
   return (
     <div
       className={`step-card overflow-hidden border-2 border-ink ${s.color} shadow-[4px_4px_0_0_var(--color-ink)]`}
+      style={{ transitionDelay: `${index * 0.15}s` }}
     >
       <div className="p-6">
         <span className="font-mono text-xs text-ink/60">[{s.num}]</span>
@@ -74,47 +71,23 @@ export function HowItWorksSection() {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
-    const ctx = gsap.context(() => {
-      const cardEls = gsap.utils.toArray<HTMLElement>(".step-card", section);
+    const cards = section.querySelectorAll<HTMLElement>(".step-card");
+    cards.forEach((card) => card.classList.add("step-card-enter"));
 
-      cardEls.forEach((card, i) => {
-        const content = card.querySelector(".step-content") as HTMLElement;
-        const illustration = card.querySelector(".step-illustration") as HTMLElement;
-        if (!content || !illustration) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        }
+      },
+      { rootMargin: "0px 0px -15% 0px" }
+    );
+    cards.forEach((card) => observer.observe(card));
 
-        gsap.set(content, { height: 0, opacity: 0, y: 20 });
-        gsap.set(illustration, { opacity: 0, scale: 0.9 });
-
-        ScrollTrigger.create({
-          trigger: card,
-          start: "top 85%",
-          end: "top 30%",
-          onEnter: () => {
-            gsap.to(content, {
-              height: "auto",
-              opacity: 1,
-              y: 0,
-              duration: 0.7,
-              delay: 0.3 + i * 0.15,
-              ease: "power3.out",
-            });
-            gsap.to(illustration, {
-              opacity: 1,
-              scale: 1,
-              duration: 0.6,
-              delay: 0.5 + i * 0.15,
-              ease: "back.out(1.4)",
-            });
-          },
-          onLeaveBack: () => {
-            gsap.set(illustration, { opacity: 0, scale: 0.9 });
-            gsap.set(content, { height: 0, opacity: 0, y: 20 });
-          },
-        });
-      });
-    }, section);
-
-    return () => ctx.revert();
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -133,13 +106,13 @@ export function HowItWorksSection() {
           </div>
 
           {/* Row 1 right: card 01 */}
-          <StepCard s={card01} />
+          <StepCard s={card01} index={0} />
 
           {/* Row 2 left: card 03 — parallel to card 02 */}
-          <StepCard s={card03} />
+          <StepCard s={card03} index={1} />
 
           {/* Row 2 right: card 02 */}
-          <StepCard s={card02} />
+          <StepCard s={card02} index={2} />
         </div>
       </div>
     </section>

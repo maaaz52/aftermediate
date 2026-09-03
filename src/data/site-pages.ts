@@ -149,9 +149,9 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Essay guides, a step-by-step drafting workspace, and Qalam, the essay-rating bot.",
   },
   {
-    href: "/#reality",
+    href: "/reality-check",
     label: "Reality Check",
-    purpose: "The hard numbers the site is built on, on the landing page.",
+    purpose: "The hard numbers the site is built on — coming soon as its own page.",
   },
   {
     href: "/webinars",

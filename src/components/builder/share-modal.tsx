@@ -3,6 +3,7 @@
 import { Check, Copy, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { ResumeData, TemplateId } from "@/lib/resume-model";
+import { escapeHtml } from "@/lib/escape-html";
 
 export interface ShareModalProps {
   open: boolean;
@@ -18,16 +19,6 @@ export function slugify(name: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
-}
-
-/** Escape user text before it is embedded in the standalone HTML document. */
-function escapeHtml(text: string): string {
-  return text
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
 }
 
 /** All templates print ink-friendly: white background + dark text. */

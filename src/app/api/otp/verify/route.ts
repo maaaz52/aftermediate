@@ -67,36 +67,46 @@ export async function POST(req: Request) {
       return jsonError("That code isn't right. Try again.", 400);
     }
 
-    // Code is correct — confirm the user's email. Prefer the exact user_id captured
-    // at send time; fall back to a live lookup only if it wasn't stored.
-    let userId: string | undefined = record.user_id ?? undefined;
-    if (!userId) {
-      const authUrl = env.supabaseUrl;
-      const userRes = await fetch(
-        `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
-        { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
-      );
-      if (!userRes.ok) {
-        console.error("otp verify: admin users lookup", userRes.status, await userRes.text());
-        return jsonError("Account not found. Sign up again.", 400);
-      }
-      const userData = (await userRes.json()) as { users?: { id: string; email: string }[] };
-      const match = (userData.users || []).find((u) => u.email.toLowerCase() === email);
-      userId = match?.id;
-    }
-    if (!userId) {
-      return jsonError("Account not found. Sign up again.", 400);
-    }
-
-    // Confirm the email; for an existing account this also lets signup set the
-    // password the user just typed (OTP proves they own the inbox).
-    const updates: Record<string, unknown> = { email_confirm: true };
-    if (password && password.length >= 6) updates.password = password;
-
-    const { data: confirmedUser, error: confirmError } = await admin.auth.admin.updateUserById(userId, updates);
-    if (confirmError || !confirmedUser.user?.email_confirmed_at) {
-      console.error("otp verify: confirm error", confirmError?.message ?? "email not confirmed after update");
+    // Code is correct — provision the account. The send route deliberately does
+    // NOT create users (so it cannot leak whether an email exists), so we find
+    // the user here and create them if needed. Confirming the email and setting
+    // the password the user typed is gated on this verified code.
+    const authUrl = env.supabaseUrl;
+    const userRes = await fetch(
+      `${authUrl}/auth/v1/admin/users?filter=${encodeURIComponent(email)}`,
+      { headers: { Authorization: `Bearer ${SERVICE_ROLE_KEY}`, apikey: SERVICE_ROLE_KEY } }
+    );
+    if (!userRes.ok) {
+      console.error("otp verify: admin users lookup", userRes.status, await userRes.text());
       return jsonError("Could not verify your account. Try again.", 500);
+    }
+    const userData = (await userRes.json()) as { users?: { id: string; email: string; email_confirmed_at: string | null }[] };
+    const match = (userData.users || []).find((u) => u.email.toLowerCase() === email);
+
+    let userId: string;
+    if (match) {
+      // Existing account: confirm it and (re)set the password to what the user typed.
+      userId = match.id;
+      const updates: Record<string, unknown> = { email_confirm: true };
+      if (password && password.length >= 6) updates.password = password;
+
+      const { data: confirmedUser, error: confirmError } = await admin.auth.admin.updateUserById(userId, updates);
+      if (confirmError || !confirmedUser.user?.email_confirmed_at) {
+        console.error("otp verify: confirm error", confirmError?.message ?? "email not confirmed after update");
+        return jsonError("Could not verify your account. Try again.", 500);
+      }
+    } else {
+      // New account: create it already-confirmed with the typed password.
+      const { data: created, error: createError } = await admin.auth.admin.createUser({
+        email,
+        password,
+        email_confirm: true,
+      });
+      if (createError || !created?.user) {
+        console.error("otp verify: create error", createError?.message ?? "no user returned");
+        return jsonError("Could not create your account. Try again.", 500);
+      }
+      userId = created.user.id;
     }
 
     // Burn the code so it can't be reused

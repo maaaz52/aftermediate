@@ -356,3 +356,31 @@ body {
   .reality-fan-card .reality-fan-face { padding: 0.75rem; }
   .reality-fan-card .reality-fan-face p.text-2xl { font-size: 1.1rem; }
 }
+
+/* How-it-works: cards expand as they enter the viewport (was GSAP ScrollTrigger). */
+.step-card-enter .step-content {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  overflow: hidden;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.7s ease,
+    transform 0.7s ease;
+  transition-delay: inherit;
+}
+.step-card-enter .step-illustration {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: inherit;
+}
+.step-card-enter.in-view .step-content {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.step-card-enter.in-view .step-illustration {
+  opacity: 1;
+  transform: scale(1);
+}

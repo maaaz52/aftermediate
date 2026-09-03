@@ -4,8 +4,16 @@ import { findProgram } from "@/lib/watchlist";
 import universities from "@/data/universities.json";
 import type { University } from "@/lib/types";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
+
+/** Keep the parsed watchlist param bounded — it arrives in the URL, not a body. */
+const MAX_PARAM_CHARS = 200_000;
+const MAX_ENTRIES = 50;
+/** Allow 30 checks per user per minute — the dashboard polls every few seconds. */
+const RATE_MAX = 30;
+const RATE_WINDOW_MS = 60 * 1000;
 
 export async function GET(req: Request) {
   try {
@@ -13,10 +21,17 @@ export async function GET(req: Request) {
     const user = await requireUser(supabase);
     if (!user) return jsonError("Unauthorized", 401);
 
+    if (!checkRateLimit(`watchlist-check:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+      return jsonError("Too many requests. Try again in a moment.", 429);
+    }
+
     const url = new URL(req.url);
     const watchlistParam = url.searchParams.get("watchlist");
     if (!watchlistParam) {
       return jsonError("watchlist query param required", 400);
+    }
+    if (watchlistParam.length > MAX_PARAM_CHARS) {
+      return jsonError("watchlist query param is too large", 413);
     }
 
     let watchlist: unknown[];
@@ -28,6 +43,9 @@ export async function GET(req: Request) {
 
     if (!Array.isArray(watchlist)) {
       return jsonError("watchlist must be an array", 400);
+    }
+    if (watchlist.length > MAX_ENTRIES) {
+      return jsonError(`watchlist cannot exceed ${MAX_ENTRIES} entries`, 400);
     }
 
     const unis = universities as unknown as University[];
