@@ -2,11 +2,17 @@ import type { NextConfig } from "next";
 import path from "path";
 import { withSentryConfig } from "@sentry/nextjs";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
   async headers() {
+    // React/Turbopack need `unsafe-eval` in dev (callstack reconstruction), never in prod.
+    const scriptSrc = isProd
+      ? "'self' 'unsafe-inline' https://accounts.google.com"
+      : "'self' 'unsafe-inline' 'unsafe-eval' https://accounts.google.com";
     return [
       {
         source: "/:path*",
@@ -20,7 +26,7 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://accounts.google.com",
+              `script-src ${scriptSrc}`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
