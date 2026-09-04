@@ -179,8 +179,6 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
   const copiedTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  const url = `aftermediate.site/builder/view/${slugify(resume.identity.name)}`;
-
   // Move focus into the dialog on open; restore it to the trigger on close
   useEffect(() => {
     if (!open) return;
@@ -234,7 +232,7 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
   const handleCopy = async () => {
     if (!navigator.clipboard) return;
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(buildStandaloneHtml(resume, template));
       setCopied(true);
       if (copiedTimer.current) clearTimeout(copiedTimer.current);
       copiedTimer.current = setTimeout(() => setCopied(false), 2000);
@@ -257,7 +255,7 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4"
       onClick={onClose}
     >
       <div
@@ -267,35 +265,32 @@ export function ShareModal({ open, onClose, resume, template }: ShareModalProps)
         aria-labelledby="share-modal-title"
         tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-2xl border border-[#222] bg-[#111118] p-6 shadow-2xl outline-none"
+        className="w-full max-w-md rounded-2xl border border-line bg-surface p-6 shadow-2xl outline-none"
       >
-        <h2 id="share-modal-title" className="text-lg font-bold text-white">
-          Your Live Web Link
+        <h2 id="share-modal-title" className="text-lg font-bold text-ink">
+          Preview your resume
         </h2>
-        <p className="mt-1 text-xs leading-relaxed text-[#8a93a6]">
-          Share this link with recruiters — opens a clean standalone view of your resume.
+        <p className="mt-1 text-xs leading-relaxed text-muted">
+          Open a clean standalone page of your resume to review or print it. You can copy the
+          HTML to save as your own file.
         </p>
-
-        <div className="mt-4 rounded-lg border border-[#333] bg-[#0c0c12] px-3 py-2 font-mono text-sm text-[#3B82F6]">
-          {url}
-        </div>
 
         <div className="mt-4 flex flex-col gap-2 sm:flex-row">
           <button
             type="button"
-            onClick={handleCopy}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#2563eb]"
-          >
-            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-            {copied ? "Copied!" : "Copy Link"}
-          </button>
-          <button
-            type="button"
             onClick={handlePreview}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#333] bg-transparent px-4 py-2 text-sm font-medium text-[#8a93a6] transition-colors hover:border-[#555] hover:text-white"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-saffron-soft"
           >
             <ExternalLink className="h-4 w-4" />
             Open Standalone Preview
+          </button>
+          <button
+            type="button"
+            onClick={handleCopy}
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-4 py-2 text-sm font-medium text-muted transition-colors hover:text-ink"
+          >
+            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+            {copied ? "Copied!" : "Copy HTML"}
           </button>
         </div>
       </div>

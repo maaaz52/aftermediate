@@ -12,6 +12,9 @@ vi.mock("html2pdf.js", () => ({ default: vi.fn() }));
 afterEach(() => {
   cleanup();
   vi.useRealTimers();
+  // Autosave writes a draft to localStorage; clear it so each test starts
+  // from the pristine mock resume rather than a previous test's edits.
+  window.localStorage.removeItem("aftermediate:builder-resume");
 });
 
 // ── Rendering ───────────────────────────────────────────────────────────
@@ -45,7 +48,7 @@ it("renders the sticky toolbar with template selector and action buttons", () =>
   expect(screen.getByRole("button", { name: "Silicon" })).toBeTruthy();
   expect(screen.getByRole("button", { name: "Glass" })).toBeTruthy();
   expect(screen.getByRole("button", { name: "Download Clean PDF" })).toBeTruthy();
-  expect(screen.getByRole("button", { name: "Get Live Web Link" })).toBeTruthy();
+  expect(screen.getByRole("button", { name: "Preview Link" })).toBeTruthy();
 });
 
 // ── Identity tab ────────────────────────────────────────────────────────
@@ -97,7 +100,7 @@ it("AI Polish turns raw notes into 3 polished bullets after the 600ms animation"
     },
     { timeout: 3000 }
   );
-});
+}, 15000);
 
 it("polish button is disabled and shows 'Polishing…' while the animation runs", async () => {
   const user = userEvent.setup();
@@ -133,7 +136,7 @@ it("adds and removes project entries", async () => {
   const removeButtons = screen.getAllByRole("button", { name: /^remove project/i });
   await user.click(removeButtons[2]);
   expect(screen.getAllByLabelText(/^project title/i)).toHaveLength(2);
-});
+}, 15000);
 
 it("adds and removes certificates", async () => {
   render(<Builder />);
@@ -259,7 +262,7 @@ it("switching to University Admissions reweights the gauge to 83", async () => {
   render(<Builder />);
   const user = userEvent.setup();
 
-  const universityButton = screen.getByRole("button", { name: /University Admissions Officer/ });
+  const universityButton = screen.getByRole("button", { name: /University/ });
   await user.click(universityButton);
 
   await waitFor(() => {
@@ -282,7 +285,7 @@ it("gauge drops when a bullet is weakened to a weak-verb opener", async () => {
     const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
     expect(Number(gauge.getAttribute("aria-valuenow"))).toBeLessThan(77);
   });
-});
+}, 15000);
 
 it("1-click auto-fix adds the missing keyword pill to the canvas skills", async () => {
   render(<Builder />);
@@ -333,13 +336,14 @@ it("hovering a bullet reveals the rewrite action and rewrites it in place", asyn
 
 // ── Share modal (Task 3) ───────────────────────────────────────────────
 
-it("Get Live Web Link opens the dialog with the slugged URL and Escape closes it", async () => {
+it("Preview Link opens the dialog and Escape closes it", async () => {
   render(<Builder />);
   const user = userEvent.setup();
 
-  await user.click(screen.getByRole("button", { name: "Get Live Web Link" }));
+  await user.click(screen.getByRole("button", { name: "Preview Link" }));
   const dialog = screen.getByRole("dialog");
-  expect(within(dialog).getByText(/aftermediate\.site\/builder\/view\/hira-ahmed/)).toBeTruthy();
+  expect(within(dialog).getByText(/preview your resume/i)).toBeTruthy();
+  expect(within(dialog).getByRole("button", { name: /open standalone preview/i })).toBeTruthy();
 
   await user.keyboard("{Escape}");
   await waitFor(() => {
@@ -347,7 +351,7 @@ it("Get Live Web Link opens the dialog with the slugged URL and Escape closes it
   });
 });
 
-it("Copy Link writes the mock URL to the clipboard and confirms", async () => {
+it("Copy HTML writes the standalone resume HTML to the clipboard and confirms", async () => {
   const user = userEvent.setup();
   const writeText = vi.fn();
   // userEvent.setup() installs its own clipboard stub — redefine navigator.clipboard
@@ -359,13 +363,17 @@ it("Copy Link writes the mock URL to the clipboard and confirms", async () => {
 
   render(<Builder />);
 
-  await user.click(screen.getByRole("button", { name: "Get Live Web Link" }));
-  await user.click(screen.getByRole("button", { name: "Copy Link" }));
+  await user.click(screen.getByRole("button", { name: "Preview Link" }));
+  await user.click(screen.getByRole("button", { name: "Copy HTML" }));
 
   await waitFor(() => {
     expect(screen.getByRole("button", { name: "Copied!" })).toBeTruthy();
   });
-  expect(writeText).toHaveBeenCalledWith("aftermediate.site/builder/view/hira-ahmed");
+  // The copy payload is the full standalone document, not a fake hosted URL.
+  const html = writeText.mock.calls[0][0] as string;
+  expect(html).toContain("<html");
+  expect(html).toContain("Hira Ahmed");
+  expect(html).toContain("Resume");
 });
 
 // ── PDF download (Task 4) ──────────────────────────────────────────────

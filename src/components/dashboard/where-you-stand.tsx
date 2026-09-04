@@ -6,6 +6,7 @@ import { BIN_COUNT, BIN_END, BIN_START, benchmarkFor } from "@/lib/benchmark";
 import universitiesJson from "@/data/universities.json";
 import type { University } from "@/lib/types";
 import { useStudent } from "@/lib/store";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const UNIVERSITIES = universitiesJson as unknown as University[];
@@ -57,7 +58,7 @@ export function WhereYouStand() {
         <p className="mt-2 text-sm text-muted">Add your marks to see where you stand.</p>
         <Link
           href="/profile"
-          className="mt-4 inline-block rounded-xl bg-violet px-4 py-2 text-sm font-extrabold text-white shadow-[0_4px_0_#5b3fb8] transition-colors hover:brightness-110"
+          className={cn(buttonVariants({ size: "default" }), "mt-4")}
         >
           Add your marks →
         </Link>

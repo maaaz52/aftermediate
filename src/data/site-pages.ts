@@ -104,11 +104,6 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Affordability tiers, a cost calculator for studying abroad, destination stats, and scholarship listings.",
   },
   {
-    href: "/convince",
-    label: "Convince",
-    purpose: "A printable bilingual report for parents, a Career Credit Score and an AI essay/CV desk.",
-  },
-  {
     href: "/abroad/assistant",
     label: "Safar A.I",
     purpose: "Safar, the study-abroad bot, answering from cited fees, deadlines, documents and visa rules.",
@@ -137,6 +132,11 @@ export const SITE_PAGES: SitePage[] = [
     href: "/skills/chat",
     label: "Hunar A.I",
     purpose: "Hunar, the freelancing bot: skills, pricing, clients and getting paid from Pakistan.",
+  },
+  {
+    href: "/convince",
+    label: "Convince",
+    purpose: "A printable bilingual report for parents and a Career Credit Score that shows your worth.",
   },
   {
     href: "/college-essays",

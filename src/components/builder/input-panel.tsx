@@ -16,9 +16,9 @@ import { SkillsTab } from "./skills-tab";
 export type ProjectEntry = ResumeData["projects"]["entries"][number];
 export type AcademicEntry = ResumeData["projects"]["academics"][number];
 
-/** Dark-theme override applied on top of the shared ui Input. */
-export const DARK_INPUT =
-  "bg-[#1a1a2e] border-[#333] text-white placeholder:text-[#555] focus-visible:ring-[#3B82F6]/40 focus-visible:border-[#3B82F6]/60";
+/** Light-theme input override matching the app's design system. */
+export const INPUT_STYLE =
+  "bg-surface border-line text-ink placeholder:text-faint focus-visible:ring-saffron/40 focus-visible:border-saffron/60";
 
 export interface InputPanelProps {
   resume: ResumeData;
@@ -79,11 +79,11 @@ export function InputPanel({
   setTargetRole,
 }: InputPanelProps) {
   return (
-    <div className="rounded-xl border border-[#222] bg-[#111118] p-3 sm:p-4">
+    <div className="rounded-xl border border-line bg-surface p-3 shadow-sm sm:p-4">
       <div
         role="tablist"
         aria-label="Resume sections"
-        className="grid grid-cols-4 gap-1 rounded-lg bg-[#0d0d15] p-1"
+        className="grid grid-cols-4 gap-1 rounded-lg bg-surface-2 p-1"
       >
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
@@ -97,8 +97,8 @@ export function InputPanel({
             className={cn(
               "flex items-center justify-center gap-1.5 rounded-md px-1.5 py-2 text-xs font-semibold transition-colors",
               activeTab === id
-                ? "border border-[#3B82F6] bg-[#3B82F6]/10 text-white"
-                : "border border-transparent text-[#8a93a6] hover:text-white"
+                ? "border border-saffron bg-saffron/10 text-ink"
+                : "border border-transparent text-muted hover:text-ink"
             )}
           >
             <Icon className="h-3.5 w-3.5 shrink-0" />
@@ -157,6 +157,14 @@ export function InputPanel({
           />
         )}
       </div>
+
+      {/* On small screens the preview stacks below — a quick jump beats scrolling. */}
+      <a
+        href="#builder-preview"
+        className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-saffron hover:underline xl:hidden"
+      >
+        Jump to live preview ↓
+      </a>
     </div>
   );
 }

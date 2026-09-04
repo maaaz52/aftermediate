@@ -14,7 +14,7 @@ export function PracticeSummary() {
   const lastFive = practice.slice(0, 5);
 
   return (
-    <div className="card-glass rounded-2xl p-5">
+    <div className="card-glass flex flex-col rounded-2xl p-5">
       <div className="flex items-center justify-between">
         <p className="text-base font-bold text-ink">Practice & Mocks</p>
         <Link
@@ -26,19 +26,19 @@ export function PracticeSummary() {
       </div>
 
       {practice.length === 0 ? (
-        <div className="mt-4">
+        <div className="mt-4 flex flex-1 flex-col">
           <p className="text-sm text-muted">
             Mock tests are the fastest way to find your real merit.
           </p>
           <Link
             href="/pakistan/self-assessment"
-            className={cn(buttonVariants({ size: "default" }), "mt-3 w-full")}
+            className={cn(buttonVariants({ size: "default" }), "mt-auto w-full")}
           >
             Take your first mock
           </Link>
         </div>
       ) : (
-        <div className="mt-4">
+        <div className="mt-4 flex flex-1 flex-col">
           <div className="flex flex-wrap gap-2">
             <span className="rounded-full bg-surface-2 px-2.5 py-0.5 text-[11px] font-medium text-muted">
               {practice.length} attempt{practice.length === 1 ? "" : "s"}

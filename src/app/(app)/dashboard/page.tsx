@@ -1,6 +1,5 @@
 "use client";
 
-import { Sparkles } from "lucide-react";
 import { DashboardHero } from "@/components/dashboard/dashboard-hero";
 import { PracticeSummary } from "@/components/dashboard/practice-summary";
 import { FineAggregate } from "@/components/dashboard/fine-aggregate";
@@ -89,21 +88,6 @@ export default function DashboardPage() {
       <BestFields />
       <div className="mt-4">
         <AbroadOverview />
-      </div>
-
-      {/* ── Rahbar — quiet row ── */}
-      <div className="mt-8 flex items-center justify-between rounded-2xl border border-line bg-surface-2/50 px-5 py-3">
-        <div className="flex items-center gap-2 text-sm text-muted">
-          <Sparkles className="h-4 w-4 text-saffron" />
-          <span>Need help? Ask <strong className="text-ink">Rahbar</strong> — your AI counselor.</span>
-        </div>
-        <button
-          type="button"
-          onClick={() => document.dispatchEvent(new CustomEvent("open-rahbar"))}
-          className="text-xs font-semibold text-saffron hover:underline"
-        >
-          Open →
-        </button>
       </div>
     </div>
   );

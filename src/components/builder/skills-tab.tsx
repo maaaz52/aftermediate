@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Plus, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { suggestSkills, type ResumeData } from "@/lib/resume-model";
-import { DARK_INPUT } from "./input-panel";
+import { INPUT_STYLE } from "./input-panel";
 
 export interface SkillsTabProps {
   skills: ResumeData["skills"];
@@ -66,11 +66,11 @@ function SkillGroup({
 
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-wider text-[#8a93a6]">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-muted">{label}</p>
 
       <div className="mt-2 flex flex-wrap gap-1.5">
         {selected.length === 0 && (
-          <span className="text-xs text-[#555d6e]">Nothing selected yet.</span>
+          <span className="text-xs text-faint">Nothing selected yet.</span>
         )}
         {selected.map((skill) => (
           <button
@@ -78,7 +78,7 @@ function SkillGroup({
             type="button"
             aria-label={`Remove ${skill}`}
             onClick={() => toggleSkill(type, skill)}
-            className="inline-flex items-center gap-1 rounded-full border border-[#3B82F6]/40 bg-[#3B82F6]/15 px-2.5 py-1 text-xs font-medium text-[#93c5fd] transition-colors hover:bg-[#3B82F6]/25"
+            className="inline-flex items-center gap-1 rounded-full border border-saffron/40 bg-saffron/15 px-2.5 py-1 text-xs font-medium text-saffron transition-colors hover:bg-saffron/25"
           >
             {skill}
             <X className="h-3 w-3" />
@@ -101,14 +101,14 @@ function SkillGroup({
           }}
           aria-label={`Search ${type} skills`}
           placeholder="Type to search skills…"
-          className={DARK_INPUT}
+          className={INPUT_STYLE}
         />
         {open && suggestions.length > 0 && (
           <div
             data-suggestions
-            className="absolute left-0 right-0 z-10 mt-1.5 max-h-44 overflow-y-auto rounded-lg border border-[#333] bg-[#15151f] p-1.5 shadow-2xl"
+            className="absolute left-0 right-0 z-10 mt-1.5 max-h-44 overflow-y-auto rounded-lg border border-line bg-surface p-1.5 shadow-xl"
           >
-            <p className="px-2 pb-1 pt-1 text-[10px] font-medium uppercase tracking-wider text-[#555d6e]">
+            <p className="px-2 pb-1 pt-1 text-[10px] font-medium uppercase tracking-wider text-faint">
               {targetRole ? `Suggested for "${targetRole}"` : "Common skills"}
             </p>
             <div className="flex flex-wrap gap-1.5 p-1">
@@ -121,7 +121,7 @@ function SkillGroup({
                     toggleSkill(type, skill);
                     setQuery("");
                   }}
-                  className="inline-flex items-center gap-1 rounded-full border border-[#333] bg-[#1a1a2e] px-2.5 py-1 text-xs text-[#8a93a6] transition-colors hover:border-[#3B82F6]/60 hover:text-white"
+                  className="inline-flex items-center gap-1 rounded-full border border-line bg-surface-2 px-2.5 py-1 text-xs text-muted transition-colors hover:border-saffron/60 hover:text-ink"
                 >
                   <Plus className="h-3 w-3" />
                   {skill}

@@ -88,6 +88,23 @@ export function RahbarDrawer() {
         />
       )}
 
+      {!open && (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-label="Open Rahbar AI"
+          className="group fixed bottom-5 right-5 z-40 flex items-center gap-2.5 rounded-full border border-saffron/30 bg-surface py-3 pl-4 pr-5 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-saffron/15">
+            <Sparkles className="h-5 w-5 text-saffron transition-transform group-hover:rotate-12" />
+          </span>
+          <span className="text-left">
+            <span className="block text-sm font-bold text-ink">Rahbar A.I</span>
+            <span className="block text-[11px] text-muted">Ask about the site</span>
+          </span>
+        </button>
+      )}
+
       <aside
         data-tour="rahbar-drawer"
         className={cn(

@@ -100,6 +100,25 @@ export default function ProfilePage() {
   const [avatarOpen, setAvatarOpen] = React.useState(false);
   const avatarRef = React.useRef<HTMLDivElement>(null);
 
+  const [saveNotice, setSaveNotice] = React.useState<string | null>(null);
+  const noticeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [formError, setFormError] = React.useState<string | null>(null);
+  const [skillQuery, setSkillQuery] = React.useState("");
+  const [editingEdu, setEditingEdu] = React.useState<string | null>(null);
+  const [eduDraft, setEduDraft] = React.useState<Partial<EducationEntry>>({});
+
+  function flash(msg: string) {
+    setSaveNotice(msg);
+    if (noticeTimer.current) clearTimeout(noticeTimer.current);
+    noticeTimer.current = setTimeout(() => setSaveNotice(null), 2000);
+  }
+
+  React.useEffect(() => {
+    return () => {
+      if (noticeTimer.current) clearTimeout(noticeTimer.current);
+    };
+  }, []);
+
   React.useEffect(() => {
     if (!avatarOpen) return;
     function handleClick(e: MouseEvent) {
@@ -119,6 +138,7 @@ export default function ProfilePage() {
   function beginEdit(section: string) {
     setEditing(section);
     setDraft({});
+    setFormError(null);
   }
 
   function setField(key: string, value: string) {
@@ -136,11 +156,13 @@ export default function ProfilePage() {
   function selectAvatarStyle(styleId: AvatarStyleId) {
     const seed = profile.avatarSeed || profile.name || user?.user_metadata?.full_name || "student";
     update({ avatarStyle: styleId, avatarSeed: seed });
+    flash("Avatar updated");
   }
 
   function randomizeSeed() {
     const seed = Math.random().toString(36).slice(2, 10);
     update({ avatarSeed: seed });
+    flash("Avatar updated");
   }
 
   function saveBasic() {
@@ -149,6 +171,7 @@ export default function ProfilePage() {
       bio: draft.bio ?? profile.bio,
     });
     setEditing(null);
+    flash("Saved");
   }
 
   function saveAcademics() {
@@ -156,12 +179,36 @@ export default function ProfilePage() {
     if (draft.board) patchQuiz({ board: draft.board });
     if (draft.examYear) patchQuiz({ examYear: Number(draft.examYear) });
     if (draft.entryTest) patchQuiz({ entryTest: draft.entryTest as never });
-    if (draft.matricO != null && draft.matricO !== "") patchMarks({ matricObtained: Number(draft.matricO) });
-    if (draft.matricT != null && draft.matricT !== "") patchMarks({ matricTotal: Number(draft.matricT) });
-    if (draft.fscO != null && draft.fscO !== "") patchMarks({ fscObtained: Number(draft.fscO) });
-    if (draft.fscT != null && draft.fscT !== "") patchMarks({ fscTotal: Number(draft.fscT) });
-    if (draft.entryScore != null && draft.entryScore !== "") patchMarks({ entryTestObtained: Number(draft.entryScore) });
+
+    const matricO = draft.matricO != null && draft.matricO !== "" ? Number(draft.matricO) : profile.marks.matricObtained;
+    const matricT = draft.matricT != null && draft.matricT !== "" ? Number(draft.matricT) : profile.marks.matricTotal;
+    const fscO = draft.fscO != null && draft.fscO !== "" ? Number(draft.fscO) : profile.marks.fscObtained;
+    const fscT = draft.fscT != null && draft.fscT !== "" ? Number(draft.fscT) : profile.marks.fscTotal;
+    const entryScore = draft.entryScore != null && draft.entryScore !== "" ? Number(draft.entryScore) : null;
+
+    const bad = (label: string, o: number, t: number) => {
+      if (Number.isNaN(o) || Number.isNaN(t) || o < 0 || t <= 0 || o > t) {
+        setFormError(`${label}: obtained must be between 0 and total.`);
+        return true;
+      }
+      return false;
+    };
+    if (bad("Matric", matricO, matricT) || bad("FSc", fscO, fscT)) return;
+    if (entryScore !== null && (Number.isNaN(entryScore) || entryScore < 0)) {
+      setFormError("Entry test score must be 0 or more.");
+      return;
+    }
+
+    patchMarks({
+      matricObtained: matricO,
+      matricTotal: matricT,
+      fscObtained: fscO,
+      fscTotal: fscT,
+      ...(entryScore !== null ? { entryTestObtained: entryScore } : {}),
+    });
+    setFormError(null);
     setEditing(null);
+    flash("Saved");
   }
 
   function saveMoney() {
@@ -171,6 +218,7 @@ export default function ProfilePage() {
     if (draft.canRelocate) patchQuiz({ canRelocate: draft.canRelocate as never });
     if (draft.needsScholarship) patchQuiz({ needsScholarship: draft.needsScholarship as never });
     setEditing(null);
+    flash("Saved");
   }
 
   function saveDecisions() {
@@ -180,6 +228,7 @@ export default function ProfilePage() {
     if (draft.parentsFirmness != null && draft.parentsFirmness !== "")
       patchQuiz({ parentsFirmness: Number(draft.parentsFirmness) });
     setEditing(null);
+    flash("Saved");
   }
 
   function toggleSkill(skill: string) {
@@ -195,22 +244,54 @@ export default function ProfilePage() {
   function addEducation() {
     const entry: EducationEntry = {
       id: `e${Date.now()}`,
-      degree: "New degree",
-      institution: "Institution",
+      degree: "",
+      institution: "",
       year: "",
       grade: "",
     };
     update({ education: [...profile.education, entry] });
+    setEditingEdu(entry.id);
+    setEduDraft(entry);
+  }
+
+  function beginEduEdit(id: string) {
+    const entry = profile.education.find((e) => e.id === id);
+    if (!entry) return;
+    setEditingEdu(id);
+    setEduDraft(entry);
+  }
+
+  function saveEdu(id: string) {
+    update({
+      education: profile.education.map((e) =>
+        e.id === id ? { ...e, ...eduDraft, degree: eduDraft.degree?.trim() || e.degree, institution: eduDraft.institution?.trim() || e.institution } : e
+      ),
+    });
+    setEditingEdu(null);
+    setEduDraft({});
+    flash("Saved");
+  }
+
+  function cancelEdu() {
+    // Drop an entry that was added but never filled in.
+    const target = profile.education.find((e) => e.id === editingEdu);
+    if (target && !target.degree && !target.institution && !target.year && !target.grade) {
+      removeEducation(editingEdu!);
+    }
+    setEditingEdu(null);
+    setEduDraft({});
   }
 
   function patchEducation(id: string, patch: Partial<EducationEntry>) {
-    update({
-      education: profile.education.map((e) => (e.id === id ? { ...e, ...patch } : e)),
-    });
+    setEduDraft((d) => ({ ...d, ...patch }));
   }
 
   function removeEducation(id: string) {
     update({ education: profile.education.filter((e) => e.id !== id) });
+    if (editingEdu === id) {
+      setEditingEdu(null);
+      setEduDraft({});
+    }
   }
 
   return (
@@ -294,7 +375,15 @@ export default function ProfilePage() {
                   <CheckCircle2 className="h-3.5 w-3.5" /> Quiz complete
                 </Badge>
               ) : (
-                <Badge variant="danger">Quiz incomplete</Badge>
+                <>
+                  <Badge variant="danger">Quiz incomplete</Badge>
+                  <Link
+                    href="/onboard"
+                    className="rounded-lg bg-violet px-3 py-1.5 text-xs font-extrabold text-white shadow-[0_3px_0_#5b3fb8] transition-colors hover:brightness-110"
+                  >
+                    Continue quiz →
+                  </Link>
+                </>
               )}
             </div>
 
@@ -378,16 +467,31 @@ export default function ProfilePage() {
       >
         {editing === "academics" ? (
           <div className="grid gap-3 sm:grid-cols-2">
-            <Field label="Stream" value={draft.stream ?? profile.stream ?? ""} onChange={(v) => setField("stream", v)} placeholder="pre-medical" />
+            <Picker
+              label="Stream"
+              options={streamLabel}
+              value={draft.stream ?? profile.stream ?? ""}
+              onChange={(v) => setField("stream", v)}
+            />
             <Field label="Board" value={draft.board ?? q.board ?? ""} onChange={(v) => setField("board", v)} />
             <Field label="Exam year" value={draft.examYear ?? (q.examYear ? String(q.examYear) : "")} onChange={(v) => setField("examYear", v)} placeholder="2026" />
-            <Field label="Entry test" value={draft.entryTest ?? q.entryTest ?? ""} onChange={(v) => setField("entryTest", v)} placeholder="net / mdcat / ecat / none" />
+            <Picker
+              label="Entry test"
+              options={entryTestLabel}
+              value={draft.entryTest ?? q.entryTest ?? ""}
+              onChange={(v) => setField("entryTest", v)}
+            />
             <Field label="Matric obtained" value={draft.matricO ?? (profile.marks.matricObtained ? String(profile.marks.matricObtained) : "")} onChange={(v) => setField("matricO", v)} />
             <Field label="Matric total" value={draft.matricT ?? (profile.marks.matricTotal ? String(profile.marks.matricTotal) : "")} onChange={(v) => setField("matricT", v)} />
             <Field label="FSc obtained" value={draft.fscO ?? (profile.marks.fscObtained ? String(profile.marks.fscObtained) : "")} onChange={(v) => setField("fscO", v)} />
             <Field label="FSc total" value={draft.fscT ?? (profile.marks.fscTotal ? String(profile.marks.fscTotal) : "")} onChange={(v) => setField("fscT", v)} />
             {q.entryTest && q.entryTest !== "none" && (
               <Field label="Entry test score" value={draft.entryScore ?? (profile.marks.entryTestObtained != null ? String(profile.marks.entryTestObtained) : "")} onChange={(v) => setField("entryScore", v)} />
+            )}
+            {formError && (
+              <p className="col-span-full rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-xs font-medium text-danger">
+                {formError}
+              </p>
             )}
           </div>
         ) : (
@@ -423,19 +527,43 @@ export default function ProfilePage() {
           </p>
         ) : (
           <div className="space-y-3">
-            {profile.education.map((e) => (
-              <div key={e.id} className="flex flex-col gap-2 rounded-xl border border-line bg-surface-2/40 p-3 sm:flex-row sm:items-center">
-                <div className="flex flex-1 flex-col gap-2 sm:flex-row sm:flex-wrap">
-                  <Input value={e.degree} onChange={(ev) => patchEducation(e.id, { degree: ev.target.value })} className="h-9 w-full text-sm sm:w-48" placeholder="Degree" />
-                  <Input value={e.institution} onChange={(ev) => patchEducation(e.id, { institution: ev.target.value })} className="h-9 w-full text-sm sm:w-48" placeholder="Institution" />
-                  <Input value={e.year} onChange={(ev) => patchEducation(e.id, { year: ev.target.value })} className="h-9 w-full text-sm sm:w-24" placeholder="Year" />
-                  <Input value={e.grade} onChange={(ev) => patchEducation(e.id, { grade: ev.target.value })} className="h-9 w-full text-sm sm:w-24" placeholder="Grade" />
+            {profile.education.map((e) =>
+              editingEdu === e.id ? (
+                <div key={e.id} className="rounded-xl border border-line bg-surface-2/40 p-3">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                    <Input value={eduDraft.degree ?? e.degree} onChange={(ev) => patchEducation(e.id, { degree: ev.target.value })} className="h-9 w-full text-sm sm:w-48" placeholder="Degree" />
+                    <Input value={eduDraft.institution ?? e.institution} onChange={(ev) => patchEducation(e.id, { institution: ev.target.value })} className="h-9 w-full text-sm sm:w-48" placeholder="Institution" />
+                    <Input value={eduDraft.year ?? e.year} onChange={(ev) => patchEducation(e.id, { year: ev.target.value })} className="h-9 w-full text-sm sm:w-24" placeholder="Year" />
+                    <Input value={eduDraft.grade ?? e.grade} onChange={(ev) => patchEducation(e.id, { grade: ev.target.value })} className="h-9 w-full text-sm sm:w-24" placeholder="Grade" />
+                  </div>
+                  <div className="mt-2 flex gap-2">
+                    <Button size="sm" onClick={() => saveEdu(e.id)}>
+                      <Save className="h-3.5 w-3.5" /> Save
+                    </Button>
+                    <Button size="sm" variant="ghost" onClick={cancelEdu}>
+                      <X className="h-3.5 w-3.5" />
+                    </Button>
+                  </div>
                 </div>
-                <Button size="sm" variant="ghost" className="h-9 w-9 shrink-0 p-0 text-danger" onClick={() => removeEducation(e.id)}>
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            ))}
+              ) : (
+                <div key={e.id} className="flex items-center gap-3 rounded-xl border border-line bg-surface-2/40 p-3">
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-semibold text-ink">
+                      {e.degree || "Untitled degree"}
+                    </p>
+                    <p className="truncate text-xs text-muted">
+                      {[e.institution, e.year, e.grade].filter(Boolean).join(" · ") || "No details yet"}
+                    </p>
+                  </div>
+                  <Button size="sm" variant="outline" onClick={() => beginEduEdit(e.id)}>
+                    <Pencil className="h-3.5 w-3.5" /> Edit
+                  </Button>
+                  <Button size="sm" variant="ghost" className="h-9 w-9 shrink-0 p-0 text-danger" onClick={() => removeEducation(e.id)}>
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
+              )
+            )}
           </div>
         )}
       </SectionCard>
@@ -446,8 +574,16 @@ export default function ProfilePage() {
         title="Skills"
         subtitle="Pick everything you can do — or want to learn."
       >
+        <Input
+          value={skillQuery}
+          onChange={(e) => setSkillQuery(e.target.value)}
+          placeholder="Search skills…"
+          className="mb-3 max-w-xs"
+        />
         <div className="flex flex-wrap gap-2">
-          {SKILL_CHOICES.map((s) => {
+          {SKILL_CHOICES.filter((s) =>
+            s.toLowerCase().includes(skillQuery.trim().toLowerCase())
+          ).map((s) => {
             const has = profile.skills.includes(s);
             return (
               <button
@@ -466,6 +602,12 @@ export default function ProfilePage() {
             );
           })}
         </div>
+        {skillQuery.trim() &&
+          SKILL_CHOICES.filter((s) =>
+            s.toLowerCase().includes(skillQuery.trim().toLowerCase())
+          ).length === 0 && (
+            <p className="mt-3 text-sm text-faint">No skills match “{skillQuery}”.</p>
+          )}
         {profile.skills.length > 0 && (
           <p className="mt-3 font-mono text-xs text-muted">
             {profile.skills.length} selected
@@ -515,8 +657,18 @@ export default function ProfilePage() {
             <Field label="City" value={draft.city ?? q.city ?? ""} onChange={(v) => setField("city", v)} />
             <Field label="Province" value={draft.province ?? q.province ?? ""} onChange={(v) => setField("province", v)} />
             <Field label="Monthly budget (PKR)" value={draft.budget ?? (q.budgetMonthly != null ? String(q.budgetMonthly) : "")} onChange={(v) => setField("budget", v)} />
-            <Field label="Can relocate" value={draft.canRelocate ?? q.canRelocate ?? ""} onChange={(v) => setField("canRelocate", v)} placeholder="yes / in-province / no" />
-            <Field label="Need scholarship" value={draft.needsScholarship ?? q.needsScholarship ?? ""} onChange={(v) => setField("needsScholarship", v)} placeholder="must / helpful / no" />
+            <Picker
+              label="Can relocate"
+              options={relocateLabel}
+              value={draft.canRelocate ?? q.canRelocate ?? ""}
+              onChange={(v) => setField("canRelocate", v)}
+            />
+            <Picker
+              label="Need scholarship"
+              options={scholarshipLabel}
+              value={draft.needsScholarship ?? q.needsScholarship ?? ""}
+              onChange={(v) => setField("needsScholarship", v)}
+            />
           </div>
         ) : (
           <RowGrid
@@ -543,8 +695,18 @@ export default function ProfilePage() {
         {editing === "decisions" ? (
           <div className="grid gap-3 sm:grid-cols-2">
             <Field label="Dream field" value={draft.dreamField ?? q.dreamField ?? ""} onChange={(v) => setField("dreamField", v)} />
-            <Field label="Parents expect" value={draft.parentsExpect ?? q.parentsExpect ?? ""} onChange={(v) => setField("parentsExpect", v)} placeholder="doctor / engineer / css / business / my-choice / unsure" />
-            <Field label="Who decides" value={draft.decisionMaker ?? q.decisionMaker ?? ""} onChange={(v) => setField("decisionMaker", v)} placeholder="me / parents / together" />
+            <Picker
+              label="Parents expect"
+              options={parentsExpectLabel}
+              value={draft.parentsExpect ?? q.parentsExpect ?? ""}
+              onChange={(v) => setField("parentsExpect", v)}
+            />
+            <Picker
+              label="Who decides"
+              options={decisionMakerLabel}
+              value={draft.decisionMaker ?? q.decisionMaker ?? ""}
+              onChange={(v) => setField("decisionMaker", v)}
+            />
             <Field label="Parents firmness (1-5)" value={draft.parentsFirmness ?? (q.parentsFirmness ? String(q.parentsFirmness) : "")} onChange={(v) => setField("parentsFirmness", v)} />
           </div>
         ) : (
@@ -558,6 +720,12 @@ export default function ProfilePage() {
           />
         )}
       </SectionCard>
+
+      {saveNotice && (
+        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 animate-rise rounded-full bg-ink px-4 py-2 text-sm font-medium text-background shadow-lg">
+          ✓ {saveNotice}
+        </div>
+      )}
     </div>
   );
 }
@@ -654,5 +822,40 @@ function Field({
       <span className="mb-1 block text-xs font-medium text-muted">{label}</span>
       <Input value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} />
     </label>
+  );
+}
+
+function Picker({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: Record<string, string>;
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="block">
+      <span className="mb-1 block text-xs font-medium text-muted">{label}</span>
+      <div className="flex flex-wrap gap-1.5">
+        {Object.entries(options).map(([val, display]) => (
+          <button
+            key={val}
+            type="button"
+            onClick={() => onChange(val)}
+            className={cn(
+              "rounded-full border px-3 py-1.5 text-xs font-medium transition-all",
+              value === val
+                ? "border-saffron bg-saffron/10 text-saffron"
+                : "border-line bg-surface-2 text-muted hover:border-saffron/30 hover:text-ink"
+            )}
+          >
+            {display}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
