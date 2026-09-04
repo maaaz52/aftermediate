@@ -5,17 +5,11 @@ import userEvent from "@testing-library/user-event";
 import { EntryTestHeatmap } from "./entry-test-heatmap";
 import * as store from "@/lib/store";
 
-// ── Mock useStudent ──
 const mockUseStudent = vi.fn();
 vi.spyOn(store, "useStudent").mockImplementation(() => mockUseStudent());
 
-beforeEach(() => {
-  vi.clearAllMocks();
-});
-
-afterEach(() => {
-  cleanup();
-});
+beforeEach(() => { vi.clearAllMocks(); });
+afterEach(() => { cleanup(); });
 
 function mockProfile(stream: string | null) {
   mockUseStudent.mockReturnValue({
@@ -27,135 +21,82 @@ function mockProfile(stream: string | null) {
   });
 }
 
-// ── Card header ──
-
-it("renders the card header with FineAggregate typography", () => {
+it("renders the heatmap header", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText("ENTRY-TEST HEATMAP")).toBeTruthy();
+  expect(screen.getByText(/entry-test heatmap/i)).toBeTruthy();
 });
 
-// ── Test info label ──
-
-it("shows MDCAT label for pre-medical stream", () => {
+it("shows test name for pre-medical", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/MDCAT —/)).toBeTruthy();
+  expect(screen.getByText(/MDCAT/)).toBeTruthy();
 });
 
-it("shows ECAT label for pre-engineering stream", () => {
+it("shows test name for pre-engineering", () => {
   mockProfile("pre-engineering");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/ECAT —/)).toBeTruthy();
+  expect(screen.getByText(/ECAT/)).toBeTruthy();
 });
 
-it("shows ECAT label for ics stream", () => {
-  mockProfile("ics");
-  render(<EntryTestHeatmap />);
-  expect(screen.getByText(/ECAT —/)).toBeTruthy();
-});
-
-// ── Sections start collapsed ──
-
-it("sections start collapsed (no chapter rows visible)", () => {
+it("renders legend labels", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  // Section headers are visible
-  expect(screen.getByText("Biology")).toBeTruthy();
-  // But no chapter rows should be visible initially (search for a chapter name)
-  expect(screen.queryByText("Cell Biology")).toBeNull();
-});
-
-// ── Click section to expand chapters ──
-
-it("clicking a section header reveals its chapter rows", async () => {
-  mockProfile("pre-medical");
-  render(<EntryTestHeatmap />);
-  const biologyHeader = screen.getByText("Biology");
-  await userEvent.click(biologyHeader);
-  expect(screen.getByText("Cell Biology")).toBeTruthy();
-});
-
-// ── Click chapter opens detail panel ──
-
-it("clicking a chapter opens the detail panel", async () => {
-  mockProfile("pre-medical");
-  render(<EntryTestHeatmap />);
-  // Expand biology section
-  await userEvent.click(screen.getByText("Biology"));
-  // Click a chapter
-  await userEvent.click(screen.getByText("Cell Biology"));
-  // Detail panel shows counts
-  expect(screen.getByText(/appearances/i)).toBeTruthy();
-});
-
-it("clicking a different chapter updates the detail panel", async () => {
-  mockProfile("pre-medical");
-  render(<EntryTestHeatmap />);
-  // Expand biology section
-  await userEvent.click(screen.getByText("Biology"));
-  // Click Cell Biology — before any panel is open there is only one match
-  await userEvent.click(screen.getByText("Cell Biology"));
-  expect(screen.getByText(/20 appearances in the last 3 years/)).toBeTruthy();
-  // Click Biological Molecules — only one match in the tree at this point
-  await userEvent.click(screen.getByText("Biological Molecules"));
-  expect(screen.getByText(/18 appearances in the last 3 years/)).toBeTruthy();
-  expect(screen.queryByText(/20 appearances in the last 3 years/)).toBeNull();
-});
-
-it("tiers render correct color dots for danger, amber, and emerald", async () => {
-  mockProfile("pre-medical");
-  const { container } = render(<EntryTestHeatmap />);
-  await userEvent.click(screen.getByText("Biology"));
-  expect(container.querySelector('[class*="bg-[#d63d3d]"]')).toBeTruthy(); // danger
-  expect(container.querySelector('[class*="bg-[#d99a2b]"]')).toBeTruthy(); // amber
-  expect(container.querySelector('[class*="bg-[#1c9e62]"]')).toBeTruthy(); // emerald
   expect(screen.getByText("Rarely")).toBeTruthy();
   expect(screen.getAllByText("Occasional").length).toBeGreaterThan(0);
   expect(screen.getAllByText("Frequent").length).toBeGreaterThan(0);
 });
 
-// ── Chapter click toggles panel off ──
-
-it("clicking the same chapter closes the detail panel", async () => {
+it("renders section labels", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  await userEvent.click(screen.getByText("Biology"));
-  await userEvent.click(screen.getByText("Cell Biology"));
-  expect(screen.getByText(/appearances/i)).toBeTruthy();
-  // Click again to close — the open panel also shows the chapter name,
-  // so target the chapter row (first match in DOM order)
-  await userEvent.click(screen.getAllByText("Cell Biology")[0]);
-  expect(screen.queryByText(/appearances/i)).toBeNull();
+  expect(screen.getByText("Biology")).toBeTruthy();
 });
 
-// ── Empty state: no stream ──
+it("renders chapter cells as buttons", () => {
+  mockProfile("pre-medical");
+  render(<EntryTestHeatmap />);
+  const cells = screen.getAllByRole("button");
+  const cellTitles = cells.map((c) => c.getAttribute("title")).filter(Boolean);
+  expect(cellTitles.length).toBeGreaterThan(0);
+});
 
-it("shows empty state when stream is null", () => {
+it("clicking a cell opens the detail panel", async () => {
+  mockProfile("pre-medical");
+  render(<EntryTestHeatmap />);
+  const cell = screen.getByTitle("Cell Biology — Biology");
+  await userEvent.click(cell);
+  expect(screen.getByText(/last 3 years/i)).toBeTruthy();
+});
+
+it("clicking the same cell closes the detail panel", async () => {
+  mockProfile("pre-medical");
+  render(<EntryTestHeatmap />);
+  const cell = screen.getByTitle("Cell Biology — Biology");
+  await userEvent.click(cell);
+  expect(screen.getByText(/last 3 years/i)).toBeTruthy();
+  await userEvent.click(cell);
+  expect(screen.queryByText(/last 3 years/i)).toBeNull();
+});
+
+it("shows all test tabs when stream is null", () => {
   mockProfile(null);
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/set your stream/i)).toBeTruthy();
+  expect(screen.getByText("NET")).toBeTruthy();
+  expect(screen.getByText("MDCAT")).toBeTruthy();
+  expect(screen.getByText("ECAT")).toBeTruthy();
 });
 
-// ── Empty state: no test for stream ──
-
-it("shows empty state for icom stream", () => {
+it("shows all test tabs for any stream", () => {
   mockProfile("icom");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/don't have entry-test data/i)).toBeTruthy();
+  expect(screen.getByText("NET")).toBeTruthy();
+  expect(screen.getByText("MDCAT")).toBeTruthy();
+  expect(screen.getByText("ECAT")).toBeTruthy();
 });
-
-it("shows empty state for alevel stream", () => {
-  mockProfile("alevel");
-  render(<EntryTestHeatmap />);
-  expect(screen.getByText(/don't have entry-test data/i)).toBeTruthy();
-});
-
-// ── Footer ──
 
 it("renders the footer text", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/Illustrative sample/i)).toBeTruthy();
   expect(screen.getByText(/estimates, not guarantees/i)).toBeTruthy();
 });

@@ -206,6 +206,10 @@ export function WatchlistSection() {
         </div>
       )}
 
+      <p className="mt-4 text-[11px] text-faint">
+        We&apos;ll send you an email whenever the merit cutoff changes for any program you&apos;re tracking.
+      </p>
+
       {showSearch && (
         <ProgramSearch
           watchlist={watchlist}

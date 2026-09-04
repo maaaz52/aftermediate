@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   buildPool,
   canonicalSection,
@@ -131,14 +132,14 @@ export function DailySprint() {
           </Link>
         )}
 
-        <button
+        <Button
           type="button"
           onClick={startSprint}
           disabled={!canStart}
-          className="mt-4 w-full rounded-xl bg-violet px-5 py-3 text-sm font-extrabold text-white shadow-[0_4px_0_#5b3fb8] transition-colors hover:brightness-110 disabled:opacity-50"
+          className="mt-4 w-full"
         >
           {canStart ? "Start today's sprint →" : "Sprints coming soon for your stream"}
-        </button>
+        </Button>
       </div>
     );
   }

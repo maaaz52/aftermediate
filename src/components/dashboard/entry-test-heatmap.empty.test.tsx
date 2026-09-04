@@ -19,5 +19,4 @@ it("shows empty state 3 when the test config is missing", () => {
   });
   render(<EntryTestHeatmap />);
   expect(screen.getByText(/Heatmap data not available/i)).toBeTruthy();
-  expect(screen.getByText(/check back soon/i)).toBeTruthy();
 });

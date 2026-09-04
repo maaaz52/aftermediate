@@ -1,90 +1,81 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { ProfileSummary } from "@/components/dashboard/profile-summary";
+import { Sparkles } from "lucide-react";
+import { DashboardHero } from "@/components/dashboard/dashboard-hero";
 import { PracticeSummary } from "@/components/dashboard/practice-summary";
-import { CoarseAggregate } from "@/components/dashboard/coarse-aggregate";
 import { FineAggregate } from "@/components/dashboard/fine-aggregate";
-import { ValuableCountries } from "@/components/dashboard/valuable-countries";
-import { StudyAbroadSummary } from "@/components/dashboard/study-abroad-summary";
 import { BestFields } from "@/components/dashboard/best-fields";
-import { RahbarBanner } from "@/components/dashboard/rahbar-banner";
 import { WatchlistSection } from "@/components/watchlist/watchlist-section";
 import { DailySprint } from "@/components/dashboard/daily-sprint";
 import { WhereYouStand } from "@/components/dashboard/where-you-stand";
 import { EntryTestHeatmap } from "@/components/dashboard/entry-test-heatmap";
+import { AbroadOverview } from "@/components/dashboard/abroad-overview";
 import { useStudent } from "@/lib/store";
-import { STREAM_LABEL } from "@/lib/data";
-import { pct } from "@/lib/aggregates";
+import { CoarseAggregate } from "@/components/dashboard/coarse-aggregate";
+
+function ZoneTitle({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="mt-10 mb-4 text-sm font-extrabold uppercase tracking-wide text-faint first:mt-0">
+      {children}
+    </h2>
+  );
+}
 
 export default function DashboardPage() {
   const { profile } = useStudent();
-  const stream = profile.stream ?? "pre-engineering";
-  const fscPct = pct(profile.marks.fscObtained, profile.marks.fscTotal);
+  const hasMarks = profile.marks.fscObtained > 0;
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <div className="animate-reveal" data-tour="dashboard-welcome">
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="saffron">{STREAM_LABEL[stream]}</Badge>
-          {fscPct > 0 && <Badge variant="emerald" className="font-mono">{fscPct.toFixed(1)}%</Badge>}
+    <div data-tour="dashboard-welcome" className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      {/* ── Zone 1: You ── */}
+      <ZoneTitle>You</ZoneTitle>
+      <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+        <DashboardHero />
+        <FineAggregate />
+      </div>
+      {hasMarks && (
+        <div className="mt-4">
+          <CoarseAggregate />
         </div>
-        <h1 className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          Salam{profile.name ? `, ${profile.name}` : ""} <span aria-hidden="true">👋</span>
-        </h1>
-        <p className="mt-1 text-sm text-muted">Here&apos;s where you stand today.</p>
-      </div>
+      )}
 
-      <div className="mt-6 animate-reveal" style={{ animationDelay: "60ms" }}>
-        <ProfileSummary />
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "120ms" }}>
+      {/* ── Zone 2: Today ── */}
+      <ZoneTitle>Today</ZoneTitle>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <DailySprint />
         <PracticeSummary />
       </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "140ms" }}>
-        <DailySprint />
+      <div className="mt-4">
+        <WatchlistSection />
       </div>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        {profile.marks.fscObtained > 0 && (
-          <div className="animate-reveal" style={{ animationDelay: "120ms" }}>
-            <CoarseAggregate />
-          </div>
-        )}
-        <div className="animate-reveal" style={{ animationDelay: "180ms" }}>
-          <FineAggregate />
-        </div>
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "220ms" }}>
-        <WhereYouStand />
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "280ms" }}>
+      {/* ── Zone 3: Where you stand ── */}
+      <ZoneTitle>Where you stand</ZoneTitle>
+      <WhereYouStand />
+      <div className="mt-4">
         <EntryTestHeatmap />
       </div>
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        <div className="animate-reveal" style={{ animationDelay: "240ms" }}>
-          <ValuableCountries />
+      {/* ── Zone 4: What's next ── */}
+      <ZoneTitle>What&apos;s next</ZoneTitle>
+      <BestFields />
+      <div className="mt-4">
+        <AbroadOverview />
+      </div>
+
+      {/* ── Rahbar — quiet row ── */}
+      <div className="mt-8 flex items-center justify-between rounded-2xl border border-line bg-surface-2/50 px-5 py-3">
+        <div className="flex items-center gap-2 text-sm text-muted">
+          <Sparkles className="h-4 w-4 text-saffron" />
+          <span>Need help? Ask <strong className="text-ink">Rahbar</strong> — your AI counselor.</span>
         </div>
-        <div className="animate-reveal" style={{ animationDelay: "300ms" }}>
-          <StudyAbroadSummary />
-        </div>
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "360ms" }}>
-        <BestFields />
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "420ms" }}>
-        <RahbarBanner />
-      </div>
-
-      <div className="mt-4 animate-reveal" style={{ animationDelay: "480ms" }}>
-        <WatchlistSection />
+        <button
+          type="button"
+          onClick={() => document.dispatchEvent(new CustomEvent("open-rahbar"))}
+          className="text-xs font-semibold text-saffron hover:underline"
+        >
+          Open →
+        </button>
       </div>
     </div>
   );
