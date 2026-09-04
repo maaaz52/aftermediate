@@ -1,15 +1,19 @@
 "use client";
 
+import * as React from "react";
 import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
 import { generateAvatarSvg } from "@/lib/avatar";
 import { mockAttempts } from "@/lib/practice";
+import { cn } from "@/lib/utils";
 
 export function DashboardHero() {
   const { profile } = useStudent();
+  const [showDetails, setShowDetails] = React.useState(false);
   const stream = profile.stream ?? "pre-engineering";
   const q = profile.quiz;
   const fscPct = pct(profile.marks.fscObtained, profile.marks.fscTotal);
@@ -37,9 +41,15 @@ export function DashboardHero() {
 
   // Quick stats
   const practice = mockAttempts(profile.practice);
-  const testIds = [...new Set(practice.map((a) => a.testId))];
   const best = practice.length > 0 ? Math.max(...practice.map((a) => a.percent)) : null;
   const tracked = (profile.watchlist ?? []).length;
+
+  const detailsBadges = [
+    fscPct > 0 && <Badge key="fsc" variant="muted" className="font-mono">FSc {fscPct.toFixed(1)}%</Badge>,
+    matPct > 0 && <Badge key="mat" variant="muted" className="font-mono">Matric {matPct.toFixed(1)}%</Badge>,
+    entry && <Badge key="entry" variant="muted" className="font-mono">{entry}</Badge>,
+    ...profile.interests.slice(0, 3).map((i) => <Badge key={i} variant="info">{i}</Badge>),
+  ].filter(Boolean);
 
   return (
     <div className="card-glass rounded-2xl p-5">
@@ -62,14 +72,24 @@ export function DashboardHero() {
             {[q.city, q.province, q.examYear ? `Class of ${q.examYear}` : null].filter(Boolean).join(" · ") || "Location not set"}
             {q.budgetMonthly ? ` · PKR ${Math.round(q.budgetMonthly / 1000)}k/mo` : ""}
           </p>
-          <div className="mt-2 flex flex-wrap gap-1.5">
-            {fscPct > 0 && <Badge variant="muted" className="font-mono">FSc {fscPct.toFixed(1)}%</Badge>}
-            {matPct > 0 && <Badge variant="muted" className="font-mono">Matric {matPct.toFixed(1)}%</Badge>}
-            {entry && <Badge variant="muted" className="font-mono">{entry}</Badge>}
-            {profile.interests.slice(0, 3).map((i) => (
-              <Badge key={i} variant="info">{i}</Badge>
-            ))}
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            {detailsBadges.length > 0 && (
+              <button
+                type="button"
+                onClick={() => setShowDetails((v) => !v)}
+                aria-expanded={showDetails}
+                className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-2.5 py-1 text-[11px] font-medium text-muted transition-colors hover:bg-surface-2 hover:text-ink"
+              >
+                Details
+                <ChevronDown className={cn("h-3 w-3 transition-transform", showDetails && "rotate-180")} />
+              </button>
+            )}
           </div>
+          {showDetails && detailsBadges.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {detailsBadges}
+            </div>
+          )}
         </div>
         <Link href="/profile" className="shrink-0 text-xs font-medium text-saffron hover:underline">
           Edit →

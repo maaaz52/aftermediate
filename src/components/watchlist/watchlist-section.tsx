@@ -8,6 +8,8 @@ import { WatchlistCard } from "./watchlist-card";
 import { ProgramSearch } from "./program-search";
 import universities from "@/data/universities.json";
 import type { University } from "@/lib/types";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const UNIS = universities as unknown as University[];
 
@@ -175,7 +177,7 @@ export function WatchlistSection() {
         </div>
         <button
           onClick={() => setShowSearch(true)}
-          className="rounded-lg border border-saffron/30 px-3 py-1.5 text-[11px] font-semibold text-saffron hover:bg-saffron/10 transition-colors"
+          className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
         >
           + Track new program
         </button>

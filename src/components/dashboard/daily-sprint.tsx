@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   buildPool,
   canonicalSection,
@@ -104,7 +104,18 @@ export function DailySprint() {
     }, {});
     const canStart = now !== 0 && todayQuestions.length >= SPRINT_SIZE;
     return (
-      <div className="card-glass rounded-2xl p-5" data-tour="daily-sprint">
+      <div
+        className={cn(
+          "card-glass relative rounded-2xl p-5",
+          !doneToday && "ring-1 ring-saffron/40"
+        )}
+        data-tour="daily-sprint"
+      >
+        {!doneToday && (
+          <span className="absolute -top-2.5 left-4 rounded-full bg-saffron px-2.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-background">
+            Do this first
+          </span>
+        )}
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-base font-bold text-ink">⚡ Daily Sprint</p>
@@ -185,7 +196,7 @@ export function DailySprint() {
         <button
           type="button"
           onClick={cancel}
-          className="mt-4 w-full rounded-xl border-2 border-ink bg-surface px-5 py-3 text-sm font-extrabold text-ink transition-colors hover:bg-surface-2"
+          className={cn(buttonVariants({ variant: "secondary", className: "mt-4 w-full" }))}
         >
           Done — back to dashboard
         </button>
@@ -261,7 +272,7 @@ export function DailySprint() {
           <button
             type="button"
             onClick={next}
-            className="mt-3 w-full rounded-xl bg-violet px-5 py-2.5 text-sm font-extrabold text-white shadow-[0_4px_0_#5b3fb8] transition-colors hover:brightness-110"
+            className={cn(buttonVariants({ variant: "default", className: "mt-3 w-full" }))}
           >
             {current < questions.length - 1 ? "Next →" : "See results →"}
           </button>
