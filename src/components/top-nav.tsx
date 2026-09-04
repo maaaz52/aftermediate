@@ -24,13 +24,17 @@ export function TopNav() {
         data-tour="top-nav"
       >
         <div className="flex h-full items-center justify-between gap-4 px-6">
-          <Link href={logoHref}>
+          <Link
+            href={logoHref}
+            className="flex h-10 items-center rounded-xl px-2 transition-colors hover:bg-surface-2/70"
+            aria-label="aftermediate home"
+          >
             <Brand />
           </Link>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             {user ? (
               <>
-                <span className="max-w-[200px] truncate text-sm text-muted">
+                <span className="hidden max-w-[200px] truncate text-sm font-medium text-muted sm:block">
                   {user.user_metadata?.full_name || user.email}
                 </span>
                 <Button variant="ghost" size="sm" onClick={signOut}>

@@ -10,10 +10,10 @@ import {
   BookOpen,
   BookOpenCheck,
   Bot,
-  Calculator,
   ChevronDown,
   ClipboardList,
   Compass,
+  Crown,
   Eye,
   Feather,
   FileText,
@@ -39,7 +39,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type NavLink = { href: string; label: string; icon: React.ComponentType<{ className?: string }> };
+type NavLink = { href: string; label: string; icon: React.ComponentType<{ className?: string }>; crown?: boolean };
 
 export type NavGroup = { label: string | null; links: NavLink[] };
 
@@ -56,13 +56,13 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/pakistan/universities", label: "Universities", icon: GraduationCap },
       { href: "/pakistan/entry-tests", label: "Entry Tests", icon: ClipboardList },
-      { href: "/pakistan/self-assessment", label: "Self Assessment", icon: PenLine },
+      { href: "/pakistan/self-assessment", label: "Self Assessment", icon: PenLine, crown: true },
       { href: "/pakistan/scholarships", label: "Scholarships", icon: Award },
       { href: "/pakistan/salary-insights", label: "Salary & Scope", icon: BarChart3 },
       { href: "/merit", label: "Merit", icon: Target },
       { href: "/career", label: "Career", icon: Rocket },
       { href: "/trends", label: "Trends", icon: TrendingUp },
-      { href: "/pakistan/assistant", label: "Manzil A.I", icon: Navigation },
+      { href: "/pakistan/assistant", label: "Manzil A.I", icon: Navigation, crown: true },
     ],
   },
   {
@@ -71,27 +71,27 @@ export const groups: NavGroup[] = [
       { href: "/abroad/countries", label: "Countries", icon: Globe },
       { href: "/abroad/scholarships", label: "Scholarships", icon: Medal },
       { href: "/abroad/test-prep", label: "Test Prep", icon: BookOpenCheck },
-      { href: "/abroad/self-assessment", label: "Self Assessment", icon: PenLine },
+      { href: "/abroad/self-assessment", label: "Self Assessment", icon: PenLine, crown: true },
       { href: "/abroad/ivy-league", label: "Ivy League", icon: Landmark },
       { href: "/money", label: "Money", icon: Wallet },
       { href: "/convince", label: "Convince", icon: FileText },
-      { href: "/abroad/assistant", label: "Safar A.I", icon: Bot },
+      { href: "/abroad/assistant", label: "Safar A.I", icon: Bot, crown: true },
     ],
   },
   {
     label: "Skills & Side Hustles",
     links: [
-      { href: "/skills/courses", label: "Courses", icon: MonitorPlay },
+      { href: "/skills/courses", label: "Courses", icon: MonitorPlay, crown: true },
       { href: "/skills/books", label: "Books", icon: BookMarked },
       { href: "/skills/clients", label: "Clients", icon: Handshake },
       { href: "/skills/platforms", label: "Platforms", icon: Store },
-      { href: "/skills/chat", label: "Hunar A.I", icon: MessageSquareText },
+      { href: "/skills/chat", label: "Hunar A.I", icon: MessageSquareText, crown: true },
     ],
   },
   {
     label: "Utilities",
     links: [
-      { href: "/college-essays", label: "College Essays", icon: Feather },
+      { href: "/college-essays", label: "College Essays", icon: Feather, crown: true },
       { href: "/builder", label: "CV Builder", icon: FileText },
     ],
   },
@@ -100,13 +100,13 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/reality-check", label: "Reality Check", icon: Eye },
       { href: "/webinars", label: "Webinars", icon: Video },
-      { href: "/study", label: "Ustaad A.I", icon: BookOpen },
+      { href: "/study", label: "Ustaad A.I", icon: BookOpen, crown: true },
     ],
   },
   {
     label: "Community",
     links: [
-      { href: "/mentors", label: "Mentor Match", icon: Users },
+      { href: "/mentors", label: "Mentor Match", icon: Users, crown: true },
       { href: "/feedback", label: "Your Voice", icon: MessageSquareHeart },
     ],
   },
@@ -130,7 +130,7 @@ export function Sidebar() {
 
   return (
     <aside className="fixed inset-y-0 left-0 z-40 flex w-72 flex-col border-r border-line bg-surface max-lg:hidden">
-      <nav className="flex-1 overflow-y-auto px-3 py-4" data-tour="sidebar-nav">
+      <nav className="flex-1 overflow-y-auto px-3 pb-4 pt-[88px]" data-tour="sidebar-nav">
         {groups.map((group) => {
           const key = group.label ?? "core";
           const isOpen = group.label ? expanded[group.label] !== false : true;
@@ -176,6 +176,12 @@ export function Sidebar() {
                         >
                           <l.icon className="h-4 w-4 shrink-0" />
                           {l.label}
+                          {l.crown && (
+                            <Crown
+                              className="ml-auto h-3.5 w-3.5 shrink-0 fill-amber text-amber"
+                              aria-label="AI assistant"
+                            />
+                          )}
                         </Link>
                       );
                     })}

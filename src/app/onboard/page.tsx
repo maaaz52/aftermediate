@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
 import { Brand } from "@/components/brand";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { QuizSectionView } from "@/components/quiz/quiz-section";
 import { MarksheetStep } from "@/components/quiz/marksheet-step";
 import { useStudent } from "@/lib/store";
@@ -59,8 +60,15 @@ export default function OnboardPage() {
 
   if (!hydrated) {
     return (
-      <div className="grid-bg grid min-h-screen place-items-center">
-        <p className="font-mono text-sm text-faint">loading your answers…</p>
+      <div className="grid-bg grid min-h-screen place-items-center px-4">
+        <div className="w-full max-w-lg space-y-5">
+          <div className="flex justify-center">
+            <Skeleton className="h-10 w-40" />
+          </div>
+          <Skeleton className="h-24 rounded-2xl" />
+          <Skeleton className="h-64 rounded-2xl" />
+          <Skeleton className="h-12 rounded-xl" />
+        </div>
       </div>
     );
   }

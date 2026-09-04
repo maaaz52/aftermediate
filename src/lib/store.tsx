@@ -22,6 +22,8 @@ export interface StudentProfile {
   education: EducationEntry[];
   city: string;
   budget: string;
+  avatarSeed: string;
+  avatarStyle: string;
   quiz: QuizAnswers;
   quizStep: number;
   quizCompletedAt: string | null;
@@ -45,6 +47,8 @@ const defaultProfile: StudentProfile = {
   education: [],
   city: "",
   budget: "",
+  avatarSeed: "",
+  avatarStyle: "geometric",
   quiz: {},
   quizStep: 0,
   quizCompletedAt: null,

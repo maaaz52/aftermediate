@@ -12,6 +12,7 @@ import { EntryTestHeatmap } from "@/components/dashboard/entry-test-heatmap";
 import { AbroadOverview } from "@/components/dashboard/abroad-overview";
 import { useStudent } from "@/lib/store";
 import { CoarseAggregate } from "@/components/dashboard/coarse-aggregate";
+import { Skeleton } from "@/components/ui/skeleton";
 
 function ZoneTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -21,9 +22,36 @@ function ZoneTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
+function DashboardSkeleton() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <Skeleton className="h-4 w-44" />
+      <Skeleton className="mt-3 h-9 w-64" />
+      <div className="mt-6 grid gap-4 lg:grid-cols-[1fr_2fr]">
+        <Skeleton className="h-28 rounded-2xl" />
+        <Skeleton className="h-28 rounded-2xl" />
+      </div>
+      <Skeleton className="mt-4 h-28 rounded-2xl" />
+      <div className="mt-4 grid gap-4 lg:grid-cols-2">
+        <Skeleton className="h-44 rounded-2xl" />
+        <Skeleton className="h-44 rounded-2xl" />
+      </div>
+      <Skeleton className="mt-4 h-40 rounded-2xl" />
+      <div className="mt-4 grid gap-4 lg:grid-cols-2">
+        <Skeleton className="h-36 rounded-2xl" />
+        <Skeleton className="h-36 rounded-2xl" />
+      </div>
+      <Skeleton className="mt-4 h-24 rounded-2xl" />
+      <Skeleton className="mt-4 h-32 rounded-2xl" />
+    </div>
+  );
+}
+
 export default function DashboardPage() {
-  const { profile } = useStudent();
+  const { profile, hydrated } = useStudent();
   const hasMarks = profile.marks.fscObtained > 0;
+
+  if (!hydrated) return <DashboardSkeleton />;
 
   return (
     <div data-tour="dashboard-welcome" className="mx-auto max-w-6xl px-4 py-8 sm:px-6">

@@ -9,6 +9,7 @@ import { PixelButton } from "@/components/ui/pixel-button";
 import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
 import { GoogleSignInButton } from "@/components/google-sign-in-button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 
@@ -161,9 +162,12 @@ export default function LoginPage() {
   if (loading) {
     return (
       <div className="grid-bg grid min-h-screen place-items-center px-4">
-        <div className="flex items-center gap-3 border-2 border-ink bg-surface px-5 py-4 shadow-[4px_4px_0_0_var(--color-ink)]">
-          <Loader2 className="h-5 w-5 animate-spin text-accent" />
-          <span className="font-mono text-sm text-ink">checking session…</span>
+        <div className="w-full max-w-sm space-y-4">
+          <div className="flex justify-center">
+            <Skeleton className="h-10 w-40" />
+          </div>
+          <Skeleton className="h-80 rounded-2xl" />
+          <Skeleton className="mx-auto h-4 w-56" />
         </div>
       </div>
     );
