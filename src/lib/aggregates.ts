@@ -41,7 +41,7 @@ export function nustAggregate(m: Marks): AggregateResult {
  * FAST computing: 50% test + 40% HSSC + 10% SSC
  */
 export function fastAggregate(m: Marks, engineering = false): AggregateResult {
-  const testPct = pct(m.entryTestObtained ?? 0, m.entryTestTotal ?? 100);
+  const testPct = pct(m.entryTestObtained ?? 0, m.entryTestTotal ?? 200);
   const fscPct = pct(m.fscObtained, m.fscTotal);
   const matPct = pct(m.matricObtained, m.matricTotal);
 
