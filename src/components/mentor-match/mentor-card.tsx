@@ -1,11 +1,12 @@
 import type { MentorProfile } from "./mentor-match-page";
-import {
-  AVAILABILITY_CONFIG,
-  FIELD_GRADIENTS,
-  PLATFORM_COLORS,
-  getInitials,
-} from "./mentor-utils";
-import { cn } from "@/lib/utils";
+import { FIELD_GRADIENTS, getInitials } from "./mentor-utils";
+import { AtSign, MessageCircle, Phone } from "lucide-react";
+
+const SOCIAL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  instagram: AtSign,
+  discord: MessageCircle,
+  whatsapp: Phone,
+};
 
 interface MentorCardProps {
   mentor: MentorProfile;
@@ -13,8 +14,6 @@ interface MentorCardProps {
 }
 
 export function MentorCard({ mentor, onSelect }: MentorCardProps) {
-  const { dot, label } = AVAILABILITY_CONFIG[mentor.availability];
-
   return (
     <div
       role="button"
@@ -26,7 +25,7 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
           onSelect(mentor.id);
         }
       }}
-      className="card-glass w-full cursor-pointer rounded-2xl p-5 text-left outline-none transition-all hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-saffron/40"
+      className="card-glass flex h-full cursor-pointer flex-col rounded-2xl p-5 text-left outline-none transition-all hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent/40"
     >
       {/* Header row */}
       <div className="flex items-center gap-3">
@@ -38,14 +37,14 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
         </div>
         <div className="min-w-0">
           <h3 className="text-lg font-bold text-ink">{mentor.name}</h3>
-          <p className="text-sm font-semibold text-saffron">
+          <p className="text-sm font-semibold text-accent">
             {mentor.institution} · {mentor.degree}
           </p>
         </div>
       </div>
 
       {/* Bio */}
-      <p className="mt-3 text-[13px] leading-relaxed text-muted">{mentor.bio}</p>
+      <p className="mt-3 flex-1 text-[13px] leading-relaxed text-muted">{mentor.bio}</p>
 
       {/* Topics */}
       <div className="mt-3 flex flex-wrap gap-1.5">
@@ -59,35 +58,24 @@ export function MentorCard({ mentor, onSelect }: MentorCardProps) {
         ))}
       </div>
 
-      {/* Availability */}
-      <div className="mt-3 flex items-center gap-1.5">
-        <span className={cn("h-2 w-2 rounded-full", dot)} />
-        <span className="text-xs text-muted">{label}</span>
-      </div>
-
-      {/* Social buttons */}
-      <div
-        className={cn(
-          "mt-3 flex gap-2",
-          mentor.socials.length === 1 ? "flex-col" : ""
-        )}
-      >
-        {mentor.socials.map((social) => (
-          <a
-            key={social.platform}
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-90",
-              mentor.socials.length === 1 ? "w-full" : "flex-1"
-            )}
-            style={{ backgroundColor: PLATFORM_COLORS[social.platform] ?? "#566073" }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            {social.label}
-          </a>
-        ))}
+      {/* Social buttons — fixed height row */}
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        {mentor.socials.map((social) => {
+          const Icon = SOCIAL_ICONS[social.platform] ?? MessageCircle;
+          return (
+            <a
+              key={social.platform}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 items-center justify-center gap-1.5 rounded-lg bg-accent text-xs font-semibold text-white transition-opacity hover:opacity-90"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Icon className="h-3.5 w-3.5" />
+              {social.platform.charAt(0).toUpperCase() + social.platform.slice(1)}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

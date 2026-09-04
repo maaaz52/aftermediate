@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { HeroSection } from "./hero-section";
 import { MentorCard } from "./mentor-card";
 import { MentorDetailModal } from "./mentor-detail-modal";
+import { BecomeMentorModal } from "./become-mentor-modal";
 import data from "@/data/mentors.json";
 
 // ── Types ──
@@ -60,6 +61,7 @@ export function MentorMatchPage() {
   const [searchQuery, setSearchQuery] = React.useState("");
   const [activeField, setActiveField] = React.useState<MentorField | "all">("all");
   const [selectedMentor, setSelectedMentor] = React.useState<MentorProfile | null>(null);
+  const [showBecomeModal, setShowBecomeModal] = React.useState(false);
 
   const filtered = React.useMemo(() => {
     let result = mentors;
@@ -91,7 +93,7 @@ export function MentorMatchPage() {
   return (
     <div>
       <div className="animate-reveal">
-        <HeroSection />
+        <HeroSection onBecomeMentor={() => setShowBecomeModal(true)} />
       </div>
 
       {/* Search + Filters */}
@@ -135,7 +137,7 @@ export function MentorMatchPage() {
         {filtered.map((mentor, index) => (
           <div
             key={mentor.id}
-            className="animate-reveal"
+            className="animate-reveal h-full"
             style={{ animationDelay: `${Math.min(index * 40, 400)}ms` }}
           >
             <MentorCard mentor={mentor} onSelect={handleSelect} />
@@ -168,19 +170,8 @@ export function MentorMatchPage() {
         Profiles are illustrative samples. Mentor availability and response times may vary.
       </p>
 
-      {/* Become a mentor CTA */}
-      <div className="mt-12 rounded-2xl border border-saffron/20 bg-saffron/5 p-8 text-center">
-        <h2 className="text-xl font-bold text-ink">Want to help others find their path?</h2>
-        <p className="mt-1 text-sm text-muted">
-          Share your journey and guide the next generation of students.
-        </p>
-        <a
-          href="/mentors/become"
-          className="mt-4 inline-flex items-center gap-2 rounded-lg bg-saffron px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-        >
-          Become a mentor
-        </a>
-      </div>
+      {/* Become a mentor modal */}
+      <BecomeMentorModal open={showBecomeModal} onClose={() => setShowBecomeModal(false)} />
 
       {/* Detail modal */}
       <MentorDetailModal

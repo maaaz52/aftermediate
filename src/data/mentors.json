@@ -1,228 +1,24 @@
 {
   "mentors": [
     {
-      "id": "mentor-ned-software",
-      "name": "Ahmed Raza",
-      "institution": "NED University",
+      "id": "mentor-furqan-afzal",
+      "name": "Furqan Afzal",
+      "institution": "COMSATS University Islamabad",
       "degree": "Software Engineering",
-      "field": "engineering",
-      "bio": "Self-studied for NET and got in on my first try. If you're preparing at home without coaching, I know exactly what that journey feels like.",
-      "topics": ["NET prep", "Self-study tips", "FSc balancing", "Past paper strategy"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
-      ],
-      "achievements": [
-        "Cleared NET-1 with 89% aggregate on first attempt",
-        "Topped my FSc class while studying from home",
-        "Tutored 15+ juniors through entry test prep"
-      ],
-      "availability": "available"
-    },
-    {
-      "id": "mentor-giki-mechanical",
-      "name": "Fatima Khan",
-      "institution": "GIKI",
-      "degree": "Mechanical Engineering",
-      "field": "engineering",
-      "bio": "GIKI entry test seemed impossible until I treated it like a game — past papers every single day. Happy to share my exact routine.",
-      "topics": ["GIKI entry test", "ECAT prep", "Time management", "Hostel life"],
-      "socials": [
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" }
-      ],
-      "achievements": [
-        "Scored in top 50 of GIKI entry test",
-        "Got merit scholarship in 2nd semester",
-        "Mentored 10+ students from my hometown"
-      ],
-      "availability": "limited"
-    },
-    {
-      "id": "mentor-aku-mbbs",
-      "name": "Hamza Siddiqui",
-      "institution": "Aga Khan University",
-      "degree": "MBBS (3rd year)",
-      "field": "medical",
-      "bio": "Got into AKU on my second attempt after a brutal first rejection. Can tell you what I did differently — and what I wish I'd known.",
-      "topics": ["AKU admission", "SAT prep", "Interview practice", "Rejection comeback"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" }
-      ],
-      "achievements": [
-        "AKU MBBS candidate — 3rd year",
-        "Shortlisted from 4,000+ applicants",
-        "Runs a small prep circle for AKU aspirants"
-      ],
-      "availability": "booked"
-    },
-    {
-      "id": "mentor-kemu-final",
-      "name": "Ayesha Malik",
-      "institution": "KEMU",
-      "degree": "MBBS (final year)",
-      "field": "medical",
-      "bio": "MDCAT felt impossible until I broke it into small daily chunks. Can share how I managed prep alongside FSc.",
-      "topics": ["MDCAT prep", "FSc + MDCAT balance", "UHS merit", "Exam anxiety"],
-      "socials": [
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
-      ],
-      "achievements": [
-        "KEMU MBBS — final year",
-        "Scored 92% in MDCAT",
-        "Consistent UHS merit list position"
-      ],
-      "availability": "limited"
-    },
-    {
-      "id": "mentor-fast-cs",
-      "name": "Bilal Ahmed",
-      "institution": "FAST-NUCES",
-      "degree": "Computer Science",
       "field": "tech",
-      "bio": "Scored 98% in NTS NAT and got FAST on the first try. Happy to share the exact study plan I used — no coaching involved.",
-      "topics": ["NAT prep", "FAST admission", "Coding for beginners", "Internship hunting"],
+      "bio": "Top Rated full-stack developer with 6+ years building SaaS, AI tools, and MERN stack applications. Shipped 55+ apps. Awwwards Winner. Happy to share how I went from FSc to shipping products for clients worldwide.",
+      "topics": ["Web Development", "SaaS", "AI Apps", "React & Next.js", "Freelancing", "Career guidance"],
       "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
+        { "platform": "instagram", "label": "Follow on Instagram", "url": "https://instagram.com/furqancodes" },
+        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/nfPazeZdaw" }
       ],
       "achievements": [
-        "98%ile in NTS NAT",
-        "FAST CS — 4th semester",
-        "Completed 2 internships at local startups"
+        "Awwwards Winner",
+        "Upwork Top Rated",
+        "55+ apps shipped across SaaS, AI, and MERN",
+        "Hackfest 3.0 Runner Up"
       ],
       "availability": "available"
-    },
-    {
-      "id": "mentor-lums-cs",
-      "name": "Zara Tariq",
-      "institution": "LUMS",
-      "degree": "Computer Science",
-      "field": "tech",
-      "bio": "Went from an average FSc score to LUMS through LCAT strategy, not luck. Not gonna lie, the LCAT was tough — happy to share what worked for me.",
-      "topics": ["LCAT prep", "LUMS admission", "Study resources", "Past paper strategy"],
-      "socials": [
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" }
-      ],
-      "achievements": [
-        "LUMS CS — 2nd year",
-        "Top 5% in LCAT 2024",
-        "Peer tutor at LUMS Learning Institute"
-      ],
-      "availability": "booked"
-    },
-    {
-      "id": "mentor-lums-econ",
-      "name": "Omar Farooq",
-      "institution": "LUMS",
-      "degree": "Economics",
-      "field": "business",
-      "bio": "Applied to LUMS twice before getting in — third time was the charm. If you're dealing with rejection letters, I get it. Let's talk.",
-      "topics": ["LUMS application", "LCAT tips", "Personal statement", "Bouncing back from rejection"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" },
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
-      ],
-      "achievements": [
-        "LUMS Economics — 3rd year",
-        "Editor of a campus economics journal",
-        "Won 2 case competitions"
-      ],
-      "availability": "available"
-    },
-    {
-      "id": "mentor-iba-bba",
-      "name": "Sana Javed",
-      "institution": "IBA Karachi",
-      "degree": "Business Administration",
-      "field": "business",
-      "bio": "IBA's admission test isn't as scary as everyone makes it. Can walk you through the aptitude sections and what actually matters.",
-      "topics": ["IBA admission test", "Aptitude prep", "BBA vs BS", "Campus life"],
-      "socials": [
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
-      ],
-      "achievements": [
-        "IBA BBA — 2nd year",
-        "Scored in top 3% of admission test",
-        "Member of IBA's student council"
-      ],
-      "availability": "limited"
-    },
-    {
-      "id": "mentor-nca-finearts",
-      "name": "Rohail Aslam",
-      "institution": "National College of Arts",
-      "degree": "Fine Arts",
-      "field": "arts",
-      "bio": "NCA's portfolio and interview process feels mysterious until you've been through it. Can show you what my portfolio looked like.",
-      "topics": ["NCA admission", "Portfolio building", "Interview prep", "Art careers"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" }
-      ],
-      "achievements": [
-        "NCA Fine Arts — 3rd year",
-        "Portfolio featured in 2 student exhibitions",
-        "Freelance illustrator for local brands"
-      ],
-      "availability": "available"
-    },
-    {
-      "id": "mentor-beaconhouse-design",
-      "name": "Maham Niazi",
-      "institution": "Beaconhouse",
-      "degree": "Design Studies",
-      "field": "arts",
-      "bio": "Got into Beaconhouse's design program through my sketchbook, not grades. Happy to review portfolios and talk design careers.",
-      "topics": ["Design portfolio", "Admission tips", "UI/UX basics", "Design careers"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" }
-      ],
-      "achievements": [
-        "Beaconhouse Design Studies — final year",
-        "Winner of a national poster design competition",
-        "Design intern at a digital agency"
-      ],
-      "availability": "booked"
-    },
-    {
-      "id": "mentor-css-pms",
-      "name": "Usman Tariq",
-      "institution": "Self-preparation (CSS aspirant)",
-      "degree": "CSS aspirant — PMS qualifier",
-      "field": "civil-services",
-      "bio": "Qualified PMS on my first attempt while working a full-time job. If you think you don't have time for CSS prep, let me prove you wrong.",
-      "topics": ["CSS prep", "PMS exam", "Self-study plan", "Optional subjects"],
-      "socials": [
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" },
-        { "platform": "whatsapp", "label": "Reach out on WhatsApp", "url": "https://wa.me/1234567890" }
-      ],
-      "achievements": [
-        "PMS written exam qualified (2024)",
-        "CSS MPT cleared",
-        "Built a free CSS study group with 200+ members"
-      ],
-      "availability": "limited"
-    },
-    {
-      "id": "mentor-csp-officer",
-      "name": "Maryam Fatima",
-      "institution": "Civil Services of Pakistan",
-      "degree": "CSP officer — recently passed",
-      "field": "civil-services",
-      "bio": "Passed CSS on my third attempt. Yes, third. If you're on attempt one or two and losing hope, please talk to me before you quit.",
-      "topics": ["CSS strategy", "Attempt planning", "Essay writing", "Interview prep"],
-      "socials": [
-        { "platform": "instagram", "label": "Connect on Instagram", "url": "https://instagram.com/example" },
-        { "platform": "discord", "label": "Join Discord", "url": "https://discord.gg/example" }
-      ],
-      "achievements": [
-        "CSP officer (2024 batch)",
-        "Scored top 20 marks in CSS essay paper",
-        "Mentors a CSS prep circle of 30+ aspirants"
-      ],
-      "availability": "booked"
     }
   ]
 }
