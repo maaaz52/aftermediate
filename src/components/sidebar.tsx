@@ -72,7 +72,6 @@ export const groups: NavGroup[] = [
       { href: "/abroad/self-assessment", label: "Self Assessment", icon: PenLine, crown: true },
       { href: "/abroad/ivy-league", label: "Ivy League", icon: Landmark },
       { href: "/money", label: "Money", icon: Wallet },
-      { href: "/convince", label: "Convince", icon: FileText },
       { href: "/abroad/assistant", label: "Safar A.I", icon: Bot, crown: true },
     ],
   },
@@ -89,6 +88,7 @@ export const groups: NavGroup[] = [
   {
     label: "Utilities",
     links: [
+      { href: "/convince", label: "Convince", icon: FileText },
       { href: "/college-essays", label: "College Essays", icon: Feather, crown: true },
       { href: "/builder", label: "CV Builder", icon: FileText },
     ],
