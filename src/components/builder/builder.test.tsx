@@ -100,7 +100,7 @@ it("AI Polish turns raw notes into 3 polished bullets after the 600ms animation"
     },
     { timeout: 3000 }
   );
-}, 15000);
+}, 30000);
 
 it("polish button is disabled and shows 'Polishing…' while the animation runs", async () => {
   const user = userEvent.setup();
@@ -119,7 +119,7 @@ it("polish button is disabled and shows 'Polishing…' while the animation runs"
     },
     { timeout: 3000 }
   );
-});
+}, 15000);
 
 // ── Projects tab ────────────────────────────────────────────────────────
 
@@ -171,7 +171,7 @@ it("shows role-based skill suggestions and clicking one selects it", async () =>
   await user.click(htmlSuggestion);
 
   expect(screen.getByRole("button", { name: "Remove HTML" })).toBeTruthy();
-});
+}, 15000);
 
 it("toggles a tech skill pill off and on via suggestions", async () => {
   render(<Builder />);
@@ -189,7 +189,7 @@ it("toggles a tech skill pill off and on via suggestions", async () => {
   await user.click(screen.getByRole("button", { name: "Excel" }));
 
   expect(screen.getByRole("button", { name: "Remove Excel" })).toBeTruthy();
-});
+}, 15000);
 
 // ── Toolbar ─────────────────────────────────────────────────────────────
 

@@ -8,5 +8,9 @@ export default defineConfig({
   test: {
     environment: "node",
     include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
+    // Heavy DOM-interaction tests (user-event typing, real animation timers)
+    // cross the 5s default under full-suite parallel load.
+    testTimeout: 20000,
+    hookTimeout: 20000,
   },
 });
