@@ -7,7 +7,8 @@
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   name text,
-  avatar text,
+  avatar_style text default 'adventurer',
+  avatar_seed text default '',
   bio text,
   stream text check (stream in ('pre-medical', 'pre-engineering', 'ics', 'icom', 'alevel')),
   board text,
@@ -26,6 +27,11 @@ create table if not exists public.profiles (
 
 -- Migration for databases created before the Self Assessment feature:
 -- alter table public.profiles add column if not exists practice jsonb default '[]'::jsonb;
+
+-- Migration for DiceBear avatars (replaces old avatar text column):
+-- alter table public.profiles add column if not exists avatar_style text default 'adventurer';
+-- alter table public.profiles add column if not exists avatar_seed text default '';
+-- alter table public.profiles drop column if exists avatar;
 
 -- ============================================================
 -- Row Level Security

@@ -14,8 +14,9 @@ const RATE_WINDOW_MS = 60 * 1000;
 
 /**
  * Everything the bots are allowed to know about a student. Deliberately not
- * `*`: bio, practice, watchlist, education, skills and avatar stay out of
- * every prompt, and a wrong id cannot turn into a wide read.
+ * `*`: bio, practice, watchlist, education, skills, avatar_style, and
+ * avatar_seed stay out of every prompt, and a wrong id cannot turn into a
+ * wide read.
  */
 const PROFILE_COLUMNS = "name, stream, marks, interests, city, budget, quiz";
 

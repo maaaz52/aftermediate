@@ -154,7 +154,8 @@ describe("formatStudentContext", () => {
       city: "Lahore",
       budget: "50000",
       quiz: { budgetMonthly: 50000, dreamField: "molecular oncology" },
-      avatar: uuid,
+      avatar_style: "adventurer",
+      avatar_seed: uuid,
       education: [{ id: uuid, degree: "FSc" }],
     };
     const out = formatStudentContext(buildStudentContext(row));

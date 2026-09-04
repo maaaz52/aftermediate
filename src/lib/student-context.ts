@@ -8,10 +8,10 @@
  *  Two rules keep that safe:
  *
  *  1. Only seven columns are read — name, stream, marks, interests, city,
- *     budget, quiz. bio, practice, watchlist, education, skills and avatar
- *     are deliberately ignored: repeating them in a prompt would widen the
- *     blast radius of a leaked transcript for no benefit, and a test fails
- *     if this module ever touches one.
+ *     budget, quiz. bio, practice, watchlist, education, skills, avatar_style,
+ *     and avatar_seed are deliberately ignored: repeating them in a prompt
+ *     would widen the blast radius of a leaked transcript for no benefit,
+ *     and a test fails if this module ever touches one.
  *  2. Nothing is trusted just because it came out of the database. Every
  *     value is type-checked, allowlisted against the quiz options it came
  *     from, clamped to a sane range, and flattened, so a newline in a name

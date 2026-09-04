@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import type { Marks, PracticeAttempt, QuizAnswers, Stream, WatchlistEntry } from "@/lib/types";
+import type { AvatarStyleId } from "@/lib/avatar";
 
 export interface EducationEntry {
   id: string;
@@ -13,7 +14,8 @@ export interface EducationEntry {
 
 export interface StudentProfile {
   name: string;
-  avatar: string;
+  avatarStyle: AvatarStyleId;
+  avatarSeed: string;
   bio: string;
   stream: Stream | null;
   marks: Marks;
@@ -22,8 +24,6 @@ export interface StudentProfile {
   education: EducationEntry[];
   city: string;
   budget: string;
-  avatarSeed: string;
-  avatarStyle: string;
   quiz: QuizAnswers;
   quizStep: number;
   quizCompletedAt: string | null;
@@ -33,7 +33,8 @@ export interface StudentProfile {
 
 const defaultProfile: StudentProfile = {
   name: "",
-  avatar: "",
+  avatarStyle: "adventurer",
+  avatarSeed: "",
   bio: "",
   stream: null,
   marks: {

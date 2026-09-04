@@ -1,27 +1,54 @@
-const AVATAR_PALETTES: Record<string, string[]> = {
-  geometric: ["#f59e0b", "#3b82f6", "#10b981", "#8b5cf6", "#ef4444"],
-  abstract: ["#f59e0b", "#06b6d4", "#a855f7", "#ec4899", "#84cc16"],
-  minimal: ["#f59e0b", "#64748b", "#0ea5e9", "#22c55e", "#f97316"],
-};
+import { Avatar, Style } from "@dicebear/core";
 
-function hashStr(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) {
-    h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+import adventurer from "@dicebear/styles/adventurer.json" with { type: "json" };
+import adventurerNeutral from "@dicebear/styles/adventurer-neutral.json" with { type: "json" };
+import bottts from "@dicebear/styles/bottts.json" with { type: "json" };
+import botttsNeutral from "@dicebear/styles/bottts-neutral.json" with { type: "json" };
+import funEmoji from "@dicebear/styles/fun-emoji.json" with { type: "json" };
+import lorelei from "@dicebear/styles/lorelei.json" with { type: "json" };
+import loreleiNeutral from "@dicebear/styles/lorelei-neutral.json" with { type: "json" };
+import notionists from "@dicebear/styles/notionists.json" with { type: "json" };
+import bigSmile from "@dicebear/styles/big-smile.json" with { type: "json" };
+import initials from "@dicebear/styles/initials.json" with { type: "json" };
+
+export const AVATAR_STYLES = [
+  { id: "adventurer", label: "Adventurer", definition: adventurer },
+  { id: "adventurer-neutral", label: "Adventurer Neutral", definition: adventurerNeutral },
+  { id: "bottts", label: "Bottts", definition: bottts },
+  { id: "bottts-neutral", label: "Bottts Neutral", definition: botttsNeutral },
+  { id: "fun-emoji", label: "Fun Emoji", definition: funEmoji },
+  { id: "lorelei", label: "Lorelei", definition: lorelei },
+  { id: "lorelei-neutral", label: "Lorelei Neutral", definition: loreleiNeutral },
+  { id: "notionists", label: "Notionists", definition: notionists },
+  { id: "big-smile", label: "Big Smile", definition: bigSmile },
+  { id: "initials", label: "Initials", definition: initials },
+];
+
+export type AvatarStyleId = (typeof AVATAR_STYLES)[number]["id"];
+
+const styleCache = new Map<string, Style>();
+
+function getStyle(styleId: string, definition: (typeof AVATAR_STYLES)[number]["definition"]): Style {
+  if (!styleCache.has(styleId)) {
+    styleCache.set(styleId, new Style(definition as any));
   }
-  return Math.abs(h);
+  return styleCache.get(styleId)!;
 }
 
-export function generateAvatarSvg(style: string | undefined, seed: string): string {
-  const h = hashStr(seed);
-  const palette = AVATAR_PALETTES[style ?? "geometric"] ?? AVATAR_PALETTES.geometric;
-  const bg = palette[h % palette.length];
-  const fg = palette[(h + 2) % palette.length];
-  const letter = (seed.charAt(0) || "A").toUpperCase();
+export function generateAvatarSvg(styleId: AvatarStyleId, seed: string): string {
+  const styleDef = AVATAR_STYLES.find((s) => s.id === styleId);
+  if (!styleDef) {
+    const fallback = AVATAR_STYLES[0];
+    return new Avatar(getStyle(fallback.id, fallback.definition), { seed, size: 96 }).toString();
+  }
+  return new Avatar(getStyle(styleDef.id, styleDef.definition), { seed, size: 96 }).toString();
+}
 
-  return `<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-    <rect width="80" height="80" rx="16" fill="${bg}"/>
-    <circle cx="${20 + (h % 40)}" cy="${20 + ((h >> 3) % 40)}" r="${12 + (h % 8)}" fill="${fg}" opacity="0.3"/>
-    <text x="40" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="32" fill="white">${letter}</text>
-  </svg>`;
+export function generateAvatarDataUri(styleId: AvatarStyleId, seed: string): string {
+  const styleDef = AVATAR_STYLES.find((s) => s.id === styleId);
+  if (!styleDef) {
+    const fallback = AVATAR_STYLES[0];
+    return new Avatar(getStyle(fallback.id, fallback.definition), { seed, size: 96 }).toDataUri();
+  }
+  return new Avatar(getStyle(styleDef.id, styleDef.definition), { seed, size: 96 }).toDataUri();
 }

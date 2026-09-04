@@ -11,8 +11,7 @@ import {
   X,
   Plus,
   Trash2,
-  Camera,
-  UserRound,
+  Shuffle,
   Star,
   Heart,
   Briefcase,
@@ -27,6 +26,7 @@ import { useStudent, type EducationEntry } from "@/lib/store";
 import { useAuth } from "@/lib/auth";
 import { isQuizComplete } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
+import { AVATAR_STYLES, type AvatarStyleId, generateAvatarSvg } from "@/lib/avatar";
 
 const streamLabel: Record<string, string> = {
   "pre-medical": "FSc Pre-Medical",
@@ -98,6 +98,18 @@ export default function ProfilePage() {
   const [editing, setEditing] = React.useState<string | null>(null);
   const [draft, setDraft] = React.useState<Record<string, string>>({});
   const [avatarOpen, setAvatarOpen] = React.useState(false);
+  const avatarRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (!avatarOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (avatarRef.current && !avatarRef.current.contains(e.target as Node)) {
+        setAvatarOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [avatarOpen]);
 
   const fscPct =
     profile.marks.fscTotal > 0
@@ -121,13 +133,14 @@ export default function ProfilePage() {
     update({ marks: { ...profile.marks, ...patches } });
   }
 
-  function handleAvatar(file: File | undefined) {
-    if (!file) return;
-    if (!file.type.startsWith("image/")) return;
-    if (file.size > 2 * 1024 * 1024) return;
-    const reader = new FileReader();
-    reader.onload = () => update({ avatar: String(reader.result) });
-    reader.readAsDataURL(file);
+  function selectAvatarStyle(styleId: AvatarStyleId) {
+    const seed = profile.avatarSeed || profile.name || user?.user_metadata?.full_name || "student";
+    update({ avatarStyle: styleId, avatarSeed: seed });
+  }
+
+  function randomizeSeed() {
+    const seed = Math.random().toString(36).slice(2, 10);
+    update({ avatarSeed: seed });
   }
 
   function saveBasic() {
@@ -203,52 +216,70 @@ export default function ProfilePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
       {/* ===== Hero ===== */}
-      <div className="relative overflow-hidden rounded-3xl border border-line bg-surface p-6 sm:p-8">
-        <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-saffron/10 blur-2xl" />
-        <div className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-emerald/10 blur-2xl" />
+      <div className="relative rounded-3xl border border-line bg-surface p-6 sm:p-8">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
+          <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-saffron/10 blur-2xl" />
+          <div className="absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-emerald/10 blur-2xl" />
+        </div>
 
         <div className="relative flex flex-col items-center gap-5 sm:flex-row sm:items-start">
-          <div className="group relative">
+          <div className="group relative" ref={avatarRef}>
             <div className="grid h-24 w-24 place-items-center overflow-hidden rounded-3xl border-2 border-ink bg-surface-2 shadow-[4px_4px_0_0_var(--color-ink)]">
-              {profile.avatar ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={profile.avatar} alt="Profile" className="h-full w-full object-cover" />
-              ) : (
-                <UserRound className="h-10 w-10 text-faint" />
-              )}
+              {(() => {
+                const seed = profile.avatarSeed || profile.name || user?.user_metadata?.full_name || "student";
+                const svg = generateAvatarSvg(profile.avatarStyle, seed);
+                return (
+                  <div
+                    className="h-full w-full [&>svg]:h-full [&>svg]:w-full"
+                    dangerouslySetInnerHTML={{ __html: svg }}
+                  />
+                );
+              })()}
             </div>
             <button
-              onClick={() => setAvatarOpen((o) => !o)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setAvatarOpen((o) => !o);
+              }}
               className="absolute -bottom-2 -right-2 grid h-9 w-9 place-items-center rounded-xl border-2 border-ink bg-saffron text-background shadow-[2px_2px_0_0_var(--color-ink)] transition-transform hover:scale-105"
-              aria-label="Change photo"
+              aria-label="Change avatar"
             >
-              <Camera className="h-4 w-4" />
+              <Shuffle className="h-4 w-4" />
             </button>
             {avatarOpen && (
-              <div className="absolute left-0 top-full z-20 mt-3 w-52 rounded-2xl border border-line bg-surface p-3 shadow-lg animate-rise">
-                <label className="block cursor-pointer rounded-lg bg-surface-2 px-3 py-2 text-sm text-ink hover:bg-surface-2/70">
-                  Upload photo
-                  <input
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={(e) => {
-                      handleAvatar(e.target.files?.[0]);
-                      setAvatarOpen(false);
-                    }}
-                  />
-                </label>
-                {profile.avatar && (
-                  <button
-                    onClick={() => {
-                      update({ avatar: "" });
-                      setAvatarOpen(false);
-                    }}
-                    className="mt-1 w-full rounded-lg px-3 py-2 text-left text-sm text-danger hover:bg-danger/10"
-                  >
-                    Remove photo
-                  </button>
-                )}
+              <div className="absolute left-1/2 top-full z-20 mt-3 w-72 -translate-x-1/2 rounded-2xl border border-line bg-surface p-3 shadow-lg animate-rise" onClick={(e) => e.stopPropagation()}>
+                <p className="mb-2 text-xs font-medium text-muted">Choose a style</p>
+                <div className="grid grid-cols-5 gap-2">
+                  {AVATAR_STYLES.map((style) => (
+                    <button
+                      key={style.id}
+                      onClick={() => {
+                        selectAvatarStyle(style.id);
+                        setAvatarOpen(false);
+                      }}
+                      className={cn(
+                        "grid h-10 w-10 place-items-center overflow-hidden rounded-lg border-2 transition-all hover:scale-105",
+                        profile.avatarStyle === style.id
+                          ? "border-saffron bg-saffron/10"
+                          : "border-line bg-surface-2 hover:border-saffron/50"
+                      )}
+                      title={style.label}
+                    >
+                      <div
+                        className="flex h-full w-full items-center justify-center [&>svg]:h-full [&>svg]:w-full"
+                        dangerouslySetInnerHTML={{
+                          __html: generateAvatarSvg(style.id, profile.avatarSeed || "preview"),
+                        }}
+                      />
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={randomizeSeed}
+                  className="mt-2 w-full rounded-lg px-3 py-2 text-sm text-muted hover:bg-surface-2"
+                >
+                  <Shuffle className="mr-1.5 inline h-3.5 w-3.5" /> Randomize
+                </button>
               </div>
             )}
           </div>

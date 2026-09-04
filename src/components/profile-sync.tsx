@@ -35,7 +35,7 @@ export function ProfileSync() {
 
     supabase
       .from("profiles")
-      .select("name, avatar, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, practice, updated_at")
+      .select("name, avatar_style, avatar_seed, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, practice, updated_at")
       .eq("id", user.id)
       .maybeSingle()
       .then(({ data, error }) => {
@@ -49,7 +49,8 @@ export function ProfileSync() {
         const remote: Partial<StudentProfile> | null = data
           ? {
               name: data.name || user.user_metadata?.full_name || "",
-              avatar: data.avatar ?? "",
+              avatarStyle: data.avatar_style ?? "adventurer",
+              avatarSeed: data.avatar_seed ?? "",
               bio: data.bio ?? "",
               stream: data.stream ?? null,
               marks: data.marks ?? undefined,
@@ -106,7 +107,8 @@ export function ProfileSync() {
         .upsert({
           id: user.id,
           name: profile.name || user.user_metadata?.full_name || null,
-          avatar: profile.avatar || null,
+          avatar_style: profile.avatarStyle,
+          avatar_seed: profile.avatarSeed,
           bio: profile.bio || null,
           stream: profile.stream,
           marks: profile.marks,

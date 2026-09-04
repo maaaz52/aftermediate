@@ -156,7 +156,7 @@ describe("POST /api/chat", () => {
 
     expect(db.select).toContain("marks");
     expect(db.select).toContain("quiz");
-    for (const hidden of ["bio", "practice", "watchlist", "education", "skills", "avatar"]) {
+    for (const hidden of ["bio", "practice", "watchlist", "education", "skills", "avatar_style", "avatar_seed"]) {
       expect(db.select, hidden).not.toContain(hidden);
     }
   });
