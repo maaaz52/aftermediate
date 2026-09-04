@@ -106,7 +106,7 @@ export function DailySprint() {
     return (
       <div
         className={cn(
-          "card-glass relative rounded-2xl p-5",
+          "card-glass relative flex flex-col rounded-2xl p-5",
           !doneToday && "ring-1 ring-saffron/40"
         )}
         data-tour="daily-sprint"
@@ -147,7 +147,7 @@ export function DailySprint() {
           type="button"
           onClick={startSprint}
           disabled={!canStart}
-          className="mt-4 w-full"
+          className="mt-auto w-full"
         >
           {canStart ? "Start today's sprint →" : "Sprints coming soon for your stream"}
         </Button>
