@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import * as React from "react";
 import {
   Award,
-  BarChart3,
   BookMarked,
   BookOpen,
   BookOpenCheck,
@@ -58,7 +57,6 @@ export const groups: NavGroup[] = [
       { href: "/pakistan/entry-tests", label: "Entry Tests", icon: ClipboardList },
       { href: "/pakistan/self-assessment", label: "Self Assessment", icon: PenLine, crown: true },
       { href: "/pakistan/scholarships", label: "Scholarships", icon: Award },
-      { href: "/pakistan/salary-insights", label: "Salary & Scope", icon: BarChart3 },
       { href: "/merit", label: "Merit", icon: Target },
       { href: "/career", label: "Career", icon: Rocket },
       { href: "/trends", label: "Trends", icon: TrendingUp },

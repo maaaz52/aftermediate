@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Rocket } from "lucide-react";
+import { BarChart3, Rocket } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { SalaryExplorer } from "@/components/pakistan/salary-explorer";
 import { useStudent } from "@/lib/store";
 import { data, getMajorsByStream } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -26,17 +27,27 @@ export default function CareerPage() {
 
   return (
     <div data-tour="career" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <div className="flex items-center gap-2">
+      {/* ── Hero ── */}
+      <div className="animate-reveal flex items-center gap-2">
         <Badge variant="violet">Career</Badge>
         <span className="font-mono text-xs text-faint">discover · simulate · skill up</span>
       </div>
-      <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Try a major before you commit.</h1>
-      <p className="mt-2 max-w-xl text-muted">
-        Every field here has a skill tree, a day-in-the-life simulation, and short courses you can
-        start today.
+      <h1
+        className="animate-reveal mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
+        style={{ animationDelay: "60ms" }}
+      >
+        Explore careers and what they actually pay.
+      </h1>
+      <p
+        className="animate-reveal mt-2 max-w-xl text-muted"
+        style={{ animationDelay: "120ms" }}
+      >
+        Every field has a skill tree, a day-in-the-life simulation, and short courses you can
+        start today — plus real salary data across Pakistan.
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-2">
+      {/* ── Stream filters ── */}
+      <div className="animate-reveal mt-8 flex flex-wrap gap-2" style={{ animationDelay: "180ms" }}>
         {filters.map((f) => (
           <button
             key={f.id}
@@ -53,7 +64,8 @@ export default function CareerPage() {
         ))}
       </div>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ── Major cards ── */}
+      <div className="animate-reveal mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" style={{ animationDelay: "240ms" }}>
         {majors.map((m) => (
           <Link
             key={m.id}
@@ -79,6 +91,23 @@ export default function CareerPage() {
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* ── Salary landscape ── */}
+      <div className="animate-reveal mt-16 border-t border-line pt-12" style={{ animationDelay: "300ms" }}>
+        <div className="flex items-center gap-2">
+          <BarChart3 className="h-5 w-5 text-saffron" />
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+            Salary landscape in Pakistan
+          </h2>
+        </div>
+        <p className="mt-2 max-w-xl text-muted text-sm">
+          Real salary ranges by field and experience level — plus the honest trade-off between
+          freelancing, government, and private careers.
+        </p>
+        <div className="mt-6">
+          <SalaryExplorer />
+        </div>
       </div>
     </div>
   );
