@@ -160,3 +160,42 @@ export function overallStanding(m: Marks): Standing {
   if (value >= 60) return { value, percentile: 40, label: "top 60%" };
   return { value, percentile: 20, label: "top 80%" };
 }
+
+export interface TopUniChance {
+  chance: number; // 0-100 estimated likelihood of a top-university seat
+  band: string; // short verdict, e.g. "Very high"
+  targets: string[]; // programs/campuses the student clears
+}
+
+/**
+ * Rough chance of landing a seat at a top Pakistani university, from the
+ * student's FSc+Matric standing alone (entry test excluded — that's the
+ * unknown variable).
+ *
+ * Calibrated against published 2024-25 closing merits (aggregate %):
+ *   NUST CS (SEECS)      ~78%   NUST SE ~76%  NUST EE ~75%
+ *   FAST CS (Lahore)     ~73%   FAST SE ~73%  UET CS ~75%
+ *   GIKI CS              ~75%   COMSATS CS ~70%
+ *
+ * These are aggregate cutoffs that INCLUDE the entry test, so the band here
+ * is deliberately conservative: strong boards → strong chances, but the test
+ * still decides. `ponytail: threshold heuristic, re-tune when official
+ * closing lists for the current cycle are out.`
+ */
+export function topUniChance(m: Marks): TopUniChance {
+  const fscPct = pct(m.fscObtained, m.fscTotal);
+  const matPct = pct(m.matricObtained, m.matricTotal);
+  const standing = fscPct * 0.6 + matPct * 0.4;
+
+  if (standing >= 85)
+    return { chance: 90, band: "Very high", targets: ["NUST CS/SE", "FAST CS", "UET CS"] };
+  if (standing >= 80)
+    return { chance: 75, band: "High", targets: ["FAST CS", "UET CS", "NUST (select programs)"] };
+  if (standing >= 75)
+    return { chance: 55, band: "Moderate", targets: ["UET", "FAST (smaller campuses)", "GIKI"] };
+  if (standing >= 70)
+    return { chance: 35, band: "Moderate", targets: ["COMSATS", "UET sub-campuses", "FAST (regional)"] };
+  if (standing >= 60)
+    return { chance: 15, band: "Low", targets: ["Regional universities", "COMSATS (some programs)"] };
+  return { chance: 5, band: "Low", targets: [] };
+}
