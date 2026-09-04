@@ -54,11 +54,6 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "HEC, need-based, merit and provincial funding for studying inside Pakistan.",
   },
   {
-    href: "/pakistan/salary-insights",
-    label: "Salary & Scope",
-    purpose: "What each field pays in Pakistan, across government, private and freelancing paths.",
-  },
-  {
     href: "/merit",
     label: "Merit",
     purpose: "Aggregate calculators for NUST, FAST, UET and PMDC from matric, FSc and entry-test marks.",

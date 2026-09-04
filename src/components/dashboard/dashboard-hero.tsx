@@ -6,6 +6,7 @@ import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
 import { generateAvatarSvg } from "@/lib/avatar";
+import { mockAttempts } from "@/lib/practice";
 
 export function DashboardHero() {
   const { profile } = useStudent();
@@ -19,6 +20,26 @@ export function DashboardHero() {
 
   const seed = profile.avatarSeed || profile.name || "student";
   const avatarSvg = generateAvatarSvg(profile.avatarStyle, seed);
+
+  // Profile completion
+  const checks = [
+    !!profile.name,
+    !!profile.stream,
+    profile.marks.fscObtained > 0,
+    profile.marks.matricObtained > 0,
+    !!q.entryTest && q.entryTest !== "none",
+    !!q.city,
+    q.budgetMonthly != null && q.budgetMonthly > 0,
+    profile.interests.length > 0,
+    (profile.watchlist ?? []).length > 0,
+  ];
+  const completion = Math.round((checks.filter(Boolean).length / checks.length) * 100);
+
+  // Quick stats
+  const practice = mockAttempts(profile.practice);
+  const testIds = [...new Set(practice.map((a) => a.testId))];
+  const best = practice.length > 0 ? Math.max(...practice.map((a) => a.percent)) : null;
+  const tracked = (profile.watchlist ?? []).length;
 
   return (
     <div className="card-glass rounded-2xl p-5">
@@ -53,6 +74,38 @@ export function DashboardHero() {
         <Link href="/profile" className="shrink-0 text-xs font-medium text-saffron hover:underline">
           Edit →
         </Link>
+      </div>
+
+      {/* Completion + quick stats */}
+      <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-line pt-4">
+        <div className="min-w-[140px] flex-1">
+          <div className="flex items-center justify-between text-[11px] text-muted">
+            <span>Profile</span>
+            <span className="font-mono font-semibold text-ink">{completion}%</span>
+          </div>
+          <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-surface-2">
+            <div
+              className="h-full rounded-full bg-saffron transition-all duration-500"
+              style={{ width: `${completion}%` }}
+            />
+          </div>
+        </div>
+        <div className="flex gap-4 text-center">
+          <div>
+            <p className="font-mono text-lg font-bold text-ink">{practice.length}</p>
+            <p className="text-[10px] text-muted">Tests</p>
+          </div>
+          <div>
+            <p className="font-mono text-lg font-bold text-ink">{tracked}</p>
+            <p className="text-[10px] text-muted">Tracked</p>
+          </div>
+          {best !== null && (
+            <div>
+              <p className="font-mono text-lg font-bold text-emerald">{best.toFixed(0)}%</p>
+              <p className="text-[10px] text-muted">Best</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
