@@ -32,7 +32,7 @@ export function PracticeSummary() {
           </p>
           <Link
             href="/pakistan/self-assessment"
-            className={cn(buttonVariants({ size: "default" }), "mt-3")}
+            className={cn(buttonVariants({ size: "default" }), "mt-3 w-full")}
           >
             Take your first mock
           </Link>
