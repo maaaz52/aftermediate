@@ -12,7 +12,8 @@
     "updatedYear": 2025,
     "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
     "description": "Hands-on HTML and CSS curriculum with five certification projects, from a survey form to a landing page. Build a portfolio while learning, entirely for free.",
-    "why": "Free certification that proves coding skills to Pakistani clients, needing only a laptop and internet."
+    "why": "Free certification that proves coding skills to Pakistani clients, needing only a laptop and internet.",
+    "videoId": "mU6anWqZJcc"
   },
   {
     "id": "javascript-info",
@@ -27,7 +28,8 @@
     "updatedYear": 2025,
     "url": "https://javascript.info/",
     "description": "An in-depth, up-to-date JavaScript tutorial covering core language, objects, promises, and browser APIs with practical tasks after each section.",
-    "why": "JavaScript is the highest-demand skill in Pakistani freelance marketplaces, and this free tutorial builds real logic skills."
+    "why": "JavaScript is the highest-demand skill in Pakistani freelance marketplaces, and this free tutorial builds real logic skills.",
+    "videoId": "PkZNo7MFNFg"
   },
   {
     "id": "cs50-web",
@@ -42,7 +44,8 @@
     "updatedYear": 2024,
     "url": "https://cs50.harvard.edu/web/2020/",
     "description": "Harvard's rigorous web programming course using Python, Django, JavaScript, and SQL with project-based assignments including a social network.",
-    "why": "A Harvard name on the CV opens doors for Pakistani graduates competing for overseas remote roles."
+    "why": "A Harvard name on the CV opens doors for Pakistani graduates competing for overseas remote roles.",
+    "videoId": "8mAITcNt710"
   },
   {
     "id": "react-bootcamp",
@@ -252,7 +255,8 @@
     "updatedYear": 2025,
     "url": "https://www.freecodecamp.org/learn/relational-database/",
     "description": "Learn SQL by building real database projects with PostgreSQL, Bash, and Git. Covers queries, joins, and database design with a free certificate.",
-    "why": "SQL unlocks data analyst roles locally and remotely, with everything needed available free."
+    "why": "SQL unlocks data analyst roles locally and remotely, with everything needed available free.",
+    "videoId": "HXV3zeQKqGY"
   },
   {
     "id": "python-data",
@@ -402,7 +406,8 @@
     "updatedYear": 2024,
     "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
     "description": "Learn TensorFlow, neural networks, and model evaluation by completing five hands-on projects for a free certification.",
-    "why": "A free path into AI engineering that proves project skills to employers, not just course completion."
+    "why": "A free path into AI engineering that proves project skills to employers, not just course completion.",
+    "videoId": "i_LwzRVP7bg"
   },
   {
     "id": "english-writing",
@@ -718,5 +723,32 @@
     "url": "https://www.coursera.org/learn/financial-planning",
     "description": "Teaches budgeting, saving, and investing basics tailored to young adults starting their careers and incomes.",
     "why": "Helps Pakistani freelancers manage irregular income and save for long-term financial stability."
+  },
+  {
+    "id": "vibe-coding",
+    "title": "Vibe Coding Complete Course",
+    "provider": "Furqan (YouTube)",
+    "track": "ai",
+    "level": "beginner",
+    "rating": 4.7,
+    "hours": 2,
+    "costUsd": 0,
+    "certificate": false,
+    "updatedYear": 2026,
+    "url": "https://youtube.com/playlist?list=PLQbMldDbZG9o",
+    "description": "A two-lecture introduction to vibe coding — building real apps by describing them to AI. Covers the workflow, tools, and how to go from idea to working product.",
+    "why": "Vibe coding is the fastest on-ramp for Pakistani students and freelancers to ship client projects without waiting to master a language first.",
+    "episodes": [
+      {
+        "id": "part-1",
+        "title": "Part 1 — Vibe Coding Complete Course",
+        "videoId": "UCErudXznrE"
+      },
+      {
+        "id": "part-2",
+        "title": "Part 2 — Master Backend",
+        "videoId": "46Tyh7l4vzA"
+      }
+    ]
   }
 ]

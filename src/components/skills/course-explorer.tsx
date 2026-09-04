@@ -1,12 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { Award, Clock, ExternalLink, ListFilter, RotateCcw, Route, Search, X } from "lucide-react";
+import { Award, Clock, ExternalLink, ListFilter, Play, RotateCcw, Route, Search, X } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import coursesJson from "@/data/skills-courses.json";
 import { pkr, pathProgress, skillPaths, sortByKey, trackCounts, useLocalStorage } from "@/lib/skills";
 
-type Course = (typeof coursesJson)[number];
+type Course = (typeof coursesJson)[number] & { videoId?: string; playlistId?: string };
 type Track = Course["track"];
 type Level = Course["level"];
 type SortKey = "rating" | "hours" | "cost" | "title";
@@ -309,6 +310,19 @@ export function CourseExplorer() {
                       <span className="font-semibold">Why:</span> {c.why}
                     </p>
                     <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                      {c.videoId || c.playlistId ? (
+                        <Link
+                          href={`/skills/courses/${c.id}`}
+                          className="inline-flex items-center gap-1.5 rounded-md bg-accent px-2.5 py-1 text-[11px] font-bold text-background transition-colors hover:brightness-110"
+                        >
+                          <Play className="h-3 w-3 fill-current" />
+                          Watch course
+                        </Link>
+                      ) : (
+                        <span className="rounded-md bg-surface-2 px-2 py-0.5 text-[11px] font-bold text-muted">
+                          External course
+                        </span>
+                      )}
                       <span className="rounded-md bg-accent/10 px-2 py-0.5 text-[11px] font-bold text-accent">
                         {TRACK_LABELS[c.track]}
                       </span>
