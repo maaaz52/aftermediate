@@ -48,8 +48,6 @@ const defaultProfile: StudentProfile = {
   education: [],
   city: "",
   budget: "",
-  avatarSeed: "",
-  avatarStyle: "geometric",
   quiz: {},
   quizStep: 0,
   quizCompletedAt: null,
