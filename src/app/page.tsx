@@ -13,6 +13,7 @@ import { NustMeritBar } from "@/components/nust-merit-bar";
 import { ExportsBars } from "@/components/exports-bars";
 import { CountUp } from "@/components/count-up";
 import { SiteFooter } from "@/components/landing/footer";
+import { Faq } from "@/components/landing/faq";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { data } from "@/lib/data";
 
@@ -317,6 +318,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* FAQ */}
+        <Faq />
 
         {/* FINAL CTA */}
         <section className="border-t-2 border-ink bg-accent">
