@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Loader2, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { MessageContent } from "@/components/message-content";
 import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
 
 type Msg = ChatMessage;
@@ -91,11 +92,14 @@ export function ManzilAssistant() {
           <div key={i} className={cn("flex", m.role === "user" ? "justify-end" : "justify-start")}>
             <div
               className={cn(
-                "max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
-                m.role === "user" ? "bg-saffron text-background" : "bg-surface-2 text-ink"
+                "max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+                m.role === "user"
+                  ? "whitespace-pre-wrap bg-saffron text-background"
+                  : "bg-surface-2 text-ink"
               )}
             >
-              {m.content || (streaming && <Loader2 className="h-4 w-4 animate-spin" />)}
+              {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
+              {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
             </div>
           </div>
         ))}
