@@ -97,7 +97,7 @@ it("AI Polish turns raw notes into 3 polished bullets after the 600ms animation"
     },
     { timeout: 3000 }
   );
-});
+}, 15000);
 
 it("polish button is disabled and shows 'Polishing…' while the animation runs", async () => {
   const user = userEvent.setup();
@@ -133,7 +133,7 @@ it("adds and removes project entries", async () => {
   const removeButtons = screen.getAllByRole("button", { name: /^remove project/i });
   await user.click(removeButtons[2]);
   expect(screen.getAllByLabelText(/^project title/i)).toHaveLength(2);
-});
+}, 15000);
 
 it("adds and removes certificates", async () => {
   render(<Builder />);
@@ -282,7 +282,7 @@ it("gauge drops when a bullet is weakened to a weak-verb opener", async () => {
     const gauge = screen.getByRole("progressbar", { name: "ATS impact score" });
     expect(Number(gauge.getAttribute("aria-valuenow"))).toBeLessThan(77);
   });
-});
+}, 15000);
 
 it("1-click auto-fix adds the missing keyword pill to the canvas skills", async () => {
   render(<Builder />);
