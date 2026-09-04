@@ -22,15 +22,6 @@ import { ShareModal, slugify } from "./share-modal";
 
 /** Length of the "AI polishing…" animation before bullets land. */
 export const POLISH_DELAY_MS = 600;
-
-/**
- * Full state + handler surface owned by the Builder orchestrator.
- *
- * Task 3 consumers (resume-canvas.tsx, ats-panel.tsx) are rendered by Builder
- * and receive slices of this interface:
- * - canvas: resume, template, mode, updateBullet
- * - ats panel: mode, setMode, ats, feedback, applyAutoFix
- */
 export interface BuilderState {
   resume: ResumeData;
   activeTab: TabId;
@@ -64,21 +55,51 @@ export interface BuilderState {
   applyAutoFix: (item: FeedbackItem) => void;
 }
 
-/** Dark matte page with subtle 24px grid lines (spec: #09090B). */
-const GRID_BG =
-  "bg-[repeating-linear-gradient(0deg,transparent,transparent_24px,rgba(255,255,255,0.02)_25px),repeating-linear-gradient(90deg,transparent,transparent_24px,rgba(255,255,255,0.02)_25px)]";
+export interface BuilderProps {
+  /** Starting resume from the student's profile. Ignored when a saved draft exists. */
+  initial?: ResumeData;
+}
 
-export function Builder() {
-  const [resume, setResume] = useState<ResumeData>(mockResume);
+/** Local storage key for autosave. */
+export const RESUME_STORAGE_KEY = "aftermediate:builder-resume";
+
+export function Builder({ initial }: BuilderProps) {
+  const [resume, setResume] = useState<ResumeData>(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const saved = window.localStorage.getItem(RESUME_STORAGE_KEY);
+        if (saved) return JSON.parse(saved) as ResumeData;
+      } catch {
+        // Corrupt draft — fall through to initial/mock.
+      }
+    }
+    return initial ?? mockResume;
+  });
   const [activeTab, setActiveTab] = useState<TabId>("identity");
   const [template, setTemplate] = useState<TemplateId>("academic");
   const [mode, setMode] = useState<RecruiterMode>("startup");
   const [polishing, setPolishing] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
+  const [downloading, setDownloading] = useState(false);
+  const [saved, setSaved] = useState(false);
   const polishingRef = useRef(false);
   const downloadingRef = useRef(false);
   const polishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
+
+  // Autosave (debounced) — refresh silently loses nothing.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      try {
+        window.localStorage.setItem(RESUME_STORAGE_KEY, JSON.stringify(resume));
+        setSaved(true);
+        setTimeout(() => setSaved(false), 1500);
+      } catch {
+        // Storage full / private mode — autosave silently skipped.
+      }
+    }, 600);
+    return () => clearTimeout(t);
+  }, [resume]);
 
   useEffect(() => {
     return () => {
@@ -283,10 +304,12 @@ export function Builder() {
   const handleDownload = useCallback(async () => {
     if (downloadingRef.current) return;
     downloadingRef.current = true;
+    setDownloading(true);
 
     const node = canvasRef.current;
     if (!node) {
       downloadingRef.current = false;
+      setDownloading(false);
       return;
     }
 
@@ -316,6 +339,7 @@ export function Builder() {
     } finally {
       node.classList.remove("pdf-invert");
       downloadingRef.current = false;
+      setDownloading(false);
     }
   }, [resume.identity.name]);
 
@@ -328,12 +352,14 @@ export function Builder() {
   }, []);
 
   return (
-    <div className={`mt-6 rounded-2xl bg-[#09090B] ${GRID_BG} p-4 sm:p-6`}>
+    <div className="card-glass mt-6 rounded-2xl p-4 sm:p-6">
       <BuilderHeader
         template={template}
         onTemplateChange={setTemplate}
         onDownload={handleDownload}
         onShare={handleShare}
+        downloading={downloading}
+        saved={saved}
       />
 
       <div className="mt-6 grid grid-cols-12 gap-4">
@@ -368,13 +394,15 @@ export function Builder() {
 
         {/* Center — live preview canvas (45%) */}
         <div className="col-span-12 xl:col-span-5">
-          <ResumeCanvas
-            ref={canvasRef}
-            resume={resume}
-            template={template}
-            mode={mode}
-            updateBullet={updateBullet}
-          />
+          <div id="builder-preview" className="scroll-mt-28">
+            <ResumeCanvas
+              ref={canvasRef}
+              resume={resume}
+              template={template}
+              mode={mode}
+              updateBullet={updateBullet}
+            />
+          </div>
         </div>
 
         {/* Right — ATS recruiter simulator (25%) */}

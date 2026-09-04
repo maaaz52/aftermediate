@@ -9,10 +9,12 @@ export interface BuilderHeaderProps {
   onTemplateChange: (template: TemplateId) => void;
   onDownload: () => void;
   onShare: () => void;
+  downloading: boolean;
+  saved: boolean;
 }
 
 const TEMPLATES: { id: TemplateId; label: string; swatch: string }[] = [
-  { id: "academic", label: "Academic", swatch: "bg-white" },
+  { id: "academic", label: "Academic", swatch: "bg-white border border-line" },
   { id: "silicon", label: "Silicon", swatch: "border border-[#334155] bg-[#0F172A]" },
   {
     id: "glass",
@@ -26,12 +28,14 @@ export function BuilderHeader({
   onTemplateChange,
   onDownload,
   onShare,
+  downloading,
+  saved,
 }: BuilderHeaderProps) {
   return (
-    <div className="sticky top-16 z-30 -mx-4 border-b border-[#1f1f2a] bg-[#09090B]/95 px-4 py-3 backdrop-blur-sm sm:-mx-6 sm:px-6">
+    <div className="sticky top-16 z-30 -mx-4 border-b border-line bg-background/95 px-4 py-3 backdrop-blur-sm sm:-mx-6 sm:px-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <span className="mr-1 hidden text-xs font-medium text-[#555d6e] sm:inline">Template</span>
+          <span className="mr-1 hidden text-xs font-medium text-faint sm:inline">Template</span>
           {TEMPLATES.map((t) => (
             <button
               key={t.id}
@@ -41,8 +45,8 @@ export function BuilderHeader({
               className={cn(
                 "flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors",
                 template === t.id
-                  ? "border-[#3B82F6] bg-[#3B82F6]/10 text-white"
-                  : "border-[#333] bg-[#111118] text-[#8a93a6] hover:border-[#555] hover:text-white"
+                  ? "border-saffron bg-saffron/10 text-ink"
+                  : "border-line bg-surface text-muted hover:text-ink"
               )}
             >
               <span aria-hidden="true" className={cn("h-3 w-3 rounded-[3px] shadow-sm", t.swatch)} />
@@ -52,21 +56,25 @@ export function BuilderHeader({
         </div>
 
         <div className="flex items-center gap-2">
+          {saved && (
+            <span className="hidden text-[11px] font-medium text-emerald sm:inline">✓ Saved locally</span>
+          )}
           <button
             type="button"
             onClick={onDownload}
-            className="inline-flex items-center gap-2 rounded-lg bg-[#3B82F6] px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_-6px_rgba(59,130,246,0.7)] transition-colors hover:bg-[#2563eb]"
+            disabled={downloading}
+            className="inline-flex items-center gap-2 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_-6px_rgba(47,85,212,0.7)] transition-colors hover:bg-saffron-soft disabled:cursor-not-allowed disabled:opacity-60"
           >
             <Download className="h-4 w-4" />
-            Download Clean PDF
+            {downloading ? "Preparing PDF…" : "Download Clean PDF"}
           </button>
           <button
             type="button"
             onClick={onShare}
-            className="inline-flex items-center gap-2 rounded-lg border border-[#333] bg-transparent px-4 py-2 text-sm font-medium text-[#8a93a6] transition-colors hover:border-[#555] hover:text-white"
+            className="inline-flex items-center gap-2 rounded-lg border border-line bg-transparent px-4 py-2 text-sm font-medium text-muted transition-colors hover:text-ink"
           >
             <Link2 className="h-4 w-4" />
-            Get Live Web Link
+            Preview Link
           </button>
         </div>
       </div>

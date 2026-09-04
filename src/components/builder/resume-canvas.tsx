@@ -186,7 +186,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet, ref }: Resu
                     <button
                       type="button"
                       onClick={() => updateBullet(i, rewriteBullet(bullet))}
-                      className="inline-flex items-center gap-1 rounded-md border border-[#333] bg-[#111118] px-2 py-1 text-[11px] font-medium text-white shadow-lg transition-colors hover:border-[#3B82F6]"
+                      className="inline-flex items-center gap-1 rounded-md border border-line bg-surface px-2 py-1 text-[11px] font-medium text-ink shadow-lg transition-colors hover:border-saffron"
                     >
                       <Sparkles className="h-3 w-3" />
                       Rewrite with AI
@@ -194,7 +194,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet, ref }: Resu
                     <button
                       type="button"
                       onClick={() => updateBullet(i, makeQuantifiable(bullet, mode))}
-                      className="inline-flex items-center gap-1 rounded-md border border-[#333] bg-[#111118] px-2 py-1 text-[11px] font-medium text-white shadow-lg transition-colors hover:border-[#3B82F6]"
+                      className="inline-flex items-center gap-1 rounded-md border border-line bg-surface px-2 py-1 text-[11px] font-medium text-ink shadow-lg transition-colors hover:border-saffron"
                     >
                       <Hash className="h-3 w-3" />
                       Make More Quantifiable

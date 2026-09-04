@@ -23,7 +23,7 @@ export interface AtsPanelProps {
 const MODES: { id: RecruiterMode; label: string; icon: LucideIcon }[] = [
   { id: "startup", label: "Startup Founder", icon: Rocket },
   { id: "corporate", label: "Corporate HR", icon: Building2 },
-  { id: "university", label: "University Admissions Officer", icon: GraduationCap },
+  { id: "university", label: "University", icon: GraduationCap },
 ];
 
 /** Mode-flavored tagline under the empty-state check. */
@@ -40,7 +40,7 @@ const GAUGE_CIRCUMFERENCE = 2 * Math.PI * GAUGE_RADIUS;
 
 /** Score color ramp: emerald ≥ 80, amber 50–79, red < 50. */
 function scoreColor(score: number): string {
-  if (score >= 80) return "#10B981";
+  if (score >= 80) return "#1c9e62";
   if (score >= 50) return "#d99a2b";
   return "#d63d3d";
 }
@@ -63,7 +63,7 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
   ];
 
   return (
-    <div className="space-y-4 rounded-xl border border-[#222] bg-[#111118] p-4">
+    <div className="space-y-4 rounded-xl border border-line bg-surface p-4 shadow-sm">
       {/* ── Recruiter mode switcher ─────────────────────────────────── */}
       <div className="grid grid-cols-3 gap-2">
         {MODES.map(({ id, label, icon: Icon }) => (
@@ -75,8 +75,8 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
             className={cn(
               "flex flex-col items-center gap-1 rounded-lg border px-1 py-2 transition-colors",
               mode === id
-                ? "border-[#3B82F6] bg-[#3B82F6]/10 text-white"
-                : "border-[#333] bg-[#111118] text-[#8a93a6] hover:border-[#555] hover:text-white"
+                ? "border-saffron bg-saffron/10 text-ink"
+                : "border-line bg-surface text-muted hover:border-line hover:text-ink"
             )}
           >
             <Icon className="h-4 w-4" />
@@ -100,7 +100,7 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
             cy="60"
             r={GAUGE_RADIUS}
             fill="none"
-            stroke="#1f1f2a"
+            stroke="var(--color-surface-2)"
             strokeWidth={GAUGE_STROKE}
           />
           <circle
@@ -117,9 +117,9 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-3xl font-bold leading-none text-white">{score}</span>
-          <span className="mt-1 text-[10px] font-medium text-[#8a93a6]">Impact Score</span>
-          <span className="text-[9px] text-[#555d6e]">out of 100</span>
+          <span className="text-3xl font-bold leading-none text-ink">{score}</span>
+          <span className="mt-1 text-[10px] font-medium text-muted">Impact Score</span>
+          <span className="text-[9px] text-faint">out of 100</span>
         </div>
       </div>
       <p className="text-center text-xs font-medium" style={{ color }}>
@@ -139,10 +139,10 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
             className="space-y-1"
           >
             <div className="flex items-center justify-between">
-              <span className="text-xs text-[#8a93a6]">{label}</span>
-              <span className="text-xs font-semibold text-white">{value}%</span>
+              <span className="text-xs text-muted">{label}</span>
+              <span className="text-xs font-semibold text-ink">{value}%</span>
             </div>
-            <div className="h-1.5 rounded-full bg-[#1f1f2a]">
+            <div className="h-1.5 rounded-full bg-surface-2">
               <div
                 aria-hidden="true"
                 className="h-1.5 rounded-full transition-[width] duration-500"
@@ -156,19 +156,19 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
       {/* ── Recruiter live roast & feedback feed ────────────────────── */}
       <div>
         <div className="flex items-center justify-between gap-2">
-          <h3 className="text-sm font-semibold text-white">Recruiter Live Roast</h3>
-          <span className="rounded-full border border-[#333] bg-[#0d0d15] px-2 py-0.5 text-[10px] font-medium text-[#8a93a6]">
+          <h3 className="text-sm font-semibold text-ink">Recruiter Live Roast</h3>
+          <span className="rounded-full border border-line bg-surface-2 px-2 py-0.5 text-[10px] font-medium text-muted">
             {modeLabel}
           </span>
         </div>
         <div className="mt-2 space-y-2">
           {feedback.length === 0 ? (
-            <div className="flex flex-col items-center gap-2 rounded-xl border border-[#10B981]/20 bg-[#10B981]/5 p-4 text-center">
-              <CheckCircle2 className="h-8 w-8 text-[#10B981]" />
-              <p className="text-xs font-medium text-[#cbd5e1]">
+            <div className="flex flex-col items-center gap-2 rounded-xl border border-emerald/20 bg-emerald/5 p-4 text-center">
+              <CheckCircle2 className="h-8 w-8 text-emerald" />
+              <p className="text-xs font-medium text-ink">
                 No issues found — your resume is recruiter-ready
               </p>
-              <p className="text-[11px] leading-relaxed text-[#8a93a6]">{MODE_TAGLINE[mode]}</p>
+              <p className="text-[11px] leading-relaxed text-muted">{MODE_TAGLINE[mode]}</p>
             </div>
           ) : (
             feedback.map((item) => (
@@ -177,22 +177,22 @@ export function AtsPanel({ mode, setMode, ats, feedback, applyAutoFix }: AtsPane
                 className={cn(
                   "rounded-xl border p-3",
                   item.kind === "warning"
-                    ? "border-[#d99a2b]/30 bg-[#d99a2b]/5"
-                    : "border-[#3B82F6]/30 bg-[#3B82F6]/5"
+                    ? "border-amber/30 bg-amber/5"
+                    : "border-saffron/30 bg-saffron/5"
                 )}
               >
                 <div className="flex items-start gap-2">
                   {item.kind === "warning" ? (
-                    <AlertTriangle className="mt-px h-3.5 w-3.5 shrink-0 text-[#d99a2b]" />
+                    <AlertTriangle className="mt-px h-3.5 w-3.5 shrink-0 text-amber" />
                   ) : (
-                    <Lightbulb className="mt-px h-3.5 w-3.5 shrink-0 text-[#3B82F6]" />
+                    <Lightbulb className="mt-px h-3.5 w-3.5 shrink-0 text-saffron" />
                   )}
-                  <p className="text-xs leading-relaxed text-[#cbd5e1]">{item.message}</p>
+                  <p className="text-xs leading-relaxed text-muted">{item.message}</p>
                 </div>
                 <button
                   type="button"
                   onClick={() => applyAutoFix(item)}
-                  className="mt-2 w-full rounded-lg bg-[#10B981]/15 px-3 py-1.5 text-xs font-semibold text-[#10B981] transition-colors hover:bg-[#10B981]/25"
+                  className="mt-2 w-full rounded-lg bg-emerald/15 px-3 py-1.5 text-xs font-semibold text-emerald transition-colors hover:bg-emerald/25"
                 >
                   {item.fixLabel}
                 </button>

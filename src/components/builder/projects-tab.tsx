@@ -4,7 +4,7 @@ import { Award, FolderKanban, GraduationCap, Plus, Users, X, type LucideIcon } f
 import { Input } from "@/components/ui/input";
 import type { ResumeData } from "@/lib/resume-model";
 import { cn } from "@/lib/utils";
-import { DARK_INPUT, type AcademicEntry, type ProjectEntry } from "./input-panel";
+import { INPUT_STYLE, type AcademicEntry, type ProjectEntry } from "./input-panel";
 
 export interface ProjectsTabProps {
   projects: ResumeData["projects"];
@@ -24,7 +24,7 @@ export interface ProjectsTabProps {
 
 function SectionTitle({ icon: Icon, title }: { icon: LucideIcon; title: string }) {
   return (
-    <h3 className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#8a93a6]">
+    <h3 className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted">
       <Icon className="h-3.5 w-3.5" />
       {title}
     </h3>
@@ -37,7 +37,7 @@ function IconButton({ label, onClick }: { label: string; onClick: () => void }) 
       type="button"
       aria-label={label}
       onClick={onClick}
-      className="rounded-md p-1 text-[#555d6e] transition-colors hover:bg-[#1a1a2e] hover:text-[#d63d3d]"
+      className="rounded-md p-1 text-faint transition-colors hover:bg-surface-2 hover:text-danger"
     >
       <X className="h-4 w-4" />
     </button>
@@ -49,7 +49,7 @@ function AddButton({ label, onClick }: { label: string; onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-[#333] px-3 py-1.5 text-xs font-medium text-[#8a93a6] transition-colors hover:border-[#3B82F6]/50 hover:text-white"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-line px-3 py-1.5 text-xs font-medium text-muted transition-colors hover:border-saffron/50 hover:text-ink"
     >
       <Plus className="h-3.5 w-3.5" />
       {label}
@@ -76,7 +76,7 @@ function DarkInput({
       value={value}
       placeholder={placeholder}
       onChange={(e) => onChange(e.target.value)}
-      className={cn(DARK_INPUT, className)}
+      className={cn(INPUT_STYLE, className)}
     />
   );
 }
@@ -102,14 +102,14 @@ export function ProjectsTab({
       <section className="space-y-2">
         <SectionTitle icon={FolderKanban} title="Projects" />
         {projects.entries.length === 0 && (
-          <p className="text-xs text-[#555d6e]">
+          <p className="text-xs text-faint">
             No projects yet — add a science fair entry, a channel, anything you built.
           </p>
         )}
         {projects.entries.map((entry, i) => (
-          <div key={i} className="space-y-2 rounded-lg border border-[#222] bg-[#0d0d15] p-3">
+          <div key={i} className="space-y-2 rounded-lg border border-line bg-surface-2/40 p-3">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-medium uppercase tracking-wider text-[#555d6e]">
+              <span className="text-[11px] font-medium uppercase tracking-wider text-faint">
                 Project {i + 1}
               </span>
               <IconButton label={`Remove project ${i}`} onClick={() => removeProject(i)} />
@@ -141,7 +141,7 @@ export function ProjectsTab({
               placeholder="What did you do and what happened?"
               onChange={(e) => updateProject(i, { description: e.target.value })}
               className={cn(
-                DARK_INPUT,
+                INPUT_STYLE,
                 "w-full resize-y rounded-lg border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2"
               )}
             />
@@ -154,14 +154,14 @@ export function ProjectsTab({
       <section className="space-y-2">
         <SectionTitle icon={GraduationCap} title="Academics" />
         {projects.academics.length === 0 && (
-          <p className="text-xs text-[#555d6e]">
+          <p className="text-xs text-faint">
             No academic entries — add your FSc / A-Level results.
           </p>
         )}
         {projects.academics.map((entry, i) => (
-          <div key={i} className="space-y-2 rounded-lg border border-[#222] bg-[#0d0d15] p-3">
+          <div key={i} className="space-y-2 rounded-lg border border-line bg-surface-2/40 p-3">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-medium uppercase tracking-wider text-[#555d6e]">
+              <span className="text-[11px] font-medium uppercase tracking-wider text-faint">
                 Academic {i + 1}
               </span>
               <IconButton label={`Remove academic ${i}`} onClick={() => removeAcademic(i)} />
@@ -201,7 +201,7 @@ export function ProjectsTab({
       <section className="space-y-2">
         <SectionTitle icon={Award} title="Certificates" />
         {projects.certificates.length === 0 && (
-          <p className="text-xs text-[#555d6e]">
+          <p className="text-xs text-faint">
             No certificates yet — Coursera, DigiSkills, anything online.
           </p>
         )}
@@ -223,7 +223,7 @@ export function ProjectsTab({
       <section className="space-y-2">
         <SectionTitle icon={Users} title="Leadership" />
         {projects.leadership.length === 0 && (
-          <p className="text-xs text-[#555d6e]">
+          <p className="text-xs text-faint">
             No leadership roles yet — house captain, club leads, team captains.
           </p>
         )}
