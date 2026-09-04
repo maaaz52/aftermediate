@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { FileText, Gauge, PenLine, Printer, Loader2, Copy, Check } from "lucide-react";
+import { FileText, Gauge, Printer } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SourceTag } from "@/components/stat";
@@ -33,57 +32,15 @@ export default function ConvincePage() {
   const [consistency, setConsistency] = React.useState(profile.quiz.consistency ?? 3);
   const worth = worthScore({ fscPct, certifications, projects, english, consistency });
 
-  const [mode, setMode] = React.useState<"essay" | "cv">("essay");
-  const [prompt, setPrompt] = React.useState("");
-  const [output, setOutput] = React.useState("");
-  const [generating, setGenerating] = React.useState(false);
-  const [copied, setCopied] = React.useState(false);
-
   const rcIt = data.realities.find((r) => r.id === "it-exports")!;
   const rcJobs = data.realities.find((r) => r.id === "youth-unemployment")!;
   const rcMdcat = data.realities.find((r) => r.id === "mdcat-ratio")!;
-
-  async function generate() {
-    if (!prompt.trim() || generating) return;
-    setGenerating(true);
-    setOutput("");
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          persona: mode,
-          messages: [{ role: "user", content: prompt }],
-        }),
-      });
-      if (!res.ok || !res.body) throw new Error("failed");
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let acc = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        acc += decoder.decode(value, { stream: true });
-        setOutput(acc);
-      }
-    } catch {
-      setOutput("Something went wrong. Try again.");
-    } finally {
-      setGenerating(false);
-    }
-  }
-
-  async function copy() {
-    await navigator.clipboard.writeText(output);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
-  }
 
   return (
     <div data-tour="convince" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="flex items-center gap-2">
         <Badge variant="danger">Convince</Badge>
-        <span className="font-mono text-xs text-faint">worth · parents · writing</span>
+        <span className="font-mono text-xs text-faint">worth · parents</span>
       </div>
       <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">Show this to your parents.</h1>
       <p className="mt-2 max-w-xl text-muted">
@@ -185,51 +142,6 @@ export default function ConvincePage() {
           </div>
         </Card>
       </div>
-
-      <section className="mt-12">
-        <div className="mb-5 flex items-center gap-2">
-          <PenLine className="h-5 w-5 text-info" />
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">The writing desk</h2>
-        </div>
-        <Card className="p-6">
-          <div className="flex gap-2">
-            <Button variant={mode === "essay" ? "default" : "outline"} size="sm" onClick={() => { setMode("essay"); setOutput(""); }}>
-              College / scholarship essay
-            </Button>
-            <Button variant={mode === "cv" ? "default" : "outline"} size="sm" onClick={() => { setMode("cv"); setOutput(""); }}>
-              CV builder
-            </Button>
-          </div>
-          <Textarea
-            className="mt-4"
-            placeholder={
-              mode === "essay"
-                ? "e.g. Personal statement for Fulbright (MS Computer Science). I'm from Lahore, top 5% in FSc, built a school attendance app, want to work on EdTech…"
-                : "e.g. Ahmed Ali, Lahore. FSc Pre-Engineering 87%, ICS electives. Skills: Python, web dev. Built a hostel finder app. Certifications: Google IT Support…"
-            }
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-            rows={4}
-          />
-          <div className="mt-3 flex items-center gap-3">
-            <Button onClick={generate} disabled={generating || !prompt.trim()}>
-              {generating ? <Loader2 className="h-4 w-4 animate-spin" /> : <PenLine className="h-4 w-4" />}
-              {generating ? "Writing…" : "Generate"}
-            </Button>
-            {output && (
-              <Button variant="ghost" size="sm" onClick={copy}>
-                {copied ? <Check className="h-4 w-4 text-emerald" /> : <Copy className="h-4 w-4" />}
-                {copied ? "Copied" : "Copy"}
-              </Button>
-            )}
-          </div>
-          {output && (
-            <pre className="mt-4 max-h-96 overflow-y-auto whitespace-pre-wrap rounded-xl border border-line bg-surface-2/50 p-4 text-sm leading-relaxed text-ink">
-              {output}
-            </pre>
-          )}
-        </Card>
-      </section>
     </div>
   );
 }
