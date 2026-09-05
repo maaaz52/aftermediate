@@ -115,10 +115,22 @@ export const groups: NavGroup[] = [
 export function Sidebar() {
   const pathname = usePathname();
 
+  // A link is active when its href is a prefix of the path AND no other link
+  // is a LONGER matching prefix — so /study/test-prep doesn't also light up
+  // /study (Ustaad A.I).
+  const allHrefs = groups.flatMap((g) => g.links.map((l) => l.href));
+  const matches = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  const isActive = (href: string) => {
+    if (!matches(href)) return false;
+    return !allHrefs.some(
+      (other) => other !== href && other.length > href.length && matches(other)
+    );
+  };
+
   const [expanded, setExpanded] = React.useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
     for (const g of groups) {
-      if (g.label && g.links.some((l) => pathname.startsWith(l.href))) {
+      if (g.label && g.links.some((l) => isActive(l.href))) {
         initial[g.label] = true;
       }
     }
@@ -162,7 +174,7 @@ export function Sidebar() {
                 <div className="overflow-hidden">
                   <div className="space-y-1 pb-1">
                     {group.links.map((l) => {
-                      const active = pathname.startsWith(l.href);
+                      const active = isActive(l.href);
                       return (
                         <Link
                           key={l.href}
