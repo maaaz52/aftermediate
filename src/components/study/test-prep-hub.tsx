@@ -55,8 +55,6 @@ interface MergedTest {
   fee: string;
   patternCount: number;
   streams: Stream[];
-  /** Whether a practice paper exists for this test (Pakistan only). */
-  practice?: boolean;
 }
 
 const REGION_LABEL: Record<Region, string> = {
@@ -266,6 +264,7 @@ export function TestPrepHub() {
                   <button
                     type="button"
                     aria-expanded={isOpen}
+                    aria-controls="test-prep-detail"
                     onClick={() => setOpenId(isOpen ? null : t.id)}
                     className="min-w-0 flex-1 text-left"
                   >
@@ -293,6 +292,7 @@ export function TestPrepHub() {
                     <button
                       type="button"
                       aria-expanded={isOpen}
+                      aria-controls="test-prep-detail"
                       onClick={() => setOpenId(isOpen ? null : t.id)}
                       className="rounded-lg p-1.5 text-faint transition-colors hover:text-ink"
                     >
@@ -318,7 +318,7 @@ export function TestPrepHub() {
 
       {/* ── Detail panel ── */}
       {open && (
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
+        <div id="test-prep-detail" className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
           {/* Left: test facts */}
           <div className="card-glass rounded-2xl p-6">
             <div className="flex flex-wrap items-center gap-2">

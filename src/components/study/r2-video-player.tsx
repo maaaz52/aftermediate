@@ -22,6 +22,8 @@ export function R2VideoPlayer({
 
   async function load() {
     setReady(true);
+    setError(null);
+    setSrc(null);
     try {
       const res = await fetch(`/api/test-prep/video?key=${encodeURIComponent(r2Key)}`);
       const data = (await res.json()) as { url?: string; error?: string };
@@ -38,7 +40,14 @@ export function R2VideoPlayer({
   if (error) {
     return (
       <div className="rounded-xl border border-line bg-surface-2/60 p-4 text-sm text-muted">
-        {error}
+        <p>{error}</p>
+        <button
+          type="button"
+          onClick={load}
+          className="mt-2 rounded-lg bg-saffron px-3 py-1.5 text-xs font-semibold text-white hover:bg-saffron-soft"
+        >
+          Retry
+        </button>
       </div>
     );
   }
@@ -64,10 +73,16 @@ export function R2VideoPlayer({
     <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-line bg-black">
       {src ? (
         <video
+          key={src}
           src={src}
           controls
           playsInline
           preload="none"
+          onError={() => {
+            // Signed URLs are valid for an hour; a stale one fails to stream.
+            setSrc(null);
+            setError("This video link expired — refresh to get a new one.");
+          }}
           className="absolute inset-0 h-full w-full"
         />
       ) : (
