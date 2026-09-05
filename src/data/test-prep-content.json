@@ -173,7 +173,77 @@
     },
     {
       "testId": "ielts",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": "ielts-writing",
+          "title": "IELTS Writing",
+          "note": "Task 1 & Task 2 strategies, band-9 structures and sample essays.",
+          "episodes": [
+            { "id": "ielts-w1", "title": "IELTS Writing Task 1 General: Band 9 Structure + Samples", "videoId": "2EGiMjA8YzM" },
+            { "id": "ielts-w2", "title": "IELTS Task 1 General Training Writing: Ultimate Guide 2026", "videoId": "ZwTX-O_WvnM" },
+            { "id": "ielts-w3", "title": "How I'd Teach My Wife IELTS (If I Had To Start Over)", "videoId": "lDORjtZ5Tfk" },
+            { "id": "ielts-w4", "title": "IELTS Writing Tips You MUST Know Before Your Test", "videoId": "p-r65jaSz4o" },
+            { "id": "ielts-w5", "title": "The 4 Rules Band 9 Students Use In EVERY Essay", "videoId": "yle3Wytf_LE" },
+            { "id": "ielts-w6", "title": "Understand IELTS Writing Task 2 in 5 Minutes", "videoId": "yvt8RzGNhBc" }
+          ]
+        },
+        {
+          "id": "ielts-reading",
+          "title": "IELTS Reading",
+          "note": "Band-9 reading strategies, techniques and course walkthroughs.",
+          "episodes": [
+            { "id": "ielts-r1", "title": "How Do I Get a Band 9 in Reading + Listening?", "videoId": "5hAEajljN24" },
+            { "id": "ielts-r2", "title": "Reading Advice From Four Band 9 Students", "videoId": "6CXiHUFiyLE" },
+            { "id": "ielts-r3", "title": "Why is my IELTS Reading Score NOT Increasing?", "videoId": "HouS9iKd8io" },
+            { "id": "ielts-r4", "title": "The Only IELTS Reading Strategy You Need in 2026", "videoId": "Kch2Tb_T2Pg" },
+            { "id": "ielts-r5", "title": "IELTS Reading Band 9 in 4 Steps", "videoId": "M_NP2v7rV8Y" },
+            { "id": "ielts-r6", "title": "Get Band 9 After Using These Reading Strategies", "videoId": "N0RxRl9allI" },
+            { "id": "ielts-r7", "title": "The ONLY IELTS Reading Course You Need 2026", "videoId": "OtmUQwPVLko" },
+            { "id": "ielts-r8", "title": "The Number 1 Way to IMPROVE Your IELTS READING Scores", "videoId": "Q_iv4wRuZpM" },
+            { "id": "ielts-r9", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
+            { "id": "ielts-r10", "title": "Simple Technique for Band 9 in IELTS Reading", "videoId": "wx4elwrGK1I" }
+          ]
+        },
+        {
+          "id": "ielts-speaking",
+          "title": "IELTS Speaking",
+          "note": "Band-9 speaking strategies, idioms, sentence patterns and part-2 strategy.",
+          "episodes": [
+            { "id": "ielts-s1", "title": "Get BAND 9 Using This IELTS Speaking Strategy", "videoId": "7lqSx_ucv4A" },
+            { "id": "ielts-s2", "title": "How Do I Get A Band 9 in IELTS Speaking?", "videoId": "9DTyINOeY-Y" },
+            { "id": "ielts-s3", "title": "IELTS Speaking Secrets Every Student Should Learn", "videoId": "ELxGmf9f_ZM" },
+            { "id": "ielts-s4", "title": "Get Band 9 After Using These Speaking Tips", "videoId": "Emd65BXMS9M" },
+            { "id": "ielts-s5", "title": "The 3 Speaking Tricks That Get You Band 9", "videoId": "Ii2fVU4CJ9o" },
+            { "id": "ielts-s6", "title": "IELTS Vocabulary: What Band 9 Students Do Differently in 2026", "videoId": "KQO5WrwpW7M" },
+            { "id": "ielts-s7", "title": "Top 20 IELTS Speaking Idioms with Band 9 Samples", "videoId": "OBNBe-c5ObA" },
+            { "id": "ielts-s8", "title": "IELTS Speaking Tips You MUST Know Before Your Test", "videoId": "RuvVc3Mdgvg" },
+            { "id": "ielts-s9", "title": "IELTS Speaking — 9 Most Common Sentence Patterns", "videoId": "SMCwpfJMdMo" },
+            { "id": "ielts-s10", "title": "Master IELTS Speaking in One Video", "videoId": "bqznnq9gOsU" },
+            { "id": "ielts-s11", "title": "Get Band 9 After Learning These Speaking Tips", "videoId": "fUGVFbFXRMo" },
+            { "id": "ielts-s12", "title": "IELTS Speaking Part 2 Strategy That REALLY Works", "videoId": "kD0eh1UbeT8" },
+            { "id": "ielts-s13", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
+            { "id": "ielts-s14", "title": "The ONLY IELTS Speaking Course You Need", "videoId": "rqmv0LCcPTs" },
+            { "id": "ielts-s15", "title": "Common Synonyms That Will Destroy Your IELTS Score", "videoId": "tPrdQAefy4U" }
+          ]
+        },
+        {
+          "id": "ielts-listening",
+          "title": "IELTS Listening",
+          "note": "Band-9 listening strategies, maps, focus and multiple-choice techniques.",
+          "episodes": [
+            { "id": "ielts-l1", "title": "Band 9 Strategy for IELTS Listening Maps", "videoId": "-aBW-RHtcrE" },
+            { "id": "ielts-l2", "title": "How to Stay Focused in the IELTS Listening Test", "videoId": "FjjFOBoT8iU" },
+            { "id": "ielts-l3", "title": "How Do I Get Band 9 in IELTS Listening?", "videoId": "SYHWCn0GqCw" },
+            { "id": "ielts-l4", "title": "Get BAND 9 After Using These Listening Tips", "videoId": "S_TVcsCFpTM" },
+            { "id": "ielts-l5", "title": "How To Get Band 9 in IELTS Listening in 2026", "videoId": "ULmeHkHU7YQ" },
+            { "id": "ielts-l6", "title": "The ONLY IELTS Listening Strategy You Need", "videoId": "gfTqr_9BMjs" },
+            { "id": "ielts-l7", "title": "How to get a Band 8 in IELTS listening", "videoId": "kHTnAx6f-j0" },
+            { "id": "ielts-l8", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
+            { "id": "ielts-l9", "title": "The ONLY IELTS Listening Course You Need", "videoId": "q7xCHfDRdug" },
+            { "id": "ielts-l10", "title": "New Strategy For IELTS Listening Multiple Choice", "videoId": "vpmJTSntyVw" }
+          ]
+        }
+      ],
       "resources": [
         {
           "id": "ielts-free-practice",
