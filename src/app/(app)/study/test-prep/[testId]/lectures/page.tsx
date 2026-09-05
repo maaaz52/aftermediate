@@ -16,9 +16,7 @@ export default function TestPrepLecturesPage({
   const { testId } = React.use(params);
   const test = findTest(testId);
   const playlists = test ? contentFor(testId).playlists : [];
-  const [openPlaylist, setOpenPlaylist] = React.useState<string | null>(
-    () => playlists[0]?.id ?? null
-  );
+  const [openPlaylist, setOpenPlaylist] = React.useState<string | null>(null);
   const [watched] = useLocalStorage<string[]>(
     `aftermediate:test-prep:watched:${testId}`,
     []
