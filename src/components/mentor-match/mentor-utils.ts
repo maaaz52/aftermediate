@@ -25,6 +25,7 @@ export const PLATFORM_COLORS: Record<string, string> = {
   discord: "#5865f2",
   whatsapp: "#25d366",
   email: "#566073",
+  linkedin: "#0a66c2",
 };
 
 // ── Helpers ──

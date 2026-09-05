@@ -23,7 +23,7 @@ export type MentorField =
 export type Availability = "available" | "limited" | "booked";
 
 export interface SocialLink {
-  platform: "instagram" | "discord" | "whatsapp" | "email";
+  platform: "instagram" | "discord" | "whatsapp" | "email" | "linkedin";
   label: string;
   url: string;
 }

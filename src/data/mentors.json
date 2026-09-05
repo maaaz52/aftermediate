@@ -56,6 +56,65 @@
         "ICS background from Cadet College Kohat"
       ],
       "availability": "available"
+    },
+    {
+      "id": "mentor-jibran-khan",
+      "name": "Muhammad Jibran Khan",
+      "institution": "",
+      "degree": "Computer Science",
+      "field": "tech",
+      "bio": "Helping Pakistani students navigate education abroad opportunities. Knowledgeable about international standardized tests including SAT, ACT, IELTS, and TOEFL. Happy to guide you through the entire process from test prep to applications.",
+      "topics": ["Education Abroad", "SAT", "ACT", "IELTS", "TOEFL", "Pakistani students abroad", "University applications"],
+      "socials": [
+        { "platform": "email", "label": "Email Jibran", "url": "mailto:jibraaaaan1@gmail.com" },
+        { "platform": "whatsapp", "label": "Contact on WhatsApp", "url": "https://wa.me/923195204593" },
+        { "platform": "linkedin", "label": "LinkedIn", "url": "https://pk.linkedin.com/in/muhammad-jibran-khan-7745692ba" }
+      ],
+      "achievements": [
+        "Computer Science student",
+        "Education abroad guidance for Pakistani students",
+        "Expertise in SAT, ACT, IELTS, TOEFL"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "mentor-maaz-ahmad",
+      "name": "Maaz Ahmad",
+      "institution": "",
+      "degree": "Computer Science",
+      "field": "tech",
+      "bio": "Guiding Pakistani students on education abroad, international tests, freelancing, skill-building, and industry exposure. Here to help you build real skills and a career that works from anywhere.",
+      "topics": ["Education Abroad", "SAT", "IELTS", "Freelancing", "Skill Building", "Industry Exposure", "Career guidance"],
+      "socials": [
+        { "platform": "email", "label": "Email Maaz", "url": "mailto:themz52@proton.me" },
+        { "platform": "whatsapp", "label": "Contact on WhatsApp", "url": "https://wa.me/923400990163" },
+        { "platform": "instagram", "label": "Follow on Instagram", "url": "https://www.instagram.com/maazahmd_/" }
+      ],
+      "achievements": [
+        "Computer Science student",
+        "Freelancing & skill-building mentor",
+        "Education abroad guidance for Pakistani students"
+      ],
+      "availability": "available"
+    },
+    {
+      "id": "mentor-abdullah",
+      "name": "Muhammad Abdullah",
+      "institution": "",
+      "degree": "Pre-Medical",
+      "field": "medical",
+      "bio": "Guiding students through MDCAT prep, medical institute admissions, and medical education abroad. Here to help you figure out the best path whether it's Pakistan or overseas.",
+      "topics": ["MDCAT", "Medical institutes", "Medical abroad", "Pre-medical guidance", "University applications"],
+      "socials": [
+        { "platform": "email", "label": "Email Abdullah", "url": "mailto:abdullahkrish1234@gmail.com" },
+        { "platform": "instagram", "label": "Follow on Instagram", "url": "https://www.instagram.com/me.abdullah.56" }
+      ],
+      "achievements": [
+        "Pre-medical background",
+        "MDCAT & medical admissions guidance",
+        "Medical abroad consulting"
+      ],
+      "availability": "available"
     }
   ]
 }
