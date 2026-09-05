@@ -297,6 +297,59 @@
         }
       ],
       "videos": []
+    },
+    {
+      "testId": "toefl",
+      "playlists": [
+        {
+          "id": "toefl-speaking",
+          "title": "TOEFL Speaking",
+          "note": "Strategies, tips and practice tests for the 2026 speaking section.",
+          "episodes": [
+            { "id": "toefl-s1", "title": "TOEFL Take an Interview Task (2026) — Tips, Strategies, Sample Answers", "videoId": "cktZfTZ9UXs" },
+            { "id": "toefl-s2", "title": "TOEFL Speaking TIPS for a Perfect Score — 2026 Edition", "videoId": "Gxyo1gSJFRM" },
+            { "id": "toefl-s3", "title": "TOEFL Speaking Practice Test 2026 (Sample Speaking Answers)", "videoId": "YphRAv3fpMM" }
+          ]
+        },
+        {
+          "id": "toefl-reading",
+          "title": "TOEFL Reading",
+          "note": "Question-type walkthroughs, new-test tips and a practice test.",
+          "episodes": [
+            { "id": "toefl-r1", "title": "TOEFL Reading Practice (2026): Every Question Type Step-by-Step", "videoId": "ij63VxP0FWQ" },
+            { "id": "toefl-r2", "title": "TOEFL Reading 2026: Tips to Score Higher on the NEW Test", "videoId": "eKaVhOnMjm8" },
+            { "id": "toefl-r3", "title": "TOEFL Reading Practice Test 2026 (Answers Included)", "videoId": "M5kTvJWIx8Q" }
+          ]
+        },
+        {
+          "id": "toefl-writing",
+          "title": "TOEFL Writing",
+          "note": "Academic discussion questions, integrated writing, templates and mistakes to avoid.",
+          "episodes": [
+            { "id": "toefl-w1", "title": "New TOEFL Writing Question: Guide to Academic Discussion Questions", "videoId": "QL4r78VQq1M" },
+            { "id": "toefl-w2", "title": "TOEFL Integrated Writing PRACTICE: Question 1", "videoId": "TnPrCQs-NLo" },
+            { "id": "toefl-w3", "title": "TOEFL Writing Academic Discussion: Sample Questions and Answers", "videoId": "fOqXfMzB_xg" },
+            { "id": "toefl-w4", "title": "TOEFL Writing: 5 Mistakes You Must Avoid", "videoId": "GW6Jj1BILOY" },
+            { "id": "toefl-w5", "title": "AI for TOEFL Writing: A Step-by-Step Guide", "videoId": "xWTIfpnPXcs" },
+            { "id": "toefl-w6", "title": "TOEFL Writing SECRETS Every Student Should Know", "videoId": "ni-KNs9fq80" },
+            { "id": "toefl-w7", "title": "TOEFL Writing TEMPLATES, Quick and Easy", "videoId": "pmQKjvgoLjY" },
+            { "id": "toefl-w8", "title": "TOEFL Writing Question 2 Guide (2025) — SECRET FORMULA for 26+", "videoId": "_Hd3IwnOEfs" },
+            { "id": "toefl-w9", "title": "TOEFL Writing Question 1 Guide: Sample Question and Essay Included (2025)", "videoId": "Wz1WCtJrfjM" }
+          ]
+        },
+        {
+          "id": "toefl-listening",
+          "title": "TOEFL Listening",
+          "note": "Note-taking guide, practice questions and listening secrets.",
+          "episodes": [
+            { "id": "toefl-l1", "title": "A Complete Guide to Taking Notes in the TOEFL Listening", "videoId": "w_YCFu4vp4o" },
+            { "id": "toefl-l2", "title": "TOEFL LISTENING Practice Questions (Answers Included)", "videoId": "IwL6pYmswGY" },
+            { "id": "toefl-l3", "title": "TOEFL Listening SECRETS Every Student Should Know", "videoId": "WK6cG39EzT0" }
+          ]
+        }
+      ],
+      "resources": [],
+      "videos": []
     }
   ]
 }
