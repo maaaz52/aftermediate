@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { TestPrepHub } from "@/components/study/test-prep-hub";
 
 export const metadata = {
@@ -10,13 +9,8 @@ export const metadata = {
 export default function TestPrepPage() {
   return (
     <div data-tour="test-prep" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <div className="animate-reveal flex items-center gap-2">
-        <Badge variant="info">Resources</Badge>
-        <span className="font-mono text-xs text-faint">all tests · one place</span>
-      </div>
       <h1
-        className="animate-reveal mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
-        style={{ animationDelay: "60ms" }}
+        className="animate-reveal text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
       >
         Test prep, everything in one place.
       </h1>

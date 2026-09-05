@@ -52,7 +52,6 @@ interface MergedTest {
   short: string;
   name: string;
   body: string;
-  fee: string;
   patternCount: number;
   streams: Stream[];
 }
@@ -77,7 +76,6 @@ function normalizeTests(): MergedTest[] {
     short: t.short,
     name: t.name,
     body: t.conductingBody,
-    fee: t.fee,
     patternCount: t.pattern.length,
     streams: t.streams,
   }));
@@ -87,7 +85,6 @@ function normalizeTests(): MergedTest[] {
     short: t.short,
     name: t.name,
     body: "",
-    fee: formatPkr(t.feePkr),
     patternCount: t.pattern.length,
     streams: [],
   }));
@@ -274,7 +271,6 @@ export function TestPrepHub() {
                         {REGION_LABEL[t.region]}
                       </Badge>
                     </div>
-                    <p className="mt-1 line-clamp-2 text-xs text-muted">{t.name}</p>
                   </button>
                   <div className="flex shrink-0 items-center gap-1">
                     <button
@@ -305,7 +301,6 @@ export function TestPrepHub() {
 
                 <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-faint">
                   <span>{t.patternCount} sections</span>
-                  <span className="font-mono text-muted">{t.fee}</span>
                   {hasContent && (
                     <span className="text-saffron">● has prep content</span>
                   )}
