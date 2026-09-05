@@ -213,3 +213,47 @@ create policy "review_media_upload_own" on storage.objects
   for insert with check (bucket_id = 'review-media' and auth.uid()::text = (storage.foldername(name))[1]);
 create policy "review_media_delete_own" on storage.objects
   for delete using (bucket_id = 'review-media' and auth.uid()::text = (storage.foldername(name))[1]);
+
+-- ============================================================
+-- Contact messages (landing page form)
+-- ============================================================
+create table if not exists public.contact_messages (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete set null,
+  name text not null,
+  email text not null,
+  message text not null,
+  rating smallint check (rating between 1 and 5),
+  status text not null default 'new' check (status in ('new','read','archived')),
+  created_at timestamptz default now()
+);
+
+alter table public.contact_messages enable row level security;
+create policy "contact_insert_own" on public.contact_messages
+  for insert with check (auth.uid() = user_id or user_id is null);
+create policy "contact_select_own" on public.contact_messages
+  for select using (auth.uid() = user_id);
+
+-- ============================================================
+-- Mentor applications
+-- ============================================================
+create table if not exists public.mentor_applications (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid references auth.users(id) on delete set null,
+  name text not null,
+  email text not null,
+  institution text not null,
+  degree text not null,
+  field text not null,
+  bio text not null,
+  topics text not null,
+  social_link text not null,
+  status text not null default 'pending' check (status in ('pending','reviewed','accepted','rejected')),
+  created_at timestamptz default now()
+);
+
+alter table public.mentor_applications enable row level security;
+create policy "mentor_insert_own" on public.mentor_applications
+  for insert with check (auth.uid() = user_id or user_id is null);
+create policy "mentor_select_own" on public.mentor_applications
+  for select using (auth.uid() = user_id);

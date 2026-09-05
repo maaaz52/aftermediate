@@ -4,6 +4,7 @@ import * as React from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { submitMentorApplication } from "@/lib/mentor-api";
 
 const FIELDS = [
   { value: "engineering", label: "Engineering" },
@@ -22,6 +23,16 @@ export function BecomeMentorModal({
   onClose: () => void;
 }) {
   const [submitted, setSubmitted] = React.useState(false);
+  const [busy, setBusy] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [institution, setInstitution] = React.useState("");
+  const [degree, setDegree] = React.useState("");
+  const [field, setField] = React.useState("");
+  const [bio, setBio] = React.useState("");
+  const [topics, setTopics] = React.useState("");
+  const [socialLink, setSocialLink] = React.useState("");
 
   if (!open) return null;
 
@@ -59,30 +70,40 @@ export function BecomeMentorModal({
         </p>
 
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
+            setBusy(true);
+            setError(null);
+            const res = await submitMentorApplication({
+              name, email, institution, degree, field, bio, topics, socialLink,
+            });
+            setBusy(false);
+            if (!res.ok) {
+              setError(res.error);
+              return;
+            }
             setSubmitted(true);
           }}
           className="mt-5 space-y-4"
         >
           <div>
             <label htmlFor="mentor-name" className="text-xs font-medium text-muted">Full name</label>
-            <Input id="mentor-name" required placeholder="e.g. Ali Raza" className="mt-1" />
+            <Input id="mentor-name" required placeholder="e.g. Ali Raza" value={name} onChange={(e) => setName(e.target.value)} className="mt-1" />
           </div>
 
           <div>
             <label htmlFor="mentor-email" className="text-xs font-medium text-muted">Email</label>
-            <Input id="mentor-email" type="email" required placeholder="you@example.com" className="mt-1" />
+            <Input id="mentor-email" type="email" required placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1" />
           </div>
 
           <div>
             <label htmlFor="mentor-institution" className="text-xs font-medium text-muted">Institution</label>
-            <Input id="mentor-institution" required placeholder="e.g. NUST" className="mt-1" />
+            <Input id="mentor-institution" required placeholder="e.g. NUST" value={institution} onChange={(e) => setInstitution(e.target.value)} className="mt-1" />
           </div>
 
           <div>
             <label htmlFor="mentor-degree" className="text-xs font-medium text-muted">Degree / program</label>
-            <Input id="mentor-degree" required placeholder="e.g. BS Computer Science" className="mt-1" />
+            <Input id="mentor-degree" required placeholder="e.g. BS Computer Science" value={degree} onChange={(e) => setDegree(e.target.value)} className="mt-1" />
           </div>
 
           <div>
@@ -90,7 +111,7 @@ export function BecomeMentorModal({
             <div className="mt-1 flex flex-wrap gap-2">
               {FIELDS.map((f) => (
                 <label key={f.value} className="flex items-center gap-1.5">
-                  <input type="radio" name="field" value={f.value} required className="accent-accent" />
+                  <input type="radio" name="field" value={f.value} required checked={field === f.value} onChange={() => setField(f.value)} className="accent-accent" />
                   <span className="text-sm text-ink">{f.label}</span>
                 </label>
               ))}
@@ -103,6 +124,8 @@ export function BecomeMentorModal({
               id="mentor-bio"
               required
               rows={3}
+              value={bio}
+              onChange={(e) => setBio(e.target.value)}
               placeholder="Tell students about your journey..."
               className="mt-1 w-full rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-accent/50"
             />
@@ -110,16 +133,22 @@ export function BecomeMentorModal({
 
           <div>
             <label htmlFor="mentor-topics" className="text-xs font-medium text-muted">Topics you can help with</label>
-            <Input id="mentor-topics" required placeholder="e.g. MDCAT prep, NUST admission, scholarships" className="mt-1" />
+            <Input id="mentor-topics" required placeholder="e.g. MDCAT prep, NUST admission, scholarships" value={topics} onChange={(e) => setTopics(e.target.value)} className="mt-1" />
           </div>
 
           <div>
             <label htmlFor="mentor-social" className="text-xs font-medium text-muted">Instagram / Discord / WhatsApp link</label>
-            <Input id="mentor-social" type="url" required placeholder="https://..." className="mt-1" />
+            <Input id="mentor-social" type="url" required placeholder="https://..." value={socialLink} onChange={(e) => setSocialLink(e.target.value)} className="mt-1" />
           </div>
 
-          <Button type="submit" variant="default" className="w-full">
-            Submit application
+          {error && (
+            <p role="alert" className="rounded border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-300">
+              {error}
+            </p>
+          )}
+
+          <Button type="submit" variant="default" className="w-full" disabled={busy}>
+            {busy ? "Submitting…" : "Submit application"}
           </Button>
         </form>
       </div>
