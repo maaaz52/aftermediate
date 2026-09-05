@@ -9,34 +9,146 @@
           "title": "MDCAT Biology — Dr Sohail (MDCAT 2026)",
           "note": "Complete 28-lecture biology series covering the full syllabus in order.",
           "episodes": [
-            { "id": "mdcat-bio-01", "title": "Lecture 01 — Homeostasis", "videoId": "Pm4Ja5AMvNs" },
-            { "id": "mdcat-bio-02", "title": "Lecture 02 — Homeostasis (Part-02)", "videoId": "jYM1VCBwYZI" },
-            { "id": "mdcat-bio-03", "title": "Lecture 03 — Nervous Coordination (Part-01)", "videoId": "xn2kQ07heD0" },
-            { "id": "mdcat-bio-04", "title": "Lecture 04 — Nervous Coordination (Part-02)", "videoId": "Zj0oEN88eqA" },
-            { "id": "mdcat-bio-05", "title": "Lecture 05 — Chemical Coordination", "videoId": "8iR84wHP-pI" },
-            { "id": "mdcat-bio-06", "title": "Lecture 06 — Support and Movement (Part-01)", "videoId": "wg7qmQco8BE" },
-            { "id": "mdcat-bio-07", "title": "Lecture 07 — Support & Movement (Part-02)", "videoId": "eBvE2v6Mxkg" },
-            { "id": "mdcat-bio-08", "title": "Lecture 08 — Reproduction (Part-01)", "videoId": "IZYr2P-GEXA" },
-            { "id": "mdcat-bio-09", "title": "Lecture 09 — Reproduction (Part-02)", "videoId": "z5RQXXrrGpg" },
-            { "id": "mdcat-bio-10", "title": "Lecture 10 — Evolution (Part-01)", "videoId": "_ow8Nap71og" },
-            { "id": "mdcat-bio-11", "title": "Lecture 11 — Evolution (Part-02)", "videoId": "j1d5ozqZw0w" },
-            { "id": "mdcat-bio-12", "title": "Lecture 12 — Genetics (Part-01)", "videoId": "843aNotrJ2I" },
-            { "id": "mdcat-bio-13", "title": "Lecture 13 — Genetics (Part-02)", "videoId": "4n27zBCFUIA" },
-            { "id": "mdcat-bio-14", "title": "Lecture 14 — Genetics (Part-03)", "videoId": "0cmM84YQyJY" },
-            { "id": "mdcat-bio-15", "title": "Lecture 15 — Biotechnology", "videoId": "T-WIHeOsVvM" },
-            { "id": "mdcat-bio-16", "title": "Lecture 16 — Human Respiratory System", "videoId": "uNog240PivU" },
-            { "id": "mdcat-bio-17", "title": "Lecture 17 — Human Digestive System", "videoId": "47VLyXqtfOE" },
-            { "id": "mdcat-bio-18", "title": "Lecture 18 — Circulation (Part-01)", "videoId": "zWMsWMnRFfA" },
-            { "id": "mdcat-bio-19", "title": "Lecture 19 — Circulation (Part-02)", "videoId": "X8mAotcLRbs" },
-            { "id": "mdcat-bio-20", "title": "Lecture 20 — Immunity", "videoId": "dyMoFbrisAI" },
-            { "id": "mdcat-bio-21", "title": "Lecture 21 — Enzymes", "videoId": "M4EnnDOU-FU" },
-            { "id": "mdcat-bio-22", "title": "Lecture 22 — Bioenergetics", "videoId": "aqHqnR4LrRU" },
-            { "id": "mdcat-bio-23", "title": "Lecture 23 — Biomolecules | Carbohydrates", "videoId": "rbhrm1KCMok" },
-            { "id": "mdcat-bio-24", "title": "Lecture 24 — Biological Molecules | Proteins", "videoId": "MFuB6f7eMXk" },
-            { "id": "mdcat-bio-25", "title": "Lecture 25 — Lipids | Biological Molecules", "videoId": "ZK9dGw1g3Qg" },
-            { "id": "mdcat-bio-26", "title": "Lecture 26 — Nucleic Acid and Conjugated Molecules", "videoId": "4Bul--Lw8Io" },
-            { "id": "mdcat-bio-27", "title": "Lecture 27 — Cell Biology", "videoId": "ccSbpb1a3K8" },
-            { "id": "mdcat-bio-28", "title": "Lecture 28 — Viruses", "videoId": "QUWZw62-4P4" }
+            {
+              "id": "mdcat-bio-01",
+              "title": "Lecture 01 — Homeostasis",
+              "videoId": "Pm4Ja5AMvNs"
+            },
+            {
+              "id": "mdcat-bio-02",
+              "title": "Lecture 02 — Homeostasis (Part-02)",
+              "videoId": "jYM1VCBwYZI"
+            },
+            {
+              "id": "mdcat-bio-03",
+              "title": "Lecture 03 — Nervous Coordination (Part-01)",
+              "videoId": "xn2kQ07heD0"
+            },
+            {
+              "id": "mdcat-bio-04",
+              "title": "Lecture 04 — Nervous Coordination (Part-02)",
+              "videoId": "Zj0oEN88eqA"
+            },
+            {
+              "id": "mdcat-bio-05",
+              "title": "Lecture 05 — Chemical Coordination",
+              "videoId": "8iR84wHP-pI"
+            },
+            {
+              "id": "mdcat-bio-06",
+              "title": "Lecture 06 — Support and Movement (Part-01)",
+              "videoId": "wg7qmQco8BE"
+            },
+            {
+              "id": "mdcat-bio-07",
+              "title": "Lecture 07 — Support & Movement (Part-02)",
+              "videoId": "eBvE2v6Mxkg"
+            },
+            {
+              "id": "mdcat-bio-08",
+              "title": "Lecture 08 — Reproduction (Part-01)",
+              "videoId": "IZYr2P-GEXA"
+            },
+            {
+              "id": "mdcat-bio-09",
+              "title": "Lecture 09 — Reproduction (Part-02)",
+              "videoId": "z5RQXXrrGpg"
+            },
+            {
+              "id": "mdcat-bio-10",
+              "title": "Lecture 10 — Evolution (Part-01)",
+              "videoId": "_ow8Nap71og"
+            },
+            {
+              "id": "mdcat-bio-11",
+              "title": "Lecture 11 — Evolution (Part-02)",
+              "videoId": "j1d5ozqZw0w"
+            },
+            {
+              "id": "mdcat-bio-12",
+              "title": "Lecture 12 — Genetics (Part-01)",
+              "videoId": "843aNotrJ2I"
+            },
+            {
+              "id": "mdcat-bio-13",
+              "title": "Lecture 13 — Genetics (Part-02)",
+              "videoId": "4n27zBCFUIA"
+            },
+            {
+              "id": "mdcat-bio-14",
+              "title": "Lecture 14 — Genetics (Part-03)",
+              "videoId": "0cmM84YQyJY"
+            },
+            {
+              "id": "mdcat-bio-15",
+              "title": "Lecture 15 — Biotechnology",
+              "videoId": "T-WIHeOsVvM"
+            },
+            {
+              "id": "mdcat-bio-16",
+              "title": "Lecture 16 — Human Respiratory System",
+              "videoId": "uNog240PivU"
+            },
+            {
+              "id": "mdcat-bio-17",
+              "title": "Lecture 17 — Human Digestive System",
+              "videoId": "47VLyXqtfOE"
+            },
+            {
+              "id": "mdcat-bio-18",
+              "title": "Lecture 18 — Circulation (Part-01)",
+              "videoId": "zWMsWMnRFfA"
+            },
+            {
+              "id": "mdcat-bio-19",
+              "title": "Lecture 19 — Circulation (Part-02)",
+              "videoId": "X8mAotcLRbs"
+            },
+            {
+              "id": "mdcat-bio-20",
+              "title": "Lecture 20 — Immunity",
+              "videoId": "dyMoFbrisAI"
+            },
+            {
+              "id": "mdcat-bio-21",
+              "title": "Lecture 21 — Enzymes",
+              "videoId": "M4EnnDOU-FU"
+            },
+            {
+              "id": "mdcat-bio-22",
+              "title": "Lecture 22 — Bioenergetics",
+              "videoId": "aqHqnR4LrRU"
+            },
+            {
+              "id": "mdcat-bio-23",
+              "title": "Lecture 23 — Biomolecules | Carbohydrates",
+              "videoId": "rbhrm1KCMok"
+            },
+            {
+              "id": "mdcat-bio-24",
+              "title": "Lecture 24 — Biological Molecules | Proteins",
+              "videoId": "MFuB6f7eMXk"
+            },
+            {
+              "id": "mdcat-bio-25",
+              "title": "Lecture 25 — Lipids | Biological Molecules",
+              "videoId": "ZK9dGw1g3Qg"
+            },
+            {
+              "id": "mdcat-bio-26",
+              "title": "Lecture 26 — Nucleic Acid and Conjugated Molecules",
+              "videoId": "4Bul--Lw8Io"
+            },
+            {
+              "id": "mdcat-bio-27",
+              "title": "Lecture 27 — Cell Biology",
+              "videoId": "ccSbpb1a3K8"
+            },
+            {
+              "id": "mdcat-bio-28",
+              "title": "Lecture 28 — Viruses",
+              "videoId": "QUWZw62-4P4"
+            }
           ]
         },
         {
@@ -44,65 +156,301 @@
           "title": "MDCAT Chemistry — Prof. Wajid Ali Kamboh (WAK)",
           "note": "Complete 59-lecture chemistry series by unit, from fundamentals to industrial chemistry.",
           "episodes": [
-            { "id": "mdcat-chem-01", "title": "Unit 1 · Lec 1 — Fundamental Concepts of Chemistry", "videoId": "llBKtqou68A" },
-            { "id": "mdcat-chem-02", "title": "Unit 1 · Lec 2 — Fundamental Concepts of Chemistry", "videoId": "5sHk1sGCUsY" },
-            { "id": "mdcat-chem-03", "title": "Unit 1 · Lec 3 — Fundamental Concepts of Chemistry", "videoId": "UNwQ8v71Ps0" },
-            { "id": "mdcat-chem-04", "title": "Unit 2 · Lec 1 — Atomic Structure", "videoId": "6ebdWmGL3tE" },
-            { "id": "mdcat-chem-05", "title": "Unit 2 · Lec 2 — Atomic Structure", "videoId": "iTBh3tMVMNE" },
-            { "id": "mdcat-chem-06", "title": "Unit 3 · Lec 1 — Gases", "videoId": "9U1muxu1NLo" },
-            { "id": "mdcat-chem-07", "title": "Unit 3 · Lec 2 — Gases", "videoId": "3aQDO-nlTAM" },
-            { "id": "mdcat-chem-08", "title": "Unit 3 · Lec 3 — Gases", "videoId": "7syVMN-Dwms" },
-            { "id": "mdcat-chem-09", "title": "Unit 4 · Lec 1 — Liquids", "videoId": "6JlV6w_XErU" },
-            { "id": "mdcat-chem-10", "title": "Unit 4 · Lec 2 — Liquids", "videoId": "XouhQmHWcIQ" },
-            { "id": "mdcat-chem-11", "title": "Unit 4 · Lec 3 — Liquids", "videoId": "ZOA2AzmnryU" },
-            { "id": "mdcat-chem-12", "title": "Unit 5 · Lec 1 — Solids", "videoId": "V-FVjIz89vU" },
-            { "id": "mdcat-chem-13", "title": "Unit 5 · Lec 2 — Solids", "videoId": "eFCjh82S-NY" },
-            { "id": "mdcat-chem-14", "title": "Unit 6 · Lec 1 — Chemical Equilibrium", "videoId": "jSc9R-LoBQU" },
-            { "id": "mdcat-chem-15", "title": "Unit 6 · Lec 2 — Chemical Equilibrium", "videoId": "sjT2FC7-Ouw" },
-            { "id": "mdcat-chem-16", "title": "Unit 6 · Lec 3 — Chemical Equilibrium", "videoId": "Eqo2QatwZbI" },
-            { "id": "mdcat-chem-17", "title": "Unit 6 · Lec 4 — Chemical Equilibrium", "videoId": "ZSo0uE8mZ2I" },
-            { "id": "mdcat-chem-18", "title": "Unit 7 · Lec 1 — Reaction Kinetics", "videoId": "3MLJKdnZUQE" },
-            { "id": "mdcat-chem-19", "title": "Unit 7 · Lec 2 — Reaction Kinetics", "videoId": "hQWzrhNX1Rc" },
-            { "id": "mdcat-chem-20", "title": "Unit 7 · Lec 3 — Reaction Kinetics", "videoId": "0_4hlgK39Hs" },
-            { "id": "mdcat-chem-21", "title": "Unit 8 · Lec 1 — Thermochemistry", "videoId": "fBXWKCsPTXo" },
-            { "id": "mdcat-chem-22", "title": "Unit 8 · Lec 2 — Thermochemistry", "videoId": "6zVGGJlkJgs" },
-            { "id": "mdcat-chem-23", "title": "Unit 8 · Lec 3 — Thermochemistry", "videoId": "Bwu_vSc16yc" },
-            { "id": "mdcat-chem-24", "title": "Unit 9 · Lec 1 — Electrochemistry", "videoId": "gnADz3gNg50" },
-            { "id": "mdcat-chem-25", "title": "Unit 9 · Lec 2 — Electrochemistry", "videoId": "iY8l79wRFzk" },
-            { "id": "mdcat-chem-26", "title": "Unit 9 · Lec 3 — Electrochemistry", "videoId": "W3LoFttd0zY" },
-            { "id": "mdcat-chem-27", "title": "Unit 10 · Lec 1 — Chemical Bonding", "videoId": "ja3F5svCL2Q" },
-            { "id": "mdcat-chem-28", "title": "Unit 10 · Lec 2 — Chemical Bonding", "videoId": "nIM6BgF0fs8" },
-            { "id": "mdcat-chem-29", "title": "Unit 10 · Lec 3 — Chemical Bonding", "videoId": "ZJQYhaPk5zw" },
-            { "id": "mdcat-chem-30", "title": "Unit 10 · Lec 4 — Chemical Bonding", "videoId": "O4RPG3kRMBM" },
-            { "id": "mdcat-chem-31", "title": "Unit 10 · Lec 5 — Chemical Bonding", "videoId": "dabxcAGV1rk" },
-            { "id": "mdcat-chem-32", "title": "Unit 11 · Lec 1 — s and p Block Elements", "videoId": "KPeSahbVxQE" },
-            { "id": "mdcat-chem-33", "title": "Unit 11 · Lec 2 — s and p Block Elements", "videoId": "eJSNtXDw3Ak" },
-            { "id": "mdcat-chem-34", "title": "Unit 11 · Lec 3 — s and p Block Elements", "videoId": "oqr-An8FgoY" },
-            { "id": "mdcat-chem-35", "title": "Unit 11 · Lec 4 — s and p Block Elements", "videoId": "8rtwZ2VWoDc" },
-            { "id": "mdcat-chem-36", "title": "Unit 11 · Lec 5 — s and p Block Elements", "videoId": "WXpTDDh1oog" },
-            { "id": "mdcat-chem-37", "title": "Unit 12 · Lec 1 — Transition Elements", "videoId": "jw3IRShflr4" },
-            { "id": "mdcat-chem-38", "title": "Unit 12 · Lec 2 — Transition Elements", "videoId": "NwT9NU3PYLI" },
-            { "id": "mdcat-chem-39", "title": "Unit 13 · Lec 1 — Organic Chemistry", "videoId": "0nNE-jb6U5U" },
-            { "id": "mdcat-chem-40", "title": "Unit 13 · Lec 2 — Organic Chemistry", "videoId": "I5So-l7IPPc" },
-            { "id": "mdcat-chem-41", "title": "Unit 13 · Lec 3 — Organic Chemistry", "videoId": "4aDJK16qIng" },
-            { "id": "mdcat-chem-42", "title": "Unit 13 · Lec 4 — Organic Chemistry", "videoId": "3YiZIECLIP8" },
-            { "id": "mdcat-chem-43", "title": "Unit 13 · Lec 5 — Organic Chemistry", "videoId": "qPvujf7VCRw" },
-            { "id": "mdcat-chem-44", "title": "Unit 14 · Lec 1 — Chemistry of Hydrocarbons", "videoId": "jhXAly7WQy0" },
-            { "id": "mdcat-chem-45", "title": "Unit 14 · Lec 2 — Chemistry of Hydrocarbons", "videoId": "bnFMXKSJ1CE" },
-            { "id": "mdcat-chem-46", "title": "Unit 14 · Lec 3 — Chemistry of Hydrocarbons", "videoId": "Ec7T5mGCPQg" },
-            { "id": "mdcat-chem-47", "title": "Unit 14 · Lec 4 — Chemistry of Hydrocarbons", "videoId": "YRnzB0EBzlo" },
-            { "id": "mdcat-chem-48", "title": "Unit 15 · Lec 1 — Alkyl Halides", "videoId": "3GqJdE5Fio8" },
-            { "id": "mdcat-chem-49", "title": "Unit 15 · Lec 2 — Alkyl Halides", "videoId": "qggahsFfszE" },
-            { "id": "mdcat-chem-50", "title": "Unit 16 · Lec 1 — Alcohols", "videoId": "wFKW9wzoPSg" },
-            { "id": "mdcat-chem-51", "title": "Unit 16 · Lec 2 — Phenols", "videoId": "cD9mjekGAGM" },
-            { "id": "mdcat-chem-52", "title": "Unit 17 · Lec 1 — Aldehydes and Ketones", "videoId": "06ocD5aIFS0" },
-            { "id": "mdcat-chem-53", "title": "Unit 17 · Lec 2 — Aldehydes and Ketones", "videoId": "SSVCOAvSR1o" },
-            { "id": "mdcat-chem-54", "title": "Unit 17 · Lec 3 — Aldehydes and Ketones", "videoId": "3bovExSGcgo" },
-            { "id": "mdcat-chem-55", "title": "Unit 18 · Lec 1 — Carboxylic Acids", "videoId": "PTPeY62d9Cg" },
-            { "id": "mdcat-chem-56", "title": "Unit 18 · Lec 2 — Carboxylic Acids", "videoId": "zlxnX59GC1s" },
-            { "id": "mdcat-chem-57", "title": "Unit 20 · Lec 2 — Industrial Chemistry", "videoId": "ghQANM5Zg3w" },
-            { "id": "mdcat-chem-58", "title": "Unit 20 · Lec 3 — Industrial Chemistry", "videoId": "VoYiak3s7II" },
-            { "id": "mdcat-chem-59", "title": "Best Of Luck For MDCAT", "videoId": "slGL3ZpBfW0" }
+            {
+              "id": "mdcat-chem-01",
+              "title": "Unit 1 · Lec 1 — Fundamental Concepts of Chemistry",
+              "videoId": "llBKtqou68A"
+            },
+            {
+              "id": "mdcat-chem-02",
+              "title": "Unit 1 · Lec 2 — Fundamental Concepts of Chemistry",
+              "videoId": "5sHk1sGCUsY"
+            },
+            {
+              "id": "mdcat-chem-03",
+              "title": "Unit 1 · Lec 3 — Fundamental Concepts of Chemistry",
+              "videoId": "UNwQ8v71Ps0"
+            },
+            {
+              "id": "mdcat-chem-04",
+              "title": "Unit 2 · Lec 1 — Atomic Structure",
+              "videoId": "6ebdWmGL3tE"
+            },
+            {
+              "id": "mdcat-chem-05",
+              "title": "Unit 2 · Lec 2 — Atomic Structure",
+              "videoId": "iTBh3tMVMNE"
+            },
+            {
+              "id": "mdcat-chem-06",
+              "title": "Unit 3 · Lec 1 — Gases",
+              "videoId": "9U1muxu1NLo"
+            },
+            {
+              "id": "mdcat-chem-07",
+              "title": "Unit 3 · Lec 2 — Gases",
+              "videoId": "3aQDO-nlTAM"
+            },
+            {
+              "id": "mdcat-chem-08",
+              "title": "Unit 3 · Lec 3 — Gases",
+              "videoId": "7syVMN-Dwms"
+            },
+            {
+              "id": "mdcat-chem-09",
+              "title": "Unit 4 · Lec 1 — Liquids",
+              "videoId": "6JlV6w_XErU"
+            },
+            {
+              "id": "mdcat-chem-10",
+              "title": "Unit 4 · Lec 2 — Liquids",
+              "videoId": "XouhQmHWcIQ"
+            },
+            {
+              "id": "mdcat-chem-11",
+              "title": "Unit 4 · Lec 3 — Liquids",
+              "videoId": "ZOA2AzmnryU"
+            },
+            {
+              "id": "mdcat-chem-12",
+              "title": "Unit 5 · Lec 1 — Solids",
+              "videoId": "V-FVjIz89vU"
+            },
+            {
+              "id": "mdcat-chem-13",
+              "title": "Unit 5 · Lec 2 — Solids",
+              "videoId": "eFCjh82S-NY"
+            },
+            {
+              "id": "mdcat-chem-14",
+              "title": "Unit 6 · Lec 1 — Chemical Equilibrium",
+              "videoId": "jSc9R-LoBQU"
+            },
+            {
+              "id": "mdcat-chem-15",
+              "title": "Unit 6 · Lec 2 — Chemical Equilibrium",
+              "videoId": "sjT2FC7-Ouw"
+            },
+            {
+              "id": "mdcat-chem-16",
+              "title": "Unit 6 · Lec 3 — Chemical Equilibrium",
+              "videoId": "Eqo2QatwZbI"
+            },
+            {
+              "id": "mdcat-chem-17",
+              "title": "Unit 6 · Lec 4 — Chemical Equilibrium",
+              "videoId": "ZSo0uE8mZ2I"
+            },
+            {
+              "id": "mdcat-chem-18",
+              "title": "Unit 7 · Lec 1 — Reaction Kinetics",
+              "videoId": "3MLJKdnZUQE"
+            },
+            {
+              "id": "mdcat-chem-19",
+              "title": "Unit 7 · Lec 2 — Reaction Kinetics",
+              "videoId": "hQWzrhNX1Rc"
+            },
+            {
+              "id": "mdcat-chem-20",
+              "title": "Unit 7 · Lec 3 — Reaction Kinetics",
+              "videoId": "0_4hlgK39Hs"
+            },
+            {
+              "id": "mdcat-chem-21",
+              "title": "Unit 8 · Lec 1 — Thermochemistry",
+              "videoId": "fBXWKCsPTXo"
+            },
+            {
+              "id": "mdcat-chem-22",
+              "title": "Unit 8 · Lec 2 — Thermochemistry",
+              "videoId": "6zVGGJlkJgs"
+            },
+            {
+              "id": "mdcat-chem-23",
+              "title": "Unit 8 · Lec 3 — Thermochemistry",
+              "videoId": "Bwu_vSc16yc"
+            },
+            {
+              "id": "mdcat-chem-24",
+              "title": "Unit 9 · Lec 1 — Electrochemistry",
+              "videoId": "gnADz3gNg50"
+            },
+            {
+              "id": "mdcat-chem-25",
+              "title": "Unit 9 · Lec 2 — Electrochemistry",
+              "videoId": "iY8l79wRFzk"
+            },
+            {
+              "id": "mdcat-chem-26",
+              "title": "Unit 9 · Lec 3 — Electrochemistry",
+              "videoId": "W3LoFttd0zY"
+            },
+            {
+              "id": "mdcat-chem-27",
+              "title": "Unit 10 · Lec 1 — Chemical Bonding",
+              "videoId": "ja3F5svCL2Q"
+            },
+            {
+              "id": "mdcat-chem-28",
+              "title": "Unit 10 · Lec 2 — Chemical Bonding",
+              "videoId": "nIM6BgF0fs8"
+            },
+            {
+              "id": "mdcat-chem-29",
+              "title": "Unit 10 · Lec 3 — Chemical Bonding",
+              "videoId": "ZJQYhaPk5zw"
+            },
+            {
+              "id": "mdcat-chem-30",
+              "title": "Unit 10 · Lec 4 — Chemical Bonding",
+              "videoId": "O4RPG3kRMBM"
+            },
+            {
+              "id": "mdcat-chem-31",
+              "title": "Unit 10 · Lec 5 — Chemical Bonding",
+              "videoId": "dabxcAGV1rk"
+            },
+            {
+              "id": "mdcat-chem-32",
+              "title": "Unit 11 · Lec 1 — s and p Block Elements",
+              "videoId": "KPeSahbVxQE"
+            },
+            {
+              "id": "mdcat-chem-33",
+              "title": "Unit 11 · Lec 2 — s and p Block Elements",
+              "videoId": "eJSNtXDw3Ak"
+            },
+            {
+              "id": "mdcat-chem-34",
+              "title": "Unit 11 · Lec 3 — s and p Block Elements",
+              "videoId": "oqr-An8FgoY"
+            },
+            {
+              "id": "mdcat-chem-35",
+              "title": "Unit 11 · Lec 4 — s and p Block Elements",
+              "videoId": "8rtwZ2VWoDc"
+            },
+            {
+              "id": "mdcat-chem-36",
+              "title": "Unit 11 · Lec 5 — s and p Block Elements",
+              "videoId": "WXpTDDh1oog"
+            },
+            {
+              "id": "mdcat-chem-37",
+              "title": "Unit 12 · Lec 1 — Transition Elements",
+              "videoId": "jw3IRShflr4"
+            },
+            {
+              "id": "mdcat-chem-38",
+              "title": "Unit 12 · Lec 2 — Transition Elements",
+              "videoId": "NwT9NU3PYLI"
+            },
+            {
+              "id": "mdcat-chem-39",
+              "title": "Unit 13 · Lec 1 — Organic Chemistry",
+              "videoId": "0nNE-jb6U5U"
+            },
+            {
+              "id": "mdcat-chem-40",
+              "title": "Unit 13 · Lec 2 — Organic Chemistry",
+              "videoId": "I5So-l7IPPc"
+            },
+            {
+              "id": "mdcat-chem-41",
+              "title": "Unit 13 · Lec 3 — Organic Chemistry",
+              "videoId": "4aDJK16qIng"
+            },
+            {
+              "id": "mdcat-chem-42",
+              "title": "Unit 13 · Lec 4 — Organic Chemistry",
+              "videoId": "3YiZIECLIP8"
+            },
+            {
+              "id": "mdcat-chem-43",
+              "title": "Unit 13 · Lec 5 — Organic Chemistry",
+              "videoId": "qPvujf7VCRw"
+            },
+            {
+              "id": "mdcat-chem-44",
+              "title": "Unit 14 · Lec 1 — Chemistry of Hydrocarbons",
+              "videoId": "jhXAly7WQy0"
+            },
+            {
+              "id": "mdcat-chem-45",
+              "title": "Unit 14 · Lec 2 — Chemistry of Hydrocarbons",
+              "videoId": "bnFMXKSJ1CE"
+            },
+            {
+              "id": "mdcat-chem-46",
+              "title": "Unit 14 · Lec 3 — Chemistry of Hydrocarbons",
+              "videoId": "Ec7T5mGCPQg"
+            },
+            {
+              "id": "mdcat-chem-47",
+              "title": "Unit 14 · Lec 4 — Chemistry of Hydrocarbons",
+              "videoId": "YRnzB0EBzlo"
+            },
+            {
+              "id": "mdcat-chem-48",
+              "title": "Unit 15 · Lec 1 — Alkyl Halides",
+              "videoId": "3GqJdE5Fio8"
+            },
+            {
+              "id": "mdcat-chem-49",
+              "title": "Unit 15 · Lec 2 — Alkyl Halides",
+              "videoId": "qggahsFfszE"
+            },
+            {
+              "id": "mdcat-chem-50",
+              "title": "Unit 16 · Lec 1 — Alcohols",
+              "videoId": "wFKW9wzoPSg"
+            },
+            {
+              "id": "mdcat-chem-51",
+              "title": "Unit 16 · Lec 2 — Phenols",
+              "videoId": "cD9mjekGAGM"
+            },
+            {
+              "id": "mdcat-chem-52",
+              "title": "Unit 17 · Lec 1 — Aldehydes and Ketones",
+              "videoId": "06ocD5aIFS0"
+            },
+            {
+              "id": "mdcat-chem-53",
+              "title": "Unit 17 · Lec 2 — Aldehydes and Ketones",
+              "videoId": "SSVCOAvSR1o"
+            },
+            {
+              "id": "mdcat-chem-54",
+              "title": "Unit 17 · Lec 3 — Aldehydes and Ketones",
+              "videoId": "3bovExSGcgo"
+            },
+            {
+              "id": "mdcat-chem-55",
+              "title": "Unit 18 · Lec 1 — Carboxylic Acids",
+              "videoId": "PTPeY62d9Cg"
+            },
+            {
+              "id": "mdcat-chem-56",
+              "title": "Unit 18 · Lec 2 — Carboxylic Acids",
+              "videoId": "zlxnX59GC1s"
+            },
+            {
+              "id": "mdcat-chem-57",
+              "title": "Unit 20 · Lec 2 — Industrial Chemistry",
+              "videoId": "ghQANM5Zg3w"
+            },
+            {
+              "id": "mdcat-chem-58",
+              "title": "Unit 20 · Lec 3 — Industrial Chemistry",
+              "videoId": "VoYiak3s7II"
+            },
+            {
+              "id": "mdcat-chem-59",
+              "title": "Best Of Luck For MDCAT",
+              "videoId": "slGL3ZpBfW0"
+            }
           ]
         },
         {
@@ -110,21 +458,81 @@
           "title": "MDCAT Physics — One Shot Series",
           "note": "15 one-shot lectures covering the full physics syllabus for MDCAT / ECAT.",
           "episodes": [
-            { "id": "mdcat-phy-01", "title": "Force and Motion — One Shot", "videoId": "YC1SMGS6Vjo" },
-            { "id": "mdcat-phy-02", "title": "Vectors — One Shot", "videoId": "nyYlsgzhzSw" },
-            { "id": "mdcat-phy-03", "title": "Work and Energy — One Shot", "videoId": "jyRCPXV34h0" },
-            { "id": "mdcat-phy-04", "title": "Circular Motion — One Shot", "videoId": "XYPR70OPKAY" },
-            { "id": "mdcat-phy-05", "title": "Waves and Sound — One Shot", "videoId": "hUeiVcfdK64" },
-            { "id": "mdcat-phy-06", "title": "Simple Harmonic Motion — One Shot", "videoId": "oZNKlBe-CjM" },
-            { "id": "mdcat-phy-07", "title": "Heat and Thermodynamics — One Shot", "videoId": "jSazrzxXCa4" },
-            { "id": "mdcat-phy-08", "title": "Electrostatics — One Shot", "videoId": "1uqywkwnbhg" },
-            { "id": "mdcat-phy-09", "title": "Current Electricity — One Shot", "videoId": "sMHKaUHGGbk" },
-            { "id": "mdcat-phy-10", "title": "Electromagnetism — One Shot", "videoId": "G7xMZnj5Nug" },
-            { "id": "mdcat-phy-11", "title": "Electromagnetic Induction — One Shot", "videoId": "GGvuYpeaR3I" },
-            { "id": "mdcat-phy-12", "title": "Electronics — One Shot", "videoId": "EXm5j6jH62E" },
-            { "id": "mdcat-phy-13", "title": "Dawn of Modern Physics — One Shot", "videoId": "EJwpwSiGWjc" },
-            { "id": "mdcat-phy-14", "title": "Atomic Spectra / Line Spectrum — One Shot", "videoId": "xZrnKmDn3kQ" },
-            { "id": "mdcat-phy-15", "title": "Nuclear Physics — One Shot", "videoId": "NQI10BFjLcg" }
+            {
+              "id": "mdcat-phy-01",
+              "title": "Force and Motion — One Shot",
+              "videoId": "YC1SMGS6Vjo"
+            },
+            {
+              "id": "mdcat-phy-02",
+              "title": "Vectors — One Shot",
+              "videoId": "nyYlsgzhzSw"
+            },
+            {
+              "id": "mdcat-phy-03",
+              "title": "Work and Energy — One Shot",
+              "videoId": "jyRCPXV34h0"
+            },
+            {
+              "id": "mdcat-phy-04",
+              "title": "Circular Motion — One Shot",
+              "videoId": "XYPR70OPKAY"
+            },
+            {
+              "id": "mdcat-phy-05",
+              "title": "Waves and Sound — One Shot",
+              "videoId": "hUeiVcfdK64"
+            },
+            {
+              "id": "mdcat-phy-06",
+              "title": "Simple Harmonic Motion — One Shot",
+              "videoId": "oZNKlBe-CjM"
+            },
+            {
+              "id": "mdcat-phy-07",
+              "title": "Heat and Thermodynamics — One Shot",
+              "videoId": "jSazrzxXCa4"
+            },
+            {
+              "id": "mdcat-phy-08",
+              "title": "Electrostatics — One Shot",
+              "videoId": "1uqywkwnbhg"
+            },
+            {
+              "id": "mdcat-phy-09",
+              "title": "Current Electricity — One Shot",
+              "videoId": "sMHKaUHGGbk"
+            },
+            {
+              "id": "mdcat-phy-10",
+              "title": "Electromagnetism — One Shot",
+              "videoId": "G7xMZnj5Nug"
+            },
+            {
+              "id": "mdcat-phy-11",
+              "title": "Electromagnetic Induction — One Shot",
+              "videoId": "GGvuYpeaR3I"
+            },
+            {
+              "id": "mdcat-phy-12",
+              "title": "Electronics — One Shot",
+              "videoId": "EXm5j6jH62E"
+            },
+            {
+              "id": "mdcat-phy-13",
+              "title": "Dawn of Modern Physics — One Shot",
+              "videoId": "EJwpwSiGWjc"
+            },
+            {
+              "id": "mdcat-phy-14",
+              "title": "Atomic Spectra / Line Spectrum — One Shot",
+              "videoId": "xZrnKmDn3kQ"
+            },
+            {
+              "id": "mdcat-phy-15",
+              "title": "Nuclear Physics — One Shot",
+              "videoId": "NQI10BFjLcg"
+            }
           ]
         }
       ],
@@ -147,7 +555,610 @@
     },
     {
       "testId": "net",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": "math",
+          "title": "ECAT & NET Math — Hashim Zia",
+          "note": "Full math course covering number systems, sets, functions, matrices, trigonometry, coordinate geometry, vectors, calculus and past papers. Playlist by Mathsflix By Hashim Zia.",
+          "episodes": [
+            {
+              "id": "math-001",
+              "title": "Lec 1 — NUMBER SYSTEM · REAL AND COMPLEX NUMBERS",
+              "videoId": "gSv2dlRBNj8"
+            },
+            {
+              "id": "math-002",
+              "title": "Lec 2 — NUMBER SYSTEM · REAL AND COMPLEX NUMBERS",
+              "videoId": "0CvIkgO8YJM"
+            },
+            {
+              "id": "math-003",
+              "title": "Lec 3 — NUMBER SYSTEM · REAL AND COMPLEX NUMBER",
+              "videoId": "_4Plpxwony0"
+            },
+            {
+              "id": "math-004",
+              "title": "Lec 4 — SETS · INTRODUCTION",
+              "videoId": "L7yH1yJx31E"
+            },
+            {
+              "id": "math-005",
+              "title": "Lec 5 — SETS · OPERATIONS",
+              "videoId": "LyKXVwoPkBM"
+            },
+            {
+              "id": "math-006",
+              "title": "Lec 6 — SETS · VENN DIAGRAM",
+              "videoId": "0Q8PuggLg54"
+            },
+            {
+              "id": "math-007",
+              "title": "Lec 7 — Equation & Polynomial · Roots & Polar Form",
+              "videoId": "hSS1J4rknT0"
+            },
+            {
+              "id": "math-008",
+              "title": "Lec 8 — Equations · Discriminant, Roots & Factor Theorem",
+              "videoId": "g5C7JHSF_dw"
+            },
+            {
+              "id": "math-009",
+              "title": "Lec 9 — EQUATIONS · INEQUALITIES",
+              "videoId": "4L0Y9W0fbXk"
+            },
+            {
+              "id": "math-010",
+              "title": "Lec 10 — Matrices · Types of Matrices",
+              "videoId": "smyH1dFg2FU"
+            },
+            {
+              "id": "math-011",
+              "title": "Lec 11 — Matrices · Determinants",
+              "videoId": "3lQ1cfj7ql0"
+            },
+            {
+              "id": "math-012",
+              "title": "Lec 12 — MATRICES · ADJOINT OF MATRICES",
+              "videoId": "prR8jc0zxfo"
+            },
+            {
+              "id": "math-013",
+              "title": "Lec 13 — MATRICES · RANK OF A MATRIX",
+              "videoId": "Qa2U3r8DWB0"
+            },
+            {
+              "id": "math-014",
+              "title": "Lec 14 — GROUPS [ COMPOSITION TABLE ] · LECTURE # 01",
+              "videoId": "9_zR-MGCIyU"
+            },
+            {
+              "id": "math-015",
+              "title": "Lec 15 — E-CAT · B-CAT MATHS",
+              "videoId": "OUIrgYYLtzg"
+            },
+            {
+              "id": "math-016",
+              "title": "Lec 16 — SEQUENCE AND SERIES · E-CAT MATHS",
+              "videoId": "PMQMk0YAY1A"
+            },
+            {
+              "id": "math-017",
+              "title": "Lec 17 — SEQUENCE AND SERIES · Arithmetic sequence",
+              "videoId": "HPKCj5BOfbw"
+            },
+            {
+              "id": "math-018",
+              "title": "Lec 18 — SEQUENCE AND SERIES · ARITHMETIC SERIES",
+              "videoId": "aEVM-V3FTLo"
+            },
+            {
+              "id": "math-019",
+              "title": "Lec 19 — SEQUENCE AND SERIES · Geometric Sequence",
+              "videoId": "90L7E2zRTIA"
+            },
+            {
+              "id": "math-020",
+              "title": "Lec 20 — SEQUENCE AND SERIES · Geometric Series",
+              "videoId": "aU7Gn5DPbaQ"
+            },
+            {
+              "id": "math-021",
+              "title": "Lec 21 — SEQUENCE AND SERIES · NUST-IBA-NED-FAST",
+              "videoId": "0LiKH4XYqf8"
+            },
+            {
+              "id": "math-022",
+              "title": "Lec 22 — PROBABILITY, COMBINATION, PERMUTATION AND COUNTING TECHNIQUES · E-CAT MATHS",
+              "videoId": "7UsQSgeqpl4"
+            },
+            {
+              "id": "math-023",
+              "title": "Lec 23 — PERMUTATION AND COUNTING TECHNIQUES · E-CAT MATHS",
+              "videoId": "_ofqJBl-aSU"
+            },
+            {
+              "id": "math-024",
+              "title": "Lec 24 — PERMUTATION OF WORDS · WORDS PERMUTATION",
+              "videoId": "uDIbOq9Qxyk"
+            },
+            {
+              "id": "math-025",
+              "title": "Lec 25 — NUMBERS PERMUTATION · DIGITS ARRANGEMENT",
+              "videoId": "HyWk9wOUuAY"
+            },
+            {
+              "id": "math-026",
+              "title": "Lec 26 — COMBINATION · E-CAT MATHS",
+              "videoId": "uuNhAxl1fus"
+            },
+            {
+              "id": "math-027",
+              "title": "Lec 27 — E-CAT MATHS · B-CAT MATHS",
+              "videoId": "E94Tk6AD3yA"
+            },
+            {
+              "id": "math-028",
+              "title": "Lec 28 — PROBABILTY WITH COMBINATION LECTURE -02 · E-CAT MATHS",
+              "videoId": "0ZJ6QD3853Y"
+            },
+            {
+              "id": "math-029",
+              "title": "Lec 29 — PROBABILITY · ADDITION LAW OF PROBABILITY",
+              "videoId": "tOLlgEfPBr0"
+            },
+            {
+              "id": "math-030",
+              "title": "Lec 30 — PROBABILITY · MULTIPLICATION LAW OF PROBABILITY",
+              "videoId": "qmS7NmAjs04"
+            },
+            {
+              "id": "math-031",
+              "title": "Lec 31 — HOW TO SOLVE FACTORIAL QUESTIONS WITHOUT USING CALCULATOR · E-CAT MATHS",
+              "videoId": "swwYgt0Ot0I"
+            },
+            {
+              "id": "math-032",
+              "title": "Lec 32 — HOW TO SOLVE PERMUTATION QUESTIONS WITHOUT USING CALCULATOR · E-CAT MATHS",
+              "videoId": "AVBYY1X9wik"
+            },
+            {
+              "id": "math-033",
+              "title": "Lec 33 — LOGARITHMS RULES AND PROPERTIES · LECTURE # 01",
+              "videoId": "57pWpR40v3k"
+            },
+            {
+              "id": "math-034",
+              "title": "Lec 34 — LOGARITHMIC EQUATIONS · VIDEO LECTURE # 02",
+              "videoId": "oagC9lbqdQI"
+            },
+            {
+              "id": "math-035",
+              "title": "Lec 35 — BINOMIAL THEOREM · BINOMIAL EXPANSION",
+              "videoId": "KAdPf17jhM8"
+            },
+            {
+              "id": "math-036",
+              "title": "Lec 36 — GENERAL TERM FORMULA FOR BINOMIAL THEOREM · E-CAT MATHS",
+              "videoId": "DVe922UW_9U"
+            },
+            {
+              "id": "math-037",
+              "title": "Lec 37 — BINOMIAL SERIES · BINOMIAL THEOREM AND MATHEMATICAL INDUCTION",
+              "videoId": "ntRqx5jRYaU"
+            },
+            {
+              "id": "math-038",
+              "title": "Lec 38 — NEGATIVE TERM CONCEPT · BINOMIAL THEOREM AND MATHEMATICAL INDUCTION",
+              "videoId": "_foIXk5-S78"
+            },
+            {
+              "id": "math-039",
+              "title": "Lec 39 — Trigonometry · Fundamentals of Trigonometry",
+              "videoId": "9s4iGcfZ6-w"
+            },
+            {
+              "id": "math-040",
+              "title": "Lec 40 — Trigonometry · Trigonometric Identities, Sum & Difference of Angles",
+              "videoId": "IuigDl9pFOM"
+            },
+            {
+              "id": "math-041",
+              "title": "Lec 41 — Trigonometry · Inverse Trigonometric Functions",
+              "videoId": "cf3b4JgRwvI"
+            },
+            {
+              "id": "math-042",
+              "title": "Lec 42 — Trigonometry · Application Of Trigonometry",
+              "videoId": "LLHTbOtQ6QE"
+            },
+            {
+              "id": "math-043",
+              "title": "Lec 43 — Trigonometry · Trigonometric Functions and Graphs",
+              "videoId": "C1mmMTdrziM"
+            },
+            {
+              "id": "math-044",
+              "title": "Lec 44 — FUNCTIONS AND LIMITS · APTITUDE \\u2013 XII LECTURE",
+              "videoId": "arl9yZllh3I"
+            },
+            {
+              "id": "math-045",
+              "title": "Lec 45 — LIMITS · CONCEPT OF LIMIT",
+              "videoId": "zInh_b3H62o"
+            },
+            {
+              "id": "math-046",
+              "title": "Lec 46 — LIMITS · APPLICATION OF LIMITS ON VARIABLE BASED FUNCTIONS",
+              "videoId": "8tB1M-19maw"
+            },
+            {
+              "id": "math-047",
+              "title": "Lec 47 — LIMITS · APPLICATION OF LIMITS ON SQUARE ROOTS",
+              "videoId": "jrzSDosm6eY"
+            },
+            {
+              "id": "math-048",
+              "title": "Lec 48 — LIMITS · APPLICATION OF LIMITS ON TRIGONOMETRIC FUNCTIONS",
+              "videoId": "ZGh5rBt5k4A"
+            },
+            {
+              "id": "math-049",
+              "title": "Lec 49 — LIMITS · APPLICATION OF LIMITS ON NATURAL EXPONENTIAL AND COMMON EXPONENTIAL FUN",
+              "videoId": "B7I3537-G_I"
+            },
+            {
+              "id": "math-050",
+              "title": "Lec 50 — LIMITS · LIMITS APPROACHING TO INFINITY",
+              "videoId": "ERLG4Znm5V0"
+            },
+            {
+              "id": "math-051",
+              "title": "Lec 51 — LIMITS · SEQUENCE OF A FUNCTION",
+              "videoId": "A9xN3M3__U8"
+            },
+            {
+              "id": "math-052",
+              "title": "Lec 52 — FUNCTIONS [TYPES OF FUNCTIONS] · LECTURE # 01",
+              "videoId": "Wrr3WsYm224"
+            },
+            {
+              "id": "math-053",
+              "title": "Lec 53 — FUNCTIONS [ VERTICAL LINE TEST ] · LECTURE#02",
+              "videoId": "fCduS7l9JWU"
+            },
+            {
+              "id": "math-054",
+              "title": "Lec 54 — FUNCTIONS [ EVEN-ODD FUNCTIONS WITH GRAPHS ] · LECTURE#03",
+              "videoId": "I2gIB6MrTuc"
+            },
+            {
+              "id": "math-055",
+              "title": "Lec 55 — FUNCTIONS [ REFLECTION OF A FUNCTION ] · LECTURE#04",
+              "videoId": "IpovrfV3udI"
+            },
+            {
+              "id": "math-056",
+              "title": "Lec 56 — FUNCTIONS [ INVERSE OF A FUNCTION ] · LECTURE#05",
+              "videoId": "Oar-w4qylng"
+            },
+            {
+              "id": "math-057",
+              "title": "Lec 57 — FUNCTIONS [ COMPOSITE FUNCTIONS ] · LECTURE#06",
+              "videoId": "QLBg4flDaBM"
+            },
+            {
+              "id": "math-058",
+              "title": "Lec 58 — ",
+              "videoId": "EFYYv3nUpWI"
+            },
+            {
+              "id": "math-059",
+              "title": "Lec 59 — ",
+              "videoId": "0SCGcnEGbRk"
+            },
+            {
+              "id": "math-060",
+              "title": "Lec 60 — ",
+              "videoId": "BLV4WcUfLCs"
+            },
+            {
+              "id": "math-061",
+              "title": "Lec 61 — ",
+              "videoId": "HzlKyFEq4zE"
+            },
+            {
+              "id": "math-062",
+              "title": "Lec 62 — ",
+              "videoId": "wIZF_4LANrs"
+            },
+            {
+              "id": "math-063",
+              "title": "Lec 63 — ",
+              "videoId": "6PpaXIsAKyU"
+            },
+            {
+              "id": "math-064",
+              "title": "Lec 64 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "Y4HN3jfmhjs"
+            },
+            {
+              "id": "math-065",
+              "title": "Lec 65 — Coordinate Geometry Class · Analytical Geometry",
+              "videoId": "fx0U95aJe50"
+            },
+            {
+              "id": "math-066",
+              "title": "Lec 66 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "77zqD4jMxL4"
+            },
+            {
+              "id": "math-067",
+              "title": "Lec 67 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "eHjlRV5jwX0"
+            },
+            {
+              "id": "math-068",
+              "title": "Lec 68 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "wViKxh-ux1g"
+            },
+            {
+              "id": "math-069",
+              "title": "Lec 69 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "19cfFTjEns0"
+            },
+            {
+              "id": "math-070",
+              "title": "Lec 70 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "zpt4svZZ-TM"
+            },
+            {
+              "id": "math-071",
+              "title": "Lec 71 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "KhJqR5NbJUc"
+            },
+            {
+              "id": "math-072",
+              "title": "Lec 72 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "jZ9Tv9EPBkM"
+            },
+            {
+              "id": "math-073",
+              "title": "Lec 73 — GENERAL EQUATION OF STRAIGHT LINE · INTRODUCTION",
+              "videoId": "8N3VhNbzRKs"
+            },
+            {
+              "id": "math-074",
+              "title": "Lec 74 — GENERAL EQUATION OF STRAIGHT LINE · CONCURRENT LINES",
+              "videoId": "6rIGYP-WPc0"
+            },
+            {
+              "id": "math-075",
+              "title": "Lec 75 — GENERAL EQUATION OF STRAIGHT LINE · AREA OF TRIANGLE",
+              "videoId": "khSheLur3zQ"
+            },
+            {
+              "id": "math-076",
+              "title": "Lec 76 — GENERAL EQUATION OF STRAIGHT LINE · DISTANCE BETWEEN POINT AND LINE",
+              "videoId": "3Nx6dVS_lKw"
+            },
+            {
+              "id": "math-077",
+              "title": "Lec 77 — GENERAL EQUATION OF STRAIGHT LINE · EQUATION OF PAIR OF LINES PASSING THROUGH OR",
+              "videoId": "BkUUBISaZ8E"
+            },
+            {
+              "id": "math-078",
+              "title": "Lec 78 — COORDINATE GEOMETRY · STRAIGHT LINE",
+              "videoId": "ShbfXJ-1k_c"
+            },
+            {
+              "id": "math-079",
+              "title": "Lec 79 — COORDINATE GEOMETRY · ANALYTICAL GEOMETRY",
+              "videoId": "H5ebxzcWdOw"
+            },
+            {
+              "id": "math-080",
+              "title": "Lec 80 — DIFFRENTIATION & HIGHER ORDER DERIVATIVES AND APPLICATION · APTITUDE XII",
+              "videoId": "EIOzbyOpft0"
+            },
+            {
+              "id": "math-081",
+              "title": "Lec 81 — DERIVATIVES · MEMORIZE FORMULAS & PROPERTIES",
+              "videoId": "kWK7B6hnxmQ"
+            },
+            {
+              "id": "math-082",
+              "title": "Lec 82 — DERIVATIVES · TRIGONOMETRIC",
+              "videoId": "wQdTP9IZD4E"
+            },
+            {
+              "id": "math-083",
+              "title": "Lec 83 — DERIVATIVES",
+              "videoId": "wkIMeyfreh0"
+            },
+            {
+              "id": "math-084",
+              "title": "Lec 84 — DERIVATIVES · LOGARITHMIC FUNCTIONS",
+              "videoId": "Qf0LT-MivF0"
+            },
+            {
+              "id": "math-085",
+              "title": "Lec 85 — DERIVATIVES · IMPLICIT EQUATIONS",
+              "videoId": "a9xB14PgvS8"
+            },
+            {
+              "id": "math-086",
+              "title": "Lec 86 — DERIVATIVES · MACLAURIN SERIES & TAYLOR SERIES",
+              "videoId": "rgCULs1f-LY"
+            },
+            {
+              "id": "math-087",
+              "title": "Lec 87 — DIFFERENTIAL CALCULUS · TANGENT AND NORMAL TO THE CURVE",
+              "videoId": "45hCUXI_lNA"
+            },
+            {
+              "id": "math-088",
+              "title": "Lec 88 — DIFFERENTIAL CALCULUS · TANGENT AND NORMAL TO THE CURVE",
+              "videoId": "GsximfgzsF0"
+            },
+            {
+              "id": "math-089",
+              "title": "Lec 89 — DIFFERENTIAL CALCULUS [ RECTILINEAR MOTION ]",
+              "videoId": "NdTdC3g5HKA"
+            },
+            {
+              "id": "math-090",
+              "title": "Lec 90 — DIFFERENTIAL CALCULUS [ APPROXIMATIONS AND APPROXIMATED CHANGE ]",
+              "videoId": "AT2G_5CfFLA"
+            },
+            {
+              "id": "math-091",
+              "title": "Lec 91 — DIFFERENTIAL CALCULUS [ EXTREME POINTS - STATIONARY POINTS- MAXIMUM AND MINIMUM ",
+              "videoId": "czaz3Jy-Lj0"
+            },
+            {
+              "id": "math-092",
+              "title": "Lec 92 — INTEGRATION",
+              "videoId": "-iLdNbBzZbE"
+            },
+            {
+              "id": "math-093",
+              "title": "Lec 93 — INTEGRATION",
+              "videoId": "-_0qE_VxYR4"
+            },
+            {
+              "id": "math-094",
+              "title": "Lec 94 — INTEGRATION INTRODUCTION MCQS · BASIC CONCEPT",
+              "videoId": "RuFEGGSFAUI"
+            },
+            {
+              "id": "math-095",
+              "title": "Lec 95 — INTEGRATION · TRIGONOMETRIC FUNCTIONS",
+              "videoId": "YSBbHQK__WY"
+            },
+            {
+              "id": "math-096",
+              "title": "Lec 96 — INTEGRATION · NATURAL EXPONENTIAL FUNCTION",
+              "videoId": "x4fQWqVdqp8"
+            },
+            {
+              "id": "math-097",
+              "title": "Lec 97 — INTEGRATION · INTEGRATION BY PARTS",
+              "videoId": "_rRd8bonZkQ"
+            },
+            {
+              "id": "math-098",
+              "title": "Lec 98 — INTEGRATION · WALLIS FORMULA",
+              "videoId": "qRNNUlftBQk"
+            },
+            {
+              "id": "math-099",
+              "title": "Lec 99 — INTEGRATION · AREA UNDER THE CURVE",
+              "videoId": "Kb1Ix1FNJJk"
+            },
+            {
+              "id": "math-100",
+              "title": "Lec 100 — INTEGRATION · DIFFERENTIAL EQUATION",
+              "videoId": "boJRXDTd4tc"
+            },
+            {
+              "id": "math-101",
+              "title": "Lec 101 — INTEGRATION · INTEGRATION BY PARTIAL FRACTION",
+              "videoId": "mNvotCPoNHI"
+            },
+            {
+              "id": "math-102",
+              "title": "Lec 102 — INTEGRATION · TRIGONOMETRIC QUESTIONS",
+              "videoId": "cHr9uNZcYPc"
+            },
+            {
+              "id": "math-103",
+              "title": "Lec 103 — INTEGRATION · EXPONENTIAL FUNCTIONS",
+              "videoId": "wrDyu26kk-w"
+            },
+            {
+              "id": "math-104",
+              "title": "Lec 104 — INTEGRATION",
+              "videoId": "Hq1AujeNhJo"
+            },
+            {
+              "id": "math-105",
+              "title": "Lec 105 — CIRCLE · INTRODUCTION",
+              "videoId": "gEDwNmJjkww"
+            },
+            {
+              "id": "math-106",
+              "title": "Lec 106 — CIRCLES · EQUATIONS OF TANGENT AND NORMAL",
+              "videoId": "mT-PKcq5GLM"
+            },
+            {
+              "id": "math-107",
+              "title": "Lec 107 — CIRCLES · CONDITION OF TANGENCY TO A LINE",
+              "videoId": "i8iWGGDi8Mg"
+            },
+            {
+              "id": "math-108",
+              "title": "Lec 108 — PARABOLA · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "DP9UfuvKvI0"
+            },
+            {
+              "id": "math-109",
+              "title": "Lec 109 — ELLIPSE · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "-INgT5zeiTk"
+            },
+            {
+              "id": "math-110",
+              "title": "Lec 110 — HYPERBOLA · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "WB4OUro5cRs"
+            },
+            {
+              "id": "math-111",
+              "title": "Lec 111 — CONES RELATED MCQ'S · CONDITION OF TANGENCY",
+              "videoId": "HJxWbaoL8WY"
+            },
+            {
+              "id": "math-112",
+              "title": "Lec 112 — PARABOLA · PARABOLA MCQS",
+              "videoId": "xF5IAbCDaE0"
+            },
+            {
+              "id": "math-113",
+              "title": "Lec 113 — PARABOLA · SHORT TRICKS I",
+              "videoId": "xHOqgid2120"
+            },
+            {
+              "id": "math-114",
+              "title": "Lec 114 — ELLIPSE · SHORT TRICKS TO SOLVE ELLIPSE PROBLEMS",
+              "videoId": "JlzRsavv0tI"
+            },
+            {
+              "id": "math-115",
+              "title": "Lec 115 — HYPERBOLA · MEMORIZE FORMULAE",
+              "videoId": "X1I_cLB37GA"
+            },
+            {
+              "id": "math-116",
+              "title": "Lec 116 — HYPERBOLA · SHORT TRICKS TO SOLVE HYPERBOLA PROBLEMS",
+              "videoId": "85Xp8sQySr4"
+            },
+            {
+              "id": "math-117",
+              "title": "Lec 117 — VECTORS · PROPERTIES, DOT PRODUCT",
+              "videoId": "Su14fQrzZU8"
+            },
+            {
+              "id": "math-118",
+              "title": "Lec 118 — VECTORS · CROSS PRODUCT",
+              "videoId": "aQzv9BgHFF0"
+            },
+            {
+              "id": "math-119",
+              "title": "Lec 119 — DIRECTION OF COSINES · DIRECTION RATIOS",
+              "videoId": "zX4rnd1HmZk"
+            }
+          ]
+        }
+      ],
       "resources": [
         {
           "id": "net-aggregate",
@@ -160,7 +1171,610 @@
     },
     {
       "testId": "ecat",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": "math",
+          "title": "ECAT & NET Math — Hashim Zia",
+          "note": "Full math course covering number systems, sets, functions, matrices, trigonometry, coordinate geometry, vectors, calculus and past papers. Playlist by Mathsflix By Hashim Zia.",
+          "episodes": [
+            {
+              "id": "math-001",
+              "title": "Lec 1 — NUMBER SYSTEM · REAL AND COMPLEX NUMBERS",
+              "videoId": "gSv2dlRBNj8"
+            },
+            {
+              "id": "math-002",
+              "title": "Lec 2 — NUMBER SYSTEM · REAL AND COMPLEX NUMBERS",
+              "videoId": "0CvIkgO8YJM"
+            },
+            {
+              "id": "math-003",
+              "title": "Lec 3 — NUMBER SYSTEM · REAL AND COMPLEX NUMBER",
+              "videoId": "_4Plpxwony0"
+            },
+            {
+              "id": "math-004",
+              "title": "Lec 4 — SETS · INTRODUCTION",
+              "videoId": "L7yH1yJx31E"
+            },
+            {
+              "id": "math-005",
+              "title": "Lec 5 — SETS · OPERATIONS",
+              "videoId": "LyKXVwoPkBM"
+            },
+            {
+              "id": "math-006",
+              "title": "Lec 6 — SETS · VENN DIAGRAM",
+              "videoId": "0Q8PuggLg54"
+            },
+            {
+              "id": "math-007",
+              "title": "Lec 7 — Equation & Polynomial · Roots & Polar Form",
+              "videoId": "hSS1J4rknT0"
+            },
+            {
+              "id": "math-008",
+              "title": "Lec 8 — Equations · Discriminant, Roots & Factor Theorem",
+              "videoId": "g5C7JHSF_dw"
+            },
+            {
+              "id": "math-009",
+              "title": "Lec 9 — EQUATIONS · INEQUALITIES",
+              "videoId": "4L0Y9W0fbXk"
+            },
+            {
+              "id": "math-010",
+              "title": "Lec 10 — Matrices · Types of Matrices",
+              "videoId": "smyH1dFg2FU"
+            },
+            {
+              "id": "math-011",
+              "title": "Lec 11 — Matrices · Determinants",
+              "videoId": "3lQ1cfj7ql0"
+            },
+            {
+              "id": "math-012",
+              "title": "Lec 12 — MATRICES · ADJOINT OF MATRICES",
+              "videoId": "prR8jc0zxfo"
+            },
+            {
+              "id": "math-013",
+              "title": "Lec 13 — MATRICES · RANK OF A MATRIX",
+              "videoId": "Qa2U3r8DWB0"
+            },
+            {
+              "id": "math-014",
+              "title": "Lec 14 — GROUPS [ COMPOSITION TABLE ] · LECTURE # 01",
+              "videoId": "9_zR-MGCIyU"
+            },
+            {
+              "id": "math-015",
+              "title": "Lec 15 — E-CAT · B-CAT MATHS",
+              "videoId": "OUIrgYYLtzg"
+            },
+            {
+              "id": "math-016",
+              "title": "Lec 16 — SEQUENCE AND SERIES · E-CAT MATHS",
+              "videoId": "PMQMk0YAY1A"
+            },
+            {
+              "id": "math-017",
+              "title": "Lec 17 — SEQUENCE AND SERIES · Arithmetic sequence",
+              "videoId": "HPKCj5BOfbw"
+            },
+            {
+              "id": "math-018",
+              "title": "Lec 18 — SEQUENCE AND SERIES · ARITHMETIC SERIES",
+              "videoId": "aEVM-V3FTLo"
+            },
+            {
+              "id": "math-019",
+              "title": "Lec 19 — SEQUENCE AND SERIES · Geometric Sequence",
+              "videoId": "90L7E2zRTIA"
+            },
+            {
+              "id": "math-020",
+              "title": "Lec 20 — SEQUENCE AND SERIES · Geometric Series",
+              "videoId": "aU7Gn5DPbaQ"
+            },
+            {
+              "id": "math-021",
+              "title": "Lec 21 — SEQUENCE AND SERIES · NUST-IBA-NED-FAST",
+              "videoId": "0LiKH4XYqf8"
+            },
+            {
+              "id": "math-022",
+              "title": "Lec 22 — PROBABILITY, COMBINATION, PERMUTATION AND COUNTING TECHNIQUES · E-CAT MATHS",
+              "videoId": "7UsQSgeqpl4"
+            },
+            {
+              "id": "math-023",
+              "title": "Lec 23 — PERMUTATION AND COUNTING TECHNIQUES · E-CAT MATHS",
+              "videoId": "_ofqJBl-aSU"
+            },
+            {
+              "id": "math-024",
+              "title": "Lec 24 — PERMUTATION OF WORDS · WORDS PERMUTATION",
+              "videoId": "uDIbOq9Qxyk"
+            },
+            {
+              "id": "math-025",
+              "title": "Lec 25 — NUMBERS PERMUTATION · DIGITS ARRANGEMENT",
+              "videoId": "HyWk9wOUuAY"
+            },
+            {
+              "id": "math-026",
+              "title": "Lec 26 — COMBINATION · E-CAT MATHS",
+              "videoId": "uuNhAxl1fus"
+            },
+            {
+              "id": "math-027",
+              "title": "Lec 27 — E-CAT MATHS · B-CAT MATHS",
+              "videoId": "E94Tk6AD3yA"
+            },
+            {
+              "id": "math-028",
+              "title": "Lec 28 — PROBABILTY WITH COMBINATION LECTURE -02 · E-CAT MATHS",
+              "videoId": "0ZJ6QD3853Y"
+            },
+            {
+              "id": "math-029",
+              "title": "Lec 29 — PROBABILITY · ADDITION LAW OF PROBABILITY",
+              "videoId": "tOLlgEfPBr0"
+            },
+            {
+              "id": "math-030",
+              "title": "Lec 30 — PROBABILITY · MULTIPLICATION LAW OF PROBABILITY",
+              "videoId": "qmS7NmAjs04"
+            },
+            {
+              "id": "math-031",
+              "title": "Lec 31 — HOW TO SOLVE FACTORIAL QUESTIONS WITHOUT USING CALCULATOR · E-CAT MATHS",
+              "videoId": "swwYgt0Ot0I"
+            },
+            {
+              "id": "math-032",
+              "title": "Lec 32 — HOW TO SOLVE PERMUTATION QUESTIONS WITHOUT USING CALCULATOR · E-CAT MATHS",
+              "videoId": "AVBYY1X9wik"
+            },
+            {
+              "id": "math-033",
+              "title": "Lec 33 — LOGARITHMS RULES AND PROPERTIES · LECTURE # 01",
+              "videoId": "57pWpR40v3k"
+            },
+            {
+              "id": "math-034",
+              "title": "Lec 34 — LOGARITHMIC EQUATIONS · VIDEO LECTURE # 02",
+              "videoId": "oagC9lbqdQI"
+            },
+            {
+              "id": "math-035",
+              "title": "Lec 35 — BINOMIAL THEOREM · BINOMIAL EXPANSION",
+              "videoId": "KAdPf17jhM8"
+            },
+            {
+              "id": "math-036",
+              "title": "Lec 36 — GENERAL TERM FORMULA FOR BINOMIAL THEOREM · E-CAT MATHS",
+              "videoId": "DVe922UW_9U"
+            },
+            {
+              "id": "math-037",
+              "title": "Lec 37 — BINOMIAL SERIES · BINOMIAL THEOREM AND MATHEMATICAL INDUCTION",
+              "videoId": "ntRqx5jRYaU"
+            },
+            {
+              "id": "math-038",
+              "title": "Lec 38 — NEGATIVE TERM CONCEPT · BINOMIAL THEOREM AND MATHEMATICAL INDUCTION",
+              "videoId": "_foIXk5-S78"
+            },
+            {
+              "id": "math-039",
+              "title": "Lec 39 — Trigonometry · Fundamentals of Trigonometry",
+              "videoId": "9s4iGcfZ6-w"
+            },
+            {
+              "id": "math-040",
+              "title": "Lec 40 — Trigonometry · Trigonometric Identities, Sum & Difference of Angles",
+              "videoId": "IuigDl9pFOM"
+            },
+            {
+              "id": "math-041",
+              "title": "Lec 41 — Trigonometry · Inverse Trigonometric Functions",
+              "videoId": "cf3b4JgRwvI"
+            },
+            {
+              "id": "math-042",
+              "title": "Lec 42 — Trigonometry · Application Of Trigonometry",
+              "videoId": "LLHTbOtQ6QE"
+            },
+            {
+              "id": "math-043",
+              "title": "Lec 43 — Trigonometry · Trigonometric Functions and Graphs",
+              "videoId": "C1mmMTdrziM"
+            },
+            {
+              "id": "math-044",
+              "title": "Lec 44 — FUNCTIONS AND LIMITS · APTITUDE \\u2013 XII LECTURE",
+              "videoId": "arl9yZllh3I"
+            },
+            {
+              "id": "math-045",
+              "title": "Lec 45 — LIMITS · CONCEPT OF LIMIT",
+              "videoId": "zInh_b3H62o"
+            },
+            {
+              "id": "math-046",
+              "title": "Lec 46 — LIMITS · APPLICATION OF LIMITS ON VARIABLE BASED FUNCTIONS",
+              "videoId": "8tB1M-19maw"
+            },
+            {
+              "id": "math-047",
+              "title": "Lec 47 — LIMITS · APPLICATION OF LIMITS ON SQUARE ROOTS",
+              "videoId": "jrzSDosm6eY"
+            },
+            {
+              "id": "math-048",
+              "title": "Lec 48 — LIMITS · APPLICATION OF LIMITS ON TRIGONOMETRIC FUNCTIONS",
+              "videoId": "ZGh5rBt5k4A"
+            },
+            {
+              "id": "math-049",
+              "title": "Lec 49 — LIMITS · APPLICATION OF LIMITS ON NATURAL EXPONENTIAL AND COMMON EXPONENTIAL FUN",
+              "videoId": "B7I3537-G_I"
+            },
+            {
+              "id": "math-050",
+              "title": "Lec 50 — LIMITS · LIMITS APPROACHING TO INFINITY",
+              "videoId": "ERLG4Znm5V0"
+            },
+            {
+              "id": "math-051",
+              "title": "Lec 51 — LIMITS · SEQUENCE OF A FUNCTION",
+              "videoId": "A9xN3M3__U8"
+            },
+            {
+              "id": "math-052",
+              "title": "Lec 52 — FUNCTIONS [TYPES OF FUNCTIONS] · LECTURE # 01",
+              "videoId": "Wrr3WsYm224"
+            },
+            {
+              "id": "math-053",
+              "title": "Lec 53 — FUNCTIONS [ VERTICAL LINE TEST ] · LECTURE#02",
+              "videoId": "fCduS7l9JWU"
+            },
+            {
+              "id": "math-054",
+              "title": "Lec 54 — FUNCTIONS [ EVEN-ODD FUNCTIONS WITH GRAPHS ] · LECTURE#03",
+              "videoId": "I2gIB6MrTuc"
+            },
+            {
+              "id": "math-055",
+              "title": "Lec 55 — FUNCTIONS [ REFLECTION OF A FUNCTION ] · LECTURE#04",
+              "videoId": "IpovrfV3udI"
+            },
+            {
+              "id": "math-056",
+              "title": "Lec 56 — FUNCTIONS [ INVERSE OF A FUNCTION ] · LECTURE#05",
+              "videoId": "Oar-w4qylng"
+            },
+            {
+              "id": "math-057",
+              "title": "Lec 57 — FUNCTIONS [ COMPOSITE FUNCTIONS ] · LECTURE#06",
+              "videoId": "QLBg4flDaBM"
+            },
+            {
+              "id": "math-058",
+              "title": "Lec 58 — ",
+              "videoId": "EFYYv3nUpWI"
+            },
+            {
+              "id": "math-059",
+              "title": "Lec 59 — ",
+              "videoId": "0SCGcnEGbRk"
+            },
+            {
+              "id": "math-060",
+              "title": "Lec 60 — ",
+              "videoId": "BLV4WcUfLCs"
+            },
+            {
+              "id": "math-061",
+              "title": "Lec 61 — ",
+              "videoId": "HzlKyFEq4zE"
+            },
+            {
+              "id": "math-062",
+              "title": "Lec 62 — ",
+              "videoId": "wIZF_4LANrs"
+            },
+            {
+              "id": "math-063",
+              "title": "Lec 63 — ",
+              "videoId": "6PpaXIsAKyU"
+            },
+            {
+              "id": "math-064",
+              "title": "Lec 64 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "Y4HN3jfmhjs"
+            },
+            {
+              "id": "math-065",
+              "title": "Lec 65 — Coordinate Geometry Class · Analytical Geometry",
+              "videoId": "fx0U95aJe50"
+            },
+            {
+              "id": "math-066",
+              "title": "Lec 66 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "77zqD4jMxL4"
+            },
+            {
+              "id": "math-067",
+              "title": "Lec 67 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "eHjlRV5jwX0"
+            },
+            {
+              "id": "math-068",
+              "title": "Lec 68 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "wViKxh-ux1g"
+            },
+            {
+              "id": "math-069",
+              "title": "Lec 69 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "19cfFTjEns0"
+            },
+            {
+              "id": "math-070",
+              "title": "Lec 70 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "zpt4svZZ-TM"
+            },
+            {
+              "id": "math-071",
+              "title": "Lec 71 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "KhJqR5NbJUc"
+            },
+            {
+              "id": "math-072",
+              "title": "Lec 72 — COORDINATE GEOMETRY · THE STRAIGHT LINE",
+              "videoId": "jZ9Tv9EPBkM"
+            },
+            {
+              "id": "math-073",
+              "title": "Lec 73 — GENERAL EQUATION OF STRAIGHT LINE · INTRODUCTION",
+              "videoId": "8N3VhNbzRKs"
+            },
+            {
+              "id": "math-074",
+              "title": "Lec 74 — GENERAL EQUATION OF STRAIGHT LINE · CONCURRENT LINES",
+              "videoId": "6rIGYP-WPc0"
+            },
+            {
+              "id": "math-075",
+              "title": "Lec 75 — GENERAL EQUATION OF STRAIGHT LINE · AREA OF TRIANGLE",
+              "videoId": "khSheLur3zQ"
+            },
+            {
+              "id": "math-076",
+              "title": "Lec 76 — GENERAL EQUATION OF STRAIGHT LINE · DISTANCE BETWEEN POINT AND LINE",
+              "videoId": "3Nx6dVS_lKw"
+            },
+            {
+              "id": "math-077",
+              "title": "Lec 77 — GENERAL EQUATION OF STRAIGHT LINE · EQUATION OF PAIR OF LINES PASSING THROUGH OR",
+              "videoId": "BkUUBISaZ8E"
+            },
+            {
+              "id": "math-078",
+              "title": "Lec 78 — COORDINATE GEOMETRY · STRAIGHT LINE",
+              "videoId": "ShbfXJ-1k_c"
+            },
+            {
+              "id": "math-079",
+              "title": "Lec 79 — COORDINATE GEOMETRY · ANALYTICAL GEOMETRY",
+              "videoId": "H5ebxzcWdOw"
+            },
+            {
+              "id": "math-080",
+              "title": "Lec 80 — DIFFRENTIATION & HIGHER ORDER DERIVATIVES AND APPLICATION · APTITUDE XII",
+              "videoId": "EIOzbyOpft0"
+            },
+            {
+              "id": "math-081",
+              "title": "Lec 81 — DERIVATIVES · MEMORIZE FORMULAS & PROPERTIES",
+              "videoId": "kWK7B6hnxmQ"
+            },
+            {
+              "id": "math-082",
+              "title": "Lec 82 — DERIVATIVES · TRIGONOMETRIC",
+              "videoId": "wQdTP9IZD4E"
+            },
+            {
+              "id": "math-083",
+              "title": "Lec 83 — DERIVATIVES",
+              "videoId": "wkIMeyfreh0"
+            },
+            {
+              "id": "math-084",
+              "title": "Lec 84 — DERIVATIVES · LOGARITHMIC FUNCTIONS",
+              "videoId": "Qf0LT-MivF0"
+            },
+            {
+              "id": "math-085",
+              "title": "Lec 85 — DERIVATIVES · IMPLICIT EQUATIONS",
+              "videoId": "a9xB14PgvS8"
+            },
+            {
+              "id": "math-086",
+              "title": "Lec 86 — DERIVATIVES · MACLAURIN SERIES & TAYLOR SERIES",
+              "videoId": "rgCULs1f-LY"
+            },
+            {
+              "id": "math-087",
+              "title": "Lec 87 — DIFFERENTIAL CALCULUS · TANGENT AND NORMAL TO THE CURVE",
+              "videoId": "45hCUXI_lNA"
+            },
+            {
+              "id": "math-088",
+              "title": "Lec 88 — DIFFERENTIAL CALCULUS · TANGENT AND NORMAL TO THE CURVE",
+              "videoId": "GsximfgzsF0"
+            },
+            {
+              "id": "math-089",
+              "title": "Lec 89 — DIFFERENTIAL CALCULUS [ RECTILINEAR MOTION ]",
+              "videoId": "NdTdC3g5HKA"
+            },
+            {
+              "id": "math-090",
+              "title": "Lec 90 — DIFFERENTIAL CALCULUS [ APPROXIMATIONS AND APPROXIMATED CHANGE ]",
+              "videoId": "AT2G_5CfFLA"
+            },
+            {
+              "id": "math-091",
+              "title": "Lec 91 — DIFFERENTIAL CALCULUS [ EXTREME POINTS - STATIONARY POINTS- MAXIMUM AND MINIMUM ",
+              "videoId": "czaz3Jy-Lj0"
+            },
+            {
+              "id": "math-092",
+              "title": "Lec 92 — INTEGRATION",
+              "videoId": "-iLdNbBzZbE"
+            },
+            {
+              "id": "math-093",
+              "title": "Lec 93 — INTEGRATION",
+              "videoId": "-_0qE_VxYR4"
+            },
+            {
+              "id": "math-094",
+              "title": "Lec 94 — INTEGRATION INTRODUCTION MCQS · BASIC CONCEPT",
+              "videoId": "RuFEGGSFAUI"
+            },
+            {
+              "id": "math-095",
+              "title": "Lec 95 — INTEGRATION · TRIGONOMETRIC FUNCTIONS",
+              "videoId": "YSBbHQK__WY"
+            },
+            {
+              "id": "math-096",
+              "title": "Lec 96 — INTEGRATION · NATURAL EXPONENTIAL FUNCTION",
+              "videoId": "x4fQWqVdqp8"
+            },
+            {
+              "id": "math-097",
+              "title": "Lec 97 — INTEGRATION · INTEGRATION BY PARTS",
+              "videoId": "_rRd8bonZkQ"
+            },
+            {
+              "id": "math-098",
+              "title": "Lec 98 — INTEGRATION · WALLIS FORMULA",
+              "videoId": "qRNNUlftBQk"
+            },
+            {
+              "id": "math-099",
+              "title": "Lec 99 — INTEGRATION · AREA UNDER THE CURVE",
+              "videoId": "Kb1Ix1FNJJk"
+            },
+            {
+              "id": "math-100",
+              "title": "Lec 100 — INTEGRATION · DIFFERENTIAL EQUATION",
+              "videoId": "boJRXDTd4tc"
+            },
+            {
+              "id": "math-101",
+              "title": "Lec 101 — INTEGRATION · INTEGRATION BY PARTIAL FRACTION",
+              "videoId": "mNvotCPoNHI"
+            },
+            {
+              "id": "math-102",
+              "title": "Lec 102 — INTEGRATION · TRIGONOMETRIC QUESTIONS",
+              "videoId": "cHr9uNZcYPc"
+            },
+            {
+              "id": "math-103",
+              "title": "Lec 103 — INTEGRATION · EXPONENTIAL FUNCTIONS",
+              "videoId": "wrDyu26kk-w"
+            },
+            {
+              "id": "math-104",
+              "title": "Lec 104 — INTEGRATION",
+              "videoId": "Hq1AujeNhJo"
+            },
+            {
+              "id": "math-105",
+              "title": "Lec 105 — CIRCLE · INTRODUCTION",
+              "videoId": "gEDwNmJjkww"
+            },
+            {
+              "id": "math-106",
+              "title": "Lec 106 — CIRCLES · EQUATIONS OF TANGENT AND NORMAL",
+              "videoId": "mT-PKcq5GLM"
+            },
+            {
+              "id": "math-107",
+              "title": "Lec 107 — CIRCLES · CONDITION OF TANGENCY TO A LINE",
+              "videoId": "i8iWGGDi8Mg"
+            },
+            {
+              "id": "math-108",
+              "title": "Lec 108 — PARABOLA · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "DP9UfuvKvI0"
+            },
+            {
+              "id": "math-109",
+              "title": "Lec 109 — ELLIPSE · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "-INgT5zeiTk"
+            },
+            {
+              "id": "math-110",
+              "title": "Lec 110 — HYPERBOLA · One-Shot Lecture for ECAT, NET, BCAT, SAT, NTS",
+              "videoId": "WB4OUro5cRs"
+            },
+            {
+              "id": "math-111",
+              "title": "Lec 111 — CONES RELATED MCQ'S · CONDITION OF TANGENCY",
+              "videoId": "HJxWbaoL8WY"
+            },
+            {
+              "id": "math-112",
+              "title": "Lec 112 — PARABOLA · PARABOLA MCQS",
+              "videoId": "xF5IAbCDaE0"
+            },
+            {
+              "id": "math-113",
+              "title": "Lec 113 — PARABOLA · SHORT TRICKS I",
+              "videoId": "xHOqgid2120"
+            },
+            {
+              "id": "math-114",
+              "title": "Lec 114 — ELLIPSE · SHORT TRICKS TO SOLVE ELLIPSE PROBLEMS",
+              "videoId": "JlzRsavv0tI"
+            },
+            {
+              "id": "math-115",
+              "title": "Lec 115 — HYPERBOLA · MEMORIZE FORMULAE",
+              "videoId": "X1I_cLB37GA"
+            },
+            {
+              "id": "math-116",
+              "title": "Lec 116 — HYPERBOLA · SHORT TRICKS TO SOLVE HYPERBOLA PROBLEMS",
+              "videoId": "85Xp8sQySr4"
+            },
+            {
+              "id": "math-117",
+              "title": "Lec 117 — VECTORS · PROPERTIES, DOT PRODUCT",
+              "videoId": "Su14fQrzZU8"
+            },
+            {
+              "id": "math-118",
+              "title": "Lec 118 — VECTORS · CROSS PRODUCT",
+              "videoId": "aQzv9BgHFF0"
+            },
+            {
+              "id": "math-119",
+              "title": "Lec 119 — DIRECTION OF COSINES · DIRECTION RATIOS",
+              "videoId": "zX4rnd1HmZk"
+            }
+          ]
+        }
+      ],
       "resources": [
         {
           "id": "ecat-portal",
@@ -179,12 +1793,36 @@
           "title": "IELTS Writing",
           "note": "Task 1 & Task 2 strategies, band-9 structures and sample essays.",
           "episodes": [
-            { "id": "ielts-w1", "title": "IELTS Writing Task 1 General: Band 9 Structure + Samples", "videoId": "2EGiMjA8YzM" },
-            { "id": "ielts-w2", "title": "IELTS Task 1 General Training Writing: Ultimate Guide 2026", "videoId": "ZwTX-O_WvnM" },
-            { "id": "ielts-w3", "title": "How I'd Teach My Wife IELTS (If I Had To Start Over)", "videoId": "lDORjtZ5Tfk" },
-            { "id": "ielts-w4", "title": "IELTS Writing Tips You MUST Know Before Your Test", "videoId": "p-r65jaSz4o" },
-            { "id": "ielts-w5", "title": "The 4 Rules Band 9 Students Use In EVERY Essay", "videoId": "yle3Wytf_LE" },
-            { "id": "ielts-w6", "title": "Understand IELTS Writing Task 2 in 5 Minutes", "videoId": "yvt8RzGNhBc" }
+            {
+              "id": "ielts-w1",
+              "title": "IELTS Writing Task 1 General: Band 9 Structure + Samples",
+              "videoId": "2EGiMjA8YzM"
+            },
+            {
+              "id": "ielts-w2",
+              "title": "IELTS Task 1 General Training Writing: Ultimate Guide 2026",
+              "videoId": "ZwTX-O_WvnM"
+            },
+            {
+              "id": "ielts-w3",
+              "title": "How I'd Teach My Wife IELTS (If I Had To Start Over)",
+              "videoId": "lDORjtZ5Tfk"
+            },
+            {
+              "id": "ielts-w4",
+              "title": "IELTS Writing Tips You MUST Know Before Your Test",
+              "videoId": "p-r65jaSz4o"
+            },
+            {
+              "id": "ielts-w5",
+              "title": "The 4 Rules Band 9 Students Use In EVERY Essay",
+              "videoId": "yle3Wytf_LE"
+            },
+            {
+              "id": "ielts-w6",
+              "title": "Understand IELTS Writing Task 2 in 5 Minutes",
+              "videoId": "yvt8RzGNhBc"
+            }
           ]
         },
         {
@@ -192,16 +1830,56 @@
           "title": "IELTS Reading",
           "note": "Band-9 reading strategies, techniques and course walkthroughs.",
           "episodes": [
-            { "id": "ielts-r1", "title": "How Do I Get a Band 9 in Reading + Listening?", "videoId": "5hAEajljN24" },
-            { "id": "ielts-r2", "title": "Reading Advice From Four Band 9 Students", "videoId": "6CXiHUFiyLE" },
-            { "id": "ielts-r3", "title": "Why is my IELTS Reading Score NOT Increasing?", "videoId": "HouS9iKd8io" },
-            { "id": "ielts-r4", "title": "The Only IELTS Reading Strategy You Need in 2026", "videoId": "Kch2Tb_T2Pg" },
-            { "id": "ielts-r5", "title": "IELTS Reading Band 9 in 4 Steps", "videoId": "M_NP2v7rV8Y" },
-            { "id": "ielts-r6", "title": "Get Band 9 After Using These Reading Strategies", "videoId": "N0RxRl9allI" },
-            { "id": "ielts-r7", "title": "The ONLY IELTS Reading Course You Need 2026", "videoId": "OtmUQwPVLko" },
-            { "id": "ielts-r8", "title": "The Number 1 Way to IMPROVE Your IELTS READING Scores", "videoId": "Q_iv4wRuZpM" },
-            { "id": "ielts-r9", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
-            { "id": "ielts-r10", "title": "Simple Technique for Band 9 in IELTS Reading", "videoId": "wx4elwrGK1I" }
+            {
+              "id": "ielts-r1",
+              "title": "How Do I Get a Band 9 in Reading + Listening?",
+              "videoId": "5hAEajljN24"
+            },
+            {
+              "id": "ielts-r2",
+              "title": "Reading Advice From Four Band 9 Students",
+              "videoId": "6CXiHUFiyLE"
+            },
+            {
+              "id": "ielts-r3",
+              "title": "Why is my IELTS Reading Score NOT Increasing?",
+              "videoId": "HouS9iKd8io"
+            },
+            {
+              "id": "ielts-r4",
+              "title": "The Only IELTS Reading Strategy You Need in 2026",
+              "videoId": "Kch2Tb_T2Pg"
+            },
+            {
+              "id": "ielts-r5",
+              "title": "IELTS Reading Band 9 in 4 Steps",
+              "videoId": "M_NP2v7rV8Y"
+            },
+            {
+              "id": "ielts-r6",
+              "title": "Get Band 9 After Using These Reading Strategies",
+              "videoId": "N0RxRl9allI"
+            },
+            {
+              "id": "ielts-r7",
+              "title": "The ONLY IELTS Reading Course You Need 2026",
+              "videoId": "OtmUQwPVLko"
+            },
+            {
+              "id": "ielts-r8",
+              "title": "The Number 1 Way to IMPROVE Your IELTS READING Scores",
+              "videoId": "Q_iv4wRuZpM"
+            },
+            {
+              "id": "ielts-r9",
+              "title": "IELTS 2026 Changes You MUST Know Before Your Test",
+              "videoId": "oz1ZZL5u36w"
+            },
+            {
+              "id": "ielts-r10",
+              "title": "Simple Technique for Band 9 in IELTS Reading",
+              "videoId": "wx4elwrGK1I"
+            }
           ]
         },
         {
@@ -209,21 +1887,81 @@
           "title": "IELTS Speaking",
           "note": "Band-9 speaking strategies, idioms, sentence patterns and part-2 strategy.",
           "episodes": [
-            { "id": "ielts-s1", "title": "Get BAND 9 Using This IELTS Speaking Strategy", "videoId": "7lqSx_ucv4A" },
-            { "id": "ielts-s2", "title": "How Do I Get A Band 9 in IELTS Speaking?", "videoId": "9DTyINOeY-Y" },
-            { "id": "ielts-s3", "title": "IELTS Speaking Secrets Every Student Should Learn", "videoId": "ELxGmf9f_ZM" },
-            { "id": "ielts-s4", "title": "Get Band 9 After Using These Speaking Tips", "videoId": "Emd65BXMS9M" },
-            { "id": "ielts-s5", "title": "The 3 Speaking Tricks That Get You Band 9", "videoId": "Ii2fVU4CJ9o" },
-            { "id": "ielts-s6", "title": "IELTS Vocabulary: What Band 9 Students Do Differently in 2026", "videoId": "KQO5WrwpW7M" },
-            { "id": "ielts-s7", "title": "Top 20 IELTS Speaking Idioms with Band 9 Samples", "videoId": "OBNBe-c5ObA" },
-            { "id": "ielts-s8", "title": "IELTS Speaking Tips You MUST Know Before Your Test", "videoId": "RuvVc3Mdgvg" },
-            { "id": "ielts-s9", "title": "IELTS Speaking — 9 Most Common Sentence Patterns", "videoId": "SMCwpfJMdMo" },
-            { "id": "ielts-s10", "title": "Master IELTS Speaking in One Video", "videoId": "bqznnq9gOsU" },
-            { "id": "ielts-s11", "title": "Get Band 9 After Learning These Speaking Tips", "videoId": "fUGVFbFXRMo" },
-            { "id": "ielts-s12", "title": "IELTS Speaking Part 2 Strategy That REALLY Works", "videoId": "kD0eh1UbeT8" },
-            { "id": "ielts-s13", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
-            { "id": "ielts-s14", "title": "The ONLY IELTS Speaking Course You Need", "videoId": "rqmv0LCcPTs" },
-            { "id": "ielts-s15", "title": "Common Synonyms That Will Destroy Your IELTS Score", "videoId": "tPrdQAefy4U" }
+            {
+              "id": "ielts-s1",
+              "title": "Get BAND 9 Using This IELTS Speaking Strategy",
+              "videoId": "7lqSx_ucv4A"
+            },
+            {
+              "id": "ielts-s2",
+              "title": "How Do I Get A Band 9 in IELTS Speaking?",
+              "videoId": "9DTyINOeY-Y"
+            },
+            {
+              "id": "ielts-s3",
+              "title": "IELTS Speaking Secrets Every Student Should Learn",
+              "videoId": "ELxGmf9f_ZM"
+            },
+            {
+              "id": "ielts-s4",
+              "title": "Get Band 9 After Using These Speaking Tips",
+              "videoId": "Emd65BXMS9M"
+            },
+            {
+              "id": "ielts-s5",
+              "title": "The 3 Speaking Tricks That Get You Band 9",
+              "videoId": "Ii2fVU4CJ9o"
+            },
+            {
+              "id": "ielts-s6",
+              "title": "IELTS Vocabulary: What Band 9 Students Do Differently in 2026",
+              "videoId": "KQO5WrwpW7M"
+            },
+            {
+              "id": "ielts-s7",
+              "title": "Top 20 IELTS Speaking Idioms with Band 9 Samples",
+              "videoId": "OBNBe-c5ObA"
+            },
+            {
+              "id": "ielts-s8",
+              "title": "IELTS Speaking Tips You MUST Know Before Your Test",
+              "videoId": "RuvVc3Mdgvg"
+            },
+            {
+              "id": "ielts-s9",
+              "title": "IELTS Speaking — 9 Most Common Sentence Patterns",
+              "videoId": "SMCwpfJMdMo"
+            },
+            {
+              "id": "ielts-s10",
+              "title": "Master IELTS Speaking in One Video",
+              "videoId": "bqznnq9gOsU"
+            },
+            {
+              "id": "ielts-s11",
+              "title": "Get Band 9 After Learning These Speaking Tips",
+              "videoId": "fUGVFbFXRMo"
+            },
+            {
+              "id": "ielts-s12",
+              "title": "IELTS Speaking Part 2 Strategy That REALLY Works",
+              "videoId": "kD0eh1UbeT8"
+            },
+            {
+              "id": "ielts-s13",
+              "title": "IELTS 2026 Changes You MUST Know Before Your Test",
+              "videoId": "oz1ZZL5u36w"
+            },
+            {
+              "id": "ielts-s14",
+              "title": "The ONLY IELTS Speaking Course You Need",
+              "videoId": "rqmv0LCcPTs"
+            },
+            {
+              "id": "ielts-s15",
+              "title": "Common Synonyms That Will Destroy Your IELTS Score",
+              "videoId": "tPrdQAefy4U"
+            }
           ]
         },
         {
@@ -231,16 +1969,56 @@
           "title": "IELTS Listening",
           "note": "Band-9 listening strategies, maps, focus and multiple-choice techniques.",
           "episodes": [
-            { "id": "ielts-l1", "title": "Band 9 Strategy for IELTS Listening Maps", "videoId": "-aBW-RHtcrE" },
-            { "id": "ielts-l2", "title": "How to Stay Focused in the IELTS Listening Test", "videoId": "FjjFOBoT8iU" },
-            { "id": "ielts-l3", "title": "How Do I Get Band 9 in IELTS Listening?", "videoId": "SYHWCn0GqCw" },
-            { "id": "ielts-l4", "title": "Get BAND 9 After Using These Listening Tips", "videoId": "S_TVcsCFpTM" },
-            { "id": "ielts-l5", "title": "How To Get Band 9 in IELTS Listening in 2026", "videoId": "ULmeHkHU7YQ" },
-            { "id": "ielts-l6", "title": "The ONLY IELTS Listening Strategy You Need", "videoId": "gfTqr_9BMjs" },
-            { "id": "ielts-l7", "title": "How to get a Band 8 in IELTS listening", "videoId": "kHTnAx6f-j0" },
-            { "id": "ielts-l8", "title": "IELTS 2026 Changes You MUST Know Before Your Test", "videoId": "oz1ZZL5u36w" },
-            { "id": "ielts-l9", "title": "The ONLY IELTS Listening Course You Need", "videoId": "q7xCHfDRdug" },
-            { "id": "ielts-l10", "title": "New Strategy For IELTS Listening Multiple Choice", "videoId": "vpmJTSntyVw" }
+            {
+              "id": "ielts-l1",
+              "title": "Band 9 Strategy for IELTS Listening Maps",
+              "videoId": "-aBW-RHtcrE"
+            },
+            {
+              "id": "ielts-l2",
+              "title": "How to Stay Focused in the IELTS Listening Test",
+              "videoId": "FjjFOBoT8iU"
+            },
+            {
+              "id": "ielts-l3",
+              "title": "How Do I Get Band 9 in IELTS Listening?",
+              "videoId": "SYHWCn0GqCw"
+            },
+            {
+              "id": "ielts-l4",
+              "title": "Get BAND 9 After Using These Listening Tips",
+              "videoId": "S_TVcsCFpTM"
+            },
+            {
+              "id": "ielts-l5",
+              "title": "How To Get Band 9 in IELTS Listening in 2026",
+              "videoId": "ULmeHkHU7YQ"
+            },
+            {
+              "id": "ielts-l6",
+              "title": "The ONLY IELTS Listening Strategy You Need",
+              "videoId": "gfTqr_9BMjs"
+            },
+            {
+              "id": "ielts-l7",
+              "title": "How to get a Band 8 in IELTS listening",
+              "videoId": "kHTnAx6f-j0"
+            },
+            {
+              "id": "ielts-l8",
+              "title": "IELTS 2026 Changes You MUST Know Before Your Test",
+              "videoId": "oz1ZZL5u36w"
+            },
+            {
+              "id": "ielts-l9",
+              "title": "The ONLY IELTS Listening Course You Need",
+              "videoId": "q7xCHfDRdug"
+            },
+            {
+              "id": "ielts-l10",
+              "title": "New Strategy For IELTS Listening Multiple Choice",
+              "videoId": "vpmJTSntyVw"
+            }
           ]
         }
       ],
@@ -262,9 +2040,21 @@
           "title": "SAT Reading Comprehension",
           "note": "How to solve hard reading questions, overnight strategies and transitions.",
           "episodes": [
-            { "id": "sat-r1", "title": "Improve your SAT Reading OVERNIGHT (actually works)", "videoId": "NBECQxDBQQs" },
-            { "id": "sat-r2", "title": "How to Solve Hard SAT Reading Questions Easily", "videoId": "dUl1Hmgx-NE" },
-            { "id": "sat-r3", "title": "Never Miss Another SAT Transition Question", "videoId": "BhDFdrPA368" }
+            {
+              "id": "sat-r1",
+              "title": "Improve your SAT Reading OVERNIGHT (actually works)",
+              "videoId": "NBECQxDBQQs"
+            },
+            {
+              "id": "sat-r2",
+              "title": "How to Solve Hard SAT Reading Questions Easily",
+              "videoId": "dUl1Hmgx-NE"
+            },
+            {
+              "id": "sat-r3",
+              "title": "Never Miss Another SAT Transition Question",
+              "videoId": "BhDFdrPA368"
+            }
           ]
         },
         {
@@ -272,9 +2062,21 @@
           "title": "SAT Math Course",
           "note": "Desmos guide, problem solving & data analysis, geometry and trigonometry.",
           "episodes": [
-            { "id": "sat-m1", "title": "The Last SAT Desmos Guide You'll Need", "videoId": "e-O4nwVHQ-Y" },
-            { "id": "sat-m2", "title": "All of Problem Solving and Data Analysis on the SAT", "videoId": "rytygT3oFO4" },
-            { "id": "sat-m3", "title": "All of SAT Geometry and Trigonometry", "videoId": "u6LL3Pbo3HI" }
+            {
+              "id": "sat-m1",
+              "title": "The Last SAT Desmos Guide You'll Need",
+              "videoId": "e-O4nwVHQ-Y"
+            },
+            {
+              "id": "sat-m2",
+              "title": "All of Problem Solving and Data Analysis on the SAT",
+              "videoId": "rytygT3oFO4"
+            },
+            {
+              "id": "sat-m3",
+              "title": "All of SAT Geometry and Trigonometry",
+              "videoId": "u6LL3Pbo3HI"
+            }
           ]
         },
         {
@@ -282,9 +2084,21 @@
           "title": "SAT Grammar Course",
           "note": "Punctuation, verb questions and must-know grammar patterns.",
           "episodes": [
-            { "id": "sat-g1", "title": "The Last SAT Punctuation Guide You'll Need", "videoId": "WL61t23IOyE" },
-            { "id": "sat-g2", "title": "Why SAT Verb Questions are Easy (New Strategy)", "videoId": "-qK1rXOFFVI" },
-            { "id": "sat-g3", "title": "Must Know SAT Grammar Patterns", "videoId": "hSCNS0PJnZg" }
+            {
+              "id": "sat-g1",
+              "title": "The Last SAT Punctuation Guide You'll Need",
+              "videoId": "WL61t23IOyE"
+            },
+            {
+              "id": "sat-g2",
+              "title": "Why SAT Verb Questions are Easy (New Strategy)",
+              "videoId": "-qK1rXOFFVI"
+            },
+            {
+              "id": "sat-g3",
+              "title": "Must Know SAT Grammar Patterns",
+              "videoId": "hSCNS0PJnZg"
+            }
           ]
         }
       ],
@@ -306,9 +2120,21 @@
           "title": "TOEFL Speaking",
           "note": "Strategies, tips and practice tests for the 2026 speaking section.",
           "episodes": [
-            { "id": "toefl-s1", "title": "TOEFL Take an Interview Task (2026) — Tips, Strategies, Sample Answers", "videoId": "cktZfTZ9UXs" },
-            { "id": "toefl-s2", "title": "TOEFL Speaking TIPS for a Perfect Score — 2026 Edition", "videoId": "Gxyo1gSJFRM" },
-            { "id": "toefl-s3", "title": "TOEFL Speaking Practice Test 2026 (Sample Speaking Answers)", "videoId": "YphRAv3fpMM" }
+            {
+              "id": "toefl-s1",
+              "title": "TOEFL Take an Interview Task (2026) — Tips, Strategies, Sample Answers",
+              "videoId": "cktZfTZ9UXs"
+            },
+            {
+              "id": "toefl-s2",
+              "title": "TOEFL Speaking TIPS for a Perfect Score — 2026 Edition",
+              "videoId": "Gxyo1gSJFRM"
+            },
+            {
+              "id": "toefl-s3",
+              "title": "TOEFL Speaking Practice Test 2026 (Sample Speaking Answers)",
+              "videoId": "YphRAv3fpMM"
+            }
           ]
         },
         {
@@ -316,9 +2142,21 @@
           "title": "TOEFL Reading",
           "note": "Question-type walkthroughs, new-test tips and a practice test.",
           "episodes": [
-            { "id": "toefl-r1", "title": "TOEFL Reading Practice (2026): Every Question Type Step-by-Step", "videoId": "ij63VxP0FWQ" },
-            { "id": "toefl-r2", "title": "TOEFL Reading 2026: Tips to Score Higher on the NEW Test", "videoId": "eKaVhOnMjm8" },
-            { "id": "toefl-r3", "title": "TOEFL Reading Practice Test 2026 (Answers Included)", "videoId": "M5kTvJWIx8Q" }
+            {
+              "id": "toefl-r1",
+              "title": "TOEFL Reading Practice (2026): Every Question Type Step-by-Step",
+              "videoId": "ij63VxP0FWQ"
+            },
+            {
+              "id": "toefl-r2",
+              "title": "TOEFL Reading 2026: Tips to Score Higher on the NEW Test",
+              "videoId": "eKaVhOnMjm8"
+            },
+            {
+              "id": "toefl-r3",
+              "title": "TOEFL Reading Practice Test 2026 (Answers Included)",
+              "videoId": "M5kTvJWIx8Q"
+            }
           ]
         },
         {
@@ -326,15 +2164,51 @@
           "title": "TOEFL Writing",
           "note": "Academic discussion questions, integrated writing, templates and mistakes to avoid.",
           "episodes": [
-            { "id": "toefl-w1", "title": "New TOEFL Writing Question: Guide to Academic Discussion Questions", "videoId": "QL4r78VQq1M" },
-            { "id": "toefl-w2", "title": "TOEFL Integrated Writing PRACTICE: Question 1", "videoId": "TnPrCQs-NLo" },
-            { "id": "toefl-w3", "title": "TOEFL Writing Academic Discussion: Sample Questions and Answers", "videoId": "fOqXfMzB_xg" },
-            { "id": "toefl-w4", "title": "TOEFL Writing: 5 Mistakes You Must Avoid", "videoId": "GW6Jj1BILOY" },
-            { "id": "toefl-w5", "title": "AI for TOEFL Writing: A Step-by-Step Guide", "videoId": "xWTIfpnPXcs" },
-            { "id": "toefl-w6", "title": "TOEFL Writing SECRETS Every Student Should Know", "videoId": "ni-KNs9fq80" },
-            { "id": "toefl-w7", "title": "TOEFL Writing TEMPLATES, Quick and Easy", "videoId": "pmQKjvgoLjY" },
-            { "id": "toefl-w8", "title": "TOEFL Writing Question 2 Guide (2025) — SECRET FORMULA for 26+", "videoId": "_Hd3IwnOEfs" },
-            { "id": "toefl-w9", "title": "TOEFL Writing Question 1 Guide: Sample Question and Essay Included (2025)", "videoId": "Wz1WCtJrfjM" }
+            {
+              "id": "toefl-w1",
+              "title": "New TOEFL Writing Question: Guide to Academic Discussion Questions",
+              "videoId": "QL4r78VQq1M"
+            },
+            {
+              "id": "toefl-w2",
+              "title": "TOEFL Integrated Writing PRACTICE: Question 1",
+              "videoId": "TnPrCQs-NLo"
+            },
+            {
+              "id": "toefl-w3",
+              "title": "TOEFL Writing Academic Discussion: Sample Questions and Answers",
+              "videoId": "fOqXfMzB_xg"
+            },
+            {
+              "id": "toefl-w4",
+              "title": "TOEFL Writing: 5 Mistakes You Must Avoid",
+              "videoId": "GW6Jj1BILOY"
+            },
+            {
+              "id": "toefl-w5",
+              "title": "AI for TOEFL Writing: A Step-by-Step Guide",
+              "videoId": "xWTIfpnPXcs"
+            },
+            {
+              "id": "toefl-w6",
+              "title": "TOEFL Writing SECRETS Every Student Should Know",
+              "videoId": "ni-KNs9fq80"
+            },
+            {
+              "id": "toefl-w7",
+              "title": "TOEFL Writing TEMPLATES, Quick and Easy",
+              "videoId": "pmQKjvgoLjY"
+            },
+            {
+              "id": "toefl-w8",
+              "title": "TOEFL Writing Question 2 Guide (2025) — SECRET FORMULA for 26+",
+              "videoId": "_Hd3IwnOEfs"
+            },
+            {
+              "id": "toefl-w9",
+              "title": "TOEFL Writing Question 1 Guide: Sample Question and Essay Included (2025)",
+              "videoId": "Wz1WCtJrfjM"
+            }
           ]
         },
         {
@@ -342,9 +2216,21 @@
           "title": "TOEFL Listening",
           "note": "Note-taking guide, practice questions and listening secrets.",
           "episodes": [
-            { "id": "toefl-l1", "title": "A Complete Guide to Taking Notes in the TOEFL Listening", "videoId": "w_YCFu4vp4o" },
-            { "id": "toefl-l2", "title": "TOEFL LISTENING Practice Questions (Answers Included)", "videoId": "IwL6pYmswGY" },
-            { "id": "toefl-l3", "title": "TOEFL Listening SECRETS Every Student Should Know", "videoId": "WK6cG39EzT0" }
+            {
+              "id": "toefl-l1",
+              "title": "A Complete Guide to Taking Notes in the TOEFL Listening",
+              "videoId": "w_YCFu4vp4o"
+            },
+            {
+              "id": "toefl-l2",
+              "title": "TOEFL LISTENING Practice Questions (Answers Included)",
+              "videoId": "IwL6pYmswGY"
+            },
+            {
+              "id": "toefl-l3",
+              "title": "TOEFL Listening SECRETS Every Student Should Know",
+              "videoId": "WK6cG39EzT0"
+            }
           ]
         }
       ],
@@ -359,26 +2245,106 @@
           "title": "GMAT Crash Course",
           "note": "Quant, verbal and study-strategy episodes for a 655+ score.",
           "episodes": [
-            { "id": "gmat-01", "title": "EP1 — Reading Comprehension Strategies for a 655+ Score", "videoId": "Py1o2chTN58" },
-            { "id": "gmat-02", "title": "EP2 — Algebra: Quadratics, Exponents & Common Mistakes", "videoId": "44wt26fPNvM" },
-            { "id": "gmat-03", "title": "EP3 — 10 Common GMAT Study Mistakes & How to Prepare", "videoId": "1Mi9lNexoxE" },
-            { "id": "gmat-04", "title": "EP4 — Sleep Habits and Exercises that Affect Your GMAT Performance", "videoId": "NNPhRF4aFRU" },
-            { "id": "gmat-05", "title": "EP5 — Inequalities & Absolute Value Made Simple", "videoId": "hBwUYKGCsf8" },
-            { "id": "gmat-06", "title": "EP6 — Critical Reasoning Strategies for a 655+ Score", "videoId": "MWsh0IF3nzo" },
-            { "id": "gmat-07", "title": "EP7 — What You're Doing Wrong in Percent & Interest Rate Questions", "videoId": "K-E_PQRJ2N4" },
-            { "id": "gmat-08", "title": "EP8 — Advanced Critical Reasoning Techniques for GMAT Success", "videoId": "q18vwGLCO50" },
-            { "id": "gmat-09", "title": "EP10 — Quant Word Problems: Wall of Words and Scary Symbols", "videoId": "113JUhTu5Kw" },
-            { "id": "gmat-10", "title": "EP11 — How to Deal with Test Anxiety on the GMAT Focus", "videoId": "z4zO2fJ-w98" },
-            { "id": "gmat-11", "title": "EP12 — Quant: Remainders & Divisibility", "videoId": "q2V31C-t2qI" },
-            { "id": "gmat-12", "title": "EP13 — Probability, Permutations, and Combinations", "videoId": "kpPMmJoC1p4" },
-            { "id": "gmat-13", "title": "EP15 — Rates and Conversions Questions on the GMAT Quant", "videoId": "8YjhJTwOsC4" },
-            { "id": "gmat-14", "title": "EP16 — Inference & Other Critical Reasoning Questions", "videoId": "xMV6GKjnjD8" },
-            { "id": "gmat-15", "title": "EP17 — Statistics, Standard Deviation, & Min-Max Problems", "videoId": "4KiqNN495WE" },
-            { "id": "gmat-16", "title": "EP19 — Overlapping Sets Questions in GMAT Quant", "videoId": "udItQGUK1-0" },
-            { "id": "gmat-17", "title": "EP23 — Tackling the Nastiest RC & CR Passages", "videoId": "LV-qltKHeLU" },
-            { "id": "gmat-18", "title": "EP24 — Hardest GMAT Quant Questions", "videoId": "0Y43LhvyFeM" },
-            { "id": "gmat-19", "title": "24-Hour Non-Stop GMAT Crash Course — Part 1", "videoId": "7hkekoFVokg" },
-            { "id": "gmat-20", "title": "24-Hour Non-Stop GMAT Crash Course — Part 2", "videoId": "FJa6Dz5p1Ko" }
+            {
+              "id": "gmat-01",
+              "title": "EP1 — Reading Comprehension Strategies for a 655+ Score",
+              "videoId": "Py1o2chTN58"
+            },
+            {
+              "id": "gmat-02",
+              "title": "EP2 — Algebra: Quadratics, Exponents & Common Mistakes",
+              "videoId": "44wt26fPNvM"
+            },
+            {
+              "id": "gmat-03",
+              "title": "EP3 — 10 Common GMAT Study Mistakes & How to Prepare",
+              "videoId": "1Mi9lNexoxE"
+            },
+            {
+              "id": "gmat-04",
+              "title": "EP4 — Sleep Habits and Exercises that Affect Your GMAT Performance",
+              "videoId": "NNPhRF4aFRU"
+            },
+            {
+              "id": "gmat-05",
+              "title": "EP5 — Inequalities & Absolute Value Made Simple",
+              "videoId": "hBwUYKGCsf8"
+            },
+            {
+              "id": "gmat-06",
+              "title": "EP6 — Critical Reasoning Strategies for a 655+ Score",
+              "videoId": "MWsh0IF3nzo"
+            },
+            {
+              "id": "gmat-07",
+              "title": "EP7 — What You're Doing Wrong in Percent & Interest Rate Questions",
+              "videoId": "K-E_PQRJ2N4"
+            },
+            {
+              "id": "gmat-08",
+              "title": "EP8 — Advanced Critical Reasoning Techniques for GMAT Success",
+              "videoId": "q18vwGLCO50"
+            },
+            {
+              "id": "gmat-09",
+              "title": "EP10 — Quant Word Problems: Wall of Words and Scary Symbols",
+              "videoId": "113JUhTu5Kw"
+            },
+            {
+              "id": "gmat-10",
+              "title": "EP11 — How to Deal with Test Anxiety on the GMAT Focus",
+              "videoId": "z4zO2fJ-w98"
+            },
+            {
+              "id": "gmat-11",
+              "title": "EP12 — Quant: Remainders & Divisibility",
+              "videoId": "q2V31C-t2qI"
+            },
+            {
+              "id": "gmat-12",
+              "title": "EP13 — Probability, Permutations, and Combinations",
+              "videoId": "kpPMmJoC1p4"
+            },
+            {
+              "id": "gmat-13",
+              "title": "EP15 — Rates and Conversions Questions on the GMAT Quant",
+              "videoId": "8YjhJTwOsC4"
+            },
+            {
+              "id": "gmat-14",
+              "title": "EP16 — Inference & Other Critical Reasoning Questions",
+              "videoId": "xMV6GKjnjD8"
+            },
+            {
+              "id": "gmat-15",
+              "title": "EP17 — Statistics, Standard Deviation, & Min-Max Problems",
+              "videoId": "4KiqNN495WE"
+            },
+            {
+              "id": "gmat-16",
+              "title": "EP19 — Overlapping Sets Questions in GMAT Quant",
+              "videoId": "udItQGUK1-0"
+            },
+            {
+              "id": "gmat-17",
+              "title": "EP23 — Tackling the Nastiest RC & CR Passages",
+              "videoId": "LV-qltKHeLU"
+            },
+            {
+              "id": "gmat-18",
+              "title": "EP24 — Hardest GMAT Quant Questions",
+              "videoId": "0Y43LhvyFeM"
+            },
+            {
+              "id": "gmat-19",
+              "title": "24-Hour Non-Stop GMAT Crash Course — Part 1",
+              "videoId": "7hkekoFVokg"
+            },
+            {
+              "id": "gmat-20",
+              "title": "24-Hour Non-Stop GMAT Crash Course — Part 2",
+              "videoId": "FJa6Dz5p1Ko"
+            }
           ]
         }
       ],
@@ -393,46 +2359,206 @@
           "title": "TOLC Exam Preparation (Study in Italy)",
           "note": "Math, logic, science practice and exam guidance for TOLC-I / TOLC-E.",
           "episodes": [
-            { "id": "tolc-01", "title": "TOLC exam syllabus explained", "videoId": "FWlzJHgLaL0" },
-            { "id": "tolc-02", "title": "How to access practice materials for TOLC exam", "videoId": "pa2Qi0ZsIBo" },
-            { "id": "tolc-03", "title": "TOLC exam explained — Study in Italy with Scholarship 2024", "videoId": "O7EZY8Pgruw" },
-            { "id": "tolc-04", "title": "Preparation and requirements for TOLC test day (TOLC@Home)", "videoId": "X0vQ-Mt41_o" },
-            { "id": "tolc-05", "title": "How to access TOLC exam simulations (CISIA registration)", "videoId": "Eb-FFPcnYJc" },
-            { "id": "tolc-06", "title": "Exploring Alpha Test TOLC Simulations for English Speakers", "videoId": "NO-dPzg5b04" },
-            { "id": "tolc-07", "title": "Are questions same for the participants?", "videoId": "Qz4Wnzm1DkU" },
-            { "id": "tolc-08", "title": "Are there any negative marks for the wrong answer?", "videoId": "uFNYzmpJj8M" },
-            { "id": "tolc-09", "title": "How many TOLC exams can I register for at the same time?", "videoId": "cAm38iV0US0" },
-            { "id": "tolc-10", "title": "How long is the validity of the exam?", "videoId": "Ybcrpv5rT5o" },
-            { "id": "tolc-11", "title": "Admission without TOLC exam", "videoId": "0S8Eap5vSx4" },
-            { "id": "tolc-12", "title": "IMAT old problem practice", "videoId": "ZoJgxRqmT0E" },
-            { "id": "tolc-13", "title": "TOLC-I / E / IMAT exam preparation — Pro. 530", "videoId": "TCz5YvknPWs" },
-            { "id": "tolc-14", "title": "TOLC-I / E / IMAT exam preparation — Pro. 531", "videoId": "XXgIszyH-zo" },
-            { "id": "tolc-15", "title": "TOLC-I / E / IMAT exam preparation — Pro. 533", "videoId": "05h4KZ5IozM" },
-            { "id": "tolc-16", "title": "TOLC-I / E / IMAT exam preparation — Pro. 534", "videoId": "5-vlQNp6jnU" },
-            { "id": "tolc-17", "title": "TOLC-E logic practice problem solving", "videoId": "M76K3ljr5Y0" },
-            { "id": "tolc-18", "title": "TOLC-E practice problem solving", "videoId": "guxYqYz3dYw" },
-            { "id": "tolc-19", "title": "TOLC-E Math practice problem solving — part 1", "videoId": "x2CQAZDXNK8" },
-            { "id": "tolc-20", "title": "TOLC-E Math practice problem solving — part 2", "videoId": "8mTVw9-VjBc" },
-            { "id": "tolc-21", "title": "TOLC-I Math practice problem solving — part 1", "videoId": "bGwOkRk8Mro" },
-            { "id": "tolc-22", "title": "TOLC-I Math practice problem solving — part 2", "videoId": "3JrgyGrpOsI" },
-            { "id": "tolc-23", "title": "TOLC-I Logic practice problem solving — part 1", "videoId": "_H_amhKkK5c" },
-            { "id": "tolc-24", "title": "TOLC-I Logic practice problem solving — part 2", "videoId": "N82Qv0En6P4" },
-            { "id": "tolc-25", "title": "TOLC-I Science practice problem solving — part 2", "videoId": "Rkluyjl7jPA" },
-            { "id": "tolc-26", "title": "TOLC-I exam math exercise (CISIA mentor materials)", "videoId": "htMe754NIkk" },
-            { "id": "tolc-27", "title": "TOLC-I/E exam math practice — T-1", "videoId": "8iPD_IUQ9-k" },
-            { "id": "tolc-28", "title": "TOLC-I/E exam math practice — T-2", "videoId": "KA5MlDUQ2NI" },
-            { "id": "tolc-29", "title": "TOLC-I/E exam math practice — T-3", "videoId": "dX2XhllLwIs" },
-            { "id": "tolc-30", "title": "TOLC-I/E exam math practice — T-4", "videoId": "ZznqIPdcpN8" },
-            { "id": "tolc-31", "title": "TOLC-I/E exam math practice — T-5", "videoId": "txBop4_cm_E" },
-            { "id": "tolc-32", "title": "TOLC-I & E English reading comprehension tips", "videoId": "SpWTdmwAy4o" },
-            { "id": "tolc-33", "title": "TOLC exam logic problem practice — T-1", "videoId": "uLL5wtFukuI" },
-            { "id": "tolc-34", "title": "TOLC exam logic problem practice — T-2", "videoId": "IaTbITnPyJU" },
-            { "id": "tolc-35", "title": "TOLC exam logic problem practice — T-3", "videoId": "eYK5rx0lkx8" },
-            { "id": "tolc-36", "title": "TOLC exam logic problem practice (CISIA mentor materials)", "videoId": "p9Fg8XT2QpE" },
-            { "id": "tolc-37", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "x3BmsXM1eiA" },
-            { "id": "tolc-38", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "TIO40B8FMQM" },
-            { "id": "tolc-39", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "dwUus-uxgjw" },
-            { "id": "tolc-40", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "fhQflVg_ycI" }
+            {
+              "id": "tolc-01",
+              "title": "TOLC exam syllabus explained",
+              "videoId": "FWlzJHgLaL0"
+            },
+            {
+              "id": "tolc-02",
+              "title": "How to access practice materials for TOLC exam",
+              "videoId": "pa2Qi0ZsIBo"
+            },
+            {
+              "id": "tolc-03",
+              "title": "TOLC exam explained — Study in Italy with Scholarship 2024",
+              "videoId": "O7EZY8Pgruw"
+            },
+            {
+              "id": "tolc-04",
+              "title": "Preparation and requirements for TOLC test day (TOLC@Home)",
+              "videoId": "X0vQ-Mt41_o"
+            },
+            {
+              "id": "tolc-05",
+              "title": "How to access TOLC exam simulations (CISIA registration)",
+              "videoId": "Eb-FFPcnYJc"
+            },
+            {
+              "id": "tolc-06",
+              "title": "Exploring Alpha Test TOLC Simulations for English Speakers",
+              "videoId": "NO-dPzg5b04"
+            },
+            {
+              "id": "tolc-07",
+              "title": "Are questions same for the participants?",
+              "videoId": "Qz4Wnzm1DkU"
+            },
+            {
+              "id": "tolc-08",
+              "title": "Are there any negative marks for the wrong answer?",
+              "videoId": "uFNYzmpJj8M"
+            },
+            {
+              "id": "tolc-09",
+              "title": "How many TOLC exams can I register for at the same time?",
+              "videoId": "cAm38iV0US0"
+            },
+            {
+              "id": "tolc-10",
+              "title": "How long is the validity of the exam?",
+              "videoId": "Ybcrpv5rT5o"
+            },
+            {
+              "id": "tolc-11",
+              "title": "Admission without TOLC exam",
+              "videoId": "0S8Eap5vSx4"
+            },
+            {
+              "id": "tolc-12",
+              "title": "IMAT old problem practice",
+              "videoId": "ZoJgxRqmT0E"
+            },
+            {
+              "id": "tolc-13",
+              "title": "TOLC-I / E / IMAT exam preparation — Pro. 530",
+              "videoId": "TCz5YvknPWs"
+            },
+            {
+              "id": "tolc-14",
+              "title": "TOLC-I / E / IMAT exam preparation — Pro. 531",
+              "videoId": "XXgIszyH-zo"
+            },
+            {
+              "id": "tolc-15",
+              "title": "TOLC-I / E / IMAT exam preparation — Pro. 533",
+              "videoId": "05h4KZ5IozM"
+            },
+            {
+              "id": "tolc-16",
+              "title": "TOLC-I / E / IMAT exam preparation — Pro. 534",
+              "videoId": "5-vlQNp6jnU"
+            },
+            {
+              "id": "tolc-17",
+              "title": "TOLC-E logic practice problem solving",
+              "videoId": "M76K3ljr5Y0"
+            },
+            {
+              "id": "tolc-18",
+              "title": "TOLC-E practice problem solving",
+              "videoId": "guxYqYz3dYw"
+            },
+            {
+              "id": "tolc-19",
+              "title": "TOLC-E Math practice problem solving — part 1",
+              "videoId": "x2CQAZDXNK8"
+            },
+            {
+              "id": "tolc-20",
+              "title": "TOLC-E Math practice problem solving — part 2",
+              "videoId": "8mTVw9-VjBc"
+            },
+            {
+              "id": "tolc-21",
+              "title": "TOLC-I Math practice problem solving — part 1",
+              "videoId": "bGwOkRk8Mro"
+            },
+            {
+              "id": "tolc-22",
+              "title": "TOLC-I Math practice problem solving — part 2",
+              "videoId": "3JrgyGrpOsI"
+            },
+            {
+              "id": "tolc-23",
+              "title": "TOLC-I Logic practice problem solving — part 1",
+              "videoId": "_H_amhKkK5c"
+            },
+            {
+              "id": "tolc-24",
+              "title": "TOLC-I Logic practice problem solving — part 2",
+              "videoId": "N82Qv0En6P4"
+            },
+            {
+              "id": "tolc-25",
+              "title": "TOLC-I Science practice problem solving — part 2",
+              "videoId": "Rkluyjl7jPA"
+            },
+            {
+              "id": "tolc-26",
+              "title": "TOLC-I exam math exercise (CISIA mentor materials)",
+              "videoId": "htMe754NIkk"
+            },
+            {
+              "id": "tolc-27",
+              "title": "TOLC-I/E exam math practice — T-1",
+              "videoId": "8iPD_IUQ9-k"
+            },
+            {
+              "id": "tolc-28",
+              "title": "TOLC-I/E exam math practice — T-2",
+              "videoId": "KA5MlDUQ2NI"
+            },
+            {
+              "id": "tolc-29",
+              "title": "TOLC-I/E exam math practice — T-3",
+              "videoId": "dX2XhllLwIs"
+            },
+            {
+              "id": "tolc-30",
+              "title": "TOLC-I/E exam math practice — T-4",
+              "videoId": "ZznqIPdcpN8"
+            },
+            {
+              "id": "tolc-31",
+              "title": "TOLC-I/E exam math practice — T-5",
+              "videoId": "txBop4_cm_E"
+            },
+            {
+              "id": "tolc-32",
+              "title": "TOLC-I & E English reading comprehension tips",
+              "videoId": "SpWTdmwAy4o"
+            },
+            {
+              "id": "tolc-33",
+              "title": "TOLC exam logic problem practice — T-1",
+              "videoId": "uLL5wtFukuI"
+            },
+            {
+              "id": "tolc-34",
+              "title": "TOLC exam logic problem practice — T-2",
+              "videoId": "IaTbITnPyJU"
+            },
+            {
+              "id": "tolc-35",
+              "title": "TOLC exam logic problem practice — T-3",
+              "videoId": "eYK5rx0lkx8"
+            },
+            {
+              "id": "tolc-36",
+              "title": "TOLC exam logic problem practice (CISIA mentor materials)",
+              "videoId": "p9Fg8XT2QpE"
+            },
+            {
+              "id": "tolc-37",
+              "title": "Practicing Logic Problem for the TOLC Exam",
+              "videoId": "x3BmsXM1eiA"
+            },
+            {
+              "id": "tolc-38",
+              "title": "Practicing Logic Problem for the TOLC Exam",
+              "videoId": "TIO40B8FMQM"
+            },
+            {
+              "id": "tolc-39",
+              "title": "Practicing Logic Problem for the TOLC Exam",
+              "videoId": "dwUus-uxgjw"
+            },
+            {
+              "id": "tolc-40",
+              "title": "Practicing Logic Problem for the TOLC Exam",
+              "videoId": "fhQflVg_ycI"
+            }
           ]
         }
       ],
