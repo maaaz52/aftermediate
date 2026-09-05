@@ -62,7 +62,38 @@
     },
     {
       "testId": "sat",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": "sat-reading",
+          "title": "SAT Reading Comprehension",
+          "note": "How to solve hard reading questions, overnight strategies and transitions.",
+          "episodes": [
+            { "id": "sat-r1", "title": "Improve your SAT Reading OVERNIGHT (actually works)", "videoId": "NBECQxDBQQs" },
+            { "id": "sat-r2", "title": "How to Solve Hard SAT Reading Questions Easily", "videoId": "dUl1Hmgx-NE" },
+            { "id": "sat-r3", "title": "Never Miss Another SAT Transition Question", "videoId": "BhDFdrPA368" }
+          ]
+        },
+        {
+          "id": "sat-math",
+          "title": "SAT Math Course",
+          "note": "Desmos guide, problem solving & data analysis, geometry and trigonometry.",
+          "episodes": [
+            { "id": "sat-m1", "title": "The Last SAT Desmos Guide You'll Need", "videoId": "e-O4nwVHQ-Y" },
+            { "id": "sat-m2", "title": "All of Problem Solving and Data Analysis on the SAT", "videoId": "rytygT3oFO4" },
+            { "id": "sat-m3", "title": "All of SAT Geometry and Trigonometry", "videoId": "u6LL3Pbo3HI" }
+          ]
+        },
+        {
+          "id": "sat-grammar",
+          "title": "SAT Grammar Course",
+          "note": "Punctuation, verb questions and must-know grammar patterns.",
+          "episodes": [
+            { "id": "sat-g1", "title": "The Last SAT Punctuation Guide You'll Need", "videoId": "WL61t23IOyE" },
+            { "id": "sat-g2", "title": "Why SAT Verb Questions are Easy (New Strategy)", "videoId": "-qK1rXOFFVI" },
+            { "id": "sat-g3", "title": "Must Know SAT Grammar Patterns", "videoId": "hSCNS0PJnZg" }
+          ]
+        }
+      ],
       "resources": [
         {
           "id": "sat-practice",
