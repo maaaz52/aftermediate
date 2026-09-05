@@ -104,6 +104,28 @@
             { "id": "mdcat-chem-58", "title": "Unit 20 · Lec 3 — Industrial Chemistry", "videoId": "VoYiak3s7II" },
             { "id": "mdcat-chem-59", "title": "Best Of Luck For MDCAT", "videoId": "slGL3ZpBfW0" }
           ]
+        },
+        {
+          "id": "mdcat-physics",
+          "title": "MDCAT Physics — One Shot Series",
+          "note": "15 one-shot lectures covering the full physics syllabus for MDCAT / ECAT.",
+          "episodes": [
+            { "id": "mdcat-phy-01", "title": "Force and Motion — One Shot", "videoId": "YC1SMGS6Vjo" },
+            { "id": "mdcat-phy-02", "title": "Vectors — One Shot", "videoId": "nyYlsgzhzSw" },
+            { "id": "mdcat-phy-03", "title": "Work and Energy — One Shot", "videoId": "jyRCPXV34h0" },
+            { "id": "mdcat-phy-04", "title": "Circular Motion — One Shot", "videoId": "XYPR70OPKAY" },
+            { "id": "mdcat-phy-05", "title": "Waves and Sound — One Shot", "videoId": "hUeiVcfdK64" },
+            { "id": "mdcat-phy-06", "title": "Simple Harmonic Motion — One Shot", "videoId": "oZNKlBe-CjM" },
+            { "id": "mdcat-phy-07", "title": "Heat and Thermodynamics — One Shot", "videoId": "jSazrzxXCa4" },
+            { "id": "mdcat-phy-08", "title": "Electrostatics — One Shot", "videoId": "1uqywkwnbhg" },
+            { "id": "mdcat-phy-09", "title": "Current Electricity — One Shot", "videoId": "sMHKaUHGGbk" },
+            { "id": "mdcat-phy-10", "title": "Electromagnetism — One Shot", "videoId": "G7xMZnj5Nug" },
+            { "id": "mdcat-phy-11", "title": "Electromagnetic Induction — One Shot", "videoId": "GGvuYpeaR3I" },
+            { "id": "mdcat-phy-12", "title": "Electronics — One Shot", "videoId": "EXm5j6jH62E" },
+            { "id": "mdcat-phy-13", "title": "Dawn of Modern Physics — One Shot", "videoId": "EJwpwSiGWjc" },
+            { "id": "mdcat-phy-14", "title": "Atomic Spectra / Line Spectrum — One Shot", "videoId": "xZrnKmDn3kQ" },
+            { "id": "mdcat-phy-15", "title": "Nuclear Physics — One Shot", "videoId": "NQI10BFjLcg" }
+          ]
         }
       ],
       "resources": [
