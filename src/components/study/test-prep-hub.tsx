@@ -4,6 +4,8 @@ import * as React from "react";
 import { ChevronDown, ExternalLink, FileText, Link2, PlayCircle, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { CoursePlayer } from "@/components/skills/course-player";
+import { R2VideoPlayer } from "@/components/study/r2-video-player";
 import { cn } from "@/lib/utils";
 import { formatPkr } from "@/lib/abroad-planner";
 import type { AbroadTest, EntryTest, Stream } from "@/lib/types";
@@ -343,28 +345,28 @@ export function TestPrepHub() {
                   icon={<PlayCircle className="h-4 w-4" />}
                   empty="No lecture playlists added yet."
                 >
-                  {detail.playlists.map((p) => (
-                    <a
-                      key={p.id}
-                      href={
-                        p.playlistId
-                          ? `https://www.youtube.com/playlist?list=${p.playlistId}`
-                          : p.videoId
-                            ? `https://www.youtube.com/watch?v=${p.videoId}`
-                            : "#"
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-3 rounded-xl border border-line bg-surface-2/40 p-3 transition-colors hover:border-saffron/40"
-                    >
-                      <PlayCircle className="h-5 w-5 shrink-0 text-saffron" />
-                      <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm font-semibold text-ink">{p.title}</p>
-                        {p.note && <p className="truncate text-xs text-muted">{p.note}</p>}
-                      </div>
-                      <ExternalLink className="h-3.5 w-3.5 shrink-0 text-faint" />
-                    </a>
-                  ))}
+                  {detail.playlists.map((p) =>
+                    p.playlistId || p.videoId ? (
+                      <CoursePlayer
+                        key={p.id}
+                        title={p.title}
+                        playlistId={p.playlistId}
+                        videoId={p.videoId}
+                      />
+                    ) : (
+                      <a
+                        key={p.id}
+                        href="#"
+                        className="flex items-center gap-3 rounded-xl border border-line bg-surface-2/40 p-3 transition-colors hover:border-saffron/40"
+                      >
+                        <PlayCircle className="h-5 w-5 shrink-0 text-saffron" />
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-semibold text-ink">{p.title}</p>
+                          {p.note && <p className="truncate text-xs text-muted">{p.note}</p>}
+                        </div>
+                      </a>
+                    )
+                  )}
                 </PrepSection>
 
                 <PrepSection
@@ -404,16 +406,7 @@ export function TestPrepHub() {
                     empty="No videos added yet."
                   >
                     {detail.videos.map((v) => (
-                      <div
-                        key={v.id}
-                        className="flex items-center gap-3 rounded-xl border border-line bg-surface-2/40 p-3"
-                      >
-                        <PlayCircle className="h-5 w-5 shrink-0 text-violet" />
-                        <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-semibold text-ink">{v.title}</p>
-                          {v.note && <p className="truncate text-xs text-muted">{v.note}</p>}
-                        </div>
-                      </div>
+                      <R2VideoPlayer key={v.id} title={v.title} r2Key={v.r2Key} />
                     ))}
                   </PrepSection>
                 )}
