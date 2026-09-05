@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, ExternalLink, FileText, Link2, PlayCircle, Search } from "lucide-react";
+import { Bookmark, ChevronDown, ExternalLink, FileText, Link2, PlayCircle, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { CoursePlayer } from "@/components/skills/course-player";
 import { R2VideoPlayer } from "@/components/study/r2-video-player";
+import { useLocalStorage } from "@/lib/skills";
 import { cn } from "@/lib/utils";
 import { formatPkr } from "@/lib/abroad-planner";
 import type { AbroadTest, EntryTest, Stream } from "@/lib/types";
@@ -121,16 +122,25 @@ export function TestPrepHub() {
   const [stream, setStream] = React.useState<Stream | "all">("all");
   const [query, setQuery] = React.useState("");
   const [openId, setOpenId] = React.useState<string | null>(null);
+  const [savedOnly, setSavedOnly] = React.useState(false);
+  const [savedTests, setSavedTests] = useLocalStorage<string[]>(
+    "aftermediate:test-prep:saved",
+    []
+  );
+
+  const toggleSaved = (id: string) =>
+    setSavedTests((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
 
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     return ALL_TESTS.filter((t) => {
       if (region !== "all" && t.region !== region) return false;
       if (stream !== "all" && !t.streams.includes(stream)) return false;
+      if (savedOnly && !savedTests.includes(t.id)) return false;
       if (q && !(t.short.toLowerCase().includes(q) || t.name.toLowerCase().includes(q) || t.body.toLowerCase().includes(q))) return false;
       return true;
     });
-  }, [region, stream, query]);
+  }, [region, stream, query, savedOnly, savedTests]);
 
   const open = filtered.find((t) => t.id === openId) ?? null;
   const detail = open ? contentFor(open.id) : null;
@@ -159,6 +169,19 @@ export function TestPrepHub() {
                 {r === "all" ? "All regions" : REGION_LABEL[r]}
               </button>
             ))}
+            <button
+              type="button"
+              aria-pressed={savedOnly}
+              onClick={() => setSavedOnly((v) => !v)}
+              className={cn(
+                "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                savedOnly
+                  ? "border-saffron/40 bg-saffron/10 text-saffron"
+                  : "border-line bg-surface text-muted hover:text-ink"
+              )}
+            >
+              Saved ({savedTests.length})
+            </button>
           </div>
           <div className="relative lg:w-72">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-faint" />
@@ -196,7 +219,30 @@ export function TestPrepHub() {
       {/* ── Grid ── */}
       {filtered.length === 0 ? (
         <div className="card-glass mt-5 rounded-2xl p-10 text-center">
-          <p className="text-sm text-muted">No tests match these filters.</p>
+          <p className="text-sm font-medium text-ink">
+            {savedOnly
+              ? "No saved tests yet."
+              : "No tests match these filters."}
+          </p>
+          <p className="mt-1 text-xs text-muted">
+            {savedOnly
+              ? "Tap the bookmark on any test to save it here."
+              : "Try a different region, stream, or search term."}
+          </p>
+          {(savedOnly || query || stream !== "all" || region !== "all") && (
+            <button
+              type="button"
+              onClick={() => {
+                setSavedOnly(false);
+                setQuery("");
+                setStream("all");
+                setRegion("all");
+              }}
+              className="mt-4 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white hover:bg-saffron-soft"
+            >
+              Clear filters
+            </button>
+          )}
         </div>
       ) : (
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -207,19 +253,22 @@ export function TestPrepHub() {
               content.playlists.length > 0 ||
               content.resources.length > 0 ||
               content.videos.length > 0;
+            const isSaved = savedTests.includes(t.id);
             return (
-              <button
+              <div
                 key={t.id}
-                type="button"
-                aria-expanded={isOpen}
-                onClick={() => setOpenId(isOpen ? null : t.id)}
                 className={cn(
                   "card-glass group flex flex-col rounded-2xl p-5 text-left transition-all",
                   isOpen ? "border-saffron/50 ring-1 ring-saffron/30" : "hover:-translate-y-0.5 hover:shadow-md"
                 )}
               >
                 <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0">
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpenId(isOpen ? null : t.id)}
+                    className="min-w-0 flex-1 text-left"
+                  >
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="text-base font-bold text-ink">{t.short}</span>
                       <Badge variant={t.region === "pakistan" ? "saffron" : "violet"}>
@@ -227,13 +276,31 @@ export function TestPrepHub() {
                       </Badge>
                     </div>
                     <p className="mt-1 line-clamp-2 text-xs text-muted">{t.name}</p>
+                  </button>
+                  <div className="flex shrink-0 items-center gap-1">
+                    <button
+                      type="button"
+                      aria-pressed={isSaved}
+                      aria-label={`Save ${t.short}`}
+                      onClick={() => toggleSaved(t.id)}
+                      className={cn(
+                        "rounded-lg p-1.5 transition-colors",
+                        isSaved ? "text-saffron" : "text-faint hover:text-saffron"
+                      )}
+                    >
+                      <Bookmark className={cn("h-4 w-4", isSaved && "fill-current")} />
+                    </button>
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() => setOpenId(isOpen ? null : t.id)}
+                      className="rounded-lg p-1.5 text-faint transition-colors hover:text-ink"
+                    >
+                      <ChevronDown
+                        className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")}
+                      />
+                    </button>
                   </div>
-                  <ChevronDown
-                    className={cn(
-                      "mt-1 h-4 w-4 shrink-0 text-faint transition-transform",
-                      isOpen && "rotate-180"
-                    )}
-                  />
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-faint">
@@ -243,7 +310,7 @@ export function TestPrepHub() {
                     <span className="text-saffron">● has prep content</span>
                   )}
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>
