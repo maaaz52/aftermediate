@@ -1,11 +1,12 @@
 import type { MentorProfile } from "./mentor-match-page";
 import { FIELD_GRADIENTS, getInitials } from "./mentor-utils";
-import { AtSign, MessageCircle, Phone } from "lucide-react";
+import { AtSign, Mail, MessageCircle, Phone } from "lucide-react";
 
 const SOCIAL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   instagram: AtSign,
   discord: MessageCircle,
   whatsapp: Phone,
+  email: Mail,
 };
 
 interface MentorCardProps {

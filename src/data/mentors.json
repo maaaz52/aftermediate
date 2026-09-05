@@ -29,6 +29,7 @@
       "bio": "Currently a freshman at SDSB LUMS. Looking forward to majoring in Accounting and Finance. I would love to share my journey of how I went from F.Sc into LUMS — admissions process, scholarships, and what to expect on campus.",
       "topics": ["LUMS Admissions", "LUMS Scholarships", "SDSB Accounting & Finance", "F.Sc to LUMS transition", "University life"],
       "socials": [
+        { "platform": "email", "label": "Email Saad", "url": "mailto:saadnawab90@gmail.com" },
         { "platform": "whatsapp", "label": "Contact on WhatsApp", "url": "https://wa.me/923328725165" }
       ],
       "achievements": [
@@ -47,6 +48,7 @@
       "bio": "Student at GIK Institute (Ghulam Ishaq Khan Institute). Intermediate in ICS from Cadet College Kohat. Happy to guide students through GIKI admissions, test prep, and campus life.",
       "topics": ["GIKI Admissions", "GIKI Test Prep", "ICS to GIKI", "Cadet College Kohat", "Engineering universities"],
       "socials": [
+        { "platform": "email", "label": "Email Matiullah", "url": "mailto:Matiullah741741@gmail.com" },
         { "platform": "whatsapp", "label": "Contact on WhatsApp", "url": "https://wa.me/923365703517" }
       ],
       "achievements": [

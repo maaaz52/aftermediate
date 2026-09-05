@@ -24,6 +24,7 @@ export const PLATFORM_COLORS: Record<string, string> = {
   instagram: "#e1306c",
   discord: "#5865f2",
   whatsapp: "#25d366",
+  email: "#566073",
 };
 
 // ── Helpers ──
