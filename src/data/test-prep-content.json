@@ -3,7 +3,43 @@
   "content": [
     {
       "testId": "mdcat",
-      "playlists": [],
+      "playlists": [
+        {
+          "id": "mdcat-biology",
+          "title": "MDCAT Biology — Dr Sohail (MDCAT 2026)",
+          "note": "Complete 28-lecture biology series covering the full syllabus in order.",
+          "episodes": [
+            { "id": "mdcat-bio-01", "title": "Lecture 01 — Homeostasis", "videoId": "Pm4Ja5AMvNs" },
+            { "id": "mdcat-bio-02", "title": "Lecture 02 — Homeostasis (Part-02)", "videoId": "jYM1VCBwYZI" },
+            { "id": "mdcat-bio-03", "title": "Lecture 03 — Nervous Coordination (Part-01)", "videoId": "xn2kQ07heD0" },
+            { "id": "mdcat-bio-04", "title": "Lecture 04 — Nervous Coordination (Part-02)", "videoId": "Zj0oEN88eqA" },
+            { "id": "mdcat-bio-05", "title": "Lecture 05 — Chemical Coordination", "videoId": "8iR84wHP-pI" },
+            { "id": "mdcat-bio-06", "title": "Lecture 06 — Support and Movement (Part-01)", "videoId": "wg7qmQco8BE" },
+            { "id": "mdcat-bio-07", "title": "Lecture 07 — Support & Movement (Part-02)", "videoId": "eBvE2v6Mxkg" },
+            { "id": "mdcat-bio-08", "title": "Lecture 08 — Reproduction (Part-01)", "videoId": "IZYr2P-GEXA" },
+            { "id": "mdcat-bio-09", "title": "Lecture 09 — Reproduction (Part-02)", "videoId": "z5RQXXrrGpg" },
+            { "id": "mdcat-bio-10", "title": "Lecture 10 — Evolution (Part-01)", "videoId": "_ow8Nap71og" },
+            { "id": "mdcat-bio-11", "title": "Lecture 11 — Evolution (Part-02)", "videoId": "j1d5ozqZw0w" },
+            { "id": "mdcat-bio-12", "title": "Lecture 12 — Genetics (Part-01)", "videoId": "843aNotrJ2I" },
+            { "id": "mdcat-bio-13", "title": "Lecture 13 — Genetics (Part-02)", "videoId": "4n27zBCFUIA" },
+            { "id": "mdcat-bio-14", "title": "Lecture 14 — Genetics (Part-03)", "videoId": "0cmM84YQyJY" },
+            { "id": "mdcat-bio-15", "title": "Lecture 15 — Biotechnology", "videoId": "T-WIHeOsVvM" },
+            { "id": "mdcat-bio-16", "title": "Lecture 16 — Human Respiratory System", "videoId": "uNog240PivU" },
+            { "id": "mdcat-bio-17", "title": "Lecture 17 — Human Digestive System", "videoId": "47VLyXqtfOE" },
+            { "id": "mdcat-bio-18", "title": "Lecture 18 — Circulation (Part-01)", "videoId": "zWMsWMnRFfA" },
+            { "id": "mdcat-bio-19", "title": "Lecture 19 — Circulation (Part-02)", "videoId": "X8mAotcLRbs" },
+            { "id": "mdcat-bio-20", "title": "Lecture 20 — Immunity", "videoId": "dyMoFbrisAI" },
+            { "id": "mdcat-bio-21", "title": "Lecture 21 — Enzymes", "videoId": "M4EnnDOU-FU" },
+            { "id": "mdcat-bio-22", "title": "Lecture 22 — Bioenergetics", "videoId": "aqHqnR4LrRU" },
+            { "id": "mdcat-bio-23", "title": "Lecture 23 — Biomolecules | Carbohydrates", "videoId": "rbhrm1KCMok" },
+            { "id": "mdcat-bio-24", "title": "Lecture 24 — Biological Molecules | Proteins", "videoId": "MFuB6f7eMXk" },
+            { "id": "mdcat-bio-25", "title": "Lecture 25 — Lipids | Biological Molecules", "videoId": "ZK9dGw1g3Qg" },
+            { "id": "mdcat-bio-26", "title": "Lecture 26 — Nucleic Acid and Conjugated Molecules", "videoId": "4Bul--Lw8Io" },
+            { "id": "mdcat-bio-27", "title": "Lecture 27 — Cell Biology", "videoId": "ccSbpb1a3K8" },
+            { "id": "mdcat-bio-28", "title": "Lecture 28 — Viruses", "videoId": "QUWZw62-4P4" }
+          ]
+        }
+      ],
       "resources": [
         {
           "id": "mdcat-pmdc-syllabus",
