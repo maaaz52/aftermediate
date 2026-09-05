@@ -13,10 +13,8 @@ const prepContent = contentJson as unknown as {
 export interface TestPlaylist {
   id: string;
   title: string;
-  provider: string;
-  playlistId?: string;
-  videoId?: string;
   note?: string;
+  episodes: { id: string; title: string; videoId: string }[];
 }
 
 export interface TestResource {
@@ -66,6 +64,27 @@ export function contentFor(testId: string): PrepContent {
       resources: [],
       videos: [],
     }
+  );
+}
+
+/** All episodes across a test's playlists, flattened with playlist context. */
+export interface FlatEpisode {
+  episodeId: string;
+  title: string;
+  videoId: string;
+  playlistId: string;
+  playlistTitle: string;
+}
+
+export function episodesFor(testId: string): FlatEpisode[] {
+  return contentFor(testId).playlists.flatMap((p) =>
+    p.episodes.map((e) => ({
+      episodeId: e.id,
+      title: e.title,
+      videoId: e.videoId,
+      playlistId: p.id,
+      playlistTitle: p.title,
+    }))
   );
 }
 
