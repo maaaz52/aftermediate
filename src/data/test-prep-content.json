@@ -350,6 +350,94 @@
       ],
       "resources": [],
       "videos": []
+    },
+    {
+      "testId": "gmat",
+      "playlists": [
+        {
+          "id": "gmat-crash-course",
+          "title": "GMAT Crash Course",
+          "note": "Quant, verbal and study-strategy episodes for a 655+ score.",
+          "episodes": [
+            { "id": "gmat-01", "title": "EP1 — Reading Comprehension Strategies for a 655+ Score", "videoId": "Py1o2chTN58" },
+            { "id": "gmat-02", "title": "EP2 — Algebra: Quadratics, Exponents & Common Mistakes", "videoId": "44wt26fPNvM" },
+            { "id": "gmat-03", "title": "EP3 — 10 Common GMAT Study Mistakes & How to Prepare", "videoId": "1Mi9lNexoxE" },
+            { "id": "gmat-04", "title": "EP4 — Sleep Habits and Exercises that Affect Your GMAT Performance", "videoId": "NNPhRF4aFRU" },
+            { "id": "gmat-05", "title": "EP5 — Inequalities & Absolute Value Made Simple", "videoId": "hBwUYKGCsf8" },
+            { "id": "gmat-06", "title": "EP6 — Critical Reasoning Strategies for a 655+ Score", "videoId": "MWsh0IF3nzo" },
+            { "id": "gmat-07", "title": "EP7 — What You're Doing Wrong in Percent & Interest Rate Questions", "videoId": "K-E_PQRJ2N4" },
+            { "id": "gmat-08", "title": "EP8 — Advanced Critical Reasoning Techniques for GMAT Success", "videoId": "q18vwGLCO50" },
+            { "id": "gmat-09", "title": "EP10 — Quant Word Problems: Wall of Words and Scary Symbols", "videoId": "113JUhTu5Kw" },
+            { "id": "gmat-10", "title": "EP11 — How to Deal with Test Anxiety on the GMAT Focus", "videoId": "z4zO2fJ-w98" },
+            { "id": "gmat-11", "title": "EP12 — Quant: Remainders & Divisibility", "videoId": "q2V31C-t2qI" },
+            { "id": "gmat-12", "title": "EP13 — Probability, Permutations, and Combinations", "videoId": "kpPMmJoC1p4" },
+            { "id": "gmat-13", "title": "EP15 — Rates and Conversions Questions on the GMAT Quant", "videoId": "8YjhJTwOsC4" },
+            { "id": "gmat-14", "title": "EP16 — Inference & Other Critical Reasoning Questions", "videoId": "xMV6GKjnjD8" },
+            { "id": "gmat-15", "title": "EP17 — Statistics, Standard Deviation, & Min-Max Problems", "videoId": "4KiqNN495WE" },
+            { "id": "gmat-16", "title": "EP19 — Overlapping Sets Questions in GMAT Quant", "videoId": "udItQGUK1-0" },
+            { "id": "gmat-17", "title": "EP23 — Tackling the Nastiest RC & CR Passages", "videoId": "LV-qltKHeLU" },
+            { "id": "gmat-18", "title": "EP24 — Hardest GMAT Quant Questions", "videoId": "0Y43LhvyFeM" },
+            { "id": "gmat-19", "title": "24-Hour Non-Stop GMAT Crash Course — Part 1", "videoId": "7hkekoFVokg" },
+            { "id": "gmat-20", "title": "24-Hour Non-Stop GMAT Crash Course — Part 2", "videoId": "FJa6Dz5p1Ko" }
+          ]
+        }
+      ],
+      "resources": [],
+      "videos": []
+    },
+    {
+      "testId": "tolc",
+      "playlists": [
+        {
+          "id": "tolc-practice",
+          "title": "TOLC Exam Preparation (Study in Italy)",
+          "note": "Math, logic, science practice and exam guidance for TOLC-I / TOLC-E.",
+          "episodes": [
+            { "id": "tolc-01", "title": "TOLC exam syllabus explained", "videoId": "FWlzJHgLaL0" },
+            { "id": "tolc-02", "title": "How to access practice materials for TOLC exam", "videoId": "pa2Qi0ZsIBo" },
+            { "id": "tolc-03", "title": "TOLC exam explained — Study in Italy with Scholarship 2024", "videoId": "O7EZY8Pgruw" },
+            { "id": "tolc-04", "title": "Preparation and requirements for TOLC test day (TOLC@Home)", "videoId": "X0vQ-Mt41_o" },
+            { "id": "tolc-05", "title": "How to access TOLC exam simulations (CISIA registration)", "videoId": "Eb-FFPcnYJc" },
+            { "id": "tolc-06", "title": "Exploring Alpha Test TOLC Simulations for English Speakers", "videoId": "NO-dPzg5b04" },
+            { "id": "tolc-07", "title": "Are questions same for the participants?", "videoId": "Qz4Wnzm1DkU" },
+            { "id": "tolc-08", "title": "Are there any negative marks for the wrong answer?", "videoId": "uFNYzmpJj8M" },
+            { "id": "tolc-09", "title": "How many TOLC exams can I register for at the same time?", "videoId": "cAm38iV0US0" },
+            { "id": "tolc-10", "title": "How long is the validity of the exam?", "videoId": "Ybcrpv5rT5o" },
+            { "id": "tolc-11", "title": "Admission without TOLC exam", "videoId": "0S8Eap5vSx4" },
+            { "id": "tolc-12", "title": "IMAT old problem practice", "videoId": "ZoJgxRqmT0E" },
+            { "id": "tolc-13", "title": "TOLC-I / E / IMAT exam preparation — Pro. 530", "videoId": "TCz5YvknPWs" },
+            { "id": "tolc-14", "title": "TOLC-I / E / IMAT exam preparation — Pro. 531", "videoId": "XXgIszyH-zo" },
+            { "id": "tolc-15", "title": "TOLC-I / E / IMAT exam preparation — Pro. 533", "videoId": "05h4KZ5IozM" },
+            { "id": "tolc-16", "title": "TOLC-I / E / IMAT exam preparation — Pro. 534", "videoId": "5-vlQNp6jnU" },
+            { "id": "tolc-17", "title": "TOLC-E logic practice problem solving", "videoId": "M76K3ljr5Y0" },
+            { "id": "tolc-18", "title": "TOLC-E practice problem solving", "videoId": "guxYqYz3dYw" },
+            { "id": "tolc-19", "title": "TOLC-E Math practice problem solving — part 1", "videoId": "x2CQAZDXNK8" },
+            { "id": "tolc-20", "title": "TOLC-E Math practice problem solving — part 2", "videoId": "8mTVw9-VjBc" },
+            { "id": "tolc-21", "title": "TOLC-I Math practice problem solving — part 1", "videoId": "bGwOkRk8Mro" },
+            { "id": "tolc-22", "title": "TOLC-I Math practice problem solving — part 2", "videoId": "3JrgyGrpOsI" },
+            { "id": "tolc-23", "title": "TOLC-I Logic practice problem solving — part 1", "videoId": "_H_amhKkK5c" },
+            { "id": "tolc-24", "title": "TOLC-I Logic practice problem solving — part 2", "videoId": "N82Qv0En6P4" },
+            { "id": "tolc-25", "title": "TOLC-I Science practice problem solving — part 2", "videoId": "Rkluyjl7jPA" },
+            { "id": "tolc-26", "title": "TOLC-I exam math exercise (CISIA mentor materials)", "videoId": "htMe754NIkk" },
+            { "id": "tolc-27", "title": "TOLC-I/E exam math practice — T-1", "videoId": "8iPD_IUQ9-k" },
+            { "id": "tolc-28", "title": "TOLC-I/E exam math practice — T-2", "videoId": "KA5MlDUQ2NI" },
+            { "id": "tolc-29", "title": "TOLC-I/E exam math practice — T-3", "videoId": "dX2XhllLwIs" },
+            { "id": "tolc-30", "title": "TOLC-I/E exam math practice — T-4", "videoId": "ZznqIPdcpN8" },
+            { "id": "tolc-31", "title": "TOLC-I/E exam math practice — T-5", "videoId": "txBop4_cm_E" },
+            { "id": "tolc-32", "title": "TOLC-I & E English reading comprehension tips", "videoId": "SpWTdmwAy4o" },
+            { "id": "tolc-33", "title": "TOLC exam logic problem practice — T-1", "videoId": "uLL5wtFukuI" },
+            { "id": "tolc-34", "title": "TOLC exam logic problem practice — T-2", "videoId": "IaTbITnPyJU" },
+            { "id": "tolc-35", "title": "TOLC exam logic problem practice — T-3", "videoId": "eYK5rx0lkx8" },
+            { "id": "tolc-36", "title": "TOLC exam logic problem practice (CISIA mentor materials)", "videoId": "p9Fg8XT2QpE" },
+            { "id": "tolc-37", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "x3BmsXM1eiA" },
+            { "id": "tolc-38", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "TIO40B8FMQM" },
+            { "id": "tolc-39", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "dwUus-uxgjw" },
+            { "id": "tolc-40", "title": "Practicing Logic Problem for the TOLC Exam", "videoId": "fhQflVg_ycI" }
+          ]
+        }
+      ],
+      "resources": [],
+      "videos": []
     }
   ]
 }
