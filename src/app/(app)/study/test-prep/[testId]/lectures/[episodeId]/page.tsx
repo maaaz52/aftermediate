@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, ListVideo } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { CoursePlayer } from "@/components/skills/course-player";
 import { useLocalStorage } from "@/lib/skills";
@@ -97,12 +97,6 @@ export default function TestPrepLectureEpisodePage({
           <Check className="h-3.5 w-3.5" />
           {watchedEp ? "Watched ✓" : "Mark watched"}
         </button>
-        <Link
-          href={`/study/test-prep/${testId}/lectures`}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink"
-        >
-          <ListVideo className="h-4 w-4" /> All lectures
-        </Link>
       </div>
 
       <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
