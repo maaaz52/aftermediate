@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "content": [
+    {
+      "testId": "mdcat",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "mdcat-pmdc-syllabus",
+          "title": "Official PM&DC MDCAT syllabus (PDF)",
+          "type": "pdf",
+          "url": "https://pmdc.pk/Publication/Syllabus",
+          "year": 2026
+        },
+        {
+          "id": "mdcat-portal",
+          "title": "MDCAT registration portal",
+          "type": "link",
+          "url": "https://mdcat.pmdc.pk"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "testId": "net",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "net-aggregate",
+          "title": "How the NUST aggregate works (75/15/10)",
+          "type": "link",
+          "url": "https://nust.edu.pk/admissions"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "testId": "ecat",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "ecat-portal",
+          "title": "UET ECAT registration portal",
+          "type": "link",
+          "url": "https://ecat.uet.edu.pk"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "testId": "ielts",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "ielts-free-practice",
+          "title": "Free official IELTS practice (British Council)",
+          "type": "link",
+          "url": "https://takeielts.britishcouncil.org/take-ielts/prepare/free-ielts-english-practice-tests"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "testId": "sat",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "sat-practice",
+          "title": "Official SAT practice (College Board)",
+          "type": "link",
+          "url": "https://satsuite.collegeboard.org/sat/practice"
+        }
+      ],
+      "videos": []
+    }
+  ]
+}

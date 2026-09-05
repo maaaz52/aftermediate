@@ -20,6 +20,7 @@ import {
   GraduationCap,
   Handshake,
   Landmark,
+  Layers,
   Medal,
   MessageSquareHeart,
   MessageSquareText,
@@ -98,6 +99,7 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/reality-check", label: "Reality Check", icon: Eye },
       { href: "/webinars", label: "Webinars", icon: Video },
+      { href: "/study/test-prep", label: "Test Prep", icon: Layers },
       { href: "/study", label: "Ustaad A.I", icon: BookOpen, crown: true },
     ],
   },

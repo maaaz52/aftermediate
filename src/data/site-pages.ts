@@ -159,6 +159,11 @@ export const SITE_PAGES: SitePage[] = [
     purpose: "Upcoming and recorded university, scholarship and career sessions, each linking out.",
   },
   {
+    href: "/study/test-prep",
+    label: "Test Prep",
+    purpose: "Every entry test from Pakistan and abroad in one place — patterns, fees, lecture playlists and resources.",
+  },
+  {
     href: "/study",
     label: "Ustaad A.I",
     purpose: "Ustaad, the study tutor for FSc, MDCAT, ECAT and NET concepts and revision plans.",
