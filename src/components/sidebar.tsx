@@ -68,7 +68,7 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/abroad/countries", label: "Countries", icon: Globe },
       { href: "/abroad/scholarships", label: "Scholarships", icon: Medal },
-      { href: "/abroad/test-prep", label: "Test Prep", icon: BookOpenCheck },
+      { href: "/abroad/test-prep", label: "Entry Tests", icon: BookOpenCheck },
       { href: "/abroad/self-assessment", label: "Self Assessment", icon: PenLine, crown: true },
       { href: "/abroad/ivy-league", label: "Ivy League", icon: Landmark },
       { href: "/money", label: "Money", icon: Wallet },

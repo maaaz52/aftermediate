@@ -85,7 +85,7 @@ export const SITE_PAGES: SitePage[] = [
   },
   {
     href: "/abroad/test-prep",
-    label: "Test Prep",
+    label: "Entry Tests",
     purpose: "IELTS, TOEFL, SAT and more: pattern, PKR fee and scoring, filterable by destination.",
   },
   {
