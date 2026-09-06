@@ -1,15 +1,17 @@
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Check, Clock, ExternalLink, FileText, Lightbulb, MapPin, Monitor, Users } from "lucide-react";
+import { ArrowLeft, BookOpen, Check, Clock, ExternalLink, FileText, Lightbulb, MapPin, Monitor, Target, Users } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/abroad-tests.json";
 import countriesJson from "@/data/abroad-countries.json";
+import contentJson from "@/data/test-prep-content.json";
 import type { AbroadTest, AbroadCountry } from "@/lib/types";
 import { formatPkr } from "@/lib/abroad-planner";
 
 const data = json as unknown as { tests: AbroadTest[] };
 const countryData = countriesJson as unknown as { countries: AbroadCountry[] };
 const COUNTRY_NAMES = new Map(countryData.countries.map((c) => [c.id, c.name]));
+const HAS_LECTURES = new Set(contentJson.content.map((c: { testId: string }) => c.testId));
 
 function countryLabel(c: string): string {
   return COUNTRY_NAMES.get(c) ?? c;
@@ -83,6 +85,33 @@ export default async function TestPrepDetailPage({ params }: { params: Promise<{
           <p className="mt-1 text-sm font-bold text-ink">{t.competitiveScore}</p>
         </div>
       </div>
+
+      {/* Start preparing */}
+      {HAS_LECTURES.has(t.id) && (
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href={`/study/test-prep/${t.id}/lectures`}
+            className="inline-flex items-center gap-2 rounded-xl border border-saffron/30 bg-saffron/10 px-4 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/20"
+          >
+            <BookOpen className="h-4 w-4" />
+            Watch lectures
+          </Link>
+          <Link
+            href={`/study/test-prep/${t.id}/documents`}
+            className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+          >
+            <FileText className="h-4 w-4" />
+            Resources &amp; documents
+          </Link>
+          <Link
+            href={`/abroad/self-assessment/${t.id}`}
+            className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+          >
+            <Target className="h-4 w-4" />
+            Practice exam
+          </Link>
+        </div>
+      )}
 
       {/* Test format */}
       {t.format && (

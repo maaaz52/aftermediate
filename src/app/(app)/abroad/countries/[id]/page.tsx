@@ -3,11 +3,13 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Check, Clock, ExternalLink, GraduationCap, Plane, Wallet } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/abroad-countries.json";
-import type { AbroadCountry } from "@/lib/types";
+import scholarshipsJson from "@/data/abroad-scholarships.json";
+import type { AbroadCountry, AbroadScholarship } from "@/lib/types";
 import { formatPkr } from "@/lib/abroad-planner";
 import { monthlyLivingTotal } from "@/lib/abroad-filters";
 
 const data = json as unknown as { dataYear: number; countries: AbroadCountry[] };
+const scholarshipsData = scholarshipsJson as unknown as { scholarships: AbroadScholarship[] };
 
 export function generateStaticParams() {
   return data.countries.map((c) => ({ id: c.id }));
@@ -28,6 +30,13 @@ const LEVEL_LABEL: Record<string, string> = {
   masters: "Master's",
   phd: "PhD",
 };
+
+/** Find scholarships that mention this country or are marked for "multiple". */
+function scholarshipsForCountry(countryId: string): AbroadScholarship[] {
+  return scholarshipsData.scholarships.filter(
+    (s) => s.countries.includes(countryId) || s.countries.includes("multiple")
+  );
+}
 
 function CostLine({ label, value }: { label: string; value: string }) {
   return (
@@ -251,10 +260,49 @@ export default async function CountryPage({ params }: { params: Promise<{ id: st
         <section className="mt-8">
           <h2 className="text-[11px] font-semibold uppercase tracking-widest text-faint">Scholarships available</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {c.scholarshipsAvailable.map((s) => (
-              <span key={s} className="rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs text-emerald-600">
-                {s}
-              </span>
+            {c.scholarshipsAvailable.map((s) => {
+              const match = scholarshipsData.scholarships.find(
+                (sc) => sc.name === s || s.toLowerCase().includes(sc.name.toLowerCase())
+              );
+              return match ? (
+                <Link
+                  key={s}
+                  href={`/abroad/scholarships/${match.id}`}
+                  className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10"
+                >
+                  {s} →
+                </Link>
+              ) : (
+                <span key={s} className="rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs text-emerald-600">
+                  {s}
+                </span>
+              );
+            })}
+          </div>
+          {scholarshipsForCountry(id).length > 0 && (
+            <Link
+              href={`/abroad/scholarships?country=${id}`}
+              className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-saffron transition-colors hover:underline"
+            >
+              View all scholarships for {c.name} →
+            </Link>
+          )}
+        </section>
+      )}
+
+      {/* Related scholarships from abroad page */}
+      {scholarshipsForCountry(id).length > 0 && !(c.scholarshipsAvailable && c.scholarshipsAvailable.length > 0) && (
+        <section className="mt-8">
+          <h2 className="text-[11px] font-semibold uppercase tracking-widest text-faint">Scholarships for {c.name}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {scholarshipsForCountry(id).slice(0, 6).map((s) => (
+              <Link
+                key={s.id}
+                href={`/abroad/scholarships/${s.id}`}
+                className="inline-flex items-center gap-1 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500/10"
+              >
+                {s.name} →
+              </Link>
             ))}
           </div>
         </section>

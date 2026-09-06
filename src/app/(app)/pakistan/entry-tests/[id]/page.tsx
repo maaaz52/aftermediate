@@ -1,9 +1,12 @@
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, ArrowLeft } from "lucide-react";
+import { ExternalLink, ArrowLeft, BookOpen, FileText, Target } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/entry-tests.json";
+import contentJson from "@/data/test-prep-content.json";
 import type { EntryTest } from "@/lib/types";
+
+const HAS_LECTURES = new Set(contentJson.content.map((c: { testId: string }) => c.testId));
 
 const data = json as unknown as { dataYear: number; tests: EntryTest[] };
 
@@ -57,6 +60,35 @@ export default async function EntryTestPage({ params }: { params: Promise<{ id: 
           <p className="text-[10px] uppercase tracking-widest text-faint">Validity</p>
           <p className="mt-1 text-sm font-medium text-ink">{test.validity}</p>
         </div>
+      </div>
+
+      {/* Prepare for this test */}
+      <div className="mt-6 flex flex-wrap gap-3">
+        {HAS_LECTURES.has(test.id) && (
+          <>
+            <Link
+              href={`/study/test-prep/${test.id}/lectures`}
+              className="inline-flex items-center gap-2 rounded-xl border border-saffron/30 bg-saffron/10 px-4 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/20"
+            >
+              <BookOpen className="h-4 w-4" />
+              Watch lectures
+            </Link>
+            <Link
+              href={`/study/test-prep/${test.id}/documents`}
+              className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+            >
+              <FileText className="h-4 w-4" />
+              Resources &amp; documents
+            </Link>
+          </>
+        )}
+        <Link
+          href={`/pakistan/self-assessment/${test.id}`}
+          className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+        >
+          <Target className="h-4 w-4" />
+          Practice exam
+        </Link>
       </div>
 
       {/* Accepted by */}

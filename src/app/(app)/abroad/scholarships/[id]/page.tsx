@@ -85,7 +85,17 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ id
         <div className="rounded-xl bg-surface-2/60 px-4 py-3">
           <p className="text-[10px] uppercase tracking-widest text-faint">Level</p>
           <p className="mt-1 text-sm font-bold text-ink">{levelLabel}</p>
-          <p className="mt-0.5 text-xs text-muted">{countryLabels}</p>
+          <div className="mt-0.5 flex flex-wrap gap-1.5">
+            {s.countries.map((cid) => (
+              <Link
+                key={cid}
+                href={cid === "multiple" ? "/abroad/countries" : `/abroad/countries/${cid}`}
+                className="inline-flex items-center gap-1 text-xs text-saffron transition-colors hover:underline"
+              >
+                {countryLabel(cid)}{cid !== "multiple" ? " →" : " →"}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="rounded-xl bg-surface-2/60 px-4 py-3">
           <p className="text-[10px] uppercase tracking-widest text-faint">Duration</p>
