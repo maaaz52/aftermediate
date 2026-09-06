@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Mail, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { ContactForm } from "@/components/landing/contact-form";
 import { Brand } from "@/components/brand";
 import { Illustration } from "@/components/pixel/illustrations";
@@ -298,20 +298,6 @@ export default function Home() {
                 <p className="mt-3 max-w-md text-muted">
                   Questions? Feedback? Want to collaborate? Drop us a message — we read every one.
                 </p>
-                <div className="mt-8 space-y-4">
-                  <a
-                    href="mailto:hello@aftermediate.site"
-                    className="flex items-center gap-3 text-ink transition-colors hover:text-accent"
-                  >
-                    <div className="grid h-10 w-10 place-items-center border-2 border-ink bg-accent shadow-[2px_2px_0_0_var(--color-ink)]">
-                      <Mail className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs text-faint uppercase">Email us</p>
-                      <p className="text-sm font-semibold">hello@aftermediate.site</p>
-                    </div>
-                  </a>
-                </div>
               </div>
 
               <ContactForm />
@@ -325,7 +311,7 @@ export default function Home() {
         {/* FINAL CTA */}
         <section className="border-t-2 border-ink bg-accent">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-12 text-center sm:px-6 sm:py-20">
-            <Illustration name="compass" scale={4} />
+            <Brand compact className="[&_img]:w-24" />
             <h2 className="max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl uppercase">
               Your marksheet isn&apos;t the end. It&apos;s the start.
             </h2>
