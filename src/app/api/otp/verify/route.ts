@@ -1,7 +1,7 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import { assertServerEnv } from "@/lib/server-env";
 import { jsonError, jsonOk } from "@/lib/api-response";
-import { hashOtpCode } from "@/lib/otp";
+import { hashOtpCode, otpMatches } from "@/lib/otp";
 
 export const runtime = "nodejs";
 
@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     }
 
     // Wrong code?
-    if (record.code_hash !== hashOtpCode(email, code, OTP_SECRET)) {
+    if (!otpMatches(record.code_hash, email, code, OTP_SECRET)) {
       const { error: bumpError } = await admin
         .from("otp_codes")
         .update({ attempts: record.attempts + 1 })

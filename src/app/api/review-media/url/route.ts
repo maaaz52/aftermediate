@@ -1,7 +1,12 @@
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { requireAuth } from "@/lib/http";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
+
+/** Signed URLs are cheap but per-user; a scripted client shouldn't mint thousands. */
+const RATE_MAX = 60;
+const RATE_WINDOW_MS = 60 * 1000;
 
 /**
  * Returns a short-lived signed URL for a review media object, but only when the
@@ -15,6 +20,10 @@ export async function GET(req: Request) {
     const auth = await requireAuth();
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
+
+    if (!checkRateLimit(`review-media-url:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+      return jsonError("Too many requests. Try again in a moment.", 429);
+    }
 
     const url = new URL(req.url);
     const path = url.searchParams.get("path");

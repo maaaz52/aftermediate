@@ -3,12 +3,16 @@ import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { sendEmail } from "@/lib/email";
 import { escapeHtml } from "@/lib/escape-html";
+import { checkRateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
 const MAX_BODY_BYTES = 16 * 1024;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const NOTIFY_TO = "themz52@proton.me";
+/** Per-IP cap so a scripted client cannot flood the team's inbox or the table. */
+const IP_SEND_MAX = 10;
+const IP_WINDOW_MS = 60 * 60 * 1000;
 
 /**
  * Receives the landing-page contact form, stores it in contact_messages, and
@@ -17,6 +21,13 @@ const NOTIFY_TO = "themz52@proton.me";
  */
 export async function POST(req: Request) {
   try {
+    // Vercel overwrites x-forwarded-for at the edge, so the first entry is the
+    // client address, not a header the caller controls.
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (!checkRateLimit(`contact:${ip}`, IP_SEND_MAX, IP_WINDOW_MS)) {
+      return jsonError("Too many messages from this device. Try again later.", 429);
+    }
+
     const supabase = await createClient();
     const {
       data: { user },
@@ -48,10 +59,11 @@ export async function POST(req: Request) {
       return jsonError("Could not save your message.", 500);
     }
 
+    const subjectName = name.slice(0, 40).replace(/[\r\n\t]/g, " ").trim() || "someone";
     const sent = await sendEmail({
       from: "Aftermediate Contact <no-reply@aftermediate.site>",
       to: NOTIFY_TO,
-      subject: `New contact message from ${name}`,
+      subject: `New contact message from ${subjectName}`,
       html: `
         <div style="font-family:Plus Jakarta Sans,system-ui,sans-serif;max-width:560px;margin:0 auto;">
           <p style="color:#566073;font-size:15px;line-height:1.6;">New message from the Aftermediate contact form:</p>
