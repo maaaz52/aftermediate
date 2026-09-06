@@ -1,17 +1,24 @@
 "use client";
 
 import * as React from "react";
-import { Loader2, Send, Sparkles } from "lucide-react";
+import { Download, History, Loader2, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
-import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
+import { SessionSidebar } from "@/components/chat/session-sidebar";
+import {
+  listSessions,
+  createSession,
+  loadSession,
+  saveMessage,
+  type ChatSession,
+} from "@/lib/chat-api";
+import { exportChatAsPDF } from "@/lib/chat-pdf";
+import { useAuth } from "@/lib/auth";
 
-type Msg = ChatMessage;
+type Msg = { role: "user" | "assistant"; content: string };
 
 const GREETING =
   "Salam! I'm Safar (سفر) — your study-abroad assistant. Ask me about visa processes, documents, bank statements, money, tests, scholarships, or any of the 13 destination countries.";
-
-const STORAGE_KEY = "aftermediate:safar-chat";
 
 const SUGGESTIONS = [
   "What documents do I need for a student visa?",
@@ -21,15 +28,28 @@ const SUGGESTIONS = [
   "What tests do I need for Germany?",
 ];
 
+const PERSONA_LABEL = "Safar A.I · سفر";
+
 export function SafarAssistant() {
-  const [messages, setMessages] = useChatHistory(STORAGE_KEY, GREETING);
+  const { user } = useAuth();
+  const [messages, setMessages] = React.useState<Msg[]>([
+    { role: "assistant", content: GREETING },
+  ]);
   const [input, setInput] = React.useState("");
   const [streaming, setStreaming] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [activeSession, setActiveSession] = React.useState<ChatSession | null>(null);
   const bottomRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
+
+  const [hasSessions, setHasSessions] = React.useState(false);
+  React.useEffect(() => {
+    if (!user) return;
+    listSessions("safar").then((s) => setHasSessions(s.length > 0));
+  }, [user]);
 
   async function send(textOverride?: string) {
     const text = (textOverride ?? input).trim();
@@ -39,6 +59,19 @@ export function SafarAssistant() {
     setInput("");
     setStreaming(true);
     setMessages([...next, { role: "assistant", content: "" }]);
+
+    let sessionId = activeSession?.id;
+    if (!sessionId) {
+      try {
+        const session = await createSession("safar", text);
+        setActiveSession(session);
+        sessionId = session.id;
+        setHasSessions(true);
+        await saveMessage(sessionId, "user", text);
+      } catch {
+        // continue streaming even if session creation fails
+      }
+    }
 
     try {
       const res = await fetch("/api/chat", {
@@ -59,6 +92,9 @@ export function SafarAssistant() {
         acc += decoder.decode(value, { stream: true });
         setMessages([...next, { role: "assistant", content: acc }]);
       }
+      if (sessionId && acc) {
+        await saveMessage(sessionId, "assistant", acc);
+      }
     } catch {
       setMessages([
         ...next,
@@ -72,16 +108,49 @@ export function SafarAssistant() {
     }
   }
 
+  async function handleLoadSession(id: string) {
+    const loaded = await loadSession(id);
+    if (loaded) {
+      setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
+      setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+    }
+  }
+
+  function handleNewSession() {
+    setActiveSession(null);
+    setMessages([{ role: "assistant", content: GREETING }]);
+  }
+
   return (
     <div className="card-glass mx-auto flex h-[70vh] max-w-3xl flex-col overflow-hidden rounded-2xl">
       <div className="flex items-center gap-2 border-b border-line px-4 py-3">
         <div className="grid h-8 w-8 place-items-center rounded-lg bg-saffron/10">
           <Sparkles className="h-4 w-4 text-saffron" />
         </div>
-        <div>
-          <p className="text-sm font-bold text-ink">Safar A.I · سفر</p>
+        <div className="flex-1">
+          <p className="text-sm font-bold text-ink">{PERSONA_LABEL}</p>
           <p className="text-[11px] text-muted">Study-abroad assistant · answers from a curated knowledge base</p>
         </div>
+        {user && (
+          <div className="flex items-center gap-1">
+            {messages.length > 1 && (
+              <button
+                onClick={() => exportChatAsPDF(messages, activeSession?.title ?? "Safar chat", PERSONA_LABEL)}
+                className="grid h-8 w-8 place-items-center rounded-lg text-faint transition-colors hover:bg-surface-2 hover:text-ink"
+                title="Save as PDF"
+              >
+                <Download className="h-4 w-4" />
+              </button>
+            )}
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="grid h-8 w-8 place-items-center rounded-lg text-faint transition-colors hover:bg-surface-2 hover:text-ink"
+              title="Chat history"
+            >
+              <History className="h-4 w-4" />
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
@@ -141,6 +210,15 @@ export function SafarAssistant() {
           Safar answers from a curated knowledge base and cites sources. Always double-check on official pages.
         </p>
       </div>
+
+      <SessionSidebar
+        persona="safar"
+        activeSessionId={activeSession?.id ?? null}
+        onSelect={handleLoadSession}
+        onNew={handleNewSession}
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
     </div>
   );
 }
