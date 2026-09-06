@@ -136,3 +136,54 @@ export async function submitFeatureRequest(input: {
   if (error || !data) return { ok: false, error: error?.message ?? "Could not save your idea." };
   return { ok: true, id: data.id };
 }
+
+export interface MyReview {
+  id: string;
+  tone: string;
+  rating: number;
+  review_text: string;
+  status: string;
+  created_at: string;
+  media: { id: string; url: string; media_type: string; file_name: string }[];
+}
+
+/** The signed-in user's own reviews, newest first, each with its media rows. */
+export async function listMyReviews(): Promise<MyReview[]> {
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return [];
+
+  const { data: reviews } = await supabase
+    .from("reviews")
+    .select("id, tone, rating, review_text, status, created_at")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
+  if (!reviews?.length) return [];
+
+  const { data: media } = await supabase
+    .from("review_media")
+    .select("id, review_id, url, media_type, file_name")
+    .in(
+      "review_id",
+      reviews.map((r) => r.id)
+    );
+
+  return (reviews as MyReview[]).map((r) => ({
+    ...r,
+    media: (media ?? []).filter((m) => m.review_id === r.id),
+  }));
+}
+
+/** Resolve a signed URL for review media the caller is allowed to see. */
+export async function reviewMediaSignedUrl(path: string): Promise<string | null> {
+  try {
+    const res = await fetch(`/api/review-media/url?path=${encodeURIComponent(path)}`);
+    if (!res.ok) return null;
+    const data = (await res.json().catch(() => null)) as { url?: string } | null;
+    return data?.url ?? null;
+  } catch {
+    return null;
+  }
+}

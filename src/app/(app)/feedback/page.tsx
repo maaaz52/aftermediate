@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { FeedbackJourney } from "@/components/feedback/feedback-journey";
+import { MyReviews } from "@/components/feedback/my-reviews";
 import { WishlistWall } from "@/components/feedback/wishlist-wall";
 
 export default function FeedbackPage() {
@@ -22,6 +23,8 @@ export default function FeedbackPage() {
       </p>
 
       <FeedbackJourney onFeatureAdded={() => setRefreshKey((k) => k + 1)} />
+
+      <MyReviews refreshKey={refreshKey} />
 
       <div id="wishlist" className="mt-10 scroll-mt-6">
         <WishlistWall refreshKey={refreshKey} />
