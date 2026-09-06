@@ -372,6 +372,19 @@ export interface AbroadTest {
     resources: { label: string; url: string }[];
   };
   sourceUrls: string[];
+  /** Extended fields for detail pages */
+  overview?: string;
+  format?: string;
+  scoring?: string;
+  registrationSteps?: string[];
+  testDay?: string[];
+  resultsTimeline?: string;
+  scoreSending?: string;
+  accommodations?: string;
+  retakePolicy?: string;
+  preparationTimeline?: string;
+  commonMistakes?: string[];
+  countryRequirements?: { country: string; minScore: string; notes: string }[];
 }
 
 export type { WatchlistEntry } from "./watchlist";

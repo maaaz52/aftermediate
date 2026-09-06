@@ -6,12 +6,42 @@
       "name": "IELTS Academic",
       "short": "IELTS",
       "kind": "english",
-      "countries": ["uk", "usa", "germany", "netherlands", "ireland", "south-korea", "italy", "turkey", "china", "austria", "indonesia", "lithuania", "hungary"],
+      "countries": [
+        "uk",
+        "usa",
+        "germany",
+        "netherlands",
+        "ireland",
+        "south-korea",
+        "italy",
+        "turkey",
+        "china",
+        "austria",
+        "indonesia",
+        "lithuania",
+        "hungary"
+      ],
       "pattern": [
-        { "section": "Listening", "content": "4 recordings, 40 questions", "duration": "30 min" },
-        { "section": "Reading", "content": "3 passages, 40 questions", "duration": "60 min" },
-        { "section": "Writing", "content": "Task 1 (graph) + Task 2 (essay)", "duration": "60 min" },
-        { "section": "Speaking", "content": "Face-to-face interview, 3 parts", "duration": "11–14 min" }
+        {
+          "section": "Listening",
+          "content": "4 recordings, 40 questions",
+          "duration": "30 min"
+        },
+        {
+          "section": "Reading",
+          "content": "3 passages, 40 questions",
+          "duration": "60 min"
+        },
+        {
+          "section": "Writing",
+          "content": "Task 1 (graph) + Task 2 (essay)",
+          "duration": "60 min"
+        },
+        {
+          "section": "Speaking",
+          "content": "Face-to-face interview, 3 parts",
+          "duration": "11–14 min"
+        }
       ],
       "feePkr": 59000,
       "feeNote": "Varies by centre; PKR 59,000 typical in Pakistan in 2026",
@@ -26,23 +56,117 @@
           "Write timed essays and get feedback from teachers"
         ],
         "resources": [
-          { "label": "British Council IELTS Prep", "url": "https://www.britishcouncil.org/exam/ielts/prepare" },
-          { "label": "IELTS.org Official Practice", "url": "https://www.ielts.org/about-ielts/how-to-prepare" }
+          {
+            "label": "British Council IELTS Prep",
+            "url": "https://www.britishcouncil.org/exam/ielts/prepare"
+          },
+          {
+            "label": "IELTS.org Official Practice",
+            "url": "https://www.ielts.org/about-ielts/how-to-prepare"
+          }
         ]
       },
-      "sourceUrls": ["https://www.ielts.org/", "https://www.britishcouncil.org/exam/ielts"]
+      "sourceUrls": [
+        "https://www.ielts.org/",
+        "https://www.britishcouncil.org/exam/ielts"
+      ],
+      "overview": "IELTS (International English Language Testing System) is the world's most popular English language proficiency test for higher education and migration. It is jointly managed by the British Council, IDP: IELTS Australia, and Cambridge Assessment English. Available in Academic and General Training modules, it uses a 9-band scoring system.",
+      "format": "Four sections: Listening (30 min + 10 min transfer), Reading (60 min), Writing (60 min, 2 tasks), Speaking (11-14 min, face-to-face interview). Available in Computer-delivered (results in 3-5 days) and Paper-based (results in 13 days) formats.",
+      "scoring": "9-band scale (0-9). Each section gets a band score; overall is average of all four, rounded to nearest 0.5. Band 9 = Expert User, Band 6 = Competent User.",
+      "registrationSteps": [
+        "Create account on British Council (britishcouncil.pk) or IDP (ielts.idp.com) or AEO",
+        "Choose test type: Academic or General Training",
+        "Select format: Computer-delivered or Paper-based",
+        "Choose city and test date",
+        "Upload passport photo and copy",
+        "Pay test fee (PKR 75,600-76,240 for computer; varies by city)",
+        "Receive confirmation email 5-7 days before test"
+      ],
+      "testDay": [
+        "Bring valid passport or CNIC used during registration",
+        "Arrive at least 30 minutes before scheduled time",
+        "Listening, Reading, Writing completed same day (no break)",
+        "Speaking may be on same day or within 7 days (for paper-based)",
+        "Computer-delivered Speaking is usually same day at different time"
+      ],
+      "resultsTimeline": "Computer-delivered: 3-5 business days. Paper-based: 13 calendar days.",
+      "scoreSending": "One TRF (Test Report Form) included. Additional TRFs cost extra. Electronic delivery available to 5 institutions.",
+      "accommodations": "Special arrangements available for candidates with disabilities (visual, hearing, or physical). Must request during registration with supporting medical documentation.",
+      "retakePolicy": "Can retake as many times as needed. No waiting period between attempts.",
+      "preparationTimeline": "Recommended 4-8 weeks of focused preparation. Daily practice of all four skills recommended.",
+      "commonMistakes": [
+        "Booking Academic when you need UKVI (for UK visa applicants)",
+        "Not matching registration document to what you bring on test day",
+        "Booking paper-based when deadline is close (results take 13 days)",
+        "Ignoring the Speaking test date (may be separate for paper-based)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "uk",
+          "minScore": "5.5-7.0",
+          "notes": "Depends on course level; UKVI version required for visa"
+        },
+        {
+          "country": "usa",
+          "minScore": "6.0-7.0",
+          "notes": "Most universities accept IELTS; 6.0 minimum common"
+        },
+        {
+          "country": "canada",
+          "minScore": "6.0-7.5",
+          "notes": "CLB 7 (IELTS 6.0) minimum for Express Entry"
+        },
+        {
+          "country": "australia",
+          "minScore": "6.0-7.0",
+          "notes": "Skilled migration: 6.0 minimum, 7.0+ for max points"
+        },
+        {
+          "country": "germany",
+          "minScore": "6.0-6.5",
+          "notes": "Many English-taught programs require IELTS"
+        }
+      ]
     },
     {
       "id": "toefl",
       "name": "TOEFL iBT",
       "short": "TOEFL",
       "kind": "english",
-      "countries": ["usa", "uk", "germany", "south-korea", "italy", "netherlands", "ireland", "china", "turkey", "lithuania", "hungary"],
+      "countries": [
+        "usa",
+        "uk",
+        "germany",
+        "south-korea",
+        "italy",
+        "netherlands",
+        "ireland",
+        "china",
+        "turkey",
+        "lithuania",
+        "hungary"
+      ],
       "pattern": [
-        { "section": "Reading", "content": "3–4 passages, 30–40 questions", "duration": "54–72 min" },
-        { "section": "Listening", "content": "3–4 lectures + 2–3 conversations", "duration": "41–57 min" },
-        { "section": "Speaking", "content": "4 tasks (integrated reading/listening/speaking)", "duration": "17 min" },
-        { "section": "Writing", "content": "1 integrated task + 1 independent essay", "duration": "50 min" }
+        {
+          "section": "Reading",
+          "content": "3–4 passages, 30–40 questions",
+          "duration": "54–72 min"
+        },
+        {
+          "section": "Listening",
+          "content": "3–4 lectures + 2–3 conversations",
+          "duration": "41–57 min"
+        },
+        {
+          "section": "Speaking",
+          "content": "4 tasks (integrated reading/listening/speaking)",
+          "duration": "17 min"
+        },
+        {
+          "section": "Writing",
+          "content": "1 integrated task + 1 independent essay",
+          "duration": "50 min"
+        }
       ],
       "feePkr": 62000,
       "feeNote": "Approximately PKR 62,000 in Pakistan in 2026",
@@ -57,22 +181,97 @@
           "Build academic vocabulary with word lists"
         ],
         "resources": [
-          { "label": "ETS TOEFL Prep", "url": "https://www.ets.org/toefl/test-takers/prepare.html" },
-          { "label": "TOEFL Go App", "url": "https://www.ets.org/toefl/test-takers/prepare/toefl-go.html" }
+          {
+            "label": "ETS TOEFL Prep",
+            "url": "https://www.ets.org/toefl/test-takers/prepare.html"
+          },
+          {
+            "label": "TOEFL Go App",
+            "url": "https://www.ets.org/toefl/test-takers/prepare/toefl-go.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.ets.org/toefl"]
+      "sourceUrls": [
+        "https://www.ets.org/toefl"
+      ],
+      "overview": "TOEFL iBT (Test of English as a Foreign Language, internet-Based Testing) is developed by ETS and measures academic English skills across reading, listening, speaking, and writing. As of January 2026, TOEFL uses a new adaptive format with a 1-6 scoring scale aligned to CEFR.",
+      "format": "Adaptive test with four sections: Reading, Listening, Speaking, Writing. Total test time approximately 2 hours. Reading and Listening are two-stage adaptive. Speaking and Writing use AI scoring with human verification.",
+      "scoring": "New 1-6 scale (half-point increments) aligned to CEFR, effective January 2026. For a 2-year transition period, also reports 0-120 comparable score. Section scores: Reading, Listening, Speaking, Writing each on 1-6 scale.",
+      "registrationSteps": [
+        "Create ETS account at ets.org/toefl",
+        "Select test type: TOEFL iBT at test center or Home Edition",
+        "Choose test date and location",
+        "Pay registration fee (USD 200-250, varies by country)",
+        "Receive confirmation with test details"
+      ],
+      "testDay": [
+        "Bring valid passport with matching name",
+        "Arrive 30 minutes early at test center",
+        "Test takes approximately 2 hours total",
+        "Unofficial scores for Reading and Listening available immediately",
+        "Official scores available in 8-10 business days"
+      ],
+      "resultsTimeline": "8-10 business days for official scores. Unofficial Reading/Listening scores available immediately after test.",
+      "scoreSending": "4 free score reports included. Additional reports: USD 29 each. Can select recipients before or after test.",
+      "accommodations": "Extensive disability accommodations available. Must submit request with documentation before registration deadline.",
+      "retakePolicy": "Can retake with no waiting period between attempts. Maximum 1 attempt per 3-day period.",
+      "preparationTimeline": "Recommended 2-3 months of preparation. Official ETS prep materials highly recommended.",
+      "commonMistakes": [
+        "Confusing old 0-120 scale with new 1-6 scale (both appear on score report)",
+        "Not practicing with official TOEFL prep materials",
+        "Underestimating the adaptive nature of Reading and Listening",
+        "Forgetting to select score recipients during registration"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "3.5-4.0",
+          "notes": "Most universities require 3.5+ (old 80+)"
+        },
+        {
+          "country": "uk",
+          "minScore": "4.0-4.5",
+          "notes": "Accepted for university admission; UKVI version for visa"
+        },
+        {
+          "country": "canada",
+          "minScore": "3.5-4.0",
+          "notes": "Widely accepted for university admission"
+        },
+        {
+          "country": "australia",
+          "minScore": "3.5-4.0",
+          "notes": "Accepted by most universities"
+        }
+      ]
     },
     {
       "id": "pte",
       "name": "PTE Academic",
       "short": "PTE",
       "kind": "english",
-      "countries": ["uk", "usa", "germany", "ireland"],
+      "countries": [
+        "uk",
+        "usa",
+        "germany",
+        "ireland"
+      ],
       "pattern": [
-        { "section": "Speaking & Writing", "content": "Read aloud, repeat sentence, essay, summarize", "duration": "54–67 min" },
-        { "section": "Reading", "content": "Fill in blanks, reorder paragraphs, multiple choice", "duration": "29–30 min" },
-        { "section": "Listening", "content": "Summarize spoken text, fill in blanks, highlight correct summary", "duration": "30–43 min" }
+        {
+          "section": "Speaking & Writing",
+          "content": "Read aloud, repeat sentence, essay, summarize",
+          "duration": "54–67 min"
+        },
+        {
+          "section": "Reading",
+          "content": "Fill in blanks, reorder paragraphs, multiple choice",
+          "duration": "29–30 min"
+        },
+        {
+          "section": "Listening",
+          "content": "Summarize spoken text, fill in blanks, highlight correct summary",
+          "duration": "30–43 min"
+        }
       ],
       "feePkr": 48000,
       "feeNote": "Approximately PKR 48,000 in Pakistan in 2026",
@@ -87,22 +286,96 @@
           "Review academic vocabulary and collocations"
         ],
         "resources": [
-          { "label": "PTE Official Practice", "url": "https://www.pearsonpte.com/preparation" },
-          { "label": "PTE Study App", "url": "https://www.pearsonpte.com/test-takers/prepare" }
+          {
+            "label": "PTE Official Practice",
+            "url": "https://www.pearsonpte.com/preparation"
+          },
+          {
+            "label": "PTE Study App",
+            "url": "https://www.pearsonpte.com/test-takers/prepare"
+          }
         ]
       },
-      "sourceUrls": ["https://www.pearsonpte.com/"]
+      "sourceUrls": [
+        "https://www.pearsonpte.com/"
+      ],
+      "overview": "PTE Academic (Pearson Test of English) is a fully computer-based English proficiency test that uses AI scoring for faster, more objective results. It is accepted by thousands of universities worldwide and for Australian and UK visa purposes.",
+      "format": "Three parts: Speaking & Writing (combined, 54-67 min), Reading (29-30 min), Listening (30-43 min). Total test time approximately 2 hours. Fully computer-based with AI scoring.",
+      "scoring": "Global Scale of English (10-90). Overall score based on performance across entire test. Communicative skills scores: Listening, Reading, Speaking, Writing each 10-90.",
+      "registrationSteps": [
+        "Create account at pearsonpte.com",
+        "Choose test center or online option",
+        "Select test date",
+        "Pay fee (PKR 62,000 for Academic, PKR 66,300 for Online)",
+        "Receive booking confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive 30 minutes before test",
+        "Test lasts approximately 2 hours",
+        "Single session with no scheduled breaks",
+        "All sections completed on computer"
+      ],
+      "resultsTimeline": "Typically within 48 hours (2 days). One of the fastest score turnarounds.",
+      "scoreSending": "Score reports sent electronically to institutions. Can send to unlimited institutions at no extra cost.",
+      "accommodations": "Available for test takers with documented disabilities. Request must be made during booking.",
+      "retakePolicy": "Can retake after receiving results. No waiting period between attempts.",
+      "preparationTimeline": "Recommended 4-6 weeks. Familiarity with computer-based testing is important.",
+      "commonMistakes": [
+        "Not practicing typing speed for Writing section",
+        "Underestimating the integrated nature of tasks (multiple skills per question)",
+        "Ignoring the Speaking section (recorded via microphone, not face-to-face)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "australia",
+          "minScore": "50-65",
+          "notes": "Standard for student visa; varies by course level"
+        },
+        {
+          "country": "uk",
+          "minScore": "51-67",
+          "notes": "UKVI version required for visa; academic for admission"
+        },
+        {
+          "country": "usa",
+          "minScore": "55-65",
+          "notes": "Growing acceptance among US universities"
+        }
+      ]
     },
     {
       "id": "duolingo",
       "name": "Duolingo English Test",
       "short": "Duolingo",
       "kind": "english",
-      "countries": ["usa", "uk", "germany", "ireland", "netherlands", "south-korea", "italy", "turkey", "china"],
+      "countries": [
+        "usa",
+        "uk",
+        "germany",
+        "ireland",
+        "netherlands",
+        "south-korea",
+        "italy",
+        "turkey",
+        "china"
+      ],
       "pattern": [
-        { "section": "Adaptive Test", "content": "Reading, writing, listening, speaking questions", "duration": "45 min" },
-        { "section": "Video Interview", "content": "Record spoken responses to open-ended prompts", "duration": "5 min" },
-        { "section": "Writing Sample", "content": "Write about a given topic", "duration": "5 min" }
+        {
+          "section": "Adaptive Test",
+          "content": "Reading, writing, listening, speaking questions",
+          "duration": "45 min"
+        },
+        {
+          "section": "Video Interview",
+          "content": "Record spoken responses to open-ended prompts",
+          "duration": "5 min"
+        },
+        {
+          "section": "Writing Sample",
+          "content": "Write about a given topic",
+          "duration": "5 min"
+        }
       ],
       "feePkr": 22000,
       "feeNote": "Approximately PKR 22,000; taken online from home",
@@ -117,21 +390,98 @@
           "Write structured paragraphs with clear topic sentences"
         ],
         "resources": [
-          { "label": "Duolingo Test Prep", "url": "https://englishtest.duolingo.com/preparation" },
-          { "label": "Duolingo Test Guide", "url": "https://englishtest.duolingo.com/guide" }
+          {
+            "label": "Duolingo Test Prep",
+            "url": "https://englishtest.duolingo.com/preparation"
+          },
+          {
+            "label": "Duolingo Test Guide",
+            "url": "https://englishtest.duolingo.com/guide"
+          }
         ]
       },
-      "sourceUrls": ["https://englishtest.duolingo.com/"]
+      "sourceUrls": [
+        "https://englishtest.duolingo.com/"
+      ],
+      "overview": "The Duolingo English Test (DET) is an affordable, convenient English proficiency test that can be taken from home at any time. It is accepted by over 5,000 universities worldwide including Yale, Stanford, and MIT.",
+      "format": "Three sections: Introduction & Setup (5 min), Adaptive Test (45 min), Video Interview + Writing Sample (10 min). Total approximately 60 minutes. Fully online, adaptive, taken from home.",
+      "scoring": "Scale of 10-160 (in steps of 5). Four subscores: Literacy, Comprehension, Conversation, Production. CEFR aligned: 125+ = C1, 110-120 = B2+.",
+      "registrationSteps": [
+        "Go to englishtest.duolingo.com",
+        "Create an account",
+        "Pay test fee (USD 65-70)",
+        "Download Duolingo test app",
+        "Complete system check and ID verification",
+        "Take test when ready (available 24/7)"
+      ],
+      "testDay": [
+        "Use a computer with camera and microphone",
+        "Ensure stable internet connection",
+        "Have valid passport ready for ID verification",
+        "Quiet, well-lit room required",
+        "Test taken entirely from home"
+      ],
+      "resultsTimeline": "Within 48 hours (2 days). One of the fastest results.",
+      "scoreSending": "Free and unlimited score sending to any institution. No per-report fee.",
+      "accommodations": "Limited formal accommodation process. Contact support for special needs.",
+      "retakePolicy": "Maximum 3 attempts in 30 days. Must wait for results before retaking.",
+      "preparationTimeline": "Recommended 2-4 weeks. Free practice test available on official website.",
+      "commonMistakes": [
+        "Not having a stable internet connection (test can be invalidated)",
+        "Using a tablet or phone instead of a computer/laptop",
+        "Ignoring the video interview section (unscored but sent to universities)",
+        "Not checking university acceptance before booking DET over IELTS/TOEFL"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "115-130",
+          "notes": "5000+ US universities accept; top schools need 120+"
+        },
+        {
+          "country": "uk",
+          "minScore": "110-120",
+          "notes": "Limited UK acceptance; UKVI does not recognize DET"
+        },
+        {
+          "country": "canada",
+          "minScore": "115-120",
+          "notes": "Growing acceptance; check specific universities"
+        },
+        {
+          "country": "australia",
+          "minScore": "105-115",
+          "notes": "Some universities accept; not universal"
+        }
+      ]
     },
     {
       "id": "sat",
       "name": "SAT",
       "short": "SAT",
       "kind": "aptitude",
-      "countries": ["usa", "uk", "germany", "netherlands", "south-korea", "ireland", "china", "turkey", "italy"],
+      "countries": [
+        "usa",
+        "uk",
+        "germany",
+        "netherlands",
+        "south-korea",
+        "ireland",
+        "china",
+        "turkey",
+        "italy"
+      ],
       "pattern": [
-        { "section": "Evidence-Based Reading & Writing", "content": "52 reading questions + 44 writing questions", "duration": "64 min" },
-        { "section": "Math", "content": "58 questions (calculator + no-calculator)", "duration": "80 min" }
+        {
+          "section": "Evidence-Based Reading & Writing",
+          "content": "52 reading questions + 44 writing questions",
+          "duration": "64 min"
+        },
+        {
+          "section": "Math",
+          "content": "58 questions (calculator + no-calculator)",
+          "duration": "80 min"
+        }
       ],
       "feePkr": 50000,
       "feeNote": "Approximately PKR 50,000 for international test-takers",
@@ -146,23 +496,94 @@
           "Read challenging non-fiction texts regularly"
         ],
         "resources": [
-          { "label": "Khan Academy SAT Prep", "url": "https://www.khanacademy.org/SAT" },
-          { "label": "College Board SAT Practice", "url": "https://satsuite.collegeboard.org/sat/preparation" }
+          {
+            "label": "Khan Academy SAT Prep",
+            "url": "https://www.khanacademy.org/SAT"
+          },
+          {
+            "label": "College Board SAT Practice",
+            "url": "https://satsuite.collegeboard.org/sat/preparation"
+          }
         ]
       },
-      "sourceUrls": ["https://satsuite.collegeboard.org/"]
+      "sourceUrls": [
+        "https://satsuite.collegeboard.org/"
+      ],
+      "overview": "The SAT is a standardized test for college admissions in the United States, administered by College Board. Since 2024, it is fully digital, adaptive, and shorter. It tests reading/writing and math skills.",
+      "format": "Two main sections: Reading and Writing (2 modules, 64 min total), Math (2 modules, 70 min total). 10-minute break between sections. Second module in each section adapts based on first module performance. Total test time: 2 hours 14 minutes.",
+      "scoring": "Score range 400-1600. Each section scored 200-800. Total is sum of both section scores.",
+      "registrationSteps": [
+        "Create College Board account at collegeboard.org",
+        "Choose test date from available dates",
+        "Select test center (Lahore, Karachi, Islamabad, Rawalpindi)",
+        "Upload photo meeting requirements",
+        "Pay fee (USD 68 + USD 43 international = USD 111 total)",
+        "Download and install Bluebook testing app",
+        "Test device setup before test day"
+      ],
+      "testDay": [
+        "Bring admission ticket and valid ID",
+        "Bring approved device with Bluebook installed",
+        "Arrive at test center on time",
+        "Test takes approximately 2 hours 14 minutes",
+        "Built-in calculator available for entire Math section"
+      ],
+      "resultsTimeline": "Approximately 13 days after test date.",
+      "scoreSending": "First 4 score reports free if ordered within 9 days. Additional reports: USD 15 each.",
+      "accommodations": "College Board provides accommodations for students with documented disabilities. Must apply in advance.",
+      "retakePolicy": "Can retake as many times as desired. Superscoring policy: highest section scores across attempts are combined.",
+      "preparationTimeline": "Recommended 2-3 months. Free official practice tests available through Khan Academy.",
+      "commonMistakes": [
+        "Not downloading and testing Bluebook app before test day",
+        "Not having an approved device ready",
+        "Booking test too close to application deadline (scores take 13 days)",
+        "Not using the built-in calculator (saves time on Math section)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "1000-1200",
+          "notes": "Test-optional at many schools; 1200+ for competitive admission"
+        },
+        {
+          "country": "pakistan",
+          "minScore": "Varies",
+          "notes": "Used for local university admissions and US applications"
+        }
+      ]
     },
     {
       "id": "act",
       "name": "ACT",
       "short": "ACT",
       "kind": "aptitude",
-      "countries": ["usa", "uk", "south-korea", "china"],
+      "countries": [
+        "usa",
+        "uk",
+        "south-korea",
+        "china"
+      ],
       "pattern": [
-        { "section": "English", "content": "75 grammar and rhetoric questions", "duration": "45 min" },
-        { "section": "Math", "content": "60 questions (calculator allowed)", "duration": "60 min" },
-        { "section": "Reading", "content": "4 passages, 40 questions", "duration": "35 min" },
-        { "section": "Science", "content": "6 passages, 40 questions", "duration": "35 min" }
+        {
+          "section": "English",
+          "content": "75 grammar and rhetoric questions",
+          "duration": "45 min"
+        },
+        {
+          "section": "Math",
+          "content": "60 questions (calculator allowed)",
+          "duration": "60 min"
+        },
+        {
+          "section": "Reading",
+          "content": "4 passages, 40 questions",
+          "duration": "35 min"
+        },
+        {
+          "section": "Science",
+          "content": "6 passages, 40 questions",
+          "duration": "35 min"
+        }
       ],
       "feePkr": 48000,
       "feeNote": "Approximately PKR 48,000 for international test-takers",
@@ -177,22 +598,85 @@
           "Review algebra and geometry fundamentals"
         ],
         "resources": [
-          { "label": "ACT Official Prep", "url": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html" },
-          { "label": "ACT Academy", "url": "https://www.act.org/content/act/en/products-and-services/act-academy.html" }
+          {
+            "label": "ACT Official Prep",
+            "url": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html"
+          },
+          {
+            "label": "ACT Academy",
+            "url": "https://www.act.org/content/act/en/products-and-services/act-academy.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.act.org/"]
+      "sourceUrls": [
+        "https://www.act.org/"
+      ],
+      "overview": "The ACT is a standardized test for college admissions in the United States, covering English, Math, Reading, and Science. It is an alternative to the SAT.",
+      "format": "Four required sections: English (45 min, 75 questions), Math (60 min, 60 questions), Reading (35 min, 40 questions), Science (35 min, 40 questions). Optional Writing test (40 min, 1 essay). Total: 2 hours 55 min (without Writing) or 3 hours 35 min (with Writing).",
+      "scoring": "Score range 1-36 for each section. Composite score is average of four section scores, rounded to nearest whole number.",
+      "registrationSteps": [
+        "Create ACT account at act.org",
+        "Choose test date",
+        "Select test center",
+        "Pay fee (approximately USD 68 without Writing, USD 93 with Writing)",
+        "International students pay additional USD 68 surcharge"
+      ],
+      "testDay": [
+        "Bring admission ticket and valid photo ID",
+        "Arrive early",
+        "Test takes approximately 3-3.5 hours",
+        "Calculator permitted on Math section (check approved list)"
+      ],
+      "resultsTimeline": "Approximately 2-8 weeks after test date.",
+      "scoreSending": "Up to 4 free score reports. Additional reports: USD 18 each.",
+      "accommodations": "Available for students with documented disabilities. Must apply in advance.",
+      "retakePolicy": "Can retake multiple times. ACT superscores across attempts.",
+      "preparationTimeline": "Recommended 2-3 months of preparation.",
+      "commonMistakes": [
+        "Not practicing time management (sections are timed tightly)",
+        "Ignoring the Science section (it's more about data interpretation than science knowledge)",
+        "Not using the calculator effectively on Math section"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "20-30",
+          "notes": "Average score around 20; competitive schools need 30+"
+        }
+      ]
     },
     {
       "id": "gre",
       "name": "GRE General Test",
       "short": "GRE",
       "kind": "graduate",
-      "countries": ["usa", "uk", "germany", "netherlands", "south-korea", "italy", "ireland", "china", "turkey"],
+      "countries": [
+        "usa",
+        "uk",
+        "germany",
+        "netherlands",
+        "south-korea",
+        "italy",
+        "ireland",
+        "china",
+        "turkey"
+      ],
       "pattern": [
-        { "section": "Analytical Writing", "content": "1 Issue task + 1 Argument task", "duration": "60 min" },
-        { "section": "Verbal Reasoning", "content": "2 sections, 27 questions each", "duration": "41 min per section" },
-        { "section": "Quantitative Reasoning", "content": "2 sections, 27 questions each", "duration": "47 min per section" }
+        {
+          "section": "Analytical Writing",
+          "content": "1 Issue task + 1 Argument task",
+          "duration": "60 min"
+        },
+        {
+          "section": "Verbal Reasoning",
+          "content": "2 sections, 27 questions each",
+          "duration": "41 min per section"
+        },
+        {
+          "section": "Quantitative Reasoning",
+          "content": "2 sections, 27 questions each",
+          "duration": "47 min per section"
+        }
       ],
       "feePkr": 65000,
       "feeNote": "Approximately PKR 65,000 for international test-takers",
@@ -207,22 +691,91 @@
           "Write timed analytical essays and get peer feedback"
         ],
         "resources": [
-          { "label": "ETS GRE Prep", "url": "https://www.ets.org/gre/test-takers/prepare.html" },
-          { "label": "PowerPrep Online", "url": "https://www.ets.org/gre/test-takers/prepare/powerprep-online.html" }
+          {
+            "label": "ETS GRE Prep",
+            "url": "https://www.ets.org/gre/test-takers/prepare.html"
+          },
+          {
+            "label": "PowerPrep Online",
+            "url": "https://www.ets.org/gre/test-takers/prepare/powerprep-online.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.ets.org/gre"]
+      "sourceUrls": [
+        "https://www.ets.org/gre"
+      ],
+      "overview": "The GRE General Test is a standardized test for graduate school admissions, administered by ETS. It measures verbal reasoning, quantitative reasoning, and analytical writing skills.",
+      "format": "Three sections: Analytical Writing (1 task, 30 min), Verbal Reasoning (2 sections, 27 questions total, 41 min total), Quantitative Reasoning (2 sections, 27 questions total, 47 min total). Total: 1 hour 58 minutes. No experimental section.",
+      "scoring": "Verbal Reasoning: 130-170 (1-point increments). Quantitative Reasoning: 130-170 (1-point increments). Analytical Writing: 0-6 (half-point increments). Combined V+Q: 260-340.",
+      "registrationSteps": [
+        "Create ETS account at ets.org/gre",
+        "Choose test date (available year-round)",
+        "Select test center (Karachi, Lahore, Islamabad) or Home Edition",
+        "Pay fee (USD 220; increases to USD 249 from August 2026)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport (required for Pakistan)",
+        "Arrive 30 minutes early",
+        "Test takes approximately 2 hours",
+        "Verbal and Quantitative scores available immediately after test",
+        "AWA scores available in 10-15 days"
+      ],
+      "resultsTimeline": "Unofficial V+Q scores immediately. Official scores including AWA: 10-15 business days.",
+      "scoreSending": "4 free score reports. Additional reports: USD 40 each.",
+      "accommodations": "Available for test takers with documented disabilities. Request through ETS.",
+      "retakePolicy": "Once every 21 days, up to 5 times in any rolling 12-month period.",
+      "preparationTimeline": "Recommended 2-3 months of focused preparation. ETS official prep materials highly recommended.",
+      "commonMistakes": [
+        "Ignoring the AWA section (universities do look at it; aim for 4.0+)",
+        "Not practicing with official ETS materials",
+        "Taking the test without a passport (only passport accepted in Pakistan)",
+        "Not selecting score recipients during the test (free reports expire)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "300+ (V+Q)",
+          "notes": "310+ competitive; 320+ for top programs"
+        },
+        {
+          "country": "uk",
+          "minScore": "Varies",
+          "notes": "Many UK programs accept GRE in place of GMAT"
+        }
+      ]
     },
     {
       "id": "gmat",
       "name": "GMAT Focus Edition",
       "short": "GMAT",
       "kind": "graduate",
-      "countries": ["usa", "uk", "germany", "netherlands", "south-korea", "italy", "ireland", "china"],
+      "countries": [
+        "usa",
+        "uk",
+        "germany",
+        "netherlands",
+        "south-korea",
+        "italy",
+        "ireland",
+        "china"
+      ],
       "pattern": [
-        { "section": "Quantitative Reasoning", "content": "21 problem-solving questions", "duration": "45 min" },
-        { "section": "Verbal Reasoning", "content": "23 reading comprehension + critical reasoning questions", "duration": "45 min" },
-        { "section": "Data Insights", "content": "20 data interpretation questions", "duration": "45 min" }
+        {
+          "section": "Quantitative Reasoning",
+          "content": "21 problem-solving questions",
+          "duration": "45 min"
+        },
+        {
+          "section": "Verbal Reasoning",
+          "content": "23 reading comprehension + critical reasoning questions",
+          "duration": "45 min"
+        },
+        {
+          "section": "Data Insights",
+          "content": "20 data interpretation questions",
+          "duration": "45 min"
+        }
       ],
       "feePkr": 68000,
       "feeNote": "Approximately PKR 68,000 for international test-takers",
@@ -237,23 +790,85 @@
           "Review grammar rules for sentence correction"
         ],
         "resources": [
-          { "label": "GMAT Official Prep", "url": "https://www.mba.com/exams/gmat/prepare" },
-          { "label": "GMAT Club Practice", "url": "https://gmatclub.com/" }
+          {
+            "label": "GMAT Official Prep",
+            "url": "https://www.mba.com/exams/gmat/prepare"
+          },
+          {
+            "label": "GMAT Club Practice",
+            "url": "https://gmatclub.com/"
+          }
         ]
       },
-      "sourceUrls": ["https://www.mba.com/exams/gmat"]
+      "sourceUrls": [
+        "https://www.mba.com/exams/gmat"
+      ],
+      "overview": "The GMAT Focus Edition is the current version of the GMAT, designed for business school admissions. Launched in late 2023, it features three equally weighted sections and a shorter format.",
+      "format": "Three sections: Quantitative Reasoning (45 min, 21 questions), Verbal Reasoning (45 min, 23 questions), Data Insights (45 min, 20 questions). Total: 2 hours 15 minutes. Sections can be taken in any order. Question Review & Edit feature allows reviewing and editing up to 3 answers per section.",
+      "scoring": "Total score: 205-805 (10-point increments). Section scores: 60-90 each. All three sections equally weighted.",
+      "registrationSteps": [
+        "Create account at mba.com",
+        "Choose test center or online option",
+        "Select test date",
+        "Pay fee (USD 275 at test center, USD 300 online)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center or prepare home setup for online",
+        "Test takes 2 hours 15 minutes",
+        "Can choose section order",
+        "Score available immediately after accepting results"
+      ],
+      "resultsTimeline": "Immediately available after test. Official score report available within a few days.",
+      "scoreSending": "Up to 5 free score reports. Additional reports: USD 35 each.",
+      "accommodations": "Available for test takers with documented disabilities. Request through GMAC.",
+      "retakePolicy": "Maximum 5 times in a rolling 12-month period. 8 lifetime attempts.",
+      "preparationTimeline": "Recommended 2-4 months of preparation. Focus on Data Insights section which is unique to GMAT.",
+      "commonMistakes": [
+        "Not practicing the Data Insights section (unique to GMAT Focus)",
+        "Ignoring the Question Review & Edit feature (can change up to 3 answers)",
+        "Not choosing section order strategically",
+        "Confusing old GMAT (200-800) with new Focus (205-805) scoring"
+      ],
+      "countryRequirements": [
+        {
+          "country": "usa",
+          "minScore": "600-700",
+          "notes": "Top MBA programs typically need 700+"
+        }
+      ]
     },
     {
       "id": "testdaf",
       "name": "TestDaF",
       "short": "TestDaF",
       "kind": "language",
-      "countries": ["germany", "austria"],
+      "countries": [
+        "germany",
+        "austria"
+      ],
       "pattern": [
-        { "section": "Lesen (Reading)", "content": "3 reading tasks with comprehension questions", "duration": "65 min" },
-        { "section": "Hören (Listening)", "content": "3 listening tasks with note-taking", "duration": "40 min" },
-        { "section": "Schreiben (Writing)", "content": "1 academic writing task", "duration": "60 min" },
-        { "section": "Sprechen (Speaking)", "content": "3 oral tasks recorded at a computer", "duration": "30 min" }
+        {
+          "section": "Lesen (Reading)",
+          "content": "3 reading tasks with comprehension questions",
+          "duration": "65 min"
+        },
+        {
+          "section": "Hören (Listening)",
+          "content": "3 listening tasks with note-taking",
+          "duration": "40 min"
+        },
+        {
+          "section": "Schreiben (Writing)",
+          "content": "1 academic writing task",
+          "duration": "60 min"
+        },
+        {
+          "section": "Sprechen (Speaking)",
+          "content": "3 oral tasks recorded at a computer",
+          "duration": "30 min"
+        }
       ],
       "feePkr": 35000,
       "feeNote": "Approximately PKR 35,000; administered at Goethe-Institut Pakistan",
@@ -268,23 +883,83 @@
           "Attend Goethe-Institut preparatory courses"
         ],
         "resources": [
-          { "label": "TestDaF Official Prep", "url": "https://www.testdaf.de/en/preparation/" },
-          { "label": "Goethe-Institut Courses", "url": "https://www.goethe.de/en/spr/kur.html" }
+          {
+            "label": "TestDaF Official Prep",
+            "url": "https://www.testdaf.de/en/preparation/"
+          },
+          {
+            "label": "Goethe-Institut Courses",
+            "url": "https://www.goethe.de/en/spr/kur.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.testdaf.de/"]
+      "sourceUrls": [
+        "https://www.testdaf.de/"
+      ],
+      "overview": "TestDaF (Test Deutsch als Fremdsprache) is a standardized German language test for university admission in Germany. It assesses B2-C1 level German proficiency across four skills.",
+      "format": "Four sections: Reading (60 min), Listening (40 min), Writing (60 min), Speaking (7 tasks). Each section scored on TDN levels 3-5.",
+      "scoring": "Three TestDaF levels: TDN 3, TDN 4, TDN 5. Each section scored separately on 0-20 point scale. TDN 4 in all four sections = C1 level, sufficient for most German universities.",
+      "registrationSteps": [
+        "Register at testdaf.de",
+        "Choose test date (6 fixed dates per year)",
+        "Select test center (Goethe-Institut in Pakistan)",
+        "Pay fee (approximately PKR 15,000-20,000)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport and registration confirmation",
+        "Arrive at Goethe-Institut early",
+        "Test takes approximately 4-5 hours total",
+        "All four sections completed on same day"
+      ],
+      "resultsTimeline": "Approximately 4-6 weeks after test date.",
+      "scoreSending": "Results sent to test center. Can request additional score reports.",
+      "accommodations": "Available for candidates with disabilities. Must inform test center in advance.",
+      "retakePolicy": "Can retake as many times as needed.",
+      "preparationTimeline": "Recommended B2+ level before taking. 6-12 months of German study typically needed.",
+      "commonMistakes": [
+        "Attempting TestDaF without reaching B2 level first",
+        "Not practicing the academic writing task",
+        "Ignoring the speaking section format (7 different task types)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "germany",
+          "minScore": "TDN 4 all sections",
+          "notes": "TDN 4 in all sections = C1, sufficient for most programs"
+        }
+      ]
     },
     {
       "id": "goethe",
       "name": "Goethe-Zertifikat",
       "short": "Goethe",
       "kind": "language",
-      "countries": ["germany", "austria"],
+      "countries": [
+        "germany",
+        "austria"
+      ],
       "pattern": [
-        { "section": "Lesen (Reading)", "content": "Multiple choice and matching tasks", "duration": "65 min" },
-        { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
-        { "section": "Schreiben (Writing)", "content": "2 writing tasks", "duration": "75 min" },
-        { "section": "Sprechen (Speaking)", "content": "2 speaking tasks in pairs", "duration": "15 min" }
+        {
+          "section": "Lesen (Reading)",
+          "content": "Multiple choice and matching tasks",
+          "duration": "65 min"
+        },
+        {
+          "section": "Hören (Listening)",
+          "content": "Multiple choice and matching tasks",
+          "duration": "40 min"
+        },
+        {
+          "section": "Schreiben (Writing)",
+          "content": "2 writing tasks",
+          "duration": "75 min"
+        },
+        {
+          "section": "Sprechen (Speaking)",
+          "content": "2 speaking tasks in pairs",
+          "duration": "15 min"
+        }
       ],
       "feePkr": 30000,
       "feeNote": "Approximately PKR 30,000; administered at Goethe-Institut Karachi and Lahore",
@@ -299,23 +974,82 @@
           "Attend Goethe-Institut language courses"
         ],
         "resources": [
-          { "label": "Goethe Exam Prep", "url": "https://www.goethe.de/en/spr/prf.html" },
-          { "label": "Goethe Practice Tests", "url": "https://www.goethe.de/en/spr/prf/modellsatz.html" }
+          {
+            "label": "Goethe Exam Prep",
+            "url": "https://www.goethe.de/en/spr/prf.html"
+          },
+          {
+            "label": "Goethe Practice Tests",
+            "url": "https://www.goethe.de/en/spr/prf/modellsatz.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.goethe.de/en/spr/prf.html"]
+      "sourceUrls": [
+        "https://www.goethe.de/en/spr/prf.html"
+      ],
+      "overview": "Goethe-Zertifikat is a German language certificate issued by the Goethe-Institut. It is internationally recognized and accepted for university admission in Germany.",
+      "format": "Four modules: Reading, Listening, Writing, Speaking. Each module can be taken separately. Available at A1 through C2 levels.",
+      "scoring": "Pass/Fail for each module. All four modules must be passed to receive the certificate.",
+      "registrationSteps": [
+        "Register at goethe.de",
+        "Choose test level (A1-C2)",
+        "Select test center (Goethe-Institut Pakistan)",
+        "Pay fee (varies by level)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at Goethe-Institut early",
+        "Modules may be taken on same or different days"
+      ],
+      "resultsTimeline": "Approximately 4-6 weeks after test.",
+      "scoreSending": "Certificate issued by Goethe-Institut. Can request additional copies.",
+      "accommodations": "Available. Must request in advance.",
+      "retakePolicy": "Can retake individual modules if failed.",
+      "preparationTimeline": "Depends on current level. Each level approximately 100-200 hours of study.",
+      "commonMistakes": [
+        "Not preparing for all four modules equally",
+        "Ignoring the speaking module format",
+        "Taking wrong level for their actual proficiency"
+      ],
+      "countryRequirements": [
+        {
+          "country": "germany",
+          "minScore": "B2-C1",
+          "notes": "B2 for admission, C1 for some programs"
+        }
+      ]
     },
     {
       "id": "osd",
       "name": "ÖSD Zertifik",
       "short": "ÖSD",
       "kind": "language",
-      "countries": ["austria", "germany"],
+      "countries": [
+        "austria",
+        "germany"
+      ],
       "pattern": [
-        { "section": "Lesen (Reading)", "content": "Multiple choice and open tasks", "duration": "60 min" },
-        { "section": "Hören (Listening)", "content": "Multiple choice and matching tasks", "duration": "40 min" },
-        { "section": "Schreiben (Writing)", "content": "2 writing tasks", "duration": "60 min" },
-        { "section": "Sprechen (Speaking)", "content": "2 speaking tasks", "duration": "15 min" }
+        {
+          "section": "Lesen (Reading)",
+          "content": "Multiple choice and open tasks",
+          "duration": "60 min"
+        },
+        {
+          "section": "Hören (Listening)",
+          "content": "Multiple choice and matching tasks",
+          "duration": "40 min"
+        },
+        {
+          "section": "Schreiben (Writing)",
+          "content": "2 writing tasks",
+          "duration": "60 min"
+        },
+        {
+          "section": "Sprechen (Speaking)",
+          "content": "2 speaking tasks",
+          "duration": "15 min"
+        }
       ],
       "feePkr": 28000,
       "feeNote": "Approximately PKR 28,000; administered through ÖSD partner institutions",
@@ -330,24 +1064,90 @@
           "Review grammar structures at B2–C1 level"
         ],
         "resources": [
-          { "label": "ÖSD Official Prep", "url": "https://www.osd.at/en/preparation.html" },
-          { "label": "ÖSD Practice Tests", "url": "https://www.osd.at/en/uebungspruefungen.html" }
+          {
+            "label": "ÖSD Official Prep",
+            "url": "https://www.osd.at/en/preparation.html"
+          },
+          {
+            "label": "ÖSD Practice Tests",
+            "url": "https://www.osd.at/en/uebungspruefungen.html"
+          }
         ]
       },
-      "sourceUrls": ["https://www.osd.at/"]
+      "sourceUrls": [
+        "https://www.osd.at/"
+      ],
+      "overview": "ÖSD (Österreichisches Sprachdiplom Deutsch) is an Austrian German language certificate. It is recognized in Austria, Germany, and Switzerland.",
+      "format": "Four modules: Reading, Listening, Writing, Speaking. Available at A1-C2 levels.",
+      "scoring": "Pass/Fail for each module. All four modules must be passed.",
+      "registrationSteps": [
+        "Register at oead.at",
+        "Choose test level",
+        "Select test center",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early",
+        "Modules may be taken separately"
+      ],
+      "resultsTimeline": "Approximately 4-6 weeks.",
+      "scoreSending": "Certificate issued. Additional copies available on request.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake individual modules.",
+      "preparationTimeline": "Depends on current level.",
+      "commonMistakes": [
+        "Confusing ÖSD with Goethe (both are German certificates but from different institutions)",
+        "Not checking if target university accepts ÖSD specifically"
+      ],
+      "countryRequirements": [
+        {
+          "country": "austria",
+          "minScore": "B2-C1",
+          "notes": "Recognized for Austrian university admission"
+        },
+        {
+          "country": "germany",
+          "minScore": "B2-C1",
+          "notes": "Also accepted in Germany"
+        }
+      ]
     },
     {
       "id": "cils",
       "name": "CILS (Certificato di Italiano come Lingua Straniera)",
       "short": "CILS",
       "kind": "language",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "pattern": [
-        { "section": "Listening", "content": "Comprehension of audio texts", "duration": "varies by level" },
-        { "section": "Reading", "content": "Comprehension of written texts", "duration": "varies by level" },
-        { "section": "Grammar Analysis", "content": "Grammar and vocabulary tasks", "duration": "varies by level" },
-        { "section": "Writing", "content": "Written production tasks", "duration": "varies by level" },
-        { "section": "Speaking", "content": "Oral production tasks", "duration": "varies by level" }
+        {
+          "section": "Listening",
+          "content": "Comprehension of audio texts",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Reading",
+          "content": "Comprehension of written texts",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Grammar Analysis",
+          "content": "Grammar and vocabulary tasks",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Writing",
+          "content": "Written production tasks",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Speaking",
+          "content": "Oral production tasks",
+          "duration": "varies by level"
+        }
       ],
       "feePkr": 25000,
       "feeNote": "Approximately PKR 25,000; administered at University for Foreigners, Siena",
@@ -362,23 +1162,80 @@
           "Write formal essays in Italian"
         ],
         "resources": [
-          { "label": "CILS Official Prep", "url": "https://cils.unisi.it/en/exams/preparation" },
-          { "label": "Italian Language Learning", "url": "https://www.italianope.com/" }
+          {
+            "label": "CILS Official Prep",
+            "url": "https://cils.unisi.it/en/exams/preparation"
+          },
+          {
+            "label": "Italian Language Learning",
+            "url": "https://www.italianope.com/"
+          }
         ]
       },
-      "sourceUrls": ["https://cils.unisi.it/"]
+      "sourceUrls": [
+        "https://cils.unisi.it/"
+      ],
+      "overview": "CILS (Certificato di Italiano come Lingua Straniera) is an Italian language certificate issued by the University for Foreigners of Siena.",
+      "format": "Four sections: Listening, Reading, Writing, Speaking. Available at A1-C2 levels.",
+      "scoring": "Pass/Fail per section. Must pass all sections at a given level.",
+      "registrationSteps": [
+        "Register at unisi.it/cils",
+        "Choose test level",
+        "Select authorized test center",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early",
+        "All sections completed on same day"
+      ],
+      "resultsTimeline": "Approximately 2-3 months.",
+      "scoreSending": "Certificate issued by University of Siena.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake if failed.",
+      "preparationTimeline": "Depends on level. A2-B1 for university admission.",
+      "commonMistakes": [
+        "Not checking if target Italian university accepts CILS vs other Italian certificates",
+        "Underestimating the writing section"
+      ],
+      "countryRequirements": [
+        {
+          "country": "italy",
+          "minScore": "B1-B2",
+          "notes": "Required for Italian university admission (some programs)"
+        }
+      ]
     },
     {
       "id": "celi",
       "name": "CELI (Certificato di Conoscenza della Lingua Italiana)",
       "short": "CELI",
       "kind": "language",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "pattern": [
-        { "section": "Listening", "content": "Comprehension of audio texts", "duration": "30 min" },
-        { "section": "Reading", "content": "Comprehension of written texts", "duration": "varies by level" },
-        { "section": "Writing", "content": "Written production tasks", "duration": "varies by level" },
-        { "section": "Speaking", "content": "Oral production tasks", "duration": "varies by level" }
+        {
+          "section": "Listening",
+          "content": "Comprehension of audio texts",
+          "duration": "30 min"
+        },
+        {
+          "section": "Reading",
+          "content": "Comprehension of written texts",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Writing",
+          "content": "Written production tasks",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Speaking",
+          "content": "Oral production tasks",
+          "duration": "varies by level"
+        }
       ],
       "feePkr": 24000,
       "feeNote": "Approximately PKR 24,000; administered at University for Foreigners, Perugia",
@@ -393,22 +1250,74 @@
           "Read Italian newspapers and academic journals"
         ],
         "resources": [
-          { "label": "CELI Official Prep", "url": "https://www.cefalunipa.org/en/celi-exam" },
-          { "label": "Italian Language Resources", "url": "https://www.italia.it/en/living-italian/language" }
+          {
+            "label": "CELI Official Prep",
+            "url": "https://www.cefalunipa.org/en/celi-exam"
+          },
+          {
+            "label": "Italian Language Resources",
+            "url": "https://www.italia.it/en/living-italian/language"
+          }
         ]
       },
-      "sourceUrls": ["https://www.unistrapg.it/cecli"]
+      "sourceUrls": [
+        "https://www.unistrapg.it/cecli"
+      ],
+      "overview": "CELI (Certificato di Conoscenza della Lingua Italiana) is an Italian language certificate issued by the University for Foreigners of Perugia.",
+      "format": "Four sections: Listening, Reading, Writing, Speaking. Available at A1-C2 levels.",
+      "scoring": "Pass/Fail per section.",
+      "registrationSteps": [
+        "Register at unipg.it/cegli",
+        "Choose test level",
+        "Select authorized test center",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early"
+      ],
+      "resultsTimeline": "Approximately 2-3 months.",
+      "scoreSending": "Certificate issued by University of Perugia.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake if failed.",
+      "preparationTimeline": "Depends on level.",
+      "commonMistakes": [
+        "Confusing CELI with CILS (different issuing institutions)",
+        "Not preparing for the oral exam format"
+      ],
+      "countryRequirements": [
+        {
+          "country": "italy",
+          "minScore": "B1-B2",
+          "notes": "Accepted for Italian university admission"
+        }
+      ]
     },
     {
       "id": "topik",
       "name": "TOPIK (Test of Proficiency in Korean)",
       "short": "TOPIK",
       "kind": "language",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "pattern": [
-        { "section": "Reading", "content": "Multiple choice questions on Korean grammar and vocabulary", "duration": "70 min" },
-        { "section": "Writing", "content": "Essay writing (TOPIK II only)", "duration": "60 min" },
-        { "section": "Listening", "content": "Comprehension of spoken Korean", "duration": "40 min" }
+        {
+          "section": "Reading",
+          "content": "Multiple choice questions on Korean grammar and vocabulary",
+          "duration": "70 min"
+        },
+        {
+          "section": "Writing",
+          "content": "Essay writing (TOPIK II only)",
+          "duration": "60 min"
+        },
+        {
+          "section": "Listening",
+          "content": "Comprehension of spoken Korean",
+          "duration": "40 min"
+        }
       ],
       "feePkr": 15000,
       "feeNote": "Approximately PKR 15,000; administered at Korean Cultural Centres",
@@ -423,22 +1332,76 @@
           "Write practice essays on TOPIK past topics"
         ],
         "resources": [
-          { "label": "TOPIK Official Prep", "url": "https://www.topik.go.kr/uide/board/view.do" },
-          { "label": "TOPIK Study Guide", "url": "https://www.topikguide.com/" }
+          {
+            "label": "TOPIK Official Prep",
+            "url": "https://www.topik.go.kr/uide/board/view.do"
+          },
+          {
+            "label": "TOPIK Study Guide",
+            "url": "https://www.topikguide.com/"
+          }
         ]
       },
-      "sourceUrls": ["https://www.topik.go.kr/"]
+      "sourceUrls": [
+        "https://www.topik.go.kr/"
+      ],
+      "overview": "TOPIK (Test of Proficiency in Korean) is the official Korean language proficiency test for non-native speakers. It is required for Korean university admission and employment.",
+      "format": "Two test levels: TOPIK I (Listening + Reading, 100 min) for levels 1-2. TOPIK II (Listening + Writing + Reading, 180 min) for levels 3-6. Available in PBT and IBT formats.",
+      "scoring": "TOPIK I: 200 points max. Level 1 (80+), Level 2 (140+). TOPIK II: 300 points max (PBT) or 600 max (IBT). Level 3 (120+), Level 4 (150+), Level 5 (190+), Level 6 (230+).",
+      "registrationSteps": [
+        "Register at toik.or.kr or through Korean Embassy in Pakistan",
+        "Choose TOPIK I or TOPIK II",
+        "Select test date (2-3 dates per year in Pakistan)",
+        "Pay fee (TOPIK I: ~PKR 10,000, TOPIK II: ~PKR 13,000)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive early at test center",
+        "TOPIK I: 100 minutes. TOPIK II: 180 minutes (with 20 min break)"
+      ],
+      "resultsTimeline": "3-4 weeks after test date.",
+      "scoreSending": "Results available online. Certificate mailed after.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake as many times as needed.",
+      "preparationTimeline": "Beginners: 6-12 months for TOPIK I Level 2. Intermediate: 6-12 months for TOPIK II Level 3-4.",
+      "commonMistakes": [
+        "Taking TOPIK I when TOPIK II is required for university admission",
+        "Not preparing for the writing section in TOPIK II",
+        "Ignoring the limited test dates in Pakistan (2-3 per year)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "south-korea",
+          "minScore": "TOPIK II Level 3-4",
+          "notes": "Most universities require Level 3-4; graduate programs need Level 4-5"
+        }
+      ]
     },
     {
       "id": "hsk",
       "name": "HSK (Hanyu Shuiping Kaoshi)",
       "short": "HSK",
       "kind": "language",
-      "countries": ["china"],
+      "countries": [
+        "china"
+      ],
       "pattern": [
-        { "section": "Listening", "content": "Multiple choice listening comprehension", "duration": "varies by level" },
-        { "section": "Reading", "content": "Multiple choice reading comprehension", "duration": "varies by level" },
-        { "section": "Writing", "content": "Character writing (HSK 3+)", "duration": "varies by level" }
+        {
+          "section": "Listening",
+          "content": "Multiple choice listening comprehension",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Reading",
+          "content": "Multiple choice reading comprehension",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Writing",
+          "content": "Character writing (HSK 3+)",
+          "duration": "varies by level"
+        }
       ],
       "feePkr": 12000,
       "feeNote": "Approximately PKR 12,000; administered at Confucius Institutes",
@@ -453,21 +1416,71 @@
           "Take full-length HSK practice tests"
         ],
         "resources": [
-          { "label": "HSK Official Prep", "url": "https://www.chinesetest.cn/god465n97.html" },
-          { "label": "HSK Online Practice", "url": "https://www.hsk.academy/" }
+          {
+            "label": "HSK Official Prep",
+            "url": "https://www.chinesetest.cn/god465n97.html"
+          },
+          {
+            "label": "HSK Online Practice",
+            "url": "https://www.hsk.academy/"
+          }
         ]
       },
-      "sourceUrls": ["https://www.chinesetest.cn/"]
+      "sourceUrls": [
+        "https://www.chinesetest.cn/"
+      ],
+      "overview": "HSK (Hanyu Shuiping Kaoshi) is the official Chinese language proficiency test. It is required for Chinese university admission and scholarship applications.",
+      "format": "Six levels: HSK 1-6. Levels 1-2: Listening + Reading. Levels 3-6: Listening + Reading + Writing. New HSK is transitioning to a 9-level system.",
+      "scoring": "HSK 1-2: 200 points max, 120 to pass. HSK 3-6: 300 points max, 180 to pass.",
+      "registrationSteps": [
+        "Register at chinesetest.cn",
+        "Choose HSK level",
+        "Select test center (available in Pakistan)",
+        "Pay fee (HSK 1: 150 CNY, HSK 2: 250 CNY, HSK 3: 350 CNY + HSKK 200 CNY, etc.)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport and registration confirmation",
+        "Arrive at test center early",
+        "Test duration varies by level (40-140 minutes)"
+      ],
+      "resultsTimeline": "Approximately 1 month after test.",
+      "scoreSending": "HSK certificate issued. Additional copies available.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake as many times as needed.",
+      "preparationTimeline": "HSK 1-2: 2-3 months. HSK 3-4: 6-12 months. HSK 5-6: 2+ years.",
+      "commonMistakes": [
+        "Not knowing that HSK 3+ requires HSKK (speaking test) from 2023 onwards",
+        "Using old study materials (HSK is transitioning to new 9-level system)",
+        "Not practicing Chinese character writing for levels 3+"
+      ],
+      "countryRequirements": [
+        {
+          "country": "china",
+          "minScore": "HSK 4-5",
+          "notes": "Most Chinese universities require HSK 4+ for admission; scholarships often need HSK 5+"
+        }
+      ]
     },
     {
       "id": "tr-yos",
       "name": "TR-YÖS (Yabancı Uyruklu Öğrenci Sınavı)",
       "short": "TR-YÖS",
       "kind": "aptitude",
-      "countries": ["turkey"],
+      "countries": [
+        "turkey"
+      ],
       "pattern": [
-        { "section": "Basic Learning Skills", "content": "Logic, mathematics, and abstract reasoning", "duration": "90 min" },
-        { "section": "Science", "content": "Physics, chemistry, biology questions", "duration": "varies by version" }
+        {
+          "section": "Basic Learning Skills",
+          "content": "Logic, mathematics, and abstract reasoning",
+          "duration": "90 min"
+        },
+        {
+          "section": "Science",
+          "content": "Physics, chemistry, biology questions",
+          "duration": "varies by version"
+        }
       ],
       "feePkr": 20000,
       "feeNote": "Approximately PKR 20,000; administered at Turkish universities",
@@ -482,23 +1495,80 @@
           "Review Turkish university admission requirements"
         ],
         "resources": [
-          { "label": "YÖS Official Info", "url": "https://www.yos.gov.tr/" },
-          { "label": "YÖS Practice Tests", "url": "https://www.yosmerkezi.com/" }
+          {
+            "label": "YÖS Official Info",
+            "url": "https://www.yos.gov.tr/"
+          },
+          {
+            "label": "YÖS Practice Tests",
+            "url": "https://www.yosmerkezi.com/"
+          }
         ]
       },
-      "sourceUrls": ["https://www.yos.gov.tr/"]
+      "sourceUrls": [
+        "https://www.yos.gov.tr/"
+      ],
+      "overview": "TR-YÖS (Türkiye Yurt Dışından Öğrenci Kabul Sınavı) is the Turkish university entrance exam for international students. It replaced the old YÖS exam.",
+      "format": "Multiple sections: IQ/Abstract Reasoning, Mathematics, Science. Test duration varies.",
+      "scoring": "Scored out of 100. Used for placement in Turkish universities.",
+      "registrationSteps": [
+        "Register at the exam website",
+        "Choose test date",
+        "Select test center in Turkey",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early",
+        "Test lasts several hours"
+      ],
+      "resultsTimeline": "Several weeks after test.",
+      "scoreSending": "Results sent to candidate. Used for university placement.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake as needed.",
+      "preparationTimeline": "Recommended 2-3 months of preparation.",
+      "commonMistakes": [
+        "Not preparing for the IQ/Abstract Reasoning section",
+        "Confusing TR-YÖS with old YÖS format"
+      ],
+      "countryRequirements": [
+        {
+          "country": "turkey",
+          "minScore": "Varies by university",
+          "notes": "Required for international student admission to Turkish universities"
+        }
+      ]
     },
     {
       "id": "tolc",
       "name": "TOLC (Test OnLine CISIA)",
       "short": "TOLC",
       "kind": "aptitude",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "pattern": [
-        { "section": "Logic", "content": "Verbal and numerical reasoning", "duration": "30 min" },
-        { "section": "Mathematics", "content": "Basic math and algebra", "duration": "30 min" },
-        { "section": "Reading Comprehension", "content": "English or Italian reading passages", "duration": "30 min" },
-        { "section": "Scientific Knowledge", "content": "Physics, chemistry, biology (some TOLC)", "duration": "30 min" }
+        {
+          "section": "Logic",
+          "content": "Verbal and numerical reasoning",
+          "duration": "30 min"
+        },
+        {
+          "section": "Mathematics",
+          "content": "Basic math and algebra",
+          "duration": "30 min"
+        },
+        {
+          "section": "Reading Comprehension",
+          "content": "English or Italian reading passages",
+          "duration": "30 min"
+        },
+        {
+          "section": "Scientific Knowledge",
+          "content": "Physics, chemistry, biology (some TOLC)",
+          "duration": "30 min"
+        }
       ],
       "feePkr": 18000,
       "feeNote": "Approximately PKR 18,000; taken online from home",
@@ -513,23 +1583,82 @@
           "Practice timed sections to build speed"
         ],
         "resources": [
-          { "label": "CISIA TOLC Prep", "url": "https://www.cisia.it/online-tests/home" },
-          { "label": "TOLC Practice", "url": "https://www.cisia.it/online-tests/TOLC" }
+          {
+            "label": "CISIA TOLC Prep",
+            "url": "https://www.cisia.it/online-tests/home"
+          },
+          {
+            "label": "TOLC Practice",
+            "url": "https://www.cisia.it/online-tests/TOLC"
+          }
         ]
       },
-      "sourceUrls": ["https://www.cisia.it/"]
+      "sourceUrls": [
+        "https://www.cisia.it/"
+      ],
+      "overview": "TOLC (Test OnLine CISIA) is an Italian university entrance exam used for admission to Italian universities. It tests logic, mathematics, reading comprehension, and scientific knowledge.",
+      "format": "Sections vary by TOLC type: TOLC-I (Engineering), TOLC-E (Economics), TOLC-S (Sciences), TOLC-B (Biology), TOLC-M (Medicine). Each has different section combinations. Duration: 100-120 minutes.",
+      "scoring": "Scored as points. Each correct answer: +1 point. Each wrong answer: -0.25 points. No penalty for unanswered questions.",
+      "registrationSteps": [
+        "Register at cisiaonline.it",
+        "Choose TOLC type (I, E, S, B, M)",
+        "Select test date and center",
+        "Pay fee (approximately EUR 30)",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early",
+        "Test is computer-based",
+        "Results available immediately after test"
+      ],
+      "resultsTimeline": "Immediately after test.",
+      "scoreSending": "Score sent to candidate. Can be used for multiple university applications.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake multiple times. Best score used.",
+      "preparationTimeline": "Recommended 1-2 months of preparation.",
+      "commonMistakes": [
+        "Taking wrong TOLC type for intended program",
+        "Not knowing the penalty for wrong answers (-0.25)",
+        "Not practicing time management"
+      ],
+      "countryRequirements": [
+        {
+          "country": "italy",
+          "minScore": "Varies by university",
+          "notes": "Required for admission to many Italian university programs"
+        }
+      ]
     },
     {
       "id": "nt2",
       "name": "NT2 (Nederlands als Tweede Taal)",
       "short": "NT2",
       "kind": "language",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "pattern": [
-        { "section": "Lezen (Reading)", "content": "Multiple choice and open questions", "duration": "varies by level" },
-        { "section": "Luisteren (Listening)", "content": "Audio comprehension questions", "duration": "varies by level" },
-        { "section": "Spreken (Speaking)", "content": "Oral tasks", "duration": "varies by level" },
-        { "section": "Schrijven (Writing)", "content": "Written production tasks", "duration": "varies by level" }
+        {
+          "section": "Lezen (Reading)",
+          "content": "Multiple choice and open questions",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Luisteren (Listening)",
+          "content": "Audio comprehension questions",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Spreken (Speaking)",
+          "content": "Oral tasks",
+          "duration": "varies by level"
+        },
+        {
+          "section": "Schrijven (Writing)",
+          "content": "Written production tasks",
+          "duration": "varies by level"
+        }
       ],
       "feePkr": 22000,
       "feeNote": "Approximately PKR 22,000; administered at DUO examination centres",
@@ -544,23 +1673,80 @@
           "Take NT2 practice exams"
         ],
         "resources": [
-          { "label": "NT2 Official Prep", "url": "https://www.nederlands-taalunitie.nl/nt2" },
-          { "label": "DUO NT2 Info", "url": "https://www.duo.nl/particulier/nt2/" }
+          {
+            "label": "NT2 Official Prep",
+            "url": "https://www.nederlands-taalunitie.nl/nt2"
+          },
+          {
+            "label": "DUO NT2 Info",
+            "url": "https://www.duo.nl/particulier/nt2/"
+          }
         ]
       },
-      "sourceUrls": ["https://www.inburgering.nl/nt2-examen/"]
+      "sourceUrls": [
+        "https://www.inburgering.nl/nt2-examen/"
+      ],
+      "overview": "NT2 (Nederlands als Tweede Taal) is the Dutch language proficiency test for non-native speakers. It is required for Dutch university admission and immigration.",
+      "format": "Two levels: NT2-I (B1 level, for vocational education) and NT2-II (B2 level, for higher education). Each has four modules: Reading, Writing, Listening, Speaking.",
+      "scoring": "Pass/Fail per module. All four modules must be passed at the required level.",
+      "registrationSteps": [
+        "Register at dutch-exams.nl",
+        "Choose NT2-I or NT2-II",
+        "Select test center",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Modules may be taken on different days",
+        "Test center provides all materials"
+      ],
+      "resultsTimeline": "Approximately 4-6 weeks after test.",
+      "scoreSending": "Certificate issued. Can request additional copies.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake individual modules.",
+      "preparationTimeline": "NT2-I: 6-12 months of Dutch study. NT2-II: 12-18 months.",
+      "commonMistakes": [
+        "Taking NT2-I when NT2-II is required for university admission",
+        "Not preparing for the speaking module (face-to-face interview)"
+      ],
+      "countryRequirements": [
+        {
+          "country": "netherlands",
+          "minScore": "NT2-II",
+          "notes": "Required for Dutch-taught university programs"
+        }
+      ]
     },
     {
       "id": "bipa",
       "name": "BIPA (Bahasa Indonesia bagi Penutur Asing)",
       "short": "BIPA",
       "kind": "language",
-      "countries": ["indonesia"],
+      "countries": [
+        "indonesia"
+      ],
       "pattern": [
-        { "section": "Mendengarkan (Listening)", "content": "Audio comprehension questions", "duration": "30 min" },
-        { "section": "Membaca (Reading)", "content": "Reading comprehension tasks", "duration": "60 min" },
-        { "section": "Menulis (Writing)", "content": "Written production tasks", "duration": "60 min" },
-        { "section": "Berbicara (Speaking)", "content": "Oral production tasks", "duration": "15–20 min" }
+        {
+          "section": "Mendengarkan (Listening)",
+          "content": "Audio comprehension questions",
+          "duration": "30 min"
+        },
+        {
+          "section": "Membaca (Reading)",
+          "content": "Reading comprehension tasks",
+          "duration": "60 min"
+        },
+        {
+          "section": "Menulis (Writing)",
+          "content": "Written production tasks",
+          "duration": "60 min"
+        },
+        {
+          "section": "Berbicara (Speaking)",
+          "content": "Oral production tasks",
+          "duration": "15–20 min"
+        }
       ],
       "feePkr": 10000,
       "feeNote": "Approximately PKR 10,000; administered at Indonesian universities and cultural centres",
@@ -575,11 +1761,50 @@
           "Write formal essays in Indonesian"
         ],
         "resources": [
-          { "label": "BIPA Official Info", "url": "https://bahasa.kemdikbud.go.id/bipa/" },
-          { "label": "Indonesian Language Learning", "url": "https://www.indonesianonline.com/" }
+          {
+            "label": "BIPA Official Info",
+            "url": "https://bahasa.kemdikbud.go.id/bipa/"
+          },
+          {
+            "label": "Indonesian Language Learning",
+            "url": "https://www.indonesianonline.com/"
+          }
         ]
       },
-      "sourceUrls": ["https://kemdikbud.go.id/"]
+      "sourceUrls": [
+        "https://kemdikbud.go.id/"
+      ],
+      "overview": "BIPA (Bahasa Indonesia bagi Penutur Asing) is the Indonesian language proficiency test for non-native speakers. It is required for Indonesian university admission.",
+      "format": "Four sections: Listening, Reading, Writing, Speaking. Available at beginner, intermediate, and advanced levels.",
+      "scoring": "Scored per section. Must meet minimum requirements for each section.",
+      "registrationSteps": [
+        "Register through Indonesian university or language center",
+        "Choose test level",
+        "Select test date",
+        "Pay fee",
+        "Receive confirmation"
+      ],
+      "testDay": [
+        "Bring valid passport",
+        "Arrive at test center early",
+        "Test takes several hours"
+      ],
+      "resultsTimeline": "Several weeks after test.",
+      "scoreSending": "Certificate issued.",
+      "accommodations": "Available. Request in advance.",
+      "retakePolicy": "Can retake as needed.",
+      "preparationTimeline": "Recommended 3-6 months of Indonesian study.",
+      "commonMistakes": [
+        "Not preparing for the speaking section (interview format)",
+        "Underestimating Indonesian grammar complexity"
+      ],
+      "countryRequirements": [
+        {
+          "country": "indonesia",
+          "minScore": "Intermediate+",
+          "notes": "Required for Indonesian university admission for non-native speakers"
+        }
+      ]
     }
   ]
 }
