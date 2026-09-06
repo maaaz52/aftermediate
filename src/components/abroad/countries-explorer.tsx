@@ -187,8 +187,15 @@ export function CountriesExplorer() {
   const [region, setRegion] = React.useState<AbroadRegion | "all">("all");
   const [sort, setSort] = React.useState<"name" | "cheapest">("name");
   const [compareIds, setCompareIds] = React.useState<string[]>([]);
+  const [medicalOnly, setMedicalOnly] = React.useState(false);
 
-  const filtered = sortCountries(filterCountries(data.countries, { query, region }), sort);
+  const baseFiltered = filterCountries(data.countries, { query, region });
+  const filtered = sortCountries(
+    medicalOnly
+      ? baseFiltered.filter((c) => c.topFields.some((f) => /medic|mbbs|dentist/i.test(f)))
+      : baseFiltered,
+    sort
+  );
 
   const cheapest = cheapestCountry(data.countries);
   const bestWork = mostGenerousPostStudyWork(data.countries);
@@ -241,6 +248,10 @@ export function CountriesExplorer() {
               {r.label}
             </Chip>
           ))}
+          <span className="mx-1 hidden h-4 w-px bg-line sm:block" />
+          <Chip active={medicalOnly} onClick={() => setMedicalOnly(!medicalOnly)}>
+            Best for Medicine
+          </Chip>
           <span className="mx-1 hidden h-4 w-px bg-line sm:block" />
           <Chip active={sort === "name"} onClick={() => setSort("name")}>
             A–Z

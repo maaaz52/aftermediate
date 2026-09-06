@@ -2595,6 +2595,184 @@
         "Apply through local P.E.O. chapter"
       ],
       "contactInfo": "peointernational.org"
+    },
+    {
+      "id": "russian-government-quota",
+      "name": "Russian Government Quota Scholarship",
+      "funder": "Ministry of Education and Science of Russia",
+      "category": "host-government",
+      "countries": ["russia"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition waiver, free dormitory accommodation, monthly stipend, and free Russian language preparatory course if required",
+      "eligibility": [
+        "Pakistani nationality",
+        "Strong academic record",
+        "Apply through the Russian Cultural Centre in Islamabad or education-in-russia.com",
+        "Choose up to 6 Russian universities in priority order",
+        "Deadline usually January 15 each year"
+      ],
+      "deadline": "January 15 annually (via Russian Cultural Centre Karachi or education-in-russia.com)",
+      "howToApply": [
+        "Visit education-in-russia.com and create an account",
+        "Select your field of study and up to 6 universities",
+        "Upload academic transcripts, passport, medical certificate, motivation letter",
+        "Submit before the January 15 deadline",
+        "Results announced by April–May"
+      ],
+      "sourceUrls": [
+        "https://www.education-in-russia.com",
+        "https://pakistan.rs.gov.ru/announcement/8276/"
+      ],
+      "duration": "Full degree duration (4–6 years depending on program)",
+      "renewable": true,
+      "documentsRequired": [
+        "Valid passport",
+        "Academic transcripts and certificates",
+        "Medical certificate (including HIV test)",
+        "Motivation letter",
+        "Recommendation letters",
+        "Passport-size photos"
+      ],
+      "tips": [
+        "Apply early — competition is high",
+        "Choose Russian-taught programs for more scholarship slots",
+        "Learn basic Russian before arrival — most clinical rotations require it",
+        "Contact the Russian House in Karachi for guidance"
+      ],
+      "contactInfo": "pakistan@rs.gov.ru, (092-21)-3454-8465"
+    },
+    {
+      "id": "georgian-national-scholarship",
+      "name": "Georgian National Scholarship Program",
+      "funder": "Government of Georgia",
+      "category": "host-government",
+      "countries": ["georgia"],
+      "level": "multiple",
+      "coverage": "partial",
+      "coverageDetail": "Partial scholarships covering tuition fees, monthly stipends, and travel costs for international students including medical programs",
+      "eligibility": [
+        "International students including Pakistani nationals",
+        "Good academic performance",
+        "Age 17–25 years",
+        "HSSC with 50% marks or equivalent",
+        "Apply through Georgian universities or the EducationUSA Georgia center"
+      ],
+      "deadline": "Varies by university; typically March–June for September intake",
+      "howToApply": [
+        "Check participating universities on the Georgian National Scholarship portal",
+        "Apply directly to the university with scholarship request",
+        "Submit academic transcripts, passport copy, and motivation letter",
+        "Some universities require a separate scholarship application form"
+      ],
+      "sourceUrls": [
+        "https://educationusa.state.gov/scholarships/georgian-government-scholarship-fund-administered-international-education-center"
+      ],
+      "duration": "Full degree duration (6 years for MBBS)",
+      "renewable": true,
+      "documentsRequired": [
+        "Valid passport",
+        "FSc Pre-Medical marksheet (60% minimum)",
+        "Academic transcripts",
+        "Motivation letter",
+        "Passport-size photos"
+      ],
+      "tips": [
+        "Tbilisi State Medical University offers the most scholarships",
+        "Merit-based scholarships are available for high-achieving students",
+        "Contact universities directly — many have dedicated international offices",
+        "No IELTS required for Georgian medical programs"
+      ],
+      "contactInfo": "Contact universities directly or EducationUSA Georgia"
+    },
+    {
+      "id": "new-uzbekistan-scholarship",
+      "name": "New Uzbekistan Scholarship",
+      "funder": "Government of Uzbekistan",
+      "category": "host-government",
+      "countries": ["uzbekistan"],
+      "level": "bachelors",
+      "coverage": "full",
+      "coverageDetail": "Full state-funded grant covering tuition at Uzbek state universities for up to 500 international students annually from 2026-27",
+      "eligibility": [
+        "International students including Pakistani nationals",
+        "Strong academic record",
+        "Apply through the Study in Uzbekistan platform",
+        "Available for bachelor's degree programs at public universities"
+      ],
+      "deadline": "Applications for 2026-27 cycle opening soon; check studyin.uz",
+      "howToApply": [
+        "Create an account on studyin.uz",
+        "Select your preferred program and university",
+        "Upload academic transcripts and passport",
+        "Submit application before the deadline",
+        "Results announced by university admissions offices"
+      ],
+      "sourceUrls": [
+        "https://kun.uz/en/news/2026/04/14/uzbekistan-to-launch-new-scholarship-program-for-foreign-students",
+        "https://studyin.uz"
+      ],
+      "duration": "4–6 years (full degree duration)",
+      "renewable": true,
+      "documentsRequired": [
+        "Valid passport",
+        "FSc Pre-Medical marksheet",
+        "Academic transcripts",
+        "Medical certificate",
+        "Passport-size photos"
+      ],
+      "tips": [
+        "500 grants available annually — apply early",
+        "Medical programs (MBBS) are included in the scholarship",
+        "No IELTS or entrance exam required",
+        "Graduates of English-taught programs are exempt from language proficiency certificates for next-level study"
+      ],
+      "contactInfo": "studyin.uz"
+    },
+    {
+      "id": "kazakhstan-government-scholarship",
+      "name": "Kazakhstan Government Scholarship Program",
+      "funder": "Ministry of Science and Higher Education of Kazakhstan",
+      "category": "host-government",
+      "countries": ["kazakhstan"],
+      "level": "multiple",
+      "coverage": "full",
+      "coverageDetail": "Full tuition coverage for 550 international students annually (490 Bachelor's, 50 Master's, 10 PhD) at leading Kazakh universities",
+      "eligibility": [
+        "International students including Pakistani nationals",
+        "Strong academic record",
+        "Apply through studyin.kz by May 31",
+        "Application in Kazakh, Russian, or English"
+      ],
+      "deadline": "March 30 – May 31 annually (via studyin.kz)",
+      "howToApply": [
+        "Visit studyin.kz/admission",
+        "Create an applicant account",
+        "Select preferred universities and programs",
+        "Upload academic transcripts, passport, and other documents",
+        "Submit before May 31 deadline"
+      ],
+      "sourceUrls": [
+        "https://bolashak.gov.kz/en/scholarship-program",
+        "https://studyin.kz"
+      ],
+      "duration": "Full degree duration (4–6 years for Bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "Valid passport",
+        "Academic transcripts and certificates",
+        "Medical certificate",
+        "Motivation letter",
+        "Recommendation letters",
+        "Passport-size photos"
+      ],
+      "tips": [
+        "550 grants available annually — 13,723 applicants from 57 countries in 2025",
+        "Al-Farabi Kazakh National University is the top recipient",
+        "Apply in English to avoid language proficiency requirements",
+        "Medical programs are included in the scholarship fields"
+      ],
+      "contactInfo": "studyin.kz, bolashak.gov.kz"
     }
   ]
 }

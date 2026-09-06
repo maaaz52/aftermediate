@@ -7,26 +7,27 @@ const REGIONS: AbroadRegion[] = ["europe", "asia", "north-america"];
 const REQUIRED = [
   "germany", "austria", "italy", "south-korea", "turkey", "china", "indonesia",
   "usa", "uk", "ireland", "lithuania", "netherlands", "hungary",
+  "russia", "georgia", "uzbekistan", "kazakhstan",
 ] as const;
 
 describe("abroad-countries.json", () => {
-  it("has exactly 13 countries", () => {
-    expect(data.countries).toHaveLength(13);
+  it("has exactly 17 countries", () => {
+    expect(data.countries).toHaveLength(17);
   });
 
   it("has a numeric dataYear of 2026", () => {
     expect(data.dataYear).toBe(2026);
   });
 
-  it("includes all 13 required countries", () => {
+  it("includes all 17 required countries", () => {
     const ids = data.countries.map((c) => c.id);
     for (const id of REQUIRED) expect(ids, id).toContain(id);
   });
 
-  it("has the expected region distribution (8 europe, 4 asia, 1 north-america)", () => {
+  it("has the expected region distribution (8 europe, 8 asia, 1 north-america)", () => {
     const counts = { europe: 0, asia: 0, "north-america": 0 };
     for (const c of data.countries) counts[c.region] += 1;
-    expect(counts).toEqual({ europe: 8, asia: 4, "north-america": 1 });
+    expect(counts).toEqual({ europe: 8, asia: 8, "north-america": 1 });
   });
 
   it("has unique ids", () => {

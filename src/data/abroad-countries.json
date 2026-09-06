@@ -2497,6 +2497,730 @@
           "deadline": "October–November"
         }
       ]
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "flag": "🇷🇺",
+      "intro": "Russia is one of the most popular destinations for Pakistani medical students, with an estimated 5,000-8,000 enrolled in MBBS programs. WHO and PMC-recognized degrees, affordable tuition (USD 3,000-5,500/yr), and the Russian Government Quota Scholarship make it a strong alternative to private medical colleges in Pakistan.",
+      "region": "asia",
+      "capital": "Moscow",
+      "language": "Russian",
+      "currency": {
+        "code": "RUB",
+        "name": "Russian Ruble",
+        "symbol": "₽",
+        "toPkr": 3.2,
+        "rateAsOf": "2026-08"
+      },
+      "visa": {
+        "type": "Student Visa (Type D)",
+        "feePkr": 16000,
+        "processingTime": "4-6 weeks",
+        "keyPoints": [
+          "University invitation letter required before visa application",
+          "Medical certificate including HIV test required",
+          "Proof of funds (approx. USD 2,000-3,000 for first year)",
+          "Visa interview at the Russian Embassy in Islamabad",
+          "Students may work up to 4 hours/day with university permission"
+        ]
+      },
+      "intakes": [
+        "September (Autumn)",
+        "February (Spring)"
+      ],
+      "tuition": {
+        "ug": {
+          "min": 1440000,
+          "max": 2640000
+        },
+        "masters": {
+          "min": 1600000,
+          "max": 2880000
+        },
+        "phd": {
+          "min": 1760000,
+          "max": 3200000
+        }
+      },
+      "living": {
+        "bigCity": {
+          "rent": 96000,
+          "food": 48000,
+          "transport": 9600,
+          "utilities": 12800,
+          "misc": 28800
+        },
+        "smallCity": {
+          "rent": 57600,
+          "food": 38400,
+          "transport": 6400,
+          "utilities": 9600,
+          "misc": 19200
+        }
+      },
+      "oneTime": {
+        "applicationFee": 16000,
+        "visaFee": 16000,
+        "insurance": 32000,
+        "flight": 200000
+      },
+      "postStudyWork": "1-year residence permit for job seeking after graduation",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        {
+          "title": "Choose a university",
+          "detail": "Select from WHO/PMC-listed Russian medical universities and check program language (English or Russian)."
+        },
+        {
+          "title": "Apply via education-in-russia.com",
+          "detail": "Submit application through the official Russian education portal or directly to the university."
+        },
+        {
+          "title": "Get invitation letter",
+          "detail": "Receive the official invitation letter from the university (required for visa)."
+        },
+        {
+          "title": "Medical check",
+          "detail": "Complete medical examination including HIV test at an approved facility."
+        },
+        {
+          "title": "Apply for student visa",
+          "detail": "Submit visa application at the Russian Embassy with invitation, medical certificate, and proof of funds."
+        },
+        {
+          "title": "Travel & enroll",
+          "detail": "Fly to Russia, register with local authorities, and enroll at the university."
+        }
+      ],
+      "documents": [
+        "Valid passport (min 2 years validity)",
+        "FSc Pre-Medical marksheet (50% minimum)",
+        "MDCAT score certificate",
+        "University invitation letter",
+        "Medical certificate (including HIV test)",
+        "Passport-size photos (10 copies)",
+        "Birth certificate (Russian translation)",
+        "Bank statement (proof of funds)"
+      ],
+      "requiredTests": [
+        "ielts"
+      ],
+      "topFields": [
+        "Medicine (MBBS)",
+        "Engineering",
+        "Computer Science"
+      ],
+      "pros": [
+        "WHO and PMC-recognized medical degrees",
+        "Russian Government Quota Scholarship covers tuition, accommodation, and stipend",
+        "Clinical rotations with real patient contact from year 3",
+        "Large Pakistani student community in Moscow, St. Petersburg, and Kazan"
+      ],
+      "cons": [
+        "Russian language needed for patient interactions during clinical years",
+        "Cold winters (down to −20°C in some cities)",
+        "Limited post-study work options compared to Western countries"
+      ],
+      "sources": [
+        {
+          "label": "Study in Russia (official)",
+          "url": "https://www.education-in-russia.com"
+        },
+        {
+          "label": "Russian House Karachi",
+          "url": "https://pakistan.rs.gov.ru"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "First Moscow State Medical University (Sechenov)",
+          "ranking": "Russia #1 Medical",
+          "programs": ["Medicine", "Pharmacy", "Dentistry"]
+        },
+        {
+          "name": "St. Petersburg State Medical University",
+          "ranking": "Russia #2 Medical",
+          "programs": ["Medicine", "Pediatrics"]
+        },
+        {
+          "name": "Kazan Federal University",
+          "ranking": "QS #396",
+          "programs": ["Medicine", "Engineering", "IT"]
+        },
+        {
+          "name": "Peoples' Friendship University of Russia",
+          "ranking": "QS #342",
+          "programs": ["Medicine", "Engineering", "Social Sciences"]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Russian Government Quota Scholarship (full tuition + accommodation + stipend)",
+        "Open Doors Scholarship (Olympiad — Master's/PhD)",
+        "University-specific merit scholarships",
+        "Bilateral exchange scholarships"
+      ],
+      "climate": "Continental — cold winters (−10 to −20°C in Moscow, colder in Siberia), warm summers (20–30°C). St. Petersburg has milder winters.",
+      "cultureTips": [
+        "Learn basic Russian — most locals don't speak English",
+        "Russian food is hearty — borscht, pelmeni, and blini are staples",
+        "Metro systems in Moscow and St. Petersburg are stunning — visit them",
+        "Russians value punctuality in formal settings",
+        "Dress warmly in winter — temperatures drop significantly"
+      ],
+      "studentLife": "Russian universities have active international student offices. Large Pakistani communities exist in Moscow, St. Petersburg, and Kazan. Student life includes cultural events, sports, and affordable travel across Russia.",
+      "workRights": "Up to 4 hours/day during studies with university permission. After graduation, 1-year residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "January 15 (Quota Scholarship), June–July (self-funded)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "October–November"
+        }
+      ]
+    },
+    {
+      "id": "georgia",
+      "name": "Georgia",
+      "flag": "🇬🇪",
+      "intro": "Georgia has become one of the fastest-growing study destinations for Pakistani medical students, with 150+ currently enrolled. PMDC-recognized degrees, no IELTS requirement, English-medium instruction, and affordable tuition (USD 4,000-8,000/yr) make it a compelling option. Total 6-year MBBS cost: PKR 70-120 lakh including living.",
+      "region": "asia",
+      "capital": "Tbilisi",
+      "language": "Georgian",
+      "currency": {
+        "code": "GEL",
+        "name": "Georgian Lari",
+        "symbol": "₾",
+        "toPkr": 104,
+        "rateAsOf": "2026-08"
+      },
+      "visa": {
+        "type": "Student Visa (D3)",
+        "feePkr": 12000,
+        "processingTime": "2-3 months",
+        "keyPoints": [
+          "No IELTS or TOEFL required",
+          "No entrance exam required — direct admission on FSc results",
+          "Bank statement of USD 3,500 for last 6 months",
+          "Visa success ratio: 70-85%",
+          "Students may work 30 hours/week during studies"
+        ]
+      },
+      "intakes": [
+        "September (Fall)",
+        "February (Spring)"
+      ],
+      "tuition": {
+        "ug": {
+          "min": 1960000,
+          "max": 3920000
+        },
+        "masters": {
+          "min": 2080000,
+          "max": 4160000
+        },
+        "phd": {
+          "min": 2184000,
+          "max": 4368000
+        }
+      },
+      "living": {
+        "bigCity": {
+          "rent": 104000,
+          "food": 52000,
+          "transport": 10400,
+          "utilities": 15600,
+          "misc": 31200
+        },
+        "smallCity": {
+          "rent": 72800,
+          "food": 41600,
+          "transport": 7280,
+          "utilities": 10400,
+          "misc": 20800
+        }
+      },
+      "oneTime": {
+        "applicationFee": 10400,
+        "visaFee": 12000,
+        "insurance": 42000,
+        "flight": 180000
+      },
+      "postStudyWork": "Temporary residence permit for 6-12 months after graduation for job seeking",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        {
+          "title": "Choose a university",
+          "detail": "Select from PMDC/WDOMS-listed Georgian medical universities."
+        },
+        {
+          "title": "Apply directly",
+          "detail": "Submit application with FSc results — no IELTS, no entrance exam."
+        },
+        {
+          "title": "Receive admission letter",
+          "detail": "Get the official admission letter from the university."
+        },
+        {
+          "title": "Open bank statement",
+          "detail": "Prepare bank statement showing USD 3,500 for last 6 months."
+        },
+        {
+          "title": "Apply for D3 visa",
+          "detail": "Submit visa application at the Georgian Embassy with admission letter and financial proof."
+        },
+        {
+          "title": "Travel & enroll",
+          "detail": "Fly to Tbilisi and complete enrollment and residence permit."
+        }
+      ],
+      "documents": [
+        "Valid passport",
+        "FSc Pre-Medical marksheet (60% minimum)",
+        "University admission letter",
+        "Bank statement (USD 3,500 for 6 months)",
+        "Academic transcripts",
+        "Passport-size photos",
+        "Medical insurance",
+        "Visa application form"
+      ],
+      "requiredTests": ["ielts"],
+      "topFields": [
+        "Medicine (MBBS)",
+        "Dentistry",
+        "Engineering",
+        "Business"
+      ],
+      "pros": [
+        "No IELTS or entrance exam required",
+        "PMDC and WHO-recognized degrees",
+        "Halal food widely available, Muslim-friendly environment",
+        "European-standard education at a fraction of Western costs"
+      ],
+      "cons": [
+        "Georgian language needed for patient interactions",
+        "Limited scholarship options compared to other countries",
+        "Smaller Pakistani community than Russia or China"
+      ],
+      "sources": [
+        {
+          "label": "Study in Georgia (EduGeo)",
+          "url": "https://www.edugeo.org/en/blog/study-in-georgia-from-pakistan"
+        },
+        {
+          "label": "Universities Page — MBBS in Georgia",
+          "url": "https://universitiespage.com/study-mbbs-in-georgia-for-pakistani-students"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Tbilisi State Medical University",
+          "ranking": "Georgia #1 Medical",
+          "programs": ["Medicine", "Dentistry", "Pharmacy"]
+        },
+        {
+          "name": "New Vision University",
+          "ranking": "WDOMS-listed",
+          "programs": ["Medicine", "Dentistry"]
+        },
+        {
+          "name": "David Tvildiani Medical University",
+          "ranking": "WDOMS-listed",
+          "programs": ["Medicine"]
+        },
+        {
+          "name": "Caucasus International University",
+          "ranking": "WDOMS-listed",
+          "programs": ["Medicine", "Business"]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Georgian National Scholarship Program (partial tuition + stipend)",
+        "University-based merit scholarships",
+        "External foundation scholarships"
+      ],
+      "climate": "Humid subtropical — mild winters (2-6°C), warm summers (24-30°C). Tbilisi is warmer than western Georgia.",
+      "cultureTips": [
+        "Georgian supra (feast) is a cultural institution — expect toasts",
+        "Khachapuri and khinkali are must-try dishes",
+        "Georgia is the birthplace of wine — 8,000 years of winemaking",
+        "Tbilisi's Old Town is beautiful — walk the sulfur bath district",
+        "Georgian is its own unique language — not related to Russian or Turkish"
+      ],
+      "studentLife": "Tbilisi is a vibrant, affordable capital with a growing international student community. The city blends European and Asian influences with beautiful architecture, cafes, and nightlife.",
+      "workRights": "30 hours/week during studies. After graduation, 6-12 month temporary residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "June–July (most universities)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "November–December"
+        }
+      ]
+    },
+    {
+      "id": "uzbekistan",
+      "name": "Uzbekistan",
+      "flag": "🇺🇿",
+      "intro": "Uzbekistan is an emerging destination for Pakistani medical students, offering WHO-recognized MBBS programs at very affordable rates (USD 2,000-3,500/yr). The new 'New Uzbekistan Scholarship' program will fund 500 international students annually from 2026-27. No IELTS, no entrance exam, and a growing Pakistani student community.",
+      "region": "asia",
+      "capital": "Tashkent",
+      "language": "Uzbek",
+      "currency": {
+        "code": "UZS",
+        "name": "Uzbekistani Som",
+        "symbol": "сўм",
+        "toPkr": 2.2,
+        "rateAsOf": "2026-08"
+      },
+      "visa": {
+        "type": "Student Visa",
+        "feePkr": 8800,
+        "processingTime": "3-4 weeks",
+        "keyPoints": [
+          "No IELTS or TOEFL required",
+          "No entrance exam — direct admission on FSc results",
+          "Visa fee is very affordable",
+          "Students may work part-time with university permission",
+          "Simplified admissions via Study in Uzbekistan platform from 2026-27"
+        ]
+      },
+      "intakes": [
+        "September (Fall)",
+        "February (Spring)"
+      ],
+      "tuition": {
+        "ug": {
+          "min": 968000,
+          "max": 1672000
+        },
+        "masters": {
+          "min": 1056000,
+          "max": 1760000
+        },
+        "phd": {
+          "min": 1100000,
+          "max": 1848000
+        }
+      },
+      "living": {
+        "bigCity": {
+          "rent": 52800,
+          "food": 35200,
+          "transport": 6600,
+          "utilities": 8800,
+          "misc": 17600
+        },
+        "smallCity": {
+          "rent": 35200,
+          "food": 26400,
+          "transport": 4400,
+          "utilities": 6600,
+          "misc": 13200
+        }
+      },
+      "oneTime": {
+        "applicationFee": 8800,
+        "visaFee": 8800,
+        "insurance": 22000,
+        "flight": 160000
+      },
+      "postStudyWork": "No formal post-study work visa; some opportunities in Tashkent's growing healthcare sector",
+      "postStudyWorkMonths": 0,
+      "pathway": [
+        {
+          "title": "Choose a university",
+          "detail": "Select from WHO-listed Uzbek medical universities."
+        },
+        {
+          "title": "Apply via Study in Uzbekistan",
+          "detail": "Submit application through the new Study in Uzbekistan platform or directly."
+        },
+        {
+          "title": "Receive admission",
+          "detail": "Get the official admission letter from the university."
+        },
+        {
+          "title": "Apply for visa",
+          "detail": "Submit visa application at the Uzbek Embassy with admission letter."
+        },
+        {
+          "title": "Travel & enroll",
+          "detail": "Fly to Tashkent and complete enrollment."
+        }
+      ],
+      "documents": [
+        "Valid passport",
+        "FSc Pre-Medical marksheet",
+        "University admission letter",
+        "Academic transcripts",
+        "Passport-size photos",
+        "Medical certificate",
+        "Visa application form"
+      ],
+      "requiredTests": ["ielts"],
+      "topFields": [
+        "Medicine (MBBS)",
+        "Engineering",
+        "IT",
+        "Business"
+      ],
+      "pros": [
+        "Very affordable tuition and living costs",
+        "No IELTS or entrance exam required",
+        "New Uzbekistan Scholarship funding 500 students/year from 2026-27",
+        "Growing Pakistani student community in Tashkent"
+      ],
+      "cons": [
+        "Uzbek language needed for patient interactions",
+        "Limited post-study work options",
+        "Smaller medical education infrastructure than Russia or China",
+        "Degree recognition may need verification with PMDC for some universities"
+      ],
+      "sources": [
+        {
+          "label": "New Uzbekistan Scholarship",
+          "url": "https://kun.uz/en/news/2026/04/14/uzbekistan-to-launch-new-scholarship-program-for-foreign-students"
+        },
+        {
+          "label": "Study in Uzbekistan",
+          "url": "https://studyin.uz"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Tashkent Medical Academy",
+          "ranking": "Uzbekistan #1 Medical",
+          "programs": ["Medicine", "Dentistry", "Pharmacy"]
+        },
+        {
+          "name": "Samarkand State Medical University",
+          "ranking": "Uzbekistan #2 Medical",
+          "programs": ["Medicine", "Pediatrics"]
+        },
+        {
+          "name": "Andijan State Medical Institute",
+          "ranking": "WHO-listed",
+          "programs": ["Medicine"]
+        },
+        {
+          "name": "Bukhara State Medical Institute",
+          "ranking": "WHO-listed",
+          "programs": ["Medicine", "Nursing"]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "New Uzbekistan Scholarship (500 grants/year from 2026-27)",
+        "University-based merit scholarships",
+        "Government-funded grants for international students"
+      ],
+      "climate": "Continental — hot summers (35-40°C), cold winters (−5 to −10°C). Tashkent is milder than other regions.",
+      "cultureTips": [
+        "Uzbekistan is the heart of the Silk Road — explore Samarkand and Bukhara",
+        "Plov (rice with lamb) is the national dish — try it everywhere",
+        "Uzbeks are incredibly hospitable — expect to be invited for tea",
+        "The bazaars are vibrant — visit Chorsu Bazaar in Tashkent",
+        "Uzbek is the main language, but Russian is widely spoken"
+      ],
+      "studentLife": "Tashkent is a rapidly modernizing capital with affordable living, good public transport, and a growing international student scene. The city blends Soviet-era architecture with new developments.",
+      "workRights": "Part-time work permitted with university permission. No formal post-study work visa.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "June–July"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "November–December"
+        }
+      ]
+    },
+    {
+      "id": "kazakhstan",
+      "name": "Kazakhstan",
+      "flag": "🇰🇿",
+      "intro": "Kazakhstan offers WHO-recognized medical programs at competitive rates (USD 3,000-4,500/yr) with the government-funded Scholarship Program awarding 550 grants annually to international students. Modern universities, English-medium instruction, and a strategic location between Europe and Asia make it an attractive choice.",
+      "region": "asia",
+      "capital": "Astana",
+      "language": "Kazakh",
+      "currency": {
+        "code": "KZT",
+        "name": "Kazakhstani Tenge",
+        "symbol": "₸",
+        "toPkr": 0.58,
+        "rateAsOf": "2026-08"
+      },
+      "visa": {
+        "type": "Student Visa",
+        "feePkr": 11600,
+        "processingTime": "4-6 weeks",
+        "keyPoints": [
+          "No IELTS required for most programs",
+          "University invitation letter required",
+          "Proof of funds (approx. USD 2,000 for first year)",
+          "Students may work up to 20 hours/week with permission",
+          "Bolashak scholarship covers full tuition + stipend + accommodation"
+        ]
+      },
+      "intakes": [
+        "September (Fall)",
+        "February (Spring)"
+      ],
+      "tuition": {
+        "ug": {
+          "min": 1440000,
+          "max": 2160000
+        },
+        "masters": {
+          "min": 1600000,
+          "max": 2400000
+        },
+        "phd": {
+          "min": 1760000,
+          "max": 2640000
+        }
+      },
+      "living": {
+        "bigCity": {
+          "rent": 72500,
+          "food": 43500,
+          "transport": 8700,
+          "utilities": 11600,
+          "misc": 23200
+        },
+        "smallCity": {
+          "rent": 46400,
+          "food": 34800,
+          "transport": 5800,
+          "utilities": 8700,
+          "misc": 17400
+        }
+      },
+      "oneTime": {
+        "applicationFee": 11600,
+        "visaFee": 11600,
+        "insurance": 34800,
+        "flight": 180000
+      },
+      "postStudyWork": "1-year residence permit for job seeking after graduation",
+      "postStudyWorkMonths": 12,
+      "pathway": [
+        {
+          "title": "Choose a program",
+          "detail": "Select from WHO-listed Kazakh medical universities on the StudyIn.kz portal."
+        },
+        {
+          "title": "Apply for Scholarship Program",
+          "detail": "Submit application on StudyIn.kz by May 31 for the government scholarship."
+        },
+        {
+          "title": "Or apply directly",
+          "detail": "Apply directly to the university if self-funding."
+        },
+        {
+          "title": "Receive admission",
+          "detail": "Get the official admission letter and invitation."
+        },
+        {
+          "title": "Apply for visa",
+          "detail": "Submit visa application at the Kazakh Embassy with invitation letter."
+        },
+        {
+          "title": "Travel & enroll",
+          "detail": "Fly to Astana or Almaty and complete enrollment."
+        }
+      ],
+      "documents": [
+        "Valid passport",
+        "FSc Pre-Medical marksheet",
+        "University admission/scholarship letter",
+        "Academic transcripts",
+        "Passport-size photos",
+        "Medical certificate",
+        "Proof of funds",
+        "Visa application form"
+      ],
+      "requiredTests": ["ielts"],
+      "topFields": [
+        "Medicine (MBBS)",
+        "Engineering",
+        "IT",
+        "Oil & Gas"
+      ],
+      "pros": [
+        "Government Scholarship Program awards 550 grants annually",
+        "WHO-recognized medical degrees",
+        "No IELTS required for most programs",
+        "Modern universities with English-medium instruction"
+      ],
+      "cons": [
+        "Kazakh language needed for some programs and patient interactions",
+        "Limited Pakistani community compared to Russia or China",
+        "Winters can be very cold (−15 to −25°C in Astana)",
+        "Degree recognition may need verification with PMDC for some universities"
+      ],
+      "sources": [
+        {
+          "label": "Bolashak Scholarship Program",
+          "url": "https://bolashak.gov.kz/en/scholarship-program"
+        },
+        {
+          "label": "StudyIn.kz",
+          "url": "https://studyin.kz"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Al-Farabi Kazakh National University",
+          "ranking": "QS #150",
+          "programs": ["Medicine", "Engineering", "IT"]
+        },
+        {
+          "name": "Astana Medical University",
+          "ranking": "Kazakhstan #1 Medical",
+          "programs": ["Medicine", "Dentistry", "Pharmacy"]
+        },
+        {
+          "name": "Kazakh National Medical University",
+          "ranking": "WHO-listed",
+          "programs": ["Medicine", "Nursing"]
+        },
+        {
+          "name": "L.N. Gumilyov Eurasian National University",
+          "ranking": "QS #360",
+          "programs": ["Medicine", "Engineering", "Social Sciences"]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Government Scholarship Program (550 grants: 490 Bachelor's, 50 Master's, 10 PhD)",
+        "Bolashak International Scholarship (for Master's/PhD abroad)",
+        "University-specific merit scholarships",
+        "Scientific Internships Program (250 grants)"
+      ],
+      "climate": "Continental — hot summers (30-35°C), very cold winters (−15 to −25°C in Astana). Almaty is milder with mountains nearby.",
+      "cultureTips": [
+        "Kazakh cuisine features horse meat and fermented milk — be adventurous",
+        "Nauryz (spring festival) is the biggest celebration — March 21",
+        "Kazakhs are traditionally nomadic — hospitality is deeply valued",
+        "Astana is a modern planned capital — futuristic architecture",
+        "Kazakh is the state language, but Russian is widely used"
+      ],
+      "studentLife": "Astana and Almaty are modern cities with good public transport, affordable living, and growing international student communities. Almaty offers mountain scenery and a more relaxed vibe.",
+      "workRights": "Up to 20 hours/week during studies with permission. After graduation, 1-year residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "May 31 (Scholarship Program), June–July (self-funded)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "November–December"
+        }
+      ]
     }
   ]
 }
