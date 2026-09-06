@@ -1,8 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ScholarshipsExplorer } from "@/components/pakistan/scholarships-explorer";
 import { Crown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Scholarships — Pakistan",
+};
 
 export default function PakistanScholarshipsPage() {
   return (

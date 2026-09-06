@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { ContactForm } from "@/components/landing/contact-form";
 import { Brand } from "@/components/brand";
@@ -16,6 +17,19 @@ import { SiteFooter } from "@/components/landing/footer";
 import { Faq } from "@/components/landing/faq";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { data } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "aftermediate — your post-FSc compass",
+  description:
+    "Compare universities, entry tests, merit aggregates, scholarships and study-abroad destinations for Pakistani FSc, ICS, I.Com and A-Level students — backed by data.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "aftermediate — your post-FSc compass",
+    description:
+      "Career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
+    type: "website",
+  },
+};
 
 const rc = data.realities;
 const mdcat = rc.find((r) => r.id === "mdcat-ratio")!;

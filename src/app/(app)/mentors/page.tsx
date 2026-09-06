@@ -1,6 +1,9 @@
-"use client";
-
+import type { Metadata } from "next";
 import { MentorMatchPage } from "@/components/mentor-match/mentor-match-page";
+
+export const metadata: Metadata = {
+  title: "Mentor Match",
+};
 
 export default function MentorsPage() {
   return (

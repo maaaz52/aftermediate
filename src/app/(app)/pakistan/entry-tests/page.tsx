@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { EntryTestsExplorer } from "@/components/pakistan/entry-tests-explorer";
+
+export const metadata: Metadata = {
+  title: "Entry Tests — Pakistan",
+};
 
 export default function PakistanEntryTestsPage() {
   return (

@@ -1,8 +1,19 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { ArrowLeft, FileText, Link2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { contentFor, findTest, REGION_LABEL } from "@/lib/test-prep";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ testId: string }>;
+}): Promise<Metadata> {
+  const { testId } = await params;
+  const name = findTest(testId)?.name;
+  return { title: name ? `${name} — resources & documents` : "Test prep resources" };
+}
 
 export default async function TestPrepDocumentsPage({
   params,

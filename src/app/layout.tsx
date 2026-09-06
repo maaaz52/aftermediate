@@ -14,6 +14,7 @@ import { AuthProvider } from "@/lib/auth";
 import { ProfileSync } from "@/components/profile-sync";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.aftermediate.site"),
   title: {
     default: "aftermediate — your post-FSc compass",
     template: "%s · aftermediate",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08080d",
+  themeColor: "#f4f2eb",
 };
 
 export default function RootLayout({

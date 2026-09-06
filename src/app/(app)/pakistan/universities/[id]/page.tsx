@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, ArrowLeft, BookOpen, Target } from "lucide-react";
 import Link from "next/link";
@@ -34,6 +35,16 @@ export function generateStaticParams() {
 
 function getUni(id: string): PakistanUniversity | undefined {
   return data.universities.find((u) => u.id === id);
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const uni = getUni(id);
+  return { title: uni ? `${uni.name} — admissions & merit` : "University" };
 }
 
 export default async function UniversityPage({ params }: { params: Promise<{ id: string }> }) {

@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { TestPrepExplorer } from "@/components/abroad/test-prep-explorer";
+
+export const metadata: Metadata = {
+  title: "Entry Tests — study abroad",
+};
 
 export default async function AbroadTestPrepPage({
   searchParams,

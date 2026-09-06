@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { Store } from "lucide-react";
 import { PlatformWarRoom } from "@/components/skills/platform-war-room";
+
+export const metadata: Metadata = {
+  title: "Platforms · Platform War Room",
+};
 
 export default function SkillsPlatformsPage() {
   return (

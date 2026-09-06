@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, ArrowLeft, BookOpen, FileText, Target } from "lucide-react";
 import Link from "next/link";
@@ -16,6 +17,16 @@ export function generateStaticParams() {
 
 function getTest(id: string): EntryTest | undefined {
   return data.tests.find((t) => t.id === id);
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const test = getTest(id);
+  return { title: test ? `${test.name} — pattern, fee & prep` : "Entry test" };
 }
 
 export default async function EntryTestPage({ params }: { params: Promise<{ id: string }> }) {

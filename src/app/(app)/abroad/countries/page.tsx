@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { CountriesExplorer } from "@/components/abroad/countries-explorer";
+
+export const metadata: Metadata = {
+  title: "Countries — study abroad",
+};
 
 export default function AbroadCountriesPage() {
   return (

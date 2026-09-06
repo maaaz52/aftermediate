@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { SafarAssistant } from "@/components/abroad/safar-assistant";
+
+export const metadata: Metadata = {
+  title: "Safar A.I — study-abroad guide",
+};
 
 export default function AbroadAssistantPage() {
   return (

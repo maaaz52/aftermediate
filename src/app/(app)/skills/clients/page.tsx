@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { Handshake } from "lucide-react";
 import { ClientPlaybook } from "@/components/skills/client-playbook";
+
+export const metadata: Metadata = {
+  title: "Clients · Client Playbook",
+};
 
 export default function SkillsClientsPage() {
   return (

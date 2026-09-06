@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ManzilAssistant } from "@/components/pakistan/manzil-assistant";
+
+export const metadata: Metadata = {
+  title: "Manzil A.I — guide to studying in Pakistan",
+};
 
 export default function PakistanAssistantPage() {
   return (

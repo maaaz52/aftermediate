@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { MonitorPlay } from "lucide-react";
 import { CourseExplorer } from "@/components/skills/course-explorer";
+
+export const metadata: Metadata = {
+  title: "Courses · Course Explorer",
+};
 
 export default function SkillsCoursesPage() {
   return (

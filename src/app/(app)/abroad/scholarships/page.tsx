@@ -1,8 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { AbroadScholarshipsExplorer } from "@/components/abroad/abroad-scholarships-explorer";
 import { Crown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Scholarships — study abroad",
+};
 
 export default function AbroadScholarshipsPage() {
   return (

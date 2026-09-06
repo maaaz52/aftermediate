@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, ArrowLeft, CheckCircle2, FileText, GraduationCap, Lightbulb, Mail } from "lucide-react";
 import Link from "next/link";
@@ -13,6 +14,16 @@ export function generateStaticParams() {
 
 function getScholarship(id: string): PakistanScholarship | undefined {
   return data.scholarships.find((s) => s.id === id);
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const s = getScholarship(id);
+  return { title: s ? `${s.name} — eligibility & how to apply` : "Scholarship" };
 }
 
 const CATEGORY_LABELS: Record<string, string> = {

@@ -1,8 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { PracticeCatalog } from "@/components/practice/practice-catalog";
 import { abroadTests } from "@/lib/practice";
+
+export const metadata: Metadata = {
+  title: "Self Assessment — international tests",
+};
 
 export default function AbroadSelfAssessmentPage() {
   return (

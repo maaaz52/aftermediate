@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { UniversitiesExplorer } from "@/components/pakistan/universities-explorer";
+
+export const metadata: Metadata = {
+  title: "Universities — Pakistan",
+};
 
 export default function PakistanUniversitiesPage() {
   return (

@@ -1,7 +1,10 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { PracticeCatalog } from "@/components/practice/practice-catalog";
+
+export const metadata: Metadata = {
+  title: "Self Assessment — Pakistan entry tests",
+};
 
 export default function SelfAssessmentPage() {
   return (

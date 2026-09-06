@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { Feather } from "lucide-react";
 import { CollegeEssaysApp } from "@/components/college-essays/college-essays-app";
+
+export const metadata: Metadata = {
+  title: "College essays",
+};
 
 export default function CollegeEssaysPage() {
   return (

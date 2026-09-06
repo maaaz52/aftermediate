@@ -1,8 +1,11 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { IvyExplorer } from "@/components/abroad/ivy-explorer";
 import { Crown } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Ivy League",
+};
 
 export default function AbroadIvyLeaguePage() {
   return (

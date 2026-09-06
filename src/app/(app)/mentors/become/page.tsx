@@ -1,4 +1,9 @@
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+
+export const metadata: Metadata = {
+  title: "Become a mentor",
+};
 
 export default function BecomeMentorPage() {
   return (

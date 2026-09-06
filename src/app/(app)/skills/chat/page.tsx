@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { MessageSquareText } from "lucide-react";
 import { SkillsChat } from "@/components/skills/skills-chat";
+
+export const metadata: Metadata = {
+  title: "Hunar A.I",
+};
 
 export default function SkillsChatPage() {
   return (

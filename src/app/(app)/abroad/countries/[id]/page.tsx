@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Check, Clock, ExternalLink, GraduationCap, Plane, Wallet } from "lucide-react";
 import Link from "next/link";
@@ -17,6 +18,16 @@ export function generateStaticParams() {
 
 function getCountry(id: string): AbroadCountry | undefined {
   return data.countries.find((c) => c.id === id);
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const c = getCountry(id);
+  return { title: c ? `${c.name} — visas, fees & costs` : "Study destination" };
 }
 
 const REGION_LABEL: Record<string, string> = {
