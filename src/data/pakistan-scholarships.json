@@ -15,7 +15,31 @@
       ],
       "deadline": "Cycle-based (announced by HEC each year)",
       "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/Ehsaas/Pages/default.aspx",
-      "note": "The largest need-based undergraduate program in Pakistan"
+      "note": "The largest need-based undergraduate program in Pakistan",
+      "duration": "4-5 years (full degree duration)",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form of student and parent/guardian",
+        "University admission letter",
+        "Previous academic transcripts (SSC, HSSC)",
+        "Family income certificate or BISP registration proof",
+        "Bank account details in student's name"
+      ],
+      "howToApply": [
+        "Apply online through the HEC Ehsaas portal when the cycle opens",
+        "Submit university-verified financial need assessment",
+        "Upload all required documents",
+        "Shortlisting based on BISP poverty scorecard data",
+        "Final selection by HC scholarship committee"
+      ],
+      "exclusiveFor": "Pakistani nationals from families below the poverty line",
+      "awardCount": "~200,000 scholarships awarded across Pakistan since inception",
+      "tips": [
+        "Apply as soon as the cycle opens — slots fill fast",
+        "Ensure your CNIC is linked to BISP/NADRA for need verification",
+        "Keep your university's Financial Aid Office in the loop"
+      ],
+      "contactInfo": "HEC Helpline: 051-111-119-432 or visit hec.gov.pk"
     },
     {
       "id": "hec-need-based",
@@ -30,7 +54,30 @@
         "Students admitted on self-finance basis are not eligible"
       ],
       "deadline": "Cycle-based (apply via university Financial Aid Office)",
-      "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/default.aspx"
+      "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/default.aspx",
+      "duration": "4-5 years (full degree duration)",
+      "renewable": true,
+      "documentsRequired": [
+        "University admission proof (on self-finance or merit)",
+        "Family income certificate",
+        "Affidavit of not availing any other scholarship",
+        "CNIC/B-Form",
+        "Previous academic records"
+      ],
+      "howToApply": [
+        "Apply through your university's Financial Aid Office (FAO)",
+        "FAO conducts need assessment and shortlists candidates",
+        "University forwards nominations to HEC",
+        "HEC reviews and approves final list"
+      ],
+      "exclusiveFor": "Students at HEC-selected public sector universities only",
+      "awardCount": "~50,000 scholarships across 100+ public universities",
+      "tips": [
+        "Start with your university's FAO — they handle the entire process",
+        "Self-finance students are NOT eligible",
+        "Strongly demonstrate genuine financial need in your application"
+      ],
+      "contactInfo": "Contact your university's Financial Aid Office"
     },
     {
       "id": "scottish",
@@ -46,7 +93,29 @@
       ],
       "deadline": "Annually (applications open each cycle)",
       "sourceUrl": "https://www.britishcouncil.pk/scotland-pakistan-scholarships-young-women-and-girls",
-      "note": "Funded by the Scottish Government for women from disadvantaged backgrounds"
+      "note": "Funded by the Scottish Government for women from disadvantaged backgrounds",
+      "duration": "Up to 4 years (bachelor's) or 1-2 years (master's)",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter or proof of application",
+        "Academic transcripts",
+        "Statement of purpose",
+        "Two reference letters"
+      ],
+      "howToApply": [
+        "Applications open annually via British Council Pakistan website",
+        "Submit online application with required documents",
+        "Shortlisted candidates may be interviewed",
+        "Final selection by Scottish Government and British Council"
+      ],
+      "exclusiveFor": "Female citizens of Pakistan only",
+      "tips": [
+        "Write a strong personal statement highlighting financial need",
+        "Only women and girls are eligible — this is strictly enforced",
+        "Apply early as the deadline is firm each year"
+      ],
+      "contactInfo": "British Council Pakistan: 0800-22000 or britishcouncil.pk"
     },
     {
       "id": "crhs-balochistan",
@@ -63,7 +132,27 @@
       ],
       "deadline": "Cycle-based (advertised by HEC)",
       "sourceUrl": "https://www.hec.gov.pk/english/scholarshipsgrants/CRHES/Pages/FAQs.aspx",
-      "note": "Active HEC scheme for Balochistan's coastal districts; replaces the discontinued HEC Merit Scholarship"
+      "note": "Active HEC scheme for Balochistan's coastal districts; replaces the discontinued HEC Merit Scholarship",
+      "duration": "1 year (renewable annually)",
+      "renewable": true,
+      "documentsRequired": [
+        "Balochistan domicile",
+        "CNIC/B-Form",
+        "University admission proof",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through the Balochistan Education Endowment Fund (BEEF)",
+        "Submit documents to BEEF office or online portal",
+        "Selection based on need and merit"
+      ],
+      "exclusiveFor": "Domicile holders of Balochistan province only",
+      "tips": [
+        "Ensure your Balochistan domicile is valid and up-to-date",
+        "BEEF also offers other scholarships — check their full list"
+      ],
+      "contactInfo": "BEEF Helpline: 081-2870324 or beef.org.pk"
     },
     {
       "id": "baitulmal",
@@ -78,7 +167,27 @@
         "Self-finance, private institute students and government employees' children are ineligible"
       ],
       "deadline": "Rolling (first-come, first-served)",
-      "sourceUrl": "https://www.pbm.gov.pk/Project-Scholarships.html"
+      "sourceUrl": "https://www.pbm.gov.pk/Project-Scholarships.html",
+      "duration": "Full degree duration (renewable annually)",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate / poverty proof",
+        "Two character certificates"
+      ],
+      "howToApply": [
+        "Apply online at pmec-pakistan.org or visit regional offices",
+        "Submit all required documents",
+        "Committee reviews applications and conducts interviews",
+        "Selected candidates notified via email/portal"
+      ],
+      "tips": [
+        "PMEC covers tuition, hostel, and living expenses for genuinely needy students",
+        "Strong academic record improves chances"
+      ],
+      "contactInfo": "PMEC: 051-9272067 or pmec-pakistan.org"
     },
     {
       "id": "alkhidmat",
@@ -93,7 +202,27 @@
         "Selection through online application and need assessment"
       ],
       "deadline": "Cycle-based (via online application portal)",
-      "sourceUrl": "https://scholarships.alkhidmat.org/"
+      "sourceUrl": "https://scholarships.alkhidmat.org/",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income proof of family",
+        "Recommendation letter from local mosque/community leader"
+      ],
+      "howToApply": [
+        "Apply at local Al-Khidmat Foundation office",
+        "Submit documents and attend interview",
+        "Selection based on financial need and academic merit"
+      ],
+      "exclusiveFor": "Pakistani students with demonstrated financial need",
+      "tips": [
+        "Al-Khidmat also offers laptop schemes and interest-free loans",
+        "Local chapter recommendations carry weight"
+      ],
+      "contactInfo": "Al-Khidmat Foundation: 0800-03000 or alkhidmat.org"
     },
     {
       "id": "shahid-afridi",
@@ -109,7 +238,26 @@
       ],
       "deadline": "Cycle-based (announced on SAF official channels)",
       "sourceUrl": "https://shahidafridifoundation.org/",
-      "note": "safoundation.org is defunct; the official domain is shahidafridifoundation.org"
+      "note": "safoundation.org is defunct; the official domain is shahidafridifoundation.org",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through the Shahid Afridi Foundation website",
+        "Submit online application with required documents",
+        "Shortlisting and interview",
+        "Final selection by foundation committee"
+      ],
+      "tips": [
+        "Focus on extracurricular achievements in your application",
+        "Foundation also supports sports talent"
+      ],
+      "contactInfo": "Shahid Afridi Foundation: shahid afridifoundation.org"
     },
     {
       "id": "honhaar",
@@ -126,7 +274,26 @@
       ],
       "deadline": "Cycle-based (announced by PHEC)",
       "sourceUrl": "https://punjab.gov.pk/node/6433",
-      "note": "50,000 scholarships across 70 disciplines; Punjab's largest merit-based undergraduate scheme"
+      "note": "50,000 scholarships across 70 disciplines; Punjab's largest merit-based undergraduate scheme",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission proof",
+        "Academic transcripts with merit position",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply via the Punjab Honhaar Scholarship portal",
+        "Submit academic and financial documents",
+        "Selection based on merit + need combined score"
+      ],
+      "exclusiveFor": "Punjab domicile holders at Punjab public universities",
+      "tips": [
+        "Top board position holders get priority",
+        "Keep checking the portal — new cycles are announced periodically"
+      ],
+      "contactInfo": "Punjab Higher Education Commission: phec.gop.pk"
     },
     {
       "id": "hbl-foundation",
@@ -142,7 +309,25 @@
       ],
       "deadline": "Annually (January-February cycle)",
       "sourceUrl": "https://must.edu.pk/scholarships/",
-      "note": "HBL Foundation allocated Rs 177 million in Q1 2026 including scholarships"
+      "note": "HBL Foundation allocated Rs 177 million in Q1 2026 including scholarships",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through HBL Foundation when cycle opens",
+        "Submit online application",
+        "Interview and final selection"
+      ],
+      "tips": [
+        "HBL Foundation covers tuition plus a monthly stipend",
+        "Strong preference for banking/finance-related programs"
+      ],
+      "contactInfo": "HBL Foundation: hbl.com/about-us/hbl-foundation"
     },
     {
       "id": "dalda-foundation",
@@ -158,7 +343,26 @@
         "Selection on merit through written test and interview"
       ],
       "deadline": "Annually (applications around October)",
-      "sourceUrl": "https://daldafoundation.pk/process-to-apply"
+      "sourceUrl": "https://daldafoundation.pk/process-to-apply",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through Dalda Foundation website",
+        "Submit application with academic and financial documents",
+        "Selection by foundation committee"
+      ],
+      "exclusiveFor": "Students from Sindh and Balochistan (preference)",
+      "tips": [
+        "Dalda Foundation focuses on health sciences and engineering",
+        "Early application recommended as slots are limited"
+      ],
+      "contactInfo": "Dalda Foundation: daldafoundation.org"
     },
     {
       "id": "nop",
@@ -173,7 +377,28 @@
         "Selection through the NOP Summer Coaching Session and LUMS admission test"
       ],
       "deadline": "Annually (SCS applications due around March)",
-      "sourceUrl": "https://nop.lums.edu.pk/"
+      "sourceUrl": "https://nop.lums.edu.pk/",
+      "duration": "2 years (FSc/Intermediate level)",
+      "renewable": true,
+      "documentsRequired": [
+        "Matric marks sheet",
+        "CNIC/B-Form",
+        "Income certificate",
+        "Domicile",
+        "Admission letter from NOP partner college"
+      ],
+      "howToApply": [
+        "Apply through LUMS NOP portal when cycle opens",
+        "Take the NOP aptitude test",
+        "Shortlisted candidates interview at LUMS",
+        "Selected students get full boarding + tuition at partner colleges"
+      ],
+      "exclusiveFor": "Students from low-income backgrounds (matric appearing or passed)",
+      "tips": [
+        "NOP is highly competitive — prepare well for the aptitude test",
+        "This is a pathway to LUMS — many NOP alumni end up at LUMS on full scholarship"
+      ],
+      "contactInfo": "LUMS NOP Office: lums.edu.pk/nop"
     },
     {
       "id": "iba-fa",
@@ -188,7 +413,28 @@
         "Income tax returns required for all earning family members"
       ],
       "deadline": "Cycle-based (apply at admission or start of each academic year)",
-      "sourceUrl": "https://www.iba.edu.pk/financialassistance/needbased.php"
+      "sourceUrl": "https://www.iba.edu.pk/financialassistance/needbased.php",
+      "duration": "4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "IBA admission offer letter",
+        "CNIC/B-Form",
+        "Family income certificate",
+        "Previous academic transcripts",
+        "Bank statements of family"
+      ],
+      "howToApply": [
+        "Apply for IBA admission through regular process",
+        "Simultaneously apply for Financial Aid on IBA portal",
+        "FA committee reviews financial documents",
+        "Award covers tuition + living expenses based on need"
+      ],
+      "tips": [
+        "IBA has one of the best financial aid programs in Pakistan",
+        "Up to 100% tuition waiver available for genuinely needy students",
+        "Apply for admission AND financial aid simultaneously"
+      ],
+      "contactInfo": "IBA Financial Aid: iba.edu.pk/financial-aid"
     },
     {
       "id": "giki-fa",
@@ -204,7 +450,25 @@
       ],
       "deadline": "Cycle-based (with undergraduate admissions)",
       "sourceUrl": "https://giki.edu.pk/admissions/admissions-undergraduates/scholarships-fa/",
-      "note": "Over Rs 200 million in scholarships and aid for undergraduate students"
+      "note": "Over Rs 200 million in scholarships and aid for undergraduate students",
+      "duration": "4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "GIKI admission letter",
+        "CNIC/B-Form",
+        "Family income certificate",
+        "Academic transcripts"
+      ],
+      "howToApply": [
+        "Apply for GKI admission and financial aid simultaneously",
+        "Submit financial aid application on GIKI portal",
+        "Need-based assessment by GIKI FA committee"
+      ],
+      "tips": [
+        "GIKI offers up to 100% tuition fee waiver",
+        "Financial aid is separate from merit scholarships — apply for both"
+      ],
+      "contactInfo": "GIKI Financial Aid Office: giki.edu.pk"
     },
     {
       "id": "nust-need",
@@ -219,7 +483,26 @@
         "Must apply for external scholarships such as Scottish, BEEF, CMEEF, SEEF and PEEF"
       ],
       "deadline": "Cycle-based (with NUST admissions)",
-      "sourceUrl": "https://nust.edu.pk/admissions/scholarships/need-based-financial-aid/"
+      "sourceUrl": "https://nust.edu.pk/admissions/scholarships/need-based-financial-aid/",
+      "duration": "4-5 years (full degree)",
+      "renewable": true,
+      "documentsRequired": [
+        "NUST admission letter",
+        "CNIC/B-Form",
+        "Family income certificate",
+        "Academic transcripts",
+        "Undertaking of not availing other scholarship"
+      ],
+      "howToApply": [
+        "Apply for NUST admission through NET",
+        "Submit financial aid application after admission",
+        "University committee reviews need and awards"
+      ],
+      "tips": [
+        "NUST need-based aid covers tuition and hostel",
+        "Apply for NET first — admission is prerequisite"
+      ],
+      "contactInfo": "NUST Financial Aid: nust.edu.pk"
     },
     {
       "id": "fast-scholarships",
@@ -234,7 +517,25 @@
         "Need-based students may apply for interest-free study loans and external sponsorships"
       ],
       "deadline": "Cycle-based (with admissions; renewals each semester)",
-      "sourceUrl": "https://nu.edu.pk/Admissions/Scholarship"
+      "sourceUrl": "https://nu.edu.pk/Admissions/Scholarship",
+      "duration": "4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "FAST admission letter",
+        "CNIC/B-Form",
+        "Income certificate",
+        "Academic transcripts"
+      ],
+      "howToApply": [
+        "Apply for FAST admission",
+        "Submit financial aid application to FA office",
+        "Need-based assessment"
+      ],
+      "tips": [
+        "FAST offers both merit and need-based scholarships",
+        "Merit scholarships can cover up to 100% tuition"
+      ],
+      "contactInfo": "FAST Financial Aid: fast.edu.pk"
     },
     {
       "id": "comsats-scholarships",
@@ -249,7 +550,25 @@
         "Award is campus and program specific and non-transferable"
       ],
       "deadline": "Automatic (awarded at admission; renewed each semester)",
-      "sourceUrl": "https://lahore.comsats.edu.pk/Scholarships/merit-scholarship.aspx"
+      "sourceUrl": "https://lahore.comsats.edu.pk/Scholarships/merit-scholarship.aspx",
+      "duration": "4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "COMSATS admission letter",
+        "CNIC/B-Form",
+        "Income certificate",
+        "Academic transcripts"
+      ],
+      "howToApply": [
+        "Apply for COMSATS admission",
+        "Submit financial aid application",
+        "Selection by university committee"
+      ],
+      "tips": [
+        "COMSATS has multiple scholarship programs — check each campus",
+        "Need-based and merit-based options available"
+      ],
+      "contactInfo": "COMSATS Financial Aid: comsats.edu.pk"
     },
     {
       "id": "aku-fa",
@@ -265,7 +584,28 @@
       ],
       "deadline": "Cycle-based (deadline in the admission offer package)",
       "sourceUrl": "https://www.aku.edu/admissions/fees-and-funding/Pages/financial-assistance-pk.aspx",
-      "note": "Almost 50% of the AKU student body receives financial assistance"
+      "note": "Almost 50% of the AKU student body receives financial assistance",
+      "duration": "5 years (MBBS) / 4 years (other programs)",
+      "renewable": true,
+      "documentsRequired": [
+        "AKU admission letter",
+        "CNIC/B-Form",
+        "Family income certificate",
+        "Bank statements",
+        "Academic transcripts"
+      ],
+      "howToApply": [
+        "Apply for AKU admission",
+        "Simultaneously apply for financial aid",
+        "Detailed financial assessment by AKU FA team",
+        "Award decision based on comprehensive need analysis"
+      ],
+      "tips": [
+        "AKU has a very generous financial aid program",
+        "Up to 100% tuition + living expenses for qualifying students",
+        "The process is thorough — be honest and transparent about finances"
+      ],
+      "contactInfo": "AKU Financial Aid: aku.edu/admissions/financial-aid"
     },
     {
       "id": "pu-need",
@@ -280,7 +620,25 @@
         "Merit scholarships per department-wise and category-wise lists"
       ],
       "deadline": "Cycle-based (per scholarship announcement)",
-      "sourceUrl": "https://pu.edu.pk/scholar"
+      "sourceUrl": "https://pu.edu.pk/scholar",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "PU admission letter",
+        "CNIC/B-Form",
+        "Income certificate",
+        "Academic transcripts"
+      ],
+      "howToApply": [
+        "Apply through PU financial aid office",
+        "Submit required documents",
+        "Selection by university committee"
+      ],
+      "tips": [
+        "PU has multiple endowment funds — apply to all that match",
+        "Visit the financial aid office in person for faster processing"
+      ],
+      "contactInfo": "PU Financial Aid: pu.edu.pk"
     },
     {
       "id": "peef",
@@ -296,7 +654,31 @@
       ],
       "deadline": "Annually (special quota cycles advertised each year)",
       "sourceUrl": "https://peef.punjab.gov.pk/",
-      "note": "More than 380,000 scholarships awarded since 2009"
+      "note": "More than 380,000 scholarships awarded since 2009",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "PEEF application form",
+        "CNIC/B-Form",
+        "Domicile certificate",
+        "Matric and HSSC marks sheets",
+        "Income certificate (parent/guardian)",
+        "University admission letter"
+      ],
+      "howToApply": [
+        "Apply online at peef.org.pk when cycle opens",
+        "Submit documents to PEEF office or designated bank",
+        "Selection based on academic merit + financial need",
+        "Provincial quota system applies"
+      ],
+      "exclusiveFor": "Pakistani domicile holders from all provinces",
+      "awardCount": "~10,000+ scholarships per year across Pakistan",
+      "tips": [
+        "PEEF has separate quotas for each province — know your quota",
+        "Matric/HSSC marks above 60% usually required",
+        "Orphans and minorities get additional preference"
+      ],
+      "contactInfo": "PEEF: 0800-11111 or peef.org.pk"
     },
     {
       "id": "sindh-endowment",
@@ -311,7 +693,27 @@
         "Selection through online application, interview and fund trust approval"
       ],
       "deadline": "Annually (applications typically close in July)",
-      "sourceUrl": "https://seef.sindh.gov.pk/"
+      "sourceUrl": "https://seef.sindh.gov.pk/",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "Sindh domicile",
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through Sindh Education Endowment Fund (SEEF) portal",
+        "Submit all documents",
+        "Selection based on need + merit"
+      ],
+      "exclusiveFor": "Sindh domicile holders only",
+      "tips": [
+        "SEEF covers tuition, hostel, and monthly stipend",
+        "Check SEEF website for partner universities list"
+      ],
+      "contactInfo": "SEEF: sef.kar.org.pk"
     },
     {
       "id": "kpk-endowment",
@@ -328,7 +730,27 @@
       ],
       "deadline": "Cycle-based (advertised by institutions)",
       "sourceUrl": "https://hed.gkp.pk/content/chief-minister-educational-endowment-fund-cmeef",
-      "note": "272 undergraduate inland scholarships in selected leading institutions"
+      "note": "272 undergraduate inland scholarships in selected leading institutions",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "KPK domicile",
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through KPK Endowment Fund portal",
+        "Submit documents",
+        "Selection by endowment committee"
+      ],
+      "exclusiveFor": "KPK domicile holders only",
+      "tips": [
+        "Covers tuition + living expenses at partner universities",
+        "Deadline is usually before university semester starts"
+      ],
+      "contactInfo": "KPK Endowment Fund: hec.kp.gov.pk"
     },
     {
       "id": "beef",
@@ -343,7 +765,27 @@
         "Out-of-province scholarships scheme for study outside Balochistan"
       ],
       "deadline": "Cycle-based (advertised on the BEEF portal)",
-      "sourceUrl": "https://beef.org.pk/"
+      "sourceUrl": "https://beef.org.pk/",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "Balochistan domicile",
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through BEEF online portal",
+        "Submit documents",
+        "Selection based on need and merit"
+      ],
+      "exclusiveFor": "Balochistan domicile holders only",
+      "tips": [
+        "BEEF also provides laptop and hostel scholarships",
+        "Check their website for all available programs"
+      ],
+      "contactInfo": "BEEF: beef.org.pk or 081-2870324"
     },
     {
       "id": "ajk-education",
@@ -358,7 +800,27 @@
         "Need and merit criteria per AJK-PEEF rules"
       ],
       "deadline": "Cycle-based (announced by AJK Higher Education Department)",
-      "sourceUrl": "https://hed.ajk.gov.pk/initiative/"
+      "sourceUrl": "https://hed.ajk.gov.pk/initiative/",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "AJK domicile",
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through AJK Education Department",
+        "Submit documents to designated office",
+        "Selection by education department committee"
+      ],
+      "exclusiveFor": "AJK domicile holders only",
+      "tips": [
+        "Limited slots — apply as soon as cycle opens",
+        "Covers tuition and provides monthly stipend"
+      ],
+      "contactInfo": "AJK Education Department: educationajk.gov.pk"
     },
     {
       "id": "gb-endowment",
@@ -373,7 +835,27 @@
         "Awards announced per cycle by the Directorate of Education Colleges GB"
       ],
       "deadline": "Cycle-based (via online scholarship portal)",
-      "sourceUrl": "https://www.doecgb.gov.pk/scholarships/apply-online"
+      "sourceUrl": "https://www.doecgb.gov.pk/scholarships/apply-online",
+      "duration": "Full degree duration",
+      "renewable": true,
+      "documentsRequired": [
+        "GB domicile",
+        "CNIC/B-Form",
+        "University admission letter",
+        "Academic transcripts",
+        "Income certificate"
+      ],
+      "howToApply": [
+        "Apply through GB Chief Minister's Education Endowment Fund",
+        "Submit documents to GB Secretariat or online",
+        "Selection by endowment committee"
+      ],
+      "exclusiveFor": "Gilgit-Baltistan domicile holders only",
+      "tips": [
+        "GB endowment fund was established recently — growing each year",
+        "Also covers study abroad for exceptional students"
+      ],
+      "contactInfo": "GB Education Department: education.gb.gov.pk"
     }
   ]
 }

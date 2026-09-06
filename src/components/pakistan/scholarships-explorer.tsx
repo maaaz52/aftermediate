@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { ExternalLink, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -52,14 +53,17 @@ const GROUP_META: Record<ScholarshipCategory, { title: string; blurb: string }> 
 
 function ScholarshipCard({ s }: { s: PakistanScholarship }) {
   return (
-    <div className="card-glass flex h-full flex-col rounded-2xl p-5">
+    <Link
+      href={`/pakistan/scholarships/${s.id}`}
+      className="card-glass flex h-full flex-col rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:shadow-md"
+    >
       <h3 className="text-base font-bold text-ink">{s.name}</h3>
       <p className="mt-1 text-xs text-muted">
         {s.funder} · {s.level}
       </p>
       <p className="mt-1.5 text-xs font-medium text-emerald">{s.coverage}</p>
       <ul className="mt-3 flex-1 space-y-1.5">
-        {s.eligibility.map((e) => (
+        {s.eligibility.slice(0, 3).map((e) => (
           <li key={e} className="flex gap-2 text-xs text-muted">
             <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-saffron" />
             {e}
@@ -69,17 +73,12 @@ function ScholarshipCard({ s }: { s: PakistanScholarship }) {
       {s.note && <p className="mt-3 text-[11px] italic text-faint">{s.note}</p>}
       <div className="mt-4 flex items-center justify-between border-t border-line pt-3">
         <span className="font-mono text-[11px] text-faint">{s.deadline}</span>
-        <a
-          href={s.sourceUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-saffron hover:underline"
-        >
+        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-saffron">
+          View details
           <ExternalLink className="h-3 w-3" />
-          Official page
-        </a>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }
 

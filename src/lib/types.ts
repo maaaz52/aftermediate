@@ -179,6 +179,15 @@ export interface PakistanScholarship {
   deadline: string;
   sourceUrl: string;
   note?: string;
+  /** Extended fields for detail pages */
+  duration?: string;
+  renewable?: boolean;
+  documentsRequired?: string[];
+  howToApply?: string[];
+  exclusiveFor?: string;
+  awardCount?: string;
+  tips?: string[];
+  contactInfo?: string;
 }
 
 export type SalaryLevel = "entry" | "mid" | "senior";
