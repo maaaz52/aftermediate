@@ -6,8 +6,13 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import coursesJson from "@/data/skills-courses.json";
 import { pkr, pathProgress, skillPaths, sortByKey, trackCounts, useLocalStorage } from "@/lib/skills";
+import type { CourseEpisode } from "@/components/skills/course-player";
 
-type Course = (typeof coursesJson)[number] & { videoId?: string; playlistId?: string };
+type Course = (typeof coursesJson)[number] & {
+  videoId?: string;
+  playlistId?: string;
+  episodes?: CourseEpisode[];
+};
 type Track = Course["track"];
 type Level = Course["level"];
 type SortKey = "rating" | "hours" | "cost" | "title";
@@ -293,11 +298,23 @@ export function CourseExplorer() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {filtered.map((c) => {
                 const focused = pathFocus?.includes(c.id);
+                const hasVideo = Boolean(c.videoId || c.playlistId || c.episodes?.length);
                 return (
                   <div
                     key={c.id}
-                    className={cn("pixel-border bg-surface p-4", focused && "ring-2 ring-accent/70")}
+                    className={cn(
+                      "relative pixel-border bg-surface p-4",
+                      focused && "ring-2 ring-accent/70",
+                      hasVideo && "transition-transform hover:-translate-y-0.5"
+                    )}
                   >
+                    {hasVideo && (
+                      <Link
+                        href={`/skills/courses/${c.id}`}
+                        aria-label={`Open ${c.title}`}
+                        className="absolute inset-0 z-0 rounded-[inherit]"
+                      />
+                    )}
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
                         <h3 className="truncate text-sm font-bold text-ink">{c.title}</h3>
@@ -310,13 +327,13 @@ export function CourseExplorer() {
                       <span className="font-semibold">Why:</span> {c.why}
                     </p>
                     <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                      {c.videoId || c.playlistId ? (
+                      {hasVideo ? (
                         <Link
                           href={`/skills/courses/${c.id}`}
-                          className="inline-flex items-center gap-1.5 rounded-md bg-accent px-2.5 py-1 text-[11px] font-bold text-background transition-colors hover:brightness-110"
+                          className="relative z-10 inline-flex items-center gap-1.5 rounded-md bg-accent px-2.5 py-1 text-[11px] font-bold text-background transition-colors hover:brightness-110"
                         >
                           <Play className="h-3 w-3 fill-current" />
-                          Watch course
+                          {c.episodes?.length ? `${c.episodes.length} episodes` : "Watch course"}
                         </Link>
                       ) : (
                         <span className="rounded-md bg-surface-2 px-2 py-0.5 text-[11px] font-bold text-muted">
@@ -349,7 +366,7 @@ export function CourseExplorer() {
                       href={c.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:underline"
+                      className="relative z-10 mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:underline"
                     >
                       Open course <ExternalLink className="h-3 w-3" />
                     </a>

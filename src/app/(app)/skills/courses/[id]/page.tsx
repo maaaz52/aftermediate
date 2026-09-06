@@ -3,7 +3,7 @@
 import * as React from "react";
 import { use } from "react";
 import Link from "next/link";
-import { ArrowLeft, Award, Check, Clock, ExternalLink } from "lucide-react";
+import { ArrowLeft, Award, Check, Clock, ExternalLink, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 import coursesJson from "@/data/skills-courses.json";
 import { pkr, useLocalStorage } from "@/lib/skills";
@@ -39,7 +39,7 @@ export default function CourseDetailPage({ params }: { params: Promise<{ id: str
 
   const [watchedArr, setWatchedArr] = useLocalStorage<string[]>("aftermediate:skills:watched", []);
   const watched = watchedArr.includes(id);
-  const [watchedEps, setWatchedEps] = useLocalStorage<string[]>(
+  const [watchedEps] = useLocalStorage<string[]>(
     `aftermediate:skills:watched-episodes:${id}`,
     []
   );
@@ -60,12 +60,6 @@ export default function CourseDetailPage({ params }: { params: Promise<{ id: str
   function toggleWatched() {
     setWatchedArr((prev) =>
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
-  }
-
-  function toggleEpisodeWatched(epId: string) {
-    setWatchedEps((prev) =>
-      prev.includes(epId) ? prev.filter((x) => x !== epId) : [...prev, epId]
     );
   }
 
@@ -131,18 +125,45 @@ export default function CourseDetailPage({ params }: { params: Promise<{ id: str
         <span className="font-semibold">Why:</span> {course.why}
       </p>
 
-      {hasVideo && (
-        <div className="mt-8">
-          <CoursePlayer
-            episodes={course.episodes}
-            videoId={course.videoId}
-            playlistId={course.playlistId}
-            title={course.title}
-            watched={course.episodes ? watchedEps : undefined}
-            onToggleWatched={course.episodes ? toggleEpisodeWatched : undefined}
-          />
-        </div>
-      )}
+      {hasVideo &&
+        (course.episodes?.length ? (
+          <div className="mt-8">
+            <p className="truncate px-1 font-mono text-[11px] font-bold uppercase tracking-widest text-muted">
+              Course lectures · {course.title}
+            </p>
+            <ol className="mt-2 space-y-1.5">
+              {course.episodes.map((e, i) => {
+                const isOn = watchedEps.includes(e.id);
+                return (
+                  <li key={e.id}>
+                    <Link
+                      href={`/skills/courses/${course.id}/${e.id}`}
+                      className="flex items-center gap-3 rounded-lg border-2 border-surface-2 bg-surface px-3 py-2 transition-colors hover:border-accent/40"
+                    >
+                      <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-surface-2 font-mono text-[11px] font-bold text-muted">
+                        {isOn ? (
+                          <Check className="h-3.5 w-3.5 text-emerald" strokeWidth={3} />
+                        ) : (
+                          i + 1
+                        )}
+                      </span>
+                      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-ink">{e.title}</span>
+                      <Play className="h-3.5 w-3.5 shrink-0 text-accent" />
+                    </Link>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+        ) : (
+          <div className="mt-8">
+            <CoursePlayer
+              videoId={course.videoId}
+              playlistId={course.playlistId}
+              title={course.title}
+            />
+          </div>
+        ))}
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <a

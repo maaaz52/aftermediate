@@ -2,12 +2,14 @@
 
 import { Badge } from "@/components/ui/badge";
 import { IvyExplorer } from "@/components/abroad/ivy-explorer";
+import { Crown } from "lucide-react";
 
 export default function AbroadIvyLeaguePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Education Abroad</Badge>
+        <Crown className="h-4 w-4 text-amber" />
         <span className="font-mono text-xs text-faint">8 schools · sourced data</span>
       </div>
       <h1
