@@ -10,10 +10,10 @@ Sentry.init({
   // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.
   tracesSampleRate: 1,
 
+  // Suppress request/response bodies and user info: chat request bodies carry
+  // student context (marks, budget) and OCR bodies carry base64 marksheets.
   dataCollection: {
-    // To disable sending user data and HTTP bodies, uncomment the lines below. For more info visit:
-    // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#dataCollection
-    // userInfo: false,
-    // httpBodies: [],
+    userInfo: false,
+    httpBodies: [],
   },
 });

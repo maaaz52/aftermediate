@@ -59,6 +59,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ sent: false, reason: "rate-limited" });
     }
 
+    // Record the notification before sending so two concurrent requests for
+    // the same entry can't both pass the cooldown read and double-email.
+    const now = new Date().toISOString();
+    const updated = watchlist.map((e) => (e.id === entryId ? { ...e, lastNotifiedAt: now } : e));
+    await supabase.from("profiles").update({ watchlist: updated }).eq("id", user.id);
+
     const resendRes = await sendEmail({
       from: "Merit Alerts <watchlist@aftermediate.site>",
       to: userEmail,
@@ -76,13 +82,6 @@ export async function POST(req: Request) {
 
     if (!resendRes.ok) {
       return NextResponse.json({ sent: false, reason: "email-failed" });
-    }
-
-    // Record when we last notified so the next request is checked against this.
-    if (entry) {
-      const now = new Date().toISOString();
-      const updated = watchlist.map((e) => (e.id === entryId ? { ...e, lastNotifiedAt: now } : e));
-      await supabase.from("profiles").update({ watchlist: updated }).eq("id", user.id);
     }
 
     return NextResponse.json({ sent: true });

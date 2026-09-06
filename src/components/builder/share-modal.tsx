@@ -3,7 +3,7 @@
 import { Check, Copy, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import type { ResumeData, TemplateId } from "@/lib/resume-model";
-import { escapeHtml } from "@/lib/escape-html";
+import { escapeHtml, safeExternalUrl } from "@/lib/escape-html";
 
 export interface ShareModalProps {
   open: boolean;
@@ -88,8 +88,8 @@ function headerHtml(resume: ResumeData, template: TemplateId): string {
     .join(" · ");
   const socials: string[] = [];
   if (identity.email) socials.push(`<a href="mailto:${escapeHtml(identity.email)}">${escapeHtml(identity.email)}</a>`);
-  if (identity.github) socials.push(`<a href="${escapeHtml(identity.github)}">${escapeHtml(identity.github.replace(/^https?:\/\//, ""))}</a>`);
-  if (identity.linkedin) socials.push(`<a href="${escapeHtml(identity.linkedin)}">${escapeHtml(identity.linkedin.replace(/^https?:\/\//, ""))}</a>`);
+  if (identity.github) socials.push(`<a href="${escapeHtml(safeExternalUrl(identity.github))}">${escapeHtml(identity.github.replace(/^https?:\/\//, ""))}</a>`);
+  if (identity.linkedin) socials.push(`<a href="${escapeHtml(safeExternalUrl(identity.linkedin))}">${escapeHtml(identity.linkedin.replace(/^https?:\/\//, ""))}</a>`);
   const socialLine = socials.length > 0 ? `<p class="contact">${socials.join(" · ")}</p>` : "";
   const role = identity.targetRole ? `<p class="role">${escapeHtml(identity.targetRole)}</p>` : "";
 

@@ -10,6 +10,7 @@
 
 interface Bucket {
   windowStart: number;
+  windowMs: number;
   count: number;
 }
 
@@ -21,7 +22,7 @@ function prune(now: number) {
   if (now - lastPrune < 60_000) return;
   lastPrune = now;
   for (const [key, bucket] of buckets) {
-    if (now - bucket.windowStart > 60_000) buckets.delete(key);
+    if (now - bucket.windowStart > bucket.windowMs) buckets.delete(key);
   }
 }
 
@@ -34,7 +35,7 @@ export function checkRateLimit(
   prune(now);
   const bucket = buckets.get(key);
   if (!bucket || now - bucket.windowStart >= windowMs) {
-    buckets.set(key, { windowStart: now, count: 1 });
+    buckets.set(key, { windowStart: now, windowMs, count: 1 });
     return true;
   }
   if (bucket.count >= max) return false;

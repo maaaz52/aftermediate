@@ -4,11 +4,13 @@ import { assertServerEnv } from "@/lib/server-env";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { escapeHtml } from "@/lib/escape-html";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { parseJsonBody } from "@/lib/http";
 import { sendEmail } from "@/lib/email";
 import { hashOtpCode } from "@/lib/otp";
 
 export const runtime = "nodejs";
 
+const MAX_BODY_BYTES = 16 * 1024;
 const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
 const RESEND_COOLDOWN_MS = 60 * 1000; // 60s between sends per email
 /** Per-IP cap: an attacker rotating addresses must not be able to spam Resend. */
@@ -27,10 +29,12 @@ export async function POST(req: Request) {
     const OTP_SECRET = env.otpHmacSecret as string;
     const RESEND_API_KEY = env.resendApiKey;
 
-    const body = await req.json().catch(() => null);
-    const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
-    const password = typeof body?.password === "string" ? body.password : "";
-    const name = typeof body?.name === "string" ? body.name.trim() : "";
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
+    const body = (bodyResult.value ?? {}) as Record<string, unknown>;
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const password = typeof body.password === "string" ? body.password : "";
+    const name = typeof body.name === "string" ? body.name.trim() : "";
 
     if (!EMAIL_RE.test(email)) {
       return jsonError("Enter a valid email address.", 400);

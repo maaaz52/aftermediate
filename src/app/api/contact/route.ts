@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { sendEmail } from "@/lib/email";
@@ -47,7 +48,9 @@ export async function POST(req: Request) {
     if (!message || message.length > 5000) return jsonError("Enter a message.", 400);
     if (rating !== null && (rating < 1 || rating > 5)) return jsonError("Rating must be 1-5.", 400);
 
-    const { error } = await supabase.from("contact_messages").insert({
+    // Admin client: the anon role is revoked from contact_messages (RLS), so
+    // this validated, rate-limited route is the only insert path.
+    const { error } = await createAdminClient().from("contact_messages").insert({
       user_id: user?.id ?? null,
       name,
       email,

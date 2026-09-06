@@ -10,6 +10,7 @@ import {
   type TemplateId,
 } from "@/lib/resume-model";
 import { cn } from "@/lib/utils";
+import { safeExternalUrl } from "@/lib/escape-html";
 
 export interface ResumeCanvasProps {
   resume: ResumeData;
@@ -85,7 +86,7 @@ export function ResumeCanvas({ resume, template, mode, updateBullet, ref }: Resu
 
   const contactParts = [identity.email, identity.phone, identity.location].filter(Boolean);
   const contactLine = contactParts.join(" · ");
-  const socials = [identity.github, identity.linkedin].filter(Boolean);
+  const socials = [identity.github, identity.linkedin].filter(Boolean).map(safeExternalUrl);
 
   const skillCount = skills.tech.length + skills.soft.length;
   const projectEntries = projects.entries.filter((e) => e.title.trim() || e.description.trim());

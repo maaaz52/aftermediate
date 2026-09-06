@@ -229,8 +229,9 @@ create table if not exists public.contact_messages (
 );
 
 alter table public.contact_messages enable row level security;
-create policy "contact_insert_own" on public.contact_messages
-  for insert with check (auth.uid() = user_id or user_id is null);
+-- Inserts go through the server route (/api/contact), never the client, so the
+-- anon/authenticated roles are revoked from the table entirely.
+revoke insert on public.contact_messages from anon, authenticated;
 create policy "contact_select_own" on public.contact_messages
   for select using (auth.uid() = user_id);
 
@@ -253,8 +254,8 @@ create table if not exists public.mentor_applications (
 );
 
 alter table public.mentor_applications enable row level security;
-create policy "mentor_insert_own" on public.mentor_applications
-  for insert with check (auth.uid() = user_id or user_id is null);
+-- Inserts go through the server route (/api/mentors/apply), never the client.
+revoke insert on public.mentor_applications from anon, authenticated;
 create policy "mentor_select_own" on public.mentor_applications
   for select using (auth.uid() = user_id);
 

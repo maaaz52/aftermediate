@@ -1,4 +1,5 @@
 import type { ChatMessage } from "@/lib/chat-request";
+import { escapeHtml } from "@/lib/escape-html";
 
 export async function exportChatAsPDF(
   messages: ChatMessage[],
@@ -13,8 +14,8 @@ export async function exportChatAsPDF(
   const header = document.createElement("div");
   header.style.cssText = "margin-bottom: 24px; border-bottom: 2px solid #e5e5e5; padding-bottom: 16px;";
   header.innerHTML = `
-    <h1 style="margin:0 0 4px;font-size:20px;font-weight:700;">${personaLabel}</h1>
-    <p style="margin:0;font-size:13px;color:#666;">${title}</p>
+    <h1 style="margin:0 0 4px;font-size:20px;font-weight:700;">${escapeHtml(personaLabel)}</h1>
+    <p style="margin:0;font-size:13px;color:#666;">${escapeHtml(title)}</p>
     <p style="margin:4px 0 0;font-size:11px;color:#999;">Exported from Aftermediate</p>
   `;
   container.appendChild(header);

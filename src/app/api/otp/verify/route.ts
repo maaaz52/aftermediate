@@ -2,10 +2,16 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { assertServerEnv } from "@/lib/server-env";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { hashOtpCode, otpMatches } from "@/lib/otp";
+import { checkRateLimit } from "@/lib/rate-limit";
+import { parseJsonBody } from "@/lib/http";
 
 export const runtime = "nodejs";
 
+const MAX_BODY_BYTES = 16 * 1024;
 const MAX_ATTEMPTS = 5;
+/** Per-IP cap: verifying is the brute-force surface, so it is limited like send. */
+const IP_VERIFY_MAX = 20;
+const IP_WINDOW_MS = 60 * 1000;
 
 export async function POST(req: Request) {
   try {
@@ -13,10 +19,19 @@ export async function POST(req: Request) {
     const OTP_SECRET = env.otpHmacSecret as string;
     const SERVICE_ROLE_KEY = env.supabaseServiceRoleKey;
 
-    const body = await req.json().catch(() => null);
-    const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
-    const code = typeof body?.code === "string" ? body.code.trim() : "";
-    const password = typeof body?.password === "string" ? body.password : "";
+    // Vercel overwrites x-forwarded-for at the edge, so the first entry is the
+    // client address, not a header the caller controls.
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (!checkRateLimit(`otp-verify:${ip}`, IP_VERIFY_MAX, IP_WINDOW_MS)) {
+      return jsonError("Too many attempts. Try again later.", 429);
+    }
+
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
+    const body = (bodyResult.value ?? {}) as Record<string, unknown>;
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const code = typeof body.code === "string" ? body.code.trim() : "";
+    const password = typeof body.password === "string" ? body.password : "";
 
     if (!email || !/^\d{6}$/.test(code)) {
       return jsonError("Enter the 6-digit code from your email.", 400);
@@ -41,15 +56,16 @@ export async function POST(req: Request) {
 
     const record = rows[0];
 
-    // Expired?
+    // Expired? The row is left in place so /api/otp/send's resend cooldown
+    // still sees a recent code and cannot be used to bypass the 60s brake.
     if (new Date(record.expires_at).getTime() < Date.now()) {
-      await admin.from("otp_codes").delete().eq("id", record.id);
       return jsonError("That code has expired. Request a new one.", 400);
     }
 
-    // Too many attempts?
+    // Too many attempts? Same as above: keep the row so the send cooldown still
+    // applies, otherwise burning a code's 5 guesses would clear the cooldown
+    // and let an attacker re-issue codes instantly.
     if (record.attempts >= MAX_ATTEMPTS) {
-      await admin.from("otp_codes").delete().eq("id", record.id);
       return jsonError("Too many incorrect attempts. Request a new code.", 400);
     }
 
