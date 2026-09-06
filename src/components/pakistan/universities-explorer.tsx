@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, ExternalLink, Search } from "lucide-react";
+import { Search } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -53,151 +54,28 @@ function Chip({
   );
 }
 
-function UniversityCard({
-  u,
-  open,
-  onToggle,
-}: {
-  u: PakistanUniversity;
-  open: boolean;
-  onToggle: () => void;
-}) {
+function UniversityCard({ u }: { u: PakistanUniversity }) {
   return (
-    <div className="card-glass overflow-hidden rounded-2xl">
-      <h3>
-        <button
-          type="button"
-          id={`accordion-trigger-${u.id}`}
-          onClick={onToggle}
-          aria-expanded={open}
-          aria-controls={`accordion-panel-${u.id}`}
-          className="flex w-full items-center gap-4 p-5 text-left"
-        >
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-saffron/15 font-mono text-lg font-bold text-saffron">
-          {u.short.charAt(0)}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-lg font-bold text-ink">{u.short}</span>
-            <Badge variant="muted">{u.city}</Badge>
-            <Badge variant={u.type === "public" ? "emerald" : "info"}>{u.type}</Badge>
-          </div>
-          <p className="mt-0.5 truncate text-xs text-muted">{u.name}</p>
-        </div>
-        <div className="hidden text-right sm:block">
-          <p className="font-mono text-xs text-saffron">{u.ranking.label}</p>
-          <p className="mt-0.5 text-[11px] text-faint">Test: {u.entryTest}</p>
-        </div>
-        <ChevronDown
-          className={cn(
-            "h-4 w-4 shrink-0 text-faint transition-transform",
-            open && "rotate-180"
-          )}
-        />
-        </button>
-      </h3>
-
-      <div
-        hidden={!open}
-        id={`accordion-panel-${u.id}`}
-        role="region"
-        aria-labelledby={`accordion-trigger-${u.id}`}
-        className="border-t border-line p-5"
-      >
-          <p className="text-sm leading-relaxed text-muted">{u.intro}</p>
-
-          <div className="mt-5 grid gap-5 lg:grid-cols-2">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">
-                Admission process
-              </p>
-              <ol className="mt-3 space-y-3">
-                {u.admissionSteps.map((step, i) => (
-                  <li key={step.title} className="flex gap-3">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-saffron/15 font-mono text-[10px] font-bold text-saffron">
-                      {i + 1}
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink">{step.title}</p>
-                      <p className="text-xs text-muted">{step.detail}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            <div className="space-y-5">
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">
-                  Ranking
-                </p>
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <Badge variant="saffron">{u.ranking.label}</Badge>
-                  <a
-                    href={u.ranking.sourceUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs text-muted underline-offset-2 hover:text-saffron hover:underline"
-                  >
-                    source
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">
-                  Fees
-                </p>
-                <p className="mt-2 text-sm text-ink">{u.fees.summary}</p>
-                {u.fees.programFees && u.fees.programFees.length > 0 && (
-                  <div className="mt-2 overflow-hidden rounded-lg border border-line">
-                    {u.fees.programFees.map((pf) => (
-                      <div
-                        key={pf.program}
-                        className="flex items-center justify-between border-b border-line/60 px-3 py-2 text-xs last:border-0"
-                      >
-                        <span className="text-muted">{pf.program}</span>
-                        <span className="font-mono text-ink">
-                          PKR {pf.perYear.toLocaleString()}/yr
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">
-              Best for
-            </p>
-            <div className="mt-3 grid gap-2 sm:grid-cols-3">
-              {u.bestFields.map((bf) => (
-                <div key={bf.field} className="rounded-lg bg-surface-2/60 px-3 py-2">
-                  <p className="text-sm font-semibold text-ink">{bf.field}</p>
-                  <p className="mt-0.5 text-xs text-muted">{bf.why}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-line pt-4">
-            {u.sourceUrls.map((url) => (
-              <a
-                key={url}
-                href={url}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-medium text-saffron hover:underline"
-              >
-                <ExternalLink className="h-3 w-3" />
-                Official page
-              </a>
-            ))}
-          </div>
-        </div>
+    <Link
+      href={`/pakistan/universities/${u.id}`}
+      className="card-glass flex items-center gap-4 rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-saffron/15 font-mono text-lg font-bold text-saffron">
+        {u.short.charAt(0)}
       </div>
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-lg font-bold text-ink">{u.short}</span>
+          <Badge variant="muted">{u.city}</Badge>
+          <Badge variant={u.type === "public" ? "emerald" : "info"}>{u.type}</Badge>
+        </div>
+        <p className="mt-0.5 truncate text-xs text-muted">{u.name}</p>
+      </div>
+      <div className="hidden text-right sm:block">
+        <p className="font-mono text-xs text-saffron">{u.ranking.label}</p>
+        <p className="mt-0.5 text-[11px] text-faint">Test: {u.entryTest}</p>
+      </div>
+    </Link>
   );
 }
 
@@ -206,15 +84,8 @@ export function UniversitiesExplorer() {
   const [query, setQuery] = React.useState("");
   const [stream, setStream] = React.useState<Stream | "all">(profile.stream ?? "all");
   const [type, setType] = React.useState<"all" | "public" | "private">("all");
-  const [openId, setOpenId] = React.useState<string | null>(null);
 
   const filtered = filterUniversities(data.universities, { query, stream, type });
-
-  // Reset the open card if it is no longer in the filtered list (React's
-  // render-time state adjustment pattern for deriving state from props/filters).
-  if (openId && !filtered.some((u) => u.id === openId)) {
-    setOpenId(null);
-  }
 
   return (
     <div>
@@ -247,12 +118,7 @@ export function UniversitiesExplorer() {
 
       <div className="mt-5 space-y-3">
         {filtered.map((u) => (
-          <UniversityCard
-            key={u.id}
-            u={u}
-            open={openId === u.id}
-            onToggle={() => setOpenId(openId === u.id ? null : u.id)}
-          />
+          <UniversityCard key={u.id} u={u} />
         ))}
         {filtered.length === 0 && (
           <p className="py-10 text-center text-sm text-faint">
