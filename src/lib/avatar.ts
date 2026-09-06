@@ -30,25 +30,12 @@ const styleCache = new Map<string, Style>();
 
 function getStyle(styleId: string, definition: (typeof AVATAR_STYLES)[number]["definition"]): Style {
   if (!styleCache.has(styleId)) {
-    styleCache.set(styleId, new Style(definition as any));
+    styleCache.set(styleId, new Style(definition as never));
   }
   return styleCache.get(styleId)!;
 }
 
 export function generateAvatarSvg(styleId: AvatarStyleId, seed: string): string {
-  const styleDef = AVATAR_STYLES.find((s) => s.id === styleId);
-  if (!styleDef) {
-    const fallback = AVATAR_STYLES[0];
-    return new Avatar(getStyle(fallback.id, fallback.definition), { seed, size: 96 }).toString();
-  }
+  const styleDef = AVATAR_STYLES.find((s) => s.id === styleId) ?? AVATAR_STYLES[0];
   return new Avatar(getStyle(styleDef.id, styleDef.definition), { seed, size: 96 }).toString();
-}
-
-export function generateAvatarDataUri(styleId: AvatarStyleId, seed: string): string {
-  const styleDef = AVATAR_STYLES.find((s) => s.id === styleId);
-  if (!styleDef) {
-    const fallback = AVATAR_STYLES[0];
-    return new Avatar(getStyle(fallback.id, fallback.definition), { seed, size: 96 }).toDataUri();
-  }
-  return new Avatar(getStyle(styleDef.id, styleDef.definition), { seed, size: 96 }).toDataUri();
 }

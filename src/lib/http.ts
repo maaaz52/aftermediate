@@ -1,17 +1,20 @@
 import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError } from "@/lib/api-response";
 
 type Supabase = Awaited<ReturnType<typeof createClient>>;
 
 /**
  * Creates a server client and verifies the session in one step, so a route
- * can't forget the signed-out branch. Returns the client and user on success,
- * or an error Response (default 401 "Unauthorized").
+ * can't forget the signed-out branch. `getUser()` verifies the JWT with
+ * Supabase (and may refresh the session), unlike `getSession()` which trusts
+ * the cookie. Returns the client and user on success, or an error Response
+ * (default 401 "Unauthorized").
  */
 export async function requireAuth(message = "Unauthorized") {
   const supabase = await createClient();
-  const user = await requireUser(supabase);
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) return { ok: false as const, error: jsonError(message, 401) };
   return { ok: true as const, supabase, user };
 }

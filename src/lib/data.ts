@@ -44,10 +44,6 @@ export function getUniversitiesForStream(stream: string): University[] {
   return data.universities.filter((u) => u.streams.includes(stream as University["streams"][number]));
 }
 
-export function getRealityCheck(id: string): RealityCheck | undefined {
-  return data.realities.find((r) => r.id === id);
-}
-
 export function getCourses(ids: string[]): Course[] {
   return data.courses.filter((c) => ids.includes(c.id));
 }
