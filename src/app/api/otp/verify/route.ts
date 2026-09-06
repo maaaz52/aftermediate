@@ -4,6 +4,8 @@ import { jsonError, jsonOk } from "@/lib/api-response";
 import { otpMatches } from "@/lib/otp";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { parseJsonBody } from "@/lib/http";
+import { revokeUserSessions } from "@/lib/auth-admin";
+import { logSecurity } from "@/lib/security-log";
 
 export const runtime = "nodejs";
 
@@ -48,7 +50,7 @@ export async function POST(req: Request) {
 
     if (fetchError || !rows?.[0]) {
       console.error("otp verify: fetch error", fetchError?.message);
-      return jsonError("No code found for that email. Request a new one.", 400);
+      return jsonError("That code is invalid or has expired. Request a new one.", 400);
     }
 
     // Housekeeping: remove expired codes so the table can't grow without bound.
@@ -59,24 +61,26 @@ export async function POST(req: Request) {
     // Expired? The row is left in place so /api/otp/send's resend cooldown
     // still sees a recent code and cannot be used to bypass the 60s brake.
     if (new Date(record.expires_at).getTime() < Date.now()) {
-      return jsonError("That code has expired. Request a new one.", 400);
+      return jsonError("That code is invalid or has expired. Request a new one.", 400);
     }
 
     // Too many attempts? Same as above: keep the row so the send cooldown still
     // applies, otherwise burning a code's 5 guesses would clear the cooldown
     // and let an attacker re-issue codes instantly.
     if (record.attempts >= MAX_ATTEMPTS) {
-      return jsonError("Too many incorrect attempts. Request a new code.", 400);
+      logSecurity("otp.attempts_exhausted", { userId: record.user_id ?? undefined });
+      return jsonError("That code is invalid or has expired. Request a new one.", 400);
     }
 
-    // Wrong code?
+    // Wrong code? Responses are intentionally uniform so the endpoint does not
+    // reveal whether an email has an active code, an expired one, or none.
     if (!otpMatches(record.code_hash, email, code, OTP_SECRET)) {
       const { error: bumpError } = await admin
         .from("otp_codes")
         .update({ attempts: record.attempts + 1 })
         .eq("id", record.id);
       if (bumpError) console.error("otp verify: attempts bump error", bumpError.message);
-      return jsonError("That code isn't right. Try again.", 400);
+      return jsonError("That code is invalid or has expired. Request a new one.", 400);
     }
 
     // Code is correct — provision the account. The send route deliberately does
@@ -107,6 +111,12 @@ export async function POST(req: Request) {
         console.error("otp verify: confirm error", confirmError?.message ?? "email not confirmed after update");
         return jsonError("Could not verify your account. Try again.", 500);
       }
+
+      // Session reset after a password change: revoke any sessions that may
+      // exist on other devices so a reset invalidates stolen tokens. Best
+      // effort — a failure is logged and does not undo the password change.
+      logSecurity("otp.password_reset", { userId });
+      await revokeUserSessions(userId);
     } else {
       // New account: create it already-confirmed with the typed password.
       const { data: created, error: createError } = await admin.auth.admin.createUser({
@@ -119,6 +129,7 @@ export async function POST(req: Request) {
         return jsonError("Could not create your account. Try again.", 500);
       }
       userId = created.user.id;
+      logSecurity("otp.signup", { userId });
     }
 
     // Burn the code so it can't be reused

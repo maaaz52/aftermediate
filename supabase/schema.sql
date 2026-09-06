@@ -260,6 +260,58 @@ create policy "mentor_select_own" on public.mentor_applications
   for select using (auth.uid() = user_id);
 
 -- ============================================================
+-- Least-privilege inserts: contact_messages and mentor_applications
+-- have no table-level INSERT grant (revoked above). The anon and
+-- authenticated roles insert only through these SECURITY DEFINER
+-- functions, which the server routes call. They accept the user id
+-- determined from the verified token server-side, never from the
+-- client, so ownership cannot be forged.
+-- ============================================================
+create or replace function public.insert_contact_message(
+  p_user_id uuid,
+  p_name text,
+  p_email text,
+  p_message text,
+  p_rating smallint
+) returns uuid
+language plpgsql security definer set search_path = public
+as $$
+declare v_id uuid;
+begin
+  insert into public.contact_messages (user_id, name, email, message, rating, status)
+  values (p_user_id, p_name, p_email, p_message, p_rating, 'new')
+  returning id into v_id;
+  return v_id;
+end $$;
+
+revoke execute on function public.insert_contact_message(uuid, text, text, text, smallint) from public;
+grant execute on function public.insert_contact_message(uuid, text, text, text, smallint) to anon, authenticated;
+
+create or replace function public.insert_mentor_application(
+  p_user_id uuid,
+  p_name text,
+  p_email text,
+  p_institution text,
+  p_degree text,
+  p_field text,
+  p_bio text,
+  p_topics text,
+  p_social_link text
+) returns uuid
+language plpgsql security definer set search_path = public
+as $$
+declare v_id uuid;
+begin
+  insert into public.mentor_applications (user_id, name, email, institution, degree, field, bio, topics, social_link)
+  values (p_user_id, p_name, p_email, p_institution, p_degree, p_field, p_bio, p_topics, p_social_link)
+  returning id into v_id;
+  return v_id;
+end $$;
+
+revoke execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) from public;
+grant execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) to anon, authenticated;
+
+-- ============================================================
 -- AI Chat sessions & messages (Manzil, Safar, Ustaad)
 -- ============================================================
 create table if not exists public.chat_sessions (

@@ -1,5 +1,4 @@
 import { createClient } from "@/lib/supabase/server";
-import { createAdminClient } from "@/lib/supabase/admin";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
@@ -48,16 +47,16 @@ export async function POST(req: Request) {
       return jsonError("All fields are required.", 400);
     }
 
-    const { error } = await createAdminClient().from("mentor_applications").insert({
-      user_id: user?.id ?? null,
-      name,
-      email,
-      institution,
-      degree,
-      field,
-      bio,
-      topics,
-      social_link: socialLink,
+    const { error } = await supabase.rpc("insert_mentor_application", {
+      p_user_id: user?.id ?? null,
+      p_name: name,
+      p_email: email,
+      p_institution: institution,
+      p_degree: degree,
+      p_field: field,
+      p_bio: bio,
+      p_topics: topics,
+      p_social_link: socialLink,
     });
     if (error) {
       console.error("mentor apply: insert error", error.message);

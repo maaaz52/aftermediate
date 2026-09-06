@@ -7,10 +7,11 @@ import { parseJsonBody, requireAuth } from "@/lib/http";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-/** Refuse bodies bigger than this before reading them. */
-const MAX_BODY_BYTES = 6 * 1024 * 1024;
+/** Refuse bodies bigger than this before reading them. Matches Vercel's
+ * 4.5MB default function payload limit, so the cap is actually reachable. */
+const MAX_BODY_BYTES = 4.5 * 1024 * 1024;
 /** A marksheet image data-URL should stay far below this. */
-const MAX_IMAGE_CHARS = 5 * 1024 * 1024;
+const MAX_IMAGE_CHARS = 4 * 1024 * 1024;
 
 /** Allow 10 scans per user per minute — plenty for real use, too slow for abuse. */
 const RATE_MAX = 10;
