@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, ExternalLink, Search } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -40,95 +41,32 @@ function countryLabel(c: string): string {
   return COUNTRY_NAMES.get(c) ?? c;
 }
 
-function ScholarshipCard({
-  s,
-  open,
-  onToggle,
-}: {
-  s: AbroadScholarship;
-  open: boolean;
-  onToggle: () => void;
-}) {
-  const panelId = `scholarship-panel-${s.id}`;
-  const triggerId = `scholarship-trigger-${s.id}`;
+function ScholarshipCard({ s }: { s: AbroadScholarship }) {
   return (
-    <div className="card-glass overflow-hidden rounded-2xl">
-      <h3>
-        <button
-          type="button"
-          id={triggerId}
-          onClick={onToggle}
-          aria-expanded={open}
-          aria-controls={panelId}
-          className="flex w-full items-center gap-4 p-5 text-left"
-        >
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-base font-bold text-ink">{s.name}</span>
-              <Badge variant={s.coverage === "full" ? "emerald" : "saffron"}>
-                {s.coverage === "full" ? "Full funding" : "Partial funding"}
-              </Badge>
-            </div>
-            <p className="mt-0.5 text-xs text-muted">
-              {s.funder} · {s.level === "multiple" ? "All levels" : s.level} ·{" "}
-              {s.countries.map(countryLabel).join(", ")}
-            </p>
-          </div>
-          <ChevronDown
-            className={cn("h-4 w-4 shrink-0 text-faint transition-transform", open && "rotate-180")}
-          />
-        </button>
-      </h3>
-
-      <div id={panelId} hidden={!open} role="region" aria-labelledby={triggerId} className="border-t border-line p-5">
-        <p className="text-sm text-ink">{s.coverageDetail}</p>
-
-        <p className="mt-4 text-[11px] font-semibold uppercase tracking-widest text-faint">
-          Eligibility (Pakistan-specific)
-        </p>
-        <ul className="mt-2 space-y-1.5">
-          {s.eligibility.map((e) => (
-            <li key={e} className="flex gap-2 text-xs text-muted">
-              <span className="text-saffron">•</span>
-              {e}
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <Badge variant="muted">Deadline: {s.deadline}</Badge>
-        </div>
-
-        <p className="mt-4 text-[11px] font-semibold uppercase tracking-widest text-faint">
-          How to apply
-        </p>
-        <ol className="mt-2 space-y-2">
-          {s.howToApply.map((step, i) => (
-            <li key={step} className="flex gap-2 text-xs text-muted">
-              <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-saffron/15 font-mono text-[9px] font-bold text-saffron">
-                {i + 1}
-              </span>
-              {step}
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-line pt-4">
-          {s.sourceUrls.map((url) => (
-            <a
-              key={url}
-              href={url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-saffron hover:underline"
-            >
-              <ExternalLink className="h-3 w-3" />
-              Official page
-            </a>
-          ))}
-        </div>
+    <Link
+      href={`/abroad/scholarships/${s.id}`}
+      className="card-glass block rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:shadow-md"
+    >
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-base font-bold text-ink">{s.name}</span>
+        <Badge variant={s.coverage === "full" ? "emerald" : "saffron"}>
+          {s.coverage === "full" ? "Full funding" : "Partial funding"}
+        </Badge>
+        {s.ivyLeague && <Badge variant="saffron">Ivy League</Badge>}
       </div>
-    </div>
+      <p className="mt-0.5 text-xs text-muted">
+        {s.funder} · {s.level === "multiple" ? "All levels" : s.level} ·{" "}
+        {s.countries.map(countryLabel).join(", ")}
+      </p>
+      <div className="mt-3 flex flex-wrap items-center gap-3">
+        <span className="rounded-full border border-line px-2 py-0.5 text-[10px] text-muted">
+          {s.duration ?? "Varies"}
+        </span>
+        <span className="rounded-full border border-saffron/30 bg-saffron/5 px-2 py-0.5 text-[10px] text-saffron">
+          Deadline: {s.deadline}
+        </span>
+      </div>
+    </Link>
   );
 }
 
@@ -137,7 +75,6 @@ export function AbroadScholarshipsExplorer() {
   const [country, setCountry] = React.useState<string>("all");
   const [level, setLevel] = React.useState<AbroadScholarship["level"] | "all">("all");
   const [query, setQuery] = React.useState("");
-  const [openId, setOpenId] = React.useState<string | null>(null);
 
   const filtered = filterAbroadScholarships(data.scholarships, { category, country, level, query });
 
@@ -226,14 +163,9 @@ export function AbroadScholarshipsExplorer() {
                 <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-faint">
                   {g.label} · {g.items.length}
                 </h2>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {g.items.map((s) => (
-                    <ScholarshipCard
-                      key={s.id}
-                      s={s}
-                      open={openId === s.id}
-                      onToggle={() => setOpenId(openId === s.id ? null : s.id)}
-                    />
+                    <ScholarshipCard key={s.id} s={s} />
                   ))}
                 </div>
               </section>

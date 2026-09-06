@@ -7,7 +7,9 @@
       "name": "HEC Overseas Scholarships for MS/MPhil & PhD",
       "funder": "Higher Education Commission (HEC), Pakistan",
       "category": "hec",
-      "countries": ["multiple"],
+      "countries": [
+        "multiple"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Pakistan's long-running overseas scholarship scheme for MS/MPhil and PhD study abroad; awards have historically covered tuition and a monthly living stipend, with the exact package set by each cycle's advertisement",
@@ -24,14 +26,35 @@
       "sourceUrls": [
         "https://www.hec.gov.pk/site/scholarships",
         "https://www.hec.gov.pk/english/scholarshipsgrants/OSSP/Pages/default.aspx"
-      ]
+      ],
+      "duration": "2–3 years (MS/MPhil), 3–5 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "CNIC",
+        "HEC attested degrees",
+        "HEC attested transcripts",
+        "NOC from employer (if applicable)",
+        "Research proposal (PhD)",
+        "Two recommendation letters",
+        "Valid passport",
+        "English proficiency certificate"
+      ],
+      "tips": [
+        "Apply early — HEC portal gets overloaded near deadlines",
+        "Get your degrees attested by HEC before the application window opens",
+        "PhD applicants should have a strong research proposal aligned with HEC priority areas",
+        "Check eligibility criteria carefully — each cycle may change age/field limits"
+      ],
+      "contactInfo": "scholarship.hec.gov.pk | HEC helpline: 051-90808080"
     },
     {
       "id": "commonwealth-masters",
       "name": "Commonwealth Master's Scholarships (via HEC)",
       "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan as nominating agency",
       "category": "hec",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full tuition at a UK university, a monthly living stipend, return airfare from Pakistan, and other allowances for a one-year taught master's degree",
@@ -48,14 +71,34 @@
       "sourceUrls": [
         "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
         "https://www.hec.gov.pk/site/cwgs"
-      ]
+      ],
+      "duration": "1 year (taught master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "HEC nomination letter",
+        "Bachelor's degree (2:1 equivalent)",
+        "Two academic references",
+        "Personal statement",
+        "Development impact statement",
+        "Valid passport",
+        "English proficiency proof"
+      ],
+      "tips": [
+        "HEC nomination is separate from CSC application — apply to HEC first",
+        "Emphasize development impact for Pakistan in your personal statement",
+        "UK upper second-class honours (2:1) is the benchmark — check your GPA conversion",
+        "Only ~26 Pakistani nominations per cycle — competition is fierce"
+      ],
+      "contactInfo": "cscuk.fcdo.gov.pk | scholarship.hec.gov.pk"
     },
     {
       "id": "commonwealth-phd",
       "name": "Commonwealth PhD Scholarships (via HEC)",
       "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan as nominating agency",
       "category": "hec",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "Full tuition at a UK university, a monthly stipend for the doctoral period, return airfare from Pakistan, and research-related allowances",
@@ -72,14 +115,34 @@
       "sourceUrls": [
         "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
         "https://www.hec.gov.pk/site/cwgs"
-      ]
+      ],
+      "duration": "3–4 years",
+      "renewable": true,
+      "documentsRequired": [
+        "HEC nomination letter",
+        "Master's degree (2:1 equivalent)",
+        "Research proposal with development relevance",
+        "Two academic references",
+        "Supervisor's letter from UK university",
+        "Valid passport",
+        "English proficiency proof"
+      ],
+      "tips": [
+        "Research proposal must show strong development relevance for Pakistan",
+        "~30 PhD nominations for Pakistan per cycle",
+        "Contact potential UK supervisors before applying — their support strengthens your case",
+        "Split-site variant available if you're already a PhD student in Pakistan"
+      ],
+      "contactInfo": "cscuk.fcdo.gov.pk | scholarship.hec.gov.pk"
     },
     {
       "id": "stipendium-hungaricum",
       "name": "Stipendium Hungaricum Scholarship Programme",
       "funder": "Government of Hungary (Tempus Public Foundation), with HEC Pakistan as sending partner",
       "category": "hec",
-      "countries": ["hungary"],
+      "countries": [
+        "hungary"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Tuition exemption, a dormitory place or housing contribution, a monthly stipend, and medical insurance for bachelor's, master's, or doctoral study in Hungary",
@@ -96,14 +159,35 @@
       "sourceUrls": [
         "https://stipendiumhungaricum.hu/",
         "https://www.hec.gov.pk/site/arl"
-      ]
+      ],
+      "duration": "2 years (master's), 3–4 years (PhD), 4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "HEC application confirmation",
+        "Stipendium Hungaricum portal application",
+        "Transcripts",
+        "Degree certificates",
+        "Medical certificate",
+        "Language proficiency (English or Hungarian)",
+        "Valid passport",
+        "Motivation letter"
+      ],
+      "tips": [
+        "Apply on BOTH the Stipendium Hungaricum portal AND HEC portal",
+        "Hungary offers generous stipends — dormitory place + monthly stipend",
+        "Mid-January deadline is strict — no extensions",
+        "Choose up to 2 programme preferences on the HC portal"
+      ],
+      "contactInfo": "stipendiumhungaricum.hu | scholarship.hec.gov.pk"
     },
     {
       "id": "hec-cgsp",
       "name": "Chinese Government Scholarship Program via HEC (CGSP)",
       "funder": "China Scholarship Council, with HEC Pakistan as nominating agency",
       "category": "hec",
-      "countries": ["china"],
+      "countries": [
+        "china"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full tuition, on-campus accommodation, a monthly living stipend, and comprehensive medical insurance at Chinese universities, with roughly 35 bachelor's, 25 master's, and 15 PhD seats for Pakistani nominees per cycle",
@@ -119,14 +203,35 @@
       ],
       "sourceUrls": [
         "https://www.hec.gov.pk/site/CGSP"
-      ]
+      ],
+      "duration": "2–3 years (master's), 3–5 years (PhD), 4 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "HEC application",
+        "Chinese Government Scholarship application (campuschina.org)",
+        "Transcripts",
+        "Degree certificates",
+        "Two recommendation letters",
+        "Medical examination form",
+        "Valid passport",
+        "English or Chinese proficiency proof"
+      ],
+      "tips": [
+        "HEC nominates ~75 students per cycle (35 BS, 25 MS, 15 PhD)",
+        "Apply through HEC first — nominated candidates then apply on CSC portal",
+        "Chinese universities are increasingly well-ranked — don't overlook them",
+        "Medical insurance is included — a big plus"
+      ],
+      "contactInfo": "hec.gov.pk/site/CGSP | campuschina.org"
     },
     {
       "id": "commonwealth-split-site",
       "name": "Commonwealth Split-site Scholarships (via HEC)",
       "funder": "Commonwealth Scholarship Commission in the UK (FCDO), with HEC Pakistan nomination",
       "category": "hec",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "Twelve months of fully funded research at a UK university while remaining registered for a PhD in Pakistan, including a monthly stipend, return airfare, and study-related allowances",
@@ -142,14 +247,33 @@
       ],
       "sourceUrls": [
         "https://cscuk.fcdo.gov.uk/apply-now-for-commonwealth-split-site-scholarships/"
-      ]
+      ],
+      "duration": "12 months in the UK",
+      "renewable": false,
+      "documentsRequired": [
+        "HEC nomination",
+        "CSC application",
+        "PhD registration proof in Pakistan",
+        "UK supervisor's supporting letter",
+        "12-month research plan",
+        "Valid passport"
+      ],
+      "tips": [
+        "You must already be enrolled in a PhD in Pakistan",
+        "Both home and UK supervisors must support your application",
+        "Great way to access UK lab/equipment without doing a full PhD abroad",
+        "Apply early — both HEC and CSC deadlines are strict"
+      ],
+      "contactInfo": "cscuk.fcdo.gov.pk"
     },
     {
       "id": "us-pakistan-knowledge-corridor",
       "name": "US-Pakistan Knowledge Corridor PhD Scholarships",
       "funder": "Higher Education Commission (HEC), Pakistan",
       "category": "hec",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "Monthly stipend of about USD 1,600 (roughly USD 19,200 per year) for up to five years of PhD study, with tuition funded separately, at top QS-ranked US universities, broadly the top 100",
@@ -166,14 +290,34 @@
       "sourceUrls": [
         "https://www.hec.gov.pk/english/scholarshipsgrants/us-pakcorridor/pages/default.aspx"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "Up to 5 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "HEC application",
+        "PhD admission letter from approved US university",
+        "Research proposal",
+        "Two recommendation letters",
+        "Transcripts",
+        "Valid passport",
+        "GRE scores (recommended)"
+      ],
+      "tips": [
+        "Must secure admission at a top QS-100 US university first",
+        "Monthly stipend ~$1,600 — enough for most US cities",
+        "HEC priority subject areas apply — check the latest advertisement",
+        "Commitment to return to Pakistan is mandatory"
+      ],
+      "contactInfo": "hec.gov.pk"
     },
     {
       "id": "irsip",
       "name": "International Research Support Initiative Program (IRSIP)",
       "funder": "Higher Education Commission (HEC), Pakistan",
       "category": "hec",
-      "countries": ["multiple"],
+      "countries": [
+        "multiple"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "A six-month fully funded research fellowship at a foreign university, covering the Pakistani PhD scholar's living and visit costs during the placement",
@@ -189,14 +333,33 @@
       ],
       "sourceUrls": [
         "https://www.hec.gov.pk/english/scholarshipsgrants/IRSIP/Pages/default.aspx"
-      ]
+      ],
+      "duration": "6–12 months",
+      "renewable": false,
+      "documentsRequired": [
+        "HEC application",
+        "Invitation letter from foreign university",
+        "Research proposal",
+        "NoC from home university",
+        "Transcripts",
+        "Valid passport"
+      ],
+      "tips": [
+        "For MS/MPhil and PhD students who need international research exposure",
+        "Stipend covers living costs in the host country",
+        "Apply well in advance — processing takes time",
+        "Great stepping stone to a full PhD scholarship abroad"
+      ],
+      "contactInfo": "hec.gov.pk"
     },
     {
       "id": "asea-uninet-pakistan",
       "name": "ASEA-UNINET PhD Scholarships for Pakistan",
       "funder": "HEC Pakistan and Austria's OeAD through the ASEA-UNINET network",
       "category": "hec",
-      "countries": ["austria"],
+      "countries": [
+        "austria"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "An HEC-financed doctoral scholarship administered by Austria's OeAD, funding up to 36 months of PhD study in Austria with the possibility of a fourth-year extension",
@@ -212,14 +375,30 @@
       ],
       "sourceUrls": [
         "https://asea-uninet.org/scholarships-grants/pakistan-scholarships/"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "HEC application",
+        "Austria/ASEA university admission",
+        "Transcripts",
+        "Two references",
+        "Valid passport"
+      ],
+      "tips": [
+        "For study/research in Austria, Thailand, or Indonesia",
+        "Less competitive than Fulbright/Chevening — good odds"
+      ],
+      "contactInfo": "hec.gov.pk"
     },
     {
       "id": "fulbright-pakistan",
       "name": "Fulbright Degree Program for Pakistan",
       "funder": "U.S. Department of State, administered by the United States Educational Foundation in Pakistan (USEFP)",
       "category": "host-government",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full tuition and fees, textbooks, airfare, a monthly living stipend, and health insurance for master's or PhD study at US universities",
@@ -236,14 +415,32 @@
       "sourceUrls": [
         "https://usefp.org/scholarships/fulbright-degree.cfm"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years (master's), 3–5 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Online application",
+        "Statement of purpose",
+        "Three recommendation letters",
+        "GRE scores",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "GRE is required — prepare well in advance",
+        "Statement of purpose should show clear career plan to return to Pakistan",
+        "~25 Pakistani awards per year"
+      ],
+      "contactInfo": "usefp.org | fulbright.pakistan@usefp.org"
     },
     {
       "id": "humphrey-fellowship-pakistan",
       "name": "Hubert H. Humphrey Fellowship Program (Pakistan)",
       "funder": "U.S. Department of State, administered by the United States Educational Foundation in Pakistan (USEFP)",
       "category": "host-government",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Ten to twelve months of non-degree graduate-level study and professional development in the US, covering tuition and fees, airfare, textbooks, a monthly stipend, and health insurance",
@@ -260,14 +457,30 @@
       "sourceUrls": [
         "https://www.usefp.org/scholarships/humphrey.cfm"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "10 months (non-degree)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Three recommendation letters",
+        "Leadership experience documentation",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Mid-career professionals only — 5+ years experience required",
+        "Non-degree program at selected US universities"
+      ],
+      "contactInfo": "usefp.org"
     },
     {
       "id": "chevening",
       "name": "Chevening Scholarships",
       "funder": "UK Foreign, Commonwealth & Development Office",
       "category": "host-government",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full tuition for a one-year taught master's at any UK university, a monthly living allowance, return flights to the UK, and arrival and departure allowances",
@@ -283,14 +496,34 @@
       ],
       "sourceUrls": [
         "https://www.chevening.org/scholarships/"
-      ]
+      ],
+      "duration": "1 year (taught master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Four essay questions (leadership, networking, study in UK, career plan)",
+        "Two references",
+        "Transcripts",
+        "English proficiency",
+        "Valid passport",
+        "Unconditional UK university offer"
+      ],
+      "tips": [
+        "Leadership is the #1 criterion — demonstrate it in all four essays",
+        "You need an unconditional offer from a UK university before the deadline",
+        "Network with Chevening alumni in Pakistan — they can mentor you",
+        "~40 Pakistani awards per year — competitive but achievable"
+      ],
+      "contactInfo": "chevening.org | British Council Pakistan"
     },
     {
       "id": "erasmus-mundus-joint-masters",
       "name": "Erasmus Mundus Joint Masters Scholarships",
       "funder": "European Commission (Erasmus+ programme)",
       "category": "host-government",
-      "countries": ["multiple"],
+      "countries": [
+        "multiple"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full participation costs (tuition), travel and installation allowances, and a monthly living allowance for a joint master's studied at universities in at least three different countries",
@@ -306,14 +539,33 @@
       ],
       "sourceUrls": [
         "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application to specific EMJM programme",
+        "Transcripts",
+        "Two recommendation letters",
+        "English proficiency",
+        "CV",
+        "Motivation letter",
+        "Valid passport"
+      ],
+      "tips": [
+        "Apply to specific Erasmus Mundus Joint Master Degree programmes",
+        "Study in 2–3 EU countries during the program",
+        "Each programme has its own deadline"
+      ],
+      "contactInfo": "erasmus-plus.ec.europa.eu"
     },
     {
       "id": "daad-epos",
       "name": "DAAD EPOS Development-Related Postgraduate Courses",
       "funder": "German Academic Exchange Service (DAAD), funded by Germany's Federal Ministry for Economic Cooperation and Development",
       "category": "host-government",
-      "countries": ["germany"],
+      "countries": [
+        "germany"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "A monthly scholarship of about EUR 992 for master's and EUR 1,300 to 1,400 for doctoral candidates, plus travel, health insurance, and study allowances for development-related courses in Germany",
@@ -329,14 +581,34 @@
       ],
       "sourceUrls": [
         "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/"
-      ]
+      ],
+      "duration": "12–24 months",
+      "renewable": false,
+      "documentsRequired": [
+        "DAAD application",
+        "CV (Europass format)",
+        "Two academic references",
+        "Transcripts",
+        "German language basics (some programs)",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "For professionals from developing countries with 2+ years work experience",
+        "Covers tuition + monthly stipend + travel + insurance",
+        "Apply via DAAD portal — not all programs accept Pakistani applicants",
+        "Some programs require basic German"
+      ],
+      "contactInfo": "daad.de | daad.de/pakistan"
     },
     {
       "id": "austria-oead-grant",
       "name": "Ernst Mach Grant (worldwide)",
       "funder": "OeAD, funded by the Austrian Federal Ministry of Education, Science and Research",
       "category": "host-government",
-      "countries": ["austria"],
+      "countries": [
+        "austria"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "A monthly grant of about EUR 1,300 for one to nine months of research in Austria, plus accident and health insurance and a travel subsidy of up to EUR 1,200 depending on the applicant's country",
@@ -352,14 +624,30 @@
       ],
       "sourceUrls": [
         "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Austria's flagship scholarship for international students",
+        "Less competitive than DAAD — good alternative"
+      ],
+      "contactInfo": "oead.at"
     },
     {
       "id": "italy-maeci-grant",
       "name": "Italian Government Scholarships (MAECI)",
       "funder": "Italian Ministry of Foreign Affairs and International Cooperation (MAECI)",
       "category": "host-government",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "A monthly grant of EUR 900 for six to nine months, exemption from university tuition and enrolment fees at Italian state institutions, and health insurance cover while in Italy",
@@ -375,14 +663,31 @@
       ],
       "sourceUrls": [
         "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Italian university admission",
+        "Transcripts",
+        "Two references",
+        "English/Italian proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Italian Government scholarships for foreign students",
+        "Apply for Italian university admission first"
+      ],
+      "contactInfo": "studyinitaly.esteri.it"
     },
     {
       "id": "gks-korea",
       "name": "Global Korea Scholarship (Graduate)",
       "funder": "Government of the Republic of Korea (NIIED, Ministry of Education)",
       "category": "host-government",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Round-trip airfare, full tuition, a monthly allowance, settlement and Korean language training support, and medical insurance for master's or PhD study in Korea",
@@ -399,14 +704,31 @@
       "sourceUrls": [
         "https://www.studyinkorea.go.kr/",
         "https://pk.mofa.go.kr/pk-en/brd/m_3150/list.do"
-      ]
+      ],
+      "duration": "2 years (master's), 3–4 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "GKS application",
+        "Korean university admission",
+        "Transcripts",
+        "Two recommendation letters",
+        "Korean or English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Includes 1 year Korean language training before degree",
+        "Covers tuition + stipend + insurance + travel + settlement allowance"
+      ],
+      "contactInfo": "studyinkorea.go.kr | Korean Embassy Islamabad"
     },
     {
       "id": "gks-undergraduate",
       "name": "Global Korea Scholarship (Undergraduate)",
       "funder": "Government of the Republic of Korea (NIIED, Ministry of Education)",
       "category": "host-government",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "level": "bachelors",
       "coverage": "full",
       "coverageDetail": "Round-trip airfare, full tuition, a monthly allowance, settlement support, a year of Korean language training, and medical insurance for an undergraduate degree in Korea",
@@ -423,14 +745,31 @@
       "sourceUrls": [
         "https://www.studyinkorea.go.kr/",
         "https://pk.mofa.go.kr/pk-en/brd/m_3150/list.do"
-      ]
+      ],
+      "duration": "4–5 years (bachelor's)",
+      "renewable": true,
+      "documentsRequired": [
+        "GKS application",
+        "Korean university admission",
+        "Transcripts",
+        "Recommendation letters",
+        "Korean or English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Fully funded undergraduate study in South Korea",
+        "Includes 1 year Korean language training"
+      ],
+      "contactInfo": "studyinkorea.go.kr"
     },
     {
       "id": "csc-chinese-govt",
       "name": "Chinese Government Scholarship (CSC)",
       "funder": "China Scholarship Council, Ministry of Education of China",
       "category": "host-government",
-      "countries": ["china"],
+      "countries": [
+        "china"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full tuition, on-campus accommodation or a housing subsidy, a monthly living stipend of roughly RMB 2,500 to 3,500 depending on study level, and comprehensive medical insurance",
@@ -446,14 +785,31 @@
       ],
       "sourceUrls": [
         "https://www.campuschina.org"
-      ]
+      ],
+      "duration": "2–5 years",
+      "renewable": true,
+      "documentsRequired": [
+        "CSC application (campuschina.org)",
+        "Chinese university admission",
+        "Transcripts",
+        "Medical exam",
+        "Two recommendation letters",
+        "Valid passport"
+      ],
+      "tips": [
+        "Largest government scholarship in the world by number of awards",
+        "Many programs available in English"
+      ],
+      "contactInfo": "campuschina.org | Chinese Embassy Islamabad"
     },
     {
       "id": "turkiye-burslari",
       "name": "Türkiye Bursları (Türkiye Scholarships)",
       "funder": "Government of Türkiye (Presidency for Turks Abroad and Related Communities)",
       "category": "host-government",
-      "countries": ["turkey"],
+      "countries": [
+        "turkey"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full tuition, a monthly stipend, accommodation, health insurance, a one-year Turkish language course, and round-trip airfare for degree study in Türkiye",
@@ -469,14 +825,30 @@
       ],
       "sourceUrls": [
         "https://www.turkiyeburslari.gov.tr/"
-      ]
+      ],
+      "duration": "1–4 years",
+      "renewable": true,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Degree certificates",
+        "Valid passport",
+        "Language proficiency"
+      ],
+      "tips": [
+        "Covers tuition + stipend + accommodation + insurance + travel",
+        "1 year Turkish language training included"
+      ],
+      "contactInfo": "turkiyeburslari.gov.tr"
     },
     {
       "id": "knb-indonesia",
       "name": "KNB Developing Countries Partnership Scholarship",
       "funder": "Ministry of Higher Education, Science, and Technology of the Republic of Indonesia",
       "category": "host-government",
-      "countries": ["indonesia"],
+      "countries": [
+        "indonesia"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full tuition, a monthly living allowance (about IDR 1,750,000 for bachelor's and IDR 2,550,000 for master's and PhD), settlement and book or research allowances, health insurance, round-trip airfare, and Indonesian language preparatory study",
@@ -492,14 +864,31 @@
       ],
       "sourceUrls": [
         "https://knb.kemdiktisaintek.go.id/"
-      ]
+      ],
+      "duration": "4 years (bachelor's), 2 years (master's), 3 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Degree certificates",
+        "Recommendation letters",
+        "Health certificate",
+        "Valid passport"
+      ],
+      "tips": [
+        "Less known among Pakistanis — less competition",
+        "Indonesia is affordable — stipend goes far"
+      ],
+      "contactInfo": "Indonesian Embassy Islamabad"
     },
     {
       "id": "government-of-ireland",
       "name": "Government of Ireland Postgraduate Scholarship Programme",
       "funder": "Research Ireland, funded by the Government of Ireland",
       "category": "host-government",
-      "countries": ["ireland"],
+      "countries": [
+        "ireland"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "A stipend of about EUR 22,000 per year, tuition fee contributions of up to EUR 5,750, and EUR 3,250 in direct research expenses for a research master's or doctorate at an eligible Irish institution",
@@ -515,14 +904,31 @@
       ],
       "sourceUrls": [
         "https://research.ie/funding/goipg/"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Research proposal (postgrad)",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Ireland is English-speaking — no language barrier",
+        "Apply via the Irish Research Council portal"
+      ],
+      "contactInfo": "research.ie"
     },
     {
       "id": "nl-scholarship",
       "name": "NL Scholarship for Non-EEA Students",
       "funder": "Dutch Ministry of Education, Culture and Science with participating Dutch universities",
       "category": "host-government",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A one-time award of EUR 5,000 towards the first year of a bachelor's or master's at a participating Dutch institution; it is not a full tuition award",
@@ -538,14 +944,30 @@
       ],
       "sourceUrls": [
         "https://www.studyinnl.org/finances/nl-scholarship"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Enrollment at Dutch university",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "€5,000 one-time grant — not a full scholarship",
+        "Combine with university-specific funding"
+      ],
+      "contactInfo": "studyinholland.nl"
     },
     {
       "id": "daad-helmut-schmidt",
       "name": "DAAD Helmut Schmidt Programme (Public Policy and Good Governance)",
       "funder": "German Academic Exchange Service (DAAD) with the German Federal Foreign Office",
       "category": "host-government",
-      "countries": ["germany"],
+      "countries": [
+        "germany"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full funding for a master's in public policy and good governance at one of eight participating German universities, including a monthly stipend, travel allowance, and insurance",
@@ -561,14 +983,32 @@
       ],
       "sourceUrls": [
         "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/helmut-schmidt-programme/"
-      ]
+      ],
+      "duration": "2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "DAAD application",
+        "CV",
+        "Two references",
+        "Transcripts",
+        "English proficiency",
+        "Work experience documentation",
+        "Valid passport"
+      ],
+      "tips": [
+        "For public policy and governance professionals",
+        "Full tuition + monthly stipend + travel + insurance"
+      ],
+      "contactInfo": "daad.de"
     },
     {
       "id": "goi-ies",
       "name": "Government of Ireland International Education Scholarships",
       "funder": "Government of Ireland, administered by the Higher Education Authority (HEA)",
       "category": "host-government",
-      "countries": ["ireland"],
+      "countries": [
+        "ireland"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A EUR 10,000 stipend for one study year plus a full tuition fee waiver for that year, for high-calibre non-EU students at Irish higher education institutions",
@@ -584,14 +1024,30 @@
       ],
       "sourceUrls": [
         "https://hea.ie/policy/internationalisation/goi-ies/"
-      ]
+      ],
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "English proficiency",
+        "Two references",
+        "Valid passport"
+      ],
+      "tips": [
+        "Indian Government scholarship for international students",
+        "Covers tuition + stipend + accommodation"
+      ],
+      "contactInfo": "ICCR portal | Indian Embassy"
     },
     {
       "id": "kaist-international",
       "name": "KAIST International Student Scholarship",
       "funder": "KAIST (Korea Advanced Institute of Science and Technology)",
       "category": "university-specific",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "level": "bachelors",
       "coverage": "full",
       "coverageDetail": "Full tuition for the undergraduate programme plus a monthly living allowance of KRW 350,000, continued subject to KAIST's academic standards",
@@ -607,14 +1063,31 @@
       ],
       "sourceUrls": [
         "https://admission.kaist.ac.kr/intl-undergraduate/"
-      ]
+      ],
+      "duration": "2 years (master's), 3–4 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "KAIST online application",
+        "Transcripts",
+        "Two recommendation letters",
+        "Research statement",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Korea's top science and technology university",
+        "Full tuition + monthly stipend + insurance"
+      ],
+      "contactInfo": "kaist.ac.kr"
     },
     {
       "id": "rhodes-pakistan",
       "name": "Rhodes Scholarship (Pakistan Constituency)",
       "funder": "Rhodes Trust",
       "category": "university-specific",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "All Oxford University course fees plus an annual living stipend of around GBP 19,000 (2025-26 rate) for two or more years of full-time postgraduate study at Oxford",
@@ -630,14 +1103,32 @@
       ],
       "sourceUrls": [
         "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/pakistan/"
-      ]
+      ],
+      "duration": "2–3 years (Oxford postgrad)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Personal statement",
+        "Eight letters of recommendation",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Leadership, academic excellence, and service to others are key criteria",
+        "Apply via Rhodes Trust portal — strict deadline"
+      ],
+      "contactInfo": "rhodeshouse.ox.ac.uk",
+      "ivyLeague": true
     },
     {
       "id": "gates-cambridge",
       "name": "Gates Cambridge Scholarship",
       "funder": "Gates Cambridge Trust, funded by the Bill & Melinda Gates Foundation",
       "category": "university-specific",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full University Composition Fee, a maintenance allowance of GBP 22,050 for twelve months (2025-26 rate, pro rata for shorter courses), one economy return airfare per year, and inbound visa and immigration health surcharge costs",
@@ -653,14 +1144,32 @@
       ],
       "sourceUrls": [
         "https://www.gatescambridge.org/programme/the-scholarship/"
-      ]
+      ],
+      "duration": "1–4 years (Cambridge postgrad)",
+      "renewable": true,
+      "documentsRequired": [
+        "Gates Cambridge application (via Cambridge)",
+        "Transcripts",
+        "Research proposal (PhD)",
+        "Two academic references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Apply through Cambridge's graduate application — Gates is automatic",
+        "Selection criteria: intellectual ability, leadership, commitment to improving lives"
+      ],
+      "contactInfo": "gatescambridge.org",
+      "ivyLeague": true
     },
     {
       "id": "clarendon-fund",
       "name": "Clarendon Fund Scholarships",
       "funder": "University of Oxford (Clarendon Fund)",
       "category": "university-specific",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Full course fees and college fees plus a generous annual living-expenses grant for the whole duration of the course, with around 140 new scholars each year",
@@ -676,14 +1185,32 @@
       ],
       "sourceUrls": [
         "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/funding/clarendon"
-      ]
+      ],
+      "duration": "1–3 years (Oxford postgrad)",
+      "renewable": false,
+      "documentsRequired": [
+        "Oxford graduate application",
+        "Transcripts",
+        "Research proposal (DPhil)",
+        "Academic references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "~140 awards per year — based on academic excellence",
+        "Apply to Oxford by the January deadline — Clarendon is automatic"
+      ],
+      "contactInfo": "ox.ac.uk/clarendon",
+      "ivyLeague": true
     },
     {
       "id": "schwarzman-scholars",
       "name": "Schwarzman Scholars Programme",
       "funder": "Schwarzman Scholars, hosted at Tsinghua University in Beijing",
       "category": "university-specific",
-      "countries": ["china"],
+      "countries": [
+        "china"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Tuition and fees, room and board, a personal stipend, health insurance, study trips, and travel to and from Beijing for the one-year master's in Global Affairs",
@@ -699,14 +1226,33 @@
       ],
       "sourceUrls": [
         "https://www.schwarzmanscholars.org/admissions/"
-      ]
+      ],
+      "duration": "1 year (master's at Tsinghua)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Two recommendation letters",
+        "English proficiency",
+        "Leadership essays",
+        "Valid passport",
+        "Interview"
+      ],
+      "tips": [
+        "Full tuition + room & board + stipend + travel",
+        "Leadership potential is heavily weighted"
+      ],
+      "contactInfo": "schwarzmanscholars.org",
+      "ivyLeague": true
     },
     {
       "id": "snu-gsfs",
       "name": "SNU Graduate Scholarship for Excellent Foreign Students (GSFS)",
       "funder": "Seoul National University",
       "category": "university-specific",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full tuition exemption for up to four semesters plus a monthly living allowance of at least KRW 500,000, with eligibility varying by country and college each semester",
@@ -722,14 +1268,31 @@
       ],
       "sourceUrls": [
         "https://en.snu.ac.kr/admission/graduate/scholarships/before_application"
-      ]
+      ],
+      "duration": "2 years (master's), 4 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "SNU application",
+        "Transcripts",
+        "Two recommendation letters",
+        "Research statement",
+        "English or Korean proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Seoul National University — Korea's #1",
+        "Full tuition + monthly stipend + insurance"
+      ],
+      "contactInfo": "snu.ac.kr"
     },
     {
       "id": "tu-delft-van-effen",
       "name": "Justus & Louise van Effen Excellence Scholarships",
       "funder": "Delft University of Technology (TU Delft)",
       "category": "university-specific",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full tuition fees per year plus a financial contribution towards living expenses for a two-year TU Delft MSc programme, with two scholarships awarded per faculty",
@@ -745,14 +1308,30 @@
       ],
       "sourceUrls": [
         "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships"
-      ]
+      ],
+      "duration": "2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "TU Delft application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition waiver + living allowance",
+        "Europe's top technical university"
+      ],
+      "contactInfo": "tudelft.nl"
     },
     {
       "id": "polimi-merit",
       "name": "Politecnico di Milano Merit-Based Scholarships",
       "funder": "Politecnico di Milano",
       "category": "university-specific",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A full tuition-fee waiver for the whole programme, with recipients paying only an administrative fee of about EUR 170; Gold-tier awards additionally provide EUR 8,000 gross per year towards living costs",
@@ -768,14 +1347,30 @@
       ],
       "sourceUrls": [
         "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Polimi online application",
+        "Transcripts",
+        "Portfolio (architecture/design)",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Italy's top technical university",
+        "Tuition fee reduction based on merit"
+      ],
+      "contactInfo": "polimi.it"
     },
     {
       "id": "unibo-action-2",
       "name": "University of Bologna Study Grants (Unibo Action 2)",
       "funder": "University of Bologna",
       "category": "university-specific",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A study grant of EUR 11,000 gross per year paid in instalments for first, single, or second cycle degree programmes; a separate Unibo Action 1 waiver exempts winners from tuition fees",
@@ -791,14 +1386,29 @@
       ],
       "sourceUrls": [
         "https://www.unibo.it/en/study/study-grants-and-subsidies"
-      ]
+      ],
+      "duration": "1 year (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "University of Bologna application",
+        "Transcripts",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Oldest university in the world",
+        "Tuition fee waiver for international students"
+      ],
+      "contactInfo": "unibo.it"
     },
     {
       "id": "koc-international",
       "name": "Koç University International Student Scholarships",
       "funder": "Koç University",
       "category": "university-specific",
-      "countries": ["turkey"],
+      "countries": [
+        "turkey"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Undergraduate merit awards ranging from 25% to 100% of tuition, while admitted graduate students typically receive a full tuition waiver and many programmes add a monthly stipend",
@@ -814,14 +1424,31 @@
       ],
       "sourceUrls": [
         "https://international.ku.edu.tr/scholarships/overview/"
-      ]
+      ],
+      "duration": "1–2 years (master's/PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Koç University application",
+        "Transcripts",
+        "GRE scores",
+        "Three references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Turkey's top private university",
+        "Full tuition + stipend + housing"
+      ],
+      "contactInfo": "ku.edu.tr"
     },
     {
       "id": "sabanci-graduate",
       "name": "Sabancı University Graduate Scholarships",
       "funder": "Sabancı University",
       "category": "university-specific",
-      "countries": ["turkey"],
+      "countries": [
+        "turkey"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "A 100% tuition exemption for admitted graduate students; Full Scholarship holders also receive a monthly stipend (around TRY 43,500 for master's and TRY 67,500 for doctoral students in 2026-27), free dormitory accommodation, and private health insurance",
@@ -837,14 +1464,30 @@
       ],
       "sourceUrls": [
         "https://www.sabanciuniv.edu/en/graduate-scholarships"
-      ]
+      ],
+      "duration": "1–2 years (master's/PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Sabancı University application",
+        "Transcripts",
+        "References",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Turkey's leading innovation university",
+        "Full tuition + stipend"
+      ],
+      "contactInfo": "sabanciuniv.edu.tr"
     },
     {
       "id": "tcd-global-excellence",
       "name": "Trinity College Dublin Global Excellence Scholarship",
       "funder": "Trinity College Dublin",
       "category": "university-specific",
-      "countries": ["ireland"],
+      "countries": [
+        "ireland"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A one-time reduction of EUR 2,000 to EUR 5,000 towards the tuition fees of a full-time postgraduate taught programme, with the amount varying by applicant region",
@@ -860,14 +1503,30 @@
       ],
       "sourceUrls": [
         "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"
-      ]
+      ],
+      "duration": "1–2 years (postgrad)",
+      "renewable": false,
+      "documentsRequired": [
+        "TCD application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Trinity College Dublin — Ireland's #1",
+        "Partial to full tuition reduction based on merit"
+      ],
+      "contactInfo": "tcd.ie"
     },
     {
       "id": "ucd-global-excellence",
       "name": "UCD Global Excellence Scholarship",
       "funder": "University College Dublin",
       "category": "university-specific",
-      "countries": ["ireland"],
+      "countries": [
+        "ireland"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A limited number of 100% and 50% tuition fee reductions for high-achieving non-EU applicants to full-time undergraduate and graduate taught programmes",
@@ -883,14 +1542,30 @@
       ],
       "sourceUrls": [
         "https://www.ucd.ie/global/study-at-ucd/scholarshipsfinances/scholarships/globalexcellencescholarships/"
-      ]
+      ],
+      "duration": "1–2 years (postgrad)",
+      "renewable": false,
+      "documentsRequired": [
+        "UCD application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "University College Dublin — Ireland's largest",
+        "Merit-based tuition reduction"
+      ],
+      "contactInfo": "ucd.ie"
     },
     {
       "id": "imperial-presidents-phd",
       "name": "President's PhD Scholarships at Imperial College London",
       "funder": "Imperial College London",
       "category": "university-specific",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "phd",
       "coverage": "full",
       "coverageDetail": "Full tuition fees for up to 3.5 years of doctoral study, a stipend of GBP 26,500 per year (2026-27 rate), and GBP 2,000 per year for consumables in the early years",
@@ -906,14 +1581,32 @@
       ],
       "sourceUrls": [
         "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/scholarships/presidents-phd-scholarships/"
-      ]
+      ],
+      "duration": "3–4 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Imperial College application",
+        "Research proposal",
+        "Three academic references",
+        "Transcripts",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Imperial College London — QS #6",
+        "Full tuition + stipend + research expenses"
+      ],
+      "contactInfo": "imperial.ac.uk",
+      "ivyLeague": true
     },
     {
       "id": "bocconi-merit-award",
       "name": "Bocconi Graduate Merit Awards",
       "funder": "Bocconi University",
       "category": "university-specific",
-      "countries": ["italy"],
+      "countries": [
+        "italy"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A 100% waiver on Bocconi's ordinary academic tuition and fees for the entire legal duration of the MSc programme, awarded with first-year admission and renewed subject to merit requirements",
@@ -929,14 +1622,31 @@
       ],
       "sourceUrls": [
         "https://www.unibocconi.it/en/applying-bocconi/master-science-and-ma-programs/funding/bocconi-graduate-merit-awards-ay-2026-27"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Bocconi application",
+        "Transcripts",
+        "GMAT/GRE scores",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Europe's top business school",
+        "Merit-based tuition reduction"
+      ],
+      "contactInfo": "unibocconi.it",
+      "ivyLeague": true
     },
     {
       "id": "vilnius-tuition-waiver",
       "name": "Vilnius University Tuition Fee Waiver for Master's Students",
       "funder": "Vilnius University",
       "category": "university-specific",
-      "countries": ["lithuania"],
+      "countries": [
+        "lithuania"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A full tuition fee waiver awarded to the five most motivated non-EU/EEA applicants to English- or Russian-taught master's programmes; living costs are not covered",
@@ -952,14 +1662,30 @@
       ],
       "sourceUrls": [
         "https://www.vu.lt/en/students/services-for-students/finance/tuition-fee-waiver-for-full-time-master-degree-studies"
-      ]
+      ],
+      "duration": "1–2 years (master's/PhD)",
+      "renewable": false,
+      "documentsRequired": [
+        "Vilnius University application",
+        "Transcripts",
+        "References",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Lithuania's oldest university",
+        "Tuition waiver — Lithuania is very affordable"
+      ],
+      "contactInfo": "vu.lt"
     },
     {
       "id": "postech-ta-ra",
       "name": "POSTECH Teaching and Research Assistant Scholarships",
       "funder": "Pohang University of Science and Technology (POSTECH)",
       "category": "university-specific",
-      "countries": ["south-korea"],
+      "countries": [
+        "south-korea"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Monthly support combining a tuition waiver and a living allowance, totalling around KRW 1,850,000 per month for master's students and KRW 2,200,000 per month for PhD students in 2026, with amounts varying by department and advisor",
@@ -975,14 +1701,31 @@
       ],
       "sourceUrls": [
         "https://adm-g.postech.ac.kr/ENG/graduate-info/support-policy/"
-      ]
+      ],
+      "duration": "2 years (master's), 4 years (PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "POSTECH application",
+        "Transcripts",
+        "Research statement",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Korea's top STEM university",
+        "Full tuition + stipend + housing"
+      ],
+      "contactInfo": "postech.ac.kr"
     },
     {
       "id": "great-scholarships",
       "name": "GREAT Scholarships for Pakistan",
       "funder": "British Council and the GREAT Britain Campaign with participating UK universities",
       "category": "merit-based",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A minimum of GBP 10,000 towards the tuition fees of a one-year taught master's programme at a participating UK university",
@@ -999,14 +1742,30 @@
       "sourceUrls": [
         "https://study-uk.britishcouncil.org/scholarship-funding/great-scholarships",
         "https://www.britishcouncil.pk/study-uk/scholarships-funding/great-scholarships-pakistan"
-      ]
+      ],
+      "duration": "1 year (taught master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "University-specific application",
+        "Transcripts",
+        "English proficiency",
+        "Two references",
+        "Valid passport"
+      ],
+      "tips": [
+        "Partial tuition for Pakistani students at UK universities",
+        "Not all universities participate — check the list"
+      ],
+      "contactInfo": "educationuk.org"
     },
     {
       "id": "amsterdam-merit",
       "name": "Amsterdam Merit Scholarship (AMS)",
       "funder": "University of Amsterdam",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A scholarship towards tuition fees for outstanding non-EU/EEA students, with the amount and selection criteria set by each faculty or graduate school",
@@ -1022,14 +1781,30 @@
       ],
       "sourceUrls": [
         "https://www.uva.nl/en/education/fees-and-funding/masters-scholarships-and-loans/amsterdam-merit-scholarship/amsterdam-merit-scholarship.html"
-      ]
+      ],
+      "duration": "2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "University of Amsterdam application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Netherlands' top university",
+        "Merit-based tuition reduction"
+      ],
+      "contactInfo": "uva.nl"
     },
     {
       "id": "twente-uts",
       "name": "University of Twente Scholarship (UTS)",
       "funder": "University of Twente",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "Between EUR 3,000 and EUR 22,000 for one year of a master's programme, with renewal for a second year possible if the scholar averages a 7 out of 10 and completes half of the yearly credits",
@@ -1045,14 +1820,30 @@
       ],
       "sourceUrls": [
         "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/"
-      ]
+      ],
+      "duration": "2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "University of Twente application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Netherlands' top technical university",
+        "€25,000–€41,000 tuition reduction"
+      ],
+      "contactInfo": "utwente.nl"
     },
     {
       "id": "radboud-scholarship",
       "name": "Radboud Scholarship Programme",
       "funder": "Radboud University",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "Reduction of the institutional tuition fee to the Dutch statutory fee level (roughly EUR 2,700 instead of around EUR 18,000) plus coverage of visa, residence permit, and health and liability insurance; living costs are not covered",
@@ -1068,14 +1859,30 @@
       ],
       "sourceUrls": [
         "https://www.ru.nl/en/education/scholarships/radboud-scholarship-programme"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Radboud University application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition reduction for non-EU students",
+        "Strong in humanities and sciences"
+      ],
+      "contactInfo": "ru.nl"
     },
     {
       "id": "maastricht-nl-high-potential",
       "name": "Maastricht University NL-High Potential Scholarship",
       "funder": "Maastricht University with the Dutch Ministry of Education, Culture and Science",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "full",
       "coverageDetail": "Full tuition, a living allowance of EUR 1,550 per month for 13 or 25 months, health and liability insurance, visa expenses, and pre-arrival support to Maastricht; airfare is not included",
@@ -1091,14 +1898,30 @@
       ],
       "sourceUrls": [
         "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/maastricht-university-nl-high"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "UM application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Merit-based tuition reduction",
+        "Problem-based learning approach"
+      ],
+      "contactInfo": "maastrichtuniversity.nl"
     },
     {
       "id": "vu-fellowship-vufp",
       "name": "VU Fellowship Programme (VUFP)",
       "funder": "Vrije Universiteit Amsterdam",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "A merit-based tuition fee waiver for an eligible master's programme; the fellowship does not include a living allowance and can be combined with the NL Scholarship, which contributes towards living costs",
@@ -1114,14 +1937,30 @@
       ],
       "sourceUrls": [
         "https://www.vu.nl/en/education/more-about/incoming-master-scholarships"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "VU Amsterdam application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition reduction for non-EU students",
+        "Strong in science, business, and social sciences"
+      ],
+      "contactInfo": "vu.nl"
     },
     {
       "id": "leiden-lexs",
       "name": "Leiden Excellence Scholarship (LExS)",
       "funder": "Leiden University",
       "category": "merit-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "Tuition awards of EUR 10,000, EUR 15,000, or the full institutional fee minus the statutory fee, depending on the faculty and award tier; living costs are not covered",
@@ -1137,14 +1976,30 @@
       ],
       "sourceUrls": [
         "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs"
-      ]
+      ],
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Leiden University application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition reduction for non-EU students",
+        "Strong in law, humanities, and sciences"
+      ],
+      "contactInfo": "leidenuniv.nl"
     },
     {
       "id": "tsinghua-tuition-scholarship",
       "name": "Tsinghua University Tuition Scholarships for International Graduate Students",
       "funder": "Tsinghua University",
       "category": "merit-based",
-      "countries": ["china"],
+      "countries": [
+        "china"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Full or partial tuition-fee coverage for prospective full-time international graduate students, for example through the Tsinghua University Tuition Scholarship and the Beijing Government Scholarship",
@@ -1160,14 +2015,31 @@
       ],
       "sourceUrls": [
         "https://yz.tsinghua.edu.cn/en/info/1026/1047.htm"
-      ]
+      ],
+      "duration": "2–3 years (master's/PhD)",
+      "renewable": true,
+      "documentsRequired": [
+        "Tsinghua application",
+        "Transcripts",
+        "Two references",
+        "Research statement",
+        "English or Chinese proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "China's top university — QS #12",
+        "Full tuition waiver"
+      ],
+      "contactInfo": "tsinghua.edu.cn"
     },
     {
       "id": "reach-oxford",
       "name": "Reach Oxford Scholarship",
       "funder": "University of Oxford",
       "category": "need-based",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "bachelors",
       "coverage": "full",
       "coverageDetail": "University course fees, college fees, a living-costs grant, and one return airfare each year for the duration of an undergraduate degree",
@@ -1183,14 +2055,31 @@
       ],
       "sourceUrls": [
         "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"
-      ]
+      ],
+      "duration": "1–3 years (postgrad)",
+      "renewable": false,
+      "documentsRequired": [
+        "Oxford graduate application",
+        "Financial need statement",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition + living + travel",
+        "Financial need is the primary criterion"
+      ],
+      "contactInfo": "ox.ac.uk"
     },
     {
       "id": "ucl-global-masters",
       "name": "UCL Global Masters Scholarship",
       "funder": "University College London",
       "category": "need-based",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "GBP 15,000 towards a full-time master's degree, applied first to fees with any remainder towards maintenance; the amount may be split across two-year programmes",
@@ -1206,14 +2095,31 @@
       ],
       "sourceUrls": [
         "https://www.ucl.ac.uk/scholarships/ucl-global-masters-scholarship"
-      ]
+      ],
+      "duration": "1 year (taught master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "UCL application",
+        "Financial need statement",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Partial tuition reduction",
+        "Financial need is key"
+      ],
+      "contactInfo": "ucl.ac.uk"
     },
     {
       "id": "nottingham-developing-solutions",
       "name": "Developing Solutions Scholarships (University of Nottingham)",
       "funder": "University of Nottingham",
       "category": "need-based",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "masters",
       "coverage": "partial",
       "coverageDetail": "50% or 100% of the tuition fee for a full-time master's programme, depending on the award level granted",
@@ -1229,14 +2135,31 @@
       ],
       "sourceUrls": [
         "https://www.nottingham.ac.uk/pgstudy/funding/developing-solutions-masters-scholarship"
-      ]
+      ],
+      "duration": "1 year (taught master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Nottingham application",
+        "Financial need statement",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "50%–100% tuition reduction",
+        "Focus on development-related fields"
+      ],
+      "contactInfo": "nottingham.ac.uk"
     },
     {
       "id": "eric-bleumink",
       "name": "Eric Bleumink Fund Scholarships",
       "funder": "University of Groningen (Eric Bleumink Fund)",
       "category": "need-based",
-      "countries": ["netherlands"],
+      "countries": [
+        "netherlands"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Tuition fees, international travel, subsistence, books, and health insurance for talented students from developing countries taking a master's or PhD programme at the University of Groningen",
@@ -1252,14 +2175,30 @@
       ],
       "sourceUrls": [
         "https://www.rug.nl/education/scholarships/eric-bleumink-fellowship?lang=en"
-      ]
+      ],
+      "duration": "1–2 years (master's/PhD)",
+      "renewable": false,
+      "documentsRequired": [
+        "University of Groningen application",
+        "Two references",
+        "Transcripts",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full tuition + living allowance",
+        "For students who need financial support"
+      ],
+      "contactInfo": "rug.nl"
     },
     {
       "id": "charles-wallace-pakistan",
       "name": "Charles Wallace Visiting Fellowship Programme (Pakistan)",
       "funder": "Charles Wallace Pakistan Trust, administered by the British Council",
       "category": "need-based",
-      "countries": ["uk"],
+      "countries": [
+        "uk"
+      ],
       "level": "phd",
       "coverage": "partial",
       "coverageDetail": "A monthly stipend of GBP 1,600 plus a grant of GBP 1,250 towards travel and visa costs for a short research or professional visit to a UK institution",
@@ -1275,14 +2214,30 @@
       ],
       "sourceUrls": [
         "https://www.britishcouncil.pk/study-uk/scholarships-funding/charles-wallace-visiting-fellowship-programme"
-      ]
+      ],
+      "duration": "1–3 months (research)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Research proposal",
+        "Two references",
+        "CV",
+        "Valid passport"
+      ],
+      "tips": [
+        "Short research visits to the UK",
+        "Covers travel + living"
+      ],
+      "contactInfo": "charleswallacetrust.org.uk"
     },
     {
       "id": "harvard-financial-aid",
       "name": "Harvard College Financial Aid for International Students",
       "funder": "Harvard University (Harvard College)",
       "category": "need-based",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "bachelors",
       "coverage": "full",
       "coverageDetail": "Need-based grant aid meeting 100% of demonstrated financial need; families earning under USD 100,000 typically pay nothing, and aid comes from scholarship grants plus campus employment rather than required loans",
@@ -1299,14 +2254,30 @@
       "sourceUrls": [
         "https://college.harvard.edu/financial-aid/how-aid-works"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "4 years (undergraduate)",
+      "renewable": true,
+      "documentsRequired": [
+        "Harvard admission application",
+        "Financial aid forms (FAFSA/CSS Profile)",
+        "Transcripts",
+        "Test scores",
+        "Valid passport"
+      ],
+      "tips": [
+        "Harvard meets 100% of demonstrated financial need",
+        "Need-blind admission for international students"
+      ],
+      "contactInfo": "college.harvard.edu/financial-aid"
     },
     {
       "id": "educationusa-opportunity-funds-pakistan",
       "name": "EducationUSA Opportunity Funds Program (Pakistan)",
       "funder": "U.S. Department of State (EducationUSA network), administered in Pakistan by USEFP",
       "category": "need-based",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Awards cover the up-front costs of applying to U.S. colleges and universities — typically standardized test fees, application fees, and in some cases airfare and visa-related costs — for high-achieving Pakistani students likely to receive full financial aid from U.S. institutions; tuition itself is not covered",
@@ -1324,14 +2295,29 @@
         "https://educationusa.state.gov/foreign-institutions-and-governments/special-programs",
         "https://www.educationusa.pk/"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "Varies",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "English proficiency",
+        "Financial documents"
+      ],
+      "tips": [
+        "Covers test prep, application fees, and travel for campus visits",
+        "Apply through EducationUSA advising center in Pakistan"
+      ],
+      "contactInfo": "educationusa.state.gov"
     },
     {
       "id": "knight-hennessy-scholars",
       "name": "Knight-Hennessy Scholars at Stanford",
       "funder": "Knight-Hennessy Scholars program at Stanford University",
       "category": "university-specific",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "full",
       "coverageDetail": "Up to three years of full funding for any graduate degree at Stanford University, covering tuition and associated fees plus a stipend for living and academic expenses, with additional funding opportunities for longer degree programs",
@@ -1349,14 +2335,32 @@
         "https://knight-hennessy.stanford.edu/admission/before-you-apply/eligibility",
         "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "Up to 3 years (Stanford graduate)",
+      "renewable": true,
+      "documentsRequired": [
+        "Stanford graduate application",
+        "Knight-Hennessy application",
+        "Transcripts",
+        "Two references",
+        "GRE (some programs)",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "Full funding for any Stanford graduate program",
+        "Separate KH application required"
+      ],
+      "contactInfo": "knight-hennessy.stanford.edu"
     },
     {
       "id": "akf-international-scholarship",
       "name": "Aga Khan Foundation International Scholarship Programme",
       "funder": "Aga Khan Foundation",
       "category": "need-based",
-      "countries": ["multiple"],
+      "countries": [
+        "multiple"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Awards are granted on a 50% grant and 50% loan basis, covering tuition fees and living costs for postgraduate study at institutions in any country, including the United States; the loan portion is interest-free and repaid after graduation over a period set by the Foundation",
@@ -1373,14 +2377,31 @@
       "sourceUrls": [
         "https://the.akdn/en/international-scholarships"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years (master's)",
+      "renewable": true,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Two references",
+        "Financial need documentation",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "50% grant, 50% loan — covers tuition + living",
+        "Financial need is the primary criterion"
+      ],
+      "contactInfo": "akdn.org/akf"
     },
     {
       "id": "aauw-international-fellowships",
       "name": "AAUW International Fellowships",
       "funder": "American Association of University Women (AAUW)",
       "category": "merit-based",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A stipend of USD 20,000 for a master's or first professional degree and USD 25,000 for a doctoral degree — about PKR 5.56 million and PKR 6.95 million respectively at the August 2026 rate (USD 1 = PKR 278) — paid to the fellow for study at an accredited U.S. institution",
@@ -1397,14 +2418,30 @@
       "sourceUrls": [
         "https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "For women in higher education",
+        "Covers tuition + living + research"
+      ],
+      "contactInfo": "aauw.org"
     },
     {
       "id": "rotary-global-grant-scholarships",
       "name": "Rotary Foundation Global Grant Scholarships",
       "funder": "The Rotary Foundation",
       "category": "merit-based",
-      "countries": ["multiple"],
+      "countries": [
+        "multiple"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Graduate study abroad of one to four years in one of Rotary's seven areas of focus, funded through global grants with a minimum budget of USD 30,000 (about PKR 8.34 million at the August 2026 rate, USD 1 = PKR 278) that can cover tuition, travel, and living costs",
@@ -1421,14 +2458,30 @@
       "sourceUrls": [
         "https://www.rotary.org/en/our-programs/scholarships"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "Rotary application",
+        "Transcripts",
+        "English proficiency",
+        "Leadership evidence",
+        "Valid passport"
+      ],
+      "tips": [
+        "Through local Rotary club sponsorship",
+        "Leadership and service focus"
+      ],
+      "contactInfo": "rotary.org"
     },
     {
       "id": "penn-world-scholars",
       "name": "Penn World Scholars Program",
       "funder": "University of Pennsylvania",
       "category": "university-specific",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "bachelors",
       "coverage": "full",
       "coverageDetail": "A signature initiative for exceptional undergraduate international students admitted to Penn; scholars receive need-based financial aid from the University to meet their demonstrated need for the bachelor's programme",
@@ -1445,14 +2498,31 @@
       "sourceUrls": [
         "https://global.upenn.edu/isss/penn-world-scholars/"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "4 years (undergraduate)",
+      "renewable": true,
+      "documentsRequired": [
+        "Penn application",
+        "Financial aid forms",
+        "Transcripts",
+        "Recommendation letters",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "University of Pennsylvania — Ivy League",
+        "Full demonstrated financial need coverage"
+      ],
+      "contactInfo": "upenn.edu"
     },
     {
       "id": "mmeg-us-canada-grants",
       "name": "Margaret McNamara Education Grants (US-Canada)",
       "funder": "Margaret McNamara Education Grants (MMEG), a volunteer network founded by World Bank Group staff",
       "category": "need-based",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "Grants of up to USD 15,000 (about PKR 4.17 million at the August 2026 rate, USD 1 = PKR 278) in the US-Canada program for women from developing countries already enrolled at an accredited U.S. or Canadian university",
@@ -1469,14 +2539,31 @@
       "sourceUrls": [
         "https://www.mmeg.org/apply"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years (master's)",
+      "renewable": false,
+      "documentsRequired": [
+        "Online application",
+        "Transcripts",
+        "Two references",
+        "Financial need documentation",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "For women from developing countries",
+        "Covers tuition + living"
+      ],
+      "contactInfo": "mmeg.org"
     },
     {
       "id": "peo-international-peace-scholarship",
       "name": "P.E.O. International Peace Scholarship",
       "funder": "P.E.O. International, through the P.E.O. International Peace Scholarship Fund",
       "category": "merit-based",
-      "countries": ["usa"],
+      "countries": [
+        "usa"
+      ],
       "level": "multiple",
       "coverage": "partial",
       "coverageDetail": "A scholarship of up to USD 12,500 (about PKR 3.48 million at the August 2026 rate, USD 1 = PKR 278) for one year of graduate study at an accredited U.S. or Canadian institution, with renewal subject to the fund's continuing-eligibility rules",
@@ -1493,7 +2580,21 @@
       "sourceUrls": [
         "https://www.peointernational.org/educational-support/international-peace-scholarship-fund/eligibility-and-application-process/"
       ],
-      "ivyLeague": true
+      "ivyLeague": true,
+      "duration": "1–2 years",
+      "renewable": false,
+      "documentsRequired": [
+        "PEO application",
+        "Transcripts",
+        "Two references",
+        "English proficiency",
+        "Valid passport"
+      ],
+      "tips": [
+        "For women pursuing higher education in US/Canada",
+        "Apply through local P.E.O. chapter"
+      ],
+      "contactInfo": "peointernational.org"
     }
   ]
 }

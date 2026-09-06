@@ -328,6 +328,14 @@ export interface AbroadScholarship {
   deadline: string;          // hedged, e.g. "Jan 2027 cycle (approx.)"
   howToApply: string[];
   sourceUrls: string[];
+  /** Extended fields for detail pages */
+  ivyLeague?: boolean;
+  duration?: string;
+  renewable?: boolean;
+  documentsRequired?: string[];
+  exclusiveFor?: string;
+  tips?: string[];
+  contactInfo?: string;
 }
 
 export type AbroadTestKind = "english" | "aptitude" | "graduate" | "language";
