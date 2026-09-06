@@ -7,10 +7,10 @@ import { useStudent } from "@/lib/store";
 import { ShareStoryCard } from "./share-story-card";
 
 const TAG_STYLES: Record<string, string> = {
-  "highly-positive": "border-emerald-500/60 bg-emerald-500/10 text-emerald-300",
-  positive: "border-blue-500/60 bg-blue-500/10 text-blue-300",
-  constructive: "border-amber-500/60 bg-amber-500/10 text-amber-300",
-  critical: "border-red-500/60 bg-red-500/10 text-red-300",
+  "highly-positive": "border-emerald/40 bg-emerald/10 text-emerald",
+  positive: "border-saffron/40 bg-saffron/10 text-saffron",
+  constructive: "border-amber/40 bg-amber/10 text-amber",
+  critical: "border-danger/40 bg-danger/10 text-danger",
 };
 
 const TAG_LABELS: Record<string, string> = {
@@ -48,9 +48,9 @@ export function Celebration({
   }, [playConfetti]);
 
   return (
-    <section aria-label="Thank you" className="mt-6 rounded-2xl bg-[#09090B] p-4 sm:p-8">
-      <p className="font-mono text-xs uppercase tracking-[0.25em] text-[#3B82F6]">Your voice landed</p>
-      <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+    <section aria-label="Thank you" className="mt-6 rounded-2xl border border-line bg-surface p-4 sm:p-8">
+      <p className="font-mono text-xs uppercase tracking-[0.25em] text-saffron">Your voice landed</p>
+      <h2 className="mt-2 text-3xl font-extrabold text-ink sm:text-4xl">
         Thank you, {firstName}.
       </h2>
       <p className="mt-2 max-w-lg text-muted">{CLOSINGS[tone]}</p>
@@ -59,13 +59,13 @@ export function Celebration({
         <span className={`rounded-full border px-3 py-1 text-xs font-bold uppercase ${TAG_STYLES[result.tag]}`}>
           {TAG_LABELS[result.tag]}
         </span>
-        <span className="rounded-full border border-[#2a2a35] px-3 py-1 font-mono text-xs text-faint">
+        <span className="rounded-full border border-line px-3 py-1 font-mono text-xs text-faint">
           {result.score}/100
         </span>
         <span className="font-mono text-xs text-faint">{rating}/10</span>
       </div>
       {hasMedia && (
-        <p className="mt-3 rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs text-amber-200">
+        <p className="mt-3 rounded-lg border border-amber/30 bg-amber/5 px-3 py-2 text-xs text-amber">
           Your media is in review — we&apos;ll check it before anything appears publicly.
         </p>
       )}
@@ -84,7 +84,7 @@ export function Celebration({
 
       <a
         href="#wishlist"
-        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-400 transition-colors hover:text-blue-300"
+        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-saffron transition-colors hover:text-saffron-soft"
       >
         Vote on the wishlist ↓
       </a>

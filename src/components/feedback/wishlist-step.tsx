@@ -39,7 +39,7 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
 
   if (done) {
     return (
-      <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-5 text-sm text-emerald-200">
+      <div className="rounded-xl border border-emerald/30 bg-emerald/5 p-5 text-sm text-emerald">
         Idea added — see it on the wall below and watch the votes roll in.
       </div>
     );
@@ -47,8 +47,8 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
 
   return (
     <div className="space-y-3">
-      <p className="flex items-center gap-2 text-sm text-[#a1a1b5]">
-        <Lightbulb className="h-4 w-4 text-amber-300" aria-hidden />
+      <p className="flex items-center gap-2 text-sm text-muted">
+        <Lightbulb className="h-4 w-4 text-amber" aria-hidden />
         Optional — have an idea for what we should build next?
       </p>
       <input
@@ -56,7 +56,7 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
         onChange={(e) => setName(e.target.value)}
         aria-label="Feature name"
         placeholder="Feature name — e.g. past-paper practice mode"
-        className="w-full rounded-lg border border-[#2a2a35] bg-[#0d0d12] px-3 py-2 text-sm text-white placeholder:text-faint focus:border-blue-500/60 focus:outline-none"
+        className="w-full rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
       />
       <div className="grid gap-3 sm:grid-cols-2">
         <textarea
@@ -64,14 +64,14 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
           onChange={(e) => setDescription(e.target.value)}
           aria-label="Feature description"
           placeholder="What is it?"
-          className="min-h-[72px] w-full resize-y rounded-lg border border-[#2a2a35] bg-[#0d0d12] px-3 py-2 text-sm text-white placeholder:text-faint focus:border-blue-500/60 focus:outline-none"
+          className="min-h-[72px] w-full resize-y rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
         />
         <textarea
           value={useCase}
           onChange={(e) => setUseCase(e.target.value)}
           aria-label="Use case"
           placeholder="Who needs it and why?"
-          className="min-h-[72px] w-full resize-y rounded-lg border border-[#2a2a35] bg-[#0d0d12] px-3 py-2 text-sm text-white placeholder:text-faint focus:border-blue-500/60 focus:outline-none"
+          className="min-h-[72px] w-full resize-y rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
         />
       </div>
       <div className="flex flex-wrap items-center gap-2">
@@ -87,11 +87,11 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
               className={`rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${
                 active
                   ? p.id === "p0"
-                    ? "border-red-500/60 bg-red-500/10 text-red-300"
+                    ? "border-danger/40 bg-danger/10 text-danger"
                     : p.id === "p1"
-                      ? "border-amber-500/60 bg-amber-500/10 text-amber-300"
-                      : "border-blue-500/60 bg-blue-500/10 text-blue-300"
-                  : "border-[#2a2a35] text-faint hover:border-[#3a3a48] hover:text-white"
+                      ? "border-amber/40 bg-amber/10 text-amber"
+                      : "border-saffron/40 bg-saffron/10 text-saffron"
+                  : "border-line text-muted hover:border-saffron/40 hover:text-ink"
               }`}
             >
               {p.label}
@@ -102,14 +102,14 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
           type="button"
           onClick={submit}
           disabled={!name.trim() || busy}
-          className="ml-auto inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-500 disabled:opacity-40"
+          className="ml-auto inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-soft disabled:opacity-40"
         >
           <Send className="h-4 w-4" aria-hidden />
           {busy ? "Adding…" : "Add to the wall"}
         </button>
       </div>
       {error && (
-        <p role="alert" className="text-sm text-red-300">
+        <p role="alert" className="text-sm text-danger">
           {error}
         </p>
       )}

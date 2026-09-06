@@ -43,9 +43,9 @@ export function MediaUploader({
 
   return (
     <div>
-      <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-[#333] bg-[#111118] px-4 py-6 text-center transition-colors hover:border-blue-500/50 focus-within:border-blue-500/50">
+      <label className="flex cursor-pointer flex-col items-center gap-2 rounded-xl border border-dashed border-line bg-surface-2/60 px-4 py-6 text-center transition-colors hover:border-saffron/50 focus-within:border-saffron/50">
         <FileUp className="h-6 w-6 text-faint" aria-hidden />
-        <span className="text-sm font-medium text-[#a1a1b5]">Attach a screenshot, clip, or voice note</span>
+        <span className="text-sm font-medium text-muted">Attach a screenshot, clip, or voice note</span>
         <span className="font-mono text-xs text-faint">images ≤ 5MB · video/audio ≤ 25MB</span>
         {/* no accept list: userEvent's applyAccept silently drops files before validateMedia can show an error */}
         <input
@@ -61,7 +61,7 @@ export function MediaUploader({
       </label>
 
       {error && (
-        <p role="alert" className="mt-2 text-sm text-red-300">
+        <p role="alert" className="mt-2 text-sm text-danger">
           {error}
         </p>
       )}
@@ -69,7 +69,7 @@ export function MediaUploader({
       {items.length > 0 && (
         <ul className="mt-4 space-y-3">
           {items.map((item) => (
-            <li key={item.url} className="flex items-center gap-3 rounded-lg border border-[#222] bg-[#111118] p-3">
+            <li key={item.url} className="flex items-center gap-3 rounded-lg border border-line bg-surface-2/60 p-3">
               {item.kind === "image" && (
                 // eslint-disable-next-line @next/next/no-img-element -- blob: URLs are transient, next/image provides no benefit
                 <img src={item.url} alt="" className="h-14 w-14 rounded object-cover" />
@@ -81,7 +81,7 @@ export function MediaUploader({
                 <audio src={item.url} controls className="h-9 w-40" />
               )}
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-white">{item.file.name}</p>
+                <p className="truncate text-sm font-medium text-ink">{item.file.name}</p>
                 <p className="font-mono text-xs text-faint">
                   {(item.file.size / 1024 / 1024).toFixed(1)}MB · {item.kind}
                 </p>
@@ -90,7 +90,7 @@ export function MediaUploader({
                 type="button"
                 onClick={() => remove(item.url)}
                 aria-label={`Remove ${item.file.name}`}
-                className="rounded-md p-1.5 text-faint transition-colors hover:bg-red-500/10 hover:text-red-300"
+                className="rounded-md p-1.5 text-faint transition-colors hover:bg-danger/10 hover:text-danger"
               >
                 <X className="h-4 w-4" aria-hidden />
               </button>

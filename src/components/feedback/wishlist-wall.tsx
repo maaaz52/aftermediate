@@ -14,9 +14,9 @@ const FILTERS: { id: Filter; label: string }[] = [
 ];
 
 const PRIORITY_STYLES: Record<string, string> = {
-  p0: "border-red-500/50 bg-red-500/10 text-red-300",
-  p1: "border-amber-500/50 bg-amber-500/10 text-amber-300",
-  p2: "border-blue-500/50 bg-blue-500/10 text-blue-300",
+  p0: "border-danger/40 bg-danger/10 text-danger",
+  p1: "border-amber/40 bg-amber/10 text-amber",
+  p2: "border-saffron/40 bg-saffron/10 text-saffron",
 };
 
 export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
@@ -57,9 +57,9 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
   };
 
   return (
-    <section aria-label="Feature wishlist" className="rounded-2xl border border-[#222] bg-[#0d0d12] p-4 sm:p-6">
+    <section aria-label="Feature wishlist" className="rounded-2xl border border-line bg-surface p-4 sm:p-6">
       <div className="flex flex-wrap items-center gap-3">
-        <h2 className="text-lg font-bold text-white">Feature wishlist</h2>
+        <h2 className="text-lg font-bold text-ink">Feature wishlist</h2>
         <span className="font-mono text-xs text-faint">vote on what we build next</span>
         <div className="ml-auto flex flex-wrap gap-2" role="group" aria-label="Roadmap filter">
           {FILTERS.map((f) => (
@@ -70,8 +70,8 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
               onClick={() => setFilter(f.id)}
               className={`rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${
                 filter === f.id
-                  ? "border-blue-500/60 bg-blue-500/10 text-blue-300"
-                  : "border-[#2a2a35] text-faint hover:border-[#3a3a48] hover:text-white"
+                  ? "border-saffron/40 bg-saffron/10 text-saffron"
+                  : "border-line text-muted hover:border-saffron/40 hover:text-ink"
               }`}
             >
               {f.label}
@@ -89,20 +89,20 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
       ) : (
         <ul className="mt-4 space-y-3">
           {rows.map((row) => (
-            <li key={row.id} className="flex items-start gap-4 rounded-xl border border-[#222] bg-[#111118] p-4">
+            <li key={row.id} className="flex items-start gap-4 rounded-xl border border-line bg-surface-2/60 p-4">
               <button
                 type="button"
                 onClick={() => vote(row.id)}
                 aria-pressed={voted[row.id] ?? false}
                 aria-label={`Upvote ${row.name}`}
-                className="flex shrink-0 flex-col items-center gap-0.5 rounded-lg border border-[#2a2a35] px-2.5 py-1.5 transition-colors hover:border-blue-500/50 aria-pressed:border-blue-500/60 aria-pressed:bg-blue-500/10"
+                className="flex shrink-0 flex-col items-center gap-0.5 rounded-lg border border-line px-2.5 py-1.5 transition-colors hover:border-saffron/50 aria-pressed:border-saffron/60 aria-pressed:bg-saffron/10"
               >
-                <ArrowUp className={`h-4 w-4 ${voted[row.id] ? "text-blue-400" : "text-faint"}`} aria-hidden />
-                <span className="text-sm font-bold tabular-nums text-white">{row.votes_count}</span>
+                <ArrowUp className={`h-4 w-4 ${voted[row.id] ? "text-saffron" : "text-faint"}`} aria-hidden />
+                <span className="text-sm font-bold tabular-nums text-ink">{row.votes_count}</span>
               </button>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="text-sm font-semibold text-white">{row.name}</h3>
+                  <h3 className="text-sm font-semibold text-ink">{row.name}</h3>
                   <span className={`rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase ${PRIORITY_STYLES[row.priority]}`}>
                     {row.priority}
                   </span>
@@ -110,15 +110,15 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
                     <span
                       className={`rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase ${
                         row.status === "shipped"
-                          ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-300"
-                          : "border-violet-500/50 bg-violet-500/10 text-violet-300"
+                          ? "border-emerald/40 bg-emerald/10 text-emerald"
+                          : "border-violet/40 bg-violet/10 text-violet"
                       }`}
                     >
                       {row.status === "shipped" ? "Shipped" : "In planning"}
                     </span>
                   )}
                 </div>
-                {row.description && <p className="mt-1 text-sm text-[#a1a1b5]">{row.description}</p>}
+                {row.description && <p className="mt-1 text-sm text-muted">{row.description}</p>}
                 {row.use_case && <p className="mt-1 text-xs text-faint">Why: {row.use_case}</p>}
               </div>
             </li>

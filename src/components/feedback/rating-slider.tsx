@@ -4,7 +4,7 @@ export function RatingSlider({ value, onChange }: { value: number; onChange: (n:
   return (
     <div>
       <div className="mb-2 flex items-baseline gap-1">
-        <span className="text-5xl font-black tabular-nums text-blue-400">{value}</span>
+        <span className="text-5xl font-black tabular-nums text-saffron">{value}</span>
         <span className="text-sm text-faint">/ 10</span>
       </div>
       <input
@@ -15,7 +15,7 @@ export function RatingSlider({ value, onChange }: { value: number; onChange: (n:
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
         aria-label="Rating out of 10"
-        className="w-full accent-blue-500"
+        className="w-full accent-saffron"
       />
       <div className="mt-1 flex justify-between text-xs text-faint">
         <span>not for me</span>

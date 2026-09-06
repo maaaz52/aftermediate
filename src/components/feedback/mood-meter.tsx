@@ -19,12 +19,12 @@ export function MoodMeter({ value, onChange }: { value: ToneId | null; onChange:
             onClick={() => onChange(tone.id)}
             className={`flex min-w-[110px] flex-1 flex-col items-center gap-2 rounded-xl border px-4 py-5 transition-all duration-200 ${
               active
-                ? "scale-105 border-blue-500/60 bg-blue-500/10 shadow-[0_0_24px_rgba(59,130,246,0.35)]"
-                : "border-[#222] bg-[#111118] hover:border-[#3a3a48]"
+                ? "scale-105 border-saffron/40 bg-saffron/10 shadow-[0_0_24px_rgba(47,85,212,0.25)]"
+                : "border-line bg-surface hover:border-saffron/40"
             }`}
           >
-            <Icon className="h-7 w-7" style={{ color: active ? tone.color : "#8a8a9e" }} aria-hidden />
-            <span className={`text-sm font-semibold ${active ? "text-white" : "text-faint"}`}>{tone.label}</span>
+            <Icon className="h-7 w-7" style={{ color: active ? tone.color : "#8a93a6" }} aria-hidden />
+            <span className={`text-sm font-semibold ${active ? "text-ink" : "text-faint"}`}>{tone.label}</span>
           </button>
         );
       })}

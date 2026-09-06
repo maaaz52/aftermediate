@@ -52,15 +52,15 @@ export function StoryStep({
           const Icon = card.icon;
           const open = openCard === card.id;
           return (
-            <div key={card.id} className="rounded-xl border border-[#222] bg-[#111118]">
+            <div key={card.id} className="rounded-xl border border-line bg-surface">
               <button
                 type="button"
                 onClick={() => toggleCard(card.id)}
                 aria-expanded={open}
                 className="flex w-full items-center gap-3 px-4 py-3 text-left"
               >
-                <Icon className="h-5 w-5 text-blue-400" aria-hidden />
-                <span className="flex-1 text-sm font-semibold text-white">{card.label}</span>
+                <Icon className="h-5 w-5 text-saffron" aria-hidden />
+                <span className="flex-1 text-sm font-semibold text-ink">{card.label}</span>
                 <ChevronDown
                   className={`h-4 w-4 text-faint transition-transform ${open ? "rotate-180" : ""}`}
                   aria-hidden
@@ -74,7 +74,7 @@ export function StoryStep({
                     onChange={(e) => card.onChange(e.target.value)}
                     onFocus={() => setVoiceTarget(card.id)}
                     placeholder="Optional — a sentence or two is enough."
-                    className="min-h-[84px] w-full resize-y rounded-lg border border-[#2a2a35] bg-[#0d0d12] px-3 py-2 text-sm text-white placeholder:text-faint focus:border-blue-500/60 focus:outline-none"
+                    className="min-h-[84px] w-full resize-y rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
                   />
                 </div>
               )}
@@ -84,7 +84,7 @@ export function StoryStep({
       </div>
 
       <div>
-        <p className="mb-2 text-sm font-semibold text-white">Would I recommend this to…?</p>
+        <p className="mb-2 text-sm font-semibold text-ink">Would I recommend this to…?</p>
         <div className="flex flex-wrap gap-2">
           {PERSONAS.map((p) => {
             const active = recommendTo.includes(p.id);
@@ -98,8 +98,8 @@ export function StoryStep({
                 }
                 className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
                   active
-                    ? "border-emerald-500/60 bg-emerald-500/10 text-emerald-300"
-                    : "border-[#2a2a35] text-faint hover:border-[#3a3a48] hover:text-white"
+                    ? "border-emerald/40 bg-emerald/10 text-emerald"
+                    : "border-line text-muted hover:border-saffron/40 hover:text-ink"
                 }`}
               >
                 {p.label}
@@ -111,7 +111,7 @@ export function StoryStep({
 
       <div>
         <div className="mb-2 flex items-center justify-between">
-          <p className="text-sm font-semibold text-white">Show, don&apos;t just tell</p>
+          <p className="text-sm font-semibold text-ink">Show, don&apos;t just tell</p>
           <VoiceInput onResult={handleVoice} />
         </div>
         <MediaUploader items={media} onChange={onMedia} />

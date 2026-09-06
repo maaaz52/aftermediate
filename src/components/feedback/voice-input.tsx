@@ -58,8 +58,8 @@ export function VoiceInput({ onResult, disabled }: { onResult: (text: string) =>
       aria-label={listening ? "Stop voice input" : "Start voice input"}
       className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
         listening
-          ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-300"
-          : "border-[#222] text-faint hover:border-[#3a3a48] hover:text-white"
+          ? "border-emerald/40 bg-emerald/10 text-emerald"
+          : "border-line text-muted hover:border-saffron/40 hover:text-ink"
       } disabled:opacity-40`}
     >
       <Mic className={`h-4 w-4 ${listening ? "animate-pulse" : ""}`} aria-hidden />
