@@ -1,9 +1,8 @@
 import { generateStructured } from "@/lib/ai";
 import type { Stream } from "@/lib/types";
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { parseJsonBody, requireAuth } from "@/lib/http";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -25,39 +24,29 @@ const RATE_WINDOW_MS = 60 * 1000;
 
 export async function POST(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Sign in to see demand insights", 401);
+    const auth = await requireAuth("Sign in to see demand insights");
+    if (!auth.ok) return auth.error;
+    const { user } = auth;
 
     if (!checkRateLimit(`demand:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
       return jsonError("Too many requests. Try again in a moment.", 429);
     }
 
-    const declared = Number(req.headers.get("content-length"));
-    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
-      return jsonError("Request body is too large", 413);
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
+    const body = bodyResult.value as Record<string, unknown>;
 
-    const text = await req.text();
-    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
-
-    let body: unknown;
-    try {
-      body = JSON.parse(text);
-    } catch {
-      return jsonError("Request body is not valid JSON", 400);
-    }
-
-    const stream = (body as { stream?: unknown })?.stream as Stream | undefined;
+    const stream = body.stream as Stream | undefined;
     if (!stream) return jsonError("stream is required", 400);
     if (!VALID_STREAMS.includes(stream as (typeof VALID_STREAMS)[number])) {
       return jsonError("Invalid stream value", 400);
     }
 
-    const interests = Array.isArray((body as { interests?: unknown })?.interests)
-      ? ((body as { interests: unknown[] }).interests.filter((i: unknown): i is string => typeof i === "string")).slice(0, MAX_INTERESTS)
+    const interests = Array.isArray(body.interests)
+      ? body.interests.filter((i: unknown): i is string => typeof i === "string").slice(0, MAX_INTERESTS)
       : [];
-    const countries = Array.isArray((body as { countries?: unknown })?.countries)
-      ? ((body as { countries: unknown[] }).countries.filter((c: unknown): c is string => typeof c === "string")).slice(0, MAX_COUNTRIES)
+    const countries = Array.isArray(body.countries)
+      ? body.countries.filter((c: unknown): c is string => typeof c === "string").slice(0, MAX_COUNTRIES)
       : [];
 
     if (countries.length === 0) {

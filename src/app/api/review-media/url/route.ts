@@ -1,6 +1,5 @@
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { requireAuth } from "@/lib/http";
 
 export const runtime = "nodejs";
 
@@ -13,9 +12,9 @@ export const runtime = "nodejs";
  */
 export async function GET(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Unauthorized", 401);
+    const auth = await requireAuth();
+    if (!auth.ok) return auth.error;
+    const { supabase, user } = auth;
 
     const url = new URL(req.url);
     const path = url.searchParams.get("path");

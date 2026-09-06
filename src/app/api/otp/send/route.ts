@@ -1,9 +1,11 @@
-import { createHash, randomInt } from "node:crypto";
+import { randomInt } from "node:crypto";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { assertServerEnv } from "@/lib/server-env";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { escapeHtml } from "@/lib/escape-html";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { sendEmail } from "@/lib/email";
+import { hashOtpCode } from "@/lib/otp";
 
 export const runtime = "nodejs";
 
@@ -14,10 +16,6 @@ const IP_SEND_MAX = 5;
 const IP_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-function hashCode(email: string, code: string, secret: string): string {
-  return createHash("sha256").update(`${secret}:${email.toLowerCase()}:${code}`).digest("hex");
-}
 
 function generateCode(): string {
   return String(randomInt(0, 1_000_000)).padStart(6, "0");
@@ -78,7 +76,7 @@ export async function POST(req: Request) {
 
     const { error: insertError } = await admin.from("otp_codes").insert({
       email,
-      code_hash: hashCode(email, code, OTP_SECRET),
+      code_hash: hashOtpCode(email, code, OTP_SECRET),
       attempts: 0,
       expires_at: expiresAt,
     });
@@ -88,29 +86,20 @@ export async function POST(req: Request) {
     }
 
     // Email the code via Resend
-    const resendRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Aftermediate <no-reply@aftermediate.site>",
-        to: email,
-        subject: "Your Aftermediate verification code",
-        html: `
-          <div style="font-family:Plus Jakarta Sans,system-ui,sans-serif;max-width:420px;margin:0 auto;">
-            <p style="color:#566073;font-size:15px;line-height:1.6;">Hi${escapeHtml(name) ? ` ${escapeHtml(name)}` : ""}, welcome to Aftermediate. Here&apos;s your code to verify your email:</p>
-            <div style="margin:24px 0;padding:18px 24px;border:2px solid #191f2c;background:#f4f2eb;text-align:center;font-family:monospace;font-size:32px;font-weight:700;letter-spacing:8px;color:#191f2c;">${code}</div>
-            <p style="color:#8a93a6;font-size:13px;line-height:1.6;">This code expires in 10 minutes. If you didn&apos;t request it, you can safely ignore this email.</p>
-          </div>
-        `,
-      }),
+    const sent = await sendEmail({
+      from: "Aftermediate <no-reply@aftermediate.site>",
+      to: email,
+      subject: "Your Aftermediate verification code",
+      html: `
+        <div style="font-family:Plus Jakarta Sans,system-ui,sans-serif;max-width:420px;margin:0 auto;">
+          <p style="color:#566073;font-size:15px;line-height:1.6;">Hi${escapeHtml(name) ? ` ${escapeHtml(name)}` : ""}, welcome to Aftermediate. Here&apos;s your code to verify your email:</p>
+          <div style="margin:24px 0;padding:18px 24px;border:2px solid #191f2c;background:#f4f2eb;text-align:center;font-family:monospace;font-size:32px;font-weight:700;letter-spacing:8px;color:#191f2c;">${code}</div>
+          <p style="color:#8a93a6;font-size:13px;line-height:1.6;">This code expires in 10 minutes. If you didn&apos;t request it, you can safely ignore this email.</p>
+        </div>
+      `,
     });
 
-    if (!resendRes.ok) {
-      const errText = await resendRes.text();
-      console.error("otp send: resend error", errText);
+    if (!sent.ok) {
       return jsonError("Could not send the email. Try again.", 500);
     }
 

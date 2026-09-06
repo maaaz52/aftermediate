@@ -1,6 +1,5 @@
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { parseJsonBody, requireAuth } from "@/lib/http";
 
 export const runtime = "nodejs";
 
@@ -10,28 +9,14 @@ const MAX_PAYLOAD_CHARS = 200_000;
 
 export async function POST(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Unauthorized", 401);
+    const auth = await requireAuth();
+    if (!auth.ok) return auth.error;
+    const { supabase, user } = auth;
 
-    const declared = Number(req.headers.get("content-length"));
-    if (Number.isFinite(declared) && declared > MAX_PAYLOAD_CHARS) {
-      return jsonError("watchlist is too large", 413);
-    }
+    const bodyResult = await parseJsonBody(req, MAX_PAYLOAD_CHARS);
+    if (!bodyResult.ok) return bodyResult.error;
 
-    const text = await req.text();
-    if (text.length > MAX_PAYLOAD_CHARS) {
-      return jsonError("watchlist is too large", 413);
-    }
-
-    let body: unknown;
-    try {
-      body = JSON.parse(text);
-    } catch {
-      return jsonError("watchlist must be valid JSON", 400);
-    }
-
-    const watchlist = (body as { watchlist?: unknown })?.watchlist;
+    const watchlist = (bodyResult.value as { watchlist?: unknown })?.watchlist;
     if (!Array.isArray(watchlist)) {
       return jsonError("watchlist must be an array", 400);
     }

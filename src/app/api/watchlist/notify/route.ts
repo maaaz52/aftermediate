@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
+import { requireAuth } from "@/lib/http";
 import { getServerEnv } from "@/lib/server-env";
 import { jsonError } from "@/lib/api-response";
 import { escapeHtml } from "@/lib/escape-html";
+import { sendEmail } from "@/lib/email";
 import type { WatchlistEntry } from "@/lib/watchlist";
 
 export const runtime = "nodejs";
@@ -17,9 +17,9 @@ function isRateLimited(lastNotifiedAt: string | null): boolean {
 
 export async function POST(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Unauthorized", 401);
+    const auth = await requireAuth();
+    if (!auth.ok) return auth.error;
+    const { supabase, user } = auth;
 
     const env = getServerEnv();
     const RESEND_API_KEY = env.resendApiKey;
@@ -59,31 +59,22 @@ export async function POST(req: Request) {
       return NextResponse.json({ sent: false, reason: "rate-limited" });
     }
 
-    const resendRes = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "Merit Alerts <watchlist@aftermediate.site>",
-        to: userEmail,
-        subject: `🔔 Merit update: ${universityName} — ${programName}`,
-        html: `
-          <p>Your watchlist program has a new merit list:</p>
-          <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;">
-            <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${escapeHtml(universityName)} — ${escapeHtml(programName)}</td></tr>
-            ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${escapeHtml(previousMerit)}%</td></tr>` : ""}
-            <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${escapeHtml(currentMerit)}%</td></tr>
-          </table>
-          <p><a href="https://aftermediate.site/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
-        `,
-      }),
+    const resendRes = await sendEmail({
+      from: "Merit Alerts <watchlist@aftermediate.site>",
+      to: userEmail,
+      subject: `🔔 Merit update: ${universityName} — ${programName}`,
+      html: `
+        <p>Your watchlist program has a new merit list:</p>
+        <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;">
+          <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${escapeHtml(universityName)} — ${escapeHtml(programName)}</td></tr>
+          ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${escapeHtml(previousMerit)}%</td></tr>` : ""}
+          <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${escapeHtml(currentMerit)}%</td></tr>
+        </table>
+        <p><a href="https://aftermediate.site/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
+      `,
     });
 
     if (!resendRes.ok) {
-      const errText = await resendRes.text();
-      console.error("resend error", errText);
       return NextResponse.json({ sent: false, reason: "email-failed" });
     }
 

@@ -1,10 +1,9 @@
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { findProgram } from "@/lib/watchlist";
 import universities from "@/data/universities.json";
 import type { University } from "@/lib/types";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { requireAuth } from "@/lib/http";
 
 export const runtime = "nodejs";
 
@@ -17,9 +16,9 @@ const RATE_WINDOW_MS = 60 * 1000;
 
 export async function GET(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Unauthorized", 401);
+    const auth = await requireAuth();
+    if (!auth.ok) return auth.error;
+    const { user } = auth;
 
     if (!checkRateLimit(`watchlist-check:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
       return jsonError("Too many requests. Try again in a moment.", 429);

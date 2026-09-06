@@ -2,8 +2,9 @@ import { streamChat } from "@/lib/ai";
 import { MAX_BODY_BYTES, parseChatRequest } from "@/lib/chat-request";
 import { retrieveForMessages } from "@/lib/knowledge";
 import { buildStudentContext, type ProfileRow } from "@/lib/student-context";
-import { createClient } from "@/lib/supabase/server";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { parseJsonBody, requireAuth } from "@/lib/http";
+import { jsonError } from "@/lib/api-response";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -20,14 +21,7 @@ const RATE_WINDOW_MS = 60 * 1000;
  */
 const PROFILE_COLUMNS = "name, stream, marks, interests, city, budget, quiz";
 
-type Supabase = Awaited<ReturnType<typeof createClient>>;
-
-function jsonError(message: string, status: number): Response {
-  return new Response(JSON.stringify({ error: message }), {
-    status,
-    headers: { "content-type": "application/json" },
-  });
-}
+type Supabase = Awaited<ReturnType<typeof import("@/lib/supabase/server").createClient>>;
 
 /**
  * A profile read must never take a chat down, so a missing row or a failed
@@ -49,37 +43,21 @@ async function readStudent(supabase: Supabase, userId: string) {
 
 export async function POST(req: Request) {
   try {
-    const supabase = await createClient();
     // getUser() verifies the JWT with Supabase and may refresh the session,
     // which writes cookies. HTTP cannot set cookies after streaming starts, so
     // auth and the profile read happen before the streaming response exists.
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-    if (!user) return jsonError("Sign in to chat", 401);
+    const auth = await requireAuth("Sign in to chat");
+    if (!auth.ok) return auth.error;
+    const { supabase, user } = auth;
 
     if (!checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
       return jsonError("Too many messages. Try again in a moment.", 429);
     }
 
-    // The declared length is the cheap refusal: a body this big is never read.
-    const declared = Number(req.headers.get("content-length"));
-    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
-      return jsonError("Request body is too large", 413);
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
 
-    // Content-Length is the client's word, so the size is measured again on the
-    // text actually handed to the JSON parser.
-    const text = await req.text();
-    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
-
-    let body: unknown;
-    try {
-      body = JSON.parse(text);
-    } catch {
-      return jsonError("Request body is not valid JSON", 400);
-    }
-
-    const parsed = parseChatRequest(body);
+    const parsed = parseChatRequest(bodyResult.value);
     if (!parsed.ok) return jsonError(parsed.error, parsed.status);
     const { persona, messages } = parsed.value;
 

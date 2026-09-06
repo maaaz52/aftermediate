@@ -1,8 +1,7 @@
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { presignR2GetUrl } from "@/lib/r2";
+import { requireAuth } from "@/lib/http";
 import contentJson from "@/data/test-prep-content.json";
 
 export const runtime = "nodejs";
@@ -33,9 +32,9 @@ const ALLOWED_KEYS = new Set(
  */
 export async function GET(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Unauthorized", 401);
+    const auth = await requireAuth();
+    if (!auth.ok) return auth.error;
+    const { user } = auth;
 
     // Signed URLs are cheap but per-user; a scripted client shouldn't be able
     // to mint thousands. 20/min is generous for a student browsing lectures.

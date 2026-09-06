@@ -1,9 +1,8 @@
 import { generateText } from "ai";
 import { model } from "@/lib/ai";
-import { createClient } from "@/lib/supabase/server";
-import { requireUser } from "@/lib/require-user";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { parseJsonBody, requireAuth } from "@/lib/http";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -41,29 +40,18 @@ Rules:
 
 export async function POST(req: Request) {
   try {
-    const supabase = await createClient();
-    const user = await requireUser(supabase);
-    if (!user) return jsonError("Sign in to scan a marksheet", 401);
+    const auth = await requireAuth("Sign in to scan a marksheet");
+    if (!auth.ok) return auth.error;
+    const { user } = auth;
 
     if (!checkRateLimit(`ocr:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
       return jsonError("Too many scans. Try again in a moment.", 429);
     }
 
-    const declared = Number(req.headers.get("content-length"));
-    if (Number.isFinite(declared) && declared > MAX_BODY_BYTES)
-      return jsonError("Request body is too large", 413);
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
 
-    const text = await req.text();
-    if (text.length > MAX_BODY_BYTES) return jsonError("Request body is too large", 413);
-
-    let body: unknown;
-    try {
-      body = JSON.parse(text);
-    } catch {
-      return jsonError("Request body is not valid JSON", 400);
-    }
-
-    const { image } = (body ?? {}) as { image?: unknown };
+    const { image } = (bodyResult.value ?? {}) as { image?: unknown };
     if (typeof image !== "string" || !image) {
       return jsonError("No image provided", 400);
     }

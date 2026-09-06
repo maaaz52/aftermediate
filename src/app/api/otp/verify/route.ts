@@ -1,15 +1,11 @@
-import { createHash } from "node:crypto";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { assertServerEnv } from "@/lib/server-env";
 import { jsonError, jsonOk } from "@/lib/api-response";
+import { hashOtpCode } from "@/lib/otp";
 
 export const runtime = "nodejs";
 
 const MAX_ATTEMPTS = 5;
-
-function hashCode(email: string, code: string, secret: string): string {
-  return createHash("sha256").update(`${secret}:${email.toLowerCase()}:${code}`).digest("hex");
-}
 
 export async function POST(req: Request) {
   try {
@@ -58,7 +54,7 @@ export async function POST(req: Request) {
     }
 
     // Wrong code?
-    if (record.code_hash !== hashCode(email, code, OTP_SECRET)) {
+    if (record.code_hash !== hashOtpCode(email, code, OTP_SECRET)) {
       const { error: bumpError } = await admin
         .from("otp_codes")
         .update({ attempts: record.attempts + 1 })
