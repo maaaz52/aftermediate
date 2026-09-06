@@ -294,6 +294,14 @@ export interface AbroadCountry {
   pros: string[];
   cons: string[];
   sources: { label: string; url: string }[];
+  /** Extended fields for detail pages */
+  topUniversities?: { name: string; ranking?: string; programs: string[] }[];
+  scholarshipsAvailable?: string[];
+  climate?: string;
+  cultureTips?: string[];
+  studentLife?: string;
+  workRights?: string;
+  applicationDeadlines?: { intake: string; deadline: string }[];
 }
 
 export type CityTier = "big" | "small";

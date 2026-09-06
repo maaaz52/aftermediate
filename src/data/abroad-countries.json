@@ -9,7 +9,13 @@
       "region": "europe",
       "capital": "Berlin",
       "language": "German",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "National D Student Visa",
         "feePkr": 24300,
@@ -22,26 +28,73 @@
           "Students may work 140 full days or 280 half days per year"
         ]
       },
-      "intakes": ["October (Winter)", "April (Summer)"],
+      "intakes": [
+        "October (Winter)",
+        "April (Summer)"
+      ],
       "tuition": {
-        "ug": { "min": 0, "max": 0 },
-        "masters": { "min": 0, "max": 6480000 },
-        "phd": { "min": 0, "max": 0 }
+        "ug": {
+          "min": 0,
+          "max": 0
+        },
+        "masters": {
+          "min": 0,
+          "max": 6480000
+        },
+        "phd": {
+          "min": 0,
+          "max": 0
+        }
       },
       "living": {
-        "bigCity": { "rent": 165000, "food": 65000, "transport": 16000, "utilities": 32000, "misc": 45000 },
-        "smallCity": { "rent": 110000, "food": 55000, "transport": 13000, "utilities": 26000, "misc": 32000 }
+        "bigCity": {
+          "rent": 165000,
+          "food": 65000,
+          "transport": 16000,
+          "utilities": 32000,
+          "misc": 45000
+        },
+        "smallCity": {
+          "rent": 110000,
+          "food": 55000,
+          "transport": 13000,
+          "utilities": 26000,
+          "misc": 32000
+        }
       },
-      "oneTime": { "applicationFee": 24300, "visaFee": 24300, "insurance": 486000, "flight": 180000 },
+      "oneTime": {
+        "applicationFee": 24300,
+        "visaFee": 24300,
+        "insurance": 486000,
+        "flight": 180000
+      },
       "postStudyWork": "18-month job-seeker residence permit after graduation",
       "postStudyWorkMonths": 18,
       "pathway": [
-        { "title": "Shortlist programs", "detail": "Find English-taught programs on the DAAD database and shortlist 3-5 options." },
-        { "title": "Apply via uni-assist", "detail": "Many public universities accept applications through uni-assist; check each program's deadline." },
-        { "title": "Receive the offer", "detail": "Get the admission letter (Zulassungsbescheid) from the university." },
-        { "title": "Open a blocked account", "detail": "Deposit the required living-cost amount into a blocked account and get the confirmation." },
-        { "title": "Apply for the visa", "detail": "Book an appointment at the German Embassy, submit documents, and pay the visa fee." },
-        { "title": "Travel & enroll", "detail": "Fly to Germany, register your address, and enroll at the university." }
+        {
+          "title": "Shortlist programs",
+          "detail": "Find English-taught programs on the DAAD database and shortlist 3-5 options."
+        },
+        {
+          "title": "Apply via uni-assist",
+          "detail": "Many public universities accept applications through uni-assist; check each program's deadline."
+        },
+        {
+          "title": "Receive the offer",
+          "detail": "Get the admission letter (Zulassungsbescheid) from the university."
+        },
+        {
+          "title": "Open a blocked account",
+          "detail": "Deposit the required living-cost amount into a blocked account and get the confirmation."
+        },
+        {
+          "title": "Apply for the visa",
+          "detail": "Book an appointment at the German Embassy, submit documents, and pay the visa fee."
+        },
+        {
+          "title": "Travel & enroll",
+          "detail": "Fly to Germany, register your address, and enroll at the university."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -51,8 +104,15 @@
         "Language certificate (IELTS/TOEFL or German)",
         "Health insurance proof"
       ],
-      "requiredTests": ["ielts", "testdaf"],
-      "topFields": ["Mechanical Engineering", "Computer Science", "Automotive Engineering"],
+      "requiredTests": [
+        "ielts",
+        "testdaf"
+      ],
+      "topFields": [
+        "Mechanical Engineering",
+        "Computer Science",
+        "Automotive Engineering"
+      ],
       "pros": [
         "Tuition-free public universities",
         "Strong job market after graduation",
@@ -65,8 +125,79 @@
         "Private universities charge EUR 8,000-20,000 per year"
       ],
       "sources": [
-        { "label": "Make it in Germany (official portal)", "url": "https://www.make-it-in-germany.com" },
-        { "label": "German Embassy Islamabad", "url": "https://pakistan.diplo.de" }
+        {
+          "label": "Make it in Germany (official portal)",
+          "url": "https://www.make-it-in-germany.com"
+        },
+        {
+          "label": "German Embassy Islamabad",
+          "url": "https://pakistan.diplo.de"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Technical University of Munich (TUM)",
+          "ranking": "QS #16",
+          "programs": [
+            "Engineering",
+            "Computer Science",
+            "Natural Sciences"
+          ]
+        },
+        {
+          "name": "Ludwig Maximilian University (LMU)",
+          "ranking": "QS #54",
+          "programs": [
+            "Medicine",
+            "Law",
+            "Humanities"
+          ]
+        },
+        {
+          "name": "Heidelberg University",
+          "ranking": "QS #87",
+          "programs": [
+            "Medicine",
+            "Physics",
+            "Molecular Biology"
+          ]
+        },
+        {
+          "name": "RWTH Aachen University",
+          "ranking": "QS #106",
+          "programs": [
+            "Mechanical Engineering",
+            "Electrical Engineering",
+            "Automotive"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "DAAD Scholarships",
+        "Deutschlandstipendium (€300/mo)",
+        "Erasmus Mundus",
+        "Heinrich Böll Foundation",
+        "Konrad-Adenauer-Stiftung"
+      ],
+      "climate": "Temperate — cold winters (−2 to 3°C), warm summers (18–25°C). Rainy in autumn. Snow common in south.",
+      "cultureTips": [
+        "Germans value punctuality — always be on time",
+        "Recycling is strict — learn the bin system",
+        "Cash is still widely preferred over card in many shops",
+        "Sunday is rest day — most shops are closed",
+        "Learn basic German phrases — English is common in universities but not everywhere"
+      ],
+      "studentLife": "Vibrant student culture with over 2,500 canteens, student parties (Stammtisch), and cheap semester tickets for public transport. Most universities have extensive sports and cultural clubs.",
+      "workRights": "140 full days or 280 half days per year during studies. After graduation, 18-month job-seeking visa. No limit on salary during this period.",
+      "applicationDeadlines": [
+        {
+          "intake": "October (Winter)",
+          "deadline": "January–March (varies by uni)"
+        },
+        {
+          "intake": "April (Summer)",
+          "deadline": "September–November (varies by uni)"
+        }
       ]
     },
     {
@@ -77,7 +208,13 @@
       "region": "europe",
       "capital": "Vienna",
       "language": "German",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "Residence Permit - Student (Visa D entry)",
         "feePkr": 70600,
@@ -90,26 +227,73 @@
           "Students may work up to 20 hours per week"
         ]
       },
-      "intakes": ["October (Winter)", "March (Summer, limited)"],
+      "intakes": [
+        "October (Winter)",
+        "March (Summer, limited)"
+      ],
       "tuition": {
-        "ug": { "min": 486000, "max": 4860000 },
-        "masters": { "min": 486000, "max": 6480000 },
-        "phd": { "min": 0, "max": 486000 }
+        "ug": {
+          "min": 486000,
+          "max": 4860000
+        },
+        "masters": {
+          "min": 486000,
+          "max": 6480000
+        },
+        "phd": {
+          "min": 0,
+          "max": 486000
+        }
       },
       "living": {
-        "bigCity": { "rent": 160000, "food": 65000, "transport": 12000, "utilities": 29000, "misc": 42000 },
-        "smallCity": { "rent": 110000, "food": 55000, "transport": 10000, "utilities": 23000, "misc": 32000 }
+        "bigCity": {
+          "rent": 160000,
+          "food": 65000,
+          "transport": 12000,
+          "utilities": 29000,
+          "misc": 42000
+        },
+        "smallCity": {
+          "rent": 110000,
+          "food": 55000,
+          "transport": 10000,
+          "utilities": 23000,
+          "misc": 32000
+        }
       },
-      "oneTime": { "applicationFee": 0, "visaFee": 70600, "insurance": 253000, "flight": 200000 },
+      "oneTime": {
+        "applicationFee": 0,
+        "visaFee": 70600,
+        "insurance": 253000,
+        "flight": 200000
+      },
       "postStudyWork": "12-month Red-White-Red Card job-seeker route for graduates",
       "postStudyWorkMonths": 12,
       "pathway": [
-        { "title": "Choose a program", "detail": "Pick an English or German-taught program at a public university or FH." },
-        { "title": "Apply & get admission", "detail": "Submit documents directly to the university and receive your admission letter." },
-        { "title": "Prepare funds & insurance", "detail": "Arrange proof of funds (approx. EUR 722.58/month) and valid health insurance." },
-        { "title": "Apply for residence permit", "detail": "Lodge the Residence Permit - Student application at the Austrian Embassy Islamabad." },
-        { "title": "Collect Visa D & travel", "detail": "After approval, collect the Visa D, fly to Austria, and register with authorities." },
-        { "title": "Enroll & work part-time", "detail": "Enroll at the university and take up permitted part-time work (up to 20 hours/week)." }
+        {
+          "title": "Choose a program",
+          "detail": "Pick an English or German-taught program at a public university or FH."
+        },
+        {
+          "title": "Apply & get admission",
+          "detail": "Submit documents directly to the university and receive your admission letter."
+        },
+        {
+          "title": "Prepare funds & insurance",
+          "detail": "Arrange proof of funds (approx. EUR 722.58/month) and valid health insurance."
+        },
+        {
+          "title": "Apply for residence permit",
+          "detail": "Lodge the Residence Permit - Student application at the Austrian Embassy Islamabad."
+        },
+        {
+          "title": "Collect Visa D & travel",
+          "detail": "After approval, collect the Visa D, fly to Austria, and register with authorities."
+        },
+        {
+          "title": "Enroll & work part-time",
+          "detail": "Enroll at the university and take up permitted part-time work (up to 20 hours/week)."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -120,8 +304,15 @@
         "Academic transcripts and certificates",
         "Birth certificate (if under 18)"
       ],
-      "requiredTests": ["ielts", "osd"],
-      "topFields": ["Music & Performing Arts", "Tourism & Hospitality", "Environmental Engineering"],
+      "requiredTests": [
+        "ielts",
+        "osd"
+      ],
+      "topFields": [
+        "Music & Performing Arts",
+        "Tourism & Hospitality",
+        "Environmental Engineering"
+      ],
       "pros": [
         "Very low public-university fees (approx. EUR 726.72 per semester)",
         "No blocked account required (bank statements accepted)",
@@ -133,8 +324,68 @@
         "Rental housing in Vienna is competitive and rising"
       ],
       "sources": [
-        { "label": "Austrian Embassy Islamabad (BMEIA)", "url": "https://www.bmeia.gv.at/en/austrian-embassy-islamabad" },
-        { "label": "OeAD (Austrian agency for education)", "url": "https://oead.at/en" }
+        {
+          "label": "Austrian Embassy Islamabad (BMEIA)",
+          "url": "https://www.bmeia.gv.at/en/austrian-embassy-islamabad"
+        },
+        {
+          "label": "OeAD (Austrian agency for education)",
+          "url": "https://oead.at/en"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "University of Vienna",
+          "ranking": "QS #137",
+          "programs": [
+            "Law",
+            "Medicine",
+            "Computer Science"
+          ]
+        },
+        {
+          "name": "Vienna University of Technology",
+          "ranking": "QS #193",
+          "programs": [
+            "Engineering",
+            "IT",
+            "Architecture"
+          ]
+        },
+        {
+          "name": "University of Innsbruck",
+          "ranking": "QS #321",
+          "programs": [
+            "Physics",
+            "Engineering",
+            "Economics"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "OeAD Scholarships",
+        "Erasmus Mundus",
+        "Austria Scholarship Database (OeAD)",
+        "University-specific grants"
+      ],
+      "climate": "Alpine — cold winters (−5 to 3°C), mild summers (15–25°C). Heavy snow in mountains. Vienna is milder.",
+      "cultureTips": [
+        "Austrians greet with 'Grüß Gott' in formal settings",
+        "Coffee house culture is sacred — don't rush your order",
+        "Cash is preferred in many places",
+        "Tipping: round up or add 10% at restaurants"
+      ],
+      "studentLife": "Rich cultural scene in Vienna — opera, museums, and nightlife. Student unions organize events. Austria has a strong tradition of student fraternities (Burschenschaften).",
+      "workRights": "10 hours/week during semester, 20 hours/week during breaks. After graduation, 12-month Red-White-Red Card for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "October (Winter)",
+          "deadline": "June 1–July 31 (for non-EU)"
+        },
+        {
+          "intake": "March (Summer)",
+          "deadline": "December 1–January 15"
+        }
       ]
     },
     {
@@ -145,7 +396,13 @@
       "region": "europe",
       "capital": "Rome",
       "language": "Italian",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "National D Study Visa",
         "feePkr": 16200,
@@ -158,26 +415,73 @@
           "Students may work up to 20 hours per week"
         ]
       },
-      "intakes": ["October (Main)", "February (Limited)"],
+      "intakes": [
+        "October (Main)",
+        "February (Limited)"
+      ],
       "tuition": {
-        "ug": { "min": 291600, "max": 4860000 },
-        "masters": { "min": 291600, "max": 4860000 },
-        "phd": { "min": 0, "max": 486000 }
+        "ug": {
+          "min": 291600,
+          "max": 4860000
+        },
+        "masters": {
+          "min": 291600,
+          "max": 4860000
+        },
+        "phd": {
+          "min": 0,
+          "max": 486000
+        }
       },
       "living": {
-        "bigCity": { "rent": 162000, "food": 68000, "transport": 13000, "utilities": 26000, "misc": 45000 },
-        "smallCity": { "rent": 97000, "food": 58000, "transport": 10000, "utilities": 23000, "misc": 32000 }
+        "bigCity": {
+          "rent": 162000,
+          "food": 68000,
+          "transport": 13000,
+          "utilities": 26000,
+          "misc": 45000
+        },
+        "smallCity": {
+          "rent": 97000,
+          "food": 58000,
+          "transport": 10000,
+          "utilities": 23000,
+          "misc": 32000
+        }
       },
-      "oneTime": { "applicationFee": 10000, "visaFee": 16200, "insurance": 160000, "flight": 200000 },
+      "oneTime": {
+        "applicationFee": 10000,
+        "visaFee": 16200,
+        "insurance": 160000,
+        "flight": 200000
+      },
       "postStudyWork": "12-month 'awaiting employment' permit after graduation (job-offer conversion common)",
       "postStudyWorkMonths": 12,
       "pathway": [
-        { "title": "Pre-enroll on Universitaly", "detail": "Complete the mandatory pre-enrollment on the Universitaly portal for your chosen program." },
-        { "title": "University admission", "detail": "Sit entrance tests if required (e.g. IMAT for medicine) and receive your admission letter." },
-        { "title": "Prepare finances", "detail": "Arrange bank statements showing approx. EUR 7,000 for the first year plus insurance." },
-        { "title": "Apply at the embassy", "detail": "Book a visa appointment at the Italian Embassy in Islamabad and submit the dossier." },
-        { "title": "Travel & register", "detail": "Fly to Italy and apply for the residence permit (permesso di soggiorno) within 8 days." },
-        { "title": "Enroll & claim benefits", "detail": "Enroll at the university and apply for regional DSU scholarships and housing." }
+        {
+          "title": "Pre-enroll on Universitaly",
+          "detail": "Complete the mandatory pre-enrollment on the Universitaly portal for your chosen program."
+        },
+        {
+          "title": "University admission",
+          "detail": "Sit entrance tests if required (e.g. IMAT for medicine) and receive your admission letter."
+        },
+        {
+          "title": "Prepare finances",
+          "detail": "Arrange bank statements showing approx. EUR 7,000 for the first year plus insurance."
+        },
+        {
+          "title": "Apply at the embassy",
+          "detail": "Book a visa appointment at the Italian Embassy in Islamabad and submit the dossier."
+        },
+        {
+          "title": "Travel & register",
+          "detail": "Fly to Italy and apply for the residence permit (permesso di soggiorno) within 8 days."
+        },
+        {
+          "title": "Enroll & claim benefits",
+          "detail": "Enroll at the university and apply for regional DSU scholarships and housing."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -188,8 +492,15 @@
         "Academic transcripts and degrees",
         "Accommodation evidence"
       ],
-      "requiredTests": ["ielts", "cils"],
-      "topFields": ["Design & Fashion", "Architecture", "Automotive & Mechanical Engineering"],
+      "requiredTests": [
+        "ielts",
+        "cils"
+      ],
+      "topFields": [
+        "Design & Fashion",
+        "Architecture",
+        "Automotive & Mechanical Engineering"
+      ],
       "pros": [
         "Income-based public university fees (approx. EUR 900-4,000 per year)",
         "Regional DSU scholarships cover fees, meals, and housing",
@@ -201,8 +512,78 @@
         "Italian is needed for most undergraduate courses"
       ],
       "sources": [
-        { "label": "Study in Italy (official portal)", "url": "https://studyinitaly.esteri.it" },
-        { "label": "Italian Embassy Islamabad", "url": "https://ambislamabad.esteri.it" }
+        {
+          "label": "Study in Italy (official portal)",
+          "url": "https://studyinitaly.esteri.it"
+        },
+        {
+          "label": "Italian Embassy Islamabad",
+          "url": "https://ambislamabad.esteri.it"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Politecnico di Milano",
+          "ranking": "QS #111",
+          "programs": [
+            "Design",
+            "Engineering",
+            "Architecture"
+          ]
+        },
+        {
+          "name": "University of Bologna",
+          "ranking": "QS #164",
+          "programs": [
+            "Law",
+            "Medicine",
+            "Arts"
+          ]
+        },
+        {
+          "name": "Sapienza University of Rome",
+          "ranking": "QS #179",
+          "programs": [
+            "Engineering",
+            "Physics",
+            "Classics"
+          ]
+        },
+        {
+          "name": "University of Padua",
+          "ranking": "QS #217",
+          "programs": [
+            "Medicine",
+            "Agriculture",
+            "Psychology"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "DSU Regional Scholarships (fee waiver + stipend)",
+        "Italian Government Scholarships",
+        "University of Bologna Excellence Scholarships",
+        "Invest Your Talent in Italy"
+      ],
+      "climate": "Mediterranean — mild winters (4–10°C), hot summers (25–35°C). More extreme in the north. Sicily is warmest.",
+      "cultureTips": [
+        "Lunch is the main meal — dinner is often lighter",
+        "Cappuccino is a breakfast drink — don't order it after 11am",
+        "Gelato is serious business — learn the good shops",
+        "Dress well — Italians care about appearance",
+        "Learn some Italian — English is not as widely spoken as you'd expect"
+      ],
+      "studentLife": "Italy has some of the oldest universities in the world. Student life centers around the piazza. Erasmus student networks are very active. TOLC exams are required for many programs.",
+      "workRights": "20 hours/week during studies. After graduation, 12-month residence permit for job seeking. Part-time work is common but jobs can be hard to find.",
+      "applicationDeadlines": [
+        {
+          "intake": "October (Fall)",
+          "deadline": "April–June (varies by university)"
+        },
+        {
+          "intake": "March (Spring)",
+          "deadline": "November–December"
+        }
       ]
     },
     {
@@ -213,7 +594,13 @@
       "region": "asia",
       "capital": "Seoul",
       "language": "Korean",
-      "currency": { "code": "KRW", "name": "South Korean Won", "symbol": "₩", "toPkr": 0.2, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "KRW",
+        "name": "South Korean Won",
+        "symbol": "₩",
+        "toPkr": 0.2,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "D-2 Student Visa",
         "feePkr": 18100,
@@ -226,25 +613,69 @@
           "Students may work up to 25-30 hours per week after arrival registration"
         ]
       },
-      "intakes": ["March (Spring)", "September (Fall)"],
+      "intakes": [
+        "March (Spring)",
+        "September (Fall)"
+      ],
       "tuition": {
-        "ug": { "min": 800000, "max": 2400000 },
-        "masters": { "min": 1000000, "max": 3000000 },
-        "phd": { "min": 1000000, "max": 3000000 }
+        "ug": {
+          "min": 800000,
+          "max": 2400000
+        },
+        "masters": {
+          "min": 1000000,
+          "max": 3000000
+        },
+        "phd": {
+          "min": 1000000,
+          "max": 3000000
+        }
       },
       "living": {
-        "bigCity": { "rent": 90000, "food": 80000, "transport": 12000, "utilities": 24000, "misc": 30000 },
-        "smallCity": { "rent": 60000, "food": 64000, "transport": 8000, "utilities": 18000, "misc": 22000 }
+        "bigCity": {
+          "rent": 90000,
+          "food": 80000,
+          "transport": 12000,
+          "utilities": 24000,
+          "misc": 30000
+        },
+        "smallCity": {
+          "rent": 60000,
+          "food": 64000,
+          "transport": 8000,
+          "utilities": 18000,
+          "misc": 22000
+        }
       },
-      "oneTime": { "applicationFee": 20000, "visaFee": 18100, "insurance": 240000, "flight": 280000 },
+      "oneTime": {
+        "applicationFee": 20000,
+        "visaFee": 18100,
+        "insurance": 240000,
+        "flight": 280000
+      },
       "postStudyWork": "D-10 job-seeker visa for 6 months after graduation (extendable)",
       "postStudyWorkMonths": 6,
       "pathway": [
-        { "title": "Choose a university", "detail": "Shortlist programs at national universities (SNU, KAIST) or private universities." },
-        { "title": "Apply with TOPIK/English scores", "detail": "Submit transcripts with TOPIK (Korean) or IELTS/TOEFL scores before the deadline." },
-        { "title": "Receive Certificate of Admission", "detail": "Pay the tuition deposit and receive the CoA needed for the visa." },
-        { "title": "Apply for D-2 visa", "detail": "File the D-2 visa at the Korean Embassy with CoA and financial proof." },
-        { "title": "Enter & register", "detail": "Fly to Korea, obtain the Alien Registration Card within 90 days, and enroll." }
+        {
+          "title": "Choose a university",
+          "detail": "Shortlist programs at national universities (SNU, KAIST) or private universities."
+        },
+        {
+          "title": "Apply with TOPIK/English scores",
+          "detail": "Submit transcripts with TOPIK (Korean) or IELTS/TOEFL scores before the deadline."
+        },
+        {
+          "title": "Receive Certificate of Admission",
+          "detail": "Pay the tuition deposit and receive the CoA needed for the visa."
+        },
+        {
+          "title": "Apply for D-2 visa",
+          "detail": "File the D-2 visa at the Korean Embassy with CoA and financial proof."
+        },
+        {
+          "title": "Enter & register",
+          "detail": "Fly to Korea, obtain the Alien Registration Card within 90 days, and enroll."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -255,8 +686,15 @@
         "Language test results (TOPIK/IELTS/TOEFL)",
         "TB test where requested"
       ],
-      "requiredTests": ["ielts", "topik"],
-      "topFields": ["Computer Science & AI", "Semiconductor Engineering", "Business & Media"],
+      "requiredTests": [
+        "ielts",
+        "topik"
+      ],
+      "topFields": [
+        "Computer Science & AI",
+        "Semiconductor Engineering",
+        "Business & Media"
+      ],
       "pros": [
         "GKS scholarship covers full tuition, flights, and a monthly stipend",
         "Leading semiconductor, AI, and engineering industry links",
@@ -268,8 +706,78 @@
         "Proof-of-funds requirements are high in Seoul"
       ],
       "sources": [
-        { "label": "Study in Korea (official, NIIED)", "url": "https://www.studyinkorea.go.kr" },
-        { "label": "Hi Korea (immigration e-service)", "url": "https://www.hikorea.go.kr" }
+        {
+          "label": "Study in Korea (official, NIIED)",
+          "url": "https://www.studyinkorea.go.kr"
+        },
+        {
+          "label": "Hi Korea (immigration e-service)",
+          "url": "https://www.hikorea.go.kr"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Seoul National University (SNU)",
+          "ranking": "QS #29",
+          "programs": [
+            "Engineering",
+            "Business",
+            "Medicine"
+          ]
+        },
+        {
+          "name": "Korea Advanced Institute of Science & Technology (KAIST)",
+          "ranking": "QS #56",
+          "programs": [
+            "Engineering",
+            "IT",
+            "Natural Sciences"
+          ]
+        },
+        {
+          "name": "Yonsei University",
+          "ranking": "QS #76",
+          "programs": [
+            "Business",
+            "Medicine",
+            "Engineering"
+          ]
+        },
+        {
+          "name": "Korea University",
+          "ranking": "QS #79",
+          "programs": [
+            "Business",
+            "Law",
+            "Engineering"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "GKS (Government of Korea Scholarship)",
+        "Korean University Scholarships",
+        "Korean Language Training Scholarships",
+        "Brain Korea (BK21)"
+      ],
+      "climate": "Continental — cold dry winters (−6 to 3°C), hot humid summers (23–30°C). Spring and autumn are pleasant.",
+      "cultureTips": [
+        "Respect elders — use two hands when giving/receiving",
+        "Shoes off before entering someone's home",
+        "Soju is the national drink — pace yourself",
+        "K-pop and K-drama are everywhere — embrace it",
+        "Learn basic Korean — it goes a long way"
+      ],
+      "studentLife": "Intense academic culture with hagwons (cram schools) and strong study groups. Nightlife in Seoul is legendary — Hongdae, Gangnam, Itaewon. University festivals are huge.",
+      "workRights": "20 hours/week during semester, unlimited during breaks (D-2 visa). After graduation, D-10 job-seeking visa for up to 2 years.",
+      "applicationDeadlines": [
+        {
+          "intake": "March (Spring)",
+          "deadline": "September–November (previous year)"
+        },
+        {
+          "intake": "September (Fall)",
+          "deadline": "March–May"
+        }
       ]
     },
     {
@@ -280,7 +788,13 @@
       "region": "asia",
       "capital": "Ankara",
       "language": "Turkish",
-      "currency": { "code": "TRY", "name": "Turkish Lira", "symbol": "₺", "toPkr": 5.77, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "TRY",
+        "name": "Turkish Lira",
+        "symbol": "₺",
+        "toPkr": 5.77,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "Student Visa (Education)",
         "feePkr": 38000,
@@ -293,26 +807,73 @@
           "Student residence permit must be obtained within 30 days of arrival"
         ]
       },
-      "intakes": ["September (Fall)", "February (Spring)"],
+      "intakes": [
+        "September (Fall)",
+        "February (Spring)"
+      ],
       "tuition": {
-        "ug": { "min": 83400, "max": 2224000 },
-        "masters": { "min": 139000, "max": 2224000 },
-        "phd": { "min": 139000, "max": 1668000 }
+        "ug": {
+          "min": 83400,
+          "max": 2224000
+        },
+        "masters": {
+          "min": 139000,
+          "max": 2224000
+        },
+        "phd": {
+          "min": 139000,
+          "max": 1668000
+        }
       },
       "living": {
-        "bigCity": { "rent": 69200, "food": 34600, "transport": 8700, "utilities": 14400, "misc": 17300 },
-        "smallCity": { "rent": 46200, "food": 28900, "transport": 5800, "utilities": 11500, "misc": 14400 }
+        "bigCity": {
+          "rent": 69200,
+          "food": 34600,
+          "transport": 8700,
+          "utilities": 14400,
+          "misc": 17300
+        },
+        "smallCity": {
+          "rent": 46200,
+          "food": 28900,
+          "transport": 5800,
+          "utilities": 11500,
+          "misc": 14400
+        }
       },
-      "oneTime": { "applicationFee": 10000, "visaFee": 38000, "insurance": 52000, "flight": 130000 },
+      "oneTime": {
+        "applicationFee": 10000,
+        "visaFee": 38000,
+        "insurance": 52000,
+        "flight": 130000
+      },
       "postStudyWork": "Graduates may extend a short-term residence permit for up to 12 months to seek employment",
       "postStudyWorkMonths": 12,
       "pathway": [
-        { "title": "Apply to universities", "detail": "Apply directly to public universities or via Türkiye Bursları for full scholarships." },
-        { "title": "Sit TR-YÖS / SAT if required", "detail": "Take the Turkish foreign student exam (TR-YÖS) or an accepted equivalent." },
-        { "title": "Receive acceptance", "detail": "Get the acceptance letter from the university for the visa file." },
-        { "title": "Apply for student visa", "detail": "Submit the visa application at the Turkish Embassy Islamabad with financial proof." },
-        { "title": "Arrive & get residence permit", "detail": "Apply for the student residence permit within 30 days of arrival." },
-        { "title": "Enroll & start classes", "detail": "Complete university enrollment and register for courses." }
+        {
+          "title": "Apply to universities",
+          "detail": "Apply directly to public universities or via Türkiye Bursları for full scholarships."
+        },
+        {
+          "title": "Sit TR-YÖS / SAT if required",
+          "detail": "Take the Turkish foreign student exam (TR-YÖS) or an accepted equivalent."
+        },
+        {
+          "title": "Receive acceptance",
+          "detail": "Get the acceptance letter from the university for the visa file."
+        },
+        {
+          "title": "Apply for student visa",
+          "detail": "Submit the visa application at the Turkish Embassy Islamabad with financial proof."
+        },
+        {
+          "title": "Arrive & get residence permit",
+          "detail": "Apply for the student residence permit within 30 days of arrival."
+        },
+        {
+          "title": "Enroll & start classes",
+          "detail": "Complete university enrollment and register for courses."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -322,8 +883,15 @@
         "Language test result (IELTS/TOEFL/TÖMER)",
         "Visa application form and photos"
       ],
-      "requiredTests": ["ielts", "tr-yos"],
-      "topFields": ["Medicine", "Civil & Mechanical Engineering", "Business Administration"],
+      "requiredTests": [
+        "ielts",
+        "tr-yos"
+      ],
+      "topFields": [
+        "Medicine",
+        "Civil & Mechanical Engineering",
+        "Business Administration"
+      ],
       "pros": [
         "Low public-university tuition (approx. USD 300-8,000 per year depending on program)",
         "Türkiye Bursları fully funds thousands of students each year",
@@ -335,8 +903,68 @@
         "Turkish language is needed for many programs and most jobs"
       ],
       "sources": [
-        { "label": "Study in Türkiye (official)", "url": "https://www.studyinturkiye.gov.tr" },
-        { "label": "Turkish Embassy Islamabad", "url": "https://islamabad-emb.mfa.gov.tr" }
+        {
+          "label": "Study in Türkiye (official)",
+          "url": "https://www.studyinturkiye.gov.tr"
+        },
+        {
+          "label": "Turkish Embassy Islamabad",
+          "url": "https://islamabad-emb.mfa.gov.tr"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Bilkent University",
+          "ranking": "QS #267",
+          "programs": [
+            "Engineering",
+            "Business",
+            "Architecture"
+          ]
+        },
+        {
+          "name": "Istanbul Technical University",
+          "ranking": "QS #332",
+          "programs": [
+            "Engineering",
+            "Architecture",
+            "IT"
+          ]
+        },
+        {
+          "name": "Middle East Technical University (METU)",
+          "ranking": "QS #285",
+          "programs": [
+            "Engineering",
+            "Natural Sciences",
+            "Economics"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Türkiye Scholarships (fully funded by government)",
+        "University-specific scholarships",
+        "Erasmus Mundus"
+      ],
+      "climate": "Varies — Istanbul has mild winters (3–9°C) and warm summers (23–29°C). Eastern Turkey is much colder. Mediterranean coast is warmest.",
+      "cultureTips": [
+        "Turkey bridges Europe and Asia — expect both influences",
+        "Tea (çay) is everywhere — accept when offered",
+        "Turkish breakfast is legendary — try it",
+        "Bargaining is normal in bazaars",
+        "Learn basic Turkish — locals appreciate the effort"
+      ],
+      "studentLife": "Istanbul is a massive, vibrant city with incredible food and nightlife. Campus life is active with student clubs. Türkiye Scholarships program brings many international students together.",
+      "workRights": "20 hours/week with a work permit. After graduation, 1-year residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "February 20 (Türkiye Scholarships)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "Usually same cycle"
+        }
       ]
     },
     {
@@ -347,7 +975,13 @@
       "region": "asia",
       "capital": "Beijing",
       "language": "Chinese (Mandarin)",
-      "currency": { "code": "CNY", "name": "Chinese Yuan", "symbol": "¥", "toPkr": 41.3, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "CNY",
+        "name": "Chinese Yuan",
+        "symbol": "¥",
+        "toPkr": 41.3,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "X1 Long-term Student Visa",
         "feePkr": 13200,
@@ -360,26 +994,73 @@
           "Students on X1 visas generally cannot take paid work"
         ]
       },
-      "intakes": ["September (Autumn)", "March (Spring)"],
+      "intakes": [
+        "September (Autumn)",
+        "March (Spring)"
+      ],
       "tuition": {
-        "ug": { "min": 619500, "max": 1858500 },
-        "masters": { "min": 743400, "max": 2065000 },
-        "phd": { "min": 826000, "max": 2271500 }
+        "ug": {
+          "min": 619500,
+          "max": 1858500
+        },
+        "masters": {
+          "min": 743400,
+          "max": 2065000
+        },
+        "phd": {
+          "min": 826000,
+          "max": 2271500
+        }
       },
       "living": {
-        "bigCity": { "rent": 124000, "food": 62000, "transport": 12400, "utilities": 12400, "misc": 41300 },
-        "smallCity": { "rent": 62000, "food": 49600, "transport": 8300, "utilities": 10300, "misc": 33000 }
+        "bigCity": {
+          "rent": 124000,
+          "food": 62000,
+          "transport": 12400,
+          "utilities": 12400,
+          "misc": 41300
+        },
+        "smallCity": {
+          "rent": 62000,
+          "food": 49600,
+          "transport": 8300,
+          "utilities": 10300,
+          "misc": 33000
+        }
       },
-      "oneTime": { "applicationFee": 28000, "visaFee": 13200, "insurance": 33000, "flight": 180000 },
+      "oneTime": {
+        "applicationFee": 28000,
+        "visaFee": 13200,
+        "insurance": 33000,
+        "flight": 180000
+      },
       "postStudyWork": "No general job-seeker visa; some major cities offer up to 12-month entrepreneurship permits",
       "postStudyWorkMonths": 0,
       "pathway": [
-        { "title": "Choose CSC or self-funded", "detail": "Apply for CSC scholarships via HEC/embassy or self-fund through universities directly." },
-        { "title": "Get JW202 and admission", "detail": "Receive the JW202 form and admission notice from the university." },
-        { "title": "Do the medical check", "detail": "Complete the physical examination at a designated hospital." },
-        { "title": "Apply for X1 visa", "detail": "Submit the visa file at the Chinese Visa Application Service Center." },
-        { "title": "Travel & convert", "detail": "Fly to China and convert the X1 visa to a residence permit within 30 days." },
-        { "title": "Register & enroll", "detail": "Register at the university and arrange accommodation and insurance." }
+        {
+          "title": "Choose CSC or self-funded",
+          "detail": "Apply for CSC scholarships via HEC/embassy or self-fund through universities directly."
+        },
+        {
+          "title": "Get JW202 and admission",
+          "detail": "Receive the JW202 form and admission notice from the university."
+        },
+        {
+          "title": "Do the medical check",
+          "detail": "Complete the physical examination at a designated hospital."
+        },
+        {
+          "title": "Apply for X1 visa",
+          "detail": "Submit the visa file at the Chinese Visa Application Service Center."
+        },
+        {
+          "title": "Travel & convert",
+          "detail": "Fly to China and convert the X1 visa to a residence permit within 30 days."
+        },
+        {
+          "title": "Register & enroll",
+          "detail": "Register at the university and arrange accommodation and insurance."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -390,8 +1071,15 @@
         "Police character certificate where requested",
         "Visa application form and photo"
       ],
-      "requiredTests": ["hsk", "ielts"],
-      "topFields": ["Civil & Electrical Engineering", "Medicine (MBBS)", "Computer Science"],
+      "requiredTests": [
+        "hsk",
+        "ielts"
+      ],
+      "topFields": [
+        "Civil & Electrical Engineering",
+        "Medicine (MBBS)",
+        "Computer Science"
+      ],
       "pros": [
         "CSC scholarships cover tuition, housing, stipend, and insurance",
         "Low tuition and living costs outside first-tier cities",
@@ -403,8 +1091,79 @@
         "Paid work is generally not permitted on X1 visas"
       ],
       "sources": [
-        { "label": "Campus China (CSC official)", "url": "https://www.campuschina.org" },
-        { "label": "Chinese Embassy in Pakistan", "url": "https://pk.china-embassy.gov.cn" }
+        {
+          "label": "Campus China (CSC official)",
+          "url": "https://www.campuschina.org"
+        },
+        {
+          "label": "Chinese Embassy in Pakistan",
+          "url": "https://pk.china-embassy.gov.cn"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Tsinghua University",
+          "ranking": "QS #12",
+          "programs": [
+            "Engineering",
+            "Computer Science",
+            "Business"
+          ]
+        },
+        {
+          "name": "Peking University",
+          "ranking": "QS #14",
+          "programs": [
+            "Humanities",
+            "Medicine",
+            "Law"
+          ]
+        },
+        {
+          "name": "Fudan University",
+          "ranking": "QS #39",
+          "programs": [
+            "Medicine",
+            "Business",
+            "International Relations"
+          ]
+        },
+        {
+          "name": "Zhejiang University",
+          "ranking": "QS #44",
+          "programs": [
+            "Engineering",
+            "Computer Science",
+            "Agriculture"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "CSC Scholarship (China Scholarship Council)",
+        "Chinese Government Scholarship",
+        "Confucius Institute Scholarship",
+        "University-specific full rides",
+        "Belt and Road Scholarship"
+      ],
+      "climate": "Varies widely — Beijing: cold dry winters, hot humid summers. Shanghai: mild winters, hot summers. Southern China is subtropical.",
+      "cultureTips": [
+        "Mandarin is essential — most people don't speak English",
+        "WeChat is the super-app — get it before arriving",
+        "Rice is a staple but regional cuisines vary hugely",
+        "Respect for elders and hierarchy is deeply ingrained",
+        "VPN needed for Google, WhatsApp, Instagram"
+      ],
+      "studentLife": "Massive campuses with world-class facilities. Chinese universities have strong international student communities. Food is incredibly diverse and affordable. High-speed rail connects major cities.",
+      "workRights": "20 hours/week with permission from university and PSB. After graduation, 2-year residence permit for job seeking in specific cities.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "January–April (CSC deadline usually April)"
+        },
+        {
+          "intake": "March (Spring)",
+          "deadline": "October–December"
+        }
       ]
     },
     {
@@ -415,7 +1174,13 @@
       "region": "asia",
       "capital": "Jakarta",
       "language": "Indonesian (Bahasa Indonesia)",
-      "currency": { "code": "IDR", "name": "Indonesian Rupiah", "symbol": "Rp", "toPkr": 0.0156, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "IDR",
+        "name": "Indonesian Rupiah",
+        "symbol": "Rp",
+        "toPkr": 0.0156,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "Student Visa (VITAS E30B/E30C)",
         "feePkr": 44800,
@@ -428,25 +1193,69 @@
           "Part-time work is restricted; internships need permission"
         ]
       },
-      "intakes": ["August (Odd Semester)", "February (Even Semester)"],
+      "intakes": [
+        "August (Odd Semester)",
+        "February (Even Semester)"
+      ],
       "tuition": {
-        "ug": { "min": 468000, "max": 1404000 },
-        "masters": { "min": 624000, "max": 1560000 },
-        "phd": { "min": 624000, "max": 1716000 }
+        "ug": {
+          "min": 468000,
+          "max": 1404000
+        },
+        "masters": {
+          "min": 624000,
+          "max": 1560000
+        },
+        "phd": {
+          "min": 624000,
+          "max": 1716000
+        }
       },
       "living": {
-        "bigCity": { "rent": 78000, "food": 31200, "transport": 7800, "utilities": 12500, "misc": 15600 },
-        "smallCity": { "rent": 23400, "food": 23400, "transport": 4700, "utilities": 7800, "misc": 10900 }
+        "bigCity": {
+          "rent": 78000,
+          "food": 31200,
+          "transport": 7800,
+          "utilities": 12500,
+          "misc": 15600
+        },
+        "smallCity": {
+          "rent": 23400,
+          "food": 23400,
+          "transport": 4700,
+          "utilities": 7800,
+          "misc": 10900
+        }
       },
-      "oneTime": { "applicationFee": 8000, "visaFee": 44800, "insurance": 78000, "flight": 260000 },
+      "oneTime": {
+        "applicationFee": 8000,
+        "visaFee": 44800,
+        "insurance": 78000,
+        "flight": 260000
+      },
       "postStudyWork": "No defined job-seeker period; working after graduation requires a sponsored work permit (KITAS)",
       "postStudyWorkMonths": 0,
       "pathway": [
-        { "title": "Apply to the university", "detail": "Submit your application directly to the university's international office." },
-        { "title": "Receive acceptance & sponsorship", "detail": "Get the acceptance letter and university sponsorship for the visa." },
-        { "title": "Get visa approval (telex)", "detail": "The university files for visa approval with immigration and pays the telex fee." },
-        { "title": "Apply at the embassy", "detail": "Collect the visa approval and apply at the Indonesian Embassy in Islamabad." },
-        { "title": "Arrive & convert to KITAS", "detail": "Convert the VITAS to a KITAS stay permit within 30 days of arrival." }
+        {
+          "title": "Apply to the university",
+          "detail": "Submit your application directly to the university's international office."
+        },
+        {
+          "title": "Receive acceptance & sponsorship",
+          "detail": "Get the acceptance letter and university sponsorship for the visa."
+        },
+        {
+          "title": "Get visa approval (telex)",
+          "detail": "The university files for visa approval with immigration and pays the telex fee."
+        },
+        {
+          "title": "Apply at the embassy",
+          "detail": "Collect the visa approval and apply at the Indonesian Embassy in Islamabad."
+        },
+        {
+          "title": "Arrive & convert to KITAS",
+          "detail": "Convert the VITAS to a KITAS stay permit within 30 days of arrival."
+        }
       ],
       "documents": [
         "Valid passport (18+ months validity)",
@@ -457,8 +1266,15 @@
         "Health certificate where requested",
         "BIPA or English language certificate"
       ],
-      "requiredTests": ["ielts", "bipa"],
-      "topFields": ["Marine & Environmental Science", "Tourism & Hospitality", "Tropical Agriculture"],
+      "requiredTests": [
+        "ielts",
+        "bipa"
+      ],
+      "topFields": [
+        "Marine & Environmental Science",
+        "Tourism & Hospitality",
+        "Tropical Agriculture"
+      ],
       "pros": [
         "Very low living costs outside Jakarta",
         "Affordable tuition at top public universities",
@@ -470,8 +1286,69 @@
         "Indonesian language (BIPA) needed for most daily and academic life"
       ],
       "sources": [
-        { "label": "Ministry of Foreign Affairs (Kemlu)", "url": "https://kemlu.go.id" },
-        { "label": "Directorate General of Immigration", "url": "https://www.imigrasi.go.id" }
+        {
+          "label": "Ministry of Foreign Affairs (Kemlu)",
+          "url": "https://kemlu.go.id"
+        },
+        {
+          "label": "Directorate General of Immigration",
+          "url": "https://www.imigrasi.go.id"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "University of Indonesia (UI)",
+          "ranking": "QS #237",
+          "programs": [
+            "Medicine",
+            "Engineering",
+            "Law"
+          ]
+        },
+        {
+          "name": "Bandung Institute of Technology (ITB)",
+          "ranking": "QS #256",
+          "programs": [
+            "Engineering",
+            "Architecture",
+            "Design"
+          ]
+        },
+        {
+          "name": "Gadjah Mada University (UGM)",
+          "ranking": "QS #263",
+          "programs": [
+            "Medicine",
+            "Engineering",
+            "Social Sciences"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Darmasiswa Scholarship (Indonesian language + culture)",
+        "LPDP Scholarship (Indonesian endowment fund)",
+        "University-specific scholarships",
+        "KAAD (Catholic scholarship)"
+      ],
+      "climate": "Tropical — hot and humid year-round (24–34°C). Wet season November–March, dry season April–October.",
+      "cultureTips": [
+        "Indonesia is the world's largest Muslim-majority country",
+        "Remove shoes before entering homes and mosques",
+        "Batik is formal wear — you'll need some",
+        "Traffic in Jakarta is legendary — live near campus",
+        "Bahasa Indonesia is relatively easy to learn"
+      ],
+      "studentLife": "Warm, friendly campus culture. Indonesian universities have strong student organizations. Jakarta and Yogyakarta are student hubs. Beaches and nature are accessible on weekends.",
+      "workRights": "Limited during studies (officially requires permit). After graduation, limited options — most students return to Pakistan.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "February–April (varies by scholarship)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "September–November"
+        }
       ]
     },
     {
@@ -482,7 +1359,13 @@
       "region": "north-america",
       "capital": "Washington, D.C.",
       "language": "English",
-      "currency": { "code": "USD", "name": "US Dollar", "symbol": "$", "toPkr": 278, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$",
+        "toPkr": 278,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "F-1 Student Visa (+ SEVIS I-901)",
         "feePkr": 148730,
@@ -495,26 +1378,73 @@
           "On-campus work up to 20 hours per week; CPT/OPT for practical training"
         ]
       },
-      "intakes": ["Fall (August)", "Spring (January)"],
+      "intakes": [
+        "Fall (August)",
+        "Spring (January)"
+      ],
       "tuition": {
-        "ug": { "min": 6116000, "max": 16680000 },
-        "masters": { "min": 6950000, "max": 16680000 },
-        "phd": { "min": 6950000, "max": 15290000 }
+        "ug": {
+          "min": 6116000,
+          "max": 16680000
+        },
+        "masters": {
+          "min": 6950000,
+          "max": 16680000
+        },
+        "phd": {
+          "min": 6950000,
+          "max": 15290000
+        }
       },
       "living": {
-        "bigCity": { "rent": 334000, "food": 111000, "transport": 28000, "utilities": 42000, "misc": 69500 },
-        "smallCity": { "rent": 194600, "food": 83400, "transport": 19500, "utilities": 33400, "misc": 55600 }
+        "bigCity": {
+          "rent": 334000,
+          "food": 111000,
+          "transport": 28000,
+          "utilities": 42000,
+          "misc": 69500
+        },
+        "smallCity": {
+          "rent": 194600,
+          "food": 83400,
+          "transport": 19500,
+          "utilities": 33400,
+          "misc": 55600
+        }
       },
-      "oneTime": { "applicationFee": 21000, "visaFee": 148730, "insurance": 556000, "flight": 300000 },
+      "oneTime": {
+        "applicationFee": 21000,
+        "visaFee": 148730,
+        "insurance": 556000,
+        "flight": 300000
+      },
       "postStudyWork": "OPT work authorization for 12 months, extendable to 36 months for STEM graduates",
       "postStudyWorkMonths": 36,
       "pathway": [
-        { "title": "Shortlist & test", "detail": "Shortlist universities and take SAT/ACT (undergrad) or GRE/GMAT (graduate) plus IELTS/TOEFL." },
-        { "title": "Apply & fund", "detail": "Apply by deadlines and line up funding: assistantships, Fulbright, or family sponsorship." },
-        { "title": "Get Form I-20", "detail": "Accept the offer and receive the I-20 certificate of eligibility." },
-        { "title": "Pay SEVIS & DS-160", "detail": "Pay the SEVIS I-901 fee and complete the DS-160 visa form." },
-        { "title": "Visa interview", "detail": "Attend the interview at the US Embassy with I-20 and financial documents." },
-        { "title": "Travel & report", "detail": "Enter the US up to 30 days before the program start date and report to the DSO." }
+        {
+          "title": "Shortlist & test",
+          "detail": "Shortlist universities and take SAT/ACT (undergrad) or GRE/GMAT (graduate) plus IELTS/TOEFL."
+        },
+        {
+          "title": "Apply & fund",
+          "detail": "Apply by deadlines and line up funding: assistantships, Fulbright, or family sponsorship."
+        },
+        {
+          "title": "Get Form I-20",
+          "detail": "Accept the offer and receive the I-20 certificate of eligibility."
+        },
+        {
+          "title": "Pay SEVIS & DS-160",
+          "detail": "Pay the SEVIS I-901 fee and complete the DS-160 visa form."
+        },
+        {
+          "title": "Visa interview",
+          "detail": "Attend the interview at the US Embassy with I-20 and financial documents."
+        },
+        {
+          "title": "Travel & report",
+          "detail": "Enter the US up to 30 days before the program start date and report to the DSO."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -525,8 +1455,20 @@
         "Academic transcripts and test scores",
         "Ties-to-home evidence for the interview"
       ],
-      "requiredTests": ["ielts", "toefl", "sat", "act", "gre", "gmat"],
-      "topFields": ["Computer Science", "Business & Finance", "Engineering", "Data Science & AI"],
+      "requiredTests": [
+        "ielts",
+        "toefl",
+        "sat",
+        "act",
+        "gre",
+        "gmat"
+      ],
+      "topFields": [
+        "Computer Science",
+        "Business & Finance",
+        "Engineering",
+        "Data Science & AI"
+      ],
       "pros": [
         "STEM OPT allows up to 36 months of post-study work",
         "Largest research funding and top-ranked universities",
@@ -538,8 +1480,78 @@
         "Visa interview outcomes can be uncertain"
       ],
       "sources": [
-        { "label": "US State Dept - F-1 Student Visa", "url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html" },
-        { "label": "EducationUSA (official)", "url": "https://educationusa.state.gov" }
+        {
+          "label": "US State Dept - F-1 Student Visa",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html"
+        },
+        {
+          "label": "EducationUSA (official)",
+          "url": "https://educationusa.state.gov"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Massachusetts Institute of Technology (MIT)",
+          "ranking": "QS #1",
+          "programs": [
+            "Engineering",
+            "Computer Science",
+            "Physics"
+          ]
+        },
+        {
+          "name": "Stanford University",
+          "ranking": "QS #3",
+          "programs": [
+            "Engineering",
+            "Business",
+            "Medicine"
+          ]
+        },
+        {
+          "name": "Harvard University",
+          "ranking": "QS #5",
+          "programs": [
+            "Law",
+            "Medicine",
+            "Business"
+          ]
+        },
+        {
+          "name": "California Institute of Technology (Caltech)",
+          "ranking": "QS #10",
+          "programs": [
+            "Engineering",
+            "Physics",
+            "Astronomy"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Fulbright Foreign Student Program",
+        "Hubert Humphrey Fellowship",
+        "University-specific financial aid (need-based for internationals)",
+        "Graduate assistantships (TA/RA)"
+      ],
+      "climate": "Varies enormously — New England: cold winters, warm summers. California: mild year-round. South: hot and humid. Midwest: extreme seasons.",
+      "cultureTips": [
+        "Tipping is mandatory — 15-20% at restaurants",
+        "American campus culture is unique — Greek life, sports, clubs",
+        "Healthcare is expensive — get good insurance",
+        "Part-time jobs on campus are common for international students",
+        "Diversity is celebrated — there are Pakistani student associations everywhere"
+      ],
+      "studentLife": "The quintessential college experience — campus events, football games, dorm life. Huge variety of student organizations. Career fairs and networking opportunities are unmatched.",
+      "workRights": "20 hours/week on-campus during semester. CPT for internships. OPT: 12 months post-graduation (36 months for STEM fields). H-1B visa for long-term employment.",
+      "applicationDeadlines": [
+        {
+          "intake": "August (Fall)",
+          "deadline": "January 1 (Regular Decision), November 1 (Early Action)"
+        },
+        {
+          "intake": "January (Spring)",
+          "deadline": "September–October (limited programs)"
+        }
       ]
     },
     {
@@ -550,7 +1562,13 @@
       "region": "europe",
       "capital": "London",
       "language": "English",
-      "currency": { "code": "GBP", "name": "Pound Sterling", "symbol": "£", "toPkr": 378, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "GBP",
+        "name": "Pound Sterling",
+        "symbol": "£",
+        "toPkr": 378,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "Student visa (formerly Tier 4)",
         "feePkr": 210900,
@@ -563,26 +1581,73 @@
           "Work up to 20 hours per week during term time"
         ]
       },
-      "intakes": ["September (Autumn)", "January (Spring)"],
+      "intakes": [
+        "September (Autumn)",
+        "January (Spring)"
+      ],
       "tuition": {
-        "ug": { "min": 5292000, "max": 14364000 },
-        "masters": { "min": 5670000, "max": 13230000 },
-        "phd": { "min": 6804000, "max": 13230000 }
+        "ug": {
+          "min": 5292000,
+          "max": 14364000
+        },
+        "masters": {
+          "min": 5670000,
+          "max": 13230000
+        },
+        "phd": {
+          "min": 6804000,
+          "max": 13230000
+        }
       },
       "living": {
-        "bigCity": { "rent": 416000, "food": 94500, "transport": 56700, "utilities": 56700, "misc": 75600 },
-        "smallCity": { "rent": 226800, "food": 75600, "transport": 30200, "utilities": 45400, "misc": 56700 }
+        "bigCity": {
+          "rent": 416000,
+          "food": 94500,
+          "transport": 56700,
+          "utilities": 56700,
+          "misc": 75600
+        },
+        "smallCity": {
+          "rent": 226800,
+          "food": 75600,
+          "transport": 30200,
+          "utilities": 45400,
+          "misc": 56700
+        }
       },
-      "oneTime": { "applicationFee": 10800, "visaFee": 210900, "insurance": 293300, "flight": 190000 },
+      "oneTime": {
+        "applicationFee": 10800,
+        "visaFee": 210900,
+        "insurance": 293300,
+        "flight": 190000
+      },
       "postStudyWork": "Graduate Route: 2 years for bachelor's/master's graduates (3 for PhDs; 18 months if applying from Jan 2027)",
       "postStudyWorkMonths": 24,
       "pathway": [
-        { "title": "Choose course & apply", "detail": "Apply via UCAS (undergrad) or directly to universities (postgrad) and get an offer." },
-        { "title": "Meet conditions", "detail": "Submit IELTS/PTE scores, transcripts, and pay the tuition deposit." },
-        { "title": "Receive CAS", "detail": "Get your Confirmation of Acceptance for Studies (CAS) from the university." },
-        { "title": "Pay fees & IHS", "detail": "Pay the visa fee (GBP 558) and the Immigration Health Surcharge online." },
-        { "title": "Biometrics & decision", "detail": "Book biometrics at a visa application centre; decisions usually take 3 weeks." },
-        { "title": "Travel & collect BRP/eVisa", "detail": "Fly to the UK and access your eVisa record before starting the course." }
+        {
+          "title": "Choose course & apply",
+          "detail": "Apply via UCAS (undergrad) or directly to universities (postgrad) and get an offer."
+        },
+        {
+          "title": "Meet conditions",
+          "detail": "Submit IELTS/PTE scores, transcripts, and pay the tuition deposit."
+        },
+        {
+          "title": "Receive CAS",
+          "detail": "Get your Confirmation of Acceptance for Studies (CAS) from the university."
+        },
+        {
+          "title": "Pay fees & IHS",
+          "detail": "Pay the visa fee (GBP 558) and the Immigration Health Surcharge online."
+        },
+        {
+          "title": "Biometrics & decision",
+          "detail": "Book biometrics at a visa application centre; decisions usually take 3 weeks."
+        },
+        {
+          "title": "Travel & collect BRP/eVisa",
+          "detail": "Fly to the UK and access your eVisa record before starting the course."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -593,8 +1658,17 @@
         "English language certificate (IELTS/PTE)",
         "ATAS certificate (for some STEM/research courses)"
       ],
-      "requiredTests": ["ielts", "pte", "toefl"],
-      "topFields": ["Business & Finance", "Law", "Engineering", "Medicine"],
+      "requiredTests": [
+        "ielts",
+        "pte",
+        "toefl"
+      ],
+      "topFields": [
+        "Business & Finance",
+        "Law",
+        "Engineering",
+        "Medicine"
+      ],
       "pros": [
         "One-year master's programs reduce total cost",
         "2-year Graduate Route after study (24 months)",
@@ -606,8 +1680,76 @@
         "London living costs are among the highest in Europe"
       ],
       "sources": [
-        { "label": "GOV.UK - Student visa", "url": "https://www.gov.uk/student-visa" },
-        { "label": "UKCISA (official student advice)", "url": "https://www.ukcisa.org.uk" }
+        {
+          "label": "GOV.UK - Student visa",
+          "url": "https://www.gov.uk/student-visa"
+        },
+        {
+          "label": "UKCISA (official student advice)",
+          "url": "https://www.ukcisa.org.uk"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "University of Oxford",
+          "ranking": "QS #2",
+          "programs": [
+            "All fields — world leader"
+          ]
+        },
+        {
+          "name": "University of Cambridge",
+          "ranking": "QS #5",
+          "programs": [
+            "Mathematics",
+            "Engineering",
+            "Natural Sciences"
+          ]
+        },
+        {
+          "name": "Imperial College London",
+          "ranking": "QS #6",
+          "programs": [
+            "Engineering",
+            "Medicine",
+            "Business"
+          ]
+        },
+        {
+          "name": "University College London (UCL)",
+          "ranking": "QS #9",
+          "programs": [
+            "Architecture",
+            "Education",
+            "Law"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Chevening Scholarships (fully funded)",
+        "Commonwealth Scholarships",
+        "GREAT Scholarships",
+        "University-specific scholarships (Clarendon, Gates Cambridge)"
+      ],
+      "climate": "Maritime — mild but rainy. Winters (2–8°C), summers (15–25°C). Expect rain year-round. Scotland is colder.",
+      "cultureTips": [
+        "Queueing is sacred — never cut the line",
+        "Pub culture is central to British social life",
+        "Tea is taken seriously — builder's tea vs. fancy tea",
+        "British humour is dry and sarcastic — learn to read it",
+        "The NHS covers international students with IHS fee"
+      ],
+      "studentLife": "Tutorial system at Oxbridge is unique. London is a global city with incredible diversity. Student unions are very active. Pub quizzes and societies are core social activities.",
+      "workRights": "20 hours/week during term, full-time during holidays. Graduate Route visa: 2 years post-graduation (3 years for PhD). Skilled Worker visa for long-term employment.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "January 15 (Oxford/Cambridge/Medicine), June 30 (UCAS Clearing)"
+        },
+        {
+          "intake": "January (Spring)",
+          "deadline": "Limited — apply via UCAS or direct"
+        }
       ]
     },
     {
@@ -618,7 +1760,13 @@
       "region": "europe",
       "capital": "Dublin",
       "language": "English",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "Long Stay (D) Study Visa",
         "feePkr": 19440,
@@ -631,26 +1779,73 @@
           "Work up to 20 hours per week during term time"
         ]
       },
-      "intakes": ["September (Autumn)", "January (Spring)"],
+      "intakes": [
+        "September (Autumn)",
+        "January (Spring)"
+      ],
       "tuition": {
-        "ug": { "min": 3240000, "max": 8100000 },
-        "masters": { "min": 3240000, "max": 9720000 },
-        "phd": { "min": 3240000, "max": 8100000 }
+        "ug": {
+          "min": 3240000,
+          "max": 8100000
+        },
+        "masters": {
+          "min": 3240000,
+          "max": 9720000
+        },
+        "phd": {
+          "min": 3240000,
+          "max": 8100000
+        }
       },
       "living": {
-        "bigCity": { "rent": 324000, "food": 81000, "transport": 38900, "utilities": 48600, "misc": 58300 },
-        "smallCity": { "rent": 210600, "food": 71300, "transport": 25900, "utilities": 42100, "misc": 48600 }
+        "bigCity": {
+          "rent": 324000,
+          "food": 81000,
+          "transport": 38900,
+          "utilities": 48600,
+          "misc": 58300
+        },
+        "smallCity": {
+          "rent": 210600,
+          "food": 71300,
+          "transport": 25900,
+          "utilities": 42100,
+          "misc": 48600
+        }
       },
-      "oneTime": { "applicationFee": 0, "visaFee": 19440, "insurance": 210600, "flight": 190000 },
+      "oneTime": {
+        "applicationFee": 0,
+        "visaFee": 19440,
+        "insurance": 210600,
+        "flight": 190000
+      },
       "postStudyWork": "Stamp 1G Graduate Programme: 12 months, extendable by 12 more (24 months total; 36 for PhDs)",
       "postStudyWorkMonths": 24,
       "pathway": [
-        { "title": "Apply to institutions", "detail": "Apply directly to universities or institutes of technology for your chosen course." },
-        { "title": "Receive offer & pay deposit", "detail": "Accept the offer and pay the deposit (at least EUR 6,000 toward tuition)." },
-        { "title": "Prepare finances", "detail": "Show EUR 10,000 in accessible funds for the first year plus insurance." },
-        { "title": "Apply for D visa online", "detail": "Submit the visa application through the AVATS portal and send documents to the embassy." },
-        { "title": "Arrive & register", "detail": "Fly to Ireland and register with immigration to get the Stamp 2 permission." },
-        { "title": "Enroll & then Stamp 1G", "detail": "Complete studies, then apply for the Stamp 1G Graduate Programme." }
+        {
+          "title": "Apply to institutions",
+          "detail": "Apply directly to universities or institutes of technology for your chosen course."
+        },
+        {
+          "title": "Receive offer & pay deposit",
+          "detail": "Accept the offer and pay the deposit (at least EUR 6,000 toward tuition)."
+        },
+        {
+          "title": "Prepare finances",
+          "detail": "Show EUR 10,000 in accessible funds for the first year plus insurance."
+        },
+        {
+          "title": "Apply for D visa online",
+          "detail": "Submit the visa application through the AVATS portal and send documents to the embassy."
+        },
+        {
+          "title": "Arrive & register",
+          "detail": "Fly to Ireland and register with immigration to get the Stamp 2 permission."
+        },
+        {
+          "title": "Enroll & then Stamp 1G",
+          "detail": "Complete studies, then apply for the Stamp 1G Graduate Programme."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -661,8 +1856,16 @@
         "Academic transcripts and certificates",
         "English language certificate (IELTS/PTE/DET)"
       ],
-      "requiredTests": ["ielts", "pte", "duolingo"],
-      "topFields": ["Computer Science & IT", "Pharmaceuticals & Biotech", "Business & Finance"],
+      "requiredTests": [
+        "ielts",
+        "pte",
+        "duolingo"
+      ],
+      "topFields": [
+        "Computer Science & IT",
+        "Pharmaceuticals & Biotech",
+        "Business & Finance"
+      ],
       "pros": [
         "24-month post-study work on the Stamp 1G program",
         "European headquarters of Google, Meta, Apple, and Microsoft",
@@ -674,8 +1877,69 @@
         "Up-front funding proof (EUR 10,000 + tuition) is required"
       ],
       "sources": [
-        { "label": "Irish Immigration Service", "url": "https://www.irishimmigration.ie" },
-        { "label": "Education in Ireland (official)", "url": "https://www.educationinireland.com" }
+        {
+          "label": "Irish Immigration Service",
+          "url": "https://www.irishimmigration.ie"
+        },
+        {
+          "label": "Education in Ireland (official)",
+          "url": "https://www.educationinireland.com"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Trinity College Dublin",
+          "ranking": "QS #81",
+          "programs": [
+            "Computer Science",
+            "Medicine",
+            "Business"
+          ]
+        },
+        {
+          "name": "University College Dublin (UCD)",
+          "ranking": "QS #126",
+          "programs": [
+            "Business",
+            "Engineering",
+            "Medicine"
+          ]
+        },
+        {
+          "name": "University of Galway",
+          "ranking": "QS #273",
+          "programs": [
+            "Engineering",
+            "Science",
+            "Arts"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Government of Ireland Scholarships",
+        "Trinity College Dublin Scholarships",
+        "UCD Global Scholarships",
+        "Irish Research Council grants"
+      ],
+      "climate": "Mild and rainy — winters (2–8°C), summers (12–20°C). Rain is frequent. Gulf Stream keeps it warmer than expected.",
+      "cultureTips": [
+        "Ireland has a rich literary and musical tradition",
+        "Pub culture is legendary — live music is common",
+        "The Irish are famously friendly and welcoming",
+        "Gaelic is spoken in the west (Gaeltacht areas)",
+        "Guinness tastes better in Ireland — it's a fact"
+      ],
+      "studentLife": "Friendly, compact campuses. Dublin is a tech hub with Google, Meta, Apple HQs. Student societies and GAA sports are popular. Affordable compared to the UK.",
+      "workRights": "20 hours/week during term, 40 hours/week during holidays (Stamp 2 visa). Third Level Graduate Programme: 12–24 months post-graduation work authorization.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "February 1 (via CAO for undergrad)"
+        },
+        {
+          "intake": "January (Spring)",
+          "deadline": "Limited programs"
+        }
       ]
     },
     {
@@ -686,7 +1950,13 @@
       "region": "europe",
       "capital": "Vilnius",
       "language": "Lithuanian",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "National D Visa (then Temporary Residence Permit)",
         "feePkr": 45360,
@@ -699,26 +1969,73 @@
           "Work up to 20 hours per week during studies"
         ]
       },
-      "intakes": ["September (Autumn)", "February (Spring, limited)"],
+      "intakes": [
+        "September (Autumn)",
+        "February (Spring, limited)"
+      ],
       "tuition": {
-        "ug": { "min": 648000, "max": 2592000 },
-        "masters": { "min": 810000, "max": 3240000 },
-        "phd": { "min": 0, "max": 2592000 }
+        "ug": {
+          "min": 648000,
+          "max": 2592000
+        },
+        "masters": {
+          "min": 810000,
+          "max": 3240000
+        },
+        "phd": {
+          "min": 0,
+          "max": 2592000
+        }
       },
       "living": {
-        "bigCity": { "rent": 113400, "food": 64800, "transport": 9700, "utilities": 32400, "misc": 38900 },
-        "smallCity": { "rent": 64800, "food": 51800, "transport": 6500, "utilities": 25900, "misc": 32400 }
+        "bigCity": {
+          "rent": 113400,
+          "food": 64800,
+          "transport": 9700,
+          "utilities": 32400,
+          "misc": 38900
+        },
+        "smallCity": {
+          "rent": 64800,
+          "food": 51800,
+          "transport": 6500,
+          "utilities": 25900,
+          "misc": 32400
+        }
       },
-      "oneTime": { "applicationFee": 10000, "visaFee": 45360, "insurance": 97200, "flight": 210000 },
+      "oneTime": {
+        "applicationFee": 10000,
+        "visaFee": 45360,
+        "insurance": 97200,
+        "flight": 210000
+      },
       "postStudyWork": "12-month temporary residence permit to seek employment after graduation",
       "postStudyWorkMonths": 12,
       "pathway": [
-        { "title": "Apply to universities", "detail": "Apply directly to universities (Vilnius University, KTU, VGTU) for English-taught programs." },
-        { "title": "Get mediation & MIGRIS", "detail": "The university files your file in the MIGRIS system and acts as mediator." },
-        { "title": "Receive acceptance", "detail": "Get your acceptance letter and pay the tuition deposit." },
-        { "title": "Apply for national D visa", "detail": "Submit the D visa application at the Lithuanian Embassy with financial proof." },
-        { "title": "Arrive & get TRP", "detail": "Enter Lithuania and apply for the Temporary Residence Permit at the Migration Department." },
-        { "title": "Enroll & work", "detail": "Enroll at the university and take up permitted part-time work." }
+        {
+          "title": "Apply to universities",
+          "detail": "Apply directly to universities (Vilnius University, KTU, VGTU) for English-taught programs."
+        },
+        {
+          "title": "Get mediation & MIGRIS",
+          "detail": "The university files your file in the MIGRIS system and acts as mediator."
+        },
+        {
+          "title": "Receive acceptance",
+          "detail": "Get your acceptance letter and pay the tuition deposit."
+        },
+        {
+          "title": "Apply for national D visa",
+          "detail": "Submit the D visa application at the Lithuanian Embassy with financial proof."
+        },
+        {
+          "title": "Arrive & get TRP",
+          "detail": "Enter Lithuania and apply for the Temporary Residence Permit at the Migration Department."
+        },
+        {
+          "title": "Enroll & work",
+          "detail": "Enroll at the university and take up permitted part-time work."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -729,8 +2046,15 @@
         "Accommodation evidence",
         "English language certificate (IELTS/TOEFL)"
       ],
-      "requiredTests": ["ielts", "toefl"],
-      "topFields": ["Information Technology", "Life Sciences", "Engineering"],
+      "requiredTests": [
+        "ielts",
+        "toefl"
+      ],
+      "topFields": [
+        "Information Technology",
+        "Life Sciences",
+        "Engineering"
+      ],
       "pros": [
         "Very low tuition (approx. EUR 2,000-8,000 per year)",
         "Among the cheapest living costs in the EU",
@@ -742,8 +2066,60 @@
         "Lithuanian useful for jobs outside IT"
       ],
       "sources": [
-        { "label": "Study in Lithuania (official)", "url": "https://studyin.lt" },
-        { "label": "Migration Department (MIGRIS)", "url": "https://migracija.lrv.lt" }
+        {
+          "label": "Study in Lithuania (official)",
+          "url": "https://studyin.lt"
+        },
+        {
+          "label": "Migration Department (MIGRIS)",
+          "url": "https://migracija.lrv.lt"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Vilnius University",
+          "ranking": "QS #477",
+          "programs": [
+            "Law",
+            "Business",
+            "Computer Science"
+          ]
+        },
+        {
+          "name": "Kaunas University of Technology",
+          "ranking": "QS #701-750",
+          "programs": [
+            "Engineering",
+            "IT",
+            "Business"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Lithuanian Government Scholarships",
+        "Erasmus Mundus",
+        "University-specific tuition waivers",
+        "Study Lithuania scholarships"
+      ],
+      "climate": "Continental — cold winters (−5 to 0°C), mild summers (16–23°C). Long dark winters. Short but beautiful summers.",
+      "cultureTips": [
+        "Lithuania is one of Europe's most affordable countries",
+        "Lithuanians are reserved at first but warm once you know them",
+        "Basketball is the national sport — learn the rules",
+        "Cold beet soup (šaltibarščiai) is a summer staple",
+        "Vilnius old town is a UNESCO World Heritage site"
+      ],
+      "studentLife": "Affordable European student life. Vilnius has a growing startup scene. Student Erasmus networks are active. Cost of living is among the lowest in the EU.",
+      "workRights": "20 hours/week during studies (no work permit needed for EU/EEA students; non-EU need permit). After graduation, 12-month residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "July 1 (via Lithuanian VMDMIS system)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "December 1"
+        }
       ]
     },
     {
@@ -754,7 +2130,13 @@
       "region": "europe",
       "capital": "Amsterdam",
       "language": "Dutch",
-      "currency": { "code": "EUR", "name": "Euro", "symbol": "€", "toPkr": 324, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "EUR",
+        "name": "Euro",
+        "symbol": "€",
+        "toPkr": 324,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "MVV entry visa + VVR residence permit (TEV via university)",
         "feePkr": 82300,
@@ -767,26 +2149,73 @@
           "Work up to 16 hours per week (or full-time in summer)"
         ]
       },
-      "intakes": ["September", "February"],
+      "intakes": [
+        "September",
+        "February"
+      ],
       "tuition": {
-        "ug": { "min": 2592000, "max": 6480000 },
-        "masters": { "min": 3240000, "max": 8100000 },
-        "phd": { "min": 0, "max": 4860000 }
+        "ug": {
+          "min": 2592000,
+          "max": 6480000
+        },
+        "masters": {
+          "min": 3240000,
+          "max": 8100000
+        },
+        "phd": {
+          "min": 0,
+          "max": 4860000
+        }
       },
       "living": {
-        "bigCity": { "rent": 259200, "food": 81000, "transport": 25900, "utilities": 48600, "misc": 55100 },
-        "smallCity": { "rent": 162000, "food": 71300, "transport": 19400, "utilities": 42100, "misc": 45400 }
+        "bigCity": {
+          "rent": 259200,
+          "food": 81000,
+          "transport": 25900,
+          "utilities": 48600,
+          "misc": 55100
+        },
+        "smallCity": {
+          "rent": 162000,
+          "food": 71300,
+          "transport": 19400,
+          "utilities": 42100,
+          "misc": 45400
+        }
       },
-      "oneTime": { "applicationFee": 0, "visaFee": 82300, "insurance": 194400, "flight": 200000 },
+      "oneTime": {
+        "applicationFee": 0,
+        "visaFee": 82300,
+        "insurance": 194400,
+        "flight": 200000
+      },
       "postStudyWork": "Orientation year permit: 12 months to find work after graduation",
       "postStudyWorkMonths": 12,
       "pathway": [
-        { "title": "Apply via Studielink", "detail": "Register on Studielink and apply to your chosen programs before the deadline." },
-        { "title": "Receive offer & pay deposit", "detail": "Accept the offer and pay any tuition deposit the university requires." },
-        { "title": "University files TEV", "detail": "The university starts the combined MVV and residence permit (TEV) application with IND." },
-        { "title": "Pay the fee & biometrics", "detail": "Pay the approx. EUR 254 application fee and give biometrics at the embassy." },
-        { "title": "Collect MVV & travel", "detail": "Collect the MVV sticker, fly to the Netherlands, and collect your residence card." },
-        { "title": "Register & insure", "detail": "Register with the municipality, arrange health insurance, and start classes." }
+        {
+          "title": "Apply via Studielink",
+          "detail": "Register on Studielink and apply to your chosen programs before the deadline."
+        },
+        {
+          "title": "Receive offer & pay deposit",
+          "detail": "Accept the offer and pay any tuition deposit the university requires."
+        },
+        {
+          "title": "University files TEV",
+          "detail": "The university starts the combined MVV and residence permit (TEV) application with IND."
+        },
+        {
+          "title": "Pay the fee & biometrics",
+          "detail": "Pay the approx. EUR 254 application fee and give biometrics at the embassy."
+        },
+        {
+          "title": "Collect MVV & travel",
+          "detail": "Collect the MVV sticker, fly to the Netherlands, and collect your residence card."
+        },
+        {
+          "title": "Register & insure",
+          "detail": "Register with the municipality, arrange health insurance, and start classes."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -797,8 +2226,16 @@
         "Academic transcripts and degrees",
         "English language certificate (IELTS/TOEFL)"
       ],
-      "requiredTests": ["ielts", "toefl", "nt2"],
-      "topFields": ["Water & Environmental Engineering", "Agriculture & Food Tech", "Business & Economics"],
+      "requiredTests": [
+        "ielts",
+        "toefl",
+        "nt2"
+      ],
+      "topFields": [
+        "Water & Environmental Engineering",
+        "Agriculture & Food Tech",
+        "Business & Economics"
+      ],
       "pros": [
         "Most English-taught programs in continental Europe",
         "12-month orientation year for job seeking",
@@ -810,8 +2247,70 @@
         "High non-EU tuition (approx. EUR 8,000-20,000 for bachelor's, up to EUR 25,000 for master's)"
       ],
       "sources": [
-        { "label": "Study in NL (official, Nuffic)", "url": "https://www.studyinnl.org" },
-        { "label": "IND (immigration authority)", "url": "https://ind.nl" }
+        {
+          "label": "Study in NL (official, Nuffic)",
+          "url": "https://www.studyinnl.org"
+        },
+        {
+          "label": "IND (immigration authority)",
+          "url": "https://ind.nl"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "Delft University of Technology",
+          "ranking": "QS #47",
+          "programs": [
+            "Engineering",
+            "Architecture",
+            "Computer Science"
+          ]
+        },
+        {
+          "name": "University of Amsterdam",
+          "ranking": "QS #53",
+          "programs": [
+            "Business",
+            "Psychology",
+            "Medicine"
+          ]
+        },
+        {
+          "name": "Utrecht University",
+          "ranking": "QS #107",
+          "programs": [
+            "Law",
+            "Medicine",
+            "Veterinary Science"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Holland Scholarship (€5,000 one-time)",
+        "Orange Tulip Scholarship",
+        "Erasmus Mundus",
+        "University of Twente Scholarships",
+        "Justus & Louise van Effen Excellence Scholarship"
+      ],
+      "climate": "Maritime — mild winters (1–6°C), cool summers (16–22°C). Rainy and windy year-round. Bring a good rain jacket.",
+      "cultureTips": [
+        "Dutch directness is not rudeness — they value honesty",
+        "Cycling is the primary transport — get a bike",
+        "Bitterballen and stroopwafels are essential",
+        "Most Dutch people speak excellent English",
+        "Poffertjes (mini pancakes) are a must-try"
+      ],
+      "studentLife": "Highly international — 100,000+ international students. Student associations and study clubs are central. Bike culture defines daily life. Utrecht and Delft have charming canal-side campuses.",
+      "workRights": "16 hours/week during studies. Orientation year visa (zoekjaar): 12 months post-graduation to find work. Highly skilled migrant visa for employment.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "May 1 (via Studielink)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "November 1 (limited programs)"
+        }
       ]
     },
     {
@@ -822,7 +2321,13 @@
       "region": "europe",
       "capital": "Budapest",
       "language": "Hungarian",
-      "currency": { "code": "HUF", "name": "Hungarian Forint", "symbol": "Ft", "toPkr": 0.895, "rateAsOf": "2026-08" },
+      "currency": {
+        "code": "HUF",
+        "name": "Hungarian Forint",
+        "symbol": "Ft",
+        "toPkr": 0.895,
+        "rateAsOf": "2026-08"
+      },
       "visa": {
         "type": "D Visa + Residence Permit for Study Purposes",
         "feePkr": 54345,
@@ -835,25 +2340,69 @@
           "Work up to 30 hours per week during studies"
         ]
       },
-      "intakes": ["September (Autumn)", "February (Spring)"],
+      "intakes": [
+        "September (Autumn)",
+        "February (Spring)"
+      ],
       "tuition": {
-        "ug": { "min": 810000, "max": 2592000 },
-        "masters": { "min": 810000, "max": 3240000 },
-        "phd": { "min": 810000, "max": 2916000 }
+        "ug": {
+          "min": 810000,
+          "max": 2592000
+        },
+        "masters": {
+          "min": 810000,
+          "max": 3240000
+        },
+        "phd": {
+          "min": 810000,
+          "max": 2916000
+        }
       },
       "living": {
-        "bigCity": { "rent": 113400, "food": 58300, "transport": 8100, "utilities": 32400, "misc": 35600 },
-        "smallCity": { "rent": 71300, "food": 48600, "transport": 6500, "utilities": 25900, "misc": 29200 }
+        "bigCity": {
+          "rent": 113400,
+          "food": 58300,
+          "transport": 8100,
+          "utilities": 32400,
+          "misc": 35600
+        },
+        "smallCity": {
+          "rent": 71300,
+          "food": 48600,
+          "transport": 6500,
+          "utilities": 25900,
+          "misc": 29200
+        }
       },
-      "oneTime": { "applicationFee": 32400, "visaFee": 54345, "insurance": 64800, "flight": 210000 },
+      "oneTime": {
+        "applicationFee": 32400,
+        "visaFee": 54345,
+        "insurance": 64800,
+        "flight": 210000
+      },
       "postStudyWork": "9-month 'study-to-work' job-seeker residence permit for fresh graduates",
       "postStudyWorkMonths": 9,
       "pathway": [
-        { "title": "Apply or get Stipendium", "detail": "Apply directly to universities or via the Stipendium Hungaricum call through HEC." },
-        { "title": "Receive acceptance", "detail": "Get your acceptance letter from the Hungarian university." },
-        { "title": "Apply for D visa", "detail": "Submit the long-stay visa application at the Hungarian Embassy with financial proof." },
-        { "title": "Arrive & file residence permit", "detail": "After arrival, apply for the residence permit on the Enter Hungary platform." },
-        { "title": "Enroll & register", "detail": "Complete enrollment and register your address with the authorities." }
+        {
+          "title": "Apply or get Stipendium",
+          "detail": "Apply directly to universities or via the Stipendium Hungaricum call through HEC."
+        },
+        {
+          "title": "Receive acceptance",
+          "detail": "Get your acceptance letter from the Hungarian university."
+        },
+        {
+          "title": "Apply for D visa",
+          "detail": "Submit the long-stay visa application at the Hungarian Embassy with financial proof."
+        },
+        {
+          "title": "Arrive & file residence permit",
+          "detail": "After arrival, apply for the residence permit on the Enter Hungary platform."
+        },
+        {
+          "title": "Enroll & register",
+          "detail": "Complete enrollment and register your address with the authorities."
+        }
       ],
       "documents": [
         "Valid passport",
@@ -864,8 +2413,16 @@
         "English language certificate (IELTS/TOEFL)",
         "Accommodation evidence"
       ],
-      "requiredTests": ["ielts", "toefl"],
-      "topFields": ["Medicine & Dentistry", "Engineering", "Agriculture", "Music & Arts"],
+      "requiredTests": [
+        "ielts",
+        "toefl"
+      ],
+      "topFields": [
+        "Medicine & Dentistry",
+        "Engineering",
+        "Agriculture",
+        "Music & Arts"
+      ],
       "pros": [
         "Stipendium Hungaricum fully funds tuition, stipend, and housing",
         "Low living costs in Budapest and university cities",
@@ -877,8 +2434,68 @@
         "Hungarian is needed for most jobs outside multinationals"
       ],
       "sources": [
-        { "label": "Study in Hungary (official)", "url": "https://studyinhungary.hu" },
-        { "label": "Enter Hungary (immigration platform)", "url": "https://enterhungary.gov.hu" }
+        {
+          "label": "Study in Hungary (official)",
+          "url": "https://studyinhungary.hu"
+        },
+        {
+          "label": "Enter Hungary (immigration platform)",
+          "url": "https://enterhungary.gov.hu"
+        }
+      ],
+      "topUniversities": [
+        {
+          "name": "University of Budapest (ELTE)",
+          "ranking": "QS #501-510",
+          "programs": [
+            "Medicine",
+            "Law",
+            "Humanities"
+          ]
+        },
+        {
+          "name": "Budapest University of Technology",
+          "ranking": "QS #701-750",
+          "programs": [
+            "Engineering",
+            "IT",
+            "Architecture"
+          ]
+        },
+        {
+          "name": "University of Szeged",
+          "ranking": "QS #501-510",
+          "programs": [
+            "Medicine",
+            "Pharmacy",
+            "Science"
+          ]
+        }
+      ],
+      "scholarshipsAvailable": [
+        "Stipendium Hungaricum (fully funded by Hungarian government)",
+        "University-specific scholarships",
+        "Erasmus Mundus"
+      ],
+      "climate": "Continental — cold winters (−3 to 3°C), warm summers (20–30°C). Budapest is warmer than eastern regions.",
+      "cultureTips": [
+        "Thermal baths are a way of life — visit Széchenyi or Gellért",
+        "Hungarian food is hearty — goulash is just the start",
+        "Hungarian is unlike any European language — don't try to learn it",
+        "Budapest ruin bars are unique — check out Szimpla Kert",
+        "Pálinka (fruit brandy) is the national drink — sip slowly"
+      ],
+      "studentLife": "Budapest is a beautiful, affordable European capital. Student life is vibrant with active ESN chapters. Thermal baths, ruin bars, and coffee houses define the culture.",
+      "workRights": "24 hours/week during studies (with a work permit). After graduation, 9-month residence permit for job seeking.",
+      "applicationDeadlines": [
+        {
+          "intake": "September (Fall)",
+          "deadline": "January 15 (Stipendium Hungaricum), February–March (university-specific)"
+        },
+        {
+          "intake": "February (Spring)",
+          "deadline": "October–November"
+        }
       ]
     }
   ]
