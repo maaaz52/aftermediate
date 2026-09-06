@@ -3,6 +3,7 @@
 import * as React from "react";
 import { BookOpen, Send, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { MessageContent } from "@/components/message-content";
 import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
 
 type Msg = ChatMessage;
@@ -89,7 +90,7 @@ export default function StudyPage() {
                   m.role === "user" ? "bg-saffron text-background" : "bg-surface-2 text-ink"
                 )}
               >
-                {m.content || (streaming && <Loader2 className="h-4 w-4 animate-spin" />)}
+                {m.content ? (m.role === "user" ? m.content : <MessageContent>{m.content}</MessageContent>) : (streaming && <Loader2 className="h-4 w-4 animate-spin" />)}
               </div>
             </div>
           ))}
