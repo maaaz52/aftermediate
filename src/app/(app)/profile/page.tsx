@@ -26,7 +26,8 @@ import { useStudent, type EducationEntry } from "@/lib/store";
 import { useAuth } from "@/lib/auth";
 import { isQuizComplete } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
-import { AVATAR_STYLES, type AvatarStyleId, generateAvatarSvg } from "@/lib/avatar";
+import { AVATAR_STYLES, type AvatarStyleId } from "@/lib/avatar";
+import { Avatar } from "@/components/avatar";
 
 const streamLabel: Record<string, string> = {
   "pre-medical": "FSc Pre-Medical",
@@ -306,16 +307,10 @@ export default function ProfilePage() {
         <div className="relative flex flex-col items-center gap-5 sm:flex-row sm:items-start">
           <div className="group relative" ref={avatarRef}>
             <div className="grid h-24 w-24 place-items-center overflow-hidden rounded-3xl border-2 border-ink bg-surface-2 shadow-[4px_4px_0_0_var(--color-ink)]">
-              {(() => {
-                const seed = profile.avatarSeed || profile.name || user?.user_metadata?.full_name || "student";
-                const svg = generateAvatarSvg(profile.avatarStyle, seed);
-                return (
-                  <div
-                    className="h-full w-full [&>svg]:h-full [&>svg]:w-full"
-                    dangerouslySetInnerHTML={{ __html: svg }}
-                  />
-                );
-              })()}
+              <Avatar
+                styleId={profile.avatarStyle}
+                seed={profile.avatarSeed || profile.name || user?.user_metadata?.full_name || "student"}
+              />
             </div>
             <button
               onClick={(e) => {
@@ -346,12 +341,9 @@ export default function ProfilePage() {
                       )}
                       title={style.label}
                     >
-                      <div
-                        className="flex h-full w-full items-center justify-center [&>svg]:h-full [&>svg]:w-full"
-                        dangerouslySetInnerHTML={{
-                          __html: generateAvatarSvg(style.id, profile.avatarSeed || "preview"),
-                        }}
-                      />
+                      <div className="flex h-full w-full items-center justify-center [&>svg]:h-full [&>svg]:w-full">
+                        <Avatar styleId={style.id} seed={profile.avatarSeed || "preview"} />
+                      </div>
                     </button>
                   ))}
                 </div>

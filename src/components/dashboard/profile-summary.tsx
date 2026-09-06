@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
-import { generateAvatarSvg } from "@/lib/avatar";
+import { Avatar } from "@/components/avatar";
 
 export function ProfileSummary() {
   const { profile } = useStudent();
@@ -14,7 +14,6 @@ export function ProfileSummary() {
   const fscPct = pct(profile.marks.fscObtained, profile.marks.fscTotal);
   const matPct = pct(profile.marks.matricObtained, profile.marks.matricTotal);
   const seed = profile.avatarSeed || profile.name || "student";
-  const avatarSvg = generateAvatarSvg(profile.avatarStyle, seed);
   const entry = profile.marks.entryTestObtained && q.entryTest && q.entryTest !== "none"
     ? `${q.entryTest.toUpperCase()}: ${profile.marks.entryTestObtained}/${profile.marks.entryTestTotal ?? 200}`
     : null;
@@ -23,10 +22,7 @@ export function ProfileSummary() {
     <div className="grid gap-4 lg:grid-cols-[1fr_2fr]">
       <div className="card-glass flex items-center gap-4 rounded-2xl p-5">
         <div className="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl">
-          <div
-            className="h-full w-full [&>svg]:h-full [&>svg]:w-full"
-            dangerouslySetInnerHTML={{ __html: avatarSvg }}
-          />
+          <Avatar styleId={profile.avatarStyle} seed={seed} />
         </div>
         <div className="min-w-0">
           <p className="truncate text-base font-bold text-ink">{profile.name || "Student"}</p>

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { useStudent } from "@/lib/store";
 import { STREAM_LABEL } from "@/lib/data";
 import { pct } from "@/lib/aggregates";
-import { generateAvatarSvg } from "@/lib/avatar";
+import { Avatar } from "@/components/avatar";
 import { mockAttempts } from "@/lib/practice";
 import { cn } from "@/lib/utils";
 
@@ -23,7 +23,6 @@ export function DashboardHero() {
     : null;
 
   const seed = profile.avatarSeed || profile.name || "student";
-  const avatarSvg = generateAvatarSvg(profile.avatarStyle, seed);
 
   // Profile completion
   const checks = [
@@ -55,10 +54,7 @@ export function DashboardHero() {
     <div className="card-glass rounded-2xl p-5">
       <div className="flex items-start gap-4">
         <div className="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl">
-          <div
-            className="h-full w-full [&>svg]:h-full [&>svg]:w-full"
-            dangerouslySetInnerHTML={{ __html: avatarSvg }}
-          />
+          <Avatar styleId={profile.avatarStyle} seed={seed} />
         </div>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
