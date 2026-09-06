@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Handshake } from "lucide-react";
 import { ClientPlaybook } from "@/components/skills/client-playbook";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Clients · Client Playbook",
-};
+  description: "Real insider tactics for finding, pricing, and keeping clients — templates, scripts, and a quote builder.",
+  path: "/skills/clients",
+});
 
 export default function SkillsClientsPage() {
   return (

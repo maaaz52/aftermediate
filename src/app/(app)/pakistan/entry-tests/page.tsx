@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { EntryTestsExplorer } from "@/components/pakistan/entry-tests-explorer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Entry Tests — Pakistan",
-};
+  description: "MDCAT to LAT — pattern, syllabus, fee and how to apply for every Pakistani entry test, straight from the official conducting bodies.",
+  path: "/pakistan/entry-tests",
+});
 
 export default function PakistanEntryTestsPage() {
   return (

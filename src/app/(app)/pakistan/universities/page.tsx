@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { UniversitiesExplorer } from "@/components/pakistan/universities-explorer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Universities — Pakistan",
-};
+  description: "Compare Pakistani universities by admission steps, real fees, rankings and best fields — with official links, not academy gossip.",
+  path: "/pakistan/universities",
+});
 
 export default function PakistanUniversitiesPage() {
   return (

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { AbroadScholarshipsExplorer } from "@/components/abroad/abroad-scholarships-explorer";
 import { Crown } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Scholarships — study abroad",
-};
+  description: "HEC, host-government and university scholarships for Pakistani students studying abroad — coverage, eligibility and deadlines.",
+  path: "/abroad/scholarships",
+});
 
 export default function AbroadScholarshipsPage() {
   return (

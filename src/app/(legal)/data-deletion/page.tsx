@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import Link from "next/link";
 import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Data Deletion",
-};
+  description: "How to request deletion of your data from aftermediate.",
+  path: "/data-deletion",
+});
 
 export default function DataDeletionPage() {
   return (

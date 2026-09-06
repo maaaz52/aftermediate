@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Become a mentor",
-};
+  description: "Join the aftermediate mentor program and help Pakistani students find their path after FSc.",
+  path: "/mentors/become",
+});
 
 export default function BecomeMentorPage() {
   return (

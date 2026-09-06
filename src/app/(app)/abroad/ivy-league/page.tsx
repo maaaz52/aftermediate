@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { IvyExplorer } from "@/components/abroad/ivy-explorer";
 import { Crown } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Ivy League",
-};
+  description: "Harvard to Cornell — acceptance rates, testing policies, financial aid and a step-by-step path for Pakistani applicants. Every figure carries a source.",
+  path: "/abroad/ivy-league",
+});
 
 export default function AbroadIvyLeaguePage() {
   return (

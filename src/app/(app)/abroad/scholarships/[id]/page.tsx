@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { ArrowLeft, Check, Clock, ExternalLink, FileText, Lightbulb, Mail, Star } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/abroad-scholarships.json";
@@ -46,7 +48,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const s = getScholarship(id);
-  return { title: s ? `${s.name} — coverage & eligibility` : "Scholarship" };
+  if (!s) return pageMetadata({ title: "Scholarship", description: "Scholarship details.", path: `/abroad/scholarships/${id}` });
+  return pageMetadata({
+    title: `${s.name} — coverage & eligibility`,
+    description: `${s.name}: what it covers, eligibility for Pakistani students, documents, deadlines and how to apply. Funded by ${s.funder}.`,
+    path: `/abroad/scholarships/${s.id}`,
+  });
 }
 
 export default async function ScholarshipPage({ params }: { params: Promise<{ id: string }> }) {
@@ -60,6 +67,12 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ id
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Scholarships", path: "/abroad/scholarships" },
+          { name: s.name, path: `/abroad/scholarships/${s.id}` },
+        ])}
+      />
       <Link
         href="/abroad/scholarships"
         className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"

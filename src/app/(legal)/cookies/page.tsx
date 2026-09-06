@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Cookie Policy",
-};
+  description: "How aftermediate uses cookies and similar technologies.",
+  path: "/cookies",
+});
 
 export default function CookiesPage() {
   return (

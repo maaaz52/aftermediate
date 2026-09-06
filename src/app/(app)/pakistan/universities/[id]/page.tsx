@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { ExternalLink, ArrowLeft, BookOpen, Target } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/pakistan-universities.json";
@@ -44,7 +46,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const uni = getUni(id);
-  return { title: uni ? `${uni.name} — admissions & merit` : "University" };
+  if (!uni) return pageMetadata({ title: "University", description: "University details.", path: `/pakistan/universities/${id}` });
+  return pageMetadata({
+    title: `${uni.name} — admissions & merit`,
+    description: `${uni.name} (${uni.short}) in ${uni.city}: admission steps, real fees, ranking, entry test and the fields it's known for — with official links.`,
+    path: `/pakistan/universities/${uni.id}`,
+    ogDescription: uni.intro,
+  });
 }
 
 export default async function UniversityPage({ params }: { params: Promise<{ id: string }> }) {
@@ -54,6 +62,12 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Universities", path: "/pakistan/universities" },
+          { name: uni.name, path: `/pakistan/universities/${uni.id}` },
+        ])}
+      />
       {/* Back link */}
       <Link
         href="/pakistan/universities"

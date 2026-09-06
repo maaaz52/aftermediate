@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { CountriesExplorer } from "@/components/abroad/countries-explorer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Countries — study abroad",
-};
+  description: "Compare study-abroad destinations for Pakistani students — visas, tuition in PKR, living costs and post-study work, side by side.",
+  path: "/abroad/countries",
+});
 
 export default function AbroadCountriesPage() {
   return (

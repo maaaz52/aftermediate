@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
-};
+  description: "How aftermediate collects, uses and protects your personal data.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

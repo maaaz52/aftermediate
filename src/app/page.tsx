@@ -16,19 +16,26 @@ import { CountUp } from "@/components/count-up";
 import { SiteFooter } from "@/components/landing/footer";
 import { Faq } from "@/components/landing/faq";
 import { HowItWorksSection } from "@/components/how-it-works-section";
+import { JsonLd } from "@/components/json-ld";
 import { data } from "@/lib/data";
+import { FAQS } from "@/data/faq";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "aftermediate — your post-FSc compass",
   description:
     "Compare universities, entry tests, merit aggregates, scholarships and study-abroad destinations for Pakistani FSc, ICS, I.Com and A-Level students — backed by data.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "aftermediate — your post-FSc compass",
-    description:
-      "Career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
-    type: "website",
-  },
+  path: "/",
+});
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 const rc = data.realities;
@@ -340,6 +347,7 @@ export default function Home() {
       </main>
 
       <SiteFooter />
+      <JsonLd data={faqJsonLd} />
     </div>
   );
 }

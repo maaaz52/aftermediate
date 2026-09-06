@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { ArrowLeft, Check, Clock, ExternalLink, GraduationCap, Plane, Wallet } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/abroad-countries.json";
@@ -27,7 +29,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const c = getCountry(id);
-  return { title: c ? `${c.name} — visas, fees & costs` : "Study destination" };
+  if (!c) return pageMetadata({ title: "Study destination", description: "Study destination details.", path: `/abroad/countries/${id}` });
+  return pageMetadata({
+    title: `${c.name} — visas, fees & costs`,
+    description: `${c.name} for Pakistani students: student visa, tuition fees in PKR, monthly living costs, post-study work and admission pathway.`,
+    path: `/abroad/countries/${c.id}`,
+    ogDescription: c.intro,
+  });
 }
 
 const REGION_LABEL: Record<string, string> = {
@@ -69,6 +77,12 @@ export default async function CountryPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Countries", path: "/abroad/countries" },
+          { name: c.name, path: `/abroad/countries/${c.id}` },
+        ])}
+      />
       <Link
         href="/abroad/countries"
         className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"

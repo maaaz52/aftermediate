@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { BookMarked } from "lucide-react";
 import { BookLibrary } from "@/components/skills/book-library";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Books · Skill Library",
-};
+  description: "36 hand-picked books by skill area — with free copies, read-time estimates, and a progress queue.",
+  path: "/skills/books",
+});
 
 export default function SkillsBooksPage() {
   return (

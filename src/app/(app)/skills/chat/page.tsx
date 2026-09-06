@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { MessageSquareText } from "lucide-react";
 import { SkillsChat } from "@/components/skills/skills-chat";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Hunar A.I",
-};
+  description: "Your freelancing & side-hustle coach — skills, pricing, clients, and getting paid from Pakistan.",
+  path: "/skills/chat",
+});
 
 export default function SkillsChatPage() {
   return (

@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Store } from "lucide-react";
 import { PlatformWarRoom } from "@/components/skills/platform-war-room";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Platforms · Platform War Room",
-};
+  description: "Upwork, Fiverr, Toptal and more — compare fees, competition, and payouts, or let the wizard pick your start.",
+  path: "/skills/platforms",
+});
 
 export default function SkillsPlatformsPage() {
   return (

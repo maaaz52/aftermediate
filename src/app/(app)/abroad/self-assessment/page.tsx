@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { PracticeCatalog } from "@/components/practice/practice-catalog";
 import { abroadTests } from "@/lib/practice";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Self Assessment — international tests",
-};
+  description: "Timed mock exams for international standardized tests — practice IELTS, SAT and more under real exam conditions.",
+  path: "/abroad/self-assessment",
+});
 
 export default function AbroadSelfAssessmentPage() {
   return (

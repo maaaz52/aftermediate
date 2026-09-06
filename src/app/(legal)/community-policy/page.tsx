@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Community Policy",
-};
+  description: "The community guidelines for using aftermediate.",
+  path: "/community-policy",
+});
 
 export default function CommunityPolicyPage() {
   return (

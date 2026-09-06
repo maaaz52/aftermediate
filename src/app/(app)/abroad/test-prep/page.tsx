@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Badge } from "@/components/ui/badge";
 import { TestPrepExplorer } from "@/components/abroad/test-prep-explorer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Entry Tests — study abroad",
-};
+  description: "IELTS to TOPIK: patterns, fees in PKR, scoring and how to prepare — from official test bodies, not coaching academies.",
+  path: "/abroad/test-prep",
+});
 
 export default async function AbroadTestPrepPage({
   searchParams,

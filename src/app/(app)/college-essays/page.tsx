@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { Feather } from "lucide-react";
 import { CollegeEssaysApp } from "@/components/college-essays/college-essays-app";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "College essays",
-};
+  description: "Write, rate and refine your college and scholarship essays — with an AI coach that quotes your exact lines.",
+  path: "/college-essays",
+});
 
 export default function CollegeEssaysPage() {
   return (

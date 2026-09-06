@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Disclaimer",
-};
+  description: "Important disclaimers about the information on aftermediate.",
+  path: "/disclaimer",
+});
 
 export default function DisclaimerPage() {
   return (

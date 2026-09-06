@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { MonitorPlay } from "lucide-react";
 import { CourseExplorer } from "@/components/skills/course-explorer";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Courses · Course Explorer",
-};
+  description: "Filter 48 real courses by track, level, cost, and time — or follow a ready-made skill path.",
+  path: "/skills/courses",
+});
 
 export default function SkillsCoursesPage() {
   return (

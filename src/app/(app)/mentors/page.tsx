@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { MentorMatchPage } from "@/components/mentor-match/mentor-match-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Mentor Match",
-};
+  description: "Find verified mentors who've walked the Pakistani FSc-to-career path — filter by field, budget and style, and book a session.",
+  path: "/mentors",
+});
 
 export default function MentorsPage() {
   return (

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft, FileText, Link2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { contentFor, findTest, REGION_LABEL } from "@/lib/test-prep";
 
 export async function generateMetadata({
@@ -12,7 +14,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { testId } = await params;
   const name = findTest(testId)?.name;
-  return { title: name ? `${name} — resources & documents` : "Test prep resources" };
+  return pageMetadata({
+    title: name ? `${name} — resources & documents` : "Test prep resources",
+    description: name ? `Free preparation resources and documents for ${name}.` : "Test prep resources",
+    path: `/study/test-prep/${testId}/documents`,
+  });
 }
 
 export default async function TestPrepDocumentsPage({
@@ -28,6 +34,12 @@ export default async function TestPrepDocumentsPage({
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Test Prep", path: "/study/test-prep" },
+          { name: test.name, path: `/study/test-prep/${test.id}/documents` },
+        ])}
+      />
       <Link
         href="/study/test-prep"
         className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-ink"

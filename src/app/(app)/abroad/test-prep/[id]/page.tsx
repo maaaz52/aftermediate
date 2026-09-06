@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { ArrowLeft, BookOpen, Check, Clock, ExternalLink, FileText, Lightbulb, MapPin, Monitor, Target, Users } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/abroad-tests.json";
@@ -40,7 +42,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const t = getTest(id);
-  return { title: t ? `${t.name} — format, fees & prep` : "Test prep" };
+  if (!t) return pageMetadata({ title: "Test prep", description: "Test details.", path: `/abroad/test-prep/${id}` });
+  return pageMetadata({
+    title: `${t.name} — format, fees & prep`,
+    description: `${t.name} (${t.short}): test format, fee in PKR, scoring, registration, preparation tips and country requirements.`,
+    path: `/abroad/test-prep/${t.id}`,
+  });
 }
 
 export default async function TestPrepDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -52,6 +59,12 @@ export default async function TestPrepDetailPage({ params }: { params: Promise<{
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Entry Tests", path: "/abroad/test-prep" },
+          { name: t.name, path: `/abroad/test-prep/${t.id}` },
+        ])}
+      />
       <Link
         href="/abroad/test-prep"
         className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"

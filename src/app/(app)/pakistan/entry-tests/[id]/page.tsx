@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
 import { ExternalLink, ArrowLeft, BookOpen, FileText, Target } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/entry-tests.json";
@@ -26,7 +28,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const test = getTest(id);
-  return { title: test ? `${test.name} — pattern, fee & prep` : "Entry test" };
+  if (!test) return pageMetadata({ title: "Entry test", description: "Entry test details.", path: `/pakistan/entry-tests/${id}` });
+  return pageMetadata({
+    title: `${test.name} — pattern, fee & prep`,
+    description: `${test.name} (${test.short}): paper pattern, syllabus, fee, frequency, validity and how to apply — from the official conducting body.`,
+    path: `/pakistan/entry-tests/${test.id}`,
+  });
 }
 
 export default async function EntryTestPage({ params }: { params: Promise<{ id: string }> }) {
@@ -36,6 +43,12 @@ export default async function EntryTestPage({ params }: { params: Promise<{ id: 
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Entry Tests", path: "/pakistan/entry-tests" },
+          { name: test.name, path: `/pakistan/entry-tests/${test.id}` },
+        ])}
+      />
       {/* Back link */}
       <Link
         href="/pakistan/entry-tests"
