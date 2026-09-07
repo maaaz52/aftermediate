@@ -1,14 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import "@fontsource/silkscreen/400.css";
-import "@fontsource/silkscreen/700.css";
-import "@fontsource/plus-jakarta-sans/400.css";
-import "@fontsource/plus-jakarta-sans/500.css";
-import "@fontsource/plus-jakarta-sans/600.css";
-import "@fontsource/plus-jakarta-sans/700.css";
-import "@fontsource/plus-jakarta-sans/800.css";
-import "@fontsource/space-mono/400.css";
-import "@fontsource/space-mono/700.css";
+import { Space_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { StudentProvider } from "@/lib/store";
 import { AuthProvider } from "@/lib/auth";
@@ -17,6 +9,20 @@ import { JsonLd } from "@/components/json-ld";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-space",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-jakarta",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -80,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${plusJakarta.variable} ${spaceMono.variable}`}>
       <body suppressHydrationWarning className="min-h-full flex flex-col bg-background text-ink antialiased">
         {GA_ID && (
           <>

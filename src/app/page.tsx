@@ -79,7 +79,8 @@ export default function Home() {
                 <span className="h-2 w-2 bg-emerald" />
                 For Pakistani FSc · ICS · I.Com · A-Level
               </div>
-                <h1 className="mt-6 font-display font-bold uppercase text-3xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              {/* @ts-expect-error fetchPriority is valid in React 19 */}
+              <h1 fetchPriority="high" className="mt-6 font-display font-bold uppercase text-3xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
                 Finished FSc.
                 <br />
                 <span className="text-accent">Not sure what&apos;s next?</span>
