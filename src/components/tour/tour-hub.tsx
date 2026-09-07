@@ -50,7 +50,7 @@ export function TourHub() {
         aria-expanded={tour.hubOpen}
         onClick={() => (tour.hubOpen ? tour.closeHub() : tour.openHub())}
         className={cn(
-          "animate-rise fixed right-6 top-[4.5rem] z-40 inline-flex h-11 cursor-pointer items-center gap-2 rounded-full bg-saffron px-5 text-sm font-semibold text-background shadow-[0_0_24px_-6px_rgba(245,185,66,0.6)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60",
+          "animate-rise fixed right-6 top-[4.5rem] z-40 hidden sm:inline-flex h-11 cursor-pointer items-center gap-2 rounded-full bg-saffron px-5 text-sm font-semibold text-background shadow-[0_0_24px_-6px_rgba(245,185,66,0.6)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60",
           pulse && "animate-pulse-ring"
         )}
       >
