@@ -1,4 +1,3 @@
-import { createClient } from "@/lib/supabase/server";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { sendEmail } from "@/lib/email";
@@ -10,28 +9,20 @@ export const runtime = "nodejs";
 const MAX_BODY_BYTES = 16 * 1024;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const NOTIFY_TO = "themz52@proton.me";
-/** Per-IP cap so a scripted client cannot flood the team's inbox or the table. */
+/** Per-IP cap so a scripted client cannot flood the team's inbox. */
 const IP_SEND_MAX = 10;
 const IP_WINDOW_MS = 60 * 60 * 1000;
 
 /**
- * Receives the landing-page contact form, stores it in contact_messages, and
- * emails the team a copy. The email is best-effort: a delivery failure must
- * not lose the message, which is already in the database by then.
+ * Receives the landing-page contact form and emails the team. No database
+ * storage — the email is the message.
  */
 export async function POST(req: Request) {
   try {
-    // Vercel overwrites x-forwarded-for at the edge, so the first entry is the
-    // client address, not a header the caller controls.
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
     if (!checkRateLimit(`contact:${ip}`, IP_SEND_MAX, IP_WINDOW_MS)) {
       return jsonError("Too many messages from this device. Try again later.", 429);
     }
-
-    const supabase = await createClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
 
     const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
     if (!bodyResult.ok) return bodyResult.error;
@@ -47,22 +38,6 @@ export async function POST(req: Request) {
     if (!message || message.length > 5000) return jsonError("Enter a message.", 400);
     if (rating !== null && (rating < 1 || rating > 5)) return jsonError("Rating must be 1-5.", 400);
 
-    // Insert via a SECURITY DEFINER function: the anon role has no table-level
-    // INSERT on contact_messages, so this validated, rate-limited route (and
-    // only it) can write. The user id comes from the verified token, never the
-    // client.
-    const { error } = await supabase.rpc("insert_contact_message", {
-      p_user_id: user?.id ?? null,
-      p_name: name,
-      p_email: email,
-      p_message: message,
-      p_rating: rating,
-    });
-    if (error) {
-      console.error("contact insert error", error.message);
-      return jsonError("Could not save your message.", 500);
-    }
-
     const subjectName = name.slice(0, 40).replace(/[\r\n\t]/g, " ").trim() || "someone";
     const sent = await sendEmail({
       from: "Aftermediate Contact <no-reply@aftermediate.site>",
@@ -77,11 +52,13 @@ export async function POST(req: Request) {
             ${rating !== null ? `<tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Rating</td><td>${rating}/5</td></tr>` : ""}
           </table>
           <div style="border:2px solid #191f2c;padding:16px;background:#f4f2eb;font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(message)}</div>
+          <p style="color:#8a93a6;font-size:12px;margin-top:16px;">Reply to: ${escapeHtml(email)}</p>
         </div>
       `,
     });
     if (!sent.ok) {
       console.error("contact email failed", sent.reason);
+      return jsonError("Could not send your message. Try again later.", 500);
     }
 
     return jsonOk({ ok: true });

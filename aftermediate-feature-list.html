@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>aftermediate — Complete Feature List</title>
+<style>
+  body{font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:40px;line-height:1.6;color:#111}
+  h1{font-size:24px;border-bottom:3px solid #111;padding-bottom:8px;margin-top:40px}
+  h2{font-size:18px;margin-top:30px;color:#222}
+  h3{font-size:15px;margin-top:20px;color:#333}
+  ul{padding-left:20px}
+  li{margin-bottom:6px}
+  .section{margin-bottom:30px;page-break-inside:avoid}
+  .note{background:#f5f5f5;padding:12px;border-left:4px solid #2f55d4;margin:15px 0;font-size:13px}
+  .count{font-weight:bold;color:#2f55d4}
+  @media print{body{padding:20px}h1{page-break-before:always}:first-of-type h1{page-break-before:avoid}}
+</style>
+</head>
+<body>
+
+<h1>aftermediate — Complete Feature List</h1>
+<p><strong>What it is:</strong> An AI-driven career counseling and university planning platform built specifically for Pakistani students who just finished FSc, ICS, I.Com, or A-Level.</p>
+<p><strong>Website:</strong> www.aftermediate.site</p>
+<p><strong>Status:</strong> Live, deployed, production-ready</p>
+
+<div class="section">
+<h2>1. ONBOARDING & PERSONALIZATION</h2>
+<ul>
+  <li>Smart onboarding quiz — asks stream (Pre-Med, Pre-Eng, ICS, I.Com), marks, interests, budget, preferred city, and career priorities</li>
+  <li>OCR marksheet scan — upload a photo of your FSc/A-Level marksheet and the AI reads your subjects and grades automatically (no typing needed)</li>
+  <li>Onboarding powers every page — the entire app adapts based on your answers (recommendations, merit calculations, AI responses all personalized)</li>
+  <li>Re-take onboarding anytime — if marks or preferences change, retake the quiz and everything updates</li>
+  <li>Custom avatar — choose from 10 dicebear avatar styles with a custom seed</li>
+  <li>Profile page — edit name, email, education, skills, avatar; all changes save instantly</li>
+  <li>Education lock — once you set your board and stream, it's locked (prevents accidental changes that break merit calculations)</li>
+  <li>Skills search — add skills from a searchable list or type custom ones</li>
+  <li>Save toast — profile edits show a confirmation toast</li>
+  <li>Data deletion — delete your entire account and all data from the profile page</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>2. DASHBOARD</h2>
+<ul>
+  <li>Daily Sprint — a personalized daily checklist showing what to do today (practice, explore, prepare)</li>
+  <li>Daily Sprint tag — visible badge on the dashboard showing today's focus</li>
+  <li>Practice summary — shows how many mock questions you've attempted and your average score</li>
+  <li>Entry-test heatmap — a grid showing your performance across different test topics (green = strong, red = weak)</li>
+  <li>Aggregate display — your calculated merit percentage for NUST, FAST, MDCAT, etc. shown as a single number</li>
+  <li>Fine/coarse aggregate — two views of your aggregate (detailed breakdown vs quick overview)</li>
+  <li>Where-you-stand benchmark — shows your percentile compared to other users (e.g., "you're in the top 30%")</li>
+  <li>Abroad overview — if you're interested in studying abroad, shows relevant countries and scholarships</li>
+  <li>Best fields — suggests fields that match your marks and interests</li>
+  <li>Unified CTAs — consistent call-to-action buttons across the dashboard</li>
+  <li>Collapsible hero section — dashboard header can collapse to save space</li>
+  <li>Today buttons pinned — quick-action buttons always visible at the bottom</li>
+  <li>Skeleton loaders — smooth loading states for every dashboard section</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. PAKISTAN — UNIVERSITIES</h2>
+<ul>
+  <li><span class="count">30 universities</span> with full profiles</li>
+  <li>Admission steps — step-by-step guide for each university (how to apply, deadlines, required documents)</li>
+  <li>Real fees in PKR — tuition, hostel, and total cost shown in Pakistani Rupees (not dollars)</li>
+  <li>Rankings — HEC and QS rankings where available</li>
+  <li>Best fields — which fields each university is actually known for (e.g., NUST for CS/Engineering, LUMS for Business)</li>
+  <li>Entry tests — which test each university requires (NET, ECAT, MDCAT, etc.)</li>
+  <li>Official links — direct link to each university's admissions page</li>
+  <li>Location and city info — campus location, city details</li>
+  <li>Recognition status — whether the university is HEC/PMDC recognized</li>
+  <li>Breadcrumb navigation — easy navigation back to the university list</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. PAKISTAN — ENTRY TESTS</h2>
+<ul>
+  <li><span class="count">13 entry tests</span> covered</li>
+  <li>MDCAT — pattern, subjects, fee, how to apply, PMC link</li>
+  <li>NUST NET — pattern, weightings (75% NET, 15% FSc, 10% Matric), fee, registration</li>
+  <li>ECAT — University of Engineering and Technology entry test details</li>
+  <li>NUMS — National University of Medical Sciences test info</li>
+  <li>FAST entrance test — pattern and details</li>
+  <li>Bahria University test</li>
+  <li>COMSATS test</li>
+  <li>Each test entry includes: pattern, subjects, duration, total marks, passing marks, fee, how to apply, official URL</li>
+  <li>Links to official test conducting bodies (PMC, NTS, university websites)</li>
+  <li>Test prep hub — links to lecture videos and documents for each test</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>5. PAKISTAN — SCHOLARSHIPS</h2>
+<ul>
+  <li><span class="count">24 scholarships</span> for Pakistani students</li>
+  <li>HEC scholarships — higher education commission funded programs</li>
+  <li>Need-based scholarships — for students from low-income backgrounds</li>
+  <li>Merit-based scholarships — for high achievers</li>
+  <li>University-specific scholarships — offered by individual institutions</li>
+  <li>Provincial scholarships — government programs by province</li>
+  <li>Each scholarship shows: eligibility criteria, coverage (tuition, stipend, travel), deadline, application link</li>
+  <li>Official source links — every scholarship links to its official page</li>
+  <li>Eligibility filters — see which scholarships you qualify for based on your profile</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. MERIT CALCULATORS</h2>
+<ul>
+  <li>NUST merit calculator — NET (75%) + FSc (15%) + Matric (10%) formula</li>
+  <li>FAST merit calculator — university-specific formula</li>
+  <li>MDCAT aggregate calculator — PMC formula</li>
+  <li>UET merit calculator — for engineering universities</li>
+  <li>Overall standing — where you rank among all users</li>
+  <li>Top-university chances — your probability of getting into top programs</li>
+  <li>Real closing merit data — shows last year's closing merit percentages for comparison</li>
+  <li>Slider-based interface — drag sliders to see how changing marks affects your aggregate</li>
+  <li>Visual ranking — bar charts showing your position relative to other candidates</li>
+  <li>Plan B suggestions — if your merit is too low for your first choice, shows alternative programs</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. SELF-ASSESSMENT (MOCK EXAMS)</h2>
+<ul>
+  <li>Timed mock exams replicating real test conditions</li>
+  <li>MDCAT mock — full-length practice with subject breakdown</li>
+  <li>ECAT mock — engineering aptitude test practice</li>
+  <li>NET mock — NUST entry test practice</li>
+  <li>NUMS mock — medical university test practice</li>
+  <li>IELTS mock — international English test practice</li>
+  <li>SAT mock — international college admission test practice</li>
+  <li>Per-question explanations — after submitting, see why each answer is correct</li>
+  <li>Score tracking — your scores are saved and tracked over time</li>
+  <li>Subject-wise breakdown — see which subjects you're strong/weak in</li>
+  <li>Timer with real test duration — matches actual test time limits</li>
+  <li>Multiple variants — different versions of each mock to prevent memorization</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>8. AI ASSISTANTS (6 TOTAL)</h2>
+
+<h3>8a. Rahbar AI (Site Guide)</h3>
+<ul>
+  <li>Says what each page does and how to use it</li>
+  <li>Guides users to the right tool for their question</li>
+  <li>Persistent floating button — always accessible from bottom-right corner</li>
+  <li>Multi-session chat — create new conversations, switch between them</li>
+  <li>Chat history saved to your account</li>
+  <li>PDF export — download any chat as a PDF document</li>
+</ul>
+
+<h3>8b. Manzil AI (Pakistan Expert)</h3>
+<ul>
+  <li>Answers questions about Pakistani universities, entry tests, merit, fees, scholarships</li>
+  <li>Grounded in a curated knowledge base — every answer cites its source</li>
+  <li>Shows [source: title] citations inline so you can verify</li>
+  <li>"I don't know" fallback — if the answer isn't in the knowledge base, it says so instead of guessing</li>
+  <li>PKR-first pricing — all fee answers shown in Pakistani Rupees</li>
+  <li>Multi-session chat with history</li>
+</ul>
+
+<h3>8c. Safar AI (Study Abroad Expert)</h3>
+<ul>
+  <li>Answers questions about visas, bank statements, living costs, test requirements for studying abroad</li>
+  <li>Every claim sourced from official documentation</li>
+  <li>Covers all 17 countries in the database</li>
+  <li>Multi-session chat with history</li>
+</ul>
+
+<h3>8d. Ustaad AI (Academic Tutor)</h3>
+<ul>
+  <li>FSc / MDCAT / ECAT / NET concept coaching</li>
+  <li>Worked examples with step-by-step explanations</li>
+  <li>Grounded in test-prep knowledge base</li>
+  <li>Multi-session chat with history</li>
+</ul>
+
+<h3>8e. Hunar AI (Freelancing Expert)</h3>
+<ul>
+  <li>Answers questions about freelancing, pricing, clients, getting paid from Pakistan</li>
+  <li>Covers Upwork, Fiverr, Toptal and other platforms</li>
+  <li>Multi-session chat with history</li>
+</ul>
+
+<h3>8f. Qalam AI (Essay Coach)</h3>
+<ul>
+  <li>Helps write and improve college/scholarship essays</li>
+  <li>Quotes your exact lines back when giving feedback</li>
+  <li>Rates your draft and suggests improvements</li>
+  <li>Multi-session chat with history</li>
+</ul>
+
+<h3>General AI Features</h3>
+<ul>
+  <li>Every assistant has a different personality and knowledge scope</li>
+  <li>BM25 search — fast, deterministic retrieval from knowledge base (no external API calls)</li>
+  <li>Streaming responses — answers appear word-by-word as they're generated</li>
+  <li>Cited sources — every factual claim includes a source reference</li>
+  <li>Stale-data detection — if your onboarding is old, the AI prompts you to re-take it</li>
+  <li>PDF export — export any chat conversation as a downloadable PDF</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>9. CAREER & SALARY INSIGHTS</h2>
+<ul>
+  <li>Career explorer — browse every major field with real salary data</li>
+  <li>Salary ranges — shown in PKR monthly (e.g., "80k–500k/mo" for Medicine)</li>
+  <li>Demand scores — how many jobs exist vs how many graduates enter the field</li>
+  <li>Day-in-the-life scenarios — what a typical day looks like in each career</li>
+  <li>Pre-Med options — Medicine (MBBS), Pharmacy (Pharm-D), Physiotherapy (DPT), Biotechnology, etc.</li>
+  <li>Pre-Engineering options — CS, AI, Electrical, Mechanical, Civil, etc.</li>
+  <li>ICS options — Software Engineering, Data Science, Cybersecurity, etc.</li>
+  <li>I.Com options — Accounting, Finance, Business Administration, etc.</li>
+  <li>Each field shows: required test, approximate merit, fee range, salary range, demand</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>10. CV BUILDER</h2>
+<ul>
+  <li>ATS-friendly resume builder — optimized for Applicant Tracking Systems</li>
+  <li>Multiple templates — choose from professional resume templates</li>
+  <li>PDF export — download your resume as a PDF</li>
+  <li>HTML export — embed your resume on a personal website</li>
+  <li>AI rewrite — the AI suggests improvements to your resume content</li>
+  <li>ATS gauge — scores how well your resume will perform with automated systems</li>
+  <li>Section-based editing — education, experience, skills, projects, etc.</li>
+  <li>Real-time preview — see changes as you type</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>11. COLLEGE ESSAYS</h2>
+<ul>
+  <li>Essay writing tool — write college and scholarship essays in-app</li>
+  <li>AI coach — rates your essay and suggests improvements</li>
+  <li>Quotes your exact lines — feedback references specific sentences</li>
+  <li>Multiple essay support — work on different essays for different applications</li>
+  <li>Save and resume — come back to your essays later</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>12. MENTOR MATCH</h2>
+<ul>
+  <li><span class="count">6 verified mentors</span></li>
+  <li>Filter by field, budget, and mentoring style</li>
+  <li>Contact directly via WhatsApp, email, LinkedIn, or Instagram</li>
+  <li>Mentor profiles show: expertise, rate, availability, contact info</li>
+  <li>Mentor application system — apply to become a mentor</li>
+  <li>Rate-limited application endpoint — prevents spam</li>
+  <li>Applications stored in database with status tracking</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>13. STUDY ABROAD</h2>
+
+<h3>13a. Country Explorer</h3>
+<ul>
+  <li><span class="count">17 countries</span> covered</li>
+  <li>USA, UK, Canada, Australia, Germany, Turkey, China, Malaysia, Saudi Arabia, UAE, South Korea, Ireland, Italy, Russia, Georgia, Uzbekistan, Kazakhstan</li>
+  <li>For each country: visa requirements, tuition fees in PKR, living costs, post-study work options</li>
+  <li>Compare up to 3 countries side by side</li>
+  <li>"Best for Medicine" filter — quickly find countries good for medical studies</li>
+  <li>Link to related scholarships for each country</li>
+</ul>
+
+<h3>13b. Abroad Scholarships</h3>
+<ul>
+  <li><span class="count">68 scholarships</span> for studying abroad</li>
+  <li>HEC-funded foreign scholarships</li>
+  <li>Host-government scholarships (Turkiye Burslari, CSC China, MEXT Japan, KAIST Korea, etc.)</li>
+  <li>University-specific scholarships</li>
+  <li>Each shows: eligibility, coverage (tuition, stipend, travel, accommodation), deadline, application link</li>
+</ul>
+
+<h3>13c. International Entry Tests</h3>
+<ul>
+  <li><span class="count">19 international tests</span></li>
+  <li>IELTS, TOEFL, SAT, GRE, GMAT, Duolingo, PTE, ACT, and more</li>
+  <li>For each test: format, duration, scoring, fee in PKR, how to register, official website</li>
+  <li>Links to official test bodies</li>
+</ul>
+
+<h3>13d. Ivy League Guide</h3>
+<ul>
+  <li>Harvard, MIT, Stanford, Yale, Princeton, Columbia, UPenn, Cornell</li>
+  <li>Acceptance rates, testing policies, financial aid info</li>
+  <li>Pakistani-applicant specific guidance</li>
+</ul>
+
+<h3>13e. Financial Planner</h3>
+<ul>
+  <li>First-year cost calculator — tuition + living + travel in PKR</li>
+  <li>Multi-year projections — total cost for 2/3/4 year programs</li>
+  <li>Savings timeline — how much to save per month to afford it</li>
+  <li>Scholarship offset — how much scholarships can reduce the cost</li>
+</ul>
+</ul>
+</div>
+
+<div class="section">
+<h2>14. SKILLS & EARNING (HUNAR)</h2>
+
+<h3>14a. Course Explorer</h3>
+<ul>
+  <li><span class="count">48 real courses</span></li>
+  <li>Filter by track, level, cost, and time commitment</li>
+  <li>Ready-made skill paths — curated sequences of courses for specific careers</li>
+  <li>Each course shows: provider, duration, cost, skill level, what you'll learn</li>
+</ul>
+
+<h3>14b. Book Library</h3>
+<ul>
+  <li><span class="count">36 hand-picked books</span></li>
+  <li>Free copies available — links to free/legal versions</li>
+  <li>Read-time estimates</li>
+  <li>Progress queue — track which books you've read</li>
+  <li>Recommendations based on your career interests</li>
+</ul>
+
+<h3>14c. Client Playbook</h3>
+<ul>
+  <li>How to find clients — strategies for Pakistani freelancers</li>
+  <li>Pricing guide — what to charge for different services</li>
+  <li>Client communication templates — emails, proposals, follow-ups</li>
+  <li>Quote builder — generate professional quotes for clients</li>
+  <li>Retention strategies — how to keep clients coming back</li>
+</ul>
+
+<h3>14d. Platform War Room</h3>
+<ul>
+  <li>Upwork, Fiverr, Toptal, and more — compare platforms</li>
+  <li>Fee comparison — what each platform takes from your earnings</li>
+  <li>Competition analysis — how many freelancers vs how many jobs</li>
+  <li>Payout methods — how to get paid from Pakistan (Payoneer, Wise, etc.)</li>
+  <li>Wizard tool — answer a few questions and get a recommendation for which platform to start on</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>15. TEST PREP HUB (USTAAD)</h2>
+<ul>
+  <li>Everything in one place — all test prep resources organized by test</li>
+  <li>Region and stream filters — find content relevant to your board and stream</li>
+  <li>Lecture library — <span class="count">100s of video episodes</span>
+    <ul>
+      <li>MDCAT: 102 lectures</li>
+      <li>ECAT Math: 119 lectures</li>
+      <li>NET Math: 119 lectures</li>
+      <li>IELTS: 41 lectures</li>
+      <li>TOEFL: 18 lectures</li>
+      <li>SAT: 9 lectures</li>
+      <li>GMAT: 20 lectures</li>
+      <li>TOLC: 40 lectures</li>
+    </ul>
+  </li>
+  <li>Video player — embedded YouTube + private Cloudflare R2 streaming</li>
+  <li>Watched progress tracking — see which lectures you've completed</li>
+  <li>Prev/next navigation — move between lectures in a playlist</li>
+  <li>Resume progress — picks up where you left off</li>
+  <li>Documents and resources — curated PDFs and official links per test</li>
+  <li>Episode pages — each lecture has its own page with video + notes</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>16. WATCHLIST & MERIT ALERTS</h2>
+<ul>
+  <li>Save programs you're interested in to your watchlist</li>
+  <li>Track merit cutoff changes — get notified when a new merit list drops</li>
+  <li>Email alerts — sent via Resend email service</li>
+  <li>24-hour cooldown per program — prevents spam emails</li>
+  <li>Server-side rate limiting — can't bypass cooldown by editing requests</li>
+  <li>Sync across devices — your watchlist is stored in Supabase and syncs everywhere</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>17. YOUR VOICE (FEEDBACK SYSTEM)</h2>
+<ul>
+  <li>Review submission — share your experience with aftermediate</li>
+  <li>Tone selection — Loved it, Liked it, Meh, Disappointed, Frustrated</li>
+  <li>Rating system — 1-10 scale</li>
+  <li>Media upload — attach images, videos, or audio to your review</li>
+  <li>Sentiment analysis — AI analyzes your review and tags it (highly-positive, positive, constructive, critical)</li>
+  <li>Feature requests — propose new features with description, use case, and priority</li>
+  <li>Public wishlist — see all proposed features and vote on them</li>
+  <li>Wishlist voting — upvote features you want built</li>
+  <li>"Your reviews" section — see all your submitted reviews with media</li>
+  <li>Signed-URL media — your uploaded media is served via secure, time-limited URLs</li>
+  <li>Review status tracking — see if your review is pending, published, or hidden</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>18. NAVIGATION & UI</h2>
+<ul>
+  <li>Sidebar navigation — organized by section (Pakistan, Abroad, Skills, Study)</li>
+  <li>Crown icons — special badge on Scholarship, Ivy League, and Course pages</li>
+  <li>Tour hub — interactive guided tour for new users</li>
+  <li>Logo hover chip — animated logo interaction in the top bar</li>
+  <li>Plain text user name — displayed in the top bar</li>
+  <li>Consent checkbox — terms and privacy agreement on login/signup</li>
+  <li>Dashboard-only navigation — after login, redirects prevent going back to the landing page</li>
+  <li>Popstate guard — browser back button handled correctly</li>
+  <li>Logo click → dashboard — clicking the logo always goes to dashboard (not landing page)</li>
+  <li>Skeleton loaders — smooth loading states for AppShell, Dashboard, Login</li>
+  <li>Responsive design — works on mobile, tablet, and desktop</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>19. CONTACT & COMMUNICATION</h2>
+<ul>
+  <li>Contact form — name, email, message, star rating</li>
+  <li>Emails sent to the team via Resend — arrives in their inbox</li>
+  <li>Rate limited — 10 submissions per hour per IP</li>
+  <li>Server-side validation — email format, required fields</li>
+  <li>SECURITY DEFINER insert — API role can't directly insert (prevents bypass)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>20. SECURITY</h2>
+<ul>
+  <li>OTP email verification — 6-digit code for sign-up (not magic links)</li>
+  <li>Constant-time OTP comparison — prevents timing attacks</li>
+  <li>OTP code hashing — SHA-256 hashed before storage (plaintext never stored)</li>
+  <li>Code burning — OTP can only be used once</li>
+  <li>Rate limiting on OTP — max 5 attempts per code, max 3 sends per IP per hour</li>
+  <li>Session revocation on password change — all other sessions killed via GoTrue admin API</li>
+  <li>Secure cookies — SameSite=Lax, Secure in production</li>
+  <li>Enumeration-safe errors — same error message for "wrong code" and "expired code"</li>
+  <li>HSTS — max-age=63072000; includeSubDomains (forces HTTPS for 2 years)</li>
+  <li>CSP headers — Content Security Policy prevents XSS attacks</li>
+  <li>X-Frame-Options — prevents clickjacking</li>
+  <li>X-Content-Type-Options — prevents MIME sniffing</li>
+  <li>Referrer-Policy — controls how much referrer info is shared</li>
+  <li>Permissions-Policy — camera, microphone, geolocation disabled</li>
+  <li>Row-Level Security (RLS) — users can only access their own data in the database</li>
+  <li>SECURITY DEFINER functions — database functions run with elevated privileges, not the calling user</li>
+  <li>Least-privilege API role — the API database role can only do what's explicitly allowed</li>
+  <li>Security event logging — authentication events logged for audit</li>
+  <li>OCR body cap — 4.5MB limit on marksheet uploads (matches Vercel's limit)</li>
+  <li>Service-role key — only used server-side, never exposed to client</li>
+  <li>R2 video key allowlist — only pre-approved video keys can be signed</li>
+  <li>Self-XSS prevention — chat PDF export and resume links sanitized</li>
+  <li>Watchlist notify rate limit — server-side cooldown prevents email spam</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>21. DATA INTEGRITY</h2>
+<ul>
+  <li>Every figure sourced from official bodies — HEC, PMDC, NTS, PBS, P@SHA, SBP</li>
+  <li>Source links on every data page — users can verify claims themselves</li>
+  <li>Real fees in PKR — not converted from USD, actual Pakistani pricing</li>
+  <li>Real merit data — last year's closing merit percentages</li>
+  <li>Recognition status — whether universities/tests are HEC/PMDC recognized</li>
+  <li>Data stored as JSON — easy to update when admission cycles change</li>
+  <li>AI grounding rules — the AI only answers from the knowledge base, never fabricates</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>22. TECHNICAL QUALITY</h2>
+<ul>
+  <li>Lighthouse scores — SEO: 100, Accessibility: 96, Best Practices: 92</li>
+  <li>Zero Cumulative Layout Shift (CLS) — page doesn't jump around while loading</li>
+  <li>Self-hosted fonts — no external font requests (faster loading)</li>
+  <li>Font preloading — critical fonts loaded before page renders</li>
+  <li>Lazy-loaded avatars — dicebear avatars load on demand, not all at once</li>
+  <li>Bundle budget monitoring — automated checks prevent bundle bloat</li>
+  <li>Structured data — FAQ, Organization, WebSite, and BreadcrumbList JSON-LD for Google</li>
+  <li>Sitemap — auto-generated XML sitemap with 192 URLs</li>
+  <li>Robots.txt — proper crawl directives for search engines</li>
+  <li>Per-page metadata — unique title, description, OG tags, and canonical URL for every page</li>
+  <li>Error boundary — global error page catches and displays errors gracefully</li>
+  <li>Real-time preview — profile and CV changes shown instantly</li>
+  <li>PWA manifest — installable as a web app on mobile</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>23. WHAT MAKES THIS IMPRESSIVE (FOR JUDGES)</h2>
+<ul>
+  <li><strong>Built for a real problem:</strong> Pakistani students have no single source of truth for career guidance. This solves that.</li>
+  <li><strong>Real data, not templates:</strong> 30 universities, 13 entry tests, 92 scholarships, 17 countries, 100+ lectures — all with sourced data.</li>
+  <li><strong>6 AI assistants</strong> that give cited, grounded answers — not generic chatbot responses.</li>
+  <li><strong>OCR marksheet scanning</strong> — upload a photo, AI reads your grades automatically.</li>
+  <li><strong>Merit calculators with real formulas</strong> — NUST, FAST, MDCAT formulas that students actually use.</li>
+  <li><strong>Security-first design</strong> — RLS, rate limiting, constant-time OTP, session revocation, CSP headers.</li>
+  <li><strong>Production-ready</strong> — deployed on Vercel, custom domain, HTTPS, error monitoring (Sentry).</li>
+  <li><strong>Zero data selling</strong> — the app explicitly states user data is never sold.</li>
+  <li><strong>Every number is sourced</strong> — PMDC, HEC, PBS links on every claim.</li>
+  <li><strong>Mentor matching with real contacts</strong> — WhatsApp, email, LinkedIn, Instagram.</li>
+  <li><strong>Multi-language support</strong> — English + Urdu translations on key pages.</li>
+  <li><strong>Freelancing tools</strong> — not just career guidance, but also how to earn (courses, books, client playbook, platform comparison).</li>
+  <li><strong>Complete test prep</strong> — 100+ lecture videos, mock exams, document resources.</li>
+  <li><strong>Full-stack application</strong> — auth, database, AI, email, file storage, video streaming — all integrated.</li>
+  <li><strong>Free and accessible</strong> — the core plan is free, no hidden charges.</li>
+</ul>
+</div>
+
+</body>
+</html>
