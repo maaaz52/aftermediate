@@ -4,7 +4,7 @@ import { LegalPage, LegalSection, LegalList } from "@/components/legal/legal-pag
 
 export const metadata: Metadata = pageMetadata({
   title: "Refund Policy",
-  description: "aftermediate's refund policy for paid services.",
+  description: "Aftermediate's refund policy for paid services.",
   path: "/refund-policy",
 });
 

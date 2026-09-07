@@ -22,7 +22,7 @@ import { FAQS } from "@/data/faq";
 import { pageMetadata } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "aftermediate — your post-FSc compass",
+  title: "Aftermediate — your post-FSc compass",
   description:
     "Compare universities, entry tests, merit aggregates, scholarships and study-abroad destinations for Pakistani FSc, ICS, I.Com and A-Level students — backed by data.",
   path: "/",
