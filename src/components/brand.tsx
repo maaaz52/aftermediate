@@ -16,7 +16,7 @@ export function Brand({
       <span className={cn("inline-flex select-none", className)}>
         <Image
           src="/logos/logo-mark.webp"
-          alt="aftermediate"
+          alt="Aftermediate"
           width={40}
           height={34}
           priority
@@ -30,7 +30,7 @@ export function Brand({
     <span className={cn("inline-flex select-none", className)}>
       <Image
         src="/logos/logo-full.webp"
-        alt="aftermediate"
+        alt="Aftermediate"
         width={180}
         height={34}
         priority

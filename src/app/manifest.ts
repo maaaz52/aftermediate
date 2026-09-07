@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "aftermediate — your post-FSc compass",
-    short_name: "aftermediate",
+    name: "Aftermediate — your post-FSc compass",
+    short_name: "Aftermediate",
     description:
       "AI-driven career counseling and university planning for Pakistani FSc, ICS, I.Com and A-Level students.",
     start_url: "/",

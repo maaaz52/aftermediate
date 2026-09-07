@@ -27,26 +27,26 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "aftermediate — your post-FSc compass",
-    template: "%s · aftermediate",
+    default: "Aftermediate — your post-FSc compass",
+    template: "%s · Aftermediate",
   },
   description:
     "AI-driven, hyper-localized career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
   alternates: { canonical: "/" },
   openGraph: {
-    siteName: "aftermediate",
+    siteName: "Aftermediate",
     type: "website",
     url: "/",
-    title: "aftermediate — your post-FSc compass",
+    title: "Aftermediate — your post-FSc compass",
     description:
       "AI-driven, hyper-localized career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
     images: [
-      { url: "/opengraph-image.png", width: 1200, height: 630, alt: "aftermediate" },
+      { url: "/opengraph-image.png", width: 1200, height: 630, alt: "Aftermediate" },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "aftermediate — your post-FSc compass",
+    title: "Aftermediate — your post-FSc compass",
     description:
       "Career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
     images: ["/opengraph-image.png"],
@@ -63,7 +63,7 @@ const orgJsonLd = {
     {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
-      name: "aftermediate",
+      name: "Aftermediate",
       url: SITE_URL,
       logo: absoluteUrl("/logos/logo-mark.png"),
     },
@@ -71,7 +71,7 @@ const orgJsonLd = {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: "aftermediate",
+      name: "Aftermediate",
       description:
         "AI-driven career counseling and university entry-roadmap platform for Pakistani FSc, ICS, I.Com and A-Level students.",
       publisher: { "@id": `${SITE_URL}/#organization` },

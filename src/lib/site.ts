@@ -49,13 +49,13 @@ export function pageMetadata(opts: {
     description: opts.description,
     alternates: { canonical: url },
     openGraph: {
-      siteName: "aftermediate",
+      siteName: "Aftermediate",
       type: "website",
       url,
       title: opts.title,
       description: opts.ogDescription ?? opts.description,
       images: [
-        { url: absoluteUrl("/opengraph-image.png"), width: 1200, height: 630, alt: "aftermediate" },
+        { url: absoluteUrl("/opengraph-image.png"), width: 1200, height: 630, alt: "Aftermediate" },
       ],
     },
   };
