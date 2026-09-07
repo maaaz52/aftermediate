@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
-import { ChevronDown, Compass, LogOut, X } from "lucide-react";
+import { ChevronDown, Compass, Crown, LogOut, X } from "lucide-react";
 import { groups } from "@/components/sidebar";
 import { useAuth } from "@/lib/auth";
 import { useTour } from "@/components/tour/tour-provider";
@@ -125,6 +125,12 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
                           >
                             <l.icon className="h-4 w-4 shrink-0" />
                             {l.label}
+                            {l.crown && (
+                              <Crown
+                                className="ml-auto h-3.5 w-3.5 shrink-0 fill-amber text-amber"
+                                aria-label="AI assistant"
+                              />
+                            )}
                           </Link>
                         );
                       })}
