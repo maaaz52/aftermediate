@@ -74,7 +74,7 @@ export function DashboardHero() {
                 type="button"
                 onClick={() => setShowDetails((v) => !v)}
                 aria-expanded={showDetails}
-                className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-2.5 py-1 text-[11px] font-medium text-muted transition-colors hover:bg-surface-2 hover:text-ink"
+                className="inline-flex items-center gap-1 rounded-full border border-line bg-surface px-2.5 py-2 text-[11px] font-medium text-muted transition-colors hover:bg-surface-2 hover:text-ink sm:py-1"
               >
                 Details
                 <ChevronDown className={cn("h-3 w-3 transition-transform", showDetails && "rotate-180")} />
@@ -87,7 +87,7 @@ export function DashboardHero() {
             </div>
           )}
         </div>
-        <Link href="/profile" className="shrink-0 text-xs font-medium text-saffron hover:underline">
+        <Link href="/profile" className="shrink-0 p-2 text-xs font-medium text-saffron hover:underline">
           Edit →
         </Link>
       </div>

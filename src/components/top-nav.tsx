@@ -60,7 +60,7 @@ export function TopNav() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "flex shrink-0 items-center gap-1 rounded-full px-3 py-1 text-xs font-medium transition-colors",
+                  "flex shrink-0 items-center gap-1.5 rounded-full px-3 py-2.5 text-xs font-medium transition-colors sm:py-1",
                   active
                     ? "bg-saffron/10 text-saffron"
                     : "text-muted hover:text-ink"

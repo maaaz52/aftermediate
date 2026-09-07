@@ -69,7 +69,7 @@ export function MeritDemo() {
 
   return (
     <div className="border-2 border-ink bg-surface shadow-[6px_6px_0_0_var(--color-ink)]">
-      <div className="flex border-b-2 border-ink">
+      <div className="flex overflow-x-auto border-b-2 border-ink">
         {INSTITUTES.map((i, idx) => (
           <button
             key={i.id}

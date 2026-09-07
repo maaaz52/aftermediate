@@ -80,7 +80,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <TourProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <Sidebar />
         <div className="flex min-h-screen flex-col">
           <TopNav />

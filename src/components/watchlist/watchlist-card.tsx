@@ -76,14 +76,14 @@ export function WatchlistCard({
             {changed && <NotificationBadge />}
             <button
               onClick={() => onToggleEmail(entry.id, !entry.notifyEmail)}
-              className="relative text-faint hover:text-ink transition-colors"
+              className="relative p-2 text-faint hover:text-ink transition-colors"
               aria-label={entry.notifyEmail ? "Disable email alerts" : "Enable email alerts"}
             >
               {entry.notifyEmail ? "\uD83D\uDD14" : "\uD83D\uDD15"}
             </button>
             <button
               onClick={() => onRemove(entry.id)}
-              className="text-faint hover:text-danger transition-colors"
+              className="p-2 text-faint hover:text-danger transition-colors"
               aria-label={`Remove ${entry.programName} from watchlist`}
             >
               {'\u2715'}
@@ -91,7 +91,7 @@ export function WatchlistCard({
           </div>
         </div>
 
-        <div className="flex items-baseline gap-3">
+        <div className="flex flex-wrap items-baseline gap-3">
           <div className="flex items-baseline gap-1.5">
             <span className="text-[11px] font-semibold uppercase tracking-widest text-faint">Closing</span>
             <span className="font-mono text-lg font-bold text-ink">

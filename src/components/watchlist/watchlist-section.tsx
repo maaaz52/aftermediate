@@ -163,7 +163,7 @@ export function WatchlistSection() {
 
   return (
     <div className="card-glass rounded-2xl p-5">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <p className="text-base font-bold text-ink">Merit Watchlist</p>
           {watchlist.length > 0 && (

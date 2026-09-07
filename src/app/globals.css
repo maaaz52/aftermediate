@@ -291,6 +291,10 @@ body {
     animation: none;
   }
   .animate-step-in { animation: none; }
+  .animate-reveal { animation: none; }
+  .animate-rise { animation: none; }
+  .marquee-track { animation: none; }
+  .animate-float { animation: none; }
 }
 
 /* Reality fan — 3D flippable card fan (cards.html animation) */

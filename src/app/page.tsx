@@ -109,7 +109,7 @@ export default function Home() {
 
             <div className="animate-rise" style={{ animationDelay: "120ms" }}>
               <div className="relative">
-                <div className="absolute -right-3 -top-3 z-10 animate-float">
+                <div className="absolute right-0 top-0 z-10 sm:-right-3 sm:-top-3 animate-float">
                   <div className="border-2 border-ink bg-emerald p-2 shadow-[3px_3px_0_0_var(--color-ink)]">
                     <Illustration name="rocket" scale={2} />
                   </div>
@@ -180,34 +180,34 @@ export default function Home() {
             </div>
 
             {/* 2x2 so each figure has room — a 4-up here squeezed them to 84px */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
-                <p className="text-[11px] uppercase tracking-widest text-faint">Youth unemployment</p>
+                <p className="text-xs uppercase tracking-widest text-faint sm:text-[11px]">Youth unemployment</p>
                 <p className="mt-2 font-mono text-2xl font-bold text-danger">
                   <CountUp value={12.6} decimals={1} suffix="%" />
                 </p>
-                <p className="mt-auto pt-2 font-mono text-[10px] text-danger">a degree alone isn&apos;t a plan</p>
+                <p className="mt-auto pt-2 font-mono text-[11px] text-danger sm:text-[10px]">a degree alone isn&apos;t a plan</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
-                <p className="text-[11px] uppercase tracking-widest text-faint">HEC scholarships</p>
+                <p className="text-xs uppercase tracking-widest text-faint sm:text-[11px]">HEC scholarships</p>
                 <p className="mt-2 font-mono text-2xl font-bold text-emerald">
                   <CountUp value={4000} suffix="+" />
                 </p>
-                <p className="mt-auto pt-2 font-mono text-[10px] text-faint">most students never apply</p>
+                <p className="mt-auto pt-2 font-mono text-[11px] text-faint sm:text-[10px]">most students never apply</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
-                <p className="text-[11px] uppercase tracking-widest text-faint">Avg monthly income</p>
+                <p className="text-xs uppercase tracking-widest text-faint sm:text-[11px]">Avg monthly income</p>
                 <p className="mt-2 font-mono text-2xl font-bold text-ink">
                   <CountUp prefix="Rs " value={39042} />
                 </p>
-                <p className="mt-auto pt-2 font-mono text-[10px] text-faint">field choice changes it</p>
+                <p className="mt-auto pt-2 font-mono text-[11px] text-faint sm:text-[10px]">field choice changes it</p>
               </div>
               <div className="flex min-w-0 flex-col border-2 border-ink bg-surface p-5 shadow-[4px_4px_0_0_var(--color-ink)]">
-                <p className="text-[11px] uppercase tracking-widest text-faint">MDCAT candidates</p>
+                <p className="text-xs uppercase tracking-widest text-faint sm:text-[11px]">MDCAT candidates</p>
                 <p className="mt-2 font-mono text-2xl font-bold text-ink">
                   <CountUp value={180} suffix="k" />
                 </p>
-                <p className="mt-auto pt-2 font-mono text-[10px] text-faint">you&apos;re competing with them</p>
+                <p className="mt-auto pt-2 font-mono text-[11px] text-faint sm:text-[10px]">you&apos;re competing with them</p>
               </div>
             </div>
           </div>

@@ -65,6 +65,10 @@ const features = [
 export function FeaturePanels() {
   const [hovered, setHovered] = useState<string | null>(null);
 
+  function toggle(id: string) {
+    setHovered((prev) => (prev === id ? null : id));
+  }
+
   return (
     <div className="flex w-full gap-2 sm:gap-3" style={{ height: "clamp(320px, 45vw, 520px)" }}>
       {features.map((f) => {
@@ -78,6 +82,7 @@ export function FeaturePanels() {
               isOpen ? "flex-[5_1_0%]" : "flex-[1_1_0%]"
             }`}
             style={{ minWidth: 0 }}
+            onClick={() => toggle(f.id)}
             onMouseEnter={() => setHovered(f.id)}
             onMouseLeave={() => setHovered(null)}
             onFocus={() => setHovered(f.id)}

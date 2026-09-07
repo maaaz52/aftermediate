@@ -26,7 +26,7 @@ export function StreamExplorer() {
             key={s.id}
             onClick={() => setStream(s.id)}
             className={cn(
-              "flex-1 min-w-[140px] border-r-2 border-ink px-4 py-3 text-left transition-colors last:border-r-0",
+              "flex-1 min-w-[100px] border-r-2 border-ink px-4 py-3 text-left transition-colors last:border-r-0 sm:min-w-[140px]",
               stream === s.id ? "bg-accent text-white" : "bg-surface text-muted hover:bg-surface-2 hover:text-ink"
             )}
           >

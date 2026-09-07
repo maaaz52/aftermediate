@@ -96,7 +96,7 @@ export function AbroadOverview() {
 
       {/* Demand cards */}
       {countries.length > 0 && (
-        <div className="mt-4 grid grid-cols-3 gap-2">
+        <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
           {countries.map((c) => (
             <div key={c.country} className="rounded-xl border border-line bg-surface-2/40 p-2.5 text-center">
               <div className="text-xl">{c.flag}</div>

@@ -116,7 +116,7 @@ export function DailySprint() {
             Do this first
           </span>
         )}
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-2 sm:gap-3">
           <div>
             <p className="text-base font-bold text-ink">⚡ Daily Sprint</p>
             <p className="text-xs text-muted">5 questions · 2 minutes</p>
@@ -248,7 +248,7 @@ export function DailySprint() {
               onClick={() => choose(i)}
               disabled={revealed}
               className={cn(
-                "rounded-xl border-2 border-ink bg-surface px-4 py-2.5 text-left text-sm font-medium text-ink transition-colors",
+                "rounded-xl border-2 border-ink bg-surface px-4 py-3 text-left text-sm font-medium text-ink transition-colors sm:py-2.5",
                 revealed && isCorrect && "border-emerald bg-emerald/15",
                 revealed && isChosen && !isCorrect && "border-danger bg-danger/15",
                 !revealed && "hover:bg-surface-2"

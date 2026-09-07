@@ -124,7 +124,7 @@ export function RahbarDrawer() {
           </div>
           <button
             onClick={() => setOpen(false)}
-            className="rounded-md p-1.5 text-muted hover:bg-surface-2 hover:text-ink"
+            className="rounded-md p-2.5 text-muted hover:bg-surface-2 hover:text-ink min-h-11 min-w-11 flex items-center justify-center"
           >
             <X className="h-4 w-4" />
           </button>
@@ -153,7 +153,7 @@ export function RahbarDrawer() {
                 <button
                   key={s}
                   onClick={() => send(s)}
-                  className="rounded-full border border-line bg-surface-2 px-3 py-1.5 text-xs text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+                  className="rounded-full border border-line bg-surface-2 px-3 py-2.5 text-xs text-muted transition-colors hover:border-saffron/40 hover:text-ink sm:py-1.5"
                 >
                   {s}
                 </button>

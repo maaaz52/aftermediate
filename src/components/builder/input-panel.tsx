@@ -95,7 +95,7 @@ export function InputPanel({
             aria-controls={`panel-${id}`}
             onClick={() => onTabChange(id)}
             className={cn(
-              "flex items-center justify-center gap-1.5 rounded-md px-1.5 py-2 text-xs font-semibold transition-colors",
+              "flex items-center justify-center gap-1.5 rounded-md px-1.5 py-3 text-xs font-semibold transition-colors sm:py-2",
               activeTab === id
                 ? "border border-saffron bg-saffron/10 text-ink"
                 : "border border-transparent text-muted hover:text-ink"

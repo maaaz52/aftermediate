@@ -47,7 +47,7 @@ function HeatmapCell({
       }}
     >
       {/* Hover tooltip */}
-      <span className="pointer-events-none absolute -top-8 left-1/2 z-20 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2 py-1 text-[10px] font-medium text-white shadow-lg group-hover:block">
+      <span className="pointer-events-none absolute -top-8 left-1/2 z-20 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2 py-1 text-[10px] font-medium text-white shadow-lg group-hover:block group-focus:block">
         {chapter.name}
       </span>
     </button>
@@ -73,7 +73,7 @@ function DetailPanel({
           <p className="text-sm font-bold text-ink">{chapter.name}</p>
           <p className="text-xs text-muted">{section.name}</p>
         </div>
-        <button onClick={onClose} className="text-sm text-faint hover:text-ink">✕</button>
+        <button onClick={onClose} className="p-2 text-sm text-faint hover:text-ink min-h-11 min-w-11 flex items-center justify-center -mr-2">✕</button>
       </div>
 
       <div className="mt-3 flex items-center gap-3">
@@ -197,7 +197,7 @@ export function EntryTestHeatmap() {
   return (
     <div className="card-glass rounded-2xl p-5">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-faint">Entry-test heatmap</span>
         {/* Legend */}
         <div className="flex items-center gap-3">
@@ -217,7 +217,7 @@ export function EntryTestHeatmap() {
       </div>
 
       {/* Test selector tabs */}
-      <div className="mt-3 flex gap-1.5">
+      <div className="mt-3 flex gap-1.5 overflow-x-auto">
         {allTests.map((t) => (
           <button
             key={t.id}
