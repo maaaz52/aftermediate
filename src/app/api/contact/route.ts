@@ -31,12 +31,10 @@ export async function POST(req: Request) {
     const name = typeof body.name === "string" ? body.name.trim() : "";
     const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
     const message = typeof body.message === "string" ? body.message.trim() : "";
-    const rating = typeof body.rating === "number" ? Math.round(body.rating) : null;
 
     if (!name || name.length > 100) return jsonError("Enter your name.", 400);
     if (!EMAIL_RE.test(email) || email.length > 200) return jsonError("Enter a valid email address.", 400);
     if (!message || message.length > 5000) return jsonError("Enter a message.", 400);
-    if (rating !== null && (rating < 1 || rating > 5)) return jsonError("Rating must be 1-5.", 400);
 
     const subjectName = name.slice(0, 40).replace(/[\r\n\t]/g, " ").trim() || "someone";
     const sent = await sendEmail({
@@ -49,7 +47,6 @@ export async function POST(req: Request) {
           <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;font-size:14px;">
             <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Name</td><td style="font-weight:bold;">${escapeHtml(name)}</td></tr>
             <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Email</td><td>${escapeHtml(email)}</td></tr>
-            ${rating !== null ? `<tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Rating</td><td>${rating}/5</td></tr>` : ""}
           </table>
           <div style="border:2px solid #191f2c;padding:16px;background:#f4f2eb;font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(message)}</div>
           <p style="color:#8a93a6;font-size:12px;margin-top:16px;">Reply to: ${escapeHtml(email)}</p>

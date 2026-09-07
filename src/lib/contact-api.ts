@@ -2,7 +2,6 @@ export async function submitContactMessage(input: {
   name: string;
   email: string;
   message: string;
-  rating: number | null;
 }): Promise<{ ok: true } | { ok: false; error: string }> {
   try {
     const res = await fetch("/api/contact", {

@@ -10,7 +10,6 @@ export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [rating, setRating] = useState<number | null>(null);
 
   if (submitted) {
     return (
@@ -22,7 +21,6 @@ export function ContactForm() {
             setName("");
             setEmail("");
             setMessage("");
-            setRating(null);
           }}
           className="mt-4 font-mono text-sm text-accent underline"
         >
@@ -38,7 +36,7 @@ export function ContactForm() {
         e.preventDefault();
         setBusy(true);
         setError(null);
-        const res = await submitContactMessage({ name, email, message, rating });
+        const res = await submitContactMessage({ name, email, message });
         setBusy(false);
         if (!res.ok) {
           setError(res.error);
@@ -83,24 +81,6 @@ export function ContactForm() {
           placeholder="Your feedback or question..."
           className="w-full resize-none border-2 border-ink bg-background px-4 py-2.5 text-sm text-ink outline-none placeholder:text-faint focus:border-accent"
         />
-      </div>
-      <div>
-        <label className="mb-1 block font-mono text-xs uppercase tracking-widest text-faint">Rate your experience</label>
-        <div className="flex gap-1">
-          {[1, 2, 3, 4, 5].map((star) => (
-            <label key={star} className="cursor-pointer text-2xl text-faint transition-colors hover:text-amber checked:text-amber">
-              <input
-                type="radio"
-                name="rating"
-                value={star}
-                checked={rating === star}
-                onChange={() => setRating(star)}
-                className="sr-only"
-              />
-              ★
-            </label>
-          ))}
-        </div>
       </div>
       {error && (
         <p role="alert" className="rounded border border-red-500/40 bg-red-500/10 px-3 py-2 text-sm text-red-300">
