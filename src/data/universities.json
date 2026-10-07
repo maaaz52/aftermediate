@@ -8,8 +8,8 @@
     "category": "engineering",
     "streams": ["pre-engineering", "ics"],
     "programs": [
-      { "name": "BS Computer Science (SEECS)", "closingMerit": 82, "year": "2025" },
-      { "name": "BE Electrical", "closingMerit": 77, "year": "2024" },
+      { "name": "BS Computer Science (SEECS)", "closingMerit": 84, "year": "2025" },
+      { "name": "BE Electrical", "closingMerit": 79, "year": "2024" },
       { "name": "BE Mechanical (SMME)", "closingMerit": 74, "year": "2024" },
       { "name": "BE Civil (SCEE)", "closingMerit": 72, "year": "2024" }
     ],
@@ -34,8 +34,8 @@
     "category": "computing",
     "streams": ["pre-engineering", "ics"],
     "programs": [
-      { "name": "BS Computer Science (Islamabad)", "closingMerit": 75, "year": "2024" },
-      { "name": "BS CS (Lahore)", "closingMerit": 73, "year": "2024" },
+      { "name": "BS Computer Science (Islamabad)", "closingMerit": 77, "year": "2024" },
+      { "name": "BS CS (Lahore)", "closingMerit": 75, "year": "2024" },
       { "name": "BS Software Engineering", "closingMerit": 72, "year": "2024" },
       { "name": "BE Electrical", "closingMerit": 68, "year": "2024" }
     ],
