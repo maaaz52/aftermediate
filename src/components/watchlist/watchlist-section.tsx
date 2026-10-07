@@ -40,6 +40,21 @@ export function WatchlistSection() {
   const [syncing, setSyncing] = React.useState(false);
   const [showSearch, setShowSearch] = React.useState(false);
 
+  const syncToServer = React.useCallback(async (updated: WatchlistEntry[]) => {
+    setSyncing(true);
+    try {
+      await fetch("/api/watchlist/sync", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ watchlist: updated }),
+      });
+    } catch {
+      // sync failure is non-blocking
+    } finally {
+      setSyncing(false);
+    }
+  }, []);
+
   const doCheck = React.useCallback(async () => {
     const current = watchlistRef.current;
     if (current.length === 0) return;
@@ -61,9 +76,15 @@ export function WatchlistSection() {
       });
       storeUpdate({ watchlist: updated });
 
-      for (const entry of current) {
-        const result = map.get(entry.id);
-        if (result?.meritChanged && entry.notifyEmail) {
+      // notify reads the entry from the server, so push first — otherwise a
+      // watchlist that only exists in localStorage 404s and the change is
+      // burned by the lastKnownMerit bump above.
+      const toNotify = current.filter((e) => map.get(e.id)?.meritChanged && e.notifyEmail);
+      if (toNotify.length > 0) {
+        await syncToServer(current);
+        for (const entry of toNotify) {
+          const result = map.get(entry.id);
+          if (!result) continue;
           fetch("/api/watchlist/notify", {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -91,7 +112,7 @@ export function WatchlistSection() {
     } catch {
       // check failure is non-blocking
     }
-  }, [storeUpdate]);
+  }, [storeUpdate, syncToServer]);
 
   React.useEffect(() => {
     const timer = setTimeout(() => doCheck(), 1000);
@@ -101,21 +122,6 @@ export function WatchlistSection() {
       clearInterval(id);
     };
   }, [doCheck]);
-
-  const syncToServer = React.useCallback(async (updated: WatchlistEntry[]) => {
-    setSyncing(true);
-    try {
-      await fetch("/api/watchlist/sync", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ watchlist: updated }),
-      });
-    } catch {
-      // sync failure is non-blocking
-    } finally {
-      setSyncing(false);
-    }
-  }, []);
 
   const handleAdd = React.useCallback((added: WatchlistEntry) => {
     const current = watchlistRef.current;
