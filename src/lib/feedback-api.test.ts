@@ -1,7 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import {
   listFeatureRequests,
+  listReplies,
   submitFeatureRequest,
+  submitReply,
   submitReview,
   toggleVote,
 } from "./feedback-api";
@@ -11,10 +13,11 @@ const s = vi.hoisted(() => ({
   user: null as null | { id: "u1" },
   reviewResult: { error: null as null | { message: string }, data: null as null | { id: "r1" } },
   voteRow: null as null | { id: "v1" },
-  requestRow: { votes_count: 7 },
+  requestRow: { votes_count: 7 } as Record<string, unknown> & { votes_count?: number },
   uploadError: null as null | { message: string },
   insertError: null as null | { message: string },
   requestRows: [] as Record<string, unknown>[],
+  replyRows: [] as Record<string, unknown>[],
   chain: [] as string[],
   lastInsert: null as unknown,
   lastEq: null as [string, unknown] | null,
@@ -68,7 +71,7 @@ vi.mock("@/lib/supabase/client", () => ({
         }),
         order: vi.fn(async () => {
           s.chain.push("order");
-          return { data: s.requestRows, error: null };
+          return { data: table === "feature_replies" ? s.replyRows : s.requestRows, error: null };
         }),
       };
       return q;
@@ -84,6 +87,7 @@ beforeEach(() => {
   s.uploadError = null;
   s.insertError = null;
   s.requestRows = [{ id: "f1", name: "Dark mode", votes_count: 4, status: "open" }];
+  s.replyRows = [];
   s.lastInsert = null;
   s.lastEq = null;
   s.reviewInsertError = null;
@@ -204,9 +208,63 @@ describe("listFeatureRequests", () => {
 });
 
 describe("submitFeatureRequest", () => {
-  it("inserts a feature request", async () => {
-    const r = await submitFeatureRequest({ name: "Dark mode", description: "", useCase: "", priority: "p1" });
+  const input = { name: "Dark mode", authorName: "Hira Ahmed", description: "", useCase: "", priority: "p1" as const };
+
+  it("inserts the suggestion with its author name", async () => {
+    const r = await submitFeatureRequest(input);
     expect(r.ok).toBe(true);
     expect(s.chain).toContain("from:feature_requests");
+    expect(s.lastInsert).toMatchObject({ author_name: "Hira Ahmed" });
+  });
+
+  it("rejects a blank author name before touching the database", async () => {
+    const r = await submitFeatureRequest({ ...input, authorName: "   " });
+    expect(r.ok).toBe(false);
+    if (!r.ok) expect(r.error).toMatch(/name/i);
+    expect(s.chain).not.toContain("insert");
+  });
+});
+
+describe("listReplies", () => {
+  it("reads every reply in one ordered query", async () => {
+    s.replyRows = [{ id: "r1", feature_id: "f1", author_name: "Ali", body: "ship it" }];
+    const rows = await listReplies();
+    expect(s.chain).toContain("from:feature_replies");
+    expect(rows).toHaveLength(1);
+    expect(rows[0].author_name).toBe("Ali");
+  });
+});
+
+describe("submitReply", () => {
+  it("inserts the reply with the author name and feature id", async () => {
+    s.requestRow = { id: "r1", feature_id: "f1", author_name: "Ali", body: "ship it" };
+    const r = await submitReply({ featureId: "f1", body: "  ship it  ", authorName: "  Ali  " });
+    expect(r.ok).toBe(true);
+    expect(s.chain).toContain("from:feature_replies");
+    expect(s.lastInsert).toEqual({
+      feature_id: "f1",
+      user_id: "u1",
+      author_name: "Ali",
+      body: "ship it",
+    });
+  });
+
+  it("rejects a blank name without hitting the database", async () => {
+    const r = await submitReply({ featureId: "f1", body: "hi", authorName: "" });
+    expect(r.ok).toBe(false);
+    expect(s.chain).not.toContain("insert");
+  });
+
+  it("rejects an empty body without hitting the database", async () => {
+    const r = await submitReply({ featureId: "f1", body: "   ", authorName: "Ali" });
+    expect(r.ok).toBe(false);
+    expect(s.chain).not.toContain("insert");
+  });
+
+  it("rejects when signed out", async () => {
+    s.user = null;
+    const r = await submitReply({ featureId: "f1", body: "hi", authorName: "Ali" });
+    expect(r.ok).toBe(false);
+    expect(s.chain).not.toContain("insert");
   });
 });

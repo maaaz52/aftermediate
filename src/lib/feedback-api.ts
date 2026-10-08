@@ -16,6 +16,7 @@ export type FeatureRequest = {
   id: string;
   user_id: string;
   name: string;
+  author_name: string;
   description: string;
   use_case: string;
   priority: PriorityId;
@@ -23,6 +24,21 @@ export type FeatureRequest = {
   votes_count: number;
   created_at: string;
 };
+
+export type FeatureReply = {
+  id: string;
+  feature_id: string;
+  user_id: string;
+  author_name: string;
+  body: string;
+  created_at: string;
+};
+
+/** A suggestion or reply is never anonymous — blank names are rejected here and in the DB. */
+function cleanName(name: string): string | null {
+  const trimmed = name.trim().slice(0, 80);
+  return trimmed ? trimmed : null;
+}
 
 function extensionFor(kind: MediaKind, name: string): string {
   const ext = name.split(".").pop() ?? "";
@@ -111,10 +127,14 @@ export async function listFeatureRequests(status: "all" | "open" | "planning" | 
 
 export async function submitFeatureRequest(input: {
   name: string;
+  authorName: string;
   description: string;
   useCase: string;
   priority: PriorityId;
 }): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
+  const authorName = cleanName(input.authorName);
+  if (!authorName) return { ok: false, error: "Add your name so your suggestion isn't anonymous." };
+
   const supabase = createClient();
   const {
     data: { user },
@@ -126,6 +146,7 @@ export async function submitFeatureRequest(input: {
     .insert({
       user_id: user.id,
       name: input.name,
+      author_name: authorName,
       description: input.description,
       use_case: input.useCase,
       priority: input.priority,
@@ -135,6 +156,47 @@ export async function submitFeatureRequest(input: {
 
   if (error || !data) return { ok: false, error: error?.message ?? "Could not save your idea." };
   return { ok: true, id: data.id };
+}
+
+/** Every reply on the wall, oldest first. One query — the wall groups them by feature. */
+export async function listReplies(): Promise<FeatureReply[]> {
+  const supabase = createClient();
+  const { data } = await supabase
+    .from("feature_replies")
+    .select("*")
+    .order("created_at", { ascending: true });
+  return (data ?? []) as FeatureReply[];
+}
+
+export async function submitReply(input: {
+  featureId: string;
+  body: string;
+  authorName: string;
+}): Promise<{ ok: true; reply: FeatureReply } | { ok: false; error: string }> {
+  const authorName = cleanName(input.authorName);
+  if (!authorName) return { ok: false, error: "Add your name so your reply isn't anonymous." };
+  const body = input.body.trim().slice(0, 2000);
+  if (!body) return { ok: false, error: "Write a reply first." };
+
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return { ok: false, error: "You must be signed in to reply." };
+
+  const { data, error } = await supabase
+    .from("feature_replies")
+    .insert({
+      feature_id: input.featureId,
+      user_id: user.id,
+      author_name: authorName,
+      body,
+    })
+    .select("*")
+    .single();
+
+  if (error || !data) return { ok: false, error: error?.message ?? "Could not save your reply." };
+  return { ok: true, reply: data as FeatureReply };
 }
 
 export interface MyReview {

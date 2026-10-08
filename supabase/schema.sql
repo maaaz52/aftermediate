@@ -135,6 +135,7 @@ create table if not exists public.feature_requests (
   id uuid primary key default gen_random_uuid(),
   user_id uuid references auth.users(id) on delete cascade,
   name text not null,
+  author_name text not null,
   description text default '',
   use_case text default '',
   priority text not null default 'p1' check (priority in ('p0','p1','p2')),
@@ -142,6 +143,41 @@ create table if not exists public.feature_requests (
   votes_count integer not null default 0,
   created_at timestamptz default now()
 );
+
+-- Migration: every suggestion carries a visible author name. Rows that predate
+-- the column get backfilled from their profile before it is made mandatory.
+alter table public.feature_requests add column if not exists author_name text;
+update public.feature_requests fr
+   set author_name = coalesce(nullif(btrim(p.name), ''), 'A student')
+  from public.profiles p
+ where p.id = fr.user_id and fr.author_name is null;
+update public.feature_requests set author_name = 'A student' where author_name is null;
+alter table public.feature_requests alter column author_name set not null;
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint where conname = 'feature_requests_author_name_blank'
+  ) then
+    alter table public.feature_requests
+      add constraint feature_requests_author_name_blank check (btrim(author_name) <> '');
+  end if;
+end $$;
+
+create table if not exists public.feature_replies (
+  id uuid primary key default gen_random_uuid(),
+  feature_id uuid references public.feature_requests(id) on delete cascade,
+  user_id uuid references auth.users(id) on delete cascade,
+  author_name text not null,
+  body text not null,
+  created_at timestamptz default now(),
+  check (btrim(author_name) <> ''),
+  check (char_length(author_name) <= 80),
+  check (btrim(body) <> ''),
+  check (char_length(body) <= 2000)
+);
+
+create index if not exists feature_replies_feature_id_idx
+  on public.feature_replies (feature_id, created_at);
 
 create table if not exists public.feature_votes (
   id uuid primary key default gen_random_uuid(),
@@ -172,6 +208,7 @@ alter table public.reviews enable row level security;
 alter table public.review_media enable row level security;
 alter table public.feature_requests enable row level security;
 alter table public.feature_votes enable row level security;
+alter table public.feature_replies enable row level security;
 
 create policy "reviews_select" on public.reviews for select using (auth.uid() = user_id or status = 'published');
 create policy "reviews_insert_own" on public.reviews for insert with check (auth.uid() = user_id and status = 'pending');
@@ -196,6 +233,9 @@ create policy "feature_requests_update_own" on public.feature_requests for updat
 create policy "feature_votes_select_own" on public.feature_votes for select using (auth.uid() = user_id);
 create policy "feature_votes_insert_own" on public.feature_votes for insert with check (auth.uid() = user_id);
 create policy "feature_votes_delete_own" on public.feature_votes for delete using (auth.uid() = user_id);
+
+create policy "feature_replies_select" on public.feature_replies for select using (auth.role() = 'authenticated');
+create policy "feature_replies_insert_own" on public.feature_replies for insert with check (auth.uid() = user_id);
 
 -- users may update only their own rows' editable columns — never server-controlled ones
 revoke update on public.reviews from anon, authenticated;

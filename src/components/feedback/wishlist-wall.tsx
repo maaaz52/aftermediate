@@ -1,10 +1,23 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { ArrowUp, Loader2 } from "lucide-react";
-import { listFeatureRequests, toggleVote, type FeatureRequest } from "@/lib/feedback-api";
+import { ArrowUp, Loader2, MessageSquare } from "lucide-react";
+import {
+  listFeatureRequests,
+  listReplies,
+  toggleVote,
+  type FeatureReply,
+  type FeatureRequest,
+} from "@/lib/feedback-api";
+import { ReplyThread } from "./reply-thread";
 
 type Filter = "all" | "open" | "planning" | "shipped";
+
+function groupReplies(all: FeatureReply[]): Record<string, FeatureReply[]> {
+  const out: Record<string, FeatureReply[]> = {};
+  for (const r of all) (out[r.feature_id] ??= []).push(r);
+  return out;
+}
 
 const FILTERS: { id: Filter; label: string }[] = [
   { id: "all", label: "All" },
@@ -22,6 +35,8 @@ const PRIORITY_STYLES: Record<string, string> = {
 export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
   const [filter, setFilter] = useState<Filter>("all");
   const [rows, setRows] = useState<FeatureRequest[]>([]);
+  const [replies, setReplies] = useState<Record<string, FeatureReply[]>>({});
+  const [openThread, setOpenThread] = useState<string | null>(null);
   const [voted, setVoted] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
 
@@ -29,8 +44,9 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
     // No synchronous setState here — react-hooks/set-state-in-effect only
     // allows updates after an await. Initial state is already loading=true,
     // so the mount spinner is unaffected.
-    const data = await listFeatureRequests(filter);
+    const [data, allReplies] = await Promise.all([listFeatureRequests(filter), listReplies()]);
     setRows(data);
+    setReplies(groupReplies(allReplies));
     setLoading(false);
   }, [filter]);
 
@@ -118,8 +134,34 @@ export function WishlistWall({ refreshKey = 0 }: { refreshKey?: number }) {
                     </span>
                   )}
                 </div>
+                <p className="mt-1 text-xs text-faint">
+                  Suggested by <span className="font-semibold text-muted">{row.author_name}</span>
+                </p>
                 {row.description && <p className="mt-1 text-sm text-muted">{row.description}</p>}
                 {row.use_case && <p className="mt-1 text-xs text-faint">Why: {row.use_case}</p>}
+                <button
+                  type="button"
+                  aria-expanded={openThread === row.id}
+                  onClick={() => setOpenThread(openThread === row.id ? null : row.id)}
+                  className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-faint transition-colors hover:text-ink"
+                >
+                  <MessageSquare className="h-3.5 w-3.5" aria-hidden />
+                  {(replies[row.id] ?? []).length === 0
+                    ? "Reply"
+                    : `${(replies[row.id] ?? []).length} ${(replies[row.id] ?? []).length === 1 ? "reply" : "replies"}`}
+                </button>
+                {openThread === row.id && (
+                  <ReplyThread
+                    featureId={row.id}
+                    replies={replies[row.id] ?? []}
+                    onPosted={(reply) =>
+                      setReplies((prev) => ({
+                        ...prev,
+                        [row.id]: [...(prev[row.id] ?? []), reply],
+                      }))
+                    }
+                  />
+                )}
               </div>
             </li>
           ))}

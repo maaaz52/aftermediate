@@ -4,9 +4,12 @@ import { useState } from "react";
 import { Lightbulb, Send } from "lucide-react";
 import { PRIORITIES, type PriorityId } from "@/lib/feedback-model";
 import { submitFeatureRequest } from "@/lib/feedback-api";
+import { useStudent } from "@/lib/store";
 
 export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
+  const { profile } = useStudent();
   const [name, setName] = useState("");
+  const [authorName, setAuthorName] = useState(() => profile.name.trim());
   const [description, setDescription] = useState("");
   const [useCase, setUseCase] = useState("");
   const [priority, setPriority] = useState<PriorityId>("p1");
@@ -15,11 +18,12 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
   const [error, setError] = useState<string | null>(null);
 
   const submit = async () => {
-    if (!name.trim() || busy) return;
+    if (!name.trim() || !authorName.trim() || busy) return;
     setBusy(true);
     setError(null);
     const res = await submitFeatureRequest({
       name: name.trim(),
+      authorName: authorName.trim(),
       description: description.trim(),
       useCase: useCase.trim(),
       priority,
@@ -51,13 +55,28 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
         <Lightbulb className="h-4 w-4 text-amber" aria-hidden />
         Optional — have an idea for what we should build next?
       </p>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        aria-label="Feature name"
-        placeholder="Feature name — e.g. past-paper practice mode"
-        className="w-full rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
-      />
+      <div className="grid gap-3 sm:grid-cols-2">
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          aria-label="Feature name"
+          placeholder="Feature name — e.g. past-paper practice mode"
+          className="w-full rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
+        />
+        <input
+          value={authorName}
+          onChange={(e) => setAuthorName(e.target.value)}
+          aria-label="Your name"
+          required
+          placeholder="Your name — shown with your suggestion"
+          className="w-full rounded-lg border border-line bg-background px-3 py-2 text-sm text-ink placeholder:text-faint focus:border-saffron/60 focus:outline-none"
+        />
+      </div>
+      {!authorName.trim() && (
+        <p className="text-xs text-faint">
+          Your name is required — every suggestion is shown with the person who made it.
+        </p>
+      )}
       <div className="grid gap-3 sm:grid-cols-2">
         <textarea
           value={description}
@@ -101,7 +120,7 @@ export function WishlistStep({ onSubmitted }: { onSubmitted?: () => void }) {
         <button
           type="button"
           onClick={submit}
-          disabled={!name.trim() || busy}
+          disabled={!name.trim() || !authorName.trim() || busy}
           className="ml-auto inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-soft disabled:opacity-40"
         >
           <Send className="h-4 w-4" aria-hidden />

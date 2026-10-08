@@ -1,22 +1,38 @@
 // @vitest-environment jsdom
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom/vitest";
-import { listFeatureRequests, toggleVote } from "@/lib/feedback-api";
+import { listFeatureRequests, listReplies, toggleVote } from "@/lib/feedback-api";
 
 vi.mock("@/lib/feedback-api", () => ({
   listFeatureRequests: vi.fn(),
+  listReplies: vi.fn(),
   toggleVote: vi.fn(),
   submitFeatureRequest: vi.fn(),
+  submitReply: vi.fn(),
 }));
 
 const rows = [
-  { id: "f1", user_id: "u1", name: "Dark mode", description: "Save my eyes at night", use_case: "Study after 11pm", priority: "p1", status: "open", votes_count: 4, created_at: "2026-08-01" },
-  { id: "f2", user_id: "u2", name: "PDF export", description: "Download plans", use_case: "Print for parents", priority: "p0", status: "planning", votes_count: 9, created_at: "2026-08-02" },
+  { id: "f1", user_id: "u1", name: "Dark mode", author_name: "Hira Ahmed", description: "Save my eyes at night", use_case: "Study after 11pm", priority: "p1", status: "open", votes_count: 4, created_at: "2026-08-01" },
+  { id: "f2", user_id: "u2", name: "PDF export", author_name: "Ali Raza", description: "Download plans", use_case: "Print for parents", priority: "p0", status: "planning", votes_count: 9, created_at: "2026-08-02" },
 ] as const;
 
+beforeEach(() => {
+  vi.mocked(listReplies).mockResolvedValue([]);
+});
+
 import { WishlistWall } from "./wishlist-wall";
+
+vi.mock("@/lib/store", () => ({
+  useStudent: () => ({
+    profile: { name: "Hira Ahmed" },
+    update: vi.fn(),
+    reset: vi.fn(),
+    hydrated: true,
+    hydrate: vi.fn(),
+  }),
+}));
 
 describe("WishlistWall", () => {
   afterEach(() => {
@@ -62,5 +78,21 @@ describe("WishlistWall", () => {
     await user.click(button);
     await waitFor(() => expect(screen.getByText("9")).toBeInTheDocument());
     expect(button).toHaveAttribute("aria-pressed", "false");
+  });
+
+  it("shows the author name with every suggestion", async () => {
+    vi.mocked(listFeatureRequests).mockResolvedValue([...rows] as never);
+    render(<WishlistWall />);
+    expect(await screen.findByText("Hira Ahmed")).toBeInTheDocument();
+    expect(screen.getByText("Ali Raza")).toBeInTheDocument();
+  });
+
+  it("opens a reply thread from the Reply button", async () => {
+    vi.mocked(listFeatureRequests).mockResolvedValue([rows[0]] as never);
+    const user = userEvent.setup();
+    render(<WishlistWall />);
+    await screen.findByText("Dark mode");
+    await user.click(screen.getByRole("button", { name: /^reply$/i }));
+    expect(screen.getByLabelText("Your reply")).toBeInTheDocument();
   });
 });
