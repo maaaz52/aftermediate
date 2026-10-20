@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 type Mode = "signin" | "signup";
 
 const inputClass =
-  "mt-1.5 h-12 w-full border-2 border-ink bg-surface px-3.5 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
+  "mt-1 h-10 w-full border-2 border-ink bg-surface px-3 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
 
 function Field({
   label,
@@ -63,7 +63,7 @@ function PasswordField({
           </button>
         ) : null}
       </div>
-      <div className="relative mt-1.5">
+      <div className="relative mt-1">
         <input
           type={show ? "text" : "password"}
           required
@@ -178,7 +178,7 @@ export default function LoginPage() {
 
   return (
     <div className="grid-bg relative flex min-h-screen flex-col">
-      <header className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
+      <header className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
         <Link href="/"><Brand /></Link>
         <Link
           href="/"
@@ -188,7 +188,7 @@ export default function LoginPage() {
         </Link>
       </header>
 
-      <main className="mx-auto flex w-full max-w-6xl flex-1 items-center justify-center px-4 pb-24 sm:px-6">
+      <main className="mx-auto flex w-full max-w-6xl flex-1 items-center justify-center overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
         <div className="relative w-full max-w-sm">
           <div className="absolute -top-9 -left-4 z-10 hidden animate-float sm:block">
             <div className="border-2 border-ink bg-emerald p-2 shadow-[3px_3px_0_0_var(--color-ink)]">
@@ -201,27 +201,27 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <PixelCard className="relative p-6 sm:p-7" shadow="ink">
-            <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface-2 px-3 py-1.5 font-mono text-[11px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
+          <PixelCard className="relative p-4 sm:p-5" shadow="ink">
+            <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface-2 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
               <span className="h-2 w-2 animate-pulse bg-accent" />
               {mode === "signin" ? "// welcome back" : "// start free"}
             </span>
 
-            <h1 className="mt-5 font-display text-2xl leading-[1.1] tracking-tight text-ink sm:text-3xl">
+            <h1 className="mt-3 font-display text-2xl leading-[1.1] tracking-tight text-ink">
               {mode === "signin" ? "Welcome back." : "Make your plan."}
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
+            <p className="mt-2 text-sm leading-snug text-muted">
               {mode === "signin"
                 ? "Your roadmap is waiting. Log in and pick up where you left off."
                 : "Free forever for students. Build your post-FSc roadmap in minutes."}
             </p>
 
-            <div className="mt-7 grid grid-cols-2 border-2 border-ink bg-surface-2 p-1 shadow-[3px_3px_0_0_var(--color-ink)]">
+            <div className="mt-4 grid grid-cols-2 border-2 border-ink bg-surface-2 p-1 shadow-[3px_3px_0_0_var(--color-ink)]">
               <button
                 type="button"
                 onClick={() => switchMode("signin")}
                 className={cn(
-                  "py-2.5 font-sans text-sm font-semibold transition-all",
+                  "py-2 font-sans text-sm font-semibold transition-all",
                   mode === "signin" ? "bg-accent text-white" : "text-muted hover:text-ink"
                 )}
               >
@@ -231,7 +231,7 @@ export default function LoginPage() {
                 type="button"
                 onClick={() => switchMode("signup")}
                 className={cn(
-                  "py-2.5 font-sans text-sm font-semibold transition-all",
+                  "py-2 font-sans text-sm font-semibold transition-all",
                   mode === "signup" ? "bg-accent text-white" : "text-muted hover:text-ink"
                 )}
               >
@@ -239,7 +239,7 @@ export default function LoginPage() {
               </button>
             </div>
 
-            <form onSubmit={submit} className="mt-6 space-y-5">
+            <form onSubmit={submit} className="mt-4 space-y-3">
               {mode === "signup" && (
                 <>
                   <Field
@@ -284,7 +284,7 @@ export default function LoginPage() {
               {message && (
                 <div
                   className={cn(
-                    "border-2 px-4 py-3",
+                    "border-2 px-3 py-2",
                     message.type === "err" ? "border-danger bg-danger/5" : "border-emerald bg-emerald/5"
                   )}
                 >
@@ -314,13 +314,13 @@ export default function LoginPage() {
                 </span>
               </label>
 
-              <PixelButton type="submit" size="lg" className="w-full" disabled={busy}>
+              <PixelButton type="submit" className="w-full" disabled={busy}>
                 {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
                 {mode === "signin" ? "Login" : "Create account"}
               </PixelButton>
             </form>
 
-            <div className="my-6 flex items-center gap-3">
+            <div className="my-4 flex items-center gap-3">
               <div className="h-[2px] flex-1 bg-line" />
               <span className="font-mono text-[11px] uppercase tracking-widest text-faint">or</span>
               <div className="h-[2px] flex-1 bg-line" />
@@ -332,7 +332,7 @@ export default function LoginPage() {
               onError={(error) => setMessage({ type: "err", text: error })}
             />
             {googleBusy && (
-              <div className="mt-3 flex items-center justify-center gap-2">
+              <div className="mt-2 flex items-center justify-center gap-2">
                 <Loader2 className="h-4 w-4 animate-spin text-accent" />
                 <span className="font-mono text-xs text-muted">connecting…</span>
               </div>
@@ -341,13 +341,13 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => switchMode(mode === "signin" ? "signup" : "signin")}
-              className="mt-6 block w-full text-center font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
+              className="mt-4 block w-full text-center font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
             >
               {mode === "signin" ? "no account? sign up →" : "have an account? login →"}
             </button>
           </PixelCard>
 
-          <p className="mt-8 text-center font-mono text-[11px] uppercase tracking-widest text-faint">
+          <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-widest text-faint">
             no spam, ever · your roadmap stays yours
           </p>
         </div>
