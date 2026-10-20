@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 type Mode = "signin" | "signup";
 
 const inputClass =
-  "mt-1 h-10 w-full border-2 border-ink bg-surface px-3 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
+  "mt-0.5 h-9 w-full border-2 border-ink bg-surface px-3 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
 
 function Field({
   label,
@@ -25,7 +25,7 @@ function Field({
 }: React.InputHTMLAttributes<HTMLInputElement> & { label: string }) {
   return (
     <div>
-      <label className="font-mono text-[11px] uppercase tracking-widest text-muted">
+      <label className="font-mono text-[10px] uppercase tracking-widest text-muted">
         {label}
       </label>
       <input {...props} className={cn(inputClass, className)} />
@@ -52,18 +52,18 @@ function PasswordField({
   return (
     <div>
       <div className="flex items-center justify-between">
-        <span className="font-mono text-[11px] uppercase tracking-widest text-muted">{label}</span>
+        <span className="font-mono text-[10px] uppercase tracking-widest text-muted">{label}</span>
         {hintHref ? (
-          <Link href={hintHref} className="font-mono text-[11px] text-faint transition-colors hover:text-accent">
+          <Link href={hintHref} className="font-mono text-[10px] text-faint transition-colors hover:text-accent">
             forgot?
           </Link>
         ) : hint ? (
-          <button type="button" className="font-mono text-[11px] text-faint transition-colors hover:text-accent">
+          <button type="button" className="font-mono text-[10px] text-faint transition-colors hover:text-accent">
             {hint}
           </button>
         ) : null}
       </div>
-      <div className="relative mt-1">
+      <div className="relative mt-0.5">
         <input
           type={show ? "text" : "password"}
           required
@@ -178,7 +178,7 @@ export default function LoginPage() {
 
   return (
     <div className="grid-bg relative flex min-h-screen flex-col">
-      <header className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6">
+      <header className="mx-auto flex h-12 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/"><Brand /></Link>
         <Link
           href="/"
@@ -188,7 +188,7 @@ export default function LoginPage() {
         </Link>
       </header>
 
-      <main className="mx-auto flex w-full max-w-6xl flex-1 items-center justify-center overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
+      <main className="mx-auto flex w-full max-w-6xl flex-1 items-center justify-center overflow-y-auto px-4 py-2 sm:px-6 sm:py-3">
         <div className="relative w-full max-w-sm">
           <div className="absolute -top-9 -left-4 z-10 hidden animate-float sm:block">
             <div className="border-2 border-ink bg-emerald p-2 shadow-[3px_3px_0_0_var(--color-ink)]">
@@ -201,27 +201,22 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <PixelCard className="relative p-4 sm:p-5" shadow="ink">
-            <span className="inline-flex items-center gap-2 border-2 border-ink bg-surface-2 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-muted shadow-[3px_3px_0_0_var(--color-ink)]">
-              <span className="h-2 w-2 animate-pulse bg-accent" />
-              {mode === "signin" ? "// welcome back" : "// start free"}
-            </span>
-
-            <h1 className="mt-3 font-display text-2xl leading-[1.1] tracking-tight text-ink">
+          <PixelCard className="relative p-3 sm:p-4" shadow="ink">
+            <h1 className="font-display text-xl leading-[1.1] tracking-tight text-ink sm:text-2xl">
               {mode === "signin" ? "Welcome back." : "Make your plan."}
             </h1>
-            <p className="mt-2 text-sm leading-snug text-muted">
+            <p className="mt-1 text-xs leading-snug text-muted">
               {mode === "signin"
                 ? "Your roadmap is waiting. Log in and pick up where you left off."
                 : "Free forever for students. Build your post-FSc roadmap in minutes."}
             </p>
 
-            <div className="mt-4 grid grid-cols-2 border-2 border-ink bg-surface-2 p-1 shadow-[3px_3px_0_0_var(--color-ink)]">
+            <div className="mt-3 grid grid-cols-2 border-2 border-ink bg-surface-2 p-1 shadow-[3px_3px_0_0_var(--color-ink)]">
               <button
                 type="button"
                 onClick={() => switchMode("signin")}
                 className={cn(
-                  "py-2 font-sans text-sm font-semibold transition-all",
+                  "py-1.5 font-sans text-sm font-semibold transition-all",
                   mode === "signin" ? "bg-accent text-white" : "text-muted hover:text-ink"
                 )}
               >
@@ -231,7 +226,7 @@ export default function LoginPage() {
                 type="button"
                 onClick={() => switchMode("signup")}
                 className={cn(
-                  "py-2 font-sans text-sm font-semibold transition-all",
+                  "py-1.5 font-sans text-sm font-semibold transition-all",
                   mode === "signup" ? "bg-accent text-white" : "text-muted hover:text-ink"
                 )}
               >
@@ -239,7 +234,7 @@ export default function LoginPage() {
               </button>
             </div>
 
-            <form onSubmit={submit} className="mt-4 space-y-3">
+            <form onSubmit={submit} className="mt-3 space-y-2.5">
               {mode === "signup" && (
                 <>
                   <Field
@@ -284,7 +279,7 @@ export default function LoginPage() {
               {message && (
                 <div
                   className={cn(
-                    "border-2 px-3 py-2",
+                    "border-2 px-3 py-1.5",
                     message.type === "err" ? "border-danger bg-danger/5" : "border-emerald bg-emerald/5"
                   )}
                 >
@@ -295,14 +290,14 @@ export default function LoginPage() {
                 </div>
               )}
 
-              <label className="flex items-start gap-3">
+              <label className="flex items-start gap-2">
                 <input
                   type="checkbox"
                   checked={agreed}
                   onChange={(e) => setAgreed(e.target.checked)}
                   className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-accent"
                 />
-                <span className="text-xs leading-relaxed text-muted">
+                <span className="text-[11px] leading-snug text-muted">
                   I agree to the{" "}
                   <Link href="/terms" className="font-medium text-accent underline underline-offset-2 hover:text-ink">
                     Terms &amp; Conditions
@@ -314,13 +309,13 @@ export default function LoginPage() {
                 </span>
               </label>
 
-              <PixelButton type="submit" className="w-full" disabled={busy}>
+              <PixelButton type="submit" className="h-10 w-full" disabled={busy}>
                 {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
                 {mode === "signin" ? "Login" : "Create account"}
               </PixelButton>
             </form>
 
-            <div className="my-4 flex items-center gap-3">
+            <div className="my-3 flex items-center gap-3">
               <div className="h-[2px] flex-1 bg-line" />
               <span className="font-mono text-[11px] uppercase tracking-widest text-faint">or</span>
               <div className="h-[2px] flex-1 bg-line" />
@@ -341,15 +336,12 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => switchMode(mode === "signin" ? "signup" : "signin")}
-              className="mt-4 block w-full text-center font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
+              className="mt-3 block w-full text-center font-mono text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
             >
               {mode === "signin" ? "no account? sign up →" : "have an account? login →"}
             </button>
           </PixelCard>
 
-          <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-widest text-faint">
-            no spam, ever · your roadmap stays yours
-          </p>
         </div>
       </main>
     </div>
