@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Download, History, Send } from "lucide-react";
+import { Download, History, PanelLeft, Send } from "lucide-react";
 import { MessageContent } from "@/components/message-content";
 import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import { SessionSidebar } from "@/components/chat/session-sidebar";
@@ -115,7 +115,20 @@ export function PersistentChatAssistant({ persona, label, greeting, suggestions,
   return (
     <section className="chat-workspace">
       <header className="chat-workspace-header">
-        <h1 className="chat-workspace-title">{label}</h1>
+        {user ? (
+          <button
+            type="button"
+            onClick={() => setSidebarOpen(true)}
+            className="chat-workspace-title-button"
+            aria-label={`Open ${label} chat history`}
+            title="Open chat history"
+          >
+            <PanelLeft className="h-4 w-4" aria-hidden="true" />
+            <span className="chat-workspace-title">{label}</span>
+          </button>
+        ) : (
+          <h1 className="chat-workspace-title">{label}</h1>
+        )}
         {user && <div className="flex items-center gap-1">
           {messages.length > 1 && <button type="button" onClick={() => exportChatAsPDF(messages, activeSession?.title ?? `${label} chat`, label)} className="chat-header-button" title="Save as PDF" aria-label="Save chat as PDF"><Download className="h-4 w-4" /></button>}
           <button type="button" onClick={() => setSidebarOpen(true)} className="chat-header-button" title="Chat history" aria-label="Open chat history"><History className="h-4 w-4" /></button>

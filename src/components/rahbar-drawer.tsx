@@ -94,12 +94,12 @@ export function RahbarDrawer() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Open Rahbar AI"
-          className="group fixed bottom-5 right-5 z-40 flex items-center gap-2.5 rounded-full border border-saffron/30 bg-surface py-3 pl-4 pr-5 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+          className="group fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-saffron/30 bg-surface p-0 shadow-lg transition-[width,transform,box-shadow,padding] duration-300 ease-out hover:w-48 hover:-translate-y-0.5 hover:justify-start hover:px-2.5 hover:shadow-xl focus-visible:w-48 focus-visible:justify-start focus-visible:px-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron"
         >
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-saffron/15">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-saffron/15">
             <Sparkles className="h-5 w-5 text-saffron transition-transform group-hover:rotate-12" />
           </span>
-          <span className="text-left">
+          <span className="max-w-0 overflow-hidden whitespace-nowrap text-left opacity-0 transition-[max-width,opacity] duration-200 ease-out group-hover:max-w-28 group-hover:opacity-100 group-focus-visible:max-w-28 group-focus-visible:opacity-100">
             <span className="block text-sm font-bold text-ink">Rahbar A.I</span>
             <span className="block text-[11px] text-muted">Ask about the site</span>
           </span>
