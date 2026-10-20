@@ -47,9 +47,16 @@ export function GoogleSignInButton({
   onError?: (error: string) => void;
 }) {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const onCredentialRef = React.useRef(onCredential);
+  const onErrorRef = React.useRef(onError);
   const [scriptLoaded, setScriptLoaded] = React.useState(
     () => typeof window !== "undefined" && Boolean(window.google?.accounts?.id)
   );
+
+  React.useEffect(() => {
+    onCredentialRef.current = onCredential;
+    onErrorRef.current = onError;
+  }, [onCredential, onError]);
 
   React.useEffect(() => {
     if (typeof window === "undefined") return;
@@ -58,7 +65,7 @@ export function GoogleSignInButton({
     const existing = document.querySelector<HTMLScriptElement>('script[data-aftermediate-google-sign-in]');
     const script = existing ?? document.createElement("script");
     const loaded = () => setScriptLoaded(true);
-    const failed = () => onError?.("Could not load Google sign-in.");
+    const failed = () => onErrorRef.current?.("Could not load Google sign-in.");
     script.addEventListener("load", loaded);
     script.addEventListener("error", failed);
     if (!existing) {
@@ -73,7 +80,7 @@ export function GoogleSignInButton({
       script.removeEventListener("load", loaded);
       script.removeEventListener("error", failed);
     };
-  }, [onError]);
+  }, []);
 
   React.useEffect(() => {
     if (!scriptLoaded || !window.google?.accounts?.id || !containerRef.current) return;
@@ -81,17 +88,20 @@ export function GoogleSignInButton({
     window.google.accounts.id.initialize({
       client_id: clientId,
       callback: ({ credential }) => {
-        if (credential) onCredential(credential);
+        if (credential) onCredentialRef.current(credential);
       },
     });
 
+    // Google's renderer appends an iframe. Clear a stale iframe before a
+    // genuine reconfiguration so form state changes can never grow the card.
+    containerRef.current.replaceChildren();
     window.google.accounts.id.renderButton(containerRef.current, {
       theme: "outline",
       size: "large",
       text: "continue_with",
       width: "100%",
     });
-  }, [scriptLoaded, clientId, onCredential]);
+  }, [scriptLoaded, clientId]);
 
   return <div ref={containerRef} className="min-h-[44px] w-full" />;
 }

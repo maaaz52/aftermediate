@@ -140,7 +140,7 @@ export default function LoginPage() {
     setBusy(false);
   }
 
-  async function handleGoogleCredential(idToken: string) {
+  const handleGoogleCredential = React.useCallback(async (idToken: string) => {
     setGoogleBusy(true);
     setMessage(null);
     if (!agreed) {
@@ -155,7 +155,11 @@ export default function LoginPage() {
       return;
     }
     router.push("/onboard");
-  }
+  }, [agreed, router, signInGoogle]);
+
+  const handleGoogleError = React.useCallback((error: string) => {
+    setMessage({ type: "err", text: error });
+  }, []);
 
   function switchMode(m: Mode) {
     setMode(m);
@@ -324,7 +328,7 @@ export default function LoginPage() {
             <GoogleSignInButton
               clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}
               onCredential={handleGoogleCredential}
-              onError={(error) => setMessage({ type: "err", text: error })}
+              onError={handleGoogleError}
             />
             {googleBusy && (
               <div className="mt-2 flex items-center justify-center gap-2">
