@@ -10,12 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { QuizSectionView } from "@/components/quiz/quiz-section";
 import { MarksheetStep } from "@/components/quiz/marksheet-step";
 import { useStudent } from "@/lib/store";
-import {
-  QUIZ_SECTIONS,
-  firstIncompleteSection,
-  isQuizComplete,
-  setAnswer,
-} from "@/lib/quiz";
+import { QUIZ_SECTIONS, firstIncompleteSection, setAnswer } from "@/lib/quiz";
 
 export default function OnboardPage() {
   const router = useRouter();
@@ -24,11 +19,12 @@ export default function OnboardPage() {
   const [step, setStep] = React.useState(0);
   const started = React.useRef(false);
 
-  // Open at the earliest unfinished section; never trust a stale saved index.
-  // If the quiz is already complete (returning user), skip onboarding entirely.
+  // The saved completion timestamp is the first-run gate. It lets a student
+  // finish intentionally after skipping optional answers without being asked
+  // to repeat the quiz on every later sign-in.
   React.useEffect(() => {
     if (!hydrated) return;
-    if (isQuizComplete(profile)) {
+    if (profile.quizCompletedAt) {
       router.replace("/dashboard");
       return;
     }

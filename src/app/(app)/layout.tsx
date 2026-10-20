@@ -10,6 +10,7 @@ import { TourHub } from "@/components/tour/tour-hub";
 import { TourPrompt } from "@/components/tour/tour-prompt";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/lib/auth";
+import { useStudent } from "@/lib/store";
 
 function AppShellSkeleton() {
   return (
@@ -54,13 +55,20 @@ function AppShellSkeleton() {
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
+  const { profile, hydrated } = useStudent();
   const router = useRouter();
 
   React.useEffect(() => {
     if (!loading && !user) router.replace("/login");
   }, [loading, user, router]);
 
-  if (loading || !user) {
+  React.useEffect(() => {
+    if (!loading && user && hydrated && !profile.quizCompletedAt) {
+      router.replace("/onboard");
+    }
+  }, [hydrated, loading, profile.quizCompletedAt, router, user]);
+
+  if (loading || !user || !hydrated || !profile.quizCompletedAt) {
     return <AppShellSkeleton />;
   }
 

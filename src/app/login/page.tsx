@@ -109,8 +109,10 @@ export default function LoginPage() {
   });
 
   React.useEffect(() => {
-    if (user) router.push(mode === "signup" ? "/onboard" : "/dashboard");
-  }, [user, router, mode]);
+    // /onboard sends returning students straight to the dashboard after it
+    // confirms their quiz is complete, but guarantees a new account sees it.
+    if (user) router.replace("/onboard");
+  }, [user, router]);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -124,7 +126,7 @@ export default function LoginPage() {
     if (mode === "signin") {
       const r = await signInEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
-      else router.push("/dashboard");
+      else router.replace("/onboard");
     } else {
       if (password !== confirm) {
         setMessage({ type: "err", text: "Passwords don't match. Double-check and try again." });
