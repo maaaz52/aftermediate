@@ -38,7 +38,7 @@ function HeatmapCell({
       type="button"
       onClick={onClick}
       title={`${chapter.name} — ${section.name}`}
-      className="group relative h-9 w-full rounded-md transition-all hover:scale-110 hover:shadow-md sm:h-10"
+      className="group relative flex min-h-14 w-full items-center justify-center rounded-md px-1 py-1 text-center text-[9px] font-semibold leading-tight text-white transition-all hover:scale-[1.03] hover:shadow-md"
       style={{
         backgroundColor: color,
         opacity,
@@ -46,6 +46,7 @@ function HeatmapCell({
         outlineOffset: "2px",
       }}
     >
+      <span className="line-clamp-3">{chapter.name}</span>
       {/* Hover tooltip */}
       <span className="pointer-events-none absolute -top-8 left-1/2 z-20 hidden -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2 py-1 text-[10px] font-medium text-white shadow-lg group-hover:block group-focus:block">
         {chapter.name}
@@ -211,7 +212,7 @@ export function EntryTestHeatmap() {
         {heatmap.sections.map((section) => (
           <div key={section.id}>
             <p className="mb-1.5 text-[11px] font-semibold text-muted">{section.name}</p>
-            <div className="grid gap-1.5" style={{ gridTemplateColumns: `repeat(${Math.min(section.chapters.length, 12)}, minmax(0, 1fr))` }}>
+            <div className="grid gap-1.5" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(7rem, 1fr))" }}>
               {section.chapters.map((chapter) => (
                 <HeatmapCell
                   key={chapter.id}
