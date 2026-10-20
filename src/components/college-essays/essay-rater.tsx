@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { ClipboardPaste, Send, Sparkles, Wand2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ClipboardPaste, Send, Wand2 } from "lucide-react";
 import { MessageContent } from "@/components/message-content";
 import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import { analyzeDraft } from "@/lib/college-essays";
@@ -139,18 +138,12 @@ export function EssayRater() {
       </div>
 
       <div className="lg:col-span-3">
-        <div className="flex h-[560px] flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-sm">
-          <div className="flex-1 space-y-4 overflow-y-auto px-4 py-5">
+        <div className="chat-workspace min-h-[560px] border-l border-[#ececec]">
+          <header className="chat-workspace-header"><h2 className="chat-workspace-title">Qalam A.I</h2></header>
+          <div className="chat-transcript"><div className="chat-transcript-inner !px-4 !py-5">
             {messages.map((m, i) => (
-              <div key={i} className={cn("flex", m.role === "user" ? "justify-end" : "justify-start")}>
-                <div
-                  className={cn(
-                    "max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed",
-                    m.role === "user"
-                      ? "whitespace-pre-wrap bg-violet text-background"
-                      : "bg-surface-2 text-ink"
-                  )}
-                >
+              <div key={i} className={`chat-message-row chat-message-row-${m.role}`}>
+                <div className={`chat-message chat-message-${m.role}`}>
                   {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
                   {!m.content && streaming && <ChatThinkingIndicator className="text-violet" />}
                 </div>
@@ -158,14 +151,13 @@ export function EssayRater() {
             ))}
 
             {messages.length <= 1 && (
-              <div className="flex flex-wrap gap-2 pt-2">
+            <div className="chat-suggestions">
                 {SUGGESTIONS.map((s) => (
                   <button
                     key={s}
                     onClick={() => send(s)}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface-2 px-3.5 py-2 text-sm text-muted transition-colors hover:border-violet/40 hover:text-ink"
+                  className="chat-suggestion"
                   >
-                    <Sparkles className="h-3.5 w-3.5 text-violet" />
                     {s}
                   </button>
                 ))}
@@ -173,28 +165,27 @@ export function EssayRater() {
             )}
 
             <div ref={bottomRef} />
-          </div>
+          </div></div>
 
-          <div className="border-t border-line p-3">
-            <div className="flex items-center gap-2">
+          <form className="chat-composer-wrap !px-4 !pb-4" onSubmit={(event) => { event.preventDefault(); void send(); }}>
+            <div className="chat-composer">
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && send()}
                 placeholder="Paste your essay or ask about a section…"
                 aria-label="Chat message"
-                className="h-11 flex-1 rounded-lg border border-line bg-surface-2 px-3.5 text-sm text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-violet/50"
+                className="chat-composer-input"
               />
               <button
-                onClick={() => send()}
+                type="submit"
                 disabled={streaming || !input.trim()}
                 aria-label="Send message"
-                className="grid h-11 w-11 place-items-center rounded-lg bg-violet text-background disabled:opacity-50"
+                className="chat-send-button"
               >
                 <Send className="h-4 w-4" />
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
