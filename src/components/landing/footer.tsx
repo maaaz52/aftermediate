@@ -29,7 +29,7 @@ const cols = [
 export function SiteFooter() {
   return (
     <footer className="border-t-2 border-ink bg-surface-2">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-3 sm:px-6">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4 sm:px-6">
         <div className="space-y-4">
           <Brand />
           <p className="max-w-xs text-sm leading-relaxed text-muted">
@@ -58,6 +58,19 @@ export function SiteFooter() {
             </ul>
           </div>
         ))}
+
+        <div>
+          <h3 className="font-sans text-sm font-bold text-ink">Contact</h3>
+          <address className="mt-4 space-y-2.5 text-sm not-italic text-muted">
+            <p>Waliyan Plaza, Mardan, Pakistan</p>
+            <a
+              href="tel:+923400990163"
+              className="inline-block transition-colors hover:text-accent"
+            >
+              03400990163
+            </a>
+          </address>
+        </div>
       </div>
 
       <div className="border-t border-line">
