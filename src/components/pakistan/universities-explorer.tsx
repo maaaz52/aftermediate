@@ -43,7 +43,7 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+        "min-h-9 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
         active
           ? "border-saffron/40 bg-saffron/10 text-saffron"
           : "border-line bg-surface text-muted hover:text-ink"
@@ -126,7 +126,7 @@ function UniversityCard({ u, compare, onToggleCompare }: { u: PakistanUniversity
         aria-pressed={compare}
         onClick={onToggleCompare}
         className={cn(
-          "inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+          "inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
           compare ? "border-saffron/40 bg-saffron/10 text-saffron" : "border-line text-muted hover:text-ink"
         )}
       >

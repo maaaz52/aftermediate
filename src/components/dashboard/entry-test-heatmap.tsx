@@ -32,6 +32,7 @@ function HeatmapCell({
   const color = TIER_COLORS[chapter.tier];
   // Map probability (0–1) to opacity (0.35–1)
   const opacity = 0.35 + Math.min(chapter.probability, 1) * 0.65;
+  const backgroundColor = `${color}${Math.round(opacity * 255).toString(16).padStart(2, "0")}`;
 
   return (
     <button
@@ -40,8 +41,8 @@ function HeatmapCell({
       title={`${chapter.name} — ${section.name}`}
       className="group relative flex min-h-14 w-full items-center justify-center rounded-md px-1 py-1 text-center text-[9px] font-semibold leading-tight text-white transition-all hover:scale-[1.03] hover:shadow-md"
       style={{
-        backgroundColor: color,
-        opacity,
+        backgroundColor,
+        color: opacity < 0.62 ? "var(--color-ink)" : "#ffffff",
         outline: isSelected ? "2px solid var(--color-ink)" : "none",
         outlineOffset: "2px",
       }}

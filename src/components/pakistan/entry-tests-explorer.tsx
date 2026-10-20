@@ -54,7 +54,7 @@ export function EntryTestsExplorer() {
             onClick={() => setStream(f.value)}
             aria-pressed={stream === f.value}
             className={cn(
-              "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+              "min-h-9 rounded-full border px-3 py-1 text-xs font-medium transition-colors",
               stream === f.value
                 ? "border-saffron/40 bg-saffron/10 text-saffron"
                 : "border-line bg-surface text-muted hover:text-ink"

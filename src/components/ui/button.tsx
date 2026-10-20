@@ -8,7 +8,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-saffron text-background hover:bg-saffron-soft shadow-[0_0_24px_-6px_rgba(245,185,66,0.6)]",
+          "bg-saffron text-background hover:bg-saffron-soft shadow-[0_0_24px_-6px_rgba(47,85,212,0.35)]",
         secondary:
           "bg-surface-2 text-ink border border-line hover:bg-line/60",
         outline:
@@ -19,10 +19,10 @@ const buttonVariants = cva(
         link: "text-saffron underline-offset-4 hover:underline",
       },
       size: {
-        default: "h-10 px-5 py-2",
-        sm: "h-10 sm:h-8 rounded-md px-3 text-xs",
+        default: "h-11 px-5 py-2",
+        sm: "h-10 rounded-md px-3 text-xs",
         lg: "h-12 rounded-xl px-7 text-base",
-        icon: "h-10 w-10",
+        icon: "h-11 w-11",
       },
     },
     defaultVariants: {
