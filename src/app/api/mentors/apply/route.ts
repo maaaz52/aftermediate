@@ -3,6 +3,8 @@ import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { sendEmail } from "@/lib/email";
+import { escapeHtml } from "@/lib/escape-html";
 
 export const runtime = "nodejs";
 
@@ -11,6 +13,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /** Per-IP cap so a scripted client cannot bury the mentor-review queue. */
 const IP_APPLY_MAX = 5;
 const IP_WINDOW_MS = 60 * 60 * 1000;
+const NOTIFY_TO = "themz52@proton.me";
 
 /**
  * Receives a mentor application, stores it in mentor_applications. The anon
@@ -80,6 +83,31 @@ export async function POST(req: Request) {
       console.error("mentor apply: insert error", error.message);
       return jsonError("Could not save your application.", 500);
     }
+
+    // The application is already saved, so a temporary email-provider outage
+    // must never make the applicant think their submission was lost.
+    const subjectName = name.slice(0, 40).replace(/[\r\n\t]/g, " ").trim() || "someone";
+    const notification = await sendEmail({
+      from: "Aftermediate Mentors <no-reply@aftermediate.site>",
+      to: NOTIFY_TO,
+      subject: `New mentor application from ${subjectName}`,
+      html: `
+        <div style="font-family:Plus Jakarta Sans,system-ui,sans-serif;max-width:560px;margin:0 auto;">
+          <p style="color:#566073;font-size:15px;line-height:1.6;">A new mentor application is waiting for review.</p>
+          <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;font-size:14px;">
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Name</td><td style="font-weight:bold;">${escapeHtml(name)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Email</td><td>${escapeHtml(email)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Institution</td><td>${escapeHtml(institution)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Degree</td><td>${escapeHtml(degree)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Field</td><td>${escapeHtml(field)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Topics</td><td>${escapeHtml(topics)}</td></tr>
+            <tr><td style="padding:4px 12px 4px 0;color:#8a93a6;">Profile</td><td><a href="${escapeHtml(socialLink)}">${escapeHtml(socialLink)}</a></td></tr>
+          </table>
+          <div style="border:2px solid #191f2c;padding:16px;background:#f4f2eb;font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(bio)}</div>
+        </div>
+      `,
+    });
+    if (!notification.ok) console.error("mentor application notification failed", notification.reason);
 
     return jsonOk({ ok: true });
   } catch (err) {
