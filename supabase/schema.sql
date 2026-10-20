@@ -163,6 +163,7 @@ begin
   end if;
 end $$;
 
+
 create table if not exists public.feature_replies (
   id uuid primary key default gen_random_uuid(),
   feature_id uuid references public.feature_requests(id) on delete cascade,
@@ -224,7 +225,29 @@ create policy "review_media_select" on public.review_media for select using (
 );
 create policy "review_media_insert_own" on public.review_media for insert with check (
   exists (select 1 from public.reviews r where r.id = review_id and r.user_id = auth.uid())
+  and file_size > 0 and file_size <= 26214400
+  and char_length(file_name) <= 255
+  and (
+    select count(*)
+    from public.review_media existing
+    where existing.review_id = public.review_media.review_id
+  ) < 5
 );
+
+create or replace function public.enforce_review_media_limit() returns trigger
+language plpgsql set search_path = public
+as $$
+begin
+  perform pg_advisory_xact_lock(hashtextextended(new.review_id::text, 0));
+  if (select count(*) from public.review_media where review_id = new.review_id) >= 5 then
+    raise exception 'A review cannot have more than 5 media files' using errcode = '23514';
+  end if;
+  return new;
+end $$;
+
+drop trigger if exists review_media_limit on public.review_media;
+create trigger review_media_limit before insert on public.review_media
+for each row execute function public.enforce_review_media_limit();
 
 create policy "feature_requests_select" on public.feature_requests for select using (auth.role() = 'authenticated');
 create policy "feature_requests_insert_own" on public.feature_requests for insert with check (auth.uid() = user_id and status = 'open' and votes_count = 0);
@@ -245,8 +268,18 @@ grant update (name, description, use_case) on public.feature_requests to authent
 
 -- Storage bucket for review media (private — media is served via signed URLs
 -- from /api/review-media/url after checking review ownership/status)
-insert into storage.buckets (id, name, public)
-values ('review-media', 'review-media', false)
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'review-media',
+  'review-media',
+  false,
+  26214400,
+  array[
+    'image/png','image/jpeg','image/webp','image/gif',
+    'video/mp4','video/webm',
+    'audio/mpeg','audio/webm','audio/wav'
+  ]
+)
 on conflict (id) do nothing;
 
 create policy "review_media_upload_own" on storage.objects
@@ -302,10 +335,8 @@ create policy "mentor_select_own" on public.mentor_applications
 -- ============================================================
 -- Least-privilege inserts: contact_messages and mentor_applications
 -- have no table-level INSERT grant (revoked above). The anon and
--- authenticated roles insert only through these SECURITY DEFINER
--- functions, which the server routes call. They accept the user id
--- determined from the verified token server-side, never from the
--- client, so ownership cannot be forged.
+-- Only the service-role server client may execute these SECURITY DEFINER
+-- functions. Browser roles cannot bypass route validation or forge ownership.
 -- ============================================================
 create or replace function public.insert_contact_message(
   p_user_id uuid,
@@ -325,7 +356,8 @@ begin
 end $$;
 
 revoke execute on function public.insert_contact_message(uuid, text, text, text, smallint) from public;
-grant execute on function public.insert_contact_message(uuid, text, text, text, smallint) to anon, authenticated;
+revoke execute on function public.insert_contact_message(uuid, text, text, text, smallint) from anon, authenticated;
+grant execute on function public.insert_contact_message(uuid, text, text, text, smallint) to service_role;
 
 create or replace function public.insert_mentor_application(
   p_user_id uuid,
@@ -349,7 +381,8 @@ begin
 end $$;
 
 revoke execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) from public;
-grant execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) to anon, authenticated;
+revoke execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) from anon, authenticated;
+grant execute on function public.insert_mentor_application(uuid, text, text, text, text, text, text, text, text) to service_role;
 
 -- ============================================================
 -- AI Chat sessions & messages (Manzil, Safar, Ustaad)
@@ -389,3 +422,170 @@ create policy "chat_messages_crud" on public.chat_messages
   ) with check (
     exists (select 1 from public.chat_sessions s where s.id = session_id and s.user_id = auth.uid())
   );
+
+-- ============================================================
+-- Shared abuse controls and database-level payload constraints
+-- ============================================================
+create table if not exists public.rate_limits (
+  key text primary key,
+  window_started_at timestamptz not null,
+  count integer not null check (count > 0)
+);
+alter table public.rate_limits enable row level security;
+revoke all on public.rate_limits from anon, authenticated;
+
+create or replace function public.consume_rate_limit(
+  p_key text,
+  p_max integer,
+  p_window_ms bigint
+) returns boolean
+language plpgsql security definer set search_path = public
+as $$
+declare
+  v_count integer;
+  v_now timestamptz := clock_timestamp();
+  v_window interval;
+begin
+  if p_key is null or length(p_key) > 300 or p_max < 1 or p_max > 10000
+     or p_window_ms < 1000 or p_window_ms > 604800000 then
+    return false;
+  end if;
+  v_window := make_interval(secs => p_window_ms::double precision / 1000.0);
+  insert into public.rate_limits as limits (key, window_started_at, count)
+  values (p_key, v_now, 1)
+  on conflict (key) do update set
+    window_started_at = case when limits.window_started_at + v_window <= v_now then v_now else limits.window_started_at end,
+    count = case when limits.window_started_at + v_window <= v_now then 1 else limits.count + 1 end
+  returning count into v_count;
+  delete from public.rate_limits where key in (
+    select key from public.rate_limits where window_started_at < v_now - interval '8 days' limit 100
+  );
+  return v_count <= p_max;
+end $$;
+revoke execute on function public.consume_rate_limit(text, integer, bigint) from public, anon, authenticated;
+grant execute on function public.consume_rate_limit(text, integer, bigint) to service_role;
+
+create or replace function public.consume_otp_code(
+  p_email text,
+  p_code_hash text,
+  p_max_attempts integer
+) returns table(status text, user_id uuid)
+language plpgsql security definer set search_path = public
+as $$
+declare v_record public.otp_codes%rowtype;
+begin
+  select * into v_record from public.otp_codes
+   where email = lower(p_email) order by created_at desc limit 1 for update;
+  if not found or v_record.expires_at <= clock_timestamp() or v_record.attempts >= p_max_attempts then
+    return query select 'invalid'::text, null::uuid;
+    return;
+  end if;
+  if v_record.code_hash <> p_code_hash then
+    update public.otp_codes set attempts = attempts + 1 where id = v_record.id;
+    return query select 'invalid'::text, null::uuid;
+    return;
+  end if;
+  delete from public.otp_codes where email = lower(p_email);
+  return query select 'verified'::text, v_record.user_id;
+end $$;
+revoke execute on function public.consume_otp_code(text, text, integer) from public, anon, authenticated;
+grant execute on function public.consume_otp_code(text, text, integer) to service_role;
+
+create or replace function public.store_otp_code(
+  p_email text,
+  p_user_id uuid,
+  p_code_hash text,
+  p_expires_at timestamptz,
+  p_cooldown_seconds integer default 60
+) returns boolean
+language plpgsql security definer set search_path = public
+as $$
+declare v_email text := lower(trim(p_email));
+begin
+  if v_email = '' or p_user_id is null or p_code_hash = ''
+     or p_expires_at <= clock_timestamp()
+     or p_expires_at > clock_timestamp() + interval '15 minutes'
+     or p_cooldown_seconds < 1 or p_cooldown_seconds > 3600 then
+    return false;
+  end if;
+  perform pg_advisory_xact_lock(hashtextextended(v_email, 0));
+  if exists (
+    select 1 from public.otp_codes
+     where email = v_email
+       and created_at > clock_timestamp() - make_interval(secs => p_cooldown_seconds)
+  ) then
+    return false;
+  end if;
+  delete from public.otp_codes where email = v_email;
+  insert into public.otp_codes (email, user_id, code_hash, attempts, expires_at)
+  values (v_email, p_user_id, p_code_hash, 0, p_expires_at);
+  return true;
+end $$;
+revoke execute on function public.store_otp_code(text, uuid, text, timestamptz, integer) from public, anon, authenticated;
+grant execute on function public.store_otp_code(text, uuid, text, timestamptz, integer) to service_role;
+
+do $$
+begin
+  if not exists (select 1 from pg_constraint where conname = 'profiles_payload_bounds') then
+    alter table public.profiles add constraint profiles_payload_bounds check (
+      char_length(coalesce(name, '')) <= 100 and char_length(coalesce(bio, '')) <= 2000 and
+      char_length(coalesce(city, '')) <= 120 and char_length(coalesce(budget, '')) <= 40 and
+      cardinality(interests) <= 30 and cardinality(skills) <= 50 and
+      octet_length(marks::text) <= 20000 and octet_length(education::text) <= 100000 and
+      octet_length(quiz::text) <= 100000 and octet_length(practice::text) <= 500000 and
+      jsonb_typeof(watchlist) = 'array' and jsonb_array_length(watchlist) <= 50
+    );
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'reviews_text_bounds') then
+    alter table public.reviews add constraint reviews_text_bounds check (
+      char_length(review_text) <= 5000 and char_length(surprised) <= 2000 and
+      char_length(mindset) <= 2000 and cardinality(recommend_to) <= 20
+    );
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'review_media_bounds') then
+    alter table public.review_media add constraint review_media_bounds check (
+      char_length(url) <= 512 and char_length(file_name) <= 255 and file_size > 0 and file_size <= 26214400
+    );
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'feature_requests_text_bounds') then
+    alter table public.feature_requests add constraint feature_requests_text_bounds check (
+      char_length(name) between 1 and 160 and char_length(author_name) <= 80 and
+      char_length(description) <= 5000 and char_length(use_case) <= 3000
+    );
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'mentor_applications_text_bounds') then
+    alter table public.mentor_applications add constraint mentor_applications_text_bounds check (
+      char_length(name) between 1 and 100 and char_length(email) <= 200 and
+      char_length(institution) <= 200 and char_length(degree) <= 160 and
+      char_length(field) <= 160 and char_length(bio) <= 5000 and
+      char_length(topics) <= 2000 and char_length(social_link) <= 500
+    );
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'chat_sessions_title_bounds') then
+    alter table public.chat_sessions add constraint chat_sessions_title_bounds check (char_length(title) between 1 and 120);
+  end if;
+  if not exists (select 1 from pg_constraint where conname = 'chat_messages_content_bounds') then
+    alter table public.chat_messages add constraint chat_messages_content_bounds check (char_length(content) between 1 and 20000);
+  end if;
+end $$;
+
+create or replace function public.set_review_sentiment() returns trigger
+language plpgsql set search_path = public
+as $$
+declare v_base integer;
+begin
+  v_base := case new.tone
+    when 'loved' then 85 when 'liked' then 70 when 'meh' then 50
+    when 'disappointed' then 30 else 15 end;
+  new.sentiment_score := greatest(0, least(100, v_base + round(((new.rating - 5)::numeric / 5) * 20)::integer));
+  new.sentiment_tag := case
+    when new.sentiment_score >= 85 then 'highly-positive'
+    when new.sentiment_score >= 60 then 'positive'
+    when new.sentiment_score >= 40 then 'constructive'
+    else 'critical' end;
+  return new;
+end $$;
+
+drop trigger if exists reviews_set_sentiment on public.reviews;
+create trigger reviews_set_sentiment before insert or update of tone, rating on public.reviews
+for each row execute function public.set_review_sentiment();

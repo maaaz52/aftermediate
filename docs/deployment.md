@@ -29,13 +29,23 @@ No code changes are required for the domain — the app has no hardcoded host (a
 | `NEXT_PUBLIC_SUPABASE_URL` | yes | `https://fwphwcuklnlerdlqjbqx.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | yes | public anon key (safe in the browser bundle) |
 | `SUPABASE_SERVICE_ROLE_KEY` | yes | server-only; never expose to the client |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | yes | Gemini API key; server-only |
 | `RESEND_API_KEY` | yes | powers OTP emails + contact-form emails |
 | `OTP_HMAC_SECRET` | yes (prod) | HMAC secret for OTP code hashing |
 | `GOOGLE_MODEL` | no | default `gemini-flash-latest` |
-| `SENTRY_AUTH_TOKEN` | dev | only needed for Sentry source maps |
+| `NEXT_PUBLIC_SITE_URL` | yes | canonical site origin; use `http://localhost:3000` locally |
+| `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | no | required only for Google sign-in |
+| `NEXT_PUBLIC_GA_ID` | no | required only for Google Analytics |
+| `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | no | server/edge and browser error reporting |
+| `SENTRY_AUTH_TOKEN` | build | only needed when uploading Sentry source maps |
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | no | only for R2 video streaming |
 
 `src/lib/server-env.ts` is the single source of truth for server-side variables.
+
+Before deploying this hardening release, run
+`supabase/migrations/20261020_security_hardening.sql` in the Supabase SQL editor.
+It revokes unsafe public RPC access, adds atomic OTP and rate-limit operations,
+enforces text/upload bounds, and installs the review-sentiment trigger.
 
 ## Production checks after deploy
 

@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Download, History, Loader2, Send, Sparkles } from "lucide-react";
+import { Download, History, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
 import { SessionSidebar } from "@/components/chat/session-sidebar";
+import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import {
-  listSessions,
   createSession,
   loadSession,
   saveMessage,
@@ -18,7 +18,7 @@ import { useAuth } from "@/lib/auth";
 type Msg = { role: "user" | "assistant"; content: string };
 
 const GREETING =
-  "Salam! I'm Safar (سفر) — your study-abroad assistant. Ask me about visa processes, documents, bank statements, money, tests, scholarships, or any of the 13 destination countries.";
+  "Salam! I'm Safar (سفر) — your study-abroad assistant. Ask me about visa processes, documents, bank statements, money, tests, scholarships, or any of the 17 destination countries.";
 
 const SUGGESTIONS = [
   "What documents do I need for a student visa?",
@@ -45,12 +45,6 @@ export function SafarAssistant() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
 
-  const [hasSessions, setHasSessions] = React.useState(false);
-  React.useEffect(() => {
-    if (!user) return;
-    listSessions("safar").then((s) => setHasSessions(s.length > 0));
-  }, [user]);
-
   async function send(textOverride?: string) {
     const text = (textOverride ?? input).trim();
     if (!text || streaming) return;
@@ -66,7 +60,6 @@ export function SafarAssistant() {
         const session = await createSession("safar", text);
         setActiveSession(session);
         sessionId = session.id;
-        setHasSessions(true);
         await saveMessage(sessionId, "user", text);
       } catch {
         // continue streaming even if session creation fails
@@ -93,7 +86,11 @@ export function SafarAssistant() {
         setMessages([...next, { role: "assistant", content: acc }]);
       }
       if (sessionId && acc) {
-        await saveMessage(sessionId, "assistant", acc);
+        try {
+          await saveMessage(sessionId, "assistant", acc);
+        } catch (error) {
+          console.warn("chat response could not be saved", error);
+        }
       }
     } catch {
       setMessages([
@@ -109,10 +106,14 @@ export function SafarAssistant() {
   }
 
   async function handleLoadSession(id: string) {
-    const loaded = await loadSession(id);
-    if (loaded) {
-      setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
-      setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+    try {
+      const loaded = await loadSession(id);
+      if (loaded) {
+        setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
+        setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+      }
+    } catch (error) {
+      console.warn("chat session could not be loaded", error);
     }
   }
 
@@ -165,7 +166,7 @@ export function SafarAssistant() {
               )}
             >
               {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
-              {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
+              {!m.content && streaming && <ChatThinkingIndicator className="text-saffron" />}
             </div>
           </div>
         ))}

@@ -161,9 +161,11 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
   const prevPathnameRef = React.useRef(pathname);
   const rahbarOpenRef = React.useRef(false);
 
-  activeChapterRef.current = activeChapter;
-  stepIndexRef.current = stepIndex;
-  rahbarOpenRef.current = rahbarOpen;
+  React.useEffect(() => {
+    activeChapterRef.current = activeChapter;
+    stepIndexRef.current = stepIndex;
+    rahbarOpenRef.current = rahbarOpen;
+  }, [activeChapter, stepIndex, rahbarOpen]);
 
   const running = activeChapter !== null;
 
@@ -212,8 +214,9 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const startChapter = React.useCallback((id: TourChapterId, fromStep = 0) => {
+    const total = getChapter(id)?.steps.length ?? 1;
     setHubOpen(false);
-    setStepIndex(fromStep);
+    setStepIndex(Math.max(0, Math.min(fromStep, total - 1)));
     setActiveChapter(id);
     setState((prev) => (prev.promptDismissed ? prev : { ...prev, promptDismissed: true }));
   }, []);
@@ -281,17 +284,13 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
   // render the driver instance for this single step.
   React.useEffect(() => {
     if (!activeChapter) return;
-    const chapter = getChapter(activeChapter);
+    const chapterId = activeChapter;
+    const chapter = getChapter(chapterId);
     if (!chapter) return;
 
     const steps = chapter.steps;
     const chapterName = chapter.name;
     const total = steps.length;
-
-    if (stepIndex >= steps.length) {
-      finishChapter(activeChapter);
-      return;
-    }
 
     const step = steps[stepIndex];
     const token = ++runTokenRef.current;
@@ -327,7 +326,8 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
         if (cancelled || token !== runTokenRef.current) return;
         if (!el) {
           // Target never appeared — skip the step, never dead-end the tour.
-          setStepIndex((i) => i + 1);
+          if (stepIndex === total - 1) finishChapter(chapterId);
+          else setStepIndex((i) => i + 1);
           return;
         }
 
@@ -363,7 +363,10 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
           onPopoverRender: (popover: PopoverDom) => {
             decoratePopover(popover, chapterName, stepIndex, total, () => exitTour());
           },
-          onNextClick: () => transitionTo(stepIndex + 1),
+          onNextClick: () => {
+            if (isLast) finishChapter(chapterId);
+            else transitionTo(stepIndex + 1);
+          },
           onPrevClick: () => transitionTo(stepIndex - 1),
           onDestroyed: () => {
             if (transitionRef.current) return;
@@ -415,7 +418,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
       cancelled = true;
       stopPolling();
     };
-  }, [activeChapter, stepIndex, pathname, router, reducedMotion, finishChapter, exitTour]);
+  }, [activeChapter, stepIndex, pathname, router, reducedMotion, finishChapter, exitTour, stopPolling, transitionTo]);
 
   // Escape exits; Tab is trapped inside the active popover; arrows navigate.
   React.useEffect(() => {
@@ -431,9 +434,12 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
           ? getChapter(activeChapterRef.current)
           : undefined;
         if (!chapter) return;
-        if (event.key === "ArrowRight" && stepIndexRef.current < chapter.steps.length) {
+        if (event.key === "ArrowRight" && stepIndexRef.current < chapter.steps.length - 1) {
           event.preventDefault();
           transitionTo(stepIndexRef.current + 1);
+        } else if (event.key === "ArrowRight" && stepIndexRef.current === chapter.steps.length - 1) {
+          event.preventDefault();
+          finishChapter(activeChapterRef.current!);
         } else if (event.key === "ArrowLeft" && stepIndexRef.current > 0) {
           event.preventDefault();
           transitionTo(stepIndexRef.current - 1);
@@ -462,7 +468,7 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [activeChapter, exitTour, transitionTo]);
+  }, [activeChapter, exitTour, transitionTo, finishChapter]);
 
   // User navigating away mid-tour (e.g. sidebar link) ends the chapter cleanly.
   React.useEffect(() => {

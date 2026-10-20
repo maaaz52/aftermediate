@@ -21,7 +21,7 @@ export async function GET(req: Request) {
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
 
-    if (!checkRateLimit(`review-media-url:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+    if (!(await checkRateLimit(`review-media-url:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
       return jsonError("Too many requests. Try again in a moment.", 429);
     }
 
@@ -30,8 +30,7 @@ export async function GET(req: Request) {
     if (!path || typeof path !== "string" || path.length > 512) {
       return jsonError("path query param required", 400);
     }
-    // Only objects inside the review-media bucket's user folder are allowed.
-    if (!path.startsWith(`${user.id}/`) || path.includes("..")) {
+    if (path.includes("..") || path.startsWith("/") || !path.includes("/")) {
       return jsonError("Forbidden", 403);
     }
 
@@ -54,6 +53,7 @@ export async function GET(req: Request) {
     if (review.status !== "published" && review.user_id !== user.id) {
       return jsonError("Forbidden", 403);
     }
+    if (!path.startsWith(`${review.user_id}/`)) return jsonError("Forbidden", 403);
 
     const { data: signed } = await supabase.storage
       .from("review-media")

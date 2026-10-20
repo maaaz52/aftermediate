@@ -1,18 +1,26 @@
 import { NextResponse } from "next/server";
-import { requireAuth } from "@/lib/http";
-import { getServerEnv } from "@/lib/server-env";
+import { findProgram } from "@/lib/watchlist";
+import universities from "@/data/universities.json";
+import type { University } from "@/lib/types";
+import { parseJsonBody, requireAuth } from "@/lib/http";
 import { jsonError } from "@/lib/api-response";
 import { escapeHtml } from "@/lib/escape-html";
 import { sendEmail } from "@/lib/email";
+import { checkRateLimit } from "@/lib/rate-limit";
+import { absoluteUrl } from "@/lib/site";
 import type { WatchlistEntry } from "@/lib/watchlist";
+import { parseWatchlist } from "@/lib/watchlist-validation";
 
 export const runtime = "nodejs";
 
-const NOTIFY_COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 hours per program
+const MAX_BODY_BYTES = 8 * 1024;
+const NOTIFY_COOLDOWN_MS = 24 * 60 * 60 * 1000;
+const UNIS = universities as unknown as University[];
 
 function isRateLimited(lastNotifiedAt: string | null): boolean {
   if (!lastNotifiedAt) return false;
-  return Date.now() - new Date(lastNotifiedAt).getTime() < NOTIFY_COOLDOWN_MS;
+  const timestamp = Date.parse(lastNotifiedAt);
+  return Number.isFinite(timestamp) && Date.now() - timestamp < NOTIFY_COOLDOWN_MS;
 }
 
 export async function POST(req: Request) {
@@ -21,72 +29,87 @@ export async function POST(req: Request) {
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
 
-    const env = getServerEnv();
-    const RESEND_API_KEY = env.resendApiKey;
-
-    if (!RESEND_API_KEY) {
-      return NextResponse.json({ sent: false, reason: "email-not-configured" });
+    if (!(await checkRateLimit(`watchlist-notify:${user.id}`, 10, 60 * 60 * 1000))) {
+      return jsonError("Too many notification requests. Try again later.", 429);
     }
 
-    const body = await req.json();
-    const { entryId, currentMerit, previousMerit, programName, universityName } = body;
-
-    if (typeof entryId !== "string" || !entryId || typeof programName !== "string" || !programName || typeof universityName !== "string" || !universityName) {
-      return jsonError("Missing required fields", 400);
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
+    const entryId = (bodyResult.value as { entryId?: unknown } | null)?.entryId;
+    if (typeof entryId !== "string" || !entryId || entryId.length > 100) {
+      return jsonError("Invalid watchlist entry", 400);
     }
+    if (!user.email) return jsonError("User has no email", 400);
 
-    const userEmail = user.email;
-    if (!userEmail) {
-      return jsonError("User has no email", 400);
-    }
-
-    // Rate limit is enforced from the server's copy of the watchlist, never the
-    // client's: a stale or edited `lastNotifiedAt` in the request cannot bypass it.
-    const { data: profile } = await supabase
+    const { data: profile, error: profileError } = await supabase
       .from("profiles")
       .select("watchlist")
       .eq("id", user.id)
       .maybeSingle();
+    if (profileError) return jsonError("Could not load watchlist", 500);
 
-    const watchlist = Array.isArray(profile?.watchlist) ? (profile.watchlist as WatchlistEntry[]) : [];
-    const entry = watchlist.find((e) => e.id === entryId);
-
-    if (!entry) {
-      return jsonError("Watchlist entry not found", 404);
-    }
-
+    const parsedWatchlist = parseWatchlist(profile?.watchlist);
+    if (!parsedWatchlist.ok) return jsonError("Stored watchlist is invalid", 500);
+    const watchlist: WatchlistEntry[] = parsedWatchlist.value;
+    const entry = watchlist.find((item) => item.id === entryId);
+    if (!entry) return jsonError("Watchlist entry not found", 404);
+    if (!entry.notifyEmail) return NextResponse.json({ sent: false, reason: "notifications-disabled" });
     if (isRateLimited(entry.lastNotifiedAt)) {
       return NextResponse.json({ sent: false, reason: "rate-limited" });
     }
 
-    // Record the notification before sending so two concurrent requests for
-    // the same entry can't both pass the cooldown read and double-email.
-    const now = new Date().toISOString();
-    const updated = watchlist.map((e) => (e.id === entryId ? { ...e, lastNotifiedAt: now } : e));
-    await supabase.from("profiles").update({ watchlist: updated }).eq("id", user.id);
+    const current = findProgram(UNIS, entry.universityId, entry.programName);
+    if (!current || current.closingMerit == null) {
+      return NextResponse.json({ sent: false, reason: "no-current-merit" });
+    }
+    if (entry.lastKnownMerit == null || current.closingMerit === entry.lastKnownMerit) {
+      return NextResponse.json({ sent: false, reason: "no-change" });
+    }
 
-    const resendRes = await sendEmail({
+    const now = new Date().toISOString();
+    const claimedWatchlist = watchlist.map((item) =>
+      item.id === entryId
+        ? { ...item, lastKnownMerit: current.closingMerit, lastNotifiedAt: now }
+        : item
+    );
+    const { data: claimed, error: claimError } = await supabase
+      .from("profiles")
+      .update({ watchlist: claimedWatchlist })
+      .eq("id", user.id)
+      .eq("watchlist", watchlist)
+      .select("id")
+      .maybeSingle();
+    if (claimError) return jsonError("Could not reserve notification", 500);
+    if (!claimed) return NextResponse.json({ sent: false, reason: "already-claimed" });
+
+    const universityName = UNIS.find((university) => university.id === entry.universityId)?.short ?? entry.universityId;
+    const sent = await sendEmail({
       from: "Merit Alerts <watchlist@aftermediate.site>",
-      to: userEmail,
-      subject: `🔔 Merit update: ${universityName} — ${programName}`,
+      to: user.email,
+      subject: `Merit update: ${universityName} — ${entry.programName}`,
       html: `
         <p>Your watchlist program has a new merit list:</p>
         <table style="border-collapse:collapse;margin:16px 0;font-family:monospace;">
-          <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${escapeHtml(universityName)} — ${escapeHtml(programName)}</td></tr>
-          ${previousMerit !== null && previousMerit !== undefined ? `<tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${escapeHtml(previousMerit)}%</td></tr>` : ""}
-          <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${escapeHtml(currentMerit)}%</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#666;">Program</td><td style="font-weight:bold;">${escapeHtml(universityName)} — ${escapeHtml(entry.programName)}</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#666;">Previous merit</td><td>${entry.lastKnownMerit}%</td></tr>
+          <tr><td style="padding:4px 12px 4px 0;color:#666;">New merit</td><td style="font-weight:bold;">${current.closingMerit}%</td></tr>
         </table>
-        <p><a href="https://aftermediate.site/dashboard" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
+        <p><a href="${absoluteUrl("/dashboard")}" style="color:#7a5bd4;">Log in to see your full watchlist →</a></p>
       `,
     });
 
-    if (!resendRes.ok) {
+    if (!sent.ok) {
+      await supabase
+        .from("profiles")
+        .update({ watchlist })
+        .eq("id", user.id)
+        .eq("watchlist", claimedWatchlist);
       return NextResponse.json({ sent: false, reason: "email-failed" });
     }
 
-    return NextResponse.json({ sent: true });
+    return NextResponse.json({ sent: true, lastNotifiedAt: now, currentMerit: current.closingMerit });
   } catch (err) {
     console.error("watchlist notify error", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return jsonError("Internal server error", 500);
   }
 }

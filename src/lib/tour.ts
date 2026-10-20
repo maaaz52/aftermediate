@@ -113,7 +113,7 @@ export const chapters: TourChapter[] = [
       {
         target: '[data-tour="countries"]',
         route: "/abroad/countries",
-        title: "13 destinations, side by side",
+        title: "17 destinations, side by side",
         body: "Compare study destinations on cost, visas and Pakistani-friendliness — then narrow down to two or three.",
       },
       {

@@ -14,7 +14,10 @@ vi.spyOn(store, "useStudent").mockImplementation(() => mockUseStudent());
 const mocks = vi.hoisted(() => {
   const destroy = vi.fn();
   const drive = vi.fn();
-  const driver = vi.fn((_config: Config) => ({ destroy, drive }));
+  const driver = vi.fn((config: Config) => {
+    void config;
+    return { destroy, drive };
+  });
   return { destroy, drive, driver };
 });
 vi.mock("driver.js", () => ({ driver: mocks.driver }));

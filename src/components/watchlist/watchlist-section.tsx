@@ -40,16 +40,17 @@ export function WatchlistSection() {
   const [syncing, setSyncing] = React.useState(false);
   const [showSearch, setShowSearch] = React.useState(false);
 
-  const syncToServer = React.useCallback(async (updated: WatchlistEntry[]) => {
+  const syncToServer = React.useCallback(async (updated: WatchlistEntry[]): Promise<boolean> => {
     setSyncing(true);
     try {
-      await fetch("/api/watchlist/sync", {
+      const response = await fetch("/api/watchlist/sync", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ watchlist: updated }),
       });
+      return response.ok;
     } catch {
-      // sync failure is non-blocking
+      return false;
     } finally {
       setSyncing(false);
     }
@@ -59,7 +60,11 @@ export function WatchlistSection() {
     const current = watchlistRef.current;
     if (current.length === 0) return;
     try {
-      const res = await fetch(`/api/watchlist/check?watchlist=${encodeURIComponent(JSON.stringify(current))}`);
+      const res = await fetch("/api/watchlist/check", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ watchlist: current }),
+      });
       if (!res.ok) return;
       const data = await res.json() as { entries: CheckResult[] };
       const map = new Map<string, CheckResult>();
@@ -74,41 +79,37 @@ export function WatchlistSection() {
           ? { ...entry, lastKnownMerit: result.currentMerit ?? entry.lastKnownMerit, lastCheckedAt: now }
           : entry;
       });
-      storeUpdate({ watchlist: updated });
-
       // notify reads the entry from the server, so push first — otherwise a
       // watchlist that only exists in localStorage 404s and the change is
       // burned by the lastKnownMerit bump above.
       const toNotify = current.filter((e) => map.get(e.id)?.meritChanged && e.notifyEmail);
+      let finalWatchlist = updated;
       if (toNotify.length > 0) {
-        await syncToServer(current);
+        const synced = await syncToServer(current);
+        if (!synced) {
+          storeUpdate({ watchlist: updated });
+          return;
+        }
         for (const entry of toNotify) {
-          const result = map.get(entry.id);
-          if (!result) continue;
-          fetch("/api/watchlist/notify", {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify({
-              entryId: entry.id,
-              currentMerit: result.currentMerit,
-              previousMerit: entry.lastKnownMerit,
-              programName: entry.programName,
-              universityName: uniNameFor(entry.universityId),
-              lastNotifiedAt: entry.lastNotifiedAt,
-            }),
-          }).then((r) => {
-            if (r.ok) r.json().then((d) => {
-              if (d.sent) {
-                const current2 = watchlistRef.current;
-                const patched = current2.map((e) =>
-                  e.id === entry.id ? { ...e, lastNotifiedAt: new Date().toISOString() } : e
-                );
-                storeUpdate({ watchlist: patched });
-              }
+          try {
+            const response = await fetch("/api/watchlist/notify", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify({ entryId: entry.id }),
             });
-          }).catch(() => {});
+            if (!response.ok) continue;
+            const result = await response.json() as { sent?: boolean; lastNotifiedAt?: string };
+            if (result.sent && result.lastNotifiedAt) {
+              finalWatchlist = finalWatchlist.map((item) =>
+                item.id === entry.id ? { ...item, lastNotifiedAt: result.lastNotifiedAt! } : item
+              );
+            }
+          } catch {
+            // Leave the visual merit result intact; a later data change can retry notification.
+          }
         }
       }
+      storeUpdate({ watchlist: finalWatchlist });
     } catch {
       // check failure is non-blocking
     }

@@ -188,8 +188,6 @@ export function PracticeCatalog({
     [testsProp],
   );
 
-  const ready = items.filter((i) => i.status === "ready");
-
   const filtered = React.useMemo(() => {
     if (testsProp) {
       // abroad: filter by category

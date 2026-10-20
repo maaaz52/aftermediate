@@ -10,7 +10,7 @@ describe("pageMetadata", () => {
     const img = (og?.images as { url?: string; width?: number; height?: number }[] | undefined)?.[0];
     expect(m.alternates?.canonical).toBe("https://www.aftermediate.site/pakistan/universities");
     expect(og?.url).toBe("https://www.aftermediate.site/pakistan/universities");
-    expect(og?.siteName).toBe("aftermediate");
+    expect(og?.siteName).toBe("Aftermediate");
     expect(og?.type).toBe("website");
     expect(img).toMatchObject({ width: 1200, height: 630 });
     expect(img?.url).toBe("https://www.aftermediate.site/opengraph-image.png");

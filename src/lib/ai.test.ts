@@ -67,4 +67,17 @@ describe("generateStructured", () => {
 
     await expect(generateStructured("prompt", "system")).resolves.toEqual({ insights: [] });
   });
+
+  it("lets callers reject structurally invalid model JSON", async () => {
+    generateText.mockResolvedValue({ text: '{"insights":"not-an-array"}' });
+
+    await expect(
+      generateStructured("prompt", "system", (value) => {
+        if (!value || typeof value !== "object" || !Array.isArray((value as { insights?: unknown }).insights)) {
+          throw new Error("invalid shape");
+        }
+        return value;
+      })
+    ).rejects.toThrow("invalid shape");
+  });
 });

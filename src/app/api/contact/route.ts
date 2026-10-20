@@ -20,7 +20,7 @@ const IP_WINDOW_MS = 60 * 60 * 1000;
 export async function POST(req: Request) {
   try {
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-    if (!checkRateLimit(`contact:${ip}`, IP_SEND_MAX, IP_WINDOW_MS)) {
+    if (!(await checkRateLimit(`contact:${ip}`, IP_SEND_MAX, IP_WINDOW_MS))) {
       return jsonError("Too many messages from this device. Try again later.", 429);
     }
 

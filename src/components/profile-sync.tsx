@@ -2,15 +2,53 @@
 
 import * as React from "react";
 import { useAuth } from "@/lib/auth";
-import { useStudent, type StudentProfile } from "@/lib/store";
+import { normalizeProfile, useStudent, type StudentProfile } from "@/lib/store";
 import { chooseProfile } from "@/lib/merge-profile";
 import { createClient } from "@/lib/supabase/client";
 
 const LOCAL_STAMP = "aftermediate:profile:updatedAt";
+const PROFILE_MAX_CHARS = 1_000_000;
+
+function scopedProfileKey(userId: string) {
+  return `aftermediate:profile:${userId}`;
+}
+
+function scopedStampKey(userId: string) {
+  return `aftermediate:profile:updatedAt:${userId}`;
+}
+
+function readLocalProfile(userId: string): Partial<StudentProfile> | null {
+  try {
+    const raw = window.localStorage.getItem(scopedProfileKey(userId));
+    if (!raw || raw.length > PROFILE_MAX_CHARS) return null;
+    const parsed: unknown = JSON.parse(raw);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed)
+      ? (parsed as Partial<StudentProfile>)
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+function hasMeaningfulProfile(profile: StudentProfile): boolean {
+  return Boolean(
+    profile.name ||
+      profile.bio ||
+      profile.stream ||
+      profile.interests.length ||
+      profile.skills.length ||
+      profile.education.length ||
+      profile.quizCompletedAt ||
+      profile.practice.length ||
+      profile.watchlist.length ||
+      profile.marks.matricObtained ||
+      profile.marks.fscObtained
+  );
+}
 
 export function ProfileSync() {
   const { user } = useAuth();
-  const { profile, hydrate, hydrated } = useStudent();
+  const { profile, hydrate, hydrated, beginHydration } = useStudent();
   const pushed = React.useRef<string | null>(null);
   const timer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
   const liveProfile = React.useRef(profile);
@@ -24,18 +62,27 @@ export function ProfileSync() {
   // 1. Hydrate once per user.
   React.useEffect(() => {
     if (!user) {
-      // Anonymous visitors (e.g. from the public /onboard CTA) never get a
-      // signed-in fetch, so flip `hydrated` immediately with a no-op merge —
-      // otherwise pages gating render on `hydrated` spin forever.
-      hydrate({});
+      pushed.current = null;
+      hydrate(profile);
       return;
     }
+
+    beginHydration();
+    pushed.current = null;
+    if (timer.current) clearTimeout(timer.current);
+
     let cancelled = false;
     const supabase = createClient();
+    const userLocal = readLocalProfile(user.id);
+    const startProfile = profile;
+    const localCandidate = userLocal ?? (hasMeaningfulProfile(startProfile) ? startProfile : {});
+    const localStamp = window.localStorage.getItem(
+      userLocal ? scopedStampKey(user.id) : LOCAL_STAMP
+    );
 
     supabase
       .from("profiles")
-      .select("name, avatar_style, avatar_seed, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, practice, updated_at")
+      .select("name, avatar_style, avatar_seed, bio, stream, marks, interests, skills, education, city, budget, quiz, quiz_completed_at, practice, watchlist, updated_at")
       .eq("id", user.id)
       .maybeSingle()
       .then(({ data, error }) => {
@@ -62,24 +109,19 @@ export function ProfileSync() {
               quiz: data.quiz ?? {},
               quizCompletedAt: data.quiz_completed_at ?? null,
               practice: data.practice ?? [],
+              watchlist: data.watchlist ?? [],
             }
           : null;
 
-        const localStamp =
-          typeof window !== "undefined" ? window.localStorage.getItem(LOCAL_STAMP) : null;
-
-        const startProfile = profile; // the closure value, captured when the effect scheduled
-
         if (liveProfile.current !== startProfile) {
-          // The user edited locally while this fetch was in flight — trust the
-          // newer local state instead of overwriting it with a stale remote read.
-          // The debounced push effect will carry the fresher local state up next.
-          hydrate({});
+          hydrate(liveProfile.current);
           return;
         }
 
-        const choice = chooseProfile(profile, localStamp, remote, data?.updated_at ?? null);
-        hydrate(choice.use === "remote" ? choice.profile : {});
+        const choice = chooseProfile(localCandidate, localStamp, remote, data?.updated_at ?? null);
+        const selected = normalizeProfile(choice.profile);
+        if (choice.use === "remote") pushed.current = JSON.stringify(selected);
+        hydrate(selected);
       });
 
     return () => {
@@ -88,7 +130,7 @@ export function ProfileSync() {
     // Intentionally keyed on the user only — this must run once per sign-in,
     // not on every profile edit.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user?.id]);
 
   // 2. Debounced push.
   React.useEffect(() => {
@@ -125,6 +167,7 @@ export function ProfileSync() {
           quiz: profile.quiz,
           quiz_completed_at: profile.quizCompletedAt,
           practice: profile.practice,
+          watchlist: profile.watchlist,
           updated_at: now,
         })
         .then(({ error }) => {
@@ -134,6 +177,8 @@ export function ProfileSync() {
             pushed.current = payload;
             if (typeof window !== "undefined") {
               window.localStorage.setItem(LOCAL_STAMP, now);
+              window.localStorage.setItem(scopedProfileKey(user.id), payload);
+              window.localStorage.setItem(scopedStampKey(user.id), now);
             }
           }
         });

@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/client";
-import type { MediaKind, PriorityId, ToneId } from "./feedback-model";
+import { validateMedia, type MediaKind, type PriorityId, type ToneId } from "./feedback-model";
 
 export type ReviewPayload = {
   tone: ToneId;
@@ -55,6 +55,16 @@ export async function submitReview(
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) return { ok: false, error: "You must be signed in to share your voice." };
+  if (files.length > 5) return { ok: false, error: "Attach no more than 5 files." };
+  if (payload.reviewText.length > 5000 || payload.surprised.length > 2000 || payload.mindset.length > 2000) {
+    return { ok: false, error: "Your review is too long." };
+  }
+  for (const item of files) {
+    const validation = validateMedia(item.file);
+    if (!validation.ok || item.kind !== mediaKindForFile(item.file)) {
+      return { ok: false, error: validation.ok ? "File type mismatch." : validation.error };
+    }
+  }
 
   const { data: review, error } = await supabase
     .from("reviews")
@@ -72,21 +82,44 @@ export async function submitReview(
 
   if (error || !review) return { ok: false, error: error?.message ?? "Could not save your review." };
 
+  const uploadedPaths: string[] = [];
+  const rollback = async () => {
+    if (uploadedPaths.length > 0) await supabase.storage.from("review-media").remove(uploadedPaths);
+    await supabase.from("reviews").delete().eq("id", review.id).eq("user_id", user.id);
+  };
+
   for (const m of files) {
     const path = `${user.id}/${crypto.randomUUID()}.${extensionFor(m.kind, m.file.name)}`;
-    const { error: upErr } = await supabase.storage.from("review-media").upload(path, m.file);
-    if (upErr) return { ok: false, error: `Upload failed: ${upErr.message}` };
+    const { error: upErr } = await supabase.storage.from("review-media").upload(path, m.file, {
+      contentType: m.file.type,
+      upsert: false,
+    });
+    if (upErr) {
+      await rollback();
+      return { ok: false, error: "Upload failed. Check the file and try again." };
+    }
+    uploadedPaths.push(path);
     const { error: mediaErr } = await supabase.from("review_media").insert({
       review_id: review.id,
       url: path,
       media_type: m.kind,
-      file_name: m.file.name,
+      file_name: m.file.name.slice(0, 255),
       file_size: m.file.size,
     });
-    if (mediaErr) return { ok: false, error: `Media row failed: ${mediaErr.message}` };
+    if (mediaErr) {
+      await rollback();
+      return { ok: false, error: "Could not attach media. Try again." };
+    }
   }
 
   return { ok: true, id: review.id };
+}
+
+function mediaKindForFile(file: File): MediaKind | null {
+  if (file.type.startsWith("image/")) return "image";
+  if (file.type.startsWith("video/")) return "video";
+  if (file.type.startsWith("audio/")) return "audio";
+  return null;
 }
 
 export async function toggleVote(
@@ -98,12 +131,13 @@ export async function toggleVote(
   } = await supabase.auth.getUser();
   if (!user) return { ok: false, error: "You must be signed in to vote." };
 
-  const { data: existing } = await supabase
+  const { data: existing, error: lookupError } = await supabase
     .from("feature_votes")
     .select("id")
     .eq("user_id", user.id)
     .eq("feature_id", featureId)
     .maybeSingle();
+  if (lookupError) return { ok: false, error: lookupError.message };
 
   if (existing) {
     const { error } = await supabase.from("feature_votes").delete().eq("id", existing.id);
@@ -113,15 +147,24 @@ export async function toggleVote(
     if (error) return { ok: false, error: error.message };
   }
 
-  const { data: row } = await supabase.from("feature_requests").select("votes_count").eq("id", featureId).single();
+  const { data: row, error: countError } = await supabase
+    .from("feature_requests")
+    .select("votes_count")
+    .eq("id", featureId)
+    .single();
+  if (countError) return { ok: false, error: countError.message };
   return { ok: true, voted: !existing, count: row?.votes_count ?? 0 };
 }
 
 export async function listFeatureRequests(status: "all" | "open" | "planning" | "shipped"): Promise<FeatureRequest[]> {
   const supabase = createClient();
-  let query = supabase.from("feature_requests").select("*");
+  let query = supabase
+    .from("feature_requests")
+    .select("id, user_id, name, author_name, description, use_case, priority, status, votes_count, created_at")
+    .limit(100);
   if (status !== "all") query = query.eq("status", status);
-  const { data } = await query.order("votes_count", { ascending: false });
+  const { data, error } = await query.order("votes_count", { ascending: false });
+  if (error) throw error;
   return (data ?? []) as FeatureRequest[];
 }
 
@@ -132,6 +175,12 @@ export async function submitFeatureRequest(input: {
   useCase: string;
   priority: PriorityId;
 }): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
+  const name = input.name.trim();
+  const description = input.description.trim();
+  const useCase = input.useCase.trim();
+  if (!name || name.length > 160 || description.length > 5000 || useCase.length > 3000) {
+    return { ok: false, error: "Check the title and description lengths." };
+  }
   const authorName = cleanName(input.authorName);
   if (!authorName) return { ok: false, error: "Add your name so your suggestion isn't anonymous." };
 
@@ -145,10 +194,10 @@ export async function submitFeatureRequest(input: {
     .from("feature_requests")
     .insert({
       user_id: user.id,
-      name: input.name,
+      name,
       author_name: authorName,
-      description: input.description,
-      use_case: input.useCase,
+      description,
+      use_case: useCase,
       priority: input.priority,
     })
     .select("id")
@@ -161,10 +210,12 @@ export async function submitFeatureRequest(input: {
 /** Every reply on the wall, oldest first. One query — the wall groups them by feature. */
 export async function listReplies(): Promise<FeatureReply[]> {
   const supabase = createClient();
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("feature_replies")
-    .select("*")
+    .select("id, feature_id, user_id, author_name, body, created_at")
+    .limit(500)
     .order("created_at", { ascending: true });
+  if (error) throw error;
   return (data ?? []) as FeatureReply[];
 }
 
@@ -175,8 +226,9 @@ export async function submitReply(input: {
 }): Promise<{ ok: true; reply: FeatureReply } | { ok: false; error: string }> {
   const authorName = cleanName(input.authorName);
   if (!authorName) return { ok: false, error: "Add your name so your reply isn't anonymous." };
-  const body = input.body.trim().slice(0, 2000);
+  const body = input.body.trim();
   if (!body) return { ok: false, error: "Write a reply first." };
+  if (body.length > 2000) return { ok: false, error: "Keep replies under 2,000 characters." };
 
   const supabase = createClient();
   const {
@@ -192,7 +244,7 @@ export async function submitReply(input: {
       author_name: authorName,
       body,
     })
-    .select("*")
+    .select("id, feature_id, user_id, author_name, body, created_at")
     .single();
 
   if (error || !data) return { ok: false, error: error?.message ?? "Could not save your reply." };
@@ -217,20 +269,22 @@ export async function listMyReviews(): Promise<MyReview[]> {
   } = await supabase.auth.getUser();
   if (!user) return [];
 
-  const { data: reviews } = await supabase
+  const { data: reviews, error: reviewsError } = await supabase
     .from("reviews")
     .select("id, tone, rating, review_text, status, created_at")
     .eq("user_id", user.id)
     .order("created_at", { ascending: false });
+  if (reviewsError) throw reviewsError;
   if (!reviews?.length) return [];
 
-  const { data: media } = await supabase
+  const { data: media, error: mediaError } = await supabase
     .from("review_media")
     .select("id, review_id, url, media_type, file_name")
     .in(
       "review_id",
       reviews.map((r) => r.id)
     );
+  if (mediaError) throw mediaError;
 
   return (reviews as MyReview[]).map((r) => ({
     ...r,

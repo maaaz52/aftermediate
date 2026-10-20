@@ -50,7 +50,7 @@ export async function POST(req: Request) {
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
 
-    if (!checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+    if (!(await checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
       return jsonError("Too many messages. Try again in a moment.", 429);
     }
 

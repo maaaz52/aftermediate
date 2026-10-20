@@ -26,6 +26,15 @@ export default function GlobalError({
           statusCode={500}
           title="Something went wrong. We've been notified and are looking into it."
         />
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "-2rem" }}>
+          <button
+            type="button"
+            onClick={reset}
+            style={{ cursor: "pointer", padding: "0.75rem 1rem", fontWeight: 700 }}
+          >
+            Try again
+          </button>
+        </div>
       </body>
     </html>
   );

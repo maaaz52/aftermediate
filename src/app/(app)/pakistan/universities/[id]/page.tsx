@@ -7,28 +7,15 @@ import { ExternalLink, ArrowLeft, BookOpen, Target } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/pakistan-universities.json";
 import entryTestsJson from "@/data/entry-tests.json";
-import scholarshipsJson from "@/data/pakistan-scholarships.json";
-import type { PakistanUniversity, EntryTest, PakistanScholarship } from "@/lib/types";
+import type { PakistanUniversity, EntryTest } from "@/lib/types";
 
 const data = json as unknown as { dataYear: number; universities: PakistanUniversity[] };
 const testsData = entryTestsJson as unknown as { tests: EntryTest[] };
-const scholarshipsData = scholarshipsJson as unknown as { scholarships: PakistanScholarship[] };
 
 /** Find the entry test ID that matches a university's entryTest field. */
 function findTestId(entryTest: string): string | undefined {
   const lower = entryTest.toLowerCase();
   return testsData.tests.find((t) => lower.includes(t.id) || lower.includes(t.short.toLowerCase()))?.id;
-}
-
-/** Find scholarships relevant to a university's streams. */
-function scholarshipsForUni(uni: PakistanUniversity): PakistanScholarship[] {
-  return scholarshipsData.scholarships.filter((s) => {
-    const level = s.level.toLowerCase();
-    if (level === "all levels" || level === "undergraduate" || level === "graduate") return true;
-    if (uni.streams.includes("pre-medical") && /medical|mbbs|health/.test(level)) return true;
-    if (uni.streams.includes("pre-engineering") && /engineer|tech|cs/.test(level)) return true;
-    return false;
-  });
 }
 
 export function generateStaticParams() {

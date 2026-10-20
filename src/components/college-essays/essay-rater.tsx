@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { ClipboardPaste, Loader2, Send, Sparkles, Wand2 } from "lucide-react";
+import { ClipboardPaste, Send, Sparkles, Wand2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
+import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import { analyzeDraft } from "@/lib/college-essays";
 import {
   ESSAY_DRAFT_BASE,
@@ -151,7 +152,7 @@ export function EssayRater() {
                   )}
                 >
                   {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
-                  {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
+                  {!m.content && streaming && <ChatThinkingIndicator className="text-violet" />}
                 </div>
               </div>
             ))}

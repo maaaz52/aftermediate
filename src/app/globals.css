@@ -9,6 +9,8 @@
 }
 
 @theme {
+  --font-space: "Space Mono";
+  --font-jakarta: "Plus Jakarta Sans";
   --color-background: #f4f2eb;
   --color-surface: #ffffff;
   --color-surface-2: #ebe7db;

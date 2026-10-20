@@ -35,6 +35,7 @@ vi.mock("@/lib/supabase/client", () => ({
     storage: {
       from: vi.fn(() => ({
         upload: vi.fn(async () => ({ error: s.uploadError })),
+        remove: vi.fn(async () => ({ error: null })),
       })),
     },
     from: vi.fn((table: string) => {
@@ -49,6 +50,10 @@ vi.mock("@/lib/supabase/client", () => ({
         }),
         select: vi.fn(() => {
           s.chain.push("select");
+          return q;
+        }),
+        limit: vi.fn(() => {
+          s.chain.push("limit");
           return q;
         }),
         single: vi.fn(async () => {
@@ -142,7 +147,7 @@ describe("submitReview", () => {
     const file = new File(["x"], "shot.png", { type: "image/png" });
     const r = await submitReview(payload, [{ file, kind: "image" as MediaKind }]);
     expect(r.ok).toBe(false);
-    if (!r.ok) expect(r.error).toContain("quota exceeded");
+    if (!r.ok) expect(r.error).toMatch(/upload failed/i);
   });
 
   it("returns review insert errors", async () => {
@@ -157,7 +162,7 @@ describe("submitReview", () => {
     const file = new File(["x"], "shot.png", { type: "image/png" });
     const r = await submitReview(payload, [{ file, kind: "image" as MediaKind }]);
     expect(r.ok).toBe(false);
-    if (!r.ok) expect(r.error).toContain("row failed");
+    if (!r.ok) expect(r.error).toMatch(/attach media/i);
   });
 });
 

@@ -11,8 +11,8 @@ const nextConfig: NextConfig = {
   async headers() {
     // React/Turbopack need `unsafe-eval` in dev (callstack reconstruction), never in prod.
     const scriptSrc = isProd
-      ? "'self' 'unsafe-inline' https://accounts.google.com"
-      : "'self' 'unsafe-inline' 'unsafe-eval' https://accounts.google.com";
+      ? "'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com"
+      : "'self' 'unsafe-inline' 'unsafe-eval' https://accounts.google.com https://www.googletagmanager.com";
     return [
       {
         source: "/:path*",
@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=()" },
           {
             key: "Content-Security-Policy",
             value: [
@@ -29,10 +29,13 @@ const nextConfig: NextConfig = {
               `script-src ${scriptSrc}`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
+              "media-src 'self' blob: https://*.supabase.co https://*.r2.cloudflarestorage.com",
               "font-src 'self' data:",
-              "connect-src 'self' https://*.supabase.co https://*.google.com https://accounts.google.com https://*.sentry.io wss:",
+              "connect-src 'self' https://*.supabase.co https://*.google.com https://accounts.google.com https://www.google-analytics.com https://*.sentry.io wss:",
               "frame-src 'self' https://accounts.google.com https://www.youtube.com https://www.youtube-nocookie.com",
               "worker-src 'self' blob:",
+              "object-src 'none'",
+              "frame-ancestors 'self'",
               "base-uri 'self'",
               "form-action 'self'",
             ].join("; "),

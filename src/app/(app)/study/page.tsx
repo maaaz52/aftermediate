@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, Download, History, Loader2, Send } from "lucide-react";
+import { BookOpen, Download, History, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
 import { SessionSidebar } from "@/components/chat/session-sidebar";
+import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import {
-  listSessions,
   createSession,
   loadSession,
   saveMessage,
@@ -44,12 +44,6 @@ export default function StudyPage() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
 
-  const [hasSessions, setHasSessions] = React.useState(false);
-  React.useEffect(() => {
-    if (!user) return;
-    listSessions("study").then((s) => setHasSessions(s.length > 0));
-  }, [user]);
-
   async function send(textOverride?: string) {
     const text = (textOverride ?? input).trim();
     if (!text || streaming) return;
@@ -65,7 +59,6 @@ export default function StudyPage() {
         const session = await createSession("study", text);
         setActiveSession(session);
         sessionId = session.id;
-        setHasSessions(true);
         await saveMessage(sessionId, "user", text);
       } catch {
         // continue streaming even if session creation fails
@@ -92,7 +85,11 @@ export default function StudyPage() {
         setMessages([...next, { role: "assistant", content: acc }]);
       }
       if (sessionId && acc) {
-        await saveMessage(sessionId, "assistant", acc);
+        try {
+          await saveMessage(sessionId, "assistant", acc);
+        } catch (error) {
+          console.warn("chat response could not be saved", error);
+        }
       }
     } catch {
       setMessages([...next, { role: "assistant", content: "Sorry, I hit a snag. Try again in a moment." }]);
@@ -102,10 +99,14 @@ export default function StudyPage() {
   }
 
   async function handleLoadSession(id: string) {
-    const loaded = await loadSession(id);
-    if (loaded) {
-      setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
-      setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+    try {
+      const loaded = await loadSession(id);
+      if (loaded) {
+        setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
+        setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+      }
+    } catch (error) {
+      console.warn("chat session could not be loaded", error);
     }
   }
 
@@ -162,7 +163,7 @@ export default function StudyPage() {
                 )}
               >
                 {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
-                {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
+                {!m.content && streaming && <ChatThinkingIndicator className="text-info" />}
               </div>
             </div>
           ))}

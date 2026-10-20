@@ -1,8 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Aftermediate is a Next.js 16 career-guidance platform for Pakistani FSc, ICS,
+I.Com, and A-Level students. It combines localized university, scholarship,
+entry-test, career, and study-abroad data with authenticated AI assistants.
 
 ## Getting Started
 
-First, run the development server:
+Copy `.env.example` to `.env.local`, fill the required values described in
+`docs/deployment.md`, then run:
 
 ```bash
 npm run dev
@@ -14,11 +17,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Before the first production
+deploy, apply `supabase/schema.sql`; for an existing deployment, apply the
+latest files under `supabase/migrations/` in timestamp order.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run `npm test`, `npm run lint`, and `npm run build` before shipping.
 
 ## Learn More
 

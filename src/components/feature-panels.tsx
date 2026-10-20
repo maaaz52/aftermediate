@@ -42,7 +42,7 @@ const features = [
   {
     id: "abroad",
     name: "Study Abroad",
-    desc: "Compare 13 countries by cost, visa rules & scholarships — with a financial planner that projects your 4-year budget in PKR.",
+    desc: "Compare 17 countries by cost, visa rules & scholarships — with a financial planner that projects your 4-year budget in PKR.",
     icon: Globe,
     bg: "bg-[#a1bbfe]",
   },

@@ -22,18 +22,26 @@ describe("r2 presigning", () => {
     expect(url).toMatch(/^https:\/\/media\.abc\.r2\.cloudflarestorage\.com\//);
     expect(url).toContain("X-Amz-Algorithm=AWS4-HMAC-SHA256");
     expect(url).toContain("X-Amz-Credential=keyid%2F");
+    expect(decodeURIComponent(url)).toContain("/auto/s3/aws4_request");
     expect(url).toContain("X-Amz-Expires=600");
     expect(url).toContain("X-Amz-Signature=");
     expect(url).toContain("/mdcat/lecture-01.mp4");
   });
 
-  // Official AWS S3 presigned-URL worked example (SigV4 query-string auth).
-  // Fixed host + date prove the canonical request, string-to-sign and signing
-  // chain are spec-correct — a structural test can't catch a wrong HMAC order.
-  it("matches the AWS S3 presigned-URL worked example signature", () => {
+  it("uses the same AWS encoding in the signed path and returned URL", () => {
+    const url = presignR2GetUrl(
+      { accountId: "abc", accessKeyId: "keyid", secretAccessKey: "secret", bucket: "media" },
+      "lectures/part 1+(intro).mp4",
+      600,
+      { date: new Date("2026-10-20T00:00:00.000Z") }
+    );
+    expect(url).toContain("/lectures/part%201%2B%28intro%29.mp4?");
+  });
+
+  it("uses R2's auto region in deterministic SigV4 credentials", () => {
     const url = presignR2GetUrl(
       {
-        accountId: "us-east-1",
+        accountId: "example-account",
         accessKeyId: "AKIAIOSFODNN7EXAMPLE",
         secretAccessKey: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
         bucket: "examplebucket",
@@ -46,6 +54,7 @@ describe("r2 presigning", () => {
       }
     );
     const sig = url.match(/X-Amz-Signature=([0-9a-f]{64})/)?.[1];
-    expect(sig).toBe("aeeed9bbccd4d02ee5c0109b86d86835f995330da4c265957d157751f604d404");
+    expect(sig).toBe("f23a4f38e39d60326a7b7c72db5ebcc6d137bf2707c41815bd8037f785d98d93");
+    expect(decodeURIComponent(url)).toContain("/auto/s3/aws4_request");
   });
 });

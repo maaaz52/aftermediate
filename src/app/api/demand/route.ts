@@ -22,13 +22,39 @@ const MAX_COUNTRIES = 20;
 const RATE_MAX = 15;
 const RATE_WINDOW_MS = 60 * 1000;
 
+type DemandResult = { insights: { country: string; insight: string }[] };
+
+function parseDemandResult(value: unknown, countries: string[]): DemandResult {
+  if (!value || typeof value !== "object" || !Array.isArray((value as { insights?: unknown }).insights)) {
+    throw new Error("Model returned an invalid demand result");
+  }
+
+  const requested = new Map(countries.map((country) => [country.toLocaleLowerCase(), country]));
+  const seen = new Set<string>();
+  const insights: DemandResult["insights"] = [];
+  for (const item of (value as { insights: unknown[] }).insights) {
+    if (!item || typeof item !== "object") continue;
+    const country = (item as { country?: unknown }).country;
+    const insight = (item as { insight?: unknown }).insight;
+    if (typeof country !== "string" || typeof insight !== "string") continue;
+    const canonical = requested.get(country.trim().toLocaleLowerCase());
+    const normalizedInsight = insight.trim();
+    if (!canonical || seen.has(canonical) || !normalizedInsight || normalizedInsight.length > 240) continue;
+    seen.add(canonical);
+    insights.push({ country: canonical, insight: normalizedInsight });
+  }
+
+  if (insights.length === 0) throw new Error("Model returned no usable demand insights");
+  return { insights };
+}
+
 export async function POST(req: Request) {
   try {
     const auth = await requireAuth("Sign in to see demand insights");
     if (!auth.ok) return auth.error;
     const { user } = auth;
 
-    if (!checkRateLimit(`demand:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+    if (!(await checkRateLimit(`demand:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
       return jsonError("Too many requests. Try again in a moment.", 429);
     }
 
@@ -53,9 +79,10 @@ export async function POST(req: Request) {
       return jsonError("countries must be a non-empty array", 400);
     }
 
-    const result = await generateStructured<{ insights: { country: string; insight: string }[] }>(
+    const result = await generateStructured(
       `Stream: ${stream}\nInterests: ${interests.join(", ") || "none given"}\nCountries: ${countries.join(", ")}`,
-      SYSTEM
+      SYSTEM,
+      (value) => parseDemandResult(value, countries)
     );
 
     return jsonOk(result);

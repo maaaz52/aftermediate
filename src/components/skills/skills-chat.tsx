@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Loader2, Send, Sparkles } from "lucide-react";
+import { Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
+import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import { useChatHistory, type ChatMessage } from "@/lib/chat-storage";
 
 type Msg = ChatMessage;
@@ -76,7 +77,7 @@ export function SkillsChat() {
               )}
             >
               {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
-              {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
+              {!m.content && streaming && <ChatThinkingIndicator className="text-emerald" />}
             </div>
           </div>
         ))}

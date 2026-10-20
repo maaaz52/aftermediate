@@ -1,12 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Download, History, Loader2, Send, Sparkles } from "lucide-react";
+import { Download, History, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
 import { SessionSidebar } from "@/components/chat/session-sidebar";
+import { ChatThinkingIndicator } from "@/components/chat/chat-thinking-indicator";
 import {
-  listSessions,
   createSession,
   loadSession,
   saveMessage,
@@ -45,13 +45,6 @@ export function ManzilAssistant() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, streaming]);
 
-  // Load sessions list on mount to check if user has past chats
-  const [hasSessions, setHasSessions] = React.useState(false);
-  React.useEffect(() => {
-    if (!user) return;
-    listSessions("manzil").then((s) => setHasSessions(s.length > 0));
-  }, [user]);
-
   async function send(textOverride?: string) {
     const text = (textOverride ?? input).trim();
     if (!text || streaming) return;
@@ -68,7 +61,6 @@ export function ManzilAssistant() {
         const session = await createSession("manzil", text);
         setActiveSession(session);
         sessionId = session.id;
-        setHasSessions(true);
         // Save user message
         await saveMessage(sessionId, "user", text);
       } catch {
@@ -97,7 +89,11 @@ export function ManzilAssistant() {
       }
       // Save assistant response
       if (sessionId && acc) {
-        await saveMessage(sessionId, "assistant", acc);
+        try {
+          await saveMessage(sessionId, "assistant", acc);
+        } catch (error) {
+          console.warn("chat response could not be saved", error);
+        }
       }
     } catch {
       setMessages([
@@ -114,10 +110,14 @@ export function ManzilAssistant() {
   }
 
   async function handleLoadSession(id: string) {
-    const loaded = await loadSession(id);
-    if (loaded) {
-      setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
-      setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+    try {
+      const loaded = await loadSession(id);
+      if (loaded) {
+        setActiveSession({ id: loaded.id, persona: loaded.persona, title: loaded.title, created_at: loaded.created_at, updated_at: loaded.updated_at });
+        setMessages(loaded.messages.length > 0 ? loaded.messages : [{ role: "assistant", content: GREETING }]);
+      }
+    } catch (error) {
+      console.warn("chat session could not be loaded", error);
     }
   }
 
@@ -174,7 +174,7 @@ export function ManzilAssistant() {
               )}
             >
               {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
-              {!m.content && streaming && <Loader2 className="h-4 w-4 animate-spin" />}
+              {!m.content && streaming && <ChatThinkingIndicator className="text-saffron" />}
             </div>
           </div>
         ))}

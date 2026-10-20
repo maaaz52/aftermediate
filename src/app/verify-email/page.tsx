@@ -8,13 +8,11 @@ import { Brand } from "@/components/brand";
 import { PixelButton } from "@/components/ui/pixel-button";
 import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
-import { useAuth } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 
 function VerifyEmailForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { signInEmail } = useAuth();
 
   const email = searchParams.get("email") ?? "";
 
@@ -60,21 +58,11 @@ function VerifyEmailForm() {
     setBusy(true);
     setError(null);
 
-    // The password the user typed at signup. Sent to /api/otp/verify so the
-    // account's password is set to it after the code is confirmed (this also
-    // lets signup double as a reset for an already-registered email).
-    let pending: { email?: string; password?: string } | null = null;
-    try {
-      pending = JSON.parse(sessionStorage.getItem("otp_pending") || "null");
-    } catch {
-      pending = null;
-    }
-
     try {
       const res = await fetch("/api/otp/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, code, password: pending?.password || undefined }),
+        body: JSON.stringify({ email, code }),
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok) {
@@ -84,16 +72,7 @@ function VerifyEmailForm() {
         return;
       }
       setVerified(true);
-      sessionStorage.removeItem("otp_pending");
-
-      if (pending?.password) {
-        const r = await signInEmail(pending.email || email, pending.password);
-        if (!r.error) {
-          router.push("/onboard");
-          return;
-        }
-      }
-      router.push("/login");
+      router.push("/login?verified=1");
     } finally {
       setBusy(false);
     }
@@ -160,11 +139,10 @@ function VerifyEmailForm() {
                   </div>
                 </div>
                 <p className="mt-6 text-sm leading-relaxed text-muted">
-                  Your account is confirmed. Let&apos;s set up your roadmap — we&apos;re taking you to
-                  onboarding now.
+                  Your account is confirmed. Sign in with your password to continue to onboarding.
                 </p>
-                <PixelButton size="lg" className="mt-7 w-full" onClick={() => router.push("/onboard")}>
-                  Start onboarding
+                <PixelButton size="lg" className="mt-7 w-full" onClick={() => router.push("/login?verified=1")}>
+                  Continue to sign in
                 </PixelButton>
               </>
             ) : (

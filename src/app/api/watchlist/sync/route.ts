@@ -1,6 +1,7 @@
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody, requireAuth } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { parseWatchlist } from "@/lib/watchlist-validation";
 
 export const runtime = "nodejs";
 
@@ -17,24 +18,22 @@ export async function POST(req: Request) {
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
 
-    if (!checkRateLimit(`watchlist-sync:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+    if (!(await checkRateLimit(`watchlist-sync:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
       return jsonError("Too many requests. Try again in a moment.", 429);
     }
 
     const bodyResult = await parseJsonBody(req, MAX_PAYLOAD_CHARS);
     if (!bodyResult.ok) return bodyResult.error;
 
-    const watchlist = (bodyResult.value as { watchlist?: unknown })?.watchlist;
-    if (!Array.isArray(watchlist)) {
-      return jsonError("watchlist must be an array", 400);
-    }
-    if (watchlist.length > MAX_ENTRIES) {
-      return jsonError(`watchlist cannot exceed ${MAX_ENTRIES} entries`, 400);
-    }
+    const parsed = parseWatchlist(
+      (bodyResult.value as { watchlist?: unknown } | null)?.watchlist,
+      MAX_ENTRIES
+    );
+    if (!parsed.ok) return jsonError(parsed.error, 400);
 
     const { error } = await supabase
       .from("profiles")
-      .update({ watchlist })
+      .update({ watchlist: parsed.value })
       .eq("id", user.id);
 
     if (error) {

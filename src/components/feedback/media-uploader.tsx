@@ -5,6 +5,7 @@ import { FileUp, X } from "lucide-react";
 import { mediaKindFor, validateMedia, type MediaKind } from "@/lib/feedback-model";
 
 export type MediaItem = { file: File; kind: MediaKind; url: string };
+const MAX_FILES = 5;
 
 export function MediaUploader({
   items,
@@ -17,6 +18,10 @@ export function MediaUploader({
 
   const addFiles = (files: FileList | null) => {
     if (!files) return;
+    if (items.length >= MAX_FILES) {
+      setError(`Attach no more than ${MAX_FILES} files.`);
+      return;
+    }
     let sawError = false;
     const next: MediaItem[] = [];
     for (const f of Array.from(files)) {
@@ -28,7 +33,12 @@ export function MediaUploader({
       }
       const kind = mediaKindFor(f)!;
       const url = URL.createObjectURL(f);
-      next.push({ file: f, kind, url });
+      if (items.length + next.length < MAX_FILES) next.push({ file: f, kind, url });
+      else {
+        URL.revokeObjectURL(url);
+        sawError = true;
+        setError(`Attach no more than ${MAX_FILES} files.`);
+      }
     }
     if (next.length) {
       if (!sawError) setError(null);

@@ -202,7 +202,7 @@ export const abroadChatbotKnowledge: {
 			title: "Which Test for Which Country",
 			facts: [
 				{
-					text: "IELTS Academic is the most widely accepted English test across all 13 destinations on this site; it costs around PKR 75,600 in Pakistan (2026), is valid for 2 years, and 7.0+ overall is competitive for top universities.",
+					text: "IELTS Academic is the most widely accepted English test across all 17 destinations on this site; it costs around PKR 75,600 in Pakistan (2026), is valid for 2 years, and 7.0+ overall is competitive for top universities.",
 					source: "https://www.britishcouncil.pk/exam/ielts",
 				},
 				{

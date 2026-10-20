@@ -101,7 +101,12 @@ export default function LoginPage() {
   const [agreed, setAgreed] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [googleBusy, setGoogleBusy] = React.useState(false);
-  const [message, setMessage] = React.useState<{ type: "ok" | "err"; text: string } | null>(null);
+  const [message, setMessage] = React.useState<{ type: "ok" | "err"; text: string } | null>(() => {
+    if (typeof window === "undefined") return null;
+    return new URLSearchParams(window.location.search).get("verified") === "1"
+      ? { type: "ok", text: "Email verified. Sign in with your password to continue." }
+      : null;
+  });
 
   React.useEffect(() => {
     if (user) router.push(mode === "signup" ? "/onboard" : "/dashboard");
@@ -129,8 +134,6 @@ export default function LoginPage() {
       const r = await signUpEmail(email, password, { name: name.trim() || undefined });
       if (r.error) setMessage({ type: "err", text: r.error });
       else if (r.needsConfirm) {
-        // Carry email + password to the verify page so we can auto-login after the OTP check.
-        sessionStorage.setItem("otp_pending", JSON.stringify({ email: r.email, password }));
         router.push(`/verify-email?email=${encodeURIComponent(r.email || email)}`);
       } else router.push("/onboard");
     }

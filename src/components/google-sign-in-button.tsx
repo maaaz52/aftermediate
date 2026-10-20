@@ -47,25 +47,31 @@ export function GoogleSignInButton({
   onError?: (error: string) => void;
 }) {
   const containerRef = React.useRef<HTMLDivElement>(null);
-  const [scriptLoaded, setScriptLoaded] = React.useState(false);
+  const [scriptLoaded, setScriptLoaded] = React.useState(
+    () => typeof window !== "undefined" && Boolean(window.google?.accounts?.id)
+  );
 
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.google?.accounts?.id) {
-      setScriptLoaded(true);
-      return;
+    if (window.google?.accounts?.id) return;
+
+    const existing = document.querySelector<HTMLScriptElement>('script[data-aftermediate-google-sign-in]');
+    const script = existing ?? document.createElement("script");
+    const loaded = () => setScriptLoaded(true);
+    const failed = () => onError?.("Could not load Google sign-in.");
+    script.addEventListener("load", loaded);
+    script.addEventListener("error", failed);
+    if (!existing) {
+      script.dataset.aftermediateGoogleSignIn = "true";
+      script.src = "https://accounts.google.com/gsi/client";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
     }
 
-    const script = document.createElement("script");
-    script.src = "https://accounts.google.com/gsi/client";
-    script.async = true;
-    script.defer = true;
-    script.onload = () => setScriptLoaded(true);
-    script.onerror = () => onError?.("Could not load Google sign-in.");
-    document.head.appendChild(script);
-
     return () => {
-      document.head.removeChild(script);
+      script.removeEventListener("load", loaded);
+      script.removeEventListener("error", failed);
     };
   }, [onError]);
 

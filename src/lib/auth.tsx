@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import type { Session, User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
 
@@ -27,6 +28,7 @@ interface AuthCtx {
 const Ctx = React.createContext<AuthCtx | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
   const supabase = React.useMemo(() => createClient(), []);
   const [session, setSession] = React.useState<Session | null>(null);
   const [loading, setLoading] = React.useState(true);
@@ -40,13 +42,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => sub.subscription.unsubscribe();
   }, [supabase]);
 
-  const signInEmail = async (email: string, password: string) => {
+  const signInEmail = React.useCallback(async (email: string, password: string) => {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     return error ? { error: error.message } : {};
-  };
+  }, [supabase]);
 
-  const signUpEmail = async (email: string, password: string, data?: SignUpData) => {
-    // Custom OTP flow: the server creates the (unconfirmed) user and emails a 6-digit code.
+  const signUpEmail = React.useCallback(async (email: string, password: string, data?: SignUpData) => {
+    // The server stores the password only in Supabase Auth, then emails a
+    // single-use code that confirms the already-created pending account.
     const res = await fetch("/api/otp/send", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -55,9 +58,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const json = await res.json().catch(() => ({}));
     if (!res.ok) return { error: json.error || "Could not start sign-up. Try again." };
     return { needsConfirm: true, email };
-  };
+  }, []);
 
-  const signInGoogle = async (idToken: string) => {
+  const signInGoogle = React.useCallback(async (idToken: string) => {
     // Direct Google sign-in: Google (via GIS) already verified the ID token, so
     // Supabase only issues a session from it — no Supabase OAuth redirect page.
     const { error } = await supabase.auth.signInWithIdToken({
@@ -65,9 +68,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       token: idToken,
     });
     return error ? { error: error.message } : {};
-  };
+  }, [supabase]);
 
-  const signOut = async () => {
+  const signOut = React.useCallback(async () => {
     await supabase.auth.signOut();
     // Never leave the previous student's local profile behind for the next
     // person on this device.
@@ -77,17 +80,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch {
       /* ignore */
     }
-    // Force a full navigation to the public landing page so the session is
-    // cleared and no protected UI or client state lingers. Works from any route.
-    window.location.assign("/");
-  };
+    router.replace("/");
+    router.refresh();
+  }, [router, supabase]);
 
-  const resetPassword = async (email: string) => {
+  const resetPassword = React.useCallback(async (email: string) => {
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${window.location.origin}/reset-password`,
     });
     return error ? { error: error.message } : {};
-  };
+  }, [supabase]);
 
   const value = React.useMemo<AuthCtx>(
     () => ({
@@ -100,7 +102,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       signOut,
       resetPassword,
     }),
-    [session, loading]
+    [session, loading, signInEmail, signUpEmail, signInGoogle, signOut, resetPassword]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

@@ -128,34 +128,6 @@ function DetailPanel({
   );
 }
 
-// ── Empty States ──
-
-function EmptyStateNoStream() {
-  return (
-    <div className="card-glass rounded-2xl p-5">
-      <div className="text-[11px] font-semibold uppercase tracking-widest text-faint">Entry-test heatmap</div>
-      <div className="mt-8 flex flex-col items-center gap-3 text-center">
-        <span className="text-2xl">📋</span>
-        <p className="text-sm text-ink">Set your stream to see which subjects appear most in entry tests</p>
-        <a href="/onboard" className="text-xs font-medium text-saffron hover:underline">Complete your profile →</a>
-      </div>
-    </div>
-  );
-}
-
-function EmptyStateNoTest() {
-  return (
-    <div className="card-glass rounded-2xl p-5">
-      <div className="text-[11px] font-semibold uppercase tracking-widest text-faint">Entry-test heatmap</div>
-      <div className="mt-8 flex flex-col items-center gap-3 text-center">
-        <span className="text-2xl">📋</span>
-        <p className="text-sm text-ink">We don&apos;t have entry-test data for your stream yet</p>
-        <Link href="/pakistan/self-assessment" className="text-xs font-medium text-saffron hover:underline">Practice questions →</Link>
-      </div>
-    </div>
-  );
-}
-
 // ── Main Widget ──
 
 export function EntryTestHeatmap() {

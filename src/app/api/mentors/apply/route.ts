@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { parseJsonBody } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export const runtime = "nodejs";
 
@@ -19,7 +20,7 @@ const IP_WINDOW_MS = 60 * 60 * 1000;
 export async function POST(req: Request) {
   try {
     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-    if (!checkRateLimit(`mentor-apply:${ip}`, IP_APPLY_MAX, IP_WINDOW_MS)) {
+    if (!(await checkRateLimit(`mentor-apply:${ip}`, IP_APPLY_MAX, IP_WINDOW_MS))) {
       return jsonError("Too many applications from this device. Try again later.", 429);
     }
 
@@ -46,8 +47,25 @@ export async function POST(req: Request) {
     if (!institution || !degree || !field || !bio || !topics || !socialLink) {
       return jsonError("All fields are required.", 400);
     }
+    if (
+      institution.length > 200 ||
+      degree.length > 160 ||
+      field.length > 160 ||
+      bio.length > 5000 ||
+      topics.length > 2000 ||
+      socialLink.length > 500
+    ) {
+      return jsonError("One or more fields are too long.", 400);
+    }
+    try {
+      const url = new URL(socialLink);
+      if (url.protocol !== "http:" && url.protocol !== "https:") throw new Error("unsafe protocol");
+    } catch {
+      return jsonError("Enter a valid public profile link.", 400);
+    }
 
-    const { error } = await supabase.rpc("insert_mentor_application", {
+    const admin = createAdminClient();
+    const { error } = await admin.rpc("insert_mentor_application", {
       p_user_id: user?.id ?? null,
       p_name: name,
       p_email: email,

@@ -61,7 +61,6 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ id
   const s = getScholarship(id);
   if (!s) notFound();
 
-  const countryLabels = s.countries.map(countryLabel).join(", ");
   const levelLabel = LEVEL_LABEL[s.level] ?? s.level;
   const catLabel = CATEGORY_LABEL[s.category] ?? s.category;
 

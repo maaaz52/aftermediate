@@ -39,39 +39,66 @@ export function SessionSidebar({
   const [loading, setLoading] = React.useState(true);
   const [editingId, setEditingId] = React.useState<string | null>(null);
   const [editTitle, setEditTitle] = React.useState("");
+  const [error, setError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     if (!open) return;
-    setLoading(true);
-    listSessions(persona).then((s) => {
-      setSessions(s);
-      setLoading(false);
-    });
+    let cancelled = false;
+    listSessions(persona)
+      .then((items) => {
+        if (!cancelled) setSessions(items);
+      })
+      .catch((cause) => {
+        console.warn("chat session list failed", cause);
+        if (!cancelled) setError("Could not load saved chats.");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [open, persona]);
 
   async function handleNew() {
-    const session = await createSession(persona);
-    setSessions((prev) => [session, ...prev]);
-    onSelect(session.id);
-    onNew();
-    onClose();
+    try {
+      setError(null);
+      const session = await createSession(persona);
+      setSessions((prev) => [session, ...prev]);
+      onSelect(session.id);
+      onNew();
+      onClose();
+    } catch (cause) {
+      console.warn("chat session create failed", cause);
+      setError("Could not create a saved chat.");
+    }
   }
 
   async function handleDelete(id: string) {
-    await deleteSession(id);
-    setSessions((prev) => prev.filter((s) => s.id !== id));
-    if (activeSessionId === id) {
-      onNew();
+    try {
+      setError(null);
+      await deleteSession(id);
+      setSessions((prev) => prev.filter((s) => s.id !== id));
+      if (activeSessionId === id) onNew();
+    } catch (cause) {
+      console.warn("chat session delete failed", cause);
+      setError("Could not delete that chat.");
     }
   }
 
   async function handleRename(id: string) {
     if (!editTitle.trim()) return;
-    await renameSession(id, editTitle.trim());
-    setSessions((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, title: editTitle.trim() } : s))
-    );
-    setEditingId(null);
+    try {
+      setError(null);
+      await renameSession(id, editTitle.trim());
+      setSessions((prev) =>
+        prev.map((s) => (s.id === id ? { ...s, title: editTitle.trim().slice(0, 80) } : s))
+      );
+      setEditingId(null);
+    } catch (cause) {
+      console.warn("chat session rename failed", cause);
+      setError("Could not rename that chat.");
+    }
   }
 
   if (!open) return null;
@@ -94,6 +121,8 @@ export function SessionSidebar({
           <MessageSquarePlus className="h-4 w-4" />
           New chat
         </button>
+
+        {error && <p className="mx-3 mt-2 text-xs text-danger">{error}</p>}
 
         <div className="mt-2 flex-1 overflow-y-auto px-2">
           {loading ? (

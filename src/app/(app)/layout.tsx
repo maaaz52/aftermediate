@@ -11,8 +11,6 @@ import { TourPrompt } from "@/components/tour/tour-prompt";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useAuth } from "@/lib/auth";
 
-const PUBLIC_PATHS = new Set(["/", "/login", "/coming-soon", "/verify-email"]);
-
 function AppShellSkeleton() {
   return (
     <div className="flex min-h-screen">
@@ -58,23 +56,11 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
   const router = useRouter();
 
-  // Prevent browser back from reaching public pages once inside the dashboard.
   React.useEffect(() => {
-    if (!user) return;
-    // Replace the current history entry so the first back press doesn't leave.
-    history.replaceState(null, "", window.location.href);
+    if (!loading && !user) router.replace("/login");
+  }, [loading, user, router]);
 
-    const onPop = () => {
-      if (PUBLIC_PATHS.has(window.location.pathname)) {
-        history.pushState(null, "", "/dashboard");
-        router.replace("/dashboard");
-      }
-    };
-    window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
-  }, [user, router]);
-
-  if (loading) {
+  if (loading || !user) {
     return <AppShellSkeleton />;
   }
 

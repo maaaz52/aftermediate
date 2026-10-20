@@ -3,53 +3,37 @@ import universities from "@/data/universities.json";
 import type { University } from "@/lib/types";
 import { jsonError, jsonOk } from "@/lib/api-response";
 import { checkRateLimit } from "@/lib/rate-limit";
-import { requireAuth } from "@/lib/http";
+import { parseJsonBody, requireAuth } from "@/lib/http";
+import { parseWatchlist } from "@/lib/watchlist-validation";
 
 export const runtime = "nodejs";
 
-/** Keep the parsed watchlist param bounded — it arrives in the URL, not a body. */
-const MAX_PARAM_CHARS = 200_000;
+const MAX_BODY_BYTES = 64 * 1024;
 const MAX_ENTRIES = 50;
-/** Allow 30 checks per user per minute — the dashboard polls every few seconds. */
+/** Allow 30 checks per user per minute; the dashboard normally polls every five minutes. */
 const RATE_MAX = 30;
 const RATE_WINDOW_MS = 60 * 1000;
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
   try {
     const auth = await requireAuth();
     if (!auth.ok) return auth.error;
     const { user } = auth;
 
-    if (!checkRateLimit(`watchlist-check:${user.id}`, RATE_MAX, RATE_WINDOW_MS)) {
+    if (!(await checkRateLimit(`watchlist-check:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
       return jsonError("Too many requests. Try again in a moment.", 429);
     }
 
-    const url = new URL(req.url);
-    const watchlistParam = url.searchParams.get("watchlist");
-    if (!watchlistParam) {
-      return jsonError("watchlist query param required", 400);
-    }
-    if (watchlistParam.length > MAX_PARAM_CHARS) {
-      return jsonError("watchlist query param is too large", 413);
-    }
-
-    let watchlist: unknown[];
-    try {
-      watchlist = JSON.parse(watchlistParam);
-    } catch {
-      return jsonError("watchlist must be valid JSON array", 400);
-    }
-
-    if (!Array.isArray(watchlist)) {
-      return jsonError("watchlist must be an array", 400);
-    }
-    if (watchlist.length > MAX_ENTRIES) {
-      return jsonError(`watchlist cannot exceed ${MAX_ENTRIES} entries`, 400);
-    }
+    const bodyResult = await parseJsonBody(req, MAX_BODY_BYTES);
+    if (!bodyResult.ok) return bodyResult.error;
+    const parsed = parseWatchlist(
+      (bodyResult.value as { watchlist?: unknown } | null)?.watchlist,
+      MAX_ENTRIES
+    );
+    if (!parsed.ok) return jsonError(parsed.error, 400);
 
     const unis = universities as unknown as University[];
-    const entries = watchlist.map((entry: unknown) => {
-      const e = entry as { id: string; universityId: string; programName: string; lastKnownMerit: number | null };
+    const entries = parsed.value.map((e) => {
       const current = findProgram(unis, e.universityId, e.programName);
       return {
         id: e.id,

@@ -20,7 +20,7 @@ export default function AbroadCountriesPage() {
         className="animate-reveal mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
         style={{ animationDelay: "60ms" }}
       >
-        Compare 13 study destinations, side by side.
+        Compare 17 study destinations, side by side.
       </h1>
       <p
         className="animate-reveal mt-2 max-w-xl text-muted"

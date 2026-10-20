@@ -38,18 +38,8 @@ export const AI_TIMEOUT_MS = 20_000;
 /** One retry, not two: a spike that survives a fast retry needs a later request, not a longer one. */
 export const AI_MAX_RETRIES = 1;
 
-export async function generateStructured<T>(
-  prompt: string,
-  system: string
-): Promise<T> {
-  const { text } = await generateText({
-    model,
-    system,
-    prompt,
-    maxRetries: AI_MAX_RETRIES,
-    abortSignal: AbortSignal.timeout(AI_TIMEOUT_MS),
-  });
-  const cleaned = text.replace(/```json|```/g, "").trim();
+export function parseStructuredJson(text: string): unknown {
+  const cleaned = text.replace(/```json|```/gi, "").trim();
   const start = cleaned.indexOf("{");
   const end = cleaned.lastIndexOf("}");
   // A prose reply ("I cannot help with that") has no brace, and the old
@@ -58,5 +48,21 @@ export async function generateStructured<T>(
   if (start === -1 || end <= start) {
     throw new Error(`Model returned no JSON object (${text.length} chars)`);
   }
-  return JSON.parse(cleaned.slice(start, end + 1)) as T;
+  return JSON.parse(cleaned.slice(start, end + 1)) as unknown;
+}
+
+export async function generateStructured<T = unknown>(
+  prompt: string,
+  system: string,
+  validate?: (value: unknown) => T
+): Promise<T> {
+  const { text } = await generateText({
+    model,
+    system,
+    prompt,
+    maxRetries: AI_MAX_RETRIES,
+    abortSignal: AbortSignal.timeout(AI_TIMEOUT_MS),
+  });
+  const value = parseStructuredJson(text);
+  return validate ? validate(value) : (value as T);
 }

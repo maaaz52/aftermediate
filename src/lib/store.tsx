@@ -31,7 +31,7 @@ export interface StudentProfile {
   watchlist: WatchlistEntry[];
 }
 
-const defaultProfile: StudentProfile = {
+export const DEFAULT_PROFILE: StudentProfile = {
   name: "",
   avatarStyle: "adventurer",
   avatarSeed: "",
@@ -61,6 +61,7 @@ interface Store {
   reset: () => void;
   hydrated: boolean;
   hydrate: (remote: Partial<StudentProfile>) => void;
+  beginHydration: () => void;
 }
 
 const Ctx = React.createContext<Store | null>(null);
@@ -72,16 +73,30 @@ function isUsableProfile(raw: unknown): raw is Partial<StudentProfile> {
   return !!raw && typeof raw === "object" && !Array.isArray(raw);
 }
 
+export function normalizeProfile(profile: Partial<StudentProfile>): StudentProfile {
+  return {
+    ...DEFAULT_PROFILE,
+    ...profile,
+    marks: { ...DEFAULT_PROFILE.marks, ...(profile.marks ?? {}) },
+    interests: Array.isArray(profile.interests) ? profile.interests : [],
+    skills: Array.isArray(profile.skills) ? profile.skills : [],
+    education: Array.isArray(profile.education) ? profile.education : [],
+    quiz: profile.quiz && typeof profile.quiz === "object" ? profile.quiz : {},
+    practice: Array.isArray(profile.practice) ? profile.practice : [],
+    watchlist: Array.isArray(profile.watchlist) ? profile.watchlist : [],
+  };
+}
+
 export function StudentProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfile] = React.useState<StudentProfile>(() => {
-    if (typeof window === "undefined") return defaultProfile;
+    if (typeof window === "undefined") return DEFAULT_PROFILE;
     try {
       const raw = window.localStorage.getItem("aftermediate:profile");
-      if (!raw || raw.length > PROFILE_MAX_CHARS) return defaultProfile;
+      if (!raw || raw.length > PROFILE_MAX_CHARS) return DEFAULT_PROFILE;
       const parsed: unknown = JSON.parse(raw);
-      return isUsableProfile(parsed) ? { ...defaultProfile, ...parsed } : defaultProfile;
+      return isUsableProfile(parsed) ? normalizeProfile(parsed) : DEFAULT_PROFILE;
     } catch {
-      return defaultProfile;
+      return DEFAULT_PROFILE;
     }
   });
 
@@ -90,23 +105,29 @@ export function StudentProvider({ children }: { children: React.ReactNode }) {
       const next = { ...prev, ...patch };
       if (typeof window !== "undefined" && JSON.stringify(next).length <= PROFILE_MAX_CHARS) {
         window.localStorage.setItem("aftermediate:profile", JSON.stringify(next));
+        window.localStorage.setItem("aftermediate:profile:updatedAt", new Date().toISOString());
       }
       return next;
     });
   }, []);
 
   const reset = React.useCallback(() => {
-    setProfile(defaultProfile);
+    setProfile(DEFAULT_PROFILE);
     if (typeof window !== "undefined") {
       window.localStorage.removeItem("aftermediate:profile");
+      window.localStorage.removeItem("aftermediate:profile:updatedAt");
     }
   }, []);
 
   const [hydrated, setHydrated] = React.useState(false);
 
+  const beginHydration = React.useCallback(() => {
+    setHydrated(false);
+  }, []);
+
   const hydrate = React.useCallback((remote: Partial<StudentProfile>) => {
-    setProfile((prev) => {
-      const next = { ...prev, ...remote };
+    setProfile(() => {
+      const next = normalizeProfile(remote);
       if (typeof window !== "undefined" && JSON.stringify(next).length <= PROFILE_MAX_CHARS) {
         window.localStorage.setItem("aftermediate:profile", JSON.stringify(next));
       }
@@ -116,8 +137,8 @@ export function StudentProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const value = React.useMemo<Store>(
-    () => ({ profile, update, reset, hydrated, hydrate }),
-    [profile, update, reset, hydrated, hydrate]
+    () => ({ profile, update, reset, hydrated, hydrate, beginHydration }),
+    [profile, update, reset, hydrated, hydrate, beginHydration]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

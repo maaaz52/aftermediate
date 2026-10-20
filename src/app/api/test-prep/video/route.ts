@@ -38,7 +38,7 @@ export async function GET(req: Request) {
 
     // Signed URLs are cheap but per-user; a scripted client shouldn't be able
     // to mint thousands. 20/min is generous for a student browsing lectures.
-    if (!checkRateLimit(`r2:${user.id}`, 20, 60_000)) {
+    if (!(await checkRateLimit(`r2:${user.id}`, 20, 60_000))) {
       return jsonError("Too many requests", 429);
     }
 

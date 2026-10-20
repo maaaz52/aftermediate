@@ -39,20 +39,18 @@ function scoreTone(score: number) {
 export function ValuableCountries() {
   const { profile } = useStudent();
   const stream = (profile.stream ?? "pre-engineering") as Stream;
-  const countries = (demand as Record<Stream, DemandCountry[]>)[stream] ?? [];
+  const countries = (demand as Record<Stream, DemandCountry[]>)[stream];
   const [insights, setInsights] = React.useState<Record<string, string>>(() => getCachedInsights(stream));
 
   React.useEffect(() => {
     // If cache from lazy init is still valid for current stream, skip fetch
-    if (Object.keys(insights).length > 0) {
-      const raw = localStorage.getItem(CACHE_KEY);
-      if (raw) {
-        try {
-          const cached = JSON.parse(raw) as Cached;
-          if (cached.stream === stream && Date.now() - cached.fetchedAt < TTL) return;
-        } catch {
-          /* stale cache — refetch below */
-        }
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (raw) {
+      try {
+        const cached = JSON.parse(raw) as Cached;
+        if (cached.stream === stream && Date.now() - cached.fetchedAt < TTL) return;
+      } catch {
+        /* stale cache — refetch below */
       }
     }
 

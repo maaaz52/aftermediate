@@ -1,4 +1,5 @@
 import { getServerEnv } from "@/lib/server-env";
+import { fetchWithTimeout } from "@/lib/fetch-timeout";
 
 /**
  * Sends email through Resend. Returns a short reason instead of throwing, so
@@ -15,7 +16,7 @@ export async function sendEmail(input: {
   const env = getServerEnv();
   if (!env.resendApiKey) return { ok: false, reason: "not-configured" };
 
-  const res = await fetch("https://api.resend.com/emails", {
+  const res = await fetchWithTimeout("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${env.resendApiKey}`,
@@ -27,7 +28,7 @@ export async function sendEmail(input: {
       subject: input.subject,
       html: input.html,
     }),
-  });
+  }, 10_000);
 
   if (!res.ok) {
     console.error("sendEmail: resend error", await res.text());

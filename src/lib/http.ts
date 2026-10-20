@@ -1,8 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { jsonError } from "@/lib/api-response";
 
-type Supabase = Awaited<ReturnType<typeof createClient>>;
-
 /**
  * Creates a server client and verifies the session in one step, so a route
  * can't forget the signed-out branch. `getUser()` verifies the JWT with

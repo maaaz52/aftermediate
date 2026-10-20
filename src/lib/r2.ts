@@ -20,6 +20,18 @@ function iso8601(date: Date): string {
   return date.toISOString().replace(/[:-]|\.\d{3}/g, "");
 }
 
+/** AWS SigV4 URI encoding preserves path separators but encodes each segment. */
+function awsEncodePath(key: string): string {
+  return key
+    .split("/")
+    .map((segment) =>
+      encodeURIComponent(segment).replace(/[!'()*]/g, (char) =>
+        `%${char.charCodeAt(0).toString(16).toUpperCase()}`
+      )
+    )
+    .join("/");
+}
+
 export interface R2Config {
   accountId: string;
   accessKeyId: string;
@@ -51,7 +63,8 @@ export function presignR2GetUrl(
   const now = opts.date ?? new Date();
   const amzDate = iso8601(now);
   const dateStamp = amzDate.slice(0, 8);
-  const scope = `${dateStamp}/${cfg.accountId}/s3/aws4_request`;
+  const scope = `${dateStamp}/auto/s3/aws4_request`;
+  const encodedKey = awsEncodePath(key);
 
   const canonicalQuery = [
     `X-Amz-Algorithm=AWS4-HMAC-SHA256`,
@@ -64,7 +77,7 @@ export function presignR2GetUrl(
   const canonicalHeaders = `host:${host}\n`;
   const canonicalRequest = [
     "GET",
-    `/${key}`,
+    `/${encodedKey}`,
     canonicalQuery,
     canonicalHeaders,
     "host",
@@ -74,10 +87,10 @@ export function presignR2GetUrl(
   const stringToSign = ["AWS4-HMAC-SHA256", amzDate, scope, sha256(canonicalRequest)].join("\n");
 
   const kDate = hmac(`AWS4${cfg.secretAccessKey}`, dateStamp);
-  const kRegion = hmac(kDate, cfg.accountId);
+  const kRegion = hmac(kDate, "auto");
   const kService = hmac(kRegion, "s3");
   const kSigning = hmac(kService, "aws4_request");
   const signature = createHmac("sha256", kSigning).update(stringToSign).digest("hex");
 
-  return `https://${host}/${key}?${canonicalQuery}&X-Amz-Signature=${signature}`;
+  return `https://${host}/${encodedKey}?${canonicalQuery}&X-Amz-Signature=${signature}`;
 }
