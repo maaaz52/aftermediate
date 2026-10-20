@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import { AuthDialog } from "./auth-dialog";
 import { useAuth } from "@/lib/auth";
 import { MobileMenu } from "./mobile-menu";
+import { SiteSearch } from "./site-search";
 
 export function TopNav() {
   const { user, signOut } = useAuth();
@@ -32,7 +33,10 @@ export function TopNav() {
           <div className="flex items-center gap-2">
             {user ? (
               <>
-                <span className="hidden max-w-[200px] truncate text-sm font-medium text-muted sm:block">
+                <div className="hidden md:block">
+                  <SiteSearch />
+                </div>
+                <span className="hidden max-w-[200px] truncate text-sm font-medium text-muted xl:block">
                   {user.user_metadata?.full_name || user.email}
                 </span>
                 {/* Desktop: show logout */}
