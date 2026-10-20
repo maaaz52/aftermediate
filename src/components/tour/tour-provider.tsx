@@ -263,6 +263,11 @@ export function TourProvider({ children }: { children: React.ReactNode }) {
     (id: TourChapterId) => {
       const total = getChapter(id)?.steps.length ?? 0;
       patchChapter(id, { completed: true, lastStep: total });
+      // React state alone cannot remove Driver.js's DOM-owned popover. Without
+      // this teardown, Finish leaves a shaded, inert overlay over the page.
+      transitionRef.current = true;
+      driverRef.current?.destroy();
+      driverRef.current = null;
       stopPolling();
       runTokenRef.current += 1;
       setActiveChapter(null);

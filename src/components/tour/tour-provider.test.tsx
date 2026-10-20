@@ -162,6 +162,7 @@ it("marks the chapter complete after the final step and persists it", async () =
   }
 
   expect(screen.getByTestId("completed").textContent).toBe("1");
+  expect(mocks.destroy).toHaveBeenCalled();
   const saved = JSON.parse(window.localStorage.getItem("aftermediate:tour")!);
   expect(saved.chapters["getting-around"].completed).toBe(true);
 });
