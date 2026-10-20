@@ -1,13 +1,53 @@
 import { google } from "@ai-sdk/google";
-import { generateText, streamText } from "ai";
+import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+import { generateText, streamText, type LanguageModel } from "ai";
 import { buildSystemPrompt, type ChatPromptInput } from "@/lib/chat-prompt";
 import { isPersona } from "@/lib/chat-request";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
+export const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct";
 
 export const model = google(MODEL);
 
+const nvidiaApiKey = process.env.NVIDIA_API_KEY;
+const nvidia = nvidiaApiKey
+  ? createOpenAICompatible({
+      name: "nvidia",
+      apiKey: nvidiaApiKey,
+      baseURL: "https://integrate.api.nvidia.com/v1",
+    })
+  : null;
+
 export type ChatContext = ChatPromptInput;
+
+function nvidiaModel(): LanguageModel | null {
+  return nvidia?.languageModel(NVIDIA_MODEL) ?? null;
+}
+
+function shouldUseNvidiaFallback(error: unknown): boolean {
+  if (!error || typeof error !== "object") return true;
+  const status = "statusCode" in error && typeof error.statusCode === "number"
+    ? error.statusCode
+    : "status" in error && typeof error.status === "number"
+      ? error.status
+      : undefined;
+
+  // Do not hide a malformed request or an invalid Gemini credential by
+  // switching providers. NVIDIA is reserved for transient upstream failures.
+  return status === undefined || status === 408 || status === 429 || status >= 500;
+}
+
+async function withNvidiaFallback<T>(run: (languageModel: LanguageModel) => Promise<T>): Promise<T> {
+  try {
+    return await run(model);
+  } catch (error) {
+    if (!shouldUseNvidiaFallback(error)) throw error;
+    const fallback = nvidiaModel();
+    if (!fallback) throw error;
+    console.warn("Gemini request failed; retrying with NVIDIA fallback", { model: NVIDIA_MODEL });
+    return run(fallback);
+  }
+}
 
 export function streamChat(
   messages: { role: "user" | "assistant"; content: string }[],
@@ -16,12 +56,55 @@ export function streamChat(
   if (!isPersona(context.persona)) {
     throw new Error(`Unknown persona: ${String(context.persona)}`);
   }
-  return streamText({
-    model,
-    system: buildSystemPrompt(context),
-    messages,
-    abortSignal: AbortSignal.timeout(60_000),
+  const system = buildSystemPrompt(context);
+  const encoder = new TextEncoder();
+
+  const body = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      let sentText = false;
+      const streamProvider = async (languageModel: LanguageModel) => {
+        const result = streamText({
+          model: languageModel,
+          system,
+          messages,
+          maxRetries: AI_MAX_RETRIES,
+          abortSignal: AbortSignal.timeout(60_000),
+        });
+        for await (const text of result.textStream) {
+          sentText = true;
+          controller.enqueue(encoder.encode(text));
+        }
+      };
+
+      try {
+        await streamProvider(model);
+      } catch (error) {
+        if (sentText || !shouldUseNvidiaFallback(error)) {
+          controller.error(error);
+          return;
+        }
+        const fallback = nvidiaModel();
+        if (!fallback) {
+          controller.error(error);
+          return;
+        }
+        try {
+          console.warn("Gemini stream failed before output; retrying with NVIDIA fallback", { model: NVIDIA_MODEL });
+          await streamProvider(fallback);
+        } catch (fallbackError) {
+          controller.error(fallbackError);
+          return;
+        }
+      }
+      controller.close();
+    },
   });
+
+  return {
+    toTextStreamResponse: () => new Response(body, {
+      headers: { "content-type": "text/plain; charset=utf-8" },
+    }),
+  };
 }
 
 /**
@@ -56,13 +139,13 @@ export async function generateStructured<T = unknown>(
   system: string,
   validate?: (value: unknown) => T
 ): Promise<T> {
-  const { text } = await generateText({
-    model,
+  const { text } = await withNvidiaFallback((languageModel) => generateText({
+    model: languageModel,
     system,
     prompt,
     maxRetries: AI_MAX_RETRIES,
     abortSignal: AbortSignal.timeout(AI_TIMEOUT_MS),
-  });
+  }));
   const value = parseStructuredJson(text);
   return validate ? validate(value) : (value as T);
 }

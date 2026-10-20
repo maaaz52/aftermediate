@@ -13,6 +13,8 @@ export interface ServerEnv {
   resendApiKey: string | undefined;
   otpHmacSecret: string | undefined;
   googleModel: string;
+  nvidiaApiKey: string | undefined;
+  nvidiaModel: string;
 }
 
 function required(name: string): string {
@@ -28,6 +30,8 @@ export function getServerEnv(): ServerEnv {
     resendApiKey: process.env.RESEND_API_KEY,
     otpHmacSecret: process.env.OTP_HMAC_SECRET,
     googleModel: process.env.GOOGLE_MODEL || "gemini-flash-latest",
+    nvidiaApiKey: process.env.NVIDIA_API_KEY,
+    nvidiaModel: process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct",
   };
 }
 

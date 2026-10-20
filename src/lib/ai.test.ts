@@ -1,6 +1,16 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-const { generateText } = vi.hoisted(() => ({ generateText: vi.fn() }));
+const { generateText, createOpenAICompatible } = vi.hoisted(() => {
+  process.env.NVIDIA_API_KEY = "nvidia-test-key";
+  const nvidiaProvider = Object.assign(() => "nvidia-model", { languageModel: () => "nvidia-model" });
+  return {
+    generateText: vi.fn(),
+    createOpenAICompatible: vi.fn((options: unknown) => {
+      void options;
+      return nvidiaProvider;
+    }),
+  };
+});
 
 vi.mock("ai", () => ({
   generateText: (...args: unknown[]) => generateText(...args),
@@ -8,6 +18,9 @@ vi.mock("ai", () => ({
 }));
 
 vi.mock("@ai-sdk/google", () => ({ google: () => "mock-model" }));
+vi.mock("@ai-sdk/openai-compatible", () => ({
+  createOpenAICompatible: (options: unknown) => createOpenAICompatible(options),
+}));
 
 import { generateStructured } from "@/lib/ai";
 
@@ -79,5 +92,28 @@ describe("generateStructured", () => {
         return value;
       })
     ).rejects.toThrow("invalid shape");
+  });
+
+  it("uses NVIDIA only after a retryable Gemini failure", async () => {
+    generateText
+      .mockRejectedValueOnce({ statusCode: 503 })
+      .mockResolvedValueOnce({ text: '{"ok":true}' });
+
+    await expect(generateStructured("prompt", "system")).resolves.toEqual({ ok: true });
+
+    expect(generateText).toHaveBeenCalledTimes(2);
+    expect(generateText.mock.calls[0][0].model).toBe("mock-model");
+    expect(generateText.mock.calls[1][0].model).toBe("nvidia-model");
+    expect(createOpenAICompatible).toHaveBeenCalledWith(expect.objectContaining({
+      baseURL: "https://integrate.api.nvidia.com/v1",
+      name: "nvidia",
+    }));
+  });
+
+  it("does not send invalid Gemini requests to NVIDIA", async () => {
+    generateText.mockRejectedValue({ statusCode: 400 });
+
+    await expect(generateStructured("prompt", "system")).rejects.toMatchObject({ statusCode: 400 });
+    expect(generateText).toHaveBeenCalledTimes(1);
   });
 });
