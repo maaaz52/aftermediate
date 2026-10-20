@@ -1,6 +1,9 @@
 /**
  * Shared fixed-window limiter backed by Supabase in production. Tests and
  * local environments without server credentials use the in-process fallback.
+ * If Supabase's limiter RPC is temporarily unavailable, preserve application
+ * availability with the same conservative per-instance fallback instead of
+ * taking every protected feature offline.
  */
 
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -62,15 +65,11 @@ export async function checkRateLimit(
     });
     if (error) {
       console.error("rate limit backend failed", error.message);
-      return process.env.NODE_ENV === "production"
-        ? false
-        : checkLocalRateLimit(key, max, windowMs);
+      return checkLocalRateLimit(key, max, windowMs);
     }
     return data === true;
   } catch (error) {
     console.error("rate limit backend failed", error);
-    return process.env.NODE_ENV === "production"
-      ? false
-      : checkLocalRateLimit(key, max, windowMs);
+    return checkLocalRateLimit(key, max, windowMs);
   }
 }
