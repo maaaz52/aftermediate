@@ -108,6 +108,7 @@ export const groups: NavGroup[] = [
     links: [
       { href: "/mentors", label: "Mentor Match", icon: Users, crown: true },
       { href: "/feedback", label: "Your Voice", icon: MessageSquareHeart },
+      { href: "/subscription", label: "Subscription", icon: Crown },
     ],
   },
 ];

@@ -178,4 +178,9 @@ export const SITE_PAGES: SitePage[] = [
     label: "Your Voice",
     purpose: "Share feedback, story or wishlist for the roadmap; vote and see what students want.",
   },
+  {
+    href: "/subscription",
+    label: "Subscription",
+    purpose: "Preview Aftermediate Pro: one PKR 300 plan that includes every crowned page and A.I. tool.",
+  },
 ];
