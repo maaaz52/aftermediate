@@ -8,6 +8,7 @@ import { parseJsonBody } from "@/lib/http";
 import { sendEmail } from "@/lib/email";
 import { hashOtpCode } from "@/lib/otp";
 import { findAuthUserByEmail } from "@/lib/auth-admin";
+import { needsOtpCompatibilityFallback, storeOtpCodeCompat } from "@/lib/otp-storage";
 
 export const runtime = "nodejs";
 
@@ -91,13 +92,30 @@ export async function POST(req: Request) {
     }
 
     const code = generateCode();
-    const { data: stored, error: insertError } = await admin.rpc("store_otp_code", {
+    const expiresAt = new Date(Date.now() + OTP_TTL_MS).toISOString();
+    const codeHash = hashOtpCode(email, code, otpSecret);
+    let { data: stored, error: insertError } = await admin.rpc("store_otp_code", {
       p_email: email,
       p_user_id: authUser.id,
-      p_code_hash: hashOtpCode(email, code, otpSecret),
-      p_expires_at: new Date(Date.now() + OTP_TTL_MS).toISOString(),
+      p_code_hash: codeHash,
+      p_expires_at: expiresAt,
       p_cooldown_seconds: Math.floor(RESEND_COOLDOWN_MS / 1000),
     });
+    if (insertError && needsOtpCompatibilityFallback(insertError)) {
+      console.warn("otp send: using legacy OTP storage while database migration is pending");
+      try {
+        stored = await storeOtpCodeCompat(admin, {
+          email,
+          userId: authUser.id,
+          codeHash,
+          expiresAt,
+          cooldownMs: RESEND_COOLDOWN_MS,
+        });
+        insertError = null;
+      } catch (compatError) {
+        console.error("otp send: compatibility storage failed", compatError);
+      }
+    }
     if (insertError) {
       console.error("otp send: insert error", insertError.message);
       if (createdUserId) await admin.auth.admin.deleteUser(createdUserId);

@@ -1,5 +1,9 @@
 -- Security and data-integrity hardening for the 2026-10-20 audit.
 
+-- The first OTP release did not include this ownership column. Existing
+-- projects need it before the atomic OTP routines below can save a code.
+alter table public.otp_codes add column if not exists user_id uuid;
+
 -- These functions are intentionally callable only with the server-side
 -- service-role key. The caller-provided user id is retained for RPC backwards
 -- compatibility, but ownership is validated by the server route before use.

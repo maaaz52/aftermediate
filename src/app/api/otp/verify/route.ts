@@ -5,6 +5,8 @@ import { hashOtpCode } from "@/lib/otp";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { parseJsonBody } from "@/lib/http";
 import { logSecurity } from "@/lib/security-log";
+import { findAuthUserByEmail } from "@/lib/auth-admin";
+import { consumeOtpCodeCompat, needsOtpCompatibilityFallback } from "@/lib/otp-storage";
 
 export const runtime = "nodejs";
 
@@ -38,22 +40,35 @@ export async function POST(req: Request) {
     }
 
     const admin = createAdminClient();
-    const { data, error } = await admin.rpc("consume_otp_code", {
+    const codeHash = hashOtpCode(email, code, otpSecret);
+    let { data, error } = await admin.rpc("consume_otp_code", {
       p_email: email,
-      p_code_hash: hashOtpCode(email, code, otpSecret),
+      p_code_hash: codeHash,
       p_max_attempts: MAX_ATTEMPTS,
     });
+    if (error && needsOtpCompatibilityFallback(error)) {
+      console.warn("otp verify: using legacy OTP storage while database migration is pending");
+      try {
+        data = await consumeOtpCodeCompat(admin, email, codeHash, MAX_ATTEMPTS);
+        error = null;
+      } catch (compatError) {
+        console.error("otp verify: compatibility storage failed", compatError);
+      }
+    }
     const result = Array.isArray(data) ? data[0] : data;
     if (error) {
       console.error("otp verify: atomic consume failed", error.message);
       return jsonError("Could not verify your account. Try again.", 500);
     }
-    if (!result || result.status !== "verified" || !result.user_id) {
+    if (!result || result.status !== "verified") {
       return jsonError("That code is invalid or has expired. Request a new one.", 400);
     }
 
+    const userId = result.user_id ?? result.userId ?? (await findAuthUserByEmail(email))?.id;
+    if (!userId) return jsonError("That code is invalid or has expired. Request a new one.", 400);
+
     const { data: confirmed, error: confirmError } = await admin.auth.admin.updateUserById(
-      result.user_id,
+      userId,
       { email_confirm: true }
     );
     if (confirmError || !confirmed.user?.email_confirmed_at) {
@@ -61,7 +76,7 @@ export async function POST(req: Request) {
       return jsonError("Could not verify your account. Request a new code.", 500);
     }
 
-    logSecurity("otp.signup", { userId: result.user_id });
+    logSecurity("otp.signup", { userId });
     return jsonOk({ verified: true });
   } catch (err) {
     console.error("otp verify error", err);
