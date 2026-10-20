@@ -54,14 +54,14 @@ export function BecomeMentorModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-ink/40 p-3 sm:p-4" onClick={onClose}>
       <div
-        className="card-glass w-full max-w-lg rounded-2xl p-6"
+        className="card-glass my-auto flex w-full max-w-lg max-h-[calc(100dvh-1.5rem)] flex-col overflow-hidden rounded-2xl p-4 sm:max-h-[calc(100dvh-2rem)] sm:p-6"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-bold text-ink">Become a mentor</h2>
-          <button onClick={onClose} className="text-faint hover:text-ink">
+          <button type="button" onClick={onClose} aria-label="Close mentor application" className="rounded-md p-1 text-faint hover:bg-surface-2 hover:text-ink">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -84,7 +84,7 @@ export function BecomeMentorModal({
             }
             setSubmitted(true);
           }}
-          className="mt-5 space-y-4"
+          className="mt-5 min-h-0 space-y-4 overflow-y-auto pr-1"
         >
           <div>
             <label htmlFor="mentor-name" className="text-xs font-medium text-muted">Full name</label>
