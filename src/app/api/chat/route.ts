@@ -13,6 +13,16 @@ export const maxDuration = 60;
 const RATE_MAX = 30;
 const RATE_WINDOW_MS = 60 * 1000;
 
+type ChatTiming = Record<string, number | string | boolean>;
+
+/**
+ * Deliberately contains timing metadata only. Never add user IDs, prompts,
+ * student context, API keys, or model output to this performance event.
+ */
+function logChatTiming(event: string, timing: ChatTiming) {
+  console.info("chat_performance", JSON.stringify({ event, ...timing }));
+}
+
 /**
  * Everything the bots are allowed to know about a student. Deliberately not
  * `*`: bio, practice, watchlist, education, skills, avatar_style, and
@@ -42,6 +52,7 @@ async function readStudent(supabase: Supabase, userId: string) {
 }
 
 export async function POST(req: Request) {
+  const requestStartedAt = performance.now();
   try {
     // getUser() verifies the JWT with Supabase and may refresh the session,
     // which writes cookies. HTTP cannot set cookies after streaming starts, so
@@ -49,8 +60,18 @@ export async function POST(req: Request) {
     const auth = await requireAuth("Sign in to chat");
     if (!auth.ok) return auth.error;
     const { supabase, user } = auth;
+    const authMs = Math.round(performance.now() - requestStartedAt);
 
-    if (!(await checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS))) {
+    // Authentication must finish before we know the user id. Once it does,
+    // the independent limiter and profile read can overlap.
+    const profileStartedAt = performance.now();
+    const studentPromise = readStudent(supabase, user.id).then((student) => ({
+      student,
+      profileMs: Math.round(performance.now() - profileStartedAt),
+    }));
+    const rateLimitPromise = checkRateLimit(`chat:${user.id}`, RATE_MAX, RATE_WINDOW_MS);
+
+    if (!(await rateLimitPromise)) {
       return jsonError("Too many messages. Try again in a moment.", 429);
     }
 
@@ -63,9 +84,49 @@ export async function POST(req: Request) {
 
     // The student is whatever our records say, taken from the token. A
     // "student" field in this request body is never read.
-    const student = await readStudent(supabase, user.id);
+    const { student, profileMs } = await studentPromise;
+    const retrievalStartedAt = performance.now();
     const { facts, covered } = retrieveForMessages(persona, messages);
-    const result = streamChat(messages, { persona, student, facts, covered });
+    const retrievalMs = Math.round(performance.now() - retrievalStartedAt);
+    const preStreamMs = Math.round(performance.now() - requestStartedAt);
+    const result = streamChat(messages, { persona, student, facts, covered }, {
+      onFirstToken: ({ provider, fallbackUsed, modelTtfbMs }) => {
+        logChatTiming("first_token", {
+          provider,
+          fallbackUsed,
+          authMs,
+          profileMs,
+          retrievalMs,
+          preStreamMs,
+          modelTtfbMs,
+          totalMs: Math.round(performance.now() - requestStartedAt),
+        });
+      },
+      onComplete: ({ provider, fallbackUsed, modelDurationMs }) => {
+        logChatTiming("complete", {
+          provider,
+          fallbackUsed,
+          authMs,
+          profileMs,
+          retrievalMs,
+          preStreamMs,
+          modelDurationMs,
+          totalMs: Math.round(performance.now() - requestStartedAt),
+        });
+      },
+      onError: ({ provider, fallbackUsed, modelDurationMs }) => {
+        logChatTiming("stream_error", {
+          provider,
+          fallbackUsed,
+          authMs,
+          profileMs,
+          retrievalMs,
+          preStreamMs,
+          modelDurationMs,
+          totalMs: Math.round(performance.now() - requestStartedAt),
+        });
+      },
+    });
     return result.toTextStreamResponse();
   } catch (err) {
     console.error("chat error", err);

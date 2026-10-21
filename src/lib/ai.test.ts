@@ -1,10 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-const { generateText, createOpenAICompatible } = vi.hoisted(() => {
+const { generateText, streamText, createOpenAICompatible } = vi.hoisted(() => {
   process.env.NVIDIA_API_KEY = "nvidia-test-key";
   const nvidiaProvider = Object.assign(() => "nvidia-model", { languageModel: () => "nvidia-model" });
   return {
     generateText: vi.fn(),
+    streamText: vi.fn(),
     createOpenAICompatible: vi.fn((options: unknown) => {
       void options;
       return nvidiaProvider;
@@ -14,7 +15,7 @@ const { generateText, createOpenAICompatible } = vi.hoisted(() => {
 
 vi.mock("ai", () => ({
   generateText: (...args: unknown[]) => generateText(...args),
-  streamText: vi.fn(),
+  streamText: (...args: unknown[]) => streamText(...args),
 }));
 
 vi.mock("@ai-sdk/google", () => ({ google: () => "mock-model" }));
@@ -22,7 +23,7 @@ vi.mock("@ai-sdk/openai-compatible", () => ({
   createOpenAICompatible: (options: unknown) => createOpenAICompatible(options),
 }));
 
-import { generateStructured } from "@/lib/ai";
+import { CHAT_MAX_OUTPUT_TOKENS, generateStructured, streamChat } from "@/lib/ai";
 
 type CallOptions = {
   maxRetries?: number;
@@ -36,6 +37,7 @@ describe("generateStructured", () => {
   beforeEach(() => {
     generateText.mock.calls.length = 0;
     generateText.mockReset();
+    streamText.mockReset();
   });
 
   it("bounds the call so an upstream outage cannot hold the request for minutes", async () => {
@@ -115,5 +117,54 @@ describe("generateStructured", () => {
 
     await expect(generateStructured("prompt", "system")).rejects.toMatchObject({ statusCode: 400 });
     expect(generateText).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("streamChat", () => {
+  beforeEach(() => {
+    streamText.mockReset();
+  });
+
+  it("uses a short-output, no-retry stream so provider failover can begin promptly", async () => {
+    streamText.mockReturnValue({
+      textStream: (async function* () {
+        yield "Hello";
+      })(),
+    });
+
+    const response = streamChat(
+      [{ role: "user", content: "hi" }],
+      { persona: "rahbar" }
+    ).toTextStreamResponse();
+
+    expect(await response.text()).toBe("Hello");
+    expect(streamText).toHaveBeenCalledWith(expect.objectContaining({
+      maxRetries: 0,
+      maxOutputTokens: CHAT_MAX_OUTPUT_TOKENS,
+    }));
+  });
+
+  it("switches providers when the primary stream fails before emitting text", async () => {
+    streamText
+      .mockReturnValueOnce({
+        textStream: (async function* () {
+          throw { statusCode: 503 };
+        })(),
+      })
+      .mockReturnValueOnce({
+        textStream: (async function* () {
+          yield "Recovered";
+        })(),
+      });
+
+    const response = streamChat(
+      [{ role: "user", content: "hi" }],
+      { persona: "rahbar" }
+    ).toTextStreamResponse();
+
+    expect(await response.text()).toBe("Recovered");
+    expect(streamText).toHaveBeenCalledTimes(2);
+    expect(streamText.mock.calls[0][0].model).toBe("mock-model");
+    expect(streamText.mock.calls[1][0].model).toBe("nvidia-model");
   });
 });

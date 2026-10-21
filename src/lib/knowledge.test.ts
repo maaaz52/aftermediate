@@ -85,7 +85,7 @@ describe("index", () => {
 
 describe("every fact is reachable by its own text", () => {
   for (const persona of ["safar", "hunar"] as Persona[]) {
-    it(`returns each ${persona} fact within the top 8 for its own text`, () => {
+  it(`returns each ${persona} fact within the focused retrieval window for its own text`, () => {
       const failures: string[] = [];
       for (const doc of buildIndex(persona)) {
         const { facts } = retrieveFacts(persona, doc.text);
@@ -101,7 +101,7 @@ describe("retrieveFacts", () => {
     const { facts, covered } = retrieveFacts("safar", "German blocked account how much money");
     expect(covered).toBe(true);
     expect(facts.length).toBeGreaterThan(0);
-    expect(facts.length).toBeLessThanOrEqual(8);
+    expect(facts.length).toBeLessThanOrEqual(5);
     expect(facts.slice(0, 3).map((f) => f.topicId)).toContain("bank-statements");
     const blockedAccount = facts.find((f) => f.text.includes("11,904"));
     expect(blockedAccount?.topicId).toBe("bank-statements");

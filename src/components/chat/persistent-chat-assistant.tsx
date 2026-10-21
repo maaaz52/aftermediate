@@ -47,17 +47,24 @@ export function PersistentChatAssistant({ persona, label, greeting, suggestions,
     setInput("");
     setStreaming(true);
 
-    let sessionId = activeSession?.id;
-    try {
-      if (!sessionId) {
-        const session = await createSession(persona, text);
-        setActiveSession(session);
-        sessionId = session.id;
-      }
-      if (sessionId) await saveMessage(sessionId, "user", text);
-    } catch (error) {
-      console.warn("chat message could not be saved", error);
-    }
+    // Persistence must not delay the first token. Keep its promise so the
+    // assistant reply can still be saved after the user message, in order.
+    const sessionPromise = activeSession
+      ? Promise.resolve(activeSession)
+      : createSession(persona, text).then((session) => {
+          setActiveSession(session);
+          return session;
+        });
+    const userMessageSaved = sessionPromise
+      .then(async (session) => {
+        await saveMessage(session.id, "user", text);
+        return session;
+      })
+      .catch((error) => {
+        console.warn("chat message could not be saved", error);
+        return null;
+      });
+    void userMessageSaved;
 
     try {
       const response = await fetch("/api/chat", {
@@ -75,12 +82,13 @@ export function PersistentChatAssistant({ persona, label, greeting, suggestions,
         answer += decoder.decode(value, { stream: true });
         setMessages([...next, { role: "assistant", content: answer }]);
       }
-      if (sessionId && answer) {
-        try {
-          await saveMessage(sessionId, "assistant", answer);
-        } catch (error) {
-          console.warn("chat response could not be saved", error);
-        }
+      if (answer) {
+        void userMessageSaved.then((session) => {
+          if (!session) return;
+          return saveMessage(session.id, "assistant", answer).catch((error) => {
+            console.warn("chat response could not be saved", error);
+          });
+        });
       }
     } catch (error) {
       console.warn("chat response failed", error);

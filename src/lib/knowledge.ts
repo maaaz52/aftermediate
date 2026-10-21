@@ -98,7 +98,8 @@ const K1 = 1.2;
 const B = 0.75;
 const TITLE_BOOST = 3;
 const ID_BOOST = 2;
-const DEFAULT_K = 8;
+/** Five focused facts keep grounded answers useful without overloading the prompt. */
+const DEFAULT_K = 5;
 const DEFAULT_MIN_SCORE = 0.5;
 
 export interface KnowledgeBase {

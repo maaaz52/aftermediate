@@ -25,9 +25,10 @@ export const MAX_BODY_BYTES = 200_000;
  * thread has no cap of its own, so a hard limit here would brick someone's
  * drawer on the first message after deploy.
  */
-export const MAX_MESSAGES = 20;
+/** Keep enough recent context for a coherent follow-up without slowing every turn. */
+export const MAX_MESSAGES = 12;
 export const MAX_MESSAGE_CHARS = 12_000;
-export const MAX_TOTAL_CHARS = 30_000;
+export const MAX_TOTAL_CHARS = 18_000;
 
 export interface ChatRequest {
   persona: Persona;

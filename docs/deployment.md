@@ -33,6 +33,7 @@ No code changes are required for the domain — the app has no hardcoded host (a
 | `RESEND_API_KEY` | yes | powers OTP emails + contact-form emails |
 | `OTP_HMAC_SECRET` | yes (prod) | HMAC secret for OTP code hashing |
 | `GOOGLE_MODEL` | no | default `gemini-flash-latest` |
+| `CHAT_PRIMARY_PROVIDER` | no | `gemini` by default; set `nvidia` only after comparing production latency and response quality |
 | `NEXT_PUBLIC_SITE_URL` | yes | canonical site origin; use `http://localhost:3000` locally |
 | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | no | required only for Google sign-in |
 | `NEXT_PUBLIC_GA_ID` | no | required only for Google Analytics |

@@ -6,6 +6,8 @@ import { isPersona } from "@/lib/chat-request";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 export const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct";
+export const CHAT_PRIMARY_PROVIDER = process.env.CHAT_PRIMARY_PROVIDER === "nvidia" ? "nvidia" : "gemini";
+export const CHAT_MAX_OUTPUT_TOKENS = 550;
 
 export const model = google(MODEL);
 
@@ -19,9 +21,29 @@ const nvidia = nvidiaApiKey
   : null;
 
 export type ChatContext = ChatPromptInput;
+type ChatProvider = "gemini" | "nvidia";
+
+export interface ChatStreamTelemetry {
+  onFirstToken?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelTtfbMs: number }) => void;
+  onComplete?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelDurationMs: number }) => void;
+  onError?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelDurationMs: number }) => void;
+}
 
 function nvidiaModel(): LanguageModel | null {
   return nvidia?.languageModel(NVIDIA_MODEL) ?? null;
+}
+
+function primaryChatModel(): { provider: ChatProvider; model: LanguageModel } {
+  const nvidiaPrimary = CHAT_PRIMARY_PROVIDER === "nvidia" ? nvidiaModel() : null;
+  return nvidiaPrimary
+    ? { provider: "nvidia", model: nvidiaPrimary }
+    : { provider: "gemini", model };
+}
+
+function fallbackChatModel(provider: ChatProvider): { provider: ChatProvider; model: LanguageModel } | null {
+  if (provider === "nvidia") return { provider: "gemini", model };
+  const fallback = nvidiaModel();
+  return fallback ? { provider: "nvidia", model: fallback } : null;
 }
 
 function shouldUseNvidiaFallback(error: unknown): boolean {
@@ -51,7 +73,8 @@ async function withNvidiaFallback<T>(run: (languageModel: LanguageModel) => Prom
 
 export function streamChat(
   messages: { role: "user" | "assistant"; content: string }[],
-  context: ChatContext
+  context: ChatContext,
+  telemetry?: ChatStreamTelemetry
 ) {
   if (!isPersona(context.persona)) {
     throw new Error(`Unknown persona: ${String(context.persona)}`);
@@ -62,35 +85,69 @@ export function streamChat(
   const body = new ReadableStream<Uint8Array>({
     async start(controller) {
       let sentText = false;
-      const streamProvider = async (languageModel: LanguageModel) => {
+      let emittedFirstToken = false;
+      const primary = primaryChatModel();
+      const streamProvider = async (
+        selected: { provider: ChatProvider; model: LanguageModel },
+        fallbackUsed: boolean
+      ) => {
+        const startedAt = performance.now();
         const result = streamText({
-          model: languageModel,
+          model: selected.model,
           system,
           messages,
-          maxRetries: AI_MAX_RETRIES,
+          // A retry adds seconds before users see a character. For chat, fail
+          // over to the other configured provider immediately instead.
+          maxRetries: 0,
+          maxOutputTokens: CHAT_MAX_OUTPUT_TOKENS,
           abortSignal: AbortSignal.timeout(60_000),
         });
-        for await (const text of result.textStream) {
-          sentText = true;
-          controller.enqueue(encoder.encode(text));
+        try {
+          for await (const text of result.textStream) {
+            if (!emittedFirstToken) {
+              emittedFirstToken = true;
+              telemetry?.onFirstToken?.({
+                provider: selected.provider,
+                fallbackUsed,
+                modelTtfbMs: Math.round(performance.now() - startedAt),
+              });
+            }
+            sentText = true;
+            controller.enqueue(encoder.encode(text));
+          }
+          telemetry?.onComplete?.({
+            provider: selected.provider,
+            fallbackUsed,
+            modelDurationMs: Math.round(performance.now() - startedAt),
+          });
+        } catch (error) {
+          telemetry?.onError?.({
+            provider: selected.provider,
+            fallbackUsed,
+            modelDurationMs: Math.round(performance.now() - startedAt),
+          });
+          throw error;
         }
       };
 
       try {
-        await streamProvider(model);
+        await streamProvider(primary, false);
       } catch (error) {
         if (sentText || !shouldUseNvidiaFallback(error)) {
           controller.error(error);
           return;
         }
-        const fallback = nvidiaModel();
+        const fallback = fallbackChatModel(primary.provider);
         if (!fallback) {
           controller.error(error);
           return;
         }
         try {
-          console.warn("Gemini stream failed before output; retrying with NVIDIA fallback", { model: NVIDIA_MODEL });
-          await streamProvider(fallback);
+          console.warn("Chat provider failed before output; retrying with fallback", {
+            primaryProvider: primary.provider,
+            fallbackProvider: fallback.provider,
+          });
+          await streamProvider(fallback, true);
         } catch (fallbackError) {
           controller.error(fallbackError);
           return;

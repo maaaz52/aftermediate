@@ -130,7 +130,7 @@ const NO_FACTS = `The site knowledge base has no fact that matches this question
 export const STUDENT_HEADER =
   "WHO YOU ARE TALKING TO — taken from this student's own profile, not from this conversation";
 
-const STUDENT_RULES = `Use this only to personalise. Stream is prior study, not a career choice. If Future direction is present, follow it for advice and recommendations, while stating eligibility requirements. If the chat conflicts with a record, ask which is current. Do not invent or repeat missing figures.`;
+const STUDENT_RULES = `Use this only to personalise. Stream is prior study, not a career choice. If Future direction is present, follow it for advice and recommendations, while stating eligibility requirements. If the chat conflicts with a record, ask which is current. Be concise by default and expand only when the student asks. Do not invent or repeat missing figures.`;
 
 function studentBlock(student: StudentContext | null | undefined): string {
   const lines = formatStudentContext(student ?? null);

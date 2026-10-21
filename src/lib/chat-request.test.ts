@@ -188,7 +188,7 @@ describe("parseChatRequest limits", () => {
   });
 
   it("accepts a thread at the total cap and rejects one over it", () => {
-    const each = "a".repeat(10_000);
+    const each = "a".repeat(6_000);
     const atLimit = [turn("user", each), turn("assistant", each), turn("user", each)];
     const overLimit = [
       turn("user", each),
@@ -198,8 +198,18 @@ describe("parseChatRequest limits", () => {
       turn("user", each),
     ];
 
-    expect(MAX_TOTAL_CHARS).toBe(30_000);
+    expect(MAX_TOTAL_CHARS).toBe(18_000);
     expect(ok(thread(...atLimit)).messages).toHaveLength(3);
     expect(rejected(thread(...overLimit)).status).toBe(413);
+  });
+
+  it("always preserves the newest user question when trimming a long thread", () => {
+    const messages = history(MAX_MESSAGES + 4);
+    messages[messages.length - 1] = turn("user", "My latest question must stay");
+
+    const value = ok(thread(...messages));
+
+    expect(value.messages).toHaveLength(MAX_MESSAGES);
+    expect(value.messages.at(-1)).toEqual({ role: "user", content: "My latest question must stay" });
   });
 });
