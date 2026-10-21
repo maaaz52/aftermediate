@@ -272,27 +272,27 @@
       "pathway": [
         {
           "title": "Choose a program",
-          "detail": "Pick an English or German-taught program at a public university or FH."
+          "detail": "Find English- or German-taught options on the official Study in Austria / Studienwahl finder (studyinaustria.at, studienwahl.at), then check the university’s own entry rules and deadline."
         },
         {
           "title": "Apply & get admission",
-          "detail": "Submit documents directly to the university and receive your admission letter."
+          "detail": "Apply directly in the university portal. Many universities can assess your initial application using pre-attested / not-yet-legalized scans; confirm exactly which documents and translations that university accepts, then complete legalization for the residence-permit file."
         },
         {
-          "title": "Prepare funds & insurance",
-          "detail": "Arrange proof of funds (approx. EUR 722.58/month) and valid health insurance."
+          "title": "Attest and legalize documents",
+          "detail": "Before the residence-permit file, have Matric and Intermediate certificates/marksheets verified by your board, attested by IBCC, then MOFA; have the police character certificate and FRC attested by MOFA. Submit originals, copies and English/German translations through VFS Global for Austrian Embassy legalization. Board charges vary; IBCC is PKR 1,200 per original certificate/DMC; MOFA general attestation is PKR 10 per educational/personal document; Embassy legalization is PKR 36,000 per batch of up to 6 documents + EUR 80 per document (PKR equivalent)."
         },
         {
-          "title": "Apply for residence permit",
-          "detail": "Lodge the Residence Permit - Student application at the Austrian Embassy Islamabad."
+          "title": "Prepare funds, housing & insurance",
+          "detail": "Show 12 months of accessible funds in your name: €8,670.96 if under 24 (€722.58/month) or €15,700.68 from age 24 (€1,308.39/month), plus any rent above €386.43/month and insurance. Keep 6-month bank/sponsor evidence and source-of-funds proof, arrange accommodation for at least 3 months, and obtain entry travel insurance."
         },
         {
-          "title": "Collect Visa D & travel",
-          "detail": "After approval, collect the Visa D, fly to Austria, and register with authorities."
+          "title": "Apply for Residence Permit – Student",
+          "detail": "Email the Austrian Embassy Islamabad for a residence-permit appointment with the admission letter. Attend in person with the legalized file, passport, photo, admission, police certificate, accommodation, insurance and legitimate proof of funds. Apply 3–6 months ahead: the decision period is normally up to 90 days and can be extended by another 90 days if documents are requested."
         },
         {
-          "title": "Enroll & work part-time",
-          "detail": "Enroll at the university and take up permitted part-time work (up to 20 hours/week)."
+          "title": "Collect Visa D, travel & enroll",
+          "detail": "After approval, follow the Embassy/VFS instructions for the four-month Visa D (passport, photos, flight reservation and €30,000+ travel insurance). Travel, register your address within 3 working days, enroll, and collect the residence permit in Austria."
         }
       ],
       "documents": [
@@ -325,8 +325,24 @@
       ],
       "sources": [
         {
+          "label": "Study in Austria programme finder (OeAD)",
+          "url": "https://studyinaustria.at/en/study/find-your-programme-1-1"
+        },
+        {
+          "label": "OeAD: Residence Permit – Student requirements (2026)",
+          "url": "https://oead.at/en/to-austria/entry-and-residence/residence-permit-student-no-mobility-programme"
+        },
+        {
           "label": "Austrian Embassy Islamabad (BMEIA)",
           "url": "https://www.bmeia.gv.at/en/austrian-embassy-islamabad"
+        },
+        {
+          "label": "IBCC attestation rules and fees",
+          "url": "https://ibcc.edu.pk/faqs/attestation-faqs/"
+        },
+        {
+          "label": "MOFA Pakistan document-attestation fees",
+          "url": "https://attestation.mofa.gov.pk/fees"
         },
         {
           "label": "OeAD (Austrian agency for education)",
