@@ -150,10 +150,10 @@ export function RahbarDrawer() {
             <div key={i} className={cn("flex", m.role === "user" ? "justify-end" : "justify-start")}>
               <div
                 className={cn(
-                  "max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+                  "max-w-[85%] text-[1.0625rem] leading-relaxed",
                   m.role === "user"
-                    ? "whitespace-pre-wrap bg-saffron text-background"
-                    : "bg-surface-2 text-ink"
+                    ? "whitespace-pre-wrap text-right text-ink"
+                    : "text-ink"
                 )}
               >
                 {m.role === "user" ? m.content : m.content ? <MessageContent>{m.content}</MessageContent> : null}
@@ -186,7 +186,7 @@ export function RahbarDrawer() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && send()}
               placeholder="Ask about the site…"
-              className="h-11 flex-1 rounded-lg border border-line bg-surface-2 px-3.5 text-sm text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-saffron/50"
+              className="h-11 flex-1 rounded-lg border border-line bg-surface-2 px-3.5 text-base text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-saffron/50"
             />
             <button
               onClick={() => send()}

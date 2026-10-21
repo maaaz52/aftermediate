@@ -93,6 +93,7 @@ it("shows local and prominent international test tabs for any stream", () => {
   expect(screen.getByText("NET")).toBeTruthy();
   expect(screen.getByText("MDCAT")).toBeTruthy();
   expect(screen.getByText("ECAT")).toBeTruthy();
+  expect(screen.getByText("LCAT")).toBeTruthy();
   expect(screen.getByText("SAT")).toBeTruthy();
   expect(screen.getByText("IELTS")).toBeTruthy();
   expect(screen.getByText("TOEFL")).toBeTruthy();

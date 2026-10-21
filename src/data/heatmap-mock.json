@@ -321,6 +321,36 @@
       }
     ]
   },
+  "lcat": {
+    "id": "lcat",
+    "name": "LCAT — LUMS Common Admission Test",
+    "shortName": "LCAT",
+    "totalQuestionsPerYear": 50,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "lcat-verbal",
+        "name": "English (Verbal Reasoning)",
+        "totalQuestions": 25,
+        "chapters": [
+          { "id": "lcat-vocabulary", "name": "Vocabulary: Synonyms & Antonyms", "appearances3yr": 16, "appearances5yr": 28, "appearances10yr": 52, "trend": "stable" },
+          { "id": "lcat-grammar", "name": "Grammar & Sentence Correction", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "up" },
+          { "id": "lcat-reading", "name": "Reading Comprehension", "appearances3yr": 22, "appearances5yr": 40, "appearances10yr": 76, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "lcat-quantitative",
+        "name": "Mathematics (Quantitative Reasoning)",
+        "totalQuestions": 25,
+        "chapters": [
+          { "id": "lcat-arithmetic", "name": "Arithmetic & Percentages", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "stable" },
+          { "id": "lcat-algebra", "name": "Algebra & Equations", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "stable" },
+          { "id": "lcat-geometry", "name": "Geometry", "appearances3yr": 14, "appearances5yr": 26, "appearances10yr": 50, "trend": "down" },
+          { "id": "lcat-data", "name": "Data Interpretation", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 58, "trend": "up" }
+        ]
+      }
+    ]
+  },
   "gre": {
     "id": "gre",
     "name": "GRE General Test",

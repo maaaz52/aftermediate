@@ -189,17 +189,15 @@ body {
 
 .chat-message {
   color: #171717;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   line-height: 1.7;
 }
 
 .chat-message-assistant { width: 100%; max-width: 48rem; }
 .chat-message-user {
   max-width: min(80%, 38rem);
-  border-radius: 1.25rem;
-  background: #f4f4f4;
-  padding: 0.625rem 0.9375rem;
   white-space: pre-wrap;
+  text-align: right;
 }
 
 .chat-workspace .chat-message [class*="text-ink"],
@@ -245,7 +243,7 @@ body {
 }
 
 .chat-composer:focus-within { border-color: #bdbdbd; box-shadow: 0 1px 4px rgb(0 0 0 / 0.08); }
-.chat-composer-input { min-width: 0; flex: 1; border: 0; background: transparent; color: #171717; font-size: 1rem; outline: 0; }
+.chat-composer-input { min-width: 0; flex: 1; border: 0; background: transparent; color: #171717; font-size: 1.0625rem; outline: 0; }
 .chat-composer-input::placeholder { color: #737373; }
 .chat-send-button { display: grid; height: 2.25rem; width: 2.25rem; flex: none; place-items: center; border-radius: 0.875rem; background: #171717; color: #ffffff; transition: opacity 160ms ease, transform 160ms ease; }
 .chat-send-button:disabled { cursor: not-allowed; opacity: 0.35; }
