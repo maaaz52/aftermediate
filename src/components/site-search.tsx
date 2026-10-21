@@ -8,8 +8,15 @@ import type { SiteSearchResult } from "@/lib/site-search";
 
 type SearchResponse = { results?: SiteSearchResult[] };
 
-export function SiteSearch() {
+export function SiteSearch({
+  autoFocus = false,
+  className,
+}: {
+  autoFocus?: boolean;
+  className?: string;
+}) {
   const router = useRouter();
+  const inputRef = React.useRef<HTMLInputElement>(null);
   const inputId = React.useId();
   const listboxId = `${inputId}-results`;
   const [query, setQuery] = React.useState("");
@@ -17,6 +24,10 @@ export function SiteSearch() {
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const [activeIndex, setActiveIndex] = React.useState(-1);
+
+  React.useEffect(() => {
+    if (autoFocus) inputRef.current?.focus();
+  }, [autoFocus]);
 
   React.useEffect(() => {
     const term = query.trim();
@@ -68,12 +79,13 @@ export function SiteSearch() {
   const showResults = open && query.trim().length >= 2;
 
   return (
-    <div className="relative w-64 xl:w-72">
+    <div className={cn("relative w-64 xl:w-72", className)}>
       <Search
         aria-hidden
         className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-faint"
       />
       <input
+        ref={inputRef}
         id={inputId}
         value={query}
         onChange={(event) => {
