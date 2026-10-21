@@ -25,7 +25,7 @@ function Field({
 }: React.InputHTMLAttributes<HTMLInputElement> & { label: string }) {
   return (
     <div>
-      <label className="font-mono text-[10px] uppercase tracking-widest text-muted">
+      <label className="font-mono text-[10px] font-bold uppercase tracking-widest text-muted">
         {label}
       </label>
       <input {...props} className={cn(inputClass, className)} />
@@ -52,7 +52,7 @@ function PasswordField({
   return (
     <div>
       <div className="flex items-center justify-between">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted">{label}</span>
+        <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-muted">{label}</span>
         {hintHref ? (
           <Link href={hintHref} className="font-mono text-[10px] text-faint transition-colors hover:text-accent">
             forgot?
@@ -98,7 +98,6 @@ export default function LoginPage() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirm, setConfirm] = React.useState("");
-  const [agreed, setAgreed] = React.useState(false);
   const [busy, setBusy] = React.useState(false);
   const [googleBusy, setGoogleBusy] = React.useState(false);
   const [message, setMessage] = React.useState<{ type: "ok" | "err"; text: string } | null>(() => {
@@ -119,11 +118,6 @@ export default function LoginPage() {
     e.preventDefault();
     setBusy(true);
     setMessage(null);
-    if (!agreed) {
-      setMessage({ type: "err", text: "Please accept the terms and privacy policy to continue." });
-      setBusy(false);
-      return;
-    }
     if (mode === "signin") {
       const r = await signInEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
@@ -146,11 +140,6 @@ export default function LoginPage() {
   const handleGoogleCredential = React.useCallback(async (idToken: string) => {
     setGoogleBusy(true);
     setMessage(null);
-    if (!agreed) {
-      setMessage({ type: "err", text: "Please accept the terms and privacy policy to continue." });
-      setGoogleBusy(false);
-      return;
-    }
     const r = await signInGoogle(idToken);
     if (r.error) {
       setMessage({ type: "err", text: r.error });
@@ -158,7 +147,7 @@ export default function LoginPage() {
       return;
     }
     router.push("/dashboard");
-  }, [agreed, router, signInGoogle]);
+  }, [router, signInGoogle]);
 
   const handleGoogleError = React.useCallback((error: string) => {
     setMessage({ type: "err", text: error });
@@ -297,24 +286,14 @@ export default function LoginPage() {
                 </div>
               )}
 
-              <label className="flex items-start gap-2">
-                <input
-                  type="checkbox"
-                  checked={agreed}
-                  onChange={(e) => setAgreed(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-accent"
-                />
-                <span className="text-[11px] leading-snug text-muted">
-                  I agree to the{" "}
+              {mode === "signup" && (
+                <p className="text-[11px] leading-snug text-muted">
+                  By signing up, you agree to the{" "}
                   <Link href="/terms" className="font-medium text-accent underline underline-offset-2 hover:text-ink">
                     Terms &amp; Conditions
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="/privacy" className="font-medium text-accent underline underline-offset-2 hover:text-ink">
-                    Privacy Policy
                   </Link>.
-                </span>
-              </label>
+                </p>
+              )}
 
               <PixelButton type="submit" className="h-10 w-full" disabled={busy}>
                 {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
