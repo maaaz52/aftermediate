@@ -227,5 +227,128 @@
         ]
       }
     ]
+  },
+  "sat": {
+    "id": "sat",
+    "name": "SAT — Digital Scholastic Assessment Test",
+    "shortName": "SAT",
+    "totalQuestionsPerYear": 98,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "sat-reading-writing",
+        "name": "Reading & Writing",
+        "totalQuestions": 54,
+        "chapters": [
+          { "id": "sat-craft-structure", "name": "Craft & Structure", "appearances3yr": 18, "appearances5yr": 30, "appearances10yr": 56, "trend": "up" },
+          { "id": "sat-information-ideas", "name": "Information & Ideas", "appearances3yr": 20, "appearances5yr": 34, "appearances10yr": 62, "trend": "up" },
+          { "id": "sat-standard-english", "name": "Standard English Conventions", "appearances3yr": 22, "appearances5yr": 36, "appearances10yr": 68, "trend": "stable" },
+          { "id": "sat-expression-ideas", "name": "Expression of Ideas", "appearances3yr": 16, "appearances5yr": 28, "appearances10yr": 52, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "sat-math",
+        "name": "Mathematics",
+        "totalQuestions": 44,
+        "chapters": [
+          { "id": "sat-algebra", "name": "Algebra", "appearances3yr": 24, "appearances5yr": 42, "appearances10yr": 78, "trend": "up" },
+          { "id": "sat-advanced-math", "name": "Advanced Math", "appearances3yr": 22, "appearances5yr": 38, "appearances10yr": 70, "trend": "up" },
+          { "id": "sat-problem-solving", "name": "Problem-Solving & Data Analysis", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 58, "trend": "stable" },
+          { "id": "sat-geometry-trig", "name": "Geometry & Trigonometry", "appearances3yr": 12, "appearances5yr": 24, "appearances10yr": 45, "trend": "down" }
+        ]
+      }
+    ]
+  },
+  "ielts": {
+    "id": "ielts",
+    "name": "IELTS Academic — English Proficiency Test",
+    "shortName": "IELTS",
+    "totalQuestionsPerYear": 40,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "ielts-listening-reading",
+        "name": "Listening & Reading",
+        "totalQuestions": 80,
+        "chapters": [
+          { "id": "ielts-listening-completion", "name": "Form, Note & Table Completion", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "stable" },
+          { "id": "ielts-listening-mcq", "name": "Multiple Choice & Matching", "appearances3yr": 18, "appearances5yr": 32, "appearances10yr": 60, "trend": "up" },
+          { "id": "ielts-reading-tfng", "name": "True / False / Not Given", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 70, "trend": "stable" },
+          { "id": "ielts-reading-headings", "name": "Matching Headings & Information", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "ielts-writing-speaking",
+        "name": "Writing & Speaking",
+        "totalQuestions": 2,
+        "chapters": [
+          { "id": "ielts-task-1", "name": "Writing Task 1: Charts & Reports", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 58, "trend": "stable" },
+          { "id": "ielts-task-2", "name": "Writing Task 2: Essays", "appearances3yr": 24, "appearances5yr": 42, "appearances10yr": 80, "trend": "up" },
+          { "id": "ielts-speaking-fluency", "name": "Speaking: Fluency & Coherence", "appearances3yr": 20, "appearances5yr": 38, "appearances10yr": 72, "trend": "stable" },
+          { "id": "ielts-speaking-vocabulary", "name": "Speaking: Vocabulary & Grammar", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 66, "trend": "stable" }
+        ]
+      }
+    ]
+  },
+  "toefl": {
+    "id": "toefl",
+    "name": "TOEFL iBT — English Proficiency Test",
+    "shortName": "TOEFL",
+    "totalQuestionsPerYear": 0,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "toefl-reading-listening",
+        "name": "Reading & Listening",
+        "totalQuestions": 0,
+        "chapters": [
+          { "id": "toefl-reading-comprehension", "name": "Academic Reading Comprehension", "appearances3yr": 22, "appearances5yr": 40, "appearances10yr": 76, "trend": "stable" },
+          { "id": "toefl-reading-inference", "name": "Inference & Rhetorical Purpose", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "up" },
+          { "id": "toefl-listening-lectures", "name": "Lectures & Classroom Discussion", "appearances3yr": 22, "appearances5yr": 40, "appearances10yr": 76, "trend": "stable" },
+          { "id": "toefl-listening-attitude", "name": "Speaker Purpose & Attitude", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 56, "trend": "stable" }
+        ]
+      },
+      {
+        "id": "toefl-speaking-writing",
+        "name": "Speaking & Writing",
+        "totalQuestions": 0,
+        "chapters": [
+          { "id": "toefl-speaking-independent", "name": "Speaking: Clear, Supported Responses", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "stable" },
+          { "id": "toefl-speaking-integrated", "name": "Speaking: Integrated Tasks", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "up" },
+          { "id": "toefl-writing-academic", "name": "Academic Discussion Writing", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "up" },
+          { "id": "toefl-writing-integrated", "name": "Integrated Writing", "appearances3yr": 18, "appearances5yr": 32, "appearances10yr": 60, "trend": "stable" }
+        ]
+      }
+    ]
+  },
+  "gre": {
+    "id": "gre",
+    "name": "GRE General Test",
+    "shortName": "GRE",
+    "totalQuestionsPerYear": 0,
+    "years": ["2017","2018","2019","2020","2021","2022","2023","2024","2025","2026"],
+    "sections": [
+      {
+        "id": "gre-verbal",
+        "name": "Verbal Reasoning",
+        "totalQuestions": 0,
+        "chapters": [
+          { "id": "gre-text-completion", "name": "Text Completion", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "stable" },
+          { "id": "gre-sentence-equivalence", "name": "Sentence Equivalence", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 56, "trend": "stable" },
+          { "id": "gre-reading-comprehension", "name": "Reading Comprehension", "appearances3yr": 24, "appearances5yr": 42, "appearances10yr": 80, "trend": "up" }
+        ]
+      },
+      {
+        "id": "gre-quant-writing",
+        "name": "Quantitative Reasoning & Writing",
+        "totalQuestions": 0,
+        "chapters": [
+          { "id": "gre-arithmetic", "name": "Arithmetic & Number Properties", "appearances3yr": 20, "appearances5yr": 36, "appearances10yr": 68, "trend": "stable" },
+          { "id": "gre-algebra", "name": "Algebra", "appearances3yr": 18, "appearances5yr": 34, "appearances10yr": 64, "trend": "stable" },
+          { "id": "gre-data-analysis", "name": "Data Analysis", "appearances3yr": 20, "appearances5yr": 38, "appearances10yr": 72, "trend": "up" },
+          { "id": "gre-analytical-writing", "name": "Analytical Writing", "appearances3yr": 16, "appearances5yr": 30, "appearances10yr": 58, "trend": "stable" }
+        ]
+      }
+    ]
   }
 }

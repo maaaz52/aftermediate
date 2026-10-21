@@ -238,7 +238,7 @@ export function EntryTestHeatmap() {
       )}
 
       <p className="mt-4 text-[9.5px] text-faint">
-        Based on 10 years of question patterns · Probabilities are estimates, not guarantees
+        Question patterns and test-section priorities are estimates, not guarantees
       </p>
     </div>
   );

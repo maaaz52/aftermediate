@@ -87,16 +87,20 @@ it("shows all test tabs when stream is null", () => {
   expect(screen.getByText("ECAT")).toBeTruthy();
 });
 
-it("shows all test tabs for any stream", () => {
+it("shows local and prominent international test tabs for any stream", () => {
   mockProfile("icom");
   render(<EntryTestHeatmap />);
   expect(screen.getByText("NET")).toBeTruthy();
   expect(screen.getByText("MDCAT")).toBeTruthy();
   expect(screen.getByText("ECAT")).toBeTruthy();
+  expect(screen.getByText("SAT")).toBeTruthy();
+  expect(screen.getByText("IELTS")).toBeTruthy();
+  expect(screen.getByText("TOEFL")).toBeTruthy();
+  expect(screen.getByText("GRE")).toBeTruthy();
 });
 
 it("renders the footer text", () => {
   mockProfile("pre-medical");
   render(<EntryTestHeatmap />);
-  expect(screen.getByText(/estimates, not guarantees/i)).toBeTruthy();
+  expect(screen.getByText(/priorities are estimates, not guarantees/i)).toBeTruthy();
 });
