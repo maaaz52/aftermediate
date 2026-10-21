@@ -5,8 +5,8 @@ import { IvyExplorer } from "@/components/abroad/ivy-explorer";
 import { Crown } from "lucide-react";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Ivy League",
-  description: "Harvard to Cornell — acceptance rates, testing policies, financial aid and a step-by-step path for Pakistani applicants. Every figure carries a source.",
+  title: "Ivy League & US Peers",
+  description: "The eight Ivy League universities plus Stanford and MIT — acceptance rates, testing policies, financial aid and a step-by-step path for Pakistani applicants. Every figure carries a source.",
   path: "/abroad/ivy-league",
 });
 
@@ -16,20 +16,21 @@ export default function AbroadIvyLeaguePage() {
       <div className="animate-reveal flex items-center gap-2">
         <Badge variant="saffron">Education Abroad</Badge>
         <Crown className="h-4 w-4 text-amber" />
-        <span className="font-mono text-xs text-faint">8 schools · sourced data</span>
+        <span className="font-mono text-xs text-faint">8 Ivies + 2 peer universities · sourced data</span>
       </div>
       <h1
         className="animate-reveal mt-3 text-3xl font-extrabold tracking-tight text-ink sm:text-5xl"
         style={{ animationDelay: "60ms" }}
       >
-        Ivy League
+        Ivy League &amp; US Peers
       </h1>
       <p
         className="animate-reveal mt-2 max-w-xl text-muted"
         style={{ animationDelay: "120ms" }}
       >
-        Harvard to Cornell — acceptance rates, testing policies, financial aid, and a
-        step-by-step path for Pakistani applicants. Every figure carries a source.
+        The eight Ivy League universities, plus Stanford and MIT as peer institutions — acceptance
+        rates, testing policies, financial aid, and a step-by-step path for Pakistani applicants.
+        Every figure carries a source.
       </p>
       <div className="animate-reveal mt-8" style={{ animationDelay: "180ms" }}>
         <IvyExplorer />

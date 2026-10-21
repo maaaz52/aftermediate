@@ -605,6 +605,148 @@
           "https://admissions.cornell.edu/resources/submit-english-language-proficiency"
         ]
       }
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "location": "Stanford, California, USA",
+      "founded": 1885,
+      "acceptanceRate": 3.6,
+      "acceptanceRateCycle": "Fall 2024 entrants (Stanford CDS 2024–25)",
+      "testingPolicy": "required",
+      "testingPolicyNote": "SAT or ACT required for first-year applicants. Stanford superscores the SAT and will consider an ACT superscore; the ACT Science and Writing sections are optional. There is no minimum score or score that guarantees admission.",
+      "satMid50": null,
+      "actMid50": "34-35",
+      "gpaBenchmark": "No minimum GPA is published and Stanford does not convert international marks to a US GPA. It assesses achievement in the context of the curriculum and resources available; rigorous work across English, mathematics, social studies, science and world language is recommended.",
+      "english": {
+        "toeflMin": null,
+        "ieltsMin": null,
+        "duolingoMin": null,
+        "exceptions": "No English-proficiency test is required. Applicants may self-report an English test if useful, but Stanford says English fluency is a prerequisite and considers it through the application as a whole."
+      },
+      "application": {
+        "platform": "Common App + Stanford Questions",
+        "feeUsd": 100,
+        "feePkr": 27800,
+        "feeWaiver": "Applicants who meet the Common App fee-waiver guidelines may request a waiver; a school official can verify eligibility through the Common App.",
+        "deadlines": {
+          "early": "Nov 1 (Restrictive Early Action)",
+          "regular": "Jan 5",
+          "cycleYear": "2026-2027"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 67731,
+        "tuitionPkr": 18829218,
+        "totalCostUsd": 97545,
+        "totalCostPkr": 27117510,
+        "costCycle": "2026-2027"
+      },
+      "financialAid": {
+        "intlPolicy": "need-aware",
+        "aidDetail": "For international citizens, requesting financial aid is a factor in admission. Stanford meets the full demonstrated need of admitted students who requested aid in the application, but international students who say they will not request aid cannot apply for it later as undergraduates. Aid is need-based, not merit-based (apart from limited athletic scholarships).",
+        "avgAwardUsd": null,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Undergraduate Research Programs (VPUE): funding and opportunities for faculty-mentored research across fields",
+        "Stanford d.school: interdisciplinary design-thinking courses and project-based learning",
+        "Bing Stanford in Washington: quarter-long study, internship and policy experience in Washington, DC",
+        "Optional majors at application time: students apply to Stanford as a whole rather than to a specific undergraduate major"
+      ],
+      "notableFacts": [
+        "Stanford's official 2024–25 Common Data Set reports 57,326 first-year applicants and 2,067 admits for Fall 2024, a 3.6% admission rate.",
+        "For the Class of 2028 students who submitted scores, the middle 50% was SAT 1510–1570 and ACT 34–35; scores were optional for that class.",
+        "Stanford is not an Ivy League institution; it is included here as a highly selective US peer university."
+      ],
+      "sources": {
+        "admissions": [
+          "https://admission.stanford.edu/apply/first-year/index.html",
+          "https://admission.stanford.edu/apply/first-year/testing.html",
+          "https://irds.stanford.edu/data-findings/cds"
+        ],
+        "aid": [
+          "https://admission.stanford.edu/apply/international/",
+          "https://financialaid.stanford.edu/undergrad/"
+        ],
+        "cost": [
+          "https://financialaid.stanford.edu/undergrad/budget/"
+        ],
+        "english": [
+          "https://admission.stanford.edu/apply/international/"
+        ]
+      }
+    },
+    {
+      "id": "mit",
+      "name": "Massachusetts Institute of Technology (MIT)",
+      "location": "Cambridge, Massachusetts, USA",
+      "founded": 1861,
+      "acceptanceRate": 4.6,
+      "acceptanceRateCycle": "Class of 2029",
+      "testingPolicy": "required",
+      "testingPolicyNote": "SAT or ACT required for first-year applicants. MIT does not require ACT Writing/Science or the SAT essay, allows self-reported scores, and considers the highest section scores across sittings.",
+      "satMid50": null,
+      "actMid50": null,
+      "gpaBenchmark": "No minimum GPA is published. MIT evaluates every applicant in context, looking for outstanding academic achievement, collaboration, initiative, hands-on creativity, curiosity and fit with the Institute's mission.",
+      "english": {
+        "toeflMin": 5,
+        "ieltsMin": 7,
+        "duolingoMin": 120,
+        "exceptions": "English-proficiency exams are strongly recommended for non-native English speakers who have used English for fewer than five years or do not speak English at home or school. MIT's current minimums are TOEFL 5.0 for tests from 21 Jan 2026 (90 on the earlier scale), IELTS 7.0 and Duolingo 120; higher recommended scores are published by MIT."
+      },
+      "application": {
+        "platform": "MIT application portal",
+        "feeUsd": 75,
+        "feePkr": 20850,
+        "feeWaiver": "MIT offers a fee waiver for applicants facing financial barriers; request it in the MIT application.",
+        "deadlines": {
+          "early": "Nov 1 (Early Action)",
+          "regular": "Jan 4",
+          "cycleYear": "2026-2027"
+        }
+      },
+      "cost": {
+        "tuitionUsd": 66720,
+        "tuitionPkr": 18548160,
+        "totalCostUsd": 92760,
+        "totalCostPkr": 25787280,
+        "costCycle": "2026-2027"
+      },
+      "financialAid": {
+        "intlPolicy": "need-blind",
+        "aidDetail": "MIT is need-blind and meets 100% of demonstrated need for undergraduate applicants, domestic and international. Aid is need-based; from 2025–26, families with typical assets and income below $200,000 typically receive tuition-free attendance, while the policy for each family is determined from its full financial-aid application.",
+        "avgAwardUsd": null,
+        "percentIntlAid": null
+      },
+      "uniquePrograms": [
+        "Undergraduate Research Opportunities Program (UROP): paid or credit-bearing research with MIT faculty, staff or graduate students",
+        "All undergraduates begin with general admission and choose a major at the end of first year with an advisor",
+        "Maker spaces and hands-on labs across the Institute support prototype-driven learning",
+        "A communication requirement integrates writing and speaking throughout the undergraduate program"
+      ],
+      "notableFacts": [
+        "MIT reported 29,281 first-year applications and 1,334 offers for the Class of 2029, a 4.6% admission rate.",
+        "MIT reported 56 undergraduate majors and 62 minors in its current institutional facts.",
+        "MIT is not an Ivy League institution; it is included here as a highly selective US peer university."
+      ],
+      "sources": {
+        "admissions": [
+          "https://mitadmissions.org/apply/firstyear/deadlines-requirements/",
+          "https://mitadmissions.org/apply/firstyear/tests-scores/",
+          "https://facts.mit.edu/undergraduate-admissions/"
+        ],
+        "aid": [
+          "https://mitadmissions.org/help/faq/international-admissions/",
+          "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/making-mit-affordable/"
+        ],
+        "cost": [
+          "https://sfs.mit.edu/undergraduate-students/the-cost-of-attendance/coa/"
+        ],
+        "english": [
+          "https://mitadmissions.org/apply/firstyear/tests-scores/"
+        ]
+      }
     }
   ]
 }

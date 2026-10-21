@@ -396,7 +396,7 @@ export const abroadChatbotKnowledge: {
 			title: "Ivy League Admissions",
 			facts: [
 				{
-					text: "The Ivy League is made up of eight private US universities — Harvard, Yale, Princeton, Columbia, Penn, Brown, Dartmouth, and Cornell — and our Ivy League page at /abroad/ivy-league walks you through all eight profiles, testing policies, and aid details.",
+					text: "The Ivy League is made up of eight private US universities — Harvard, Yale, Princeton, Columbia, Penn, Brown, Dartmouth, and Cornell. Our Ivy League & US Peers page at /abroad/ivy-league covers all eight plus Stanford and MIT, which are highly selective peers but not Ivy League members.",
 					source: "https://college.harvard.edu/admissions",
 				},
 				{

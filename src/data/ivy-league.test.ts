@@ -25,13 +25,13 @@ const d = data as unknown as {
   }[];
 };
 
-const EXPECTED_IDS = ["harvard", "yale", "princeton", "columbia", "upenn", "brown", "dartmouth", "cornell"];
+const EXPECTED_IDS = ["harvard", "yale", "princeton", "columbia", "upenn", "brown", "dartmouth", "cornell", "stanford", "mit"];
 
 const HTTPS = /^https:\/\//;
 
 describe("ivy-league.json", () => {
-  it("covers exactly the 8 Ivy League universities", () => {
-    expect(d.universities).toHaveLength(8);
+  it("covers the 8 Ivy League universities plus Stanford and MIT as peer universities", () => {
+    expect(d.universities).toHaveLength(10);
     expect(d.universities.map((u) => u.id)).toEqual(EXPECTED_IDS);
   });
 

@@ -8,8 +8,8 @@ import {
 } from "./ivy";
 
 describe("ivy data", () => {
-  it("exposes all 8 Ivy League universities", () => {
-    expect(ivyUniversities).toHaveLength(8);
+  it("exposes the 8 Ivies plus Stanford and MIT", () => {
+    expect(ivyUniversities).toHaveLength(10);
   });
 
   it("exposes Ivy-eligible scholarships with sources", () => {
@@ -24,14 +24,14 @@ describe("ivy data", () => {
 
 describe("filterIvyUniversities", () => {
   it("returns all universities with no filters", () => {
-    expect(filterIvyUniversities(ivyUniversities)).toHaveLength(8);
+    expect(filterIvyUniversities(ivyUniversities)).toHaveLength(10);
   });
 
   it("filters by testing policy", () => {
     const required = filterIvyUniversities(ivyUniversities, { testingPolicy: "required" });
     expect(required.length).toBeGreaterThan(0);
     for (const u of required) expect(u.testingPolicy).toBe("required");
-    expect(filterIvyUniversities(ivyUniversities, { testingPolicy: "all" })).toHaveLength(8);
+    expect(filterIvyUniversities(ivyUniversities, { testingPolicy: "all" })).toHaveLength(10);
   });
 
   it("filters by query across name, location, and programs", () => {
@@ -67,7 +67,7 @@ describe("ivyStats", () => {
     const s = ivyStats(ivyUniversities);
     const needBlind = ivyUniversities.filter((u) => u.financialAid.intlPolicy === "need-blind").length;
     expect(s.needBlindCount).toBe(needBlind);
-    const expected = Math.round((ivyUniversities.reduce((sum, u) => sum + u.acceptanceRate, 0) / 8) * 10) / 10;
+    const expected = Math.round((ivyUniversities.reduce((sum, u) => sum + u.acceptanceRate, 0) / ivyUniversities.length) * 10) / 10;
     expect(s.averageAcceptance).toBe(expected);
   });
 });
