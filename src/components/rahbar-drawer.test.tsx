@@ -3,7 +3,9 @@ import { it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, cleanup, waitFor, screen } from "@testing-library/react";
 
 const auth = vi.hoisted(() => ({ user: null as { id: string } | null }));
+const navigation = vi.hoisted(() => ({ pathname: "/dashboard" }));
 vi.mock("@/lib/auth", () => ({ useAuth: () => ({ user: auth.user }) }));
+vi.mock("next/navigation", () => ({ usePathname: () => navigation.pathname }));
 
 import { RahbarDrawer } from "./rahbar-drawer";
 
@@ -12,6 +14,7 @@ beforeEach(() => {
   Element.prototype.scrollIntoView = vi.fn(); // jsdom lacks scrollIntoView
   window.localStorage.clear();
   auth.user = { id: "u1" };
+  navigation.pathname = "/dashboard";
 });
 
 afterEach(() => cleanup());
@@ -94,4 +97,11 @@ it("still renders a greeting when nobody is signed in", () => {
 
   expect(screen.getByText(/I'm Rahbar/)).toBeTruthy();
   expect(window.localStorage.length).toBe(0);
+});
+
+it("moves above the composer on chatbot pages", () => {
+  navigation.pathname = "/skills/chat";
+  render(<RahbarDrawer />);
+
+  expect(screen.getByRole("button", { name: "Open Rahbar AI" }).className).toContain("bottom-24");
 });

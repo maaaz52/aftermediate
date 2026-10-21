@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import { X, Send, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { MessageContent } from "@/components/message-content";
@@ -21,7 +22,17 @@ const SUGGESTIONS = [
   "How do I edit my profile?",
 ];
 
+const CHATBOT_ROUTES = new Set([
+  "/study",
+  "/skills/chat",
+  "/abroad/assistant",
+  "/pakistan/assistant",
+  "/college-essays",
+]);
+
 export function RahbarDrawer() {
+  const pathname = usePathname();
+  const sitsAboveChatComposer = CHATBOT_ROUTES.has(pathname);
   const [open, setOpen] = React.useState(false);
   const [messages, setMessages] = useChatHistory(STORAGE_KEY, GREETING);
   const [input, setInput] = React.useState("");
@@ -94,7 +105,10 @@ export function RahbarDrawer() {
           type="button"
           onClick={() => setOpen(true)}
           aria-label="Open Rahbar AI"
-          className="group fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-saffron/30 bg-surface p-0 shadow-lg transition-[width,transform,box-shadow,padding] duration-300 ease-out hover:w-48 hover:-translate-y-0.5 hover:justify-start hover:px-2.5 hover:shadow-xl focus-visible:w-48 focus-visible:justify-start focus-visible:px-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron"
+          className={cn(
+            "group fixed right-5 z-40 flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-saffron/30 bg-surface p-0 shadow-lg transition-[width,transform,box-shadow,padding] duration-300 ease-out hover:w-48 hover:-translate-y-0.5 hover:justify-start hover:px-2.5 hover:shadow-xl focus-visible:w-48 focus-visible:justify-start focus-visible:px-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron",
+            sitsAboveChatComposer ? "bottom-24" : "bottom-5"
+          )}
         >
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-saffron/15">
             <Sparkles className="h-5 w-5 text-saffron transition-transform group-hover:rotate-12" />
