@@ -46,7 +46,7 @@ export default function SubscriptionPage() {
             <Crown className="h-5 w-5 fill-amber text-amber" />
           </div>
           <p className="font-mono text-xs font-semibold uppercase tracking-widest text-saffron">Pro</p>
-          <p className="mt-3 font-display text-4xl tracking-tight text-ink">PKR 300</p>
+          <p className="mt-3 font-display text-4xl tracking-tight text-ink">US$1</p>
           <p className="mt-1 text-sm text-muted">One plan. Full access.</p>
           <div className="mt-6 border-t border-line pt-5">
             <p className="text-sm font-semibold text-ink">Everything in Basic, plus:</p>

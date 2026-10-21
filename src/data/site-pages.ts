@@ -181,6 +181,6 @@ export const SITE_PAGES: SitePage[] = [
   {
     href: "/subscription",
     label: "Subscription",
-    purpose: "Preview Aftermediate Pro: one PKR 300 plan that includes every crowned page and A.I. tool.",
+    purpose: "Preview Aftermediate Pro: one US$1 plan that includes every crowned page and A.I. tool.",
   },
 ];
