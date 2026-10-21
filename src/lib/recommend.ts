@@ -1,4 +1,5 @@
-import type { Major } from "@/lib/types";
+import type { Major, Pursuit, Stream } from "@/lib/types";
+import { getMajorsByStream } from "@/lib/data";
 
 /** Maps quiz interest labels to major `field` values. */
 const INTEREST_FIELDS: Record<string, string[]> = {
@@ -17,6 +18,27 @@ const INTEREST_FIELDS: Record<string, string[]> = {
 };
 
 const DEMAND_RANK: Record<Major["demand"], number> = { high: 2, medium: 1, low: 0 };
+
+const PURSUIT_FIELDS: Partial<Record<Pursuit, string[]>> = {
+  "medicine-healthcare": ["Healthcare", "Life Sciences", "HealthTech"],
+  engineering: ["Engineering"],
+  "computing-ai": ["Technology", "HealthTech", "Finance + Tech"],
+  "business-finance": ["Business", "Finance + Tech"],
+  "research-science": ["Life Sciences", "Healthcare", "Engineering", "Technology"],
+};
+
+/**
+ * A desired direction should drive discovery. Stream remains a fallback for
+ * students who have not chosen one and continues to be used elsewhere for
+ * admission eligibility.
+ */
+export function majorsForPursuit(majors: Major[], pursuit: Pursuit | undefined, fallbackStream: Stream): Major[] {
+  if (!pursuit || pursuit === "undecided") return getMajorsByStream(fallbackStream);
+  const fields = PURSUIT_FIELDS[pursuit];
+  if (!fields) return majors;
+  const matches = majors.filter((major) => fields.includes(major.field));
+  return matches.length > 0 ? matches : majors;
+}
 
 /**
  * Rank majors for the dashboard's "best-fit fields" strip:

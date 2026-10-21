@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bestFields } from "@/lib/recommend";
+import { bestFields, majorsForPursuit } from "@/lib/recommend";
 import type { Major } from "@/lib/types";
 
 function major(id: string, field: string, demand: Major["demand"], high: number): Major {
@@ -65,5 +65,21 @@ describe("bestFields", () => {
     const before = majors.map((m) => m.id);
     bestFields(majors, [], 5);
     expect(majors.map((m) => m.id)).toEqual(before);
+  });
+});
+
+describe("majorsForPursuit", () => {
+  const majors = [
+    major("medicine", "Healthcare", "high", 500),
+    major("cs", "Technology", "high", 600),
+    major("electrical", "Engineering", "medium", 350),
+  ];
+
+  it("prioritises the future direction over the previous stream", () => {
+    expect(majorsForPursuit(majors, "computing-ai", "pre-medical").map((m) => m.id)).toEqual(["cs"]);
+  });
+
+  it("falls back to a stream view when the student is still exploring", () => {
+    expect(majorsForPursuit(majors, "undecided", "pre-medical")).not.toHaveLength(0);
   });
 });

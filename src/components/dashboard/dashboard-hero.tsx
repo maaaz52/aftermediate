@@ -10,6 +10,7 @@ import { pct } from "@/lib/aggregates";
 import { Avatar } from "@/components/avatar";
 import { mockAttempts } from "@/lib/practice";
 import { cn } from "@/lib/utils";
+import { PURSUIT_LABELS } from "@/lib/quiz";
 
 export function DashboardHero() {
   const { profile } = useStudent();
@@ -28,6 +29,7 @@ export function DashboardHero() {
   const checks = [
     !!profile.name,
     !!profile.stream,
+    !!q.pursuit,
     profile.marks.fscObtained > 0,
     profile.marks.matricObtained > 0,
     !!q.entryTest && q.entryTest !== "none",
@@ -62,6 +64,7 @@ export function DashboardHero() {
               Salam{profile.name ? `, ${profile.name}` : ""}
             </h1>
             <Badge variant="saffron">{STREAM_LABEL[stream]}</Badge>
+            {q.pursuit && <Badge variant="info">{PURSUIT_LABELS[q.pursuit]}</Badge>}
             {fscPct > 0 && <Badge variant="emerald" className="font-mono">{fscPct.toFixed(1)}%</Badge>}
           </div>
           <p className="mt-0.5 text-xs text-muted">

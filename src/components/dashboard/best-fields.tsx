@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { bestFields } from "@/lib/recommend";
-import { getMajorsByStream } from "@/lib/data";
+import { bestFields, majorsForPursuit } from "@/lib/recommend";
+import { data } from "@/lib/data";
 import { useStudent } from "@/lib/store";
 import { cn } from "@/lib/utils";
 
@@ -15,12 +15,15 @@ const demandChip: Record<string, string> = {
 export function BestFields() {
   const { profile } = useStudent();
   const stream = profile.stream ?? "pre-engineering";
-  const fields = bestFields(getMajorsByStream(stream), profile.interests, 5);
+  const pursuit = profile.quiz.pursuit;
+  const fields = bestFields(majorsForPursuit(data.majors, pursuit, stream), profile.interests, 5);
 
   return (
     <div className="card-glass rounded-2xl p-5">
       <div className="flex items-center justify-between">
-        <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">Best-fit fields for your stream</p>
+        <p className="text-[11px] font-semibold uppercase tracking-widest text-faint">
+          Best-fit fields for your {pursuit && pursuit !== "undecided" ? "goal" : "background"}
+        </p>
         <Link href="/career" className="text-xs font-medium text-saffron hover:underline">All fields →</Link>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">

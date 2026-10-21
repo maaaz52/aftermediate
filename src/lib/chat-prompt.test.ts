@@ -125,6 +125,7 @@ describe("student block", () => {
     city: "Lahore",
     budgetMonthly: 50000,
     interests: ["Medicine & Healthcare"],
+    pursuit: "computing-ai",
   };
 
   it("tells the bot who it is talking to when the profile is known", () => {
@@ -134,6 +135,8 @@ describe("student block", () => {
     expect(prompt).toContain("Name: Ayesha");
     expect(prompt).toContain("FSc: 87.3%");
     expect(prompt).toContain("PKR 50,000");
+    expect(prompt).toContain("Future direction: Computing, software & AI");
+    expect(prompt).toContain("prior study, not a career choice");
   });
 
   it("says where the profile data came from so the bot trusts the right copy", () => {
@@ -209,7 +212,7 @@ describe("rahbar's site map", () => {
   });
 
   it("counts the quiz the way quiz.ts counts it", () => {
-    expect(QUIZ_SECTIONS).toHaveLength(5);
+    expect(QUIZ_SECTIONS).toHaveLength(6);
     expect(rahbar).toContain(`${QUIZ_SECTIONS.length}-section quiz`);
     expect(rahbar).toContain(QUIZ_SECTIONS.map((section) => section.id).join(", "));
   });

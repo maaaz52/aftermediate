@@ -25,8 +25,8 @@
  */
 
 import { pct } from "@/lib/aggregates";
-import { optionValues } from "@/lib/quiz";
-import type { Stream } from "@/lib/types";
+import { optionValues, PURSUIT_LABELS } from "@/lib/quiz";
+import type { Pursuit, Stream } from "@/lib/types";
 
 export interface StudentContext {
   name?: string;
@@ -37,6 +37,7 @@ export interface StudentContext {
   /** PKR per month. */
   budgetMonthly?: number;
   interests?: string[];
+  pursuit?: Pursuit;
   dreamField?: string;
 }
 
@@ -62,6 +63,7 @@ const BUDGET_MAX = 10_000_000;
 
 const STREAMS: string[] = optionValues("stream", "stream");
 const INTERESTS: string[] = optionValues("interests", "interests");
+const PURSUITS: string[] = optionValues("pursuit", "quiz.pursuit");
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -138,6 +140,10 @@ export function buildStudentContext(row: ProfileRow | null | undefined): Student
     if (interests.length > 0) ctx.interests = [...new Set(interests)];
   }
 
+  if (typeof quiz.pursuit === "string" && PURSUITS.includes(quiz.pursuit)) {
+    ctx.pursuit = quiz.pursuit as Pursuit;
+  }
+
   const dream = sanitizeField(quiz.dreamField, DREAM_MAX);
   if (dream) ctx.dreamField = dream;
 
@@ -162,6 +168,7 @@ export function formatStudentContext(ctx: StudentContext | null): string {
   if (ctx.interests && ctx.interests.length > 0) {
     lines.push(`Interests: ${ctx.interests.join(", ")}`);
   }
+  if (ctx.pursuit) lines.push(`Future direction: ${PURSUIT_LABELS[ctx.pursuit]}`);
   if (ctx.dreamField) lines.push(`Field they would choose themselves: ${ctx.dreamField}`);
 
   return lines.join("\n");

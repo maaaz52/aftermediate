@@ -81,6 +81,11 @@ describe("buildStudentContext", () => {
     expect(ctx?.interests).toEqual(["Medicine & Healthcare"]);
   });
 
+  it("uses the separately chosen future direction and rejects stale values", () => {
+    expect(buildStudentContext({ quiz: { pursuit: "computing-ai" } })?.pursuit).toBe("computing-ai");
+    expect(buildStudentContext({ quiz: { pursuit: "astronaut" } })?.pursuit).toBeUndefined();
+  });
+
   it("reads nothing beyond the seven columns it is allowed to see", () => {
     const allowed = ["name", "stream", "marks", "interests", "city", "budget", "quiz"];
     const snooping = new Set<string>();
@@ -137,6 +142,12 @@ describe("formatStudentContext", () => {
 
   it("groups the budget into thousands without a locale dependency", () => {
     expect(formatStudentContext({ budgetMonthly: 1250000 })).toContain("PKR 1,250,000");
+  });
+
+  it("labels the future direction for the chatbot instead of exposing its internal value", () => {
+    expect(formatStudentContext({ pursuit: "computing-ai" })).toContain(
+      "Future direction: Computing, software & AI"
+    );
   });
 
   it("returns an empty string when there is no context to inject", () => {

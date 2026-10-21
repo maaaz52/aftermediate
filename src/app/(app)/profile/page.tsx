@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useStudent, type EducationEntry } from "@/lib/store";
 import { useAuth } from "@/lib/auth";
-import { isQuizComplete } from "@/lib/quiz";
+import { isQuizComplete, PURSUIT_LABELS } from "@/lib/quiz";
 import { cn } from "@/lib/utils";
 import { AVATAR_STYLES, type AvatarStyleId } from "@/lib/avatar";
 import { Avatar } from "@/components/avatar";
@@ -223,6 +223,7 @@ export default function ProfilePage() {
   }
 
   function saveDecisions() {
+    if (draft.pursuit) patchQuiz({ pursuit: draft.pursuit as never });
     if (draft.dreamField) patchQuiz({ dreamField: draft.dreamField });
     if (draft.parentsExpect) patchQuiz({ parentsExpect: draft.parentsExpect as never });
     if (draft.decisionMaker) patchQuiz({ decisionMaker: draft.decisionMaker as never });
@@ -686,7 +687,13 @@ export default function ProfilePage() {
       >
         {editing === "decisions" ? (
           <div className="grid gap-3 sm:grid-cols-2">
-            <Field label="Dream field" value={draft.dreamField ?? q.dreamField ?? ""} onChange={(v) => setField("dreamField", v)} />
+            <Picker
+              label="What I want to pursue next"
+              options={PURSUIT_LABELS}
+              value={draft.pursuit ?? q.pursuit ?? ""}
+              onChange={(v) => setField("pursuit", v)}
+            />
+            <Field label="Specific degree or field" value={draft.dreamField ?? q.dreamField ?? ""} onChange={(v) => setField("dreamField", v)} />
             <Picker
               label="Parents expect"
               options={parentsExpectLabel}
@@ -704,7 +711,8 @@ export default function ProfilePage() {
         ) : (
           <RowGrid
             rows={[
-              ["Dream field", q.dreamField || "—"],
+              ["Future direction", q.pursuit ? PURSUIT_LABELS[q.pursuit] : "—"],
+              ["Specific degree or field", q.dreamField || "—"],
               ["Parents expect", q.parentsExpect ? parentsExpectLabel[q.parentsExpect] : "—"],
               ["Who decides", q.decisionMaker ? decisionMakerLabel[q.decisionMaker] : "—"],
               ["Parents firmness", q.parentsFirmness ? `${q.parentsFirmness}/5` : "—"],

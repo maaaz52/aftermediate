@@ -44,6 +44,7 @@ function filled(): StudentProfile {
     },
     interests: ["Technology & Coding"],
     quiz: {
+      pursuit: "computing-ai",
       entryTest: "net",
       city: "Lahore",
       budgetMonthly: 50000,
@@ -76,9 +77,9 @@ describe("dotted-path answers", () => {
 });
 
 describe("sections", () => {
-  it("declares the five sections in order", () => {
+  it("declares the six sections in order", () => {
     expect(QUIZ_SECTIONS.map((s) => s.id)).toEqual([
-      "stream", "marks", "pressure", "readiness", "interests",
+      "stream", "pursuit", "marks", "pressure", "readiness", "interests",
     ]);
   });
 });
@@ -96,6 +97,15 @@ describe("visibleQuestions", () => {
     expect(qs[0].options!.map((o) => o.value)).toEqual([
       "pre-medical", "pre-engineering", "ics", "icom", "alevel",
     ]);
+  });
+
+  it("requires a separate future direction from the stream", () => {
+    const pursuit = QUIZ_SECTIONS.find((s) => s.id === "pursuit")!;
+    expect(isSectionComplete(pursuit, blank())).toBe(false);
+    expect(isSectionComplete(pursuit, filled())).toBe(true);
+    expect(visibleQuestions(pursuit, blank())[0].options).toContainEqual({
+      value: "computing-ai", label: "Computing, software & AI",
+    });
   });
 
   it("returns the interests section with all options", () => {
@@ -181,6 +191,7 @@ describe("seeded marks defaults are not real answers", () => {
       ...blank(),
       stream: "pre-engineering" as const,
       interests: ["Technology & Coding"],
+      quiz: { pursuit: "undecided" as const },
     };
     expect(isQuizComplete(skipped)).toBe(true);
     expect(firstIncompleteSection(skipped)).toBe(QUIZ_SECTIONS.length);

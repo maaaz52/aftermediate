@@ -1,4 +1,5 @@
 import type { StudentProfile } from "@/lib/store";
+import type { Pursuit } from "@/lib/types";
 
 export type QuestionKind =
   | "single" | "multi" | "number" | "text" | "scale" | "stream" | "marksheet";
@@ -90,13 +91,28 @@ const INTERESTS = [
   "Helping People", "Building Things", "Leadership",
 ].map((i) => ({ value: i, label: i }));
 
+export const PURSUIT_OPTIONS: QuestionOption[] = [
+  { value: "medicine-healthcare", label: "Medicine & healthcare" },
+  { value: "engineering", label: "Engineering" },
+  { value: "computing-ai", label: "Computing, software & AI" },
+  { value: "business-finance", label: "Business, finance & entrepreneurship" },
+  { value: "law-social-sciences", label: "Law, policy & social sciences" },
+  { value: "arts-design", label: "Design, media & creative work" },
+  { value: "research-science", label: "Research & sciences" },
+  { value: "undecided", label: "I'm still exploring" },
+];
+
+export const PURSUIT_LABELS: Record<Pursuit, string> = Object.fromEntries(
+  PURSUIT_OPTIONS.map(({ value, label }) => [value, label])
+) as Record<Pursuit, string>;
+
 /* ---------- sections ---------- */
 
 export const QUIZ_SECTIONS: QuizSection[] = [
   {
     id: "stream",
     title: "What did you do in FSc?",
-    subtitle: "This decides which doors we map for you.",
+    subtitle: "This is your academic background. It does not decide your future direction.",
     questions: [
       {
         id: "stream", kind: "stream", label: "Your stream",
@@ -108,6 +124,17 @@ export const QUIZ_SECTIONS: QuizSection[] = [
           { value: "icom", label: "I.Com", sub: "Commerce · Accounting" },
           { value: "alevel", label: "A-Levels", sub: "Cambridge International" },
         ],
+      },
+    ],
+  },
+  {
+    id: "pursuit",
+    title: "What do you want to pursue next?",
+    subtitle: "We will use this for your recommendations and AI guidance, separately from your FSc/ICS background.",
+    questions: [
+      {
+        id: "quiz.pursuit", kind: "single", label: "Your preferred direction",
+        required: true, options: PURSUIT_OPTIONS,
       },
     ],
   },

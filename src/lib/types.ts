@@ -1,5 +1,16 @@
 export type Stream = "pre-medical" | "pre-engineering" | "ics" | "icom" | "alevel";
 
+/** What the student wants to study next, independent of their FSc/ICS background. */
+export type Pursuit =
+  | "medicine-healthcare"
+  | "engineering"
+  | "computing-ai"
+  | "business-finance"
+  | "law-social-sciences"
+  | "arts-design"
+  | "research-science"
+  | "undecided";
+
 export interface Marks {
   matricObtained: number;
   matricTotal: number;
@@ -111,6 +122,8 @@ export interface AbroadDestination {
 }
 
 export interface QuizAnswers {
+  // future direction (their background stream is stored separately)
+  pursuit?: Pursuit;
   // merit
   board?: string;
   examYear?: number;
