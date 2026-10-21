@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/client";
 import type { ChatMessage } from "@/lib/chat-request";
 
-export type SessionPersona = "manzil" | "safar" | "study";
+export type SessionPersona = "manzil" | "safar" | "study" | "hunar";
 
 export interface ChatSession {
   id: string;

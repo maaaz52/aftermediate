@@ -25,6 +25,7 @@ const PERSONA_LABELS: Record<SessionPersona, string> = {
   manzil: "Manzil A.I",
   safar: "Safar A.I",
   study: "Ustaad A.I",
+  hunar: "Hunar A.I",
 };
 
 export function SessionSidebar({
@@ -65,8 +66,8 @@ export function SessionSidebar({
       setError(null);
       const session = await createSession(persona);
       setSessions((prev) => [session, ...prev]);
-      onSelect(session.id);
       onNew();
+      onSelect(session.id);
       onClose();
     } catch (cause) {
       console.warn("chat session create failed", cause);

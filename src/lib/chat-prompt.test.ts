@@ -44,6 +44,14 @@ describe("buildSystemPrompt", () => {
       expect(prompt.includes("NaN"), persona).toBe(false);
     }
   });
+
+  it("requires every assistant to mirror the user's language and script", () => {
+    for (const persona of PERSONAS) {
+      const prompt = buildSystemPrompt({ persona });
+      expect(prompt).toContain("English, Urdu script, or Roman Urdu");
+      expect(prompt).toContain("Never assume Roman Urdu");
+    }
+  });
 });
 
 describe("grounding block", () => {
@@ -213,6 +221,6 @@ describe("rahbar's site map", () => {
 
   it("fits the whole site map inside one message", () => {
     const prompt = buildSystemPrompt({ persona: "rahbar", student: { city: "Lahore" } });
-    expect(prompt.length).toBeLessThan(6_000);
+    expect(prompt.length).toBeLessThan(6_250);
   });
 });

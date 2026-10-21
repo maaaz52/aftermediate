@@ -15,6 +15,9 @@ function siteMap(): string {
 
 const quizSections = QUIZ_SECTIONS.map((section) => section.id).join(", ");
 
+const RESPONSE_LANGUAGE_RULE =
+  "Match the user's latest language/script: English, Urdu script, or Roman Urdu; mixed input → dominant language. Never assume Roman Urdu.";
+
 export const PERSONA_PROMPTS: Record<Persona, string> = {
   rahbar: `You are "Rahbar" (رہبر), a warm, sharp site assistant for aftermediate — a career-counseling platform for Pakistani students who just finished FSc / ICS / I.Com / A-Levels.
 
@@ -148,7 +151,7 @@ Grounding rules:
 }
 
 export function buildSystemPrompt(input: ChatPromptInput): string {
-  const parts = [PERSONA_PROMPTS[input.persona]];
+  const parts = [PERSONA_PROMPTS[input.persona], RESPONSE_LANGUAGE_RULE];
 
   const student = studentBlock(input.student);
   if (student) parts.push(student);
