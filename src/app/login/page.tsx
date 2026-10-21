@@ -109,9 +109,10 @@ export default function LoginPage() {
   });
 
   React.useEffect(() => {
-    // /onboard sends returning students straight to the dashboard after it
-    // confirms their quiz is complete, but guarantees a new account sees it.
-    if (user) router.replace("/onboard");
+    // The protected app shell waits for the profile to hydrate and sends only
+    // genuinely new students to onboarding. Going through it avoids rendering
+    // the quiz while a returning student's completion status is still loading.
+    if (user) router.replace("/dashboard");
   }, [user, router]);
 
   async function submit(e: React.FormEvent) {
@@ -126,7 +127,7 @@ export default function LoginPage() {
     if (mode === "signin") {
       const r = await signInEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
-      else router.replace("/onboard");
+      else router.replace("/dashboard");
     } else {
       if (password !== confirm) {
         setMessage({ type: "err", text: "Passwords don't match. Double-check and try again." });
@@ -137,7 +138,7 @@ export default function LoginPage() {
       if (r.error) setMessage({ type: "err", text: r.error });
       else if (r.needsConfirm) {
         router.push(`/verify-email?email=${encodeURIComponent(r.email || email)}`);
-      } else router.push("/onboard");
+      } else router.push("/dashboard");
     }
     setBusy(false);
   }
@@ -156,7 +157,7 @@ export default function LoginPage() {
       setGoogleBusy(false);
       return;
     }
-    router.push("/onboard");
+    router.push("/dashboard");
   }, [agreed, router, signInGoogle]);
 
   const handleGoogleError = React.useCallback((error: string) => {

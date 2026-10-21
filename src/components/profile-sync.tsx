@@ -60,7 +60,7 @@ export function ProfileSync() {
   });
 
   // 1. Hydrate once per user.
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (!user) {
       pushed.current = null;
       hydrate(profile);

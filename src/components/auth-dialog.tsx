@@ -35,14 +35,17 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
     if (mode === "signin") {
       const r = await signInEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
-      else onClose();
+      else {
+        onClose();
+        router.replace("/dashboard");
+      }
     } else {
       const r = await signUpEmail(email, password);
       if (r.error) setMessage({ type: "err", text: r.error });
       else if (r.needsConfirm) setMessage({ type: "ok", text: "Check your email to confirm your account." });
       else {
         onClose();
-        router.push("/onboard");
+        router.push("/dashboard");
       }
     }
     setBusy(false);
@@ -63,7 +66,7 @@ export function AuthDialog({ open, onClose }: { open: boolean; onClose: () => vo
       return;
     }
     onClose();
-    router.push("/onboard");
+    router.push("/dashboard");
   }
 
   return (
