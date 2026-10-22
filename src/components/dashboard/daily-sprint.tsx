@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
@@ -133,15 +132,6 @@ export function DailySprint() {
         <p className="mt-3 text-sm text-muted">
           Today: {Object.entries(recipeSummary).map(([label, count]) => `${count} × ${label}`).join(" · ")}
         </p>
-
-        {stream === null && (
-          <Link
-            href="/onboard"
-            className="mt-2 inline-block text-xs font-medium text-saffron hover:underline"
-          >
-            Pick your stream to personalize your sprint →
-          </Link>
-        )}
 
         <Button
           type="button"
