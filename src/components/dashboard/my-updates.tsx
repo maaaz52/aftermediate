@@ -10,11 +10,13 @@ import { APPLICATION_STATUSES, applicationStatusLabel, type ApplicationPlan, typ
 import { applicationChecklist } from "@/lib/application-checklist";
 import { applicationFocus } from "@/lib/application-focus";
 import { NotificationPreferences } from "@/components/dashboard/notification-preferences";
+import { ApplicationCalendar } from "@/components/dashboard/application-calendar";
+import type { PersonalCalendarItem } from "@/lib/personal-application-calendar";
 
 type Follow = { entityType: FollowEntityType; entityId: string };
 type Deadline = Follow & { label: string; dueDate: string; officialUrl: string };
 type Update = Follow & { entityLabel: string; summary: string; officialUrl: string; alertKind: "general" | "merit-list" | "selection-update"; reviewedAt: string };
-type UpdateData = { follows: Follow[]; deadlines: Deadline[]; updates: Update[]; plans: ApplicationPlan[] };
+type UpdateData = { follows: Follow[]; deadlines: Deadline[]; updates: Update[]; plans: ApplicationPlan[]; calendar: PersonalCalendarItem[] };
 
 function updateLabel(kind: Update["alertKind"]) {
   if (kind === "merit-list") return "Merit list";
@@ -56,6 +58,7 @@ export function MyUpdates() {
   const deadlines = data?.deadlines ?? [];
   const updates = data?.updates ?? [];
   const plans = data?.plans ?? [];
+  const calendar = data?.calendar ?? [];
   const focus = applicationFocus(follows, deadlines, plans);
 
   async function savePlan(follow: Follow, status: ApplicationStatus, note: string, completedTaskIds: string[]) {
@@ -150,6 +153,8 @@ export function MyUpdates() {
           </div>
         </div>;
       })()}
+
+      <ApplicationCalendar items={calendar} />
 
       <div className="mt-5 flex flex-wrap gap-2 border-t border-line pt-4">
         {follows.slice(0, 8).map((follow) => {

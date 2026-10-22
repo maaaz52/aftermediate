@@ -3,6 +3,8 @@ import { requireAuth } from "@/lib/http";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isFollowEntityType } from "@/lib/source-follow";
 import { isApplicationStatus } from "@/lib/application-tracker";
+import { personalApplicationCalendar } from "@/lib/personal-application-calendar";
+import type { ConfirmedAdmissionCalendarEvent } from "@/lib/admission-calendar";
 
 export const runtime = "nodejs";
 
@@ -29,12 +31,13 @@ export async function GET() {
         ? [{ entityType: follow.entity_type, entityId: follow.entity_id }]
         : []
     ));
-    if (follows.length === 0) return jsonOk({ follows, deadlines: [], updates: [], plans: [] });
+    if (follows.length === 0) return jsonOk({ follows, deadlines: [], updates: [], plans: [], calendar: [] });
 
     const followed = new Set(follows.map((follow) => `${follow.entityType}:${follow.entityId}`));
     const admin = createAdminClient();
     const today = new Date().toISOString().slice(0, 10);
-    const [deadlinesResult, updatesResult, plansResult] = await Promise.all([
+    const universityIds = follows.filter((follow) => follow.entityType === "university").map((follow) => follow.entityId);
+    const [deadlinesResult, updatesResult, plansResult, calendarResult] = await Promise.all([
       admin
         .from("official_deadline_events")
         .select("entity_type, entity_id, label, due_date, official_url")
@@ -51,10 +54,13 @@ export async function GET() {
         .from("application_tracker_entries")
         .select("entity_type, entity_id, status, note, completed_task_ids, updated_at")
         .eq("user_id", auth.user.id),
+      universityIds.length > 0
+        ? admin.from("admission_calendar_events").select("university_id, event_type, timing_label, source_url, confirmed_at").in("university_id", universityIds)
+        : Promise.resolve({ data: [], error: null }),
     ]);
 
-    if (deadlinesResult.error || updatesResult.error || plansResult.error) {
-      console.error("my updates lookup failed", deadlinesResult.error?.message ?? updatesResult.error?.message ?? plansResult.error?.message);
+    if (deadlinesResult.error || updatesResult.error || plansResult.error || calendarResult.error) {
+      console.error("my updates lookup failed", deadlinesResult.error?.message ?? updatesResult.error?.message ?? plansResult.error?.message ?? calendarResult.error?.message);
       return jsonError("Could not load your updates.", 500);
     }
 
@@ -88,8 +94,15 @@ export async function GET() {
         ? [{ entityType: plan.entity_type, entityId: plan.entity_id, status: plan.status, note: plan.note, completedTaskIds: plan.completed_task_ids, updatedAt: plan.updated_at }]
         : []
     ));
+    const confirmedByUniversity: Record<string, ConfirmedAdmissionCalendarEvent[]> = {};
+    for (const event of calendarResult.data ?? []) {
+      if (typeof event.university_id !== "string" || typeof event.timing_label !== "string" || typeof event.source_url !== "string" || typeof event.confirmed_at !== "string") continue;
+      if (event.event_type !== "announcement" && event.event_type !== "application" && event.event_type !== "test" && event.event_type !== "merit" && event.event_type !== "fee" && event.event_type !== "intake") continue;
+      (confirmedByUniversity[event.university_id] ??= []).push({ eventType: event.event_type, timingLabel: event.timing_label, sourceUrl: event.source_url, confirmedAt: event.confirmed_at });
+    }
+    const calendar = personalApplicationCalendar(follows, confirmedByUniversity, deadlines);
 
-    return jsonOk({ follows, deadlines, updates, plans });
+    return jsonOk({ follows, deadlines, updates, plans, calendar });
   } catch (error) {
     console.error("my updates route failed", error);
     return jsonError("Could not load your updates.", 500);
