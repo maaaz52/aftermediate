@@ -49,7 +49,7 @@ export async function GET() {
         .limit(100),
       auth.supabase
         .from("application_tracker_entries")
-        .select("entity_type, entity_id, status, note, updated_at")
+        .select("entity_type, entity_id, status, note, completed_task_ids, updated_at")
         .eq("user_id", auth.user.id),
     ]);
 
@@ -84,8 +84,8 @@ export async function GET() {
     const plans = (plansResult.data ?? []).flatMap((plan) => (
       isFollowEntityType(plan.entity_type) && typeof plan.entity_id === "string" &&
       followed.has(`${plan.entity_type}:${plan.entity_id}`) && isApplicationStatus(plan.status) &&
-      typeof plan.note === "string" && typeof plan.updated_at === "string"
-        ? [{ entityType: plan.entity_type, entityId: plan.entity_id, status: plan.status, note: plan.note, updatedAt: plan.updated_at }]
+      typeof plan.note === "string" && typeof plan.updated_at === "string" && Array.isArray(plan.completed_task_ids) && plan.completed_task_ids.every((task) => typeof task === "string")
+        ? [{ entityType: plan.entity_type, entityId: plan.entity_id, status: plan.status, note: plan.note, completedTaskIds: plan.completed_task_ids, updatedAt: plan.updated_at }]
         : []
     ));
 

@@ -3,10 +3,11 @@ import { isApplicationStatus } from "@/lib/application-tracker";
 import { parseJsonBody, requireAuth } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { isFollowableEntity, isFollowEntityType } from "@/lib/source-follow";
+import { validCompletedTaskIds } from "@/lib/application-checklist";
 
 export const runtime = "nodejs";
 
-type TrackerPayload = { entityType?: unknown; entityId?: unknown; status?: unknown; note?: unknown };
+type TrackerPayload = { entityType?: unknown; entityId?: unknown; status?: unknown; note?: unknown; completedTaskIds?: unknown };
 
 export async function GET() {
   try {
@@ -14,7 +15,7 @@ export async function GET() {
     if (!auth.ok) return auth.error;
     const { data, error } = await auth.supabase
       .from("application_tracker_entries")
-      .select("entity_type, entity_id, status, note, updated_at")
+      .select("entity_type, entity_id, status, note, completed_task_ids, updated_at")
       .eq("user_id", auth.user.id)
       .order("updated_at", { ascending: false });
     if (error) return jsonError("Could not load your application plan.", 500);
@@ -40,6 +41,8 @@ export async function PUT(request: Request) {
     }
     const note = typeof body.note === "string" ? body.note.trim() : "";
     if (note.length > 1000) return jsonError("Your note is too long.", 400);
+    const completedTaskIds = validCompletedTaskIds(body.entityType, body.entityId, body.completedTaskIds ?? []);
+    if (!completedTaskIds) return jsonError("Your checklist contains an invalid task.", 400);
 
     const { data: follow, error: followError } = await auth.supabase
       .from("source_follows")
@@ -53,7 +56,7 @@ export async function PUT(request: Request) {
 
     const now = new Date().toISOString();
     const { error } = await auth.supabase.from("application_tracker_entries").upsert(
-      { user_id: auth.user.id, entity_type: body.entityType, entity_id: body.entityId, status: body.status, note, updated_at: now },
+      { user_id: auth.user.id, entity_type: body.entityType, entity_id: body.entityId, status: body.status, note, completed_task_ids: completedTaskIds, updated_at: now },
       { onConflict: "user_id,entity_type,entity_id" }
     );
     if (error) return jsonError("Could not save your application plan.", 500);

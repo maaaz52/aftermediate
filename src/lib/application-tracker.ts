@@ -8,6 +8,7 @@ export type ApplicationPlan = {
   entityId: string;
   status: ApplicationStatus;
   note: string;
+  completedTaskIds: string[];
   updatedAt: string;
 };
 

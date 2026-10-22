@@ -7,6 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { deadlineDistanceLabel } from "@/lib/deadline-reminders";
 import { followEntityDetail, type FollowEntityType } from "@/lib/source-follow";
 import { APPLICATION_STATUSES, applicationStatusLabel, type ApplicationPlan, type ApplicationStatus } from "@/lib/application-tracker";
+import { applicationChecklist } from "@/lib/application-checklist";
 
 type Follow = { entityType: FollowEntityType; entityId: string };
 type Deadline = Follow & { label: string; dueDate: string; officialUrl: string };
@@ -54,7 +55,7 @@ export function MyUpdates() {
   const updates = data?.updates ?? [];
   const plans = data?.plans ?? [];
 
-  async function savePlan(follow: Follow, status: ApplicationStatus, note: string) {
+  async function savePlan(follow: Follow, status: ApplicationStatus, note: string, completedTaskIds: string[]) {
     const key = `${follow.entityType}:${follow.entityId}`;
     setSavingKey(key);
     setSaveError(null);
@@ -62,7 +63,7 @@ export function MyUpdates() {
       const response = await fetch("/api/application-tracker", {
         method: "PUT",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ entityType: follow.entityType, entityId: follow.entityId, status, note }),
+        body: JSON.stringify({ entityType: follow.entityType, entityId: follow.entityId, status, note, completedTaskIds }),
       });
       const result = await response.json().catch(() => ({})) as { error?: string; updatedAt?: string };
       const updatedAt = result.updatedAt;
@@ -71,7 +72,7 @@ export function MyUpdates() {
         ...current,
         plans: [
           ...current.plans.filter((plan) => `${plan.entityType}:${plan.entityId}` !== key),
-          { entityType: follow.entityType, entityId: follow.entityId, status, note, updatedAt },
+          { entityType: follow.entityType, entityId: follow.entityId, status, note, completedTaskIds, updatedAt },
         ],
       } : current);
     } catch (caught) {
@@ -160,17 +161,31 @@ export function MyUpdates() {
   );
 }
 
-function PlanEditor({ follow, name, plan, saving, onSave }: { follow: Follow; name: string; plan?: ApplicationPlan; saving: boolean; onSave: (follow: Follow, status: ApplicationStatus, note: string) => Promise<void> }) {
+function PlanEditor({ follow, name, plan, saving, onSave }: { follow: Follow; name: string; plan?: ApplicationPlan; saving: boolean; onSave: (follow: Follow, status: ApplicationStatus, note: string, completedTaskIds: string[]) => Promise<void> }) {
   const [status, setStatus] = React.useState<ApplicationStatus>(plan?.status ?? "considering");
   const [note, setNote] = React.useState(plan?.note ?? "");
+  const [completedTaskIds, setCompletedTaskIds] = React.useState<string[]>(plan?.completedTaskIds ?? []);
+  const tasks = React.useMemo(() => applicationChecklist(follow.entityType, follow.entityId), [follow.entityId, follow.entityType]);
   return <div className="rounded-xl border border-line bg-surface/60 p-3">
     <p className="truncate text-xs font-semibold text-ink">{name}</p>
     <div className="mt-2 grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto]">
-      <input value={note} maxLength={1000} onChange={(event) => setNote(event.target.value)} onBlur={() => { if (!saving && (note !== (plan?.note ?? ""))) void onSave(follow, status, note); }} placeholder="Private note" className="h-9 min-w-0 rounded-lg border border-line bg-surface px-2.5 text-xs text-ink placeholder:text-faint" />
-      <select value={status} onChange={(event) => { const next = event.target.value as ApplicationStatus; setStatus(next); void onSave(follow, next, note); }} disabled={saving} className="h-9 rounded-lg border border-line bg-surface px-2.5 text-xs font-medium text-ink disabled:opacity-60">
+      <input value={note} maxLength={1000} onChange={(event) => setNote(event.target.value)} onBlur={() => { if (!saving && (note !== (plan?.note ?? ""))) void onSave(follow, status, note, completedTaskIds); }} placeholder="Private note" className="h-9 min-w-0 rounded-lg border border-line bg-surface px-2.5 text-xs text-ink placeholder:text-faint" />
+      <select value={status} onChange={(event) => { const next = event.target.value as ApplicationStatus; setStatus(next); void onSave(follow, next, note, completedTaskIds); }} disabled={saving} className="h-9 rounded-lg border border-line bg-surface px-2.5 text-xs font-medium text-ink disabled:opacity-60">
         {APPLICATION_STATUSES.map((option) => <option key={option} value={option}>{applicationStatusLabel(option)}</option>)}
       </select>
     </div>
+    <details className="mt-3">
+      <summary className="cursor-pointer text-xs font-medium text-saffron">Checklist {completedTaskIds.length}/{tasks.length}</summary>
+      <div className="mt-2 space-y-2">
+        {tasks.map((task) => {
+          const checked = completedTaskIds.includes(task.id);
+          return <label key={task.id} className="flex cursor-pointer items-start gap-2 text-xs text-muted">
+            <input type="checkbox" checked={checked} disabled={saving} onChange={() => { const next = checked ? completedTaskIds.filter((id) => id !== task.id) : [...completedTaskIds, task.id]; setCompletedTaskIds(next); void onSave(follow, status, note, next); }} className="mt-0.5 h-3.5 w-3.5 accent-saffron" />
+            <span><span className={checked ? "line-through text-faint" : "text-ink"}>{task.title}</span><span className="mt-0.5 block text-[11px] leading-relaxed text-faint">{task.detail}</span></span>
+          </label>;
+        })}
+      </div>
+    </details>
     {saving && <p className="mt-2 text-[11px] text-faint">Saving…</p>}
   </div>;
 }
