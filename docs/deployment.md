@@ -111,6 +111,10 @@ date explicitly shown on the official source. The same weekly job emails each
 current follower once when that date is within 14 days, so no estimated window
 is ever sent as an exact deadline.
 
+The same weekly monitor sends a compact pending-review digest to every address
+in `ADMIN_EMAILS` when official-source candidates still await review. This
+requires no additional environment variable, schedule, or Supabase migration.
+
 Run `supabase/migrations/20261022_merit_list_alerts.sql` to classify reviewed
 changes as a general update, an official merit-list publication, or a
 selection/offer update. The email wording stays factual: it links a follower
