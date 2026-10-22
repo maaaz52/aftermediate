@@ -91,7 +91,7 @@ function EvidenceCard({ item }: { item: EvidenceItem }) {
       <p className="mt-4 text-sm leading-relaxed text-muted">{item.why}</p>
       <div className="mt-5 border-t border-line pt-4">
         <p className="text-sm font-medium text-ink">{item.action}</p>
-        <Link href={item.href} className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-saffron hover:underline">
+        <Link href={item.href} className="mt-3 inline-flex min-h-11 items-center gap-1.5 rounded-lg px-1 text-sm font-semibold text-saffron transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60">
           {item.actionLabel} <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
@@ -109,13 +109,13 @@ function SourceDetails({ benchmark }: { benchmark: RealityBenchmark }) {
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="flex w-full items-center justify-between gap-3 text-left text-xs font-medium text-muted hover:text-ink"
+        className="flex min-h-11 w-full items-center justify-between gap-3 rounded-lg px-1 text-left text-xs font-medium text-muted transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60"
       >
         <span>Source & methodology</span>
         <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
       </button>
       {open && (
-        <div className="mt-3 space-y-2 text-xs leading-relaxed text-muted">
+        <div className="mt-3 space-y-2 break-words text-xs leading-relaxed text-muted">
           <p><span className="font-semibold text-ink">Scope:</span> {benchmark.scope}</p>
           <p>{benchmark.methodology}</p>
           <p>
@@ -126,7 +126,7 @@ function SourceDetails({ benchmark }: { benchmark: RealityBenchmark }) {
             href={benchmark.sourceUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-saffron hover:underline"
+            className="inline-flex min-h-11 items-center gap-1 rounded-lg px-1 font-semibold text-saffron transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60"
           >
             Open {benchmark.source} <ExternalLink className="h-3.5 w-3.5" />
           </a>
@@ -224,19 +224,19 @@ export function RealityCheckExperience() {
   const nextMoves = track.actions;
 
   return (
-    <div data-tour="reality-check" className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+    <div data-tour="reality-check" className="mx-auto max-w-6xl overflow-x-hidden px-4 py-8 sm:px-6 sm:py-10">
       <header className="animate-reveal max-w-4xl">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="violet">Reality Check</Badge>
           <span className="font-mono text-xs text-faint">the numbers do not wait · source-backed</span>
         </div>
-        <div className="mt-5 flex items-start gap-4 sm:items-center">
-          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-violet/25 bg-violet/10 sm:h-14 sm:w-14">
+        <div className="mt-5 flex items-start gap-3 sm:items-center sm:gap-4">
+          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-violet/25 bg-violet/10 sm:h-14 sm:w-14">
             <Radar className="h-6 w-6 text-violet" />
           </div>
           <div>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">Your direction: {direction}</p>
-            <h1 className="mt-2 max-w-3xl text-balance text-4xl font-extrabold tracking-[-0.045em] text-ink sm:text-6xl">
+            <h1 className="mt-2 max-w-3xl text-balance text-[2.15rem] font-extrabold leading-[1.03] tracking-[-0.045em] text-ink sm:text-6xl">
               {track.headline}
             </h1>
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
@@ -244,9 +244,9 @@ export function RealityCheckExperience() {
             </p>
           </div>
         </div>
-        <div className="mt-8 grid overflow-hidden rounded-3xl border border-ink bg-ink text-background sm:grid-cols-3">
+        <div className="mt-8 grid overflow-hidden rounded-2xl border border-ink bg-ink text-background sm:grid-cols-3 sm:rounded-3xl">
           {heroBenchmarks.map((benchmark, index) => (
-            <div key={benchmark.id} className={cn("px-5 py-5", index < heroBenchmarks.length - 1 && "border-b border-background/15 sm:border-b-0 sm:border-r")}>
+            <div key={benchmark.id} className={cn("px-4 py-5 sm:px-5", index < heroBenchmarks.length - 1 && "border-b border-background/15 sm:border-b-0 sm:border-r")}>
               <p className="font-mono text-3xl font-bold tracking-tight text-saffron">{benchmark.metric}</p>
               <p className="mt-2 text-sm font-semibold">{benchmark.label}</p>
               <p className="mt-1 text-xs leading-relaxed text-background/65">{benchmark.context}</p>
@@ -285,15 +285,15 @@ export function RealityCheckExperience() {
         <div className="mt-6 grid gap-4 md:grid-cols-2">{evidence.map((item) => <EvidenceCard key={item.id} item={item} />)}</div>
       </section>
 
-      <section className="animate-reveal mt-16 overflow-hidden rounded-3xl border border-ink bg-ink px-6 py-7 text-background sm:px-8 sm:py-9" aria-labelledby="next-heading" style={{ animationDelay: "200ms" }}>
+      <section className="animate-reveal mt-16 overflow-hidden rounded-2xl border border-ink bg-ink px-5 py-7 text-background sm:rounded-3xl sm:px-8 sm:py-9" aria-labelledby="next-heading" style={{ animationDelay: "200ms" }}>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-xl">
             <div className="flex items-center gap-2 text-saffron"><Sparkles className="h-4 w-4" /><span className="font-mono text-xs font-semibold uppercase tracking-[0.16em]">Do not leave this as a feeling</span></div>
             <h2 id="next-heading" className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">In 30 days, have something real to point at.</h2>
             <p className="mt-2 text-sm leading-relaxed text-background/70">Not everything. One proof of work, one learning step, and one clear explanation of what you did. Momentum stops being abstract when another person can see it.</p>
           </div>
-          <Link href="/skills/courses" className="inline-flex shrink-0 items-center gap-2 self-start rounded-xl bg-saffron px-5 py-3 text-sm font-bold text-background transition-transform hover:-translate-y-0.5 lg:self-auto">
-            Take the first step <ArrowRight className="h-4 w-4" />
+          <Link href={nextMoves[0].href} className="inline-flex min-h-11 w-full shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-saffron px-5 py-3 text-sm font-bold text-background transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background/80 sm:w-auto lg:self-auto">
+            Start with {nextMoves[0].label} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
         <div className="mt-8 grid gap-3 md:grid-cols-3">
@@ -309,7 +309,7 @@ export function RealityCheckExperience() {
 
       <footer className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs leading-relaxed text-faint sm:flex-row sm:items-start sm:justify-between">
         <p className="max-w-2xl"><FileText className="mr-1 inline h-3.5 w-3.5" />Reality Check uses published sources and your self-reported profile. It cannot predict admission, employment, salary, or your potential.</p>
-        <a href="#landscape-heading" className="inline-flex items-center gap-1 font-semibold text-muted hover:text-ink"><Globe2 className="h-3.5 w-3.5" /> View sources above</a>
+        <a href="#landscape-heading" className="inline-flex min-h-11 items-center gap-1 self-start rounded-lg px-1 font-semibold text-muted transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-saffron/60"><Globe2 className="h-3.5 w-3.5" /> View sources above</a>
       </footer>
     </div>
   );
