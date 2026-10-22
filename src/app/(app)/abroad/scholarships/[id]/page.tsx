@@ -8,6 +8,7 @@ import Link from "next/link";
 import json from "@/data/abroad-scholarships.json";
 import countriesJson from "@/data/abroad-countries.json";
 import type { AbroadScholarship, AbroadCountry } from "@/lib/types";
+import { FollowButton } from "@/components/follows/follow-button";
 
 const data = json as unknown as { dataYear: number; scholarships: AbroadScholarship[] };
 const countryData = countriesJson as unknown as { countries: AbroadCountry[] };
@@ -81,19 +82,22 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ id
       </Link>
 
       {/* Header */}
-      <div className="mt-6">
-        <div className="flex flex-wrap items-center gap-2">
-          <Badge variant="saffron">{catLabel}</Badge>
-          <Badge variant={s.coverage === "full" ? "emerald" : "info"}>
-            {s.coverage === "full" ? "Full coverage" : "Partial coverage"}
-          </Badge>
-          <Badge variant="muted">{levelLabel}</Badge>
-          {s.ivyLeague && <Badge variant="saffron">Ivy League</Badge>}
+      <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="saffron">{catLabel}</Badge>
+            <Badge variant={s.coverage === "full" ? "emerald" : "info"}>
+              {s.coverage === "full" ? "Full coverage" : "Partial coverage"}
+            </Badge>
+            <Badge variant="muted">{levelLabel}</Badge>
+            {s.ivyLeague && <Badge variant="saffron">Ivy League</Badge>}
+          </div>
+          <h1 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+            {s.name}
+          </h1>
+          <p className="mt-1 text-sm text-muted">{s.funder}</p>
         </div>
-        <h1 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          {s.name}
-        </h1>
-        <p className="mt-1 text-sm text-muted">{s.funder}</p>
+        <FollowButton entityType="scholarship" entityId={s.id} />
       </div>
 
       {/* Quick stats */}

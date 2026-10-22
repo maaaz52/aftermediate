@@ -7,6 +7,7 @@ import { ExternalLink, ArrowLeft, CheckCircle2, FileText, GraduationCap, Lightbu
 import Link from "next/link";
 import json from "@/data/pakistan-scholarships.json";
 import type { PakistanScholarship } from "@/lib/types";
+import { FollowButton } from "@/components/follows/follow-button";
 
 const data = json as unknown as { dataYear: number; scholarships: PakistanScholarship[] };
 
@@ -63,15 +64,18 @@ export default async function ScholarshipPage({ params }: { params: Promise<{ id
       </Link>
 
       {/* Header */}
-      <div className="mt-6">
-        <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-          {s.name}
-        </h1>
-        <div className="mt-2 flex flex-wrap items-center gap-2">
-          <Badge variant="saffron">{CATEGORY_LABELS[s.category] ?? s.category}</Badge>
-          <Badge variant="muted">{s.funder}</Badge>
-          <Badge variant="info">{s.level}</Badge>
+      <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+            {s.name}
+          </h1>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <Badge variant="saffron">{CATEGORY_LABELS[s.category] ?? s.category}</Badge>
+            <Badge variant="muted">{s.funder}</Badge>
+            <Badge variant="info">{s.level}</Badge>
+          </div>
         </div>
+        <FollowButton entityType="scholarship" entityId={s.id} />
       </div>
 
       {/* Coverage highlight */}

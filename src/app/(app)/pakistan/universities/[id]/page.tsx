@@ -10,6 +10,7 @@ import entryTestsJson from "@/data/entry-tests.json";
 import type { PakistanUniversity, EntryTest } from "@/lib/types";
 import { admissionCalendarFor, withConfirmedAdmissionDates, type ConfirmedAdmissionCalendarEvent } from "@/lib/admission-calendar";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { FollowButton } from "@/components/follows/follow-button";
 
 const data = json as unknown as { dataYear: number; universities: PakistanUniversity[] };
 const testsData = entryTestsJson as unknown as { tests: EntryTest[] };
@@ -101,22 +102,25 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
       </Link>
 
       {/* Header */}
-      <div className="mt-6 flex items-start gap-4">
-        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-saffron/15 font-mono text-2xl font-bold text-saffron">
-          {uni.short.charAt(0)}
-        </div>
-        <div className="min-w-0">
-          <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
-            {uni.name}
-          </h1>
-          <div className="mt-1 flex flex-wrap items-center gap-2">
-            <span className="text-lg font-bold text-saffron">{uni.short}</span>
-            <Badge variant="muted">{uni.city}</Badge>
-            <Badge variant={uni.type === "public" ? "emerald" : "info"}>{uni.type}</Badge>
-            <Badge variant="saffron">{uni.ranking.label}</Badge>
+      <div className="mt-6 flex flex-wrap items-start justify-between gap-4">
+        <div className="flex min-w-0 items-start gap-4">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-saffron/15 font-mono text-2xl font-bold text-saffron">
+            {uni.short.charAt(0)}
           </div>
-          <p className="mt-1 text-xs text-muted">Entry test: {uni.entryTest}</p>
+          <div className="min-w-0">
+            <h1 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+              {uni.name}
+            </h1>
+            <div className="mt-1 flex flex-wrap items-center gap-2">
+              <span className="text-lg font-bold text-saffron">{uni.short}</span>
+              <Badge variant="muted">{uni.city}</Badge>
+              <Badge variant={uni.type === "public" ? "emerald" : "info"}>{uni.type}</Badge>
+              <Badge variant="saffron">{uni.ranking.label}</Badge>
+            </div>
+            <p className="mt-1 text-xs text-muted">Entry test: {uni.entryTest}</p>
+          </div>
         </div>
+        <FollowButton entityType="university" entityId={uni.id} />
       </div>
 
       {/* Intro */}
