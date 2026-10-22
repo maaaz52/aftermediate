@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { SourceUpdateReviewPanel, type ReviewCandidate } from "@/components/admin/source-update-review-panel";
 import { isConfiguredAdmin } from "@/lib/admin-access";
 import { createAdminClient } from "@/lib/supabase/admin";
@@ -63,7 +64,8 @@ export default async function SourceUpdatesPage() {
       <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
         Approve only changes you can verify on the linked official source. Approving a university update can also replace an estimated calendar window with an exact confirmed date.
       </p>
-      <div className="mt-7"><SourceUpdateReviewPanel candidates={candidates} /></div>
+      <div className="mt-5"><Link href="/admin/source-health" className="text-xs font-semibold text-saffron hover:underline">View source health →</Link></div>
+      <div className="mt-5"><SourceUpdateReviewPanel candidates={candidates} /></div>
     </div>
   );
 }
