@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
-import { ExternalLink, ArrowLeft, BookOpen, Target } from "lucide-react";
+import { ExternalLink, ArrowLeft, BookOpen, Target, CalendarDays, CheckCircle2, Clock3 } from "lucide-react";
 import Link from "next/link";
 import json from "@/data/pakistan-universities.json";
 import entryTestsJson from "@/data/entry-tests.json";
 import type { PakistanUniversity, EntryTest } from "@/lib/types";
+import { admissionCalendarFor } from "@/lib/admission-calendar";
 
 const data = json as unknown as { dataYear: number; universities: PakistanUniversity[] };
 const testsData = entryTestsJson as unknown as { tests: EntryTest[] };
@@ -46,6 +47,7 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
   const { id } = await params;
   const uni = getUni(id);
   if (!uni) notFound();
+  const calendar = admissionCalendarFor(uni);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -85,6 +87,52 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
 
       {/* Intro */}
       <p className="mt-6 text-sm leading-relaxed text-muted">{uni.intro}</p>
+
+      {/* Admission calendar */}
+      <section className="mt-8 border-y border-line py-6" aria-labelledby="admission-calendar-heading">
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+          <div>
+            <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-widest text-saffron">
+              <CalendarDays className="h-3.5 w-3.5" aria-hidden="true" />
+              Admission calendar
+            </p>
+            <h2 id="admission-calendar-heading" className="mt-1 text-lg font-bold tracking-tight text-ink">
+              {calendar.cycle}
+            </h2>
+          </div>
+          <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-saffron/25 bg-saffron/10 px-2.5 py-1 text-xs font-medium text-saffron">
+            <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />
+            Estimated windows
+          </span>
+        </div>
+        <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted">
+          These are typical annual windows, not confirmed dates. Exact dates change every cycle; confirm them on the official page before applying.
+        </p>
+        <ol className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+          {calendar.events.map((event, index) => (
+            <li key={event.id} className="flex gap-3">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-saffron/25 bg-saffron/10 font-mono text-[11px] font-bold text-saffron">
+                {index + 1}
+              </span>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-ink">{event.label}</p>
+                <p className="mt-0.5 font-mono text-xs font-medium text-saffron">{event.timing}</p>
+                <p className="mt-1 text-xs leading-relaxed text-muted">{event.detail}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <a
+          href={calendar.sourceUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium text-saffron underline-offset-4 hover:underline"
+        >
+          <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" />
+          Confirm the current cycle on the official page
+          <ExternalLink className="h-3 w-3" aria-hidden="true" />
+        </a>
+      </section>
 
       {/* Admission process */}
       <section className="mt-8">
