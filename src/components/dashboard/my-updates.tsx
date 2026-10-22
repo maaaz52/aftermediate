@@ -9,6 +9,7 @@ import { followEntityDetail, type FollowEntityType } from "@/lib/source-follow";
 import { APPLICATION_STATUSES, applicationStatusLabel, type ApplicationPlan, type ApplicationStatus } from "@/lib/application-tracker";
 import { applicationChecklist } from "@/lib/application-checklist";
 import { applicationFocus } from "@/lib/application-focus";
+import { NotificationPreferences } from "@/components/dashboard/notification-preferences";
 
 type Follow = { entityType: FollowEntityType; entityId: string };
 type Deadline = Follow & { label: string; dueDate: string; officialUrl: string };
@@ -170,6 +171,7 @@ export function MyUpdates() {
         </div>
         {saveError && <p role="alert" className="mt-3 text-xs text-danger">{saveError}</p>}
       </div>
+      <NotificationPreferences />
     </section>
   );
 }
