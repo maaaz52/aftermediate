@@ -5,15 +5,12 @@ import Link from "next/link";
 import {
   ArrowRight,
   Award,
-  BookOpen,
   ChevronDown,
   ExternalLink,
-  Eye,
   FileText,
   Globe2,
   Hammer,
   Languages,
-  Lightbulb,
   Radar,
   Sparkles,
   Target,
@@ -22,7 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useStudent } from "@/lib/store";
 import { PURSUIT_LABELS } from "@/lib/quiz";
-import { benchmarksFor, isReviewDue, type RealityBenchmark } from "@/lib/reality-check";
+import { REALITY_BENCHMARKS, isReviewDue, type RealityBenchmark } from "@/lib/reality-check";
 
 const ACCENT_CLASSES = {
   violet: "border-violet/25 bg-violet/8 text-violet",
@@ -160,8 +157,7 @@ function BenchmarkCard({ benchmark }: { benchmark: RealityBenchmark }) {
 export function RealityCheckExperience() {
   const { profile, hydrated } = useStudent();
   const pursuit = profile.quiz.pursuit;
-  const isTech = pursuit === "computing-ai";
-  const benchmarks = benchmarksFor(pursuit);
+  const benchmarks = REALITY_BENCHMARKS;
   const projectCount = Math.max(0, profile.quiz.projects ?? 0);
   const certificateCount = Math.max(0, profile.quiz.certifications ?? 0);
   const english = profile.quiz.english ?? 0;
@@ -231,24 +227,40 @@ export function RealityCheckExperience() {
 
   return (
     <div data-tour="reality-check" className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
-      <header className="animate-reveal max-w-3xl">
+      <header className="animate-reveal max-w-4xl">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="violet">Reality Check</Badge>
-          <span className="font-mono text-xs text-faint">tech edition · source-backed</span>
+          <span className="font-mono text-xs text-faint">the numbers do not wait · source-backed</span>
         </div>
         <div className="mt-5 flex items-start gap-4 sm:items-center">
-          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-violet/25 bg-violet/10">
+          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-violet/25 bg-violet/10 sm:h-14 sm:w-14">
             <Radar className="h-6 w-6 text-violet" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-ink sm:text-5xl">
-              {isTech ? `Your ${direction} reality check.` : "A clearer view of the road ahead."}
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">Your direction: {direction}</p>
+            <h1 className="mt-2 max-w-3xl text-balance text-4xl font-extrabold tracking-[-0.045em] text-ink sm:text-6xl">
+              The world is not waiting for your degree.
             </h1>
-            <p className="mt-2 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-              {isTech
-                ? "The market is moving quickly. These numbers put the opportunity in context, then turn your current signals into a practical next move."
-                : "This first edition is built for computing, software, and AI. Your existing profile still gives you useful context while we prepare field-specific benchmarks."}
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
+              A degree still matters. But proof that you can build, learn, explain, and keep moving is becoming visible earlier than ever.
             </p>
+          </div>
+        </div>
+        <div className="mt-8 grid overflow-hidden rounded-3xl border border-ink bg-ink text-background sm:grid-cols-3">
+          <div className="border-b border-background/15 px-5 py-5 sm:border-b-0 sm:border-r">
+            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">33,038</p>
+            <p className="mt-2 text-sm font-semibold">senior computing students were benchmarked in Pakistan</p>
+            <p className="mt-1 text-xs leading-relaxed text-background/65">Their national average was 46.28 / 100.</p>
+          </div>
+          <div className="border-b border-background/15 px-5 py-5 sm:border-b-0 sm:border-r">
+            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">230 / min</p>
+            <p className="mt-2 text-sm font-semibold">new public projects appeared on GitHub</p>
+            <p className="mt-1 text-xs leading-relaxed text-background/65">That is the speed of visible work in one global ecosystem.</p>
+          </div>
+          <div className="px-5 py-5">
+            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">59%</p>
+            <p className="mt-2 text-sm font-semibold">of workers may need training by 2030</p>
+            <p className="mt-1 text-xs leading-relaxed text-background/65">The skills stack is changing while students are still in class.</p>
           </div>
         </div>
       </header>
@@ -259,70 +271,51 @@ export function RealityCheckExperience() {
         </div>
       )}
 
-      <section className="animate-reveal mt-10" aria-labelledby="landscape-heading" style={{ animationDelay: "80ms" }}>
+      <section className="animate-reveal mt-14" aria-labelledby="landscape-heading" style={{ animationDelay: "80ms" }}>
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">The landscape is moving</p>
-            <h2 id="landscape-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">Context, not a verdict.</h2>
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">The pressure is real</p>
+            <h2 id="landscape-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">This is what is moving around you.</h2>
           </div>
-          <p className="max-w-md text-sm text-muted">Every number includes its scope and method. None of them predicts your outcome.</p>
+          <p className="max-w-md text-sm text-muted">Pakistan’s market is growing. Global expectations are moving faster. The useful question is: what will you have to show?</p>
         </div>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {benchmarks.map((benchmark) => <BenchmarkCard key={benchmark.id} benchmark={benchmark} />)}
         </div>
       </section>
 
-      {isTech ? (
-        <>
-          <section className="animate-reveal mt-16" aria-labelledby="evidence-heading" style={{ animationDelay: "140ms" }}>
-            <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-              <div>
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-emerald">Your evidence map</p>
-                <h2 id="evidence-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">What you can strengthen now.</h2>
-              </div>
-              <p className="text-sm leading-relaxed text-muted">These are your own answers from onboarding, not a hidden score. A missing signal is simply a useful place to start.</p>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">{evidence.map((item) => <EvidenceCard key={item.id} item={item} />)}</div>
-          </section>
-
-          <section className="animate-reveal mt-16 overflow-hidden rounded-3xl border border-ink bg-ink px-6 py-7 text-background sm:px-8 sm:py-9" aria-labelledby="next-heading" style={{ animationDelay: "200ms" }}>
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-xl">
-                <div className="flex items-center gap-2 text-saffron"><Sparkles className="h-4 w-4" /><span className="font-mono text-xs font-semibold uppercase tracking-[0.16em]">The next 30 days</span></div>
-                <h2 id="next-heading" className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">Build evidence, then make it visible.</h2>
-                <p className="mt-2 text-sm leading-relaxed text-background/70">You do not need to catch up with everyone at once. Complete one proof of work, one learning step, and one explanation of what you did.</p>
-              </div>
-              <Link href="/skills/courses" className="inline-flex shrink-0 items-center gap-2 self-start rounded-xl bg-saffron px-5 py-3 text-sm font-bold text-background transition-transform hover:-translate-y-0.5 lg:self-auto">
-                Choose your first learning path <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <div className="mt-8 grid gap-3 md:grid-cols-3">
-              {nextMoves.map((item, index) => (
-                <div key={item.id} className="rounded-2xl border border-background/15 bg-background/5 p-4">
-                  <span className="font-mono text-xs text-saffron">0{index + 1}</span>
-                  <p className="mt-3 font-semibold">{item.shortLabel}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-background/70">{item.action}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </>
-      ) : (
-        <section className="animate-reveal mt-14 rounded-3xl border border-line bg-surface p-6 sm:p-8" style={{ animationDelay: "140ms" }} aria-labelledby="coming-heading">
-          <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-start">
-            <div className="grid h-12 w-12 place-items-center rounded-2xl border border-saffron/25 bg-saffron/10"><Lightbulb className="h-6 w-6 text-saffron" /></div>
-            <div>
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-saffron">Field-specific edition next</p>
-              <h2 id="coming-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink">We will not force a tech comparison onto {direction}.</h2>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">Your direction matters more than the stream you came from. Field-specific evidence for this path is being researched; meanwhile, keep your interests and skills current so your recommendations stay useful.</p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/profile" className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-line bg-surface-2 px-5 text-sm font-semibold text-ink transition-colors hover:bg-line/60"><Eye className="h-4 w-4" /> Review your profile</Link>
-                <Link href="/career" className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-line bg-transparent px-5 text-sm font-semibold text-ink transition-colors hover:border-saffron/50 hover:text-saffron"><BookOpen className="h-4 w-4" /> Explore careers</Link>
-              </div>
-            </div>
+      <section className="animate-reveal mt-16" aria-labelledby="evidence-heading" style={{ animationDelay: "140ms" }}>
+        <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-emerald">What can you show?</p>
+            <h2 id="evidence-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">Your degree is one signal. Build the others.</h2>
           </div>
-        </section>
-      )}
+          <p className="text-sm leading-relaxed text-muted">These are your own onboarding answers, not a hidden score. If a signal is missing today, it becomes your clearest place to start—not a reason to freeze.</p>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">{evidence.map((item) => <EvidenceCard key={item.id} item={item} />)}</div>
+      </section>
+
+      <section className="animate-reveal mt-16 overflow-hidden rounded-3xl border border-ink bg-ink px-6 py-7 text-background sm:px-8 sm:py-9" aria-labelledby="next-heading" style={{ animationDelay: "200ms" }}>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 text-saffron"><Sparkles className="h-4 w-4" /><span className="font-mono text-xs font-semibold uppercase tracking-[0.16em]">Do not leave this as a feeling</span></div>
+            <h2 id="next-heading" className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">In 30 days, have something real to point at.</h2>
+            <p className="mt-2 text-sm leading-relaxed text-background/70">Not everything. One proof of work, one learning step, and one clear explanation of what you did. Momentum stops being abstract when another person can see it.</p>
+          </div>
+          <Link href="/skills/courses" className="inline-flex shrink-0 items-center gap-2 self-start rounded-xl bg-saffron px-5 py-3 text-sm font-bold text-background transition-transform hover:-translate-y-0.5 lg:self-auto">
+            Take the first step <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="mt-8 grid gap-3 md:grid-cols-3">
+          {nextMoves.map((item, index) => (
+            <div key={item.id} className="rounded-2xl border border-background/15 bg-background/5 p-4">
+              <span className="font-mono text-xs text-saffron">0{index + 1}</span>
+              <p className="mt-3 font-semibold">{item.shortLabel}</p>
+              <p className="mt-1 text-sm leading-relaxed text-background/70">{item.action}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <footer className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-xs leading-relaxed text-faint sm:flex-row sm:items-start sm:justify-between">
         <p className="max-w-2xl"><FileText className="mr-1 inline h-3.5 w-3.5" />Reality Check uses published sources and your self-reported profile. It cannot predict admission, employment, salary, or your potential.</p>
