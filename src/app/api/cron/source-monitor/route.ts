@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchWithTimeout } from "@/lib/fetch-timeout";
 import { getServerEnv } from "@/lib/server-env";
+import { dispatchSourceUpdateAlerts } from "@/lib/source-update-alerts";
 import {
   describeDetectedChange,
   extractSourceSignals,
@@ -170,5 +171,8 @@ export async function GET(request: Request) {
     }
   }
 
-  return NextResponse.json({ ok: true, checked: results.length, results });
+  // Retry a small, already-reviewed email batch. This uses no extra Vercel
+  // schedule and makes transient Resend failures recover automatically.
+  const delivery = await dispatchSourceUpdateAlerts();
+  return NextResponse.json({ ok: true, checked: results.length, results, delivery });
 }

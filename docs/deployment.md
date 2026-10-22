@@ -98,6 +98,13 @@ Run `supabase/migrations/20261022_admission_calendar_reviews.sql` to enable the
 private review workflow and confirmed admission-calendar dates. Set
 `ADMIN_EMAILS=themz52@proton.me` in Vercel before using `/admin/source-updates`.
 
+Run `supabase/migrations/20261022_source_follows.sql` to let students follow a
+university or scholarship, then `supabase/migrations/20261022_source_update_alerts.sql`
+to enqueue an email only when a reviewed official-source change affects an item
+they follow. The review action sends a bounded batch immediately; the existing
+weekly monitoring run safely retries pending delivery without adding another
+Vercel schedule.
+
 `vercel.json` calls `/api/cron/source-monitor` every Sunday at 02:00 UTC
 (07:00 Pakistan time). Set a long, random `CRON_SECRET` in Vercel before
 deployment; Vercel includes it as a Bearer token when it invokes the route. A

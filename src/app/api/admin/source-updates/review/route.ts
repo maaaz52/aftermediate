@@ -3,9 +3,11 @@ import { isConfiguredAdmin } from "@/lib/admin-access";
 import { jsonError } from "@/lib/api-response";
 import { requireAuth, parseJsonBody } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
+import { dispatchSourceUpdateAlerts } from "@/lib/source-update-alerts";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export const runtime = "nodejs";
+export const maxDuration = 60;
 
 const MAX_BODY_BYTES = 4 * 1024;
 const CALENDAR_EVENT_TYPES = new Set(["announcement", "application", "test", "merit", "fee", "intake"]);
@@ -57,7 +59,10 @@ export async function POST(request: Request) {
       return jsonError(error.message.includes("already been reviewed") ? error.message : "Could not save this review", error.message.includes("already been reviewed") ? 409 : 500);
     }
 
-    return NextResponse.json({ ok: true });
+    // The review is already committed above. Delivery failures remain queued
+    // for the weekly monitor retry and never undo an administrator's review.
+    const delivery = decision === "approved" ? await dispatchSourceUpdateAlerts() : null;
+    return NextResponse.json({ ok: true, delivery });
   } catch (error) {
     console.error("source review route failed", error);
     return jsonError("Internal server error", 500);

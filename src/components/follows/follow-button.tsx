@@ -64,6 +64,11 @@ export function FollowButton({
         {saving || following === null ? <Loader2 className="animate-spin" /> : following ? <Check /> : <Bell />}
         {following ? "Following" : "Follow updates"}
       </Button>
+      {following && !error && (
+        <p className="max-w-56 text-xs leading-relaxed text-faint">
+          We&apos;ll email you when a reviewed official update affects this item. Unfollow anytime.
+        </p>
+      )}
       {error && <p role="alert" className="text-xs text-danger">{error}</p>}
     </div>
   );
