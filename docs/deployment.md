@@ -62,11 +62,12 @@ can be fetched.
 Run `supabase/migrations/20261022_scholarship_source_monitoring.sql` after that
 migration before deploying the scholarship-monitoring expansion.
 
-`vercel.json` calls `/api/cron/source-monitor` daily at 02:00 UTC. Set a long,
-random `CRON_SECRET` in Vercel before deployment; Vercel includes it as a Bearer
-token when it invokes the route. A run checks up to 12 least-recently-checked
-sources, so the full current catalogue rotates over roughly fifteen days while
-keeping the serverless job reliable. The monitor stores a baseline on its first
+`vercel.json` calls `/api/cron/source-monitor` every Sunday at 02:00 UTC
+(07:00 Pakistan time). Set a long, random `CRON_SECRET` in Vercel before
+deployment; Vercel includes it as a Bearer token when it invokes the route. A
+run checks up to 12 least-recently-checked sources, so the full current
+catalogue rotates over roughly fifteen weeks while keeping free-tier scheduled
+usage low. The monitor stores a baseline on its first
 successful run, then creates a **pending** source-update candidate on later
 changes. It intentionally does not auto-publish values to students: an official
 page redesign, correction, or unrelated announcement must be reviewed before
