@@ -2,6 +2,7 @@ import { jsonError, jsonOk } from "@/lib/api-response";
 import { requireAuth } from "@/lib/http";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isFollowEntityType } from "@/lib/source-follow";
+import { isApplicationStatus } from "@/lib/application-tracker";
 
 export const runtime = "nodejs";
 
@@ -28,12 +29,12 @@ export async function GET() {
         ? [{ entityType: follow.entity_type, entityId: follow.entity_id }]
         : []
     ));
-    if (follows.length === 0) return jsonOk({ follows, deadlines: [], updates: [] });
+    if (follows.length === 0) return jsonOk({ follows, deadlines: [], updates: [], plans: [] });
 
     const followed = new Set(follows.map((follow) => `${follow.entityType}:${follow.entityId}`));
     const admin = createAdminClient();
     const today = new Date().toISOString().slice(0, 10);
-    const [deadlinesResult, updatesResult] = await Promise.all([
+    const [deadlinesResult, updatesResult, plansResult] = await Promise.all([
       admin
         .from("official_deadline_events")
         .select("entity_type, entity_id, label, due_date, official_url")
@@ -46,10 +47,14 @@ export async function GET() {
         .eq("status", "approved")
         .order("reviewed_at", { ascending: false })
         .limit(100),
+      auth.supabase
+        .from("application_tracker_entries")
+        .select("entity_type, entity_id, status, note, updated_at")
+        .eq("user_id", auth.user.id),
     ]);
 
-    if (deadlinesResult.error || updatesResult.error) {
-      console.error("my updates lookup failed", deadlinesResult.error?.message ?? updatesResult.error?.message);
+    if (deadlinesResult.error || updatesResult.error || plansResult.error) {
+      console.error("my updates lookup failed", deadlinesResult.error?.message ?? updatesResult.error?.message ?? plansResult.error?.message);
       return jsonError("Could not load your updates.", 500);
     }
 
@@ -76,7 +81,15 @@ export async function GET() {
       }];
     }).slice(0, 8);
 
-    return jsonOk({ follows, deadlines, updates });
+    const plans = (plansResult.data ?? []).flatMap((plan) => (
+      isFollowEntityType(plan.entity_type) && typeof plan.entity_id === "string" &&
+      followed.has(`${plan.entity_type}:${plan.entity_id}`) && isApplicationStatus(plan.status) &&
+      typeof plan.note === "string" && typeof plan.updated_at === "string"
+        ? [{ entityType: plan.entity_type, entityId: plan.entity_id, status: plan.status, note: plan.note, updatedAt: plan.updated_at }]
+        : []
+    ));
+
+    return jsonOk({ follows, deadlines, updates, plans });
   } catch (error) {
     console.error("my updates route failed", error);
     return jsonError("Could not load your updates.", 500);

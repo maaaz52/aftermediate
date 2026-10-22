@@ -6,11 +6,12 @@ import { Bell, CalendarDays, ChevronRight, ExternalLink, GraduationCap, Trophy }
 import { Skeleton } from "@/components/ui/skeleton";
 import { deadlineDistanceLabel } from "@/lib/deadline-reminders";
 import { followEntityDetail, type FollowEntityType } from "@/lib/source-follow";
+import { APPLICATION_STATUSES, applicationStatusLabel, type ApplicationPlan, type ApplicationStatus } from "@/lib/application-tracker";
 
 type Follow = { entityType: FollowEntityType; entityId: string };
 type Deadline = Follow & { label: string; dueDate: string; officialUrl: string };
 type Update = Follow & { entityLabel: string; summary: string; officialUrl: string; alertKind: "general" | "merit-list" | "selection-update"; reviewedAt: string };
-type UpdateData = { follows: Follow[]; deadlines: Deadline[]; updates: Update[] };
+type UpdateData = { follows: Follow[]; deadlines: Deadline[]; updates: Update[]; plans: ApplicationPlan[] };
 
 function updateLabel(kind: Update["alertKind"]) {
   if (kind === "merit-list") return "Merit list";
@@ -25,6 +26,8 @@ function UpdatesSkeleton() {
 export function MyUpdates() {
   const [data, setData] = React.useState<UpdateData | null>(null);
   const [error, setError] = React.useState(false);
+  const [savingKey, setSavingKey] = React.useState<string | null>(null);
+  const [saveError, setSaveError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     let active = true;
@@ -49,6 +52,34 @@ export function MyUpdates() {
   const follows = data?.follows ?? [];
   const deadlines = data?.deadlines ?? [];
   const updates = data?.updates ?? [];
+  const plans = data?.plans ?? [];
+
+  async function savePlan(follow: Follow, status: ApplicationStatus, note: string) {
+    const key = `${follow.entityType}:${follow.entityId}`;
+    setSavingKey(key);
+    setSaveError(null);
+    try {
+      const response = await fetch("/api/application-tracker", {
+        method: "PUT",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ entityType: follow.entityType, entityId: follow.entityId, status, note }),
+      });
+      const result = await response.json().catch(() => ({})) as { error?: string; updatedAt?: string };
+      const updatedAt = result.updatedAt;
+      if (!response.ok || typeof updatedAt !== "string") throw new Error(result.error ?? "Could not save your plan.");
+      setData((current) => current ? {
+        ...current,
+        plans: [
+          ...current.plans.filter((plan) => `${plan.entityType}:${plan.entityId}` !== key),
+          { entityType: follow.entityType, entityId: follow.entityId, status, note, updatedAt },
+        ],
+      } : current);
+    } catch (caught) {
+      setSaveError(caught instanceof Error ? caught.message : "Could not save your plan.");
+    } finally {
+      setSavingKey(null);
+    }
+  }
   if (follows.length === 0) return (
     <div className="rounded-2xl border border-dashed border-line px-5 py-7 text-center">
       <Bell className="mx-auto h-5 w-5 text-saffron" aria-hidden="true" />
@@ -112,7 +143,35 @@ export function MyUpdates() {
         })}
         {follows.length > 8 && <span className="px-2.5 py-1 text-xs text-faint">+{follows.length - 8} more</span>}
       </div>
+      <div className="mt-5 border-t border-line pt-4">
+        <p className="text-xs font-semibold text-ink">Application plan</p>
+        <p className="mt-1 text-xs text-muted">Keep a private status and note for each followed item.</p>
+        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+          {follows.slice(0, 8).map((follow) => {
+            const detail = followEntityDetail(follow.entityType, follow.entityId);
+            const key = `${follow.entityType}:${follow.entityId}`;
+            const plan = plans.find((item) => `${item.entityType}:${item.entityId}` === key);
+            return detail ? <PlanEditor key={`${key}:${plan?.updatedAt ?? "new"}`} follow={follow} name={detail.name} plan={plan} saving={savingKey === key} onSave={savePlan} /> : null;
+          })}
+        </div>
+        {saveError && <p role="alert" className="mt-3 text-xs text-danger">{saveError}</p>}
+      </div>
     </section>
   );
+}
+
+function PlanEditor({ follow, name, plan, saving, onSave }: { follow: Follow; name: string; plan?: ApplicationPlan; saving: boolean; onSave: (follow: Follow, status: ApplicationStatus, note: string) => Promise<void> }) {
+  const [status, setStatus] = React.useState<ApplicationStatus>(plan?.status ?? "considering");
+  const [note, setNote] = React.useState(plan?.note ?? "");
+  return <div className="rounded-xl border border-line bg-surface/60 p-3">
+    <p className="truncate text-xs font-semibold text-ink">{name}</p>
+    <div className="mt-2 grid gap-2 sm:grid-cols-[minmax(0,1fr)_auto]">
+      <input value={note} maxLength={1000} onChange={(event) => setNote(event.target.value)} onBlur={() => { if (!saving && (note !== (plan?.note ?? ""))) void onSave(follow, status, note); }} placeholder="Private note" className="h-9 min-w-0 rounded-lg border border-line bg-surface px-2.5 text-xs text-ink placeholder:text-faint" />
+      <select value={status} onChange={(event) => { const next = event.target.value as ApplicationStatus; setStatus(next); void onSave(follow, next, note); }} disabled={saving} className="h-9 rounded-lg border border-line bg-surface px-2.5 text-xs font-medium text-ink disabled:opacity-60">
+        {APPLICATION_STATUSES.map((option) => <option key={option} value={option}>{applicationStatusLabel(option)}</option>)}
+      </select>
+    </div>
+    {saving && <p className="mt-2 text-[11px] text-faint">Saving…</p>}
+  </div>;
 }
 
