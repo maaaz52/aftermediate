@@ -4,6 +4,7 @@ import { escapeHtml } from "@/lib/escape-html";
 import { sendEmail } from "@/lib/email";
 import { absoluteUrl } from "@/lib/site";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { sourceAlertIntro, sourceAlertSubject, type SourceAlertKind } from "@/lib/merit-alerts";
 
 const MAX_ALERTS_PER_DISPATCH = 25;
 
@@ -17,6 +18,7 @@ export type SourceUpdateAlert = {
   entity_type: AlertEntityType;
   entity_id: string;
   entity_label: string;
+  alert_kind?: SourceAlertKind;
 };
 
 type PakistanScholarshipCatalogue = { scholarships: { id: string; name: string }[] };
@@ -43,7 +45,7 @@ function emailHtml(alert: SourceUpdateAlert): string {
   const officialUrl = escapeHtml(alert.official_url);
   const itemUrl = escapeHtml(sourceUpdateAlertLink(alert.entity_type, alert.entity_id));
   return `
-    <p>There is a reviewed update for an item you follow on Aftermediate.</p>
+    <p>${escapeHtml(sourceAlertIntro(alert.alert_kind))}</p>
     <p style="font-size:18px;font-weight:700;margin:16px 0 8px;">${entity}</p>
     <p style="line-height:1.6">${summary}</p>
     <p style="margin:20px 0"><a href="${itemUrl}" style="color:#7a5bd4;font-weight:600">View it on Aftermediate →</a></p>
@@ -86,7 +88,7 @@ export async function dispatchSourceUpdateAlerts(limit = MAX_ALERTS_PER_DISPATCH
       const result = await sendEmail({
         from: "Aftermediate Updates <updates@aftermediate.site>",
         to: email,
-        subject: `Reviewed update: ${alert.entity_label}`,
+        subject: sourceAlertSubject(alert.alert_kind, alert.entity_label),
         html: emailHtml(alert),
       });
       if (!result.ok) {

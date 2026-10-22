@@ -111,6 +111,11 @@ date explicitly shown on the official source. The same weekly job emails each
 current follower once when that date is within 14 days, so no estimated window
 is ever sent as an exact deadline.
 
+Run `supabase/migrations/20261022_merit_list_alerts.sql` to classify reviewed
+changes as a general update, an official merit-list publication, or a
+selection/offer update. The email wording stays factual: it links a follower
+to the official result and never claims the student personally received an offer.
+
 `vercel.json` calls `/api/cron/source-monitor` every Sunday at 02:00 UTC
 (07:00 Pakistan time). Set a long, random `CRON_SECRET` in Vercel before
 deployment; Vercel includes it as a Bearer token when it invokes the route. A

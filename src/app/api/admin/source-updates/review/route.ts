@@ -7,6 +7,7 @@ import { dispatchSourceUpdateAlerts } from "@/lib/source-update-alerts";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { isIsoCalendarDate } from "@/lib/deadline-reminders";
 import { dispatchDeadlineReminders } from "@/lib/deadline-alerts";
+import { isSourceAlertKind } from "@/lib/merit-alerts";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -33,6 +34,7 @@ export async function POST(request: Request) {
       timingLabel?: unknown;
       deadlineLabel?: unknown;
       deadlineDate?: unknown;
+      alertKind?: unknown;
     };
     const candidateId = typeof body.candidateId === "string" ? body.candidateId : "";
     const decision = body.decision === "approved" || body.decision === "rejected" ? body.decision : null;
@@ -41,6 +43,7 @@ export async function POST(request: Request) {
     const timingLabel = typeof body.timingLabel === "string" ? body.timingLabel.trim() : null;
     const deadlineLabel = typeof body.deadlineLabel === "string" ? body.deadlineLabel.trim() : null;
     const deadlineDate = typeof body.deadlineDate === "string" ? body.deadlineDate : null;
+    const alertKind = body.alertKind === undefined ? "general" : body.alertKind;
 
     if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(candidateId)) {
       return jsonError("Invalid source update", 400);
@@ -56,6 +59,7 @@ export async function POST(request: Request) {
     }
     if (deadlineDate !== null && deadlineDate < new Date().toISOString().slice(0, 10)) return jsonError("A reminder date cannot be in the past", 400);
     if (deadlineLabel && decision !== "approved") return jsonError("Only approved updates can create deadline reminders", 400);
+    if (!isSourceAlertKind(alertKind)) return jsonError("Choose a valid update classification", 400);
 
     const { error } = await createAdminClient().rpc("review_source_update", {
       p_candidate_id: candidateId,
@@ -70,6 +74,18 @@ export async function POST(request: Request) {
     if (error) {
       console.error("source review failed", error.message);
       return jsonError(error.message.includes("already been reviewed") ? error.message : "Could not save this review", error.message.includes("already been reviewed") ? 409 : 500);
+    }
+
+    if (decision === "approved") {
+      const { error: alertKindError } = await createAdminClient().rpc("set_source_update_alert_kind", {
+        p_candidate_id: candidateId,
+        p_alert_kind: alertKind,
+      });
+      if (alertKindError) {
+        // Do not undo a valid review if the optional classification migration
+        // has not been applied yet; the resulting alert remains general.
+        console.error("source alert classification failed", alertKindError.message);
+      }
     }
 
     // The review is already committed above. Delivery failures remain queued

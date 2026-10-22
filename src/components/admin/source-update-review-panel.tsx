@@ -39,6 +39,7 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
     const timingLabel = String(formData.get("timingLabel") ?? "").trim();
     const deadlineLabel = String(formData.get("deadlineLabel") ?? "").trim();
     const deadlineDate = String(formData.get("deadlineDate") ?? "");
+    const alertKind = String(formData.get("alertKind") ?? "general");
     if (decision === "approved" && Boolean(eventType) !== Boolean(timingLabel)) {
       setError("Choose a calendar event and enter its exact confirmed timing together, or leave both blank.");
       setSaving(null);
@@ -60,6 +61,7 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
         timingLabel: decision === "approved" && eventType && timingLabel ? timingLabel : null,
         deadlineLabel: decision === "approved" && deadlineLabel && deadlineDate ? deadlineLabel : null,
         deadlineDate: decision === "approved" && deadlineLabel && deadlineDate ? deadlineDate : null,
+        alertKind,
       }),
     });
     const payload = await response.json().catch(() => ({}));
@@ -137,6 +139,15 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
             </label>
           </div>
         )}
+        <label className="mt-3 block text-xs font-medium text-muted">
+          Update classification
+          <select name="alertKind" defaultValue="general" className="mt-1.5 h-10 w-full rounded-lg border border-line bg-surface px-3 text-sm text-ink">
+            <option value="general">General official update</option>
+            <option value="merit-list">Merit list published</option>
+            <option value="selection-update">Selection / offer update</option>
+          </select>
+          <span className="mt-1 block text-[11px] font-normal leading-relaxed text-faint">Choose a result type only when the official source explicitly publishes it. Followers are told about the official update, never that they personally received an offer.</span>
+        </label>
         <div className="mt-3 rounded-xl border border-saffron/20 bg-saffron/5 p-3">
           <p className="text-xs font-semibold text-ink">Send a deadline reminder <span className="font-normal text-faint">(optional)</span></p>
           <p className="mt-1 text-xs leading-relaxed text-muted">Use only an exact date shown on this official source. Followers receive one email when the weekly check sees it within 14 days.</p>
