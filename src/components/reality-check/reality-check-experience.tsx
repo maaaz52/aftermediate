@@ -144,9 +144,9 @@ function BenchmarkCard({ benchmark }: { benchmark: RealityBenchmark }) {
         <span className={cn("rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide", ACCENT_CLASSES[benchmark.accent])}>{benchmark.published}</span>
       </div>
       <p className="mt-7 font-mono text-3xl font-bold tracking-tight text-ink sm:text-4xl">{benchmark.metric}</p>
-      <h3 className="mt-2 text-base font-bold text-ink">{benchmark.label}</h3>
-      <p className="mt-1 text-sm text-muted">{benchmark.context}</p>
-      <p className="mt-5 text-xs leading-relaxed text-faint">{benchmark.scope}</p>
+      <h3 className="mt-2 min-h-10 text-base font-bold text-ink">{benchmark.label}</h3>
+      <p className="mt-1 min-h-10 text-sm text-muted">{benchmark.context}</p>
+      <p className="mt-5 min-h-12 text-xs leading-relaxed text-faint">{benchmark.scope}</p>
       <div className="mt-5">
         <SourceDetails benchmark={benchmark} />
       </div>
@@ -279,7 +279,7 @@ export function RealityCheckExperience() {
           </div>
           <p className="max-w-md text-sm text-muted">Pakistan’s market is growing. Global expectations are moving faster. The useful question is: what will you have to show?</p>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
           {benchmarks.map((benchmark) => <BenchmarkCard key={benchmark.id} benchmark={benchmark} />)}
         </div>
       </section>
