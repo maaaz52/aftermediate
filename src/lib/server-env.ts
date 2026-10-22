@@ -15,6 +15,7 @@ export interface ServerEnv {
   googleModel: string;
   nvidiaApiKey: string | undefined;
   nvidiaModel: string;
+  cronSecret: string | undefined;
 }
 
 function required(name: string): string {
@@ -32,6 +33,7 @@ export function getServerEnv(): ServerEnv {
     googleModel: process.env.GOOGLE_MODEL || "gemini-flash-latest",
     nvidiaApiKey: process.env.NVIDIA_API_KEY,
     nvidiaModel: process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct",
+    cronSecret: process.env.CRON_SECRET,
   };
 }
 

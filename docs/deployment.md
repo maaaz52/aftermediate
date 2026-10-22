@@ -40,6 +40,7 @@ No code changes are required for the domain — the app has no hardcoded host (a
 | `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | no | server/edge and browser error reporting |
 | `SENTRY_AUTH_TOKEN` | build | only needed when uploading Sentry source maps |
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | no | only for R2 video streaming |
+| `CRON_SECRET` | yes, for source monitoring | long random secret that authorizes Vercel's daily official-source monitor |
 
 `src/lib/server-env.ts` is the single source of truth for server-side variables.
 
@@ -47,6 +48,20 @@ Before deploying this hardening release, run
 `supabase/migrations/20261020_security_hardening.sql` in the Supabase SQL editor.
 It revokes unsafe public RPC access, adds atomic OTP and rate-limit operations,
 enforces text/upload bounds, and installs the review-sentiment trigger.
+
+## Official-source monitoring pilot
+
+Run `supabase/migrations/20261022_source_monitoring.sql` after the existing
+migrations. It seeds the first monitored official sources: FAST-NUCES's
+admission schedule, eligibility criteria, and fee structure.
+
+`vercel.json` calls `/api/cron/source-monitor` daily at 02:00 UTC. Set a long,
+random `CRON_SECRET` in Vercel before deployment; Vercel includes it as a Bearer
+token when it invokes the route. The monitor stores a baseline on its first
+successful run, then creates a **pending** source-update candidate on later
+changes. It intentionally does not auto-publish values to students: an official
+page redesign, correction, or unrelated announcement must be reviewed before
+it changes an admission, fee, deadline, or merit claim.
 
 ## Production checks after deploy
 
