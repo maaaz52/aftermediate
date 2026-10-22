@@ -37,8 +37,15 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
     const formData = new FormData(form);
     const eventType = String(formData.get("eventType") ?? "");
     const timingLabel = String(formData.get("timingLabel") ?? "").trim();
+    const deadlineLabel = String(formData.get("deadlineLabel") ?? "").trim();
+    const deadlineDate = String(formData.get("deadlineDate") ?? "");
     if (decision === "approved" && Boolean(eventType) !== Boolean(timingLabel)) {
       setError("Choose a calendar event and enter its exact confirmed timing together, or leave both blank.");
+      setSaving(null);
+      return;
+    }
+    if (decision === "approved" && Boolean(deadlineLabel) !== Boolean(deadlineDate)) {
+      setError("Enter a reminder label and its exact official date together, or leave both blank.");
       setSaving(null);
       return;
     }
@@ -51,6 +58,8 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
         note: String(formData.get("note") ?? "").trim(),
         eventType: decision === "approved" && eventType && timingLabel ? eventType : null,
         timingLabel: decision === "approved" && eventType && timingLabel ? timingLabel : null,
+        deadlineLabel: decision === "approved" && deadlineLabel && deadlineDate ? deadlineLabel : null,
+        deadlineDate: decision === "approved" && deadlineLabel && deadlineDate ? deadlineDate : null,
       }),
     });
     const payload = await response.json().catch(() => ({}));
@@ -128,6 +137,20 @@ function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
             </label>
           </div>
         )}
+        <div className="mt-3 rounded-xl border border-saffron/20 bg-saffron/5 p-3">
+          <p className="text-xs font-semibold text-ink">Send a deadline reminder <span className="font-normal text-faint">(optional)</span></p>
+          <p className="mt-1 text-xs leading-relaxed text-muted">Use only an exact date shown on this official source. Followers receive one email when the weekly check sees it within 14 days.</p>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <label className="text-xs font-medium text-muted">
+              Deadline or event label
+              <input name="deadlineLabel" maxLength={120} placeholder="e.g. Application deadline" className="mt-1.5 h-10 w-full rounded-lg border border-line bg-surface px-3 text-sm text-ink placeholder:text-faint" />
+            </label>
+            <label className="text-xs font-medium text-muted">
+              Exact official date
+              <input name="deadlineDate" type="date" min={new Date().toISOString().slice(0, 10)} className="mt-1.5 h-10 w-full rounded-lg border border-line bg-surface px-3 text-sm text-ink" />
+            </label>
+          </div>
+        </div>
         <label className="mt-3 block text-xs font-medium text-muted">
           Review note <span className="text-faint">(optional)</span>
           <textarea name="note" maxLength={1000} rows={2} placeholder="Why this was approved or rejected" className="mt-1.5 w-full resize-y rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-faint" />

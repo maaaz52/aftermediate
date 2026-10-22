@@ -105,6 +105,12 @@ they follow. The review action sends a bounded batch immediately; the existing
 weekly monitoring run safely retries pending delivery without adding another
 Vercel schedule.
 
+Run `supabase/migrations/20261022_deadline_reminders.sql` to enable exact-date
+deadline reminders. In the review dashboard, enter a reminder label and only a
+date explicitly shown on the official source. The same weekly job emails each
+current follower once when that date is within 14 days, so no estimated window
+is ever sent as an exact deadline.
+
 `vercel.json` calls `/api/cron/source-monitor` every Sunday at 02:00 UTC
 (07:00 Pakistan time). Set a long, random `CRON_SECRET` in Vercel before
 deployment; Vercel includes it as a Bearer token when it invokes the route. A

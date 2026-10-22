@@ -5,6 +5,8 @@ import { requireAuth, parseJsonBody } from "@/lib/http";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { dispatchSourceUpdateAlerts } from "@/lib/source-update-alerts";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { isIsoCalendarDate } from "@/lib/deadline-reminders";
+import { dispatchDeadlineReminders } from "@/lib/deadline-alerts";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -29,12 +31,16 @@ export async function POST(request: Request) {
       note?: unknown;
       eventType?: unknown;
       timingLabel?: unknown;
+      deadlineLabel?: unknown;
+      deadlineDate?: unknown;
     };
     const candidateId = typeof body.candidateId === "string" ? body.candidateId : "";
     const decision = body.decision === "approved" || body.decision === "rejected" ? body.decision : null;
     const note = typeof body.note === "string" ? body.note.trim() : "";
     const eventType = typeof body.eventType === "string" && CALENDAR_EVENT_TYPES.has(body.eventType) ? body.eventType : null;
     const timingLabel = typeof body.timingLabel === "string" ? body.timingLabel.trim() : null;
+    const deadlineLabel = typeof body.deadlineLabel === "string" ? body.deadlineLabel.trim() : null;
+    const deadlineDate = typeof body.deadlineDate === "string" ? body.deadlineDate : null;
 
     if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(candidateId)) {
       return jsonError("Invalid source update", 400);
@@ -45,6 +51,11 @@ export async function POST(request: Request) {
       return jsonError("Enter a valid calendar event and confirmed timing together", 400);
     }
     if (eventType && decision !== "approved") return jsonError("Only approved updates can confirm a calendar date", 400);
+    if ((deadlineLabel === null) !== (deadlineDate === null) || (deadlineLabel !== null && (deadlineLabel.length === 0 || deadlineLabel.length > 120)) || (deadlineDate !== null && !isIsoCalendarDate(deadlineDate))) {
+      return jsonError("Enter a reminder label and a valid exact date together", 400);
+    }
+    if (deadlineDate !== null && deadlineDate < new Date().toISOString().slice(0, 10)) return jsonError("A reminder date cannot be in the past", 400);
+    if (deadlineLabel && decision !== "approved") return jsonError("Only approved updates can create deadline reminders", 400);
 
     const { error } = await createAdminClient().rpc("review_source_update", {
       p_candidate_id: candidateId,
@@ -53,6 +64,8 @@ export async function POST(request: Request) {
       p_reviewer: auth.user.id,
       p_event_type: eventType,
       p_timing_label: timingLabel,
+      p_deadline_label: deadlineLabel,
+      p_deadline_date: deadlineDate,
     });
     if (error) {
       console.error("source review failed", error.message);
@@ -62,7 +75,8 @@ export async function POST(request: Request) {
     // The review is already committed above. Delivery failures remain queued
     // for the weekly monitor retry and never undo an administrator's review.
     const delivery = decision === "approved" ? await dispatchSourceUpdateAlerts() : null;
-    return NextResponse.json({ ok: true, delivery });
+    const deadlineDelivery = decision === "approved" ? await dispatchDeadlineReminders() : null;
+    return NextResponse.json({ ok: true, delivery, deadlineDelivery });
   } catch (error) {
     console.error("source review route failed", error);
     return jsonError("Internal server error", 500);
