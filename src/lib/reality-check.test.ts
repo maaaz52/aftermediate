@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { REALITY_BENCHMARKS, benchmarksFor, isReviewDue } from "./reality-check";
+import { REALITY_BENCHMARKS, benchmarksFor, isReviewDue, realityTrackFor } from "./reality-check";
 
 describe("Reality Check benchmark catalogue", () => {
   it("keeps every displayed benchmark traceable and dated", () => {
@@ -14,13 +14,24 @@ describe("Reality Check benchmark catalogue", () => {
     }
   });
 
-  it("shows the Tech Edition benchmarks only for Computing & AI", () => {
+  it("shows pursuit-specific benchmarks alongside shared context", () => {
     const tech = benchmarksFor("computing-ai");
     const business = benchmarksFor("business-finance");
 
     expect(tech.some((benchmark) => benchmark.id === "nsct")).toBe(true);
     expect(tech.some((benchmark) => benchmark.id === "github-activity")).toBe(true);
-    expect(business.map((benchmark) => benchmark.id)).toEqual(["skills-shift"]);
+    expect(business.some((benchmark) => benchmark.id === "youth-business-loans")).toBe(true);
+    expect(business.some((benchmark) => benchmark.id === "freelance-exports")).toBe(true);
+    expect(business.some((benchmark) => benchmark.id === "skills-shift")).toBe(true);
+  });
+
+  it("selects the reality track from a student's intended pursuit, not their prior stream", () => {
+    expect(realityTrackFor("computing-ai").id).toBe("tech");
+    expect(realityTrackFor("medicine-healthcare").id).toBe("health");
+    expect(realityTrackFor("engineering").id).toBe("engineering");
+    expect(realityTrackFor("business-finance").id).toBe("business");
+    expect(realityTrackFor("arts-design").id).toBe("society");
+    expect(realityTrackFor("undecided").id).toBe("explore");
   });
 
   it("flags a benchmark after one year without a source review", () => {

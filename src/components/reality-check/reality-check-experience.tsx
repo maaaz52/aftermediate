@@ -19,7 +19,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useStudent } from "@/lib/store";
 import { PURSUIT_LABELS } from "@/lib/quiz";
-import { REALITY_BENCHMARKS, isReviewDue, type RealityBenchmark } from "@/lib/reality-check";
+import { benchmarksFor, isReviewDue, realityTrackFor, REALITY_BENCHMARKS, type RealityBenchmark } from "@/lib/reality-check";
 
 const ACCENT_CLASSES = {
   violet: "border-violet/25 bg-violet/8 text-violet",
@@ -157,7 +157,9 @@ function BenchmarkCard({ benchmark }: { benchmark: RealityBenchmark }) {
 export function RealityCheckExperience() {
   const { profile, hydrated } = useStudent();
   const pursuit = profile.quiz.pursuit;
-  const benchmarks = REALITY_BENCHMARKS;
+  const track = realityTrackFor(pursuit);
+  const benchmarks = benchmarksFor(pursuit);
+  const heroBenchmarks = track.heroBenchmarkIds.map((id) => REALITY_BENCHMARKS.find((benchmark) => benchmark.id === id)!);
   const projectCount = Math.max(0, profile.quiz.projects ?? 0);
   const certificateCount = Math.max(0, profile.quiz.certifications ?? 0);
   const english = profile.quiz.english ?? 0;
@@ -167,16 +169,16 @@ export function RealityCheckExperience() {
   const evidence: EvidenceItem[] = [
     {
       id: "projects",
-      label: "Build proof",
-      shortLabel: "Projects",
+      label: track.proofLabel,
+      shortLabel: track.proofLabel,
       icon: Hammer,
       value: String(projectCount),
-      target: "2 finished projects",
+      target: track.proofTarget,
       status: countStatus(projectCount, 2),
-      why: "A finished project gives you something concrete to explain, improve, and show—not just a topic you studied.",
-      action: projectCount >= 2 ? "Document the problem, your decisions, and the result for your best project." : "Choose one small, useful problem and ship a first version this month.",
-      href: "/skills/courses",
-      actionLabel: projectCount >= 2 ? "Find a skills upgrade" : "Start building with a course",
+      why: track.proofWhy,
+      action: track.actions[0].body,
+      href: track.actions[0].href,
+      actionLabel: "Start this step",
     },
     {
       id: "certifications",
@@ -219,11 +221,7 @@ export function RealityCheckExperience() {
     },
   ];
 
-  const nextMoves = [
-    evidence.find((item) => item.id === "projects")!,
-    evidence.find((item) => item.id === "certifications")!,
-    evidence.find((item) => item.id === "english")!,
-  ];
+  const nextMoves = track.actions;
 
   return (
     <div data-tour="reality-check" className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
@@ -239,29 +237,21 @@ export function RealityCheckExperience() {
           <div>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">Your direction: {direction}</p>
             <h1 className="mt-2 max-w-3xl text-balance text-4xl font-extrabold tracking-[-0.045em] text-ink sm:text-6xl">
-              The world is not waiting for your degree.
+              {track.headline}
             </h1>
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-              A degree still matters. But proof that you can build, learn, explain, and keep moving is becoming visible earlier than ever.
+              {track.description}
             </p>
           </div>
         </div>
         <div className="mt-8 grid overflow-hidden rounded-3xl border border-ink bg-ink text-background sm:grid-cols-3">
-          <div className="border-b border-background/15 px-5 py-5 sm:border-b-0 sm:border-r">
-            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">33,038</p>
-            <p className="mt-2 text-sm font-semibold">senior computing students were benchmarked in Pakistan</p>
-            <p className="mt-1 text-xs leading-relaxed text-background/65">Their national average was 46.28 / 100.</p>
-          </div>
-          <div className="border-b border-background/15 px-5 py-5 sm:border-b-0 sm:border-r">
-            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">230 / min</p>
-            <p className="mt-2 text-sm font-semibold">new public projects appeared on GitHub</p>
-            <p className="mt-1 text-xs leading-relaxed text-background/65">That is the speed of visible work in one global ecosystem.</p>
-          </div>
-          <div className="px-5 py-5">
-            <p className="font-mono text-3xl font-bold tracking-tight text-saffron">59%</p>
-            <p className="mt-2 text-sm font-semibold">of workers may need training by 2030</p>
-            <p className="mt-1 text-xs leading-relaxed text-background/65">The skills stack is changing while students are still in class.</p>
-          </div>
+          {heroBenchmarks.map((benchmark, index) => (
+            <div key={benchmark.id} className={cn("px-5 py-5", index < heroBenchmarks.length - 1 && "border-b border-background/15 sm:border-b-0 sm:border-r")}>
+              <p className="font-mono text-3xl font-bold tracking-tight text-saffron">{benchmark.metric}</p>
+              <p className="mt-2 text-sm font-semibold">{benchmark.label}</p>
+              <p className="mt-1 text-xs leading-relaxed text-background/65">{benchmark.context}</p>
+            </div>
+          ))}
         </div>
       </header>
 
@@ -274,10 +264,10 @@ export function RealityCheckExperience() {
       <section className="animate-reveal mt-14" aria-labelledby="landscape-heading" style={{ animationDelay: "80ms" }}>
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">The pressure is real</p>
-            <h2 id="landscape-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">This is what is moving around you.</h2>
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-violet">{track.eyebrow}</p>
+            <h2 id="landscape-heading" className="mt-2 text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">This is what is moving around your path.</h2>
           </div>
-          <p className="max-w-md text-sm text-muted">Pakistan’s market is growing. Global expectations are moving faster. The useful question is: what will you have to show?</p>
+          <p className="max-w-md text-sm text-muted">These are the signals that shape this path. Each one is sourced; none of them is a prediction about you.</p>
         </div>
         <div className="mt-6 grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
           {benchmarks.map((benchmark) => <BenchmarkCard key={benchmark.id} benchmark={benchmark} />)}
@@ -308,10 +298,10 @@ export function RealityCheckExperience() {
         </div>
         <div className="mt-8 grid gap-3 md:grid-cols-3">
           {nextMoves.map((item, index) => (
-            <div key={item.id} className="rounded-2xl border border-background/15 bg-background/5 p-4">
+            <div key={item.label} className="rounded-2xl border border-background/15 bg-background/5 p-4">
               <span className="font-mono text-xs text-saffron">0{index + 1}</span>
-              <p className="mt-3 font-semibold">{item.shortLabel}</p>
-              <p className="mt-1 text-sm leading-relaxed text-background/70">{item.action}</p>
+              <p className="mt-3 font-semibold">{item.label}</p>
+              <p className="mt-1 text-sm leading-relaxed text-background/70">{item.body}</p>
             </div>
           ))}
         </div>
