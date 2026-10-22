@@ -3,11 +3,12 @@
 import * as React from "react";
 import { BellRing } from "lucide-react";
 
-type Preferences = { officialSourceUpdates: boolean; deadlineReminders: boolean; meritAndSelectionUpdates: boolean };
+type Preferences = { officialSourceUpdates: boolean; deadlineReminders: boolean; meritAndSelectionUpdates: boolean; weeklyActionDigest: boolean };
 const labels: { key: keyof Preferences; title: string; detail: string }[] = [
   { key: "officialSourceUpdates", title: "Official source updates", detail: "Reviewed admissions, eligibility, fee, and scholarship changes." },
   { key: "deadlineReminders", title: "Deadline reminders", detail: "Exact dates reviewed from official sources." },
   { key: "meritAndSelectionUpdates", title: "Merit and selection updates", detail: "Published merit lists and selection-result notices." },
+  { key: "weeklyActionDigest", title: "Weekly next action", detail: "One focused step from your saved application plan, once a week." },
 ];
 
 export function NotificationPreferences() {
@@ -45,7 +46,7 @@ export function NotificationPreferences() {
   return <section className="mt-5 border-t border-line pt-4" aria-labelledby="notification-preferences-heading">
     <div className="flex items-center gap-2"><BellRing className="h-4 w-4 text-saffron" aria-hidden="true" /><h4 id="notification-preferences-heading" className="text-xs font-semibold text-ink">Email preferences</h4></div>
     <p className="mt-1 text-xs text-muted">Choose which reviewed updates we can email you about. You can change these anytime.</p>
-    {preferences && <div className="mt-3 grid gap-2 sm:grid-cols-3">{labels.map(({ key, title, detail }) => <button key={key} type="button" role="switch" aria-checked={preferences[key]} disabled={saving !== null} onClick={() => void toggle(key)} className="rounded-xl border border-line bg-surface/60 p-3 text-left transition-colors hover:border-saffron/35 disabled:opacity-60"><span className="flex items-center justify-between gap-3"><span className="text-xs font-semibold text-ink">{title}</span><span className={`h-5 w-9 rounded-full p-0.5 transition-colors ${preferences[key] ? "bg-saffron" : "bg-surface-2"}`}><span className={`block h-4 w-4 rounded-full bg-white transition-transform ${preferences[key] ? "translate-x-4" : "translate-x-0"}`} /></span></span><span className="mt-1 block text-[11px] leading-relaxed text-muted">{detail}</span></button>)}</div>}
+    {preferences && <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">{labels.map(({ key, title, detail }) => <button key={key} type="button" role="switch" aria-checked={preferences[key]} disabled={saving !== null} onClick={() => void toggle(key)} className="rounded-xl border border-line bg-surface/60 p-3 text-left transition-colors hover:border-saffron/35 disabled:opacity-60"><span className="flex items-center justify-between gap-3"><span className="text-xs font-semibold text-ink">{title}</span><span className={`h-5 w-9 rounded-full p-0.5 transition-colors ${preferences[key] ? "bg-saffron" : "bg-surface-2"}`}><span className={`block h-4 w-4 rounded-full bg-white transition-transform ${preferences[key] ? "translate-x-4" : "translate-x-0"}`} /></span></span><span className="mt-1 block text-[11px] leading-relaxed text-muted">{detail}</span></button>)}</div>}
     {error && <p role="alert" className="mt-2 text-xs text-danger">{error}</p>}
   </section>;
 }

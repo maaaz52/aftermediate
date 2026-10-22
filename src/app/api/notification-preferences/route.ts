@@ -8,6 +8,7 @@ const defaults = {
   officialSourceUpdates: true,
   deadlineReminders: true,
   meritAndSelectionUpdates: true,
+  weeklyActionDigest: false,
 };
 
 type PreferencePayload = Partial<typeof defaults>;
@@ -15,7 +16,7 @@ type PreferencePayload = Partial<typeof defaults>;
 function validPayload(value: unknown): value is PreferencePayload {
   if (!value || typeof value !== "object") return false;
   const keys = Object.keys(value);
-  const allowed = new Set(["officialSourceUpdates", "deadlineReminders", "meritAndSelectionUpdates"]);
+  const allowed = new Set(["officialSourceUpdates", "deadlineReminders", "meritAndSelectionUpdates", "weeklyActionDigest"]);
   return keys.every((key) => allowed.has(key)) && Object.values(value).every((item) => typeof item === "boolean");
 }
 
@@ -25,7 +26,7 @@ export async function GET() {
     if (!auth.ok) return auth.error;
     const { data, error } = await auth.supabase
       .from("notification_preferences")
-      .select("official_source_updates, deadline_reminders, merit_and_selection_updates")
+      .select("official_source_updates, deadline_reminders, merit_and_selection_updates, weekly_action_digest")
       .eq("user_id", auth.user.id)
       .maybeSingle();
     if (error) return jsonError("Could not load notification preferences.", 500);
@@ -33,6 +34,7 @@ export async function GET() {
       officialSourceUpdates: data.official_source_updates,
       deadlineReminders: data.deadline_reminders,
       meritAndSelectionUpdates: data.merit_and_selection_updates,
+      weeklyActionDigest: data.weekly_action_digest,
     } : defaults });
   } catch (error) {
     console.error("notification preferences read failed", error);
@@ -52,7 +54,7 @@ export async function PUT(request: Request) {
 
     const { data: existing, error: existingError } = await auth.supabase
       .from("notification_preferences")
-      .select("official_source_updates, deadline_reminders, merit_and_selection_updates")
+      .select("official_source_updates, deadline_reminders, merit_and_selection_updates, weekly_action_digest")
       .eq("user_id", auth.user.id)
       .maybeSingle();
     if (existingError) return jsonError("Could not save notification preferences.", 500);
@@ -60,6 +62,7 @@ export async function PUT(request: Request) {
       official_source_updates: preferences.officialSourceUpdates ?? existing?.official_source_updates ?? defaults.officialSourceUpdates,
       deadline_reminders: preferences.deadlineReminders ?? existing?.deadline_reminders ?? defaults.deadlineReminders,
       merit_and_selection_updates: preferences.meritAndSelectionUpdates ?? existing?.merit_and_selection_updates ?? defaults.meritAndSelectionUpdates,
+      weekly_action_digest: preferences.weeklyActionDigest ?? existing?.weekly_action_digest ?? defaults.weeklyActionDigest,
     };
     const { error } = await auth.supabase.from("notification_preferences").upsert({ user_id: auth.user.id, ...next, updated_at: new Date().toISOString() });
     if (error) return jsonError("Could not save notification preferences.", 500);
@@ -67,6 +70,7 @@ export async function PUT(request: Request) {
       officialSourceUpdates: next.official_source_updates,
       deadlineReminders: next.deadline_reminders,
       meritAndSelectionUpdates: next.merit_and_selection_updates,
+      weeklyActionDigest: next.weekly_action_digest,
     } });
   } catch (error) {
     console.error("notification preferences update failed", error);

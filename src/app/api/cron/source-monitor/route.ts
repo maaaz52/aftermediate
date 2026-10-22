@@ -4,6 +4,7 @@ import { fetchWithTimeout } from "@/lib/fetch-timeout";
 import { getServerEnv } from "@/lib/server-env";
 import { dispatchSourceUpdateAlerts } from "@/lib/source-update-alerts";
 import { dispatchDeadlineReminders } from "@/lib/deadline-alerts";
+import { dispatchWeeklyActionDigests } from "@/lib/weekly-action-digest";
 import { sendPendingSourceReviewDigest } from "@/lib/admin-review-alerts";
 import {
   describeDetectedChange,
@@ -177,6 +178,7 @@ export async function GET(request: Request) {
   // schedule and makes transient Resend failures recover automatically.
   const delivery = await dispatchSourceUpdateAlerts();
   const deadlineDelivery = await dispatchDeadlineReminders();
+  const weeklyActionDigest = await dispatchWeeklyActionDigests();
   const adminReviewDigest = await sendPendingSourceReviewDigest();
-  return NextResponse.json({ ok: true, checked: results.length, results, delivery, deadlineDelivery, adminReviewDigest });
+  return NextResponse.json({ ok: true, checked: results.length, results, delivery, deadlineDelivery, weeklyActionDigest, adminReviewDigest });
 }
