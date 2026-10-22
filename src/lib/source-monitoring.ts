@@ -48,33 +48,40 @@ type UniversityCatalogEntry = {
   name: string;
   short: string;
   sourceUrls: string[];
+  fees?: { sourceUrl?: string };
 };
 
 const UNIVERSITY_ADMISSIONS_MONITORS: SourceMonitorDefinition[] = (
   universityCatalog.universities as UniversityCatalogEntry[]
 )
-  // FAST already has three more useful, admissions-specific official checks above.
-  .filter((university) => university.id !== "fast")
-  .map((university) => {
-    const sourceUrl = university.sourceUrls[0];
-    if (!sourceUrl?.startsWith("https://")) {
-      throw new Error(`University ${university.id} needs an HTTPS primary official source URL.`);
+  .flatMap((university) => {
+    // Monitor every official admissions or fee link recorded for a university.
+    // The first ID stays stable so existing baselines are retained after this
+    // expansion; later sources receive their own independent history.
+    const officialUrls = [...new Set([...university.sourceUrls, university.fees?.sourceUrl].filter(Boolean))] as string[];
+    if (officialUrls.length === 0 || officialUrls.some((url) => !url.startsWith("https://"))) {
+      throw new Error(`University ${university.id} needs HTTPS official source URLs.`);
     }
 
-    return {
-      id: `university-${university.id}-admissions`,
-      entityType: "university",
+    return officialUrls.map((sourceUrl, index) => ({
+      id: index === 0 ? `university-${university.id}-admissions` : `university-${university.id}-source-${index + 1}`,
+      entityType: "university" as const,
       entityId: university.id,
-      label: `${university.short || university.name} admissions information`,
+      label:
+        sourceUrl === university.fees?.sourceUrl
+          ? `${university.short || university.name} fee structure`
+          : index === 0
+            ? `${university.short || university.name} admissions information`
+            : `${university.short || university.name} official admissions source ${index + 1}`,
       sourceUrl,
-      kind: "admissions-page",
-    };
+      kind: sourceUrl === university.fees?.sourceUrl ? "fee-structure" as const : "admissions-page" as const,
+    }));
   });
 
 /**
  * This is the complete, versioned allowlist for the monitor. The university
- * directory is the source of truth, so adding a university there automatically
- * enrolls its primary official admissions page in the next cron cycle.
+ * directory is the source of truth, so every recorded official admissions and
+ * fee source is enrolled in the next cron cycle.
  */
 export const SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
   ...FAST_SOURCE_MONITOR_DEFINITIONS,

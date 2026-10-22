@@ -29,7 +29,14 @@ describe("source monitoring", () => {
     const directoryUniversityIds = new Set(universityCatalog.universities.map((university) => university.id));
 
     expect(monitoredUniversityIds).toEqual(directoryUniversityIds);
-    expect(SOURCE_MONITOR_DEFINITIONS).toHaveLength(universityCatalog.universities.length + 2);
     expect(SOURCE_MONITOR_DEFINITIONS.every((source) => source.sourceUrl.startsWith("https://"))).toBe(true);
+
+    for (const university of universityCatalog.universities) {
+      const expectedUrls = [...new Set([...university.sourceUrls, university.fees.sourceUrl])];
+      const monitoredUrls = new Set(
+        SOURCE_MONITOR_DEFINITIONS.filter((source) => source.entityId === university.id).map((source) => source.sourceUrl)
+      );
+      for (const url of expectedUrls) expect(monitoredUrls).toContain(url);
+    }
   });
 });
