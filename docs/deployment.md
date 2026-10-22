@@ -49,15 +49,19 @@ Before deploying this hardening release, run
 It revokes unsafe public RPC access, adds atomic OTP and rate-limit operations,
 enforces text/upload bounds, and installs the review-sentiment trigger.
 
-## Official-source monitoring pilot
+## Official-source monitoring
 
 Run `supabase/migrations/20261022_source_monitoring.sql` after the existing
-migrations. It seeds the first monitored official sources: FAST-NUCES's
-admission schedule, eligibility criteria, and fee structure.
+migrations. The first successful cron run registers every university in the
+versioned Pakistan directory with one allowlisted primary official admissions
+page. FAST-NUCES additionally has dedicated schedule, eligibility, and fee
+checks. No arbitrary URL stored in the database can be fetched.
 
 `vercel.json` calls `/api/cron/source-monitor` daily at 02:00 UTC. Set a long,
 random `CRON_SECRET` in Vercel before deployment; Vercel includes it as a Bearer
-token when it invokes the route. The monitor stores a baseline on its first
+token when it invokes the route. A run checks up to 12 least-recently-checked
+sources, so the full current catalogue rotates over roughly three days while
+keeping the serverless job reliable. The monitor stores a baseline on its first
 successful run, then creates a **pending** source-update candidate on later
 changes. It intentionally does not auto-publish values to students: an official
 page redesign, correction, or unrelated announcement must be reviewed before

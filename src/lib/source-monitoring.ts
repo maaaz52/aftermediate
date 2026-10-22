@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
+import universityCatalog from "@/data/pakistan-universities.json";
 
-export type SourceMonitorKind = "admission-schedule" | "eligibility" | "fee-structure";
+export type SourceMonitorKind = "admission-schedule" | "eligibility" | "fee-structure" | "admissions-page";
 
 export interface SourceMonitorDefinition {
   id: string;
@@ -15,7 +16,7 @@ export interface SourceMonitorDefinition {
  * These sources are deliberately allowlisted in code. A database row is not
  * allowed to turn the cron job into an unrestricted server-side fetcher.
  */
-export const SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
+const FAST_SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
   {
     id: "fast-admission-schedule",
     entityType: "university",
@@ -40,6 +41,44 @@ export const SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
     sourceUrl: "https://nu.edu.pk/Admissions/FeeStructure",
     kind: "fee-structure",
   },
+];
+
+type UniversityCatalogEntry = {
+  id: string;
+  name: string;
+  short: string;
+  sourceUrls: string[];
+};
+
+const UNIVERSITY_ADMISSIONS_MONITORS: SourceMonitorDefinition[] = (
+  universityCatalog.universities as UniversityCatalogEntry[]
+)
+  // FAST already has three more useful, admissions-specific official checks above.
+  .filter((university) => university.id !== "fast")
+  .map((university) => {
+    const sourceUrl = university.sourceUrls[0];
+    if (!sourceUrl?.startsWith("https://")) {
+      throw new Error(`University ${university.id} needs an HTTPS primary official source URL.`);
+    }
+
+    return {
+      id: `university-${university.id}-admissions`,
+      entityType: "university",
+      entityId: university.id,
+      label: `${university.short || university.name} admissions information`,
+      sourceUrl,
+      kind: "admissions-page",
+    };
+  });
+
+/**
+ * This is the complete, versioned allowlist for the monitor. The university
+ * directory is the source of truth, so adding a university there automatically
+ * enrolls its primary official admissions page in the next cron cycle.
+ */
+export const SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
+  ...FAST_SOURCE_MONITOR_DEFINITIONS,
+  ...UNIVERSITY_ADMISSIONS_MONITORS,
 ];
 
 export function sourceDefinition(id: string): SourceMonitorDefinition | undefined {
@@ -106,11 +145,15 @@ export function extractSourceSignals(source: SourceMonitorDefinition, text: stri
     };
   }
 
-  return {
-    title,
-    computingTestWeight: matchedValue(plain, /Weightage of Admission Test marks\s*(?:\||:)?\s*([0-9]{1,3}%?)/i),
-    computingHsscWeight: matchedValue(plain, /Weightage of HSSC[^|]{0,80}?(?:\||:)?\s*([0-9]{1,3}%?)/i),
-  };
+  if (source.id === "fast-eligibility") {
+    return {
+      title,
+      computingTestWeight: matchedValue(plain, /Weightage of Admission Test marks\s*(?:\||:)?\s*([0-9]{1,3}%?)/i),
+      computingHsscWeight: matchedValue(plain, /Weightage of HSSC[^|]{0,80}?(?:\||:)?\s*([0-9]{1,3}%?)/i),
+    };
+  }
+
+  return { title };
 }
 
 export function describeDetectedChange(source: SourceMonitorDefinition, signals: Record<string, string | null>): string {

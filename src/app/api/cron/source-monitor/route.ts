@@ -5,6 +5,7 @@ import { getServerEnv } from "@/lib/server-env";
 import {
   describeDetectedChange,
   extractSourceSignals,
+  SOURCE_MONITOR_DEFINITIONS,
   sourceDefinition,
   sourceFingerprint,
   sourceTextFromHtml,
@@ -22,6 +23,17 @@ type MonitorRow = {
   active: boolean;
   latest_content_hash: string | null;
 };
+
+function monitorSeedRows() {
+  return SOURCE_MONITOR_DEFINITIONS.map((source) => ({
+    id: source.id,
+    entity_type: source.entityType,
+    entity_id: source.entityId,
+    label: source.label,
+    source_url: source.sourceUrl,
+    active: true,
+  }));
+}
 
 function isAuthorized(request: Request): boolean {
   const secret = getServerEnv().cronSecret;
@@ -44,10 +56,22 @@ export async function GET(request: Request) {
   if (!isAuthorized(request)) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const admin = createAdminClient();
+  // Add new catalogue sources without overriding an operator's active/paused
+  // choice or replacing an existing monitoring history.
+  const { error: seedError } = await admin
+    .from("source_monitors")
+    .upsert(monitorSeedRows(), { onConflict: "id", ignoreDuplicates: true });
+  if (seedError) {
+    console.error("source monitor: could not register monitored sources", seedError.message);
+    return NextResponse.json({ error: "Could not register monitored sources" }, { status: 500 });
+  }
+
+  const monitorIds = SOURCE_MONITOR_DEFINITIONS.map((source) => source.id);
   const { data, error } = await admin
     .from("source_monitors")
     .select("id, source_url, active, latest_content_hash")
     .eq("active", true)
+    .in("id", monitorIds)
     .order("last_checked_at", { ascending: true, nullsFirst: true })
     .limit(MAX_SOURCES_PER_RUN);
 

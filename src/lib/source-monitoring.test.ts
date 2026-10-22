@@ -2,10 +2,12 @@ import { describe, expect, it } from "vitest";
 import {
   describeDetectedChange,
   extractSourceSignals,
+  SOURCE_MONITOR_DEFINITIONS,
   sourceDefinition,
   sourceFingerprint,
   sourceTextFromHtml,
 } from "@/lib/source-monitoring";
+import universityCatalog from "@/data/pakistan-universities.json";
 
 describe("source monitoring", () => {
   it("ignores scripts and formatting when fingerprinting an official page", () => {
@@ -20,5 +22,14 @@ describe("source monitoring", () => {
     const signals = extractSourceSignals(source!, "<title>Schedule</title> Merit List announcement of selected / test qualified candidates | Jul 22 (Wed) | Aug 5 (Wed)");
     expect(signals.meritListAnnouncement).toContain("Jul 22");
     expect(describeDetectedChange(source!, signals)).toContain("FAST-NUCES admission schedule changed");
+  });
+
+  it("covers every university in the current Pakistan directory with an allowlisted official source", () => {
+    const monitoredUniversityIds = new Set(SOURCE_MONITOR_DEFINITIONS.map((source) => source.entityId));
+    const directoryUniversityIds = new Set(universityCatalog.universities.map((university) => university.id));
+
+    expect(monitoredUniversityIds).toEqual(directoryUniversityIds);
+    expect(SOURCE_MONITOR_DEFINITIONS).toHaveLength(universityCatalog.universities.length + 2);
+    expect(SOURCE_MONITOR_DEFINITIONS.every((source) => source.sourceUrl.startsWith("https://"))).toBe(true);
   });
 });
