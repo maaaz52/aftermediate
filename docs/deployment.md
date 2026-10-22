@@ -40,7 +40,8 @@ No code changes are required for the domain — the app has no hardcoded host (a
 | `SENTRY_DSN`, `NEXT_PUBLIC_SENTRY_DSN` | no | server/edge and browser error reporting |
 | `SENTRY_AUTH_TOKEN` | build | only needed when uploading Sentry source maps |
 | `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET` | no | only for R2 video streaming |
-| `CRON_SECRET` | yes, for source monitoring | long random secret that authorizes Vercel's daily official-source monitor |
+| `CRON_SECRET` | yes, for source monitoring | long random secret that authorizes Vercel's weekly official-source monitor |
+| `ADMIN_EMAILS` | yes, for source review | comma-separated server-only email allowlist; set to `themz52@proton.me` |
 
 `src/lib/server-env.ts` is the single source of truth for server-side variables.
 
@@ -61,6 +62,10 @@ can be fetched.
 
 Run `supabase/migrations/20261022_scholarship_source_monitoring.sql` after that
 migration before deploying the scholarship-monitoring expansion.
+
+Run `supabase/migrations/20261022_admission_calendar_reviews.sql` to enable the
+private review workflow and confirmed admission-calendar dates. Set
+`ADMIN_EMAILS=themz52@proton.me` in Vercel before using `/admin/source-updates`.
 
 `vercel.json` calls `/api/cron/source-monitor` every Sunday at 02:00 UTC
 (07:00 Pakistan time). Set a long, random `CRON_SECRET` in Vercel before

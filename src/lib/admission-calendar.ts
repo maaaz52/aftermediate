@@ -16,6 +16,13 @@ export type AdmissionCalendar = {
   events: AdmissionCalendarEvent[];
 };
 
+export type ConfirmedAdmissionCalendarEvent = {
+  eventType: AdmissionCalendarEvent["id"];
+  timingLabel: string;
+  sourceUrl: string;
+  confirmedAt: string;
+};
+
 type EventInput = Pick<AdmissionCalendarEvent, "id" | "label" | "timing" | "detail">;
 
 function estimated(sourceUrl: string, events: EventInput[]): AdmissionCalendar {
@@ -85,4 +92,26 @@ export function admissionCalendarFor(university: PakistanUniversity): AdmissionC
     `${university.entryTest} ${university.name}`
   );
   return estimated(university.sourceUrls[0], isMedical ? MEDICAL_CYCLE : GENERAL_CYCLE);
+}
+
+/** Apply reviewed official dates over the useful planning estimates. */
+export function withConfirmedAdmissionDates(
+  calendar: AdmissionCalendar,
+  confirmedEvents: ConfirmedAdmissionCalendarEvent[]
+): AdmissionCalendar {
+  const confirmedByType = new Map(confirmedEvents.map((event) => [event.eventType, event]));
+  return {
+    ...calendar,
+    events: calendar.events.map((event) => {
+      const confirmed = confirmedByType.get(event.id);
+      return confirmed
+        ? {
+            ...event,
+            timing: confirmed.timingLabel,
+            detail: "Confirmed from the official source for the current admission cycle.",
+            confidence: "confirmed",
+          }
+        : event;
+    }),
+  };
 }

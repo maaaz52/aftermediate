@@ -8,10 +8,14 @@ import Link from "next/link";
 import json from "@/data/pakistan-universities.json";
 import entryTestsJson from "@/data/entry-tests.json";
 import type { PakistanUniversity, EntryTest } from "@/lib/types";
-import { admissionCalendarFor } from "@/lib/admission-calendar";
+import { admissionCalendarFor, withConfirmedAdmissionDates, type ConfirmedAdmissionCalendarEvent } from "@/lib/admission-calendar";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 const data = json as unknown as { dataYear: number; universities: PakistanUniversity[] };
 const testsData = entryTestsJson as unknown as { tests: EntryTest[] };
+const CALENDAR_EVENT_TYPES = new Set(["announcement", "application", "test", "merit", "fee", "intake"]);
+
+export const dynamic = "force-dynamic";
 
 /** Find the entry test ID that matches a university's entryTest field. */
 function findTestId(entryTest: string): string | undefined {
@@ -25,6 +29,35 @@ export function generateStaticParams() {
 
 function getUni(id: string): PakistanUniversity | undefined {
   return data.universities.find((u) => u.id === id);
+}
+
+async function confirmedCalendarEvents(universityId: string): Promise<ConfirmedAdmissionCalendarEvent[]> {
+  try {
+    const { data, error } = await createAdminClient()
+      .from("admission_calendar_events")
+      .select("event_type, timing_label, source_url, confirmed_at")
+      .eq("university_id", universityId);
+    if (error) {
+      // The page remains useful with estimates until the one-time review
+      // migration has been run in a deployment environment.
+      console.error("admission calendar overrides unavailable", error.message);
+      return [];
+    }
+    return (data ?? []).flatMap((event) => (
+      typeof event.event_type === "string" && CALENDAR_EVENT_TYPES.has(event.event_type) &&
+      typeof event.timing_label === "string" && typeof event.source_url === "string" && typeof event.confirmed_at === "string"
+        ? [{
+            eventType: event.event_type as ConfirmedAdmissionCalendarEvent["eventType"],
+            timingLabel: event.timing_label,
+            sourceUrl: event.source_url,
+            confirmedAt: event.confirmed_at,
+          }]
+        : []
+    ));
+  } catch (error) {
+    console.error("admission calendar override lookup failed", error);
+    return [];
+  }
 }
 
 export async function generateMetadata({
@@ -47,7 +80,8 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
   const { id } = await params;
   const uni = getUni(id);
   if (!uni) notFound();
-  const calendar = admissionCalendarFor(uni);
+  const calendar = withConfirmedAdmissionDates(admissionCalendarFor(uni), await confirmedCalendarEvents(uni.id));
+  const hasConfirmedDates = calendar.events.some((event) => event.confidence === "confirmed");
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -101,12 +135,12 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
             </h2>
           </div>
           <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-saffron/25 bg-saffron/10 px-2.5 py-1 text-xs font-medium text-saffron">
-            <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />
-            Estimated windows
+            {hasConfirmedDates ? <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" /> : <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />}
+            {hasConfirmedDates ? "Confirmed dates included" : "Estimated windows"}
           </span>
         </div>
         <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted">
-          These are typical annual windows, not confirmed dates. Exact dates change every cycle; confirm them on the official page before applying.
+          Confirmed dates are taken from a reviewed official-source update. All remaining entries are typical annual windows, so confirm them before applying.
         </p>
         <ol className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2">
           {calendar.events.map((event, index) => (
@@ -116,7 +150,10 @@ export default async function UniversityPage({ params }: { params: Promise<{ id:
               </span>
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-ink">{event.label}</p>
-                <p className="mt-0.5 font-mono text-xs font-medium text-saffron">{event.timing}</p>
+                <p className="mt-0.5 inline-flex items-center gap-1 font-mono text-xs font-medium text-saffron">
+                  {event.confidence === "confirmed" && <CheckCircle2 className="h-3 w-3" aria-label="Confirmed" />}
+                  {event.timing}
+                </p>
                 <p className="mt-1 text-xs leading-relaxed text-muted">{event.detail}</p>
               </div>
             </li>

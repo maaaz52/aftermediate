@@ -16,6 +16,7 @@ export interface ServerEnv {
   nvidiaApiKey: string | undefined;
   nvidiaModel: string;
   cronSecret: string | undefined;
+  adminEmails: string | undefined;
 }
 
 function required(name: string): string {
@@ -34,6 +35,7 @@ export function getServerEnv(): ServerEnv {
     nvidiaApiKey: process.env.NVIDIA_API_KEY,
     nvidiaModel: process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct",
     cronSecret: process.env.CRON_SECRET,
+    adminEmails: process.env.ADMIN_EMAILS,
   };
 }
 
