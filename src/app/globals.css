@@ -99,6 +99,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+html[lang="ur"] body {
+  font-family: "Noto Naskh Arabic", var(--font-sans);
+  line-height: 1.8;
+}
+
+html[dir="rtl"] .font-mono,
+html[dir="rtl"] .font-display {
+  font-family: "Noto Naskh Arabic", var(--font-sans);
+  letter-spacing: normal;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] textarea {
+  text-align: right;
+}
+
 /* Full-screen assistant workspace. ChatGPT uses platform-native system fonts;
    the chat surfaces use the same readable system stack without changing the
    typeface used by the rest of Aftermediate. */

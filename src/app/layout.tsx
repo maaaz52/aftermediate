@@ -7,11 +7,15 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
 import "@fontsource/space-mono/400.css";
 import "@fontsource/space-mono/700.css";
+import "@fontsource/noto-naskh-arabic/400.css";
+import "@fontsource/noto-naskh-arabic/600.css";
 import "./globals.css";
 import { StudentProvider } from "@/lib/store";
 import { AuthProvider } from "@/lib/auth";
 import { ProfileSync } from "@/components/profile-sync";
 import { JsonLd } from "@/components/json-ld";
+import { LanguageProvider } from "@/components/language-provider";
+import { LanguageToggle } from "@/components/language-toggle";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -91,12 +95,15 @@ export default function RootLayout({
             `}</Script>
           </>
         )}
-        <AuthProvider>
-          <StudentProvider>
-            {children}
-            <ProfileSync />
-          </StudentProvider>
-        </AuthProvider>
+        <LanguageProvider>
+          <AuthProvider>
+            <StudentProvider>
+              {children}
+              <ProfileSync />
+            </StudentProvider>
+          </AuthProvider>
+          <LanguageToggle />
+        </LanguageProvider>
         <JsonLd data={orgJsonLd} />
       </body>
     </html>
