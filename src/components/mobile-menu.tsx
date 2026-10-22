@@ -9,7 +9,6 @@ import { useAuth } from "@/lib/auth";
 import { useTour } from "@/components/tour/tour-provider";
 import { chapters } from "@/lib/tour";
 import { cn } from "@/lib/utils";
-import { LanguageToggle } from "@/components/language-toggle";
 
 interface MobileMenuProps {
   open: boolean;
@@ -183,21 +182,20 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
           </div>
         </nav>
 
-        <div className="border-t border-line px-5 py-4">
-          <LanguageToggle className="w-full justify-center" />
-          {user && (
+        {user && (
+          <div className="border-t border-line px-5 py-4">
             <button
               onClick={() => {
                 signOut();
                 onClose();
               }}
-              className="mt-2 flex w-full items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium text-muted transition-colors hover:bg-danger/10 hover:text-danger min-h-11"
+              className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium text-muted transition-colors hover:bg-danger/10 hover:text-danger min-h-11"
             >
               <LogOut className="h-4 w-4 shrink-0" />
               Log out
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

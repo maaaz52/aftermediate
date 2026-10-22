@@ -9,7 +9,6 @@ import { AuthDialog } from "./auth-dialog";
 import { useAuth } from "@/lib/auth";
 import { MobileMenu } from "./mobile-menu";
 import { SiteSearch } from "./site-search";
-import { LanguageToggle } from "./language-toggle";
 
 export function TopNav() {
   const { user, signOut } = useAuth();
@@ -38,7 +37,6 @@ export function TopNav() {
                 <div className="hidden md:block">
                   <SiteSearch />
                 </div>
-                <LanguageToggle className="hidden md:inline-flex" />
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen(true)}
