@@ -8,6 +8,8 @@ import {
   sourceTextFromHtml,
 } from "@/lib/source-monitoring";
 import universityCatalog from "@/data/pakistan-universities.json";
+import pakistanScholarshipCatalog from "@/data/pakistan-scholarships.json";
+import abroadScholarshipCatalog from "@/data/abroad-scholarships.json";
 
 describe("source monitoring", () => {
   it("ignores scripts and formatting when fingerprinting an official page", () => {
@@ -25,7 +27,9 @@ describe("source monitoring", () => {
   });
 
   it("covers every university in the current Pakistan directory with an allowlisted official source", () => {
-    const monitoredUniversityIds = new Set(SOURCE_MONITOR_DEFINITIONS.map((source) => source.entityId));
+    const monitoredUniversityIds = new Set(
+      SOURCE_MONITOR_DEFINITIONS.filter((source) => source.entityType === "university").map((source) => source.entityId)
+    );
     const directoryUniversityIds = new Set(universityCatalog.universities.map((university) => university.id));
 
     expect(monitoredUniversityIds).toEqual(directoryUniversityIds);
@@ -37,6 +41,25 @@ describe("source monitoring", () => {
         SOURCE_MONITOR_DEFINITIONS.filter((source) => source.entityId === university.id).map((source) => source.sourceUrl)
       );
       for (const url of expectedUrls) expect(monitoredUrls).toContain(url);
+    }
+  });
+
+  it("covers every source in both active scholarship directories", () => {
+    const scholarshipSources = [
+      ...pakistanScholarshipCatalog.scholarships.map((scholarship) => ({
+        id: scholarship.id,
+        sourceUrls: [scholarship.sourceUrl],
+      })),
+      ...abroadScholarshipCatalog.scholarships,
+    ];
+
+    for (const scholarship of scholarshipSources) {
+      const monitoredUrls = new Set(
+        SOURCE_MONITOR_DEFINITIONS.filter(
+          (source) => source.entityType === "scholarship" && source.entityId === scholarship.id
+        ).map((source) => source.sourceUrl)
+      );
+      for (const url of scholarship.sourceUrls) expect(monitoredUrls).toContain(url);
     }
   });
 });

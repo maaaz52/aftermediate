@@ -55,12 +55,17 @@ Run `supabase/migrations/20261022_source_monitoring.sql` after the existing
 migrations. The first successful cron run registers every official admissions
 and fee source recorded for every university in the versioned Pakistan
 directory. FAST-NUCES additionally has dedicated schedule and eligibility
-checks. No arbitrary URL stored in the database can be fetched.
+checks. It also registers every source recorded in the active Pakistan and
+study-abroad scholarship directories. No arbitrary URL stored in the database
+can be fetched.
+
+Run `supabase/migrations/20261022_scholarship_source_monitoring.sql` after that
+migration before deploying the scholarship-monitoring expansion.
 
 `vercel.json` calls `/api/cron/source-monitor` daily at 02:00 UTC. Set a long,
 random `CRON_SECRET` in Vercel before deployment; Vercel includes it as a Bearer
 token when it invokes the route. A run checks up to 12 least-recently-checked
-sources, so the full current catalogue rotates over roughly six days while
+sources, so the full current catalogue rotates over roughly fifteen days while
 keeping the serverless job reliable. The monitor stores a baseline on its first
 successful run, then creates a **pending** source-update candidate on later
 changes. It intentionally does not auto-publish values to students: an official

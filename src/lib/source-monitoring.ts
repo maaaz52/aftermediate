@@ -1,11 +1,13 @@
 import { createHash } from "node:crypto";
 import universityCatalog from "@/data/pakistan-universities.json";
+import pakistanScholarshipCatalog from "@/data/pakistan-scholarships.json";
+import abroadScholarshipCatalog from "@/data/abroad-scholarships.json";
 
-export type SourceMonitorKind = "admission-schedule" | "eligibility" | "fee-structure" | "admissions-page";
+export type SourceMonitorKind = "admission-schedule" | "eligibility" | "fee-structure" | "admissions-page" | "scholarship";
 
 export interface SourceMonitorDefinition {
   id: string;
-  entityType: "university";
+  entityType: "university" | "scholarship";
   entityId: string;
   label: string;
   sourceUrl: string;
@@ -78,6 +80,50 @@ const UNIVERSITY_ADMISSIONS_MONITORS: SourceMonitorDefinition[] = (
     }));
   });
 
+type PakistanScholarshipEntry = {
+  id: string;
+  name: string;
+  sourceUrl: string;
+};
+
+type AbroadScholarshipEntry = {
+  id: string;
+  name: string;
+  sourceUrls: string[];
+};
+
+function scholarshipMonitorDefinitions(
+  catalogue: "pakistan" | "abroad",
+  scholarships: { id: string; name: string; sourceUrls: string[] }[]
+): SourceMonitorDefinition[] {
+  return scholarships.flatMap((scholarship) => {
+    const sourceUrls = [...new Set(scholarship.sourceUrls)];
+    if (sourceUrls.length === 0 || sourceUrls.some((url) => !url.startsWith("https://"))) {
+      throw new Error(`Scholarship ${scholarship.id} needs HTTPS source URLs.`);
+    }
+
+    return sourceUrls.map((sourceUrl, index) => ({
+      id: `scholarship-${catalogue}-${scholarship.id}-source-${index + 1}`,
+      entityType: "scholarship" as const,
+      entityId: scholarship.id,
+      label: `${scholarship.name} source${sourceUrls.length > 1 ? ` ${index + 1}` : ""}`,
+      sourceUrl,
+      kind: "scholarship" as const,
+    }));
+  });
+}
+
+const SCHOLARSHIP_SOURCE_MONITOR_DEFINITIONS = [
+  ...scholarshipMonitorDefinitions(
+    "pakistan",
+    (pakistanScholarshipCatalog.scholarships as PakistanScholarshipEntry[]).map((scholarship) => ({
+      ...scholarship,
+      sourceUrls: [scholarship.sourceUrl],
+    }))
+  ),
+  ...scholarshipMonitorDefinitions("abroad", abroadScholarshipCatalog.scholarships as AbroadScholarshipEntry[]),
+];
+
 /**
  * This is the complete, versioned allowlist for the monitor. The university
  * directory is the source of truth, so every recorded official admissions and
@@ -86,6 +132,7 @@ const UNIVERSITY_ADMISSIONS_MONITORS: SourceMonitorDefinition[] = (
 export const SOURCE_MONITOR_DEFINITIONS: SourceMonitorDefinition[] = [
   ...FAST_SOURCE_MONITOR_DEFINITIONS,
   ...UNIVERSITY_ADMISSIONS_MONITORS,
+  ...SCHOLARSHIP_SOURCE_MONITOR_DEFINITIONS,
 ];
 
 export function sourceDefinition(id: string): SourceMonitorDefinition | undefined {
