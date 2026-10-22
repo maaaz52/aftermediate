@@ -8,6 +8,7 @@ import { deadlineDistanceLabel } from "@/lib/deadline-reminders";
 import { followEntityDetail, type FollowEntityType } from "@/lib/source-follow";
 import { APPLICATION_STATUSES, applicationStatusLabel, type ApplicationPlan, type ApplicationStatus } from "@/lib/application-tracker";
 import { applicationChecklist } from "@/lib/application-checklist";
+import { applicationFocus } from "@/lib/application-focus";
 
 type Follow = { entityType: FollowEntityType; entityId: string };
 type Deadline = Follow & { label: string; dueDate: string; officialUrl: string };
@@ -54,6 +55,7 @@ export function MyUpdates() {
   const deadlines = data?.deadlines ?? [];
   const updates = data?.updates ?? [];
   const plans = data?.plans ?? [];
+  const focus = applicationFocus(follows, deadlines, plans);
 
   async function savePlan(follow: Follow, status: ApplicationStatus, note: string, completedTaskIds: string[]) {
     const key = `${follow.entityType}:${follow.entityId}`;
@@ -136,6 +138,17 @@ export function MyUpdates() {
           )}
         </div>
       </div>
+
+      {focus && (() => {
+        const detail = followEntityDetail(focus.entityType, focus.entityId);
+        return <div className="mt-5 rounded-xl border border-saffron/25 bg-saffron/5 p-4">
+          <p className="text-xs font-semibold text-saffron">Your next action</p>
+          <div className="mt-1 flex flex-wrap items-center justify-between gap-3">
+            <div><p className="text-sm font-bold text-ink">{focus.title}</p><p className="mt-0.5 text-xs leading-relaxed text-muted">{detail?.name ?? focus.entityId}: {focus.detail}</p></div>
+            <Link href={detail?.href ?? "/dashboard"} className="inline-flex shrink-0 items-center gap-0.5 text-xs font-semibold text-saffron hover:underline">Open item <ChevronRight className="h-3 w-3" /></Link>
+          </div>
+        </div>;
+      })()}
 
       <div className="mt-5 flex flex-wrap gap-2 border-t border-line pt-4">
         {follows.slice(0, 8).map((follow) => {
