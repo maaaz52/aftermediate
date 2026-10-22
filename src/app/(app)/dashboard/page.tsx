@@ -12,6 +12,7 @@ import { AbroadOverview } from "@/components/dashboard/abroad-overview";
 import { useStudent } from "@/lib/store";
 import { CoarseAggregate } from "@/components/dashboard/coarse-aggregate";
 import { Skeleton } from "@/components/ui/skeleton";
+import { MyUpdates } from "@/components/dashboard/my-updates";
 
 function ZoneTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -74,6 +75,9 @@ export default function DashboardPage() {
       </div>
       <div className="mt-4">
         <WatchlistSection />
+      </div>
+      <div className="mt-4">
+        <MyUpdates />
       </div>
 
       {/* ── Zone 3: Where you stand ── */}
