@@ -4,6 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import type { Session, User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
+import { recoveryStore, type RecoveryStatus } from "@/lib/supabase/recovery";
 
 export interface SignUpData {
   name?: string;
@@ -14,6 +15,8 @@ interface AuthCtx {
   user: User | null;
   session: Session | null;
   loading: boolean;
+  recoveryStatus: RecoveryStatus;
+  clearRecovery: () => void;
   signInEmail: (email: string, password: string) => Promise<{ error?: string }>;
   signUpEmail: (
     email: string,
@@ -32,6 +35,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const supabase = React.useMemo(() => createClient(), []);
   const [session, setSession] = React.useState<Session | null>(null);
   const [loading, setLoading] = React.useState(true);
+  const recoveryStatus = React.useSyncExternalStore(
+    recoveryStore.subscribe, recoveryStore.getSnapshot, recoveryStore.getServerSnapshot
+  );
+
+  React.useEffect(() => {
+    if ((recoveryStatus === "ready" || recoveryStatus === "error") &&
+      window.location.pathname === "/") {
+      router.replace("/reset-password");
+    }
+  }, [recoveryStatus, router]);
 
   React.useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -96,13 +109,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       user: session?.user ?? null,
       session,
       loading,
+      recoveryStatus,
+      clearRecovery: recoveryStore.clear,
       signInEmail,
       signUpEmail,
       signInGoogle,
       signOut,
       resetPassword,
     }),
-    [session, loading, signInEmail, signUpEmail, signInGoogle, signOut, resetPassword]
+    [session, loading, recoveryStatus, signInEmail, signUpEmail, signInGoogle, signOut, resetPassword]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

@@ -7,12 +7,13 @@ import { Brand } from "@/components/brand";
 import { PixelButton } from "@/components/ui/pixel-button";
 import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
-import { createClient } from "@/lib/supabase/client";
+import { useAuth } from "@/lib/auth";
 
 const inputClass =
   "mt-1.5 h-12 w-full border-2 border-ink bg-surface px-3.5 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
 
 export default function ForgotPasswordPage() {
+  const { resetPassword } = useAuth();
   const [email, setEmail] = React.useState("");
   const [busy, setBusy] = React.useState(false);
   const [sent, setSent] = React.useState(false);
@@ -23,13 +24,10 @@ export default function ForgotPasswordPage() {
     setBusy(true);
     setError(null);
 
-    const supabase = createClient();
-    const { error: err } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password`,
-    });
+    const { error: err } = await resetPassword(email);
 
     if (err) {
-      setError(err.message);
+      setError(err);
     } else {
       setSent(true);
     }

@@ -10,6 +10,8 @@ import { PixelCard } from "@/components/ui/pixel-card";
 import { Illustration } from "@/components/pixel/illustrations";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/lib/auth";
+import { recoveryError } from "@/lib/supabase/recovery";
 
 const inputClass =
   "mt-1.5 h-12 w-full border-2 border-ink bg-surface px-3.5 font-sans text-sm text-ink shadow-[3px_3px_0_0_var(--color-line)] transition-all placeholder:text-faint focus:border-accent focus:shadow-[3px_3px_0_0_var(--color-accent)] focus:outline-none disabled:cursor-not-allowed disabled:opacity-50";
@@ -28,9 +30,10 @@ function PasswordField({
   const [show, setShow] = React.useState(false);
   return (
     <div>
-      <span className="font-mono text-[11px] uppercase tracking-widest text-muted">{label}</span>
+      <label htmlFor={label === "New password" ? "new-password" : "confirm-password"} className="font-mono text-[11px] uppercase tracking-widest text-muted">{label}</label>
       <div className="relative mt-1.5">
         <input
+          id={label === "New password" ? "new-password" : "confirm-password"}
           type={show ? "text" : "password"}
           required
           minLength={6}
@@ -55,29 +58,19 @@ function PasswordField({
 
 export default function ResetPasswordPage() {
   const router = useRouter();
+  const { recoveryStatus, clearRecovery } = useAuth();
   const [password, setPassword] = React.useState("");
   const [confirm, setConfirm] = React.useState("");
   const [busy, setBusy] = React.useState(false);
   const [done, setDone] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-  const [ready, setReady] = React.useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.location.hash.includes("type=recovery");
-  });
-
-  React.useEffect(() => {
-    if (ready) return;
-    const supabase = createClient();
-    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
-      if (event === "PASSWORD_RECOVERY") {
-        setReady(true);
-      }
-    });
-    return () => sub.subscription.unsubscribe();
-  }, [ready]);
+  const ready = recoveryStatus === "ready";
+  const redirectTimer = React.useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  React.useEffect(() => () => clearTimeout(redirectTimer.current), []);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
+    if (!ready || busy) return;
     setBusy(true);
     setError(null);
 
@@ -94,7 +87,8 @@ export default function ResetPasswordPage() {
       setError(err.message);
     } else {
       setDone(true);
-      setTimeout(() => router.push("/dashboard"), 3000);
+      clearRecovery();
+      redirectTimer.current = setTimeout(() => router.push("/dashboard"), 3000);
     }
     setBusy(false);
   }
@@ -132,7 +126,7 @@ export default function ResetPasswordPage() {
               Choose a strong password for your account.
             </p>
 
-            {!ready && !done ? (
+            {recoveryStatus === "verifying" && !done ? (
               <div className="mt-7 flex items-center gap-3 border-2 border-ink bg-surface px-5 py-4 shadow-[4px_4px_0_0_var(--color-ink)]">
                 <Loader2 className="h-5 w-5 animate-spin text-accent" />
                 <span className="font-mono text-sm text-ink">verifying reset link…</span>
@@ -150,6 +144,13 @@ export default function ResetPasswordPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            ) : !ready ? (
+              <div role="alert" className="mt-7 border-2 border-danger bg-danger/5 px-4 py-4">
+                <p className="text-sm text-danger">{recoveryError}</p>
+                <Link href="/forgot-password" className="mt-4 inline-block font-semibold text-accent underline">
+                  Request another link
+                </Link>
               </div>
             ) : (
               <form onSubmit={submit} className="mt-7 space-y-5">

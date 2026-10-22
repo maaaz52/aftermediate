@@ -2,6 +2,37 @@
 
 This app is a Next.js 16 app deployed on **Vercel** at `https://www.aftermediate.site` (already live). This document records the exact setup so it can be re-applied or moved without guessing.
 
+## Password recovery configuration
+
+In Supabase **Authentication → URL Configuration**, set the Site URL to
+`https://www.aftermediate.site` and add these exact Redirect URLs:
+
+- `https://www.aftermediate.site/reset-password`
+- `http://localhost:3000/reset-password` for local development
+- Each additional supported origin followed by `/reset-password` (including
+  preview deployments where recovery is tested). Request and open the link on
+  the same origin so the browser's PKCE verifier cookie is available.
+
+In **Authentication → Email Templates → Reset Password**, the reset action
+must link to `{{ .ConfirmationURL }}`, for example:
+
+```html
+<a href="{{ .ConfirmationURL }}">Reset password</a>
+```
+
+Do not replace that action with a plain Site URL or RedirectTo value: Supabase
+must verify the email link before returning the authorization code. A missing
+allowed redirect can send the user to the Site URL instead. The app handles
+legacy recovery callbacks at `/?code=…` and moves them to `/reset-password`
+after verification. Supabase's browser client performs the exchange once.
+
+After deployment, request a fresh reset email, open it in the requesting
+browser, update the password, and confirm sign-in with the new password.
+Reopening a consumed link, using an expired link, or opening without the PKCE
+verifier should show a retry message. Verify dashboard settings separately;
+they are not versioned in this repository. Never paste callback codes or
+tokens into logs or support messages.
+
 ## Hosting
 
 - Provider: **Vercel** (project `aftermediate`, team `themz`)
