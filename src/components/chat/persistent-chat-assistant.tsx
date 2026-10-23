@@ -14,6 +14,7 @@ import {
 } from "@/lib/chat-api";
 import { exportChatAsPDF } from "@/lib/chat-pdf";
 import { useAuth } from "@/lib/auth";
+import { readChatStreamResponse } from "@/lib/chat-stream-protocol";
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -72,16 +73,9 @@ export function PersistentChatAssistant({ persona, label, greeting, suggestions,
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ persona, messages: next }),
       });
-      if (!response.ok || !response.body) throw new Error("Chat request failed");
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let answer = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        answer += decoder.decode(value, { stream: true });
-        setMessages([...next, { role: "assistant", content: answer }]);
-      }
+      const answer = await readChatStreamResponse(response, (streamedAnswer) => {
+        setMessages([...next, { role: "assistant", content: streamedAnswer }]);
+      });
       if (answer) {
         void userMessageSaved.then((session) => {
           if (!session) return;

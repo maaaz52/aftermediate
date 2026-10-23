@@ -102,7 +102,7 @@ export async function POST(req: Request) {
           totalMs: Math.round(performance.now() - requestStartedAt),
         });
       },
-      onComplete: ({ provider, fallbackUsed, modelDurationMs }) => {
+      onComplete: ({ provider, fallbackUsed, modelDurationMs, finishReason }) => {
         logChatTiming("complete", {
           provider,
           fallbackUsed,
@@ -111,6 +111,7 @@ export async function POST(req: Request) {
           retrievalMs,
           preStreamMs,
           modelDurationMs,
+          finishReason,
           totalMs: Math.round(performance.now() - requestStartedAt),
         });
       },

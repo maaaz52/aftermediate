@@ -1,13 +1,16 @@
 import { google } from "@ai-sdk/google";
 import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
-import { generateText, streamText, type LanguageModel } from "ai";
+import { generateText, streamText, type FinishReason, type LanguageModel } from "ai";
 import { buildSystemPrompt, type ChatPromptInput } from "@/lib/chat-prompt";
 import { isPersona } from "@/lib/chat-request";
+import { encodeChatStreamEvent } from "@/lib/chat-stream-protocol";
 
 export const MODEL = process.env.GOOGLE_MODEL || "gemini-flash-latest";
 export const NVIDIA_MODEL = process.env.NVIDIA_MODEL || "meta/llama-3.1-8b-instruct";
 export const CHAT_PRIMARY_PROVIDER = process.env.CHAT_PRIMARY_PROVIDER === "nvidia" ? "nvidia" : "gemini";
-export const CHAT_MAX_OUTPUT_TOKENS = 550;
+export const CHAT_MAX_OUTPUT_TOKENS = 1_200;
+export const CHAT_PRIMARY_TIMEOUT_MS = 35_000;
+export const CHAT_FALLBACK_TIMEOUT_MS = 18_000;
 
 export const model = google(MODEL);
 
@@ -25,8 +28,14 @@ type ChatProvider = "gemini" | "nvidia";
 
 export interface ChatStreamTelemetry {
   onFirstToken?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelTtfbMs: number }) => void;
-  onComplete?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelDurationMs: number }) => void;
+  onComplete?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelDurationMs: number; finishReason: FinishReason }) => void;
   onError?: (event: { provider: ChatProvider; fallbackUsed: boolean; modelDurationMs: number }) => void;
+}
+
+class IncompleteChatStreamError extends Error {
+  constructor(readonly finishReason: FinishReason) {
+    super(`Chat stream finished with ${finishReason}`);
+  }
 }
 
 function nvidiaModel(): LanguageModel | null {
@@ -47,6 +56,9 @@ function fallbackChatModel(provider: ChatProvider): { provider: ChatProvider; mo
 }
 
 function shouldUseNvidiaFallback(error: unknown): boolean {
+  if (error instanceof IncompleteChatStreamError) {
+    return error.finishReason !== "content-filter";
+  }
   if (!error || typeof error !== "object") return true;
   const status = "statusCode" in error && typeof error.statusCode === "number"
     ? error.statusCode
@@ -80,8 +92,6 @@ export function streamChat(
     throw new Error(`Unknown persona: ${String(context.persona)}`);
   }
   const system = buildSystemPrompt(context);
-  const encoder = new TextEncoder();
-
   const body = new ReadableStream<Uint8Array>({
     async start(controller) {
       let sentText = false;
@@ -100,7 +110,9 @@ export function streamChat(
           // over to the other configured provider immediately instead.
           maxRetries: 0,
           maxOutputTokens: CHAT_MAX_OUTPUT_TOKENS,
-          abortSignal: AbortSignal.timeout(60_000),
+          // Keep enough of the 60-second route budget for a second provider
+          // if the first one stalls after sending only part of an answer.
+          abortSignal: AbortSignal.timeout(fallbackUsed ? CHAT_FALLBACK_TIMEOUT_MS : CHAT_PRIMARY_TIMEOUT_MS),
         });
         try {
           for await (const text of result.textStream) {
@@ -113,12 +125,15 @@ export function streamChat(
               });
             }
             sentText = true;
-            controller.enqueue(encoder.encode(text));
+            controller.enqueue(encodeChatStreamEvent({ type: "delta", text }));
           }
+          const finishReason = await result.finishReason;
+          if (finishReason !== "stop") throw new IncompleteChatStreamError(finishReason);
           telemetry?.onComplete?.({
             provider: selected.provider,
             fallbackUsed,
             modelDurationMs: Math.round(performance.now() - startedAt),
+            finishReason,
           });
         } catch (error) {
           telemetry?.onError?.({
@@ -133,33 +148,42 @@ export function streamChat(
       try {
         await streamProvider(primary, false);
       } catch (error) {
-        if (sentText || !shouldUseNvidiaFallback(error)) {
-          controller.error(error);
-          return;
-        }
         const fallback = fallbackChatModel(primary.provider);
-        if (!fallback) {
-          controller.error(error);
+        if (!fallback || !shouldUseNvidiaFallback(error)) {
+          controller.enqueue(encodeChatStreamEvent({ type: "error", message: "The chatbot could not finish its response. Please try again." }));
+          controller.close();
           return;
         }
         try {
-          console.warn("Chat provider failed before output; retrying with fallback", {
+          console.warn("Chat provider did not complete; retrying with fallback", {
             primaryProvider: primary.provider,
             fallbackProvider: fallback.provider,
           });
+          if (sentText) {
+            // The client discards the incomplete primary answer before the
+            // backup starts, so users never see two responses joined together.
+            controller.enqueue(encodeChatStreamEvent({ type: "reset" }));
+            sentText = false;
+          }
           await streamProvider(fallback, true);
         } catch (fallbackError) {
-          controller.error(fallbackError);
+          console.error("Chat fallback could not complete", fallbackError);
+          controller.enqueue(encodeChatStreamEvent({ type: "error", message: "The chatbot could not finish its response. Please try again." }));
+          controller.close();
           return;
         }
       }
+      controller.enqueue(encodeChatStreamEvent({ type: "done" }));
       controller.close();
     },
   });
 
   return {
     toTextStreamResponse: () => new Response(body, {
-      headers: { "content-type": "text/plain; charset=utf-8" },
+      headers: {
+        "content-type": "application/x-ndjson; charset=utf-8",
+        "cache-control": "no-cache, no-transform",
+      },
     }),
   };
 }

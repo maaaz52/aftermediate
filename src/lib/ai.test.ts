@@ -24,6 +24,7 @@ vi.mock("@ai-sdk/openai-compatible", () => ({
 }));
 
 import { CHAT_MAX_OUTPUT_TOKENS, generateStructured, streamChat } from "@/lib/ai";
+import { readChatStreamResponse } from "@/lib/chat-stream-protocol";
 
 type CallOptions = {
   maxRetries?: number;
@@ -130,6 +131,7 @@ describe("streamChat", () => {
       textStream: (async function* () {
         yield "Hello";
       })(),
+      finishReason: Promise.resolve("stop"),
     });
 
     const response = streamChat(
@@ -137,7 +139,7 @@ describe("streamChat", () => {
       { persona: "rahbar" }
     ).toTextStreamResponse();
 
-    expect(await response.text()).toBe("Hello");
+    await expect(readChatStreamResponse(response, () => undefined)).resolves.toBe("Hello");
     expect(streamText).toHaveBeenCalledWith(expect.objectContaining({
       maxRetries: 0,
       maxOutputTokens: CHAT_MAX_OUTPUT_TOKENS,
@@ -150,11 +152,13 @@ describe("streamChat", () => {
         textStream: (async function* () {
           throw { statusCode: 503 };
         })(),
+        finishReason: Promise.resolve("error"),
       })
       .mockReturnValueOnce({
         textStream: (async function* () {
           yield "Recovered";
         })(),
+        finishReason: Promise.resolve("stop"),
       });
 
     const response = streamChat(
@@ -162,9 +166,55 @@ describe("streamChat", () => {
       { persona: "rahbar" }
     ).toTextStreamResponse();
 
-    expect(await response.text()).toBe("Recovered");
+    await expect(readChatStreamResponse(response, () => undefined)).resolves.toBe("Recovered");
     expect(streamText).toHaveBeenCalledTimes(2);
     expect(streamText.mock.calls[0][0].model).toBe("mock-model");
     expect(streamText.mock.calls[1][0].model).toBe("nvidia-model");
+  });
+
+  it("resets a partial answer and uses the fallback when the primary stream breaks", async () => {
+    streamText
+      .mockReturnValueOnce({
+        textStream: (async function* () {
+          yield "Applying is done through";
+          throw { statusCode: 503 };
+        })(),
+        finishReason: Promise.resolve("error"),
+      })
+      .mockReturnValueOnce({
+        textStream: (async function* () {
+          yield "Apply through the official admissions portal.";
+        })(),
+        finishReason: Promise.resolve("stop"),
+      });
+
+    const response = streamChat(
+      [{ role: "user", content: "How do I apply?" }],
+      { persona: "manzil" }
+    ).toTextStreamResponse();
+
+    await expect(readChatStreamResponse(response, () => undefined)).resolves.toBe(
+      "Apply through the official admissions portal."
+    );
+    expect(streamText).toHaveBeenCalledTimes(2);
+  });
+
+  it("falls back when the provider reports a length-limited answer", async () => {
+    streamText
+      .mockReturnValueOnce({
+        textStream: (async function* () { yield "Cut off"; })(),
+        finishReason: Promise.resolve("length"),
+      })
+      .mockReturnValueOnce({
+        textStream: (async function* () { yield "Complete answer."; })(),
+        finishReason: Promise.resolve("stop"),
+      });
+
+    const response = streamChat(
+      [{ role: "user", content: "Explain the process" }],
+      { persona: "rahbar" }
+    ).toTextStreamResponse();
+
+    await expect(readChatStreamResponse(response, () => undefined)).resolves.toBe("Complete answer.");
   });
 });

@@ -12,6 +12,7 @@ import {
   usePersonalKey,
   type ChatMessage,
 } from "@/lib/chat-storage";
+import { readChatStreamResponse } from "@/lib/chat-stream-protocol";
 
 type Msg = ChatMessage;
 
@@ -71,16 +72,9 @@ export function EssayRater() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ persona: "qalam", messages: next.map((m) => ({ role: m.role, content: m.content })) }),
       });
-      if (!res.ok || !res.body) throw new Error("failed");
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let acc = "";
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        acc += decoder.decode(value, { stream: true });
-        setMessages([...next, { role: "assistant", content: acc }]);
-      }
+      await readChatStreamResponse(res, (answer) => {
+        setMessages([...next, { role: "assistant", content: answer }]);
+      });
     } catch {
       setMessages([...next, { role: "assistant", content: "Sorry, I hit a snag. Try again in a moment." }]);
     } finally {
