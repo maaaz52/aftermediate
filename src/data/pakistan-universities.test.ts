@@ -4,20 +4,40 @@ import type { PakistanUniversity, Stream } from "@/lib/types";
 
 const data = json as unknown as { dataYear: number; universities: PakistanUniversity[] };
 const STREAMS: Stream[] = ["pre-medical", "pre-engineering", "ics", "icom", "alevel"];
-const REQUIRED = ["nust", "fast", "lums", "giki", "iba", "comsats"] as const;
+const REQUIRED = [
+  "nust",
+  "fast",
+  "lums",
+  "giki",
+  "iba",
+  "comsats",
+  "namal",
+  "numl",
+  "imsciences",
+  "uop",
+  "uet-peshawar",
+  "islamia-college-peshawar",
+] as const;
 
 describe("pakistan-universities.json", () => {
-  it("has exactly 30 universities", () => {
-    expect(data.universities).toHaveLength(30);
+  it("has exactly 44 universities", () => {
+    expect(data.universities).toHaveLength(44);
   });
 
   it("has a numeric dataYear of 2026", () => {
     expect(data.dataYear).toBe(2026);
   });
 
-  it("includes the 6 required flagship universities", () => {
+  it("includes the flagship and regional universities", () => {
     const ids = data.universities.map((u) => u.id);
     for (const id of REQUIRED) expect(ids).toContain(id);
+  });
+
+  it("represents major regions beyond Lahore, Karachi and Islamabad", () => {
+    const cities = data.universities.map((university) => university.city);
+    for (const city of ["Peshawar", "Mianwali", "Sukkur", "Quetta", "Jamshoro", "Multan", "Bahawalpur", "Taxila"]) {
+      expect(cities).toContain(city);
+    }
   });
 
   it("has unique ids", () => {

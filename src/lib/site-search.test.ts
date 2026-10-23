@@ -10,6 +10,18 @@ describe("searchSite", () => {
     });
   });
 
+  it("includes newly added regional universities in global search", () => {
+    expect(searchSite("IMSciences")[0]).toMatchObject({
+      label: "Institute of Management Sciences",
+      href: "/pakistan/universities/imsciences",
+      kind: "university",
+    });
+    expect(searchSite("Namal")[0]).toMatchObject({
+      href: "/pakistan/universities/namal",
+      kind: "university",
+    });
+  });
+
   it("returns navigable site pages for general feature queries", () => {
     expect(searchSite("merit")).toEqual(
       expect.arrayContaining([expect.objectContaining({ href: "/merit", kind: "page" })])

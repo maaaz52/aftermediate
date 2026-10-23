@@ -1420,6 +1420,473 @@
       "sourceUrls": [
         "https://jmcp.edu.pk/"
       ]
+    },
+    {
+      "id": "namal",
+      "name": "Namal University",
+      "short": "Namal",
+      "city": "Mianwali",
+      "type": "private",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "HEC-recognised, not-for-profit university",
+        "sourceUrl": "https://namal.edu.pk/faqs"
+      },
+      "entryTest": "Namal entry test or an accepted external test score",
+      "intro": "Namal University is a not-for-profit university near Mianwali offering undergraduate degrees in computer science, electrical engineering, mathematics and business, with a strong emphasis on access, scholarships and rural talent development.",
+      "admissionSteps": [
+        { "title": "Register online", "detail": "Create an account on Namal's admission portal and complete the personal and academic profile." },
+        { "title": "Choose programs", "detail": "Select program preferences and enter Matric, Intermediate and test information." },
+        { "title": "Submit a test score", "detail": "Take the Namal entry test or upload a score from a test accepted for the current cycle." },
+        { "title": "Confirm the offer", "detail": "Upload documents, submit the application and pay the fee after selection on aggregate merit." }
+      ],
+      "fees": {
+        "summary": "Current published tuition is PKR 525,000 per year, before lab, examination, hostel and one-time charges; scholarships and need-based support are available",
+        "programFees": [
+          { "program": "Undergraduate tuition", "perYear": 525000, "note": "Published annual tuition; additional charges apply" }
+        ],
+        "sourceUrl": "https://namal.edu.pk/fee-structure"
+      },
+      "bestFields": [
+        { "field": "Computer Science", "why": "A focused computing degree supported by small cohorts and project-based learning." },
+        { "field": "Electrical Engineering", "why": "An accredited engineering route with laboratory and design experience." },
+        { "field": "Mathematics & Business", "why": "Namal combines quantitative study with entrepreneurship and management options." }
+      ],
+      "sourceUrls": [
+        "https://namal.edu.pk/apply",
+        "https://namal.edu.pk/faqs",
+        "https://namal.edu.pk/fee-structure"
+      ]
+    },
+    {
+      "id": "numl",
+      "name": "National University of Modern Languages",
+      "short": "NUML",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Federally chartered public-sector university",
+        "sourceUrl": "https://www.numl.edu.pk/admissions"
+      },
+      "entryTest": "NUML entry test and/or interview, depending on the program",
+      "intro": "NUML is a federally chartered public university headquartered in Islamabad with regional campuses across Pakistan. Alongside its nationally known language programs, it offers computing, engineering, business, social sciences, psychology, media and international relations degrees.",
+      "admissionSteps": [
+        { "title": "Apply online", "detail": "Complete the regular admission form and upload the required photograph and academic documents." },
+        { "title": "Pay processing fee", "detail": "Generate and pay the non-refundable application processing fee for the selected priority." },
+        { "title": "Test or interview", "detail": "Appear in the NUML entry test and any program-specific interview shown on the admit card." },
+        { "title": "Complete enrollment", "detail": "Follow the merit list, verify original documents and pay the semester dues by the deadline." }
+      ],
+      "fees": {
+        "summary": "Fees vary substantially by campus and program; use NUML's current campus-specific fee schedule before applying",
+        "sourceUrl": "https://www.numl.edu.pk/index.php/admission/fee"
+      },
+      "bestFields": [
+        { "field": "Languages & Linguistics", "why": "NUML offers one of Pakistan's widest selections of modern language degrees and courses." },
+        { "field": "International Relations", "why": "Its language ecosystem supports regionally focused policy and international studies." },
+        { "field": "Computing & Business", "why": "BS computing and management programs are available at the main and selected regional campuses." }
+      ],
+      "sourceUrls": [
+        "https://www.numl.edu.pk/admissions",
+        "https://www.numl.edu.pk/index.php/admission/fee"
+      ]
+    },
+    {
+      "id": "imsciences",
+      "name": "Institute of Management Sciences",
+      "short": "IMSciences",
+      "city": "Peshawar",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Public-sector degree-awarding institute in Khyber Pakhtunkhwa",
+        "sourceUrl": "https://imsciences.edu.pk/admissions/"
+      },
+      "entryTest": "IMSciences admission test",
+      "intro": "IMSciences is a public-sector institute in Hayatabad, Peshawar and one of Khyber Pakhtunkhwa's best-known choices for management and technology. Its undergraduate portfolio includes business, accounting, economics, computing, AI, data science, psychology and social sciences.",
+      "admissionSteps": [
+        { "title": "Create an application", "detail": "Use the IMSciences admission portal to generate the challan and start the online form." },
+        { "title": "Complete your profile", "detail": "Enter personal and academic information and select the undergraduate program preferences." },
+        { "title": "Take the admission test", "detail": "Appear in the institute's undergraduate admission test using the published schedule and model paper." },
+        { "title": "Join on merit", "detail": "Check the merit result, verify documents and submit the required fee to secure admission." }
+      ],
+      "fees": {
+        "summary": "Program-specific fees are published with each admission cycle; confirm the current four-year degree fee schedule on the official admissions page",
+        "sourceUrl": "https://imsciences.edu.pk/admissions/"
+      },
+      "bestFields": [
+        { "field": "Business & Management", "why": "IMSciences is one of KP's most established public business and management schools." },
+        { "field": "Computer Science & AI", "why": "It offers CS pathways in AI, cyber security, data science and software engineering." },
+        { "field": "Economics & Analytics", "why": "Economics, accounting, finance and business analytics connect quantitative study with industry." }
+      ],
+      "sourceUrls": [
+        "https://admissions.imsciences.edu.pk/",
+        "https://imsciences.edu.pk/admissions/"
+      ]
+    },
+    {
+      "id": "uop",
+      "name": "University of Peshawar",
+      "short": "UoP",
+      "city": "Peshawar",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Major public research university in Khyber Pakhtunkhwa",
+        "sourceUrl": "https://www.uop.edu.pk/undergraduate-admissions"
+      },
+      "entryTest": "Academic merit and program-specific test or interview where required",
+      "intro": "The University of Peshawar is a large multidisciplinary public university and a central higher-education institution for Khyber Pakhtunkhwa. It offers more than 50 undergraduate programs across sciences, computing, business, law, social sciences, languages and the humanities.",
+      "admissionSteps": [
+        { "title": "Review programs", "detail": "Check the current undergraduate advertisement, eligibility rules and morning or evening availability." },
+        { "title": "Apply online", "detail": "Create an account, choose programs and quotas, and enter academic and personal information." },
+        { "title": "Pay and submit", "detail": "Pay the application processing fee through the method listed on the admission portal." },
+        { "title": "Verify selection", "detail": "Follow merit lists and complete document verification and fee submission when called." }
+      ],
+      "fees": {
+        "summary": "Fees differ by program and morning or evening session; confirm the amount in the current official admission prospectus",
+        "sourceUrl": "https://www.uop.edu.pk/undergraduate-admissions"
+      },
+      "bestFields": [
+        { "field": "Social Sciences", "why": "The university has broad, long-established departments across society, policy and development." },
+        { "field": "Biological & Physical Sciences", "why": "Its multidisciplinary campus supports a wide range of laboratory sciences." },
+        { "field": "Law, Languages & Humanities", "why": "Students can choose from extensive professional and humanities departments in one campus." }
+      ],
+      "sourceUrls": [
+        "https://www.uop.edu.pk/undergraduate-admissions"
+      ]
+    },
+    {
+      "id": "uet-peshawar",
+      "name": "University of Engineering and Technology Peshawar",
+      "short": "UET Peshawar",
+      "city": "Peshawar",
+      "type": "public",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "ranking": {
+        "label": "Leading public engineering university in Khyber Pakhtunkhwa",
+        "sourceUrl": "https://www.uetpeshawar.edu.pk/"
+      },
+      "entryTest": "ETEA engineering entrance test",
+      "intro": "UET Peshawar is Khyber Pakhtunkhwa's principal public engineering university, with its main campus in Peshawar and additional campuses in the province. It offers engineering, architecture and computing-related undergraduate programs through a province-wide merit process.",
+      "admissionSteps": [
+        { "title": "Register for ETEA", "detail": "Register for the engineering entrance test announced for the current KP admission cycle." },
+        { "title": "Take the test", "detail": "Appear in the ETEA test and retain the result needed for the university application." },
+        { "title": "Submit preferences", "detail": "Apply through the undergraduate admission process and rank eligible campuses and disciplines." },
+        { "title": "Follow merit lists", "detail": "Check allocation lists and complete documents and fee payment within the offered window." }
+      ],
+      "fees": {
+        "summary": "Public-sector fees and applicable campus charges are listed in the current undergraduate prospectus and may change annually",
+        "sourceUrl": "https://www.uetpeshawar.edu.pk/wp-content/uploads/2025/08/UG-Prospectus-2025-26.pdf"
+      },
+      "bestFields": [
+        { "field": "Civil Engineering", "why": "A long-established program connected to regional infrastructure and public-sector work." },
+        { "field": "Electrical Engineering", "why": "Core engineering teaching covers power, electronics and communications applications." },
+        { "field": "Mechanical & Computer Systems", "why": "Students can pursue traditional engineering alongside newer computing-linked disciplines." }
+      ],
+      "sourceUrls": [
+        "https://www.uetpeshawar.edu.pk/",
+        "https://www.uetpeshawar.edu.pk/wp-content/uploads/2025/08/UG-Prospectus-2025-26.pdf"
+      ]
+    },
+    {
+      "id": "islamia-college-peshawar",
+      "name": "Islamia College Peshawar",
+      "short": "ICP",
+      "city": "Peshawar",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Historic public university in Khyber Pakhtunkhwa",
+        "sourceUrl": "https://www.icp.edu.pk/"
+      },
+      "entryTest": "Merit and program-specific test where announced",
+      "intro": "Islamia College Peshawar is a historic public institution founded in 1913 and now operating as a chartered university. It offers undergraduate education in sciences, computing, business, law, languages, social sciences and Islamic studies from its landmark Peshawar campus.",
+      "admissionSteps": [
+        { "title": "Read the guide book", "detail": "Review the current BS, BBA, LLB and Shariah admission schedule and eligibility rules." },
+        { "title": "Apply online", "detail": "Complete the online admission form for eligible programs before the published closing date." },
+        { "title": "Meet program criteria", "detail": "Attend any test or interview required for the selected department and admission category." },
+        { "title": "Confirm admission", "detail": "Follow merit lists, present original documents and pay university dues on selection." }
+      ],
+      "fees": {
+        "summary": "Public-sector fees vary by undergraduate program and session; use the current admission guide book for the payable amount",
+        "sourceUrl": "https://www.icp.edu.pk/icp/page.php?abc=202606070835126904"
+      },
+      "bestFields": [
+        { "field": "Natural Sciences", "why": "The institution has a long teaching tradition across core science departments." },
+        { "field": "Humanities & Social Sciences", "why": "Its historic campus supports broad liberal arts and social science study." },
+        { "field": "Law, Business & Computing", "why": "Professional undergraduate options complement the college's traditional disciplines." }
+      ],
+      "sourceUrls": [
+        "https://www.icp.edu.pk/",
+        "https://www.icp.edu.pk/icp/page.php?abc=202606070835126904"
+      ]
+    },
+    {
+      "id": "air-university",
+      "name": "Air University",
+      "short": "Air University",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Federally chartered public-sector university",
+        "sourceUrl": "https://www.au.edu.pk/"
+      },
+      "entryTest": "Air University admission test or an accepted alternative score",
+      "intro": "Air University is a federally chartered public-sector university in Islamabad with additional campuses. It is especially known for computing, cyber security, engineering, avionics, aerospace, business and strategic studies, with academic links to Pakistan's aviation sector.",
+      "admissionSteps": [
+        { "title": "Register online", "detail": "Create an account on the Air University admission portal and select campus and program choices." },
+        { "title": "Upload and pay", "detail": "Provide academic documents and pay the admission processing charges through the listed channel." },
+        { "title": "Take the test", "detail": "Appear in the AU admission test unless the chosen program accepts another qualifying test score." },
+        { "title": "Accept selection", "detail": "Check the merit result and complete verification and first-semester fee submission." }
+      ],
+      "fees": {
+        "summary": "Fall 2026 fees are charged by program and credit hour; for example, BS Computer Science lists PKR 137,250 tuition for its first semester before other charges",
+        "sourceUrl": "https://webdata.au.edu.pk/Pages/Admission/fees_financial.aspx"
+      },
+      "bestFields": [
+        { "field": "Cyber Security", "why": "Dedicated cyber security and digital forensics programs are a distinctive strength." },
+        { "field": "Computing & AI", "why": "The computing faculty offers CS, AI, data science, software and games pathways." },
+        { "field": "Avionics & Aerospace", "why": "Specialised aviation-linked engineering programs distinguish Air University nationally." }
+      ],
+      "sourceUrls": [
+        "https://portals.au.edu.pk/admissions/",
+        "https://webdata.au.edu.pk/Pages/Admission/fees_financial.aspx"
+      ]
+    },
+    {
+      "id": "bahria-university",
+      "name": "Bahria University",
+      "short": "Bahria University",
+      "city": "Islamabad",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Federally chartered public-sector university",
+        "sourceUrl": "https://www.bahria.edu.pk/"
+      },
+      "entryTest": "Bahria University Entry Test (BUET) or accepted alternative, program-dependent",
+      "intro": "Bahria University is a federally chartered public-sector university established by the Pakistan Navy, with major campuses in Islamabad, Karachi and Lahore. Its portfolio spans computing, engineering, business, law, social sciences, earth sciences and health disciplines.",
+      "admissionSteps": [
+        { "title": "Apply online", "detail": "Register through Bahria's admission portal and choose the campus and undergraduate program." },
+        { "title": "Pay application fee", "detail": "Submit the application and pay the stated processing fee before the campus deadline." },
+        { "title": "Take BUET", "detail": "Appear in the Bahria University entry test or submit an accepted alternative where available." },
+        { "title": "Secure the seat", "detail": "Follow the merit list and complete document verification and fee payment on time." }
+      ],
+      "fees": {
+        "summary": "Fall 2026 fees vary by campus and program; Islamabad BBA is listed at PKR 189,200 total for the first semester",
+        "sourceUrl": "https://www.bahria.edu.pk/page/PageTemplate4?WebsiteID=1&pageContentId=4666"
+      },
+      "bestFields": [
+        { "field": "Business & Management", "why": "Bahria offers a broad management portfolio across its major urban campuses." },
+        { "field": "Computer Science", "why": "Computing programs serve students in Islamabad, Karachi and Lahore." },
+        { "field": "Engineering & Maritime Studies", "why": "Its Navy-linked background supports engineering and maritime-oriented education." }
+      ],
+      "sourceUrls": [
+        "https://www.bahria.edu.pk/",
+        "https://www.bahria.edu.pk/page/PageTemplate4?WebsiteID=1&pageContentId=4666"
+      ]
+    },
+    {
+      "id": "sukkur-iba",
+      "name": "Sukkur IBA University",
+      "short": "Sukkur IBA",
+      "city": "Sukkur",
+      "type": "public",
+      "streams": ["pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Prominent public university serving interior Sindh",
+        "sourceUrl": "https://iba-suk.edu.pk/admissions/under-graduate-programs"
+      },
+      "entryTest": "Sukkur IBA admission test",
+      "intro": "Sukkur IBA University is a public university and a leading higher-education option in interior Sindh. It is known for merit-based admissions, talent-hunt pathways and undergraduate programs in business, accounting, economics, computing, artificial intelligence and engineering.",
+      "admissionSteps": [
+        { "title": "Choose a route", "detail": "Review regular undergraduate admission and any eligible talent-hunt or foundation pathway." },
+        { "title": "Apply online", "detail": "Complete the university application and pay the current admission processing fee." },
+        { "title": "Take the test", "detail": "Appear in the Sukkur IBA admission test at the assigned venue and date." },
+        { "title": "Complete admission", "detail": "Follow merit announcements and submit verified documents and university fees after selection." }
+      ],
+      "fees": {
+        "summary": "For 2025-26, regular undergraduate tuition was PKR 106,000 per semester, with admission and refundable security charged on entry; check the new cycle before payment",
+        "programFees": [
+          { "program": "Regular undergraduate tuition", "perYear": 212000, "note": "Two semesters at the published 2025-26 tuition rate, excluding one-time charges" }
+        ],
+        "sourceUrl": "https://www.iba-suk.edu.pk/Content/pdf/admissions/Fee%20Structure%20Main%20Campus%202025-26.pdf"
+      },
+      "bestFields": [
+        { "field": "Business Administration", "why": "Its IBA model and regional employer links make business a flagship discipline." },
+        { "field": "Computer Science & AI", "why": "Computing includes software engineering and artificial intelligence pathways." },
+        { "field": "Accounting, Finance & Economics", "why": "Quantitative business programs complement the university's management focus." }
+      ],
+      "sourceUrls": [
+        "https://iba-suk.edu.pk/admissions/under-graduate-programs",
+        "https://www.iba-suk.edu.pk/Content/pdf/admissions/Fee%20Structure%20Main%20Campus%202025-26.pdf"
+      ]
+    },
+    {
+      "id": "buitems",
+      "name": "Balochistan University of Information Technology, Engineering and Management Sciences",
+      "short": "BUITEMS",
+      "city": "Quetta",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Leading public technology university in Balochistan",
+        "sourceUrl": "https://www.buitms.edu.pk/Admission"
+      },
+      "entryTest": "NTS admission test; valid NTS or HAT scores may be accepted",
+      "intro": "BUITEMS is a major public university in Quetta and one of Balochistan's broadest institutions for technology and professional education. It offers engineering, computing, management, life sciences, architecture, social sciences and arts programs.",
+      "admissionSteps": [
+        { "title": "Select a major", "detail": "Review the current prospectus and confirm eligibility for the intended undergraduate discipline." },
+        { "title": "Submit the application", "detail": "Complete the online form and provide the required documents and processing-fee evidence." },
+        { "title": "Meet the test requirement", "detail": "Take the announced NTS test or submit a valid accepted NTS or HAT result." },
+        { "title": "Enroll on merit", "detail": "Selection combines academic and admission-test marks; verify documents and pay dues if offered." }
+      ],
+      "fees": {
+        "summary": "Fees vary across undergraduate faculties, and financial assistance can cover part or all of tuition for qualifying students; confirm the live schedule",
+        "sourceUrl": "https://www.buitms.edu.pk/Fee-Structure"
+      },
+      "bestFields": [
+        { "field": "Engineering", "why": "BUITEMS is Balochistan's key public destination for multiple engineering disciplines." },
+        { "field": "Computer Science & IT", "why": "Technology programs align directly with the university's founding specialisation." },
+        { "field": "Management & Architecture", "why": "Professional business, design and built-environment programs widen local access." }
+      ],
+      "sourceUrls": [
+        "https://www.buitms.edu.pk/Admission",
+        "https://www.buitms.edu.pk/Fee-Structure"
+      ]
+    },
+    {
+      "id": "muet",
+      "name": "Mehran University of Engineering and Technology",
+      "short": "MUET",
+      "city": "Jamshoro",
+      "type": "public",
+      "streams": ["pre-engineering", "ics", "alevel"],
+      "ranking": {
+        "label": "Leading public engineering university in Sindh",
+        "sourceUrl": "https://www.muet.edu.pk/admissions"
+      },
+      "entryTest": "MUET pre-admission test",
+      "intro": "Mehran University of Engineering and Technology is a public university in Jamshoro and one of Sindh's principal institutions for engineering and technology. Its undergraduate portfolio includes core engineering, computing, architecture and related management disciplines.",
+      "admissionSteps": [
+        { "title": "Register online", "detail": "Use the Directorate of Admissions portal and review the current prospectus and admission policy." },
+        { "title": "Submit documents", "detail": "Complete the undergraduate application with domicile, academic and category information." },
+        { "title": "Take the pre-admission test", "detail": "Appear in the MUET test according to the official test schedule." },
+        { "title": "Select and enroll", "detail": "Follow merit and interview instructions, then submit original documents and fees on allocation." }
+      ],
+      "fees": {
+        "summary": "Public-sector dues are published in each undergraduate prospectus and include annual, semester, transport and optional hostel charges",
+        "sourceUrl": "https://admissions.muet.edu.pk/"
+      },
+      "bestFields": [
+        { "field": "Civil Engineering", "why": "MUET is a major Sindh training ground for infrastructure and construction engineering." },
+        { "field": "Electrical & Electronic Engineering", "why": "Its established engineering faculties cover power, electronics and telecommunications." },
+        { "field": "Architecture & Computing", "why": "Architecture, computer systems and software-linked programs broaden its technical portfolio." }
+      ],
+      "sourceUrls": [
+        "https://www.muet.edu.pk/admissions",
+        "https://admissions.muet.edu.pk/"
+      ]
+    },
+    {
+      "id": "bzu",
+      "name": "Bahauddin Zakariya University",
+      "short": "BZU",
+      "city": "Multan",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Major multidisciplinary public university in southern Punjab",
+        "sourceUrl": "https://bzu.edu.pk/"
+      },
+      "entryTest": "Academic merit and program-specific test where required",
+      "intro": "Bahauddin Zakariya University is a large public university in Multan and a major higher-education hub for southern Punjab. It offers undergraduate programs across sciences, computing, engineering, business, agriculture, law, pharmacy, social sciences and the humanities.",
+      "admissionSteps": [
+        { "title": "Review the advertisement", "detail": "Check available morning and evening programs, eligibility and any department-specific test rule." },
+        { "title": "Apply through the portal", "detail": "Create an applicant account, add academic information and submit program preferences." },
+        { "title": "Pay and complete requirements", "detail": "Pay the processing fee and attend any test or interview required by the department." },
+        { "title": "Follow merit lists", "detail": "Check selection lists and complete original-document verification and fee payment." }
+      ],
+      "fees": {
+        "summary": "Fees vary by morning or evening program; download the current program-specific schedule from the official BZU admission portal",
+        "sourceUrl": "https://portal.bzu.edu.pk/admissions/"
+      },
+      "bestFields": [
+        { "field": "Agriculture & Biological Sciences", "why": "Southern Punjab's economy gives these established faculties strong regional relevance." },
+        { "field": "Pharmacy & Health Sciences", "why": "Professional health programs are a major part of BZU's multidisciplinary offering." },
+        { "field": "Business, Law & Computing", "why": "A broad professional portfolio lets local students pursue multiple career tracks." }
+      ],
+      "sourceUrls": [
+        "https://portal.bzu.edu.pk/admissions/"
+      ]
+    },
+    {
+      "id": "iub",
+      "name": "The Islamia University of Bahawalpur",
+      "short": "IUB",
+      "city": "Bahawalpur",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "ranking": {
+        "label": "Major multidisciplinary public university in southern Punjab",
+        "sourceUrl": "https://www.iub.edu.pk/"
+      },
+      "entryTest": "Academic merit and program-specific test where required",
+      "intro": "The Islamia University of Bahawalpur is a large public university serving southern Punjab through its main and regional campuses. Its extensive undergraduate catalogue covers sciences, agriculture, engineering, computing, business, pharmacy, veterinary sciences, law, arts and languages.",
+      "admissionSteps": [
+        { "title": "Find an eligible program", "detail": "Review the current admission advertisement, campus, group and eligibility conditions." },
+        { "title": "Apply online", "detail": "Create an account on the IUB admission system and submit academic and program information." },
+        { "title": "Complete selection requirements", "detail": "Pay the application charge and take any test or interview required by the chosen department." },
+        { "title": "Confirm enrollment", "detail": "Follow merit lists and submit documents and the applicable semester fee after selection." }
+      ],
+      "fees": {
+        "summary": "Fall 2025 onward fees vary by department and program group; IUB publishes a detailed current schedule and reduced fees for selected BS programs",
+        "sourceUrl": "https://iub.edu.pk/index.php/fee-structure"
+      },
+      "bestFields": [
+        { "field": "Agriculture & Veterinary Sciences", "why": "These programs are closely connected to the needs of the surrounding region." },
+        { "field": "Pharmacy & Life Sciences", "why": "IUB maintains a broad health and biological science portfolio." },
+        { "field": "Computing, Engineering & Business", "why": "Large professional faculties offer diverse routes within southern Punjab." }
+      ],
+      "sourceUrls": [
+        "https://www.iub.edu.pk/admissions",
+        "https://iub.edu.pk/index.php/fee-structure"
+      ]
+    },
+    {
+      "id": "uet-taxila",
+      "name": "University of Engineering and Technology Taxila",
+      "short": "UET Taxila",
+      "city": "Taxila",
+      "type": "public",
+      "streams": ["pre-medical", "pre-engineering", "ics", "alevel"],
+      "ranking": {
+        "label": "Established public engineering university in Punjab",
+        "sourceUrl": "https://admissions.uettaxila.edu.pk/"
+      },
+      "entryTest": "ECAT, TCAT or another accepted test, depending on the program",
+      "intro": "UET Taxila is a public engineering university in Punjab offering undergraduate engineering, computer science, software engineering, mathematics and physics programs. Its location near the Islamabad-Rawalpindi technology and industrial corridor supports practical exposure.",
+      "admissionSteps": [
+        { "title": "Complete the relevant test", "detail": "Register for ECAT, TCAT or the accepted test specified for the intended degree." },
+        { "title": "Register with My UET", "detail": "Create an admission account using the required identity and test details." },
+        { "title": "Submit preferences", "detail": "Complete the application, pay the processing fee and rank eligible programs and categories." },
+        { "title": "Respond to merit", "detail": "Follow merit lists and complete documents, dues and any upgrading or freezing choice by the deadline." }
+      ],
+      "fees": {
+        "summary": "For Fall 2026, the first subsidized semester was approximately PKR 104,800 without hostel; self-finance categories cost more",
+        "sourceUrl": "https://admissions.uettaxila.edu.pk/FAQS.php"
+      },
+      "bestFields": [
+        { "field": "Electrical Engineering", "why": "A core UET discipline with links to nearby technology and industrial employers." },
+        { "field": "Mechanical & Civil Engineering", "why": "Established engineering departments provide conventional professional pathways." },
+        { "field": "Computer Science & Software Engineering", "why": "Computing degrees complement the university's engineering foundation." }
+      ],
+      "sourceUrls": [
+        "https://admissions.uettaxila.edu.pk/",
+        "https://admissions.uettaxila.edu.pk/FAQS.php"
+      ]
     }
   ]
 }
