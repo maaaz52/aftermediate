@@ -9,7 +9,14 @@ import json from "@/data/entry-tests.json";
 import contentJson from "@/data/test-prep-content.json";
 import type { EntryTest } from "@/lib/types";
 
-const HAS_LECTURES = new Set(contentJson.content.map((c: { testId: string }) => c.testId));
+const HAS_LECTURES = new Set(
+  contentJson.content
+    .filter((c) => c.playlists.some((playlist) => playlist.episodes.length > 0))
+    .map((c) => c.testId)
+);
+const HAS_RESOURCES = new Set(
+  contentJson.content.filter((c) => c.resources.length > 0).map((c) => c.testId)
+);
 
 const data = json as unknown as { dataYear: number; tests: EntryTest[] };
 
@@ -89,22 +96,22 @@ export default async function EntryTestPage({ params }: { params: Promise<{ id: 
       {/* Prepare for this test */}
       <div className="mt-6 flex flex-wrap gap-3">
         {HAS_LECTURES.has(test.id) && (
-          <>
-            <Link
-              href={`/study/test-prep/${test.id}/lectures`}
-              className="inline-flex items-center gap-2 rounded-xl border border-saffron/30 bg-saffron/10 px-4 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/20"
-            >
-              <BookOpen className="h-4 w-4" />
-              Watch lectures
-            </Link>
-            <Link
-              href={`/study/test-prep/${test.id}/documents`}
-              className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
-            >
-              <FileText className="h-4 w-4" />
-              Resources &amp; documents
-            </Link>
-          </>
+          <Link
+            href={`/study/test-prep/${test.id}/lectures`}
+            className="inline-flex items-center gap-2 rounded-xl border border-saffron/30 bg-saffron/10 px-4 py-2.5 text-sm font-medium text-saffron transition-colors hover:bg-saffron/20"
+          >
+            <BookOpen className="h-4 w-4" />
+            Watch lectures
+          </Link>
+        )}
+        {HAS_RESOURCES.has(test.id) && (
+          <Link
+            href={`/study/test-prep/${test.id}/documents`}
+            className="inline-flex items-center gap-2 rounded-xl border border-line px-4 py-2.5 text-sm font-medium text-muted transition-colors hover:border-saffron/40 hover:text-ink"
+          >
+            <FileText className="h-4 w-4" />
+            Resources &amp; documents
+          </Link>
         )}
         <Link
           href={`/pakistan/self-assessment/${test.id}`}

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { useLocalStorage } from "@/lib/skills";
 import { cn } from "@/lib/utils";
-import { ALL_TESTS, REGION_LABEL } from "@/lib/test-prep";
+import { ALL_TESTS, contentFor, REGION_LABEL } from "@/lib/test-prep";
 import type { Stream } from "@/lib/types";
 
 const STREAM_FILTERS: { value: Stream | "all"; label: string }[] = [
@@ -159,6 +159,9 @@ export function TestPrepHub() {
           {filtered.map((t) => {
             const isOpen = openId === t.id;
             const isSaved = savedTests.includes(t.id);
+            const hasLectures = contentFor(t.id).playlists.some(
+              (playlist) => playlist.episodes.length > 0
+            );
             return (
               <div key={t.id} className="relative">
                 <div
@@ -216,17 +219,22 @@ export function TestPrepHub() {
                     aria-label={`${t.short} options`}
                     className="animate-rise absolute left-0 right-0 top-full z-20 mt-1.5 overflow-hidden rounded-xl border border-line bg-surface shadow-xl"
                   >
-                    <Link
-                      href={`/study/test-prep/${t.id}/lectures`}
-                      onClick={() => setOpenId(null)}
-                      className="block px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-surface-2"
-                    >
-                      Lectures
-                    </Link>
+                    {hasLectures && (
+                      <Link
+                        href={`/study/test-prep/${t.id}/lectures`}
+                        onClick={() => setOpenId(null)}
+                        className="block px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-surface-2"
+                      >
+                        Lectures
+                      </Link>
+                    )}
                     <Link
                       href={`/study/test-prep/${t.id}/documents`}
                       onClick={() => setOpenId(null)}
-                      className="block border-t border-line/60 px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-surface-2"
+                      className={cn(
+                        "block px-4 py-3 text-sm font-semibold text-ink transition-colors hover:bg-surface-2",
+                        hasLectures && "border-t border-line/60"
+                      )}
                     >
                       Documents
                     </Link>

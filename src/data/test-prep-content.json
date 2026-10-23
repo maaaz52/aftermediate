@@ -2564,6 +2564,76 @@
       ],
       "resources": [],
       "videos": []
+    },
+    {
+      "testId": "usat",
+      "playlists": [],
+      "resources": [
+        {
+          "id": "usat-official-weightages",
+          "title": "Official USAT content weightages — all six categories",
+          "type": "pdf",
+          "url": "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+          "year": 2026
+        },
+        {
+          "id": "usat-official-samples",
+          "title": "Official HEC sample papers — USAT-E, M, A, CS, GS and COM",
+          "type": "link",
+          "url": "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx",
+          "year": 2026
+        },
+        {
+          "id": "usat-2026-calendar",
+          "title": "Official ETC 2026 test calendar",
+          "type": "pdf",
+          "url": "https://www.hec.gov.pk/english/services/students/etc/PublishingImages/ETC%20Test%20Calendar%20for%20Year%202026%20latest.pdf",
+          "year": 2026
+        },
+        {
+          "id": "usat-portal",
+          "title": "HEC ETC registration and result portal",
+          "type": "link",
+          "url": "https://etc.hec.gov.pk/",
+          "year": 2026
+        },
+        {
+          "id": "usat-faq",
+          "title": "HEC ETC frequently asked questions",
+          "type": "link",
+          "url": "https://www.hec.gov.pk/english/services/students/etc/Pages/FAQ%27s.aspx",
+          "year": 2026
+        },
+        {
+          "id": "usat-instructions",
+          "title": "HEC ETC important instructions and downloads",
+          "type": "link",
+          "url": "https://www.hec.gov.pk/english/services/students/etc/pages/important-downloads.aspx",
+          "year": 2026
+        },
+        {
+          "id": "usat-policy",
+          "title": "HEC clarification — universities choose whether to use USAT",
+          "type": "link",
+          "url": "https://www.hec.gov.pk/english/news/news/Pages/USAT-HEC.aspx",
+          "year": 2026
+        },
+        {
+          "id": "usat-khan-quant",
+          "title": "Khan Academy arithmetic and quantitative practice",
+          "type": "link",
+          "url": "https://www.khanacademy.org/math/arithmetic",
+          "year": 2026
+        },
+        {
+          "id": "usat-purdue-writing",
+          "title": "Purdue OWL essay-writing guidance",
+          "type": "link",
+          "url": "https://owl.purdue.edu/owl/general_writing/academic_writing/essay_writing/index.html",
+          "year": 2026
+        }
+      ],
+      "videos": []
     }
   ]
 }

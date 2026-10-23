@@ -300,7 +300,7 @@ const HARNESS: HarnessCase[] = [
   // students ever send, so they are held to the same recall bar as the rest.
   { persona: "manzil", query: "Which universities offer merit scholarships?", expectTopicId: "scholarships-merit-based" },
   { persona: "manzil", query: "How do I apply to NUST?", expectTopicId: "uni-nust" },
-  { persona: "manzil", query: "What is the HEC need-based scholarship process?", expectTopicId: "scholarships-hec" },
+  { persona: "manzil", query: "What is the HEC need-based scholarship process?", expectTopicId: "scholarships-need-based" },
   { persona: "manzil", query: "What's on the MDCAT paper?", expectTopicId: "test-mdcat" },
   { persona: "manzil", query: "How much does LUMS cost per year?", expectTopicId: "uni-lums" },
   { persona: "safar", query: "Which cricket team will win the world cup final?" },

@@ -456,6 +456,54 @@
       "note": "100-mark paper: 75 MCQs plus essay (15 marks) and personal statement (10 marks); passing mark is 50. Pattern per the HEC LAT notification; HEC states the LAT result is valid for two years."
     },
     {
+      "id": "usat",
+      "name": "USAT — Undergraduate Studies Admission Test",
+      "short": "USAT",
+      "streams": ["pre-medical", "pre-engineering", "ics", "icom", "alevel"],
+      "conductingBody": "Higher Education Commission (HEC) via the Education Testing Council (ETC)",
+      "acceptedBy": [
+        "Universities that independently choose USAT for undergraduate admissions",
+        "Selected HEC foreign-funded undergraduate scholarship programmes where USAT is required"
+      ],
+      "fee": "Announced for each test window; paid through 1Link/1Bill using the ETC-generated consumer number",
+      "frequency": "Quarterly under the HEC ETC 2026 test calendar",
+      "validity": "1 year from the test date under the HEC ETC operating procedure",
+      "pattern": [
+        { "section": "Verbal Reasoning", "questions": 20, "marks": 20, "time": "100 minutes (Part I: all 75 MCQs)" },
+        { "section": "Quantitative Reasoning", "questions": 25, "marks": 25 },
+        { "section": "Stream-specific Subject Knowledge", "questions": 30, "marks": 30 },
+        { "section": "Argumentative Essay", "marks": 15, "time": "40 minutes (Part II: both essays)" },
+        { "section": "Narrative Essay", "marks": 10 }
+      ],
+      "syllabus": [
+        { "subject": "Verbal Reasoning — common to all categories", "topics": ["Analogy (5 MCQs)", "Synonyms and antonyms (4 MCQs)", "Sentence completion (6 MCQs)", "Reading comprehension (5 MCQs)"] },
+        { "subject": "Quantitative Reasoning — common to all categories", "topics": ["Arithmetic (6 MCQs)", "Algebra and functions (4 MCQs)", "Geometry (3 MCQs)", "Equations (3 MCQs)", "Statistics (3 MCQs)", "Scenario-based and mental mathematics (6 MCQs)"] },
+        { "subject": "USAT-E — Pre-Engineering", "topics": ["Physics (10 MCQs)", "Chemistry (10 MCQs)", "Mathematics (10 MCQs)"] },
+        { "subject": "USAT-M — Pre-Medical", "topics": ["Physics (8 MCQs)", "Chemistry (8 MCQs)", "Biology (14 MCQs)"] },
+        { "subject": "USAT-A — Arts & Humanities", "topics": ["Islamic Studies or Ethics (10 MCQs)", "Pakistan Studies (10 MCQs)", "General Knowledge (10 MCQs)"] },
+        { "subject": "USAT-CS — Computer Science", "topics": ["Physics (8 MCQs)", "Computer Science (14 MCQs)", "Mathematics (8 MCQs)"] },
+        { "subject": "USAT-GS — General Science", "topics": ["Mathematics (10 MCQs)", "Statistics (10 MCQs)", "Economics (10 MCQs)"] },
+        { "subject": "USAT-COM — Commerce", "topics": ["Accounting (10 MCQs)", "Commerce (10 MCQs)", "Economics (10 MCQs)"] },
+        { "subject": "Writing — common to all categories", "topics": ["One argumentative essay (15 marks)", "One narrative essay (10 marks)", "Responses may be written in English or Urdu"] }
+      ],
+      "howToApply": [
+        "Create or sign in to your profile at the HEC ETC portal (etc.hec.gov.pk)",
+        "Complete your personal and academic profile, then choose the USAT category matching your academic stream",
+        "Select the test city carefully; HEC says the category and city cannot be changed after submission",
+        "Generate the consumer number and pay through 1Link/1Bill before the announced deadline",
+        "Download the roll-number slip from the ETC portal and follow the current test-day instructions"
+      ],
+      "sourceUrls": [
+        "https://etc.hec.gov.pk/",
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/FAQ%27s.aspx",
+        "https://www.hec.gov.pk/english/services/students/etc/PublishingImages/ETC%20Test%20Calendar%20for%20Year%202026%20latest.pdf",
+        "https://www.hec.gov.pk/english/news/news/Pages/USAT-HEC.aspx"
+      ],
+      "note": "USAT has six category papers: E, M, A, CS, GS and COM. Every paper has 75 MCQs in 100 minutes plus two essays in 40 minutes (100 marks total). HEC says USAT is recommended but universities decide independently whether to use it, so confirm your target university's current admission policy. The included interactive mock is the USAT-CS version; official samples for all six categories are linked under resources."
+    },
+    {
       "id": "nums",
       "name": "NUMS — National University of Medical Sciences Entry Test",
       "short": "NUMS",

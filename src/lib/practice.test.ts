@@ -91,10 +91,10 @@ describe("getBank / catalog", () => {
     expect(getBank("nonexistent")).toBeNull();
   });
 
-  it("builds statuses for all 13 entry tests", () => {
+  it("builds statuses for all 14 entry tests", () => {
     const items = catalog();
     expect(items.length).toBe(entryTests.length);
-    expect(items.length).toBe(13);
+    expect(items.length).toBe(14);
     expect(items.filter((i) => i.status === "ready").map((i) => i.test.id).sort()).toEqual([
       "aku",
       "comsats",
@@ -109,6 +109,7 @@ describe("getBank / catalog", () => {
       "nts-nat",
       "nums",
       "pieas",
+      "usat",
     ]);
     expect(items.every((i) => i.bank !== null || i.variants.length > 0)).toBe(true);
   });

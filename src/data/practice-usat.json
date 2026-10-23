@@ -1,0 +1,1550 @@
+{
+  "testId": "usat",
+  "paperLabel": "USAT-CS Practice Paper",
+  "schemaVersion": 1,
+  "provenance": {
+    "note": "An independently authored USAT-CS mock aligned to HEC's official 20/25/30 MCQ blueprint. These are practice questions, not copied past-paper questions. Essays are not auto-graded; use the official samples in Resources for the separate writing part.",
+    "sources": [
+      "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+      "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx",
+      "https://www.hec.gov.pk/english/services/students/etc/Pages/FAQ%27s.aspx"
+    ]
+  },
+  "durationMinutes": 100,
+  "marking": {
+    "perQuestionMarks": 1,
+    "correctMarks": 1,
+    "negativeMarks": 0,
+    "totalMarks": 75,
+    "note": "This mock scores the 75 MCQs only. The real USAT also has a separate 40-minute writing part worth 25 marks; always confirm current instructions on your roll-number slip."
+  },
+  "benchmarks": [
+    {
+      "label": "Foundation practice target (2026 cycle)",
+      "percent": 50
+    },
+    {
+      "label": "Strong practice target (2026 cycle)",
+      "percent": 70
+    }
+  ],
+  "sections": [
+    {
+      "id": "verbal",
+      "name": "Verbal Reasoning",
+      "questionCount": 20
+    },
+    {
+      "id": "quantitative",
+      "name": "Quantitative Reasoning",
+      "questionCount": 25
+    },
+    {
+      "id": "subject",
+      "name": "Stream-specific Subject Knowledge",
+      "questionCount": 30
+    }
+  ],
+  "questions": [
+    {
+      "id": "usat-verbal-001",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is closest in meaning to 'courageous'?",
+      "options": [
+        "timid",
+        "brave",
+        "foolish",
+        "angry"
+      ],
+      "correct": 1,
+      "explanation": "'Courageous' means brave, not timid.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-002",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "Choose the correctly spelled word:",
+      "options": [
+        "accomodation",
+        "accommodation",
+        "acommodation",
+        "acomodation"
+      ],
+      "correct": 1,
+      "explanation": "'Accommodation' has double 'c' and double 'm'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-003",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "They ___ cricket every Friday.",
+      "options": [
+        "plays",
+        "playing",
+        "play",
+        "played"
+      ],
+      "correct": 2,
+      "explanation": "Plural subject 'they' requires the base form 'play'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-004",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is an antonym of 'expand'?",
+      "options": [
+        "enlarge",
+        "shrink",
+        "grow",
+        "spread"
+      ],
+      "correct": 1,
+      "explanation": "'Expand' means to increase in size; 'shrink' is its opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-005",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "The plural of 'child' is:",
+      "options": [
+        "childs",
+        "children",
+        "childes",
+        "childrens"
+      ],
+      "correct": 1,
+      "explanation": "'Child' is an irregular noun; its plural is 'children'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-006",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "I ___ the film last night.",
+      "options": [
+        "watch",
+        "watched",
+        "watching",
+        "have watch"
+      ],
+      "correct": 1,
+      "explanation": "'Last night' requires the simple past tense 'watched'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-007",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "easy",
+      "stem": "Which word is closest in meaning to 'rapid'?",
+      "options": [
+        "slow",
+        "quick",
+        "heavy",
+        "light"
+      ],
+      "correct": 1,
+      "explanation": "'Rapid' means fast or quick.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-008",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "easy",
+      "stem": "There ___ many books on the shelf.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "be"
+      ],
+      "correct": 1,
+      "explanation": "The subject 'books' is plural, so the verb must be 'are'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-009",
+      "section": "verbal",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "The Indus River, one of the longest rivers in Asia, rises in the Himalayas and flows through Pakistan into the Arabian Sea. It supplies irrigation water that supports agriculture in Punjab and Sindh. According to the passage, the Indus River ends in the:",
+      "options": [
+        "Arabian Sea",
+        "Bay of Bengal",
+        "Persian Gulf",
+        "Red Sea"
+      ],
+      "correct": 0,
+      "explanation": "The passage states the Indus flows into the Arabian Sea.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-010",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "She is good ___ mathematics.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "for"
+      ],
+      "correct": 1,
+      "explanation": "The correct preposition after 'good' when referring to a subject is 'at'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-011",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "'Diligent' most nearly means:",
+      "options": [
+        "lazy",
+        "careless",
+        "hard-working",
+        "wealthy"
+      ],
+      "correct": 2,
+      "explanation": "'Diligent' means showing careful and persistent effort — hard-working.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-012",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "Choose the grammatically correct sentence:",
+      "options": [
+        "If I was you, I would accept the offer.",
+        "If I were you, I would accept the offer.",
+        "If I am you, I would accept the offer.",
+        "If I be you, I would accept the offer."
+      ],
+      "correct": 1,
+      "explanation": "The subjunctive mood requires 'were' in hypothetical 'if' clauses: 'If I were you...'",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-013",
+      "section": "verbal",
+      "topic": "Reading comprehension",
+      "difficulty": "medium",
+      "stem": "Global warming is caused mainly by the increase of greenhouse gases such as carbon dioxide in the atmosphere. These gases trap heat, raising the planet's average temperature and altering weather patterns. According to the passage, greenhouse gases:",
+      "options": [
+        "reflect heat back into space",
+        "trap heat in the atmosphere",
+        "absorb all sunlight",
+        "release oxygen"
+      ],
+      "correct": 1,
+      "explanation": "The passage states greenhouse gases 'trap heat' in the atmosphere.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-014",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "He has lived in Lahore ___ 2015.",
+      "options": [
+        "for",
+        "since",
+        "from",
+        "by"
+      ],
+      "correct": 1,
+      "explanation": "'Since' is used with a specific point in time; 'for' with a duration.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-015",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "medium",
+      "stem": "What is the antonym of 'transparent'?",
+      "options": [
+        "clear",
+        "opaque",
+        "visible",
+        "bright"
+      ],
+      "correct": 1,
+      "explanation": "'Transparent' means allowing light to pass through; 'opaque' blocks light — its opposite.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-016",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "medium",
+      "stem": "The report must be submitted ___ Friday.",
+      "options": [
+        "at",
+        "on",
+        "by",
+        "in"
+      ],
+      "correct": 2,
+      "explanation": "'By' indicates a deadline — submission on or before Friday.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-017",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "'Ephemeral' means:",
+      "options": [
+        "permanent",
+        "short-lived",
+        "spacious",
+        "brilliant"
+      ],
+      "correct": 1,
+      "explanation": "'Ephemeral' means lasting for a very short time.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-018",
+      "section": "verbal",
+      "topic": "Reading comprehension",
+      "difficulty": "hard",
+      "stem": "Although the company's revenue increased by 20 percent last year, its profit margin fell because operating costs rose faster than sales. Management responded by automating several processes and renegotiating supplier contracts. The company's profit margin fell because:",
+      "options": [
+        "revenue decreased",
+        "operating costs rose faster than sales",
+        "it automated several processes",
+        "suppliers refused to negotiate"
+      ],
+      "correct": 1,
+      "explanation": "The passage states profit margin fell because operating costs rose faster than sales.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-019",
+      "section": "verbal",
+      "topic": "Grammar and sentence correction",
+      "difficulty": "hard",
+      "stem": "Choose the correct sentence:",
+      "options": [
+        "One of my friends are a doctor.",
+        "One of my friends is a doctor.",
+        "One of my friend is a doctor.",
+        "One of my friends were a doctor."
+      ],
+      "correct": 1,
+      "explanation": "'One of' is singular, so the verb must be 'is'.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-verbal-020",
+      "section": "verbal",
+      "topic": "Vocabulary and word usage",
+      "difficulty": "hard",
+      "stem": "The negotiations reached an impasse when neither side would compromise. 'Impasse' most nearly means:",
+      "options": [
+        "agreement",
+        "deadlock",
+        "beginning",
+        "celebration"
+      ],
+      "correct": 1,
+      "explanation": "An 'impasse' is a situation where no progress is possible — a deadlock.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-001",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "What is 15 percent of 200?",
+      "options": [
+        "15",
+        "20",
+        "30",
+        "40"
+      ],
+      "correct": 2,
+      "explanation": "15% of 200 = 0.15 × 200 = 30.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-002",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "If a shirt costs Rs 800 and the discount is Rs 160, the discount percent is:",
+      "options": [
+        "15%",
+        "18%",
+        "20%",
+        "25%"
+      ],
+      "correct": 2,
+      "explanation": "(160/800) × 100 = 20% discount.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-003",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "Simplify: 24 ÷ 6 × 2.",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "12"
+      ],
+      "correct": 2,
+      "explanation": "24 ÷ 6 = 4, then 4 × 2 = 8 (operations performed left to right).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-004",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "The average of 4, 8, 12 and 16 is:",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correct": 1,
+      "explanation": "Sum = 40; average = 40/4 = 10.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-005",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "easy",
+      "stem": "If x + 4 = 9, then x = ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "13"
+      ],
+      "correct": 2,
+      "explanation": "x = 9 - 4 = 5.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-006",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "easy",
+      "stem": "A rectangle is 8 cm long and 5 cm wide. Its area is:",
+      "options": [
+        "13 cm²",
+        "26 cm²",
+        "40 cm²",
+        "80 cm²"
+      ],
+      "correct": 2,
+      "explanation": "Area = length × width = 8 × 5 = 40 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-007",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "What is 0.25 expressed as a fraction in lowest terms?",
+      "options": [
+        "25/100",
+        "1/4",
+        "2/5",
+        "1/5"
+      ],
+      "correct": 1,
+      "explanation": "0.25 = 25/100 = 1/4 in lowest terms.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-008",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "easy",
+      "stem": "If 3 pens cost Rs 45, one pen costs:",
+      "options": [
+        "Rs 10",
+        "Rs 15",
+        "Rs 20",
+        "Rs 25"
+      ],
+      "correct": 1,
+      "explanation": "45/3 = Rs 15 per pen.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-009",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "A train covers 240 km in 3 hours. Its average speed is:",
+      "options": [
+        "60 km/h",
+        "70 km/h",
+        "80 km/h",
+        "90 km/h"
+      ],
+      "correct": 2,
+      "explanation": "Speed = distance/time = 240/3 = 80 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-010",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "Solve for x: 5x - 7 = 3x + 9.",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correct": 2,
+      "explanation": "5x - 3x = 9 + 7 → 2x = 16 → x = 8.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-011",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "medium",
+      "stem": "The area of a circle with radius 7 cm (using π = 22/7) is:",
+      "options": [
+        "44 cm²",
+        "154 cm²",
+        "88 cm²",
+        "308 cm²"
+      ],
+      "correct": 1,
+      "explanation": "Area = πr² = (22/7)(49) = 154 cm².",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-012",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "A shopkeeper buys an item for Rs 600 and sells it for Rs 750. His profit percent is:",
+      "options": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "correct": 2,
+      "explanation": "Profit = Rs 150; (150/600) × 100 = 25%.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-013",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "medium",
+      "stem": "The ratio of 30 minutes to 2 hours is:",
+      "options": [
+        "1:2",
+        "1:3",
+        "1:4",
+        "2:1"
+      ],
+      "correct": 2,
+      "explanation": "2 hours = 120 minutes; 30:120 = 1:4.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-014",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "Find the value of 2³ + 3².",
+      "options": [
+        "13",
+        "15",
+        "17",
+        "72"
+      ],
+      "correct": 2,
+      "explanation": "2³ = 8; 3² = 9; 8 + 9 = 17.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-015",
+      "section": "quantitative",
+      "topic": "Geometry",
+      "difficulty": "medium",
+      "stem": "The perimeter of a square whose area is 64 m² is:",
+      "options": [
+        "16 m",
+        "24 m",
+        "32 m",
+        "64 m"
+      ],
+      "correct": 2,
+      "explanation": "Side = √64 = 8 m; perimeter = 4 × 8 = 32 m.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-016",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "medium",
+      "stem": "A number increased by 25 percent becomes 100. The original number is:",
+      "options": [
+        "75",
+        "80",
+        "90",
+        "95"
+      ],
+      "correct": 1,
+      "explanation": "Let x be the number: x × 1.25 = 100 → x = 100/1.25 = 80.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-017",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "If 5 machines produce 100 items in 4 hours, how many items will 8 machines produce in 6 hours?",
+      "options": [
+        "180",
+        "200",
+        "240",
+        "300"
+      ],
+      "correct": 2,
+      "explanation": "Rate = 100/(5×4) = 5 items per machine-hour; 8×6×5 = 240 items.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-018",
+      "section": "quantitative",
+      "topic": "Algebra",
+      "difficulty": "hard",
+      "stem": "The sum of three consecutive odd integers is 57. The largest is:",
+      "options": [
+        "17",
+        "19",
+        "21",
+        "23"
+      ],
+      "correct": 2,
+      "explanation": "Let numbers be n, n+2, n+4. Sum = 3n+6 = 57 → n = 17. Largest = 17+4 = 21.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-019",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "A boat travels 20 km downstream in 2 hours and returns upstream in 4 hours. The speed of the stream (in km/h) is:",
+      "options": [
+        "2.5 km/h",
+        "5 km/h",
+        "7.5 km/h",
+        "10 km/h"
+      ],
+      "correct": 0,
+      "explanation": "Downstream speed = 10 km/h; upstream = 5 km/h. Stream speed = (10 - 5)/2 = 2.5 km/h.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-020",
+      "section": "quantitative",
+      "topic": "Arithmetic",
+      "difficulty": "hard",
+      "stem": "The compound interest on Rs 10,000 at 10% per annum for 2 years (compounded annually) is:",
+      "options": [
+        "Rs 2,000",
+        "Rs 2,100",
+        "Rs 2,500",
+        "Rs 3,100"
+      ],
+      "correct": 1,
+      "explanation": "Amount = 10000(1.1)² = 12100; CI = 12100 - 10000 = Rs 2,100.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-021",
+      "section": "quantitative",
+      "topic": "Scenario-based and mental mathematics",
+      "difficulty": "medium",
+      "stem": "A tank is 3/5 full. After adding 120 litres it is 9/10 full. What is its capacity?",
+      "options": [
+        "300 L",
+        "360 L",
+        "400 L",
+        "480 L"
+      ],
+      "correct": 2,
+      "explanation": "The added 120 litres is 3/10 of capacity, so capacity is 120 divided by 0.3, or 400 litres.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-022",
+      "section": "quantitative",
+      "topic": "Scenario-based and mental mathematics",
+      "difficulty": "medium",
+      "stem": "Five workers finish a task in 12 days. How many days would 10 workers need at the same rate?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct": 2,
+      "explanation": "The task needs 60 worker-days. Dividing by 10 workers gives 6 days.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-023",
+      "section": "quantitative",
+      "topic": "Scenario-based and mental mathematics",
+      "difficulty": "hard",
+      "stem": "A class average is 68 for 20 students. One added score makes it 69 for 21 students. What was the score?",
+      "options": [
+        "79",
+        "84",
+        "89",
+        "94"
+      ],
+      "correct": 2,
+      "explanation": "The new total minus the old total is 21 times 69 minus 20 times 68, which equals 89.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-024",
+      "section": "quantitative",
+      "topic": "Scenario-based and mental mathematics",
+      "difficulty": "hard",
+      "stem": "A two-digit number has digits summing to 11. Reversing them increases it by 27. What is the original?",
+      "options": [
+        "38",
+        "47",
+        "56",
+        "65"
+      ],
+      "correct": 1,
+      "explanation": "The digits differ by 3 and sum to 11, so they are 4 and 7; the original number is 47.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-quantitative-025",
+      "section": "quantitative",
+      "topic": "Scenario-based and mental mathematics",
+      "difficulty": "hard",
+      "stem": "Three notebooks cost PKR 270. At the same rate, what do eight cost?",
+      "options": [
+        "PKR 640",
+        "PKR 680",
+        "PKR 720",
+        "PKR 810"
+      ],
+      "correct": 2,
+      "explanation": "Each notebook costs PKR 90, so eight notebooks cost PKR 720.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-001",
+      "section": "subject",
+      "topic": "USAT-CS Physics — mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "The SI unit of energy is the:",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Pascal"
+      ],
+      "correct": 1,
+      "explanation": "Energy is measured in joules (J).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-002",
+      "section": "subject",
+      "topic": "USAT-CS Physics — mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "A body thrown upward reaches its highest point. At that instant its velocity is:",
+      "options": [
+        "maximum",
+        "zero",
+        "constant",
+        "equal to initial velocity"
+      ],
+      "correct": 1,
+      "explanation": "At maximum height, the vertical velocity becomes zero before reversing direction.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-003",
+      "section": "subject",
+      "topic": "USAT-CS Physics — mechanics and kinematics",
+      "difficulty": "easy",
+      "stem": "Which of the following is a vector quantity?",
+      "options": [
+        "speed",
+        "mass",
+        "velocity",
+        "temperature"
+      ],
+      "correct": 2,
+      "explanation": "Velocity has both magnitude and direction, making it a vector. Speed, mass and temperature are scalars.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-004",
+      "section": "subject",
+      "topic": "USAT-CS Physics — modern physics",
+      "difficulty": "easy",
+      "stem": "The value of Planck's constant is approximately:",
+      "options": [
+        "6.63 × 10⁻³⁴ J·s",
+        "3 × 10⁸ J·s",
+        "9.8 × 10⁻³⁴ J·s",
+        "1.6 × 10⁻¹⁹ J·s"
+      ],
+      "correct": 0,
+      "explanation": "Planck's constant h ≈ 6.63 × 10⁻³⁴ J·s, a fundamental constant in quantum mechanics.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-005",
+      "section": "subject",
+      "topic": "USAT-CS Physics — mechanics and kinematics",
+      "difficulty": "medium",
+      "stem": "A force of 20 N moves a body 5 m in the direction of the force. The work done is:",
+      "options": [
+        "4 J",
+        "25 J",
+        "100 J",
+        "200 J"
+      ],
+      "correct": 2,
+      "explanation": "Work = force × distance = 20 × 5 = 100 J.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-006",
+      "section": "subject",
+      "topic": "USAT-CS Physics — electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "If the frequency of a wave doubles while its speed remains constant, its wavelength:",
+      "options": [
+        "doubles",
+        "halves",
+        "stays the same",
+        "quadruples"
+      ],
+      "correct": 1,
+      "explanation": "v = fλ, so if v is constant and f doubles, λ halves.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-007",
+      "section": "subject",
+      "topic": "USAT-CS Physics — electricity and magnetism",
+      "difficulty": "medium",
+      "stem": "In a series circuit with a 6 V battery and two identical bulbs, the voltage across each bulb is:",
+      "options": [
+        "6 V",
+        "3 V",
+        "12 V",
+        "1.5 V"
+      ],
+      "correct": 1,
+      "explanation": "In a series circuit, voltage divides equally across identical bulbs: 6/2 = 3 V each.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-008",
+      "section": "subject",
+      "topic": "USAT-CS Physics — modern physics",
+      "difficulty": "medium",
+      "stem": "The photoelectric effect provides direct evidence for:",
+      "options": [
+        "the wave nature of light",
+        "the particle nature of light",
+        "the wave nature of electrons",
+        "the continuous emission of energy"
+      ],
+      "correct": 1,
+      "explanation": "The photoelectric effect shows light behaves as discrete packets of energy (photons), supporting the particle nature of light.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-009",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "easy",
+      "stem": "Which component performs arithmetic and logical operations?",
+      "options": [
+        "ALU",
+        "RAM",
+        "SSD",
+        "NIC"
+      ],
+      "correct": 0,
+      "explanation": "The Arithmetic Logic Unit performs arithmetic calculations and logical comparisons.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-010",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "easy",
+      "stem": "What is decimal 10 in binary?",
+      "options": [
+        "1001",
+        "1010",
+        "1100",
+        "1110"
+      ],
+      "correct": 1,
+      "explanation": "Decimal 10 is 8 plus 2, represented in binary as 1010.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-011",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "easy",
+      "stem": "Which data structure follows first-in, first-out order?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Tree",
+        "Graph"
+      ],
+      "correct": 1,
+      "explanation": "A queue removes items in the same order in which they were inserted.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-012",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "medium",
+      "stem": "What is binary search's time complexity on a sorted array?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correct": 1,
+      "explanation": "Binary search halves the remaining range on every step, producing logarithmic time.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-013",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "medium",
+      "stem": "Which SQL command retrieves rows from a table?",
+      "options": [
+        "INSERT",
+        "UPDATE",
+        "SELECT",
+        "DROP"
+      ],
+      "correct": 2,
+      "explanation": "The SELECT statement queries and retrieves rows from a relational database.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-014",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "medium",
+      "stem": "Bundling data with the methods that operate on it is called:",
+      "options": [
+        "Recursion",
+        "Encapsulation",
+        "Compilation",
+        "Normalization"
+      ],
+      "correct": 1,
+      "explanation": "Encapsulation groups an object's state and related behaviour while controlling access.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-015",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "medium",
+      "stem": "Which protocol translates domain names into IP addresses?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "DNS",
+        "SMTP"
+      ],
+      "correct": 2,
+      "explanation": "The Domain Name System resolves human-readable domain names into IP addresses.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-016",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "medium",
+      "stem": "What does a compiler normally do?",
+      "options": [
+        "Repeats one line forever",
+        "Translates source code before execution",
+        "Stores web pages",
+        "Encrypts every file"
+      ],
+      "correct": 1,
+      "explanation": "A compiler translates source code into machine code or an intermediate representation.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-017",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "Which stack operation removes the most recently inserted item?",
+      "options": [
+        "Enqueue",
+        "Dequeue",
+        "Pop",
+        "Traverse"
+      ],
+      "correct": 2,
+      "explanation": "A stack is last-in, first-out, and pop removes the current top item.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-018",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "Which expression equals NOT(A AND B)?",
+      "options": [
+        "NOT A AND NOT B",
+        "NOT A OR NOT B",
+        "A OR B",
+        "A AND NOT B"
+      ],
+      "correct": 1,
+      "explanation": "De Morgan's law says NOT(A AND B) equals NOT A OR NOT B.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-019",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "How many bits are in an IPv4 address?",
+      "options": [
+        "16",
+        "32",
+        "64",
+        "128"
+      ],
+      "correct": 1,
+      "explanation": "IPv4 uses four octets of eight bits, giving 32 bits in total.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-020",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "Which average O(n log n) sorting method commonly uses a pivot?",
+      "options": [
+        "Bubble sort",
+        "Insertion sort",
+        "Quick sort",
+        "Selection sort"
+      ],
+      "correct": 2,
+      "explanation": "Quick sort partitions the input around a pivot and averages O(n log n).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-021",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "What is binary 110101 in decimal?",
+      "options": [
+        "49",
+        "51",
+        "53",
+        "55"
+      ],
+      "correct": 2,
+      "explanation": "The place values add to 32 + 16 + 4 + 1, which equals 53.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-022",
+      "section": "subject",
+      "topic": "USAT-CS Computer Science",
+      "difficulty": "hard",
+      "stem": "A relational database primary key must be:",
+      "options": [
+        "Duplicated",
+        "Unique and non-null",
+        "Text only",
+        "A foreign key"
+      ],
+      "correct": 1,
+      "explanation": "A primary key uniquely identifies every row and therefore cannot be null.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-023",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — calculus",
+      "difficulty": "easy",
+      "stem": "The derivative of x² with respect to x is:",
+      "options": [
+        "x",
+        "2x",
+        "2",
+        "x²"
+      ],
+      "correct": 1,
+      "explanation": "Power rule: d/dx (x²) = 2x.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-024",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — trigonometry",
+      "difficulty": "easy",
+      "stem": "sin²θ + cos²θ = ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "sin 2θ"
+      ],
+      "correct": 1,
+      "explanation": "The Pythagorean identity: sin²θ + cos²θ = 1.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-025",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — algebra",
+      "difficulty": "easy",
+      "stem": "The value of 3! (3 factorial) is:",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "3! = 3 × 2 × 1 = 6.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-026",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — algebra",
+      "difficulty": "easy",
+      "stem": "If y = 2x + 3, the y-intercept is:",
+      "options": [
+        "2",
+        "3",
+        "-3",
+        "-2"
+      ],
+      "correct": 1,
+      "explanation": "In y = mx + c, the y-intercept is c = 3.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-027",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — calculus",
+      "difficulty": "medium",
+      "stem": "Find ∫ 2x dx.",
+      "options": [
+        "2x² + C",
+        "x² + C",
+        "x + C",
+        "2 + C"
+      ],
+      "correct": 1,
+      "explanation": "∫ 2x dx = x² + C (power rule of integration).",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-028",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — algebra",
+      "difficulty": "medium",
+      "stem": "The roots of x² - 4 = 0 are:",
+      "options": [
+        "±2",
+        "±4",
+        "2 only",
+        "-2 only"
+      ],
+      "correct": 0,
+      "explanation": "x² = 4 → x = 2 or x = -2.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-029",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — sequences and series",
+      "difficulty": "medium",
+      "stem": "The 10th term of the arithmetic progression 5, 8, 11, ... is:",
+      "options": [
+        "29",
+        "30",
+        "32",
+        "35"
+      ],
+      "correct": 2,
+      "explanation": "a₁₀ = a₁ + (n-1)d = 5 + 9(3) = 32.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    },
+    {
+      "id": "usat-subject-030",
+      "section": "subject",
+      "topic": "USAT-CS Mathematics — trigonometry",
+      "difficulty": "medium",
+      "stem": "The value of tan 60° is:",
+      "options": [
+        "1/√3",
+        "1",
+        "√3",
+        "1/2"
+      ],
+      "correct": 2,
+      "explanation": "tan 60° = √3 from the special angles table.",
+      "provenance": "practice",
+      "sourceUrls": [
+        "https://www.hec.gov.pk/english/services/students/etc/Documents/Content%20Weightages%20for%20(USAT).pdf",
+        "https://www.hec.gov.pk/english/services/students/etc/Pages/HAT-Sample-Papers.aspx"
+      ]
+    }
+  ]
+}

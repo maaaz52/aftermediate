@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ArrowLeft, FileText, Link2 } from "lucide-react";
+import { ArrowLeft, FileText, Link2, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { JsonLd } from "@/components/json-ld";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/site";
@@ -30,7 +30,9 @@ export default async function TestPrepDocumentsPage({
   const test = findTest(testId);
   if (!test) notFound();
 
-  const resources = contentFor(testId).resources;
+  const content = contentFor(testId);
+  const resources = content.resources;
+  const hasLectures = content.playlists.some((playlist) => playlist.episodes.length > 0);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
@@ -88,12 +90,22 @@ export default async function TestPrepDocumentsPage({
         </div>
       )}
 
-      <Link
-        href={`/study/test-prep/${testId}/lectures`}
-        className="mt-8 inline-flex items-center gap-2 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white hover:bg-saffron-soft"
-      >
-        View lectures →
-      </Link>
+      {hasLectures ? (
+        <Link
+          href={`/study/test-prep/${testId}/lectures`}
+          className="mt-8 inline-flex items-center gap-2 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white hover:bg-saffron-soft"
+        >
+          View lectures →
+        </Link>
+      ) : (
+        <Link
+          href={`/pakistan/self-assessment/${testId}`}
+          className="mt-8 inline-flex items-center gap-2 rounded-lg bg-saffron px-4 py-2 text-sm font-semibold text-white hover:bg-saffron-soft"
+        >
+          <Target className="h-4 w-4" />
+          Start practice exam →
+        </Link>
+      )}
     </div>
   );
 }

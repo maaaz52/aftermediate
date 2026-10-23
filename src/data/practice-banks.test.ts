@@ -5,6 +5,7 @@ import ecatBank from "./practice-ecat.json";
 import comsatsBank from "./practice-comsats.json";
 import ntsNatBank from "./practice-nts-nat.json";
 import latBank from "./practice-lat.json";
+import usatBank from "./practice-usat.json";
 import entryJson from "./entry-tests.json";
 
 interface BankQuestion {
@@ -44,6 +45,7 @@ const banks: Record<string, Bank> = {
   comsats: comsatsBank as unknown as Bank,
   "nts-nat": ntsNatBank as unknown as Bank,
   lat: latBank as unknown as Bank,
+  usat: usatBank as unknown as Bank,
 };
 
 const entryTests = (entryJson as unknown as { tests: { id: string; pattern: { section: string; questions?: number }[] }[] }).tests;
@@ -67,6 +69,7 @@ const QUESTION_KEYS = [
 const OFFICIAL_DOMAINS: Record<string, string[]> = {
   net: ["nust.edu.pk"],
   mdcat: ["pmdc.pk"],
+  usat: ["hec.gov.pk"],
 };
 
 describe.each(Object.entries(banks))("practice-%s bank", (testId, bank) => {

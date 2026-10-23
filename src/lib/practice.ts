@@ -11,6 +11,7 @@ import ntsNatJson from "@/data/practice-nts-nat.json";
 import pieasJson from "@/data/practice-pieas.json";
 import akuJson from "@/data/practice-aku.json";
 import latJson from "@/data/practice-lat.json";
+import usatJson from "@/data/practice-usat.json";
 import numsT1Json from "@/data/practice-nums-test-1.json";
 import numsT2Json from "@/data/practice-nums-test-2.json";
 import numsT3Json from "@/data/practice-nums-test-3.json";
@@ -174,6 +175,7 @@ const ntsNatBank = ntsNatJson as unknown as PracticeBank;
 const pieasBank = pieasJson as unknown as PracticeBank;
 const akuBank = akuJson as unknown as PracticeBank;
 const latBank = latJson as unknown as PracticeBank;
+const usatBank = usatJson as unknown as PracticeBank;
 const numsT1Bank = numsT1Json as unknown as PracticeBank;
 const numsT2Bank = numsT2Json as unknown as PracticeBank;
 const numsT3Bank = numsT3Json as unknown as PracticeBank;
@@ -201,6 +203,7 @@ export const banks: Record<string, PracticeBank> = {
   pieas: pieasBank,
   aku: akuBank,
   lat: latBank,
+  usat: usatBank,
   "nums-test-1": numsT1Bank,
   "nums-test-2": numsT2Bank,
   "nums-test-3": numsT3Bank,
