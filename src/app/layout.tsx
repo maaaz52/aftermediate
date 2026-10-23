@@ -7,6 +7,7 @@ import "@fontsource/plus-jakarta-sans/700.css";
 import "@fontsource/plus-jakarta-sans/800.css";
 import "@fontsource/space-mono/400.css";
 import "@fontsource/space-mono/700.css";
+import "katex/dist/katex.min.css";
 import "./globals.css";
 import { StudentProvider } from "@/lib/store";
 import { AuthProvider } from "@/lib/auth";

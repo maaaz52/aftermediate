@@ -13,4 +13,8 @@ describe("normalizeChatMarkdown", () => {
       "- First item\n1. First step\n**Keep this bold**"
     );
   });
+
+  it("normalizes LaTeX display delimiters emitted by different providers", () => {
+    expect(normalizeChatMarkdown("\\[x^2 + y^2\\]")).toBe("$$\nx^2 + y^2\n$$");
+  });
 });
